@@ -1,0 +1,16 @@
+# Maya files
+*.mb
+*.swatches
+*.pyc
+*.assbin
+*.mtl
+*.exr
+*.swatch
+*.iff
+*.tx
+*.tif
+*.spp
+
+Maya_Lab/**/incrementalSave/
+Maya_Lab/**/images/tmp/
+Maya_Lab/**/wip
