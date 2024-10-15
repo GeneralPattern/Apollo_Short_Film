@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: PaintHose.ma
-//Last modified: Mon, Oct 14, 2024 07:18:15 PM
+//Last modified: Mon, Oct 14, 2024 07:18:39 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
@@ -13,17 +13,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "3E3A74F8-4EA3-013A-A5BE-BB8DB78C745C";
+fileInfo "UUID" "F8CAB159-45A4-33B8-B5D9-C5876FDC8CE1";
 createNode transform -s -n "persp";
 	rename -uid "B9C297B5-428E-B994-272E-29836A0041B0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -22.840581631774334 11.200896583302812 -0.56309828559373143 ;
+	setAttr ".t" -type "double3" -39.543206982545698 11.832323707319663 2.0823376825528133 ;
 	setAttr ".r" -type "double3" -2.1383527429714349 279.00000000004758 2.5414433774463381e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3A793029-47A8-B45E-447D-77B828E602CA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 24.568294156020901;
+	setAttr ".coi" 41.490904039923052;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
