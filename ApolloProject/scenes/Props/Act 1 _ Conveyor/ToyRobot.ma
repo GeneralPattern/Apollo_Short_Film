@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: ToyRobot.ma
-//Last modified: Mon, Nov 11, 2024 07:54:21 PM
+//Last modified: Mon, Nov 11, 2024 08:02:05 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires "stereoCamera" "10.0";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "DF04BF3E-4F37-39C2-A840-07BBD6B88D25";
+fileInfo "UUID" "8EA7F7C4-469D-1EA8-370E-07B3DFAC1581";
 createNode transform -s -n "persp";
 	rename -uid "B9011985-4802-B592-A5FA-6EA8286E3189";
 	setAttr ".v" no;
@@ -33199,20 +33199,20 @@ createNode mesh -n "Arm_LeftShape" -p "Arm_Left";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9EF31D10-48A8-99F6-D83C-4A91ECB67E68";
+	rename -uid "545D9CD8-4272-3A9B-6906-B4B54EEABAB8";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "67FB1271-4B24-F1E2-3AFC-11B85D0D48A3";
+	rename -uid "1766BA55-40E9-A993-BE7E-BEAFAABCB487";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "72CB47EE-4C1C-AF3C-E5BA-129924BAFA8A";
+	rename -uid "C4F3CACB-4B55-73BE-A712-069F81FBC214";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "320D064E-493D-624A-65B0-E5935A67FF23";
+	rename -uid "77061889-476A-0706-40AE-B0B42D6251CC";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "12BC785F-44E0-6AAB-95A1-4E894786311D";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "490ED62F-455C-F516-1B23-659C4D286E54";
+	rename -uid "3525266C-454F-0B5F-931F-71B2E5AFE168";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "32F38078-4231-36FE-B777-0D8B0C8D5115";
 	setAttr ".g" yes;
