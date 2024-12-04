@@ -87,7 +87,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Eyes|Apollo1:Left_Eye_Grp|Apollo1:Left_Eye\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Mouth_Grp|Apollo1:Mouth\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Eyes|Apollo1:Right_Eye_Grp|Apollo1:Right_Eye",
+                    "staticSelection": "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Eyes|Apollo1:Right_Eye_Grp|Apollo1:Right_Eye\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Mouth_Grp|Apollo1:Mouth\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Eyes|Apollo1:Left_Eye_Grp|Apollo1:Left_Eye",
                     "typeFilter": 1
                   }
                 },
@@ -259,7 +259,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|RobotToyObjects|GetsPickedUp|Leg\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Arm\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|SpeedAnimation_Apollo1p4:ToyRobotPieces",
+                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|RobotToyObjects|GetsPickedUp|Leg\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Arm\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|SpeedAnimation_Apollo1p3:ToyRobotPieces",
                     "typeFilter": 1
                   }
                 },
@@ -310,6 +310,19 @@
                             "name": "aiMatte5",
                             "selfEnabled": true
                           }
+                        },
+                        {
+                          "absOverride": {
+                            "attrValue": {
+                              "connectable": true,
+                              "type": "Bool",
+                              "value": true
+                            },
+                            "attribute": "aiMatte",
+                            "localRender": false,
+                            "name": "aiMatte6",
+                            "selfEnabled": true
+                          }
                         }
                       ],
                       "isolateSelected": false,
@@ -327,6 +340,7 @@
                     }
                   }
                 ],
+                "expandedState": false,
                 "isolateSelected": false,
                 "name": "Negative5",
                 "selector": {
@@ -334,7 +348,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|RobotToyObjects|GetsPickedUp|Body\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Leg\n|RobotToyObjects|GetsPickedUp|Arm\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|SpeedAnimation_Apollo1p4:ToyRobotPieces",
+                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|RobotToyObjects|GetsPickedUp|Body\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Leg\n|RobotToyObjects|GetsPickedUp|Arm\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|SpeedAnimation_Apollo1p3:ToyRobotPieces",
                     "typeFilter": 1
                   }
                 },
@@ -360,7 +374,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Arm\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Leg\n|SpeedAnimation_Apollo1p4:ToyRobotPieces",
+                    "staticSelection": "|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Arm\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Leg\n|SpeedAnimation_Apollo1p3:ToyRobotPieces",
                     "typeFilter": 1
                   }
                 },
@@ -402,7 +416,6 @@
                     }
                   }
                 ],
-                "expandedState": false,
                 "isolateSelected": false,
                 "name": "Negative2",
                 "selector": {
@@ -468,7 +481,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Arm\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Leg\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|SpeedAnimation_Apollo1p4:ToyRobotPieces",
+                    "staticSelection": "|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Arm\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Leg\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|SpeedAnimation_Apollo1p3:ToyRobotPieces",
                     "typeFilter": 1
                   }
                 },
@@ -521,7 +534,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|RobotToyObjects|GetsPickedUp|Leg\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Arm\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|SpeedAnimation_Apollo1p4:ToyRobotPieces",
+                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|RobotToyObjects|GetsPickedUp|Leg\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Arm\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|SpeedAnimation_Apollo1p3:ToyRobotPieces",
                     "typeFilter": 1
                   }
                 },
@@ -529,7 +542,6 @@
               }
             }
           ],
-          "expandedState": false,
           "name": "AO",
           "renderable": false
         }
@@ -557,7 +569,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|RobotToyObjects|GetsPickedUp|Body\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|RobotToyObjects|GetsPickedUp|Leg\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|ConveyorScene:Scene_Geo\n|RobotToyObjects|GetsPickedUp|Leg1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|RobotToyObjects|GetsPickedUp|Arm\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|SpeedAnimation_Apollo1p4:ToyRobotPieces",
+                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|RobotToyObjects|GetsPickedUp|Body\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|RobotToyObjects|GetsPickedUp|Leg\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|ConveyorScene:Scene_Geo\n|RobotToyObjects|GetsPickedUp|Leg1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|RobotToyObjects|GetsPickedUp|Arm\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|SpeedAnimation_Apollo1p3:ToyRobotPieces",
                     "typeFilter": 1
                   }
                 },
@@ -565,7 +577,6 @@
               }
             }
           ],
-          "expandedState": false,
           "name": "Shadow",
           "renderable": false
         }
@@ -574,139 +585,10 @@
   },
   "sceneAOVs": {
     "arnold": {
-      "aovs": [
-        {
-          "aiAOV_diffuse": {
-            "aiAOV_diffuse.binMembership": "",
-            "aiAOV_diffuse.caching": false,
-            "aiAOV_diffuse.camera": "",
-            "aiAOV_diffuse.defaultValue": "",
-            "aiAOV_diffuse.denoise": false,
-            "aiAOV_diffuse.enabled": true,
-            "aiAOV_diffuse.filterType": "",
-            "aiAOV_diffuse.frozen": false,
-            "aiAOV_diffuse.globalAov": true,
-            "aiAOV_diffuse.imageFormat": "",
-            "aiAOV_diffuse.isHistoricallyInteresting": 2,
-            "aiAOV_diffuse.lightGroups": false,
-            "aiAOV_diffuse.lightGroupsList": "",
-            "aiAOV_diffuse.lightPathExpression": "",
-            "aiAOV_diffuse.message": null,
-            "aiAOV_diffuse.name": "diffuse",
-            "aiAOV_diffuse.nodeState": 0,
-            "aiAOV_diffuse.prefix": "",
-            "aiAOV_diffuse.type": 5
-          }
-        },
-        {
-          "aiAOV_specular": {
-            "aiAOV_specular.binMembership": "",
-            "aiAOV_specular.caching": false,
-            "aiAOV_specular.camera": "",
-            "aiAOV_specular.defaultValue": "",
-            "aiAOV_specular.denoise": false,
-            "aiAOV_specular.enabled": true,
-            "aiAOV_specular.filterType": "",
-            "aiAOV_specular.frozen": false,
-            "aiAOV_specular.globalAov": true,
-            "aiAOV_specular.imageFormat": "",
-            "aiAOV_specular.isHistoricallyInteresting": 2,
-            "aiAOV_specular.lightGroups": false,
-            "aiAOV_specular.lightGroupsList": "",
-            "aiAOV_specular.lightPathExpression": "",
-            "aiAOV_specular.message": null,
-            "aiAOV_specular.name": "specular",
-            "aiAOV_specular.nodeState": 0,
-            "aiAOV_specular.prefix": "",
-            "aiAOV_specular.type": 5
-          }
-        }
-      ],
-      "drivers": [
-        {
-          "defaultArnoldDriver": {
-            "defaultArnoldDriver.aiTranslator": "exr",
-            "defaultArnoldDriver.aiUserOptions": "",
-            "defaultArnoldDriver.alphaHalfPrecision": false,
-            "defaultArnoldDriver.alphaTolerance": 0.009999999776482582,
-            "defaultArnoldDriver.append": false,
-            "defaultArnoldDriver.autocrop": false,
-            "defaultArnoldDriver.binMembership": "",
-            "defaultArnoldDriver.caching": false,
-            "defaultArnoldDriver.colorManagement": 2,
-            "defaultArnoldDriver.deepexrTiled": false,
-            "defaultArnoldDriver.depthHalfPrecision": false,
-            "defaultArnoldDriver.depthTolerance": 0.009999999776482582,
-            "defaultArnoldDriver.dither": true,
-            "defaultArnoldDriver.exrCompression": 3,
-            "defaultArnoldDriver.exrTiled": true,
-            "defaultArnoldDriver.frozen": false,
-            "defaultArnoldDriver.halfPrecision": false,
-            "defaultArnoldDriver.input": null,
-            "defaultArnoldDriver.isHistoricallyInteresting": 2,
-            "defaultArnoldDriver.mergeAOVs": false,
-            "defaultArnoldDriver.message": null,
-            "defaultArnoldDriver.multipart": false,
-            "defaultArnoldDriver.nodeState": 0,
-            "defaultArnoldDriver.outputMode": 2,
-            "defaultArnoldDriver.outputPadded": false,
-            "defaultArnoldDriver.pngFormat": 0,
-            "defaultArnoldDriver.pngSkipAlpha": true,
-            "defaultArnoldDriver.pngUnpremultAlpha": false,
-            "defaultArnoldDriver.prefix": "",
-            "defaultArnoldDriver.preserveLayerName": false,
-            "defaultArnoldDriver.quality": 100,
-            "defaultArnoldDriver.renderSession": "",
-            "defaultArnoldDriver.skipAlpha": false,
-            "defaultArnoldDriver.subpixelMerge": true,
-            "defaultArnoldDriver.tiffCompression": 1,
-            "defaultArnoldDriver.tiffFormat": 0,
-            "defaultArnoldDriver.tiffTiled": false,
-            "defaultArnoldDriver.unpremultAlpha": false,
-            "defaultArnoldDriver.useRGBOpacity": false
-          }
-        }
-      ],
-      "filters": [
-        {
-          "defaultArnoldFilter": {
-            "defaultArnoldFilter.aiFilterWeights": 1,
-            "defaultArnoldFilter.aiTranslator": "gaussian",
-            "defaultArnoldFilter.aiUserOptions": "",
-            "defaultArnoldFilter.aiWidth": 2.0,
-            "defaultArnoldFilter.binMembership": "",
-            "defaultArnoldFilter.caching": false,
-            "defaultArnoldFilter.domain": 0,
-            "defaultArnoldFilter.filterWeights": 1,
-            "defaultArnoldFilter.frozen": false,
-            "defaultArnoldFilter.isHistoricallyInteresting": 2,
-            "defaultArnoldFilter.maximum": 1.0,
-            "defaultArnoldFilter.message": null,
-            "defaultArnoldFilter.minimum": 0.0,
-            "defaultArnoldFilter.nodeState": 0,
-            "defaultArnoldFilter.scalarMode": false,
-            "defaultArnoldFilter.width": 2.0
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "aiAOV_diffuse": [
-            {
-              "driver": "defaultArnoldDriver",
-              "filter": "defaultArnoldFilter"
-            }
-          ]
-        },
-        {
-          "aiAOV_specular": [
-            {
-              "driver": "defaultArnoldDriver",
-              "filter": "defaultArnoldFilter"
-            }
-          ]
-        }
-      ]
+      "aovs": [],
+      "drivers": [],
+      "filters": [],
+      "outputs": []
     }
   },
   "sceneLightEditor": {
@@ -954,7 +836,7 @@
         "defaultArnoldRenderOptions.AASamples": 3,
         "defaultArnoldRenderOptions.AASamplesMax": 20,
         "defaultArnoldRenderOptions.AA_seed": 0.0,
-        "defaultArnoldRenderOptions.ARV_options": "",
+        "defaultArnoldRenderOptions.ARV_options": "Test Resolution=100%;Camera=perspShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1 1;Background.Offset=0 0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1 1;Foreground.Offset=0 0;Foreground.Apply Color Management=1;",
         "defaultArnoldRenderOptions.GIDiffuseDepth": 1,
         "defaultArnoldRenderOptions.GIDiffuseSamples": 2,
         "defaultArnoldRenderOptions.GISpecularDepth": 1,
@@ -973,7 +855,7 @@
         "defaultArnoldRenderOptions.IPRStepStarted": "",
         "defaultArnoldRenderOptions.PostTranslation": "",
         "defaultArnoldRenderOptions.abortOnError": true,
-        "defaultArnoldRenderOptions.abortOnLicenseFail": true,
+        "defaultArnoldRenderOptions.abortOnLicenseFail": false,
         "defaultArnoldRenderOptions.absoluteProceduralPaths": true,
         "defaultArnoldRenderOptions.absoluteTexturePaths": true,
         "defaultArnoldRenderOptions.aiUserOptions": "",
