@@ -182,7 +182,7 @@
           ],
           "expandedState": false,
           "name": "AO",
-          "renderable": true
+          "renderable": false
         }
       },
       {
@@ -218,7 +218,7 @@
           ],
           "expandedState": false,
           "name": "Shadow",
-          "renderable": true
+          "renderable": false
         }
       },
       {
@@ -648,8 +648,6 @@
             "defaultArnoldDriver.outputMode": 2,
             "defaultArnoldDriver.outputPadded": false,
             "defaultArnoldDriver.pngFormat": 0,
-            "defaultArnoldDriver.pngSkipAlpha": true,
-            "defaultArnoldDriver.pngUnpremultAlpha": false,
             "defaultArnoldDriver.prefix": "",
             "defaultArnoldDriver.preserveLayerName": false,
             "defaultArnoldDriver.quality": 100,
@@ -917,8 +915,6 @@
         "defaultArnoldDriver.outputMode": 2,
         "defaultArnoldDriver.outputPadded": false,
         "defaultArnoldDriver.pngFormat": 0,
-        "defaultArnoldDriver.pngSkipAlpha": true,
-        "defaultArnoldDriver.pngUnpremultAlpha": false,
         "defaultArnoldDriver.prefix": "",
         "defaultArnoldDriver.preserveLayerName": false,
         "defaultArnoldDriver.quality": 100,
