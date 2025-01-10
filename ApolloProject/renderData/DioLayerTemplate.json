@@ -62,7 +62,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2",
+                    "staticSelection": "|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:ConveyorRig:CentralConveyor",
                     "typeFilter": 1
                   }
                 },
@@ -72,7 +72,82 @@
           ],
           "expandedState": false,
           "name": "StaticBackground",
-          "renderable": true
+          "renderable": false
+        }
+      },
+      {
+        "renderSetupLayer": {
+          "collections": [
+            {
+              "collection": {
+                "children": [
+                  {
+                    "collection": {
+                      "children": [
+                        {
+                          "absOverride": {
+                            "attrValue": {
+                              "connectable": true,
+                              "type": "Bool",
+                              "value": true
+                            },
+                            "attribute": "aiMatte",
+                            "localRender": false,
+                            "name": "aiMatte",
+                            "selfEnabled": true
+                          }
+                        }
+                      ],
+                      "isolateSelected": false,
+                      "name": "Negative_shapes",
+                      "selector": {
+                        "simpleSelector": {
+                          "customFilterValue": "",
+                          "pattern": "*",
+                          "previousPattern": "*",
+                          "staticSelection": "",
+                          "typeFilter": 2
+                        }
+                      },
+                      "selfEnabled": true
+                    }
+                  }
+                ],
+                "isolateSelected": false,
+                "name": "Negative",
+                "selector": {
+                  "simpleSelector": {
+                    "customFilterValue": "",
+                    "pattern": "",
+                    "previousPattern": "",
+                    "staticSelection": "|SpeedAnimation_Dio1:ToyRobotPieces\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|RobotToyObjects",
+                    "typeFilter": 1
+                  }
+                },
+                "selfEnabled": true
+              }
+            },
+            {
+              "collection": {
+                "children": [],
+                "isolateSelected": false,
+                "name": "Dio",
+                "selector": {
+                  "simpleSelector": {
+                    "customFilterValue": "",
+                    "pattern": "",
+                    "previousPattern": "",
+                    "staticSelection": "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main",
+                    "typeFilter": 1
+                  }
+                },
+                "selfEnabled": true
+              }
+            }
+          ],
+          "expandedState": false,
+          "name": "DioMain",
+          "renderable": false
         }
       },
       {
@@ -209,7 +284,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|Lever:Lever|Lever:Geo",
+                    "staticSelection": "|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Lever:Lever|ConveyorScene:Lever:Geo",
                     "typeFilter": 1
                   }
                 },
@@ -251,7 +326,6 @@
                     }
                   }
                 ],
-                "expandedState": false,
                 "isolateSelected": false,
                 "name": "Negative4",
                 "selector": {
@@ -259,7 +333,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|RobotToyObjects|GetsPickedUp|Leg\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Arm\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp\n|SpeedAnimation_Dio1:ToyRobotPieces\n|RobotToyObjects|GetsPickedUp|Arm2\n|Dionysus_Asset_Rig:Dionysus",
+                    "staticSelection": "|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|RobotToyObjects\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1",
                     "typeFilter": 1
                   }
                 },
@@ -268,8 +342,8 @@
             }
           ],
           "expandedState": false,
-          "name": "ApolloConveyorMain",
-          "renderable": true
+          "name": "ConveyorMain",
+          "renderable": false
         }
       },
       {
@@ -285,7 +359,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp",
+                    "staticSelection": "|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo",
                     "typeFilter": 1
                   }
                 },
@@ -334,7 +408,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Leg\n|RobotToyObjects|GetsPickedUp|Arm\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|SpeedAnimation_Dio1:ToyRobotPieces\n|Dionysus_Asset_Rig:Dionysus",
+                    "staticSelection": "|SpeedAnimation_Dio1:ToyRobotPieces\n|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|RobotToyObjects\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1",
                     "typeFilter": 1
                   }
                 },
@@ -342,8 +416,9 @@
               }
             }
           ],
+          "expandedState": false,
           "name": "DioConveyorBelt",
-          "renderable": true
+          "renderable": false
         }
       },
       {
@@ -359,7 +434,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Arm\n|RobotToyObjects|GetsPickedUp|Leg1\n|RobotToyObjects|GetsPickedUp|Leg\n|SpeedAnimation_Dio1:ToyRobotPieces\n|RobotToyObjects|GetsPickedUp|Arm2",
+                    "staticSelection": "|SpeedAnimation_Dio1:ToyRobotPieces\n|RobotToyObjects",
                     "typeFilter": 1
                   }
                 },
@@ -409,7 +484,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|Dionysus_Asset_Rig:Dionysus",
+                    "staticSelection": "|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo",
                     "typeFilter": 1
                   }
                 },
@@ -417,13 +492,93 @@
               }
             }
           ],
+          "expandedState": false,
           "name": "RobotToys",
-          "renderable": true
+          "renderable": false
         }
       },
       {
         "renderSetupLayer": {
           "collections": [
+            {
+              "collection": {
+                "children": [],
+                "isolateSelected": false,
+                "name": "collection5",
+                "selector": {
+                  "simpleSelector": {
+                    "customFilterValue": "",
+                    "pattern": "",
+                    "previousPattern": "",
+                    "staticSelection": "|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8",
+                    "typeFilter": 1
+                  }
+                },
+                "selfEnabled": true
+              }
+            },
+            {
+              "collection": {
+                "children": [],
+                "isolateSelected": false,
+                "name": "Negative6",
+                "selector": {
+                  "simpleSelector": {
+                    "customFilterValue": "",
+                    "pattern": "",
+                    "previousPattern": "",
+                    "staticSelection": "|SpeedAnimation_Dio1:ToyRobotPieces\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|RobotToyObjects",
+                    "typeFilter": 1
+                  }
+                },
+                "selfEnabled": true
+              }
+            }
+          ],
+          "expandedState": false,
+          "name": "ConveyorFlaps",
+          "renderable": false
+        }
+      },
+      {
+        "renderSetupLayer": {
+          "collections": [
+            {
+              "renderSettingsCollection": {
+                "children": [
+                  {
+                    "absUniqueOverride": {
+                      "attrValue": {
+                        "connectable": true,
+                        "max": 100.0,
+                        "min": -10.0,
+                        "softMax": 10.0,
+                        "softMin": 1.0,
+                        "type": "Int",
+                        "value": 1
+                      },
+                      "attribute": "AASamples",
+                      "localRender": false,
+                      "name": "AASamples",
+                      "selfEnabled": true,
+                      "targetNodeName": "defaultArnoldRenderOptions"
+                    }
+                  }
+                ],
+                "isolateSelected": false,
+                "name": "RenderSettingsCollection2",
+                "selector": {
+                  "simpleSelector": {
+                    "customFilterValue": "",
+                    "pattern": "",
+                    "previousPattern": "",
+                    "staticSelection": "defaultRenderQuality\ndefaultArnoldFilter\ndefaultArnoldDriver\ndefaultArnoldRenderOptions\ndefaultRenderGlobals\ndefaultResolution",
+                    "typeFilter": 0
+                  }
+                },
+                "selfEnabled": true
+              }
+            },
             {
               "aovCollection": {
                 "children": [
@@ -444,6 +599,7 @@
                           }
                         }
                       ],
+                      "expandedState": false,
                       "isolateSelected": false,
                       "name": "diffuse",
                       "selector": {
@@ -471,6 +627,7 @@
                           }
                         }
                       ],
+                      "expandedState": false,
                       "isolateSelected": false,
                       "name": "specular",
                       "selector": {
@@ -482,6 +639,7 @@
                     }
                   }
                 ],
+                "expandedState": false,
                 "isolateSelected": false,
                 "name": "AOVCollection",
                 "selector": {
@@ -509,6 +667,7 @@
                     }
                   }
                 ],
+                "expandedState": false,
                 "isolateSelected": false,
                 "name": "Everything",
                 "selector": {
@@ -516,7 +675,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|RobotToyObjects|GetsPickedUp|Leg\n|RobotToyObjects|GetsPickedUp|Arm\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main\n|Lever:Lever|Lever:Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|RobotToyObjects|GetsPickedUp|Body\n|SpeedAnimation_Dio1:ToyRobotPieces\n|RobotToyObjects|GetsPickedUp|Arm2\n|RobotToyObjects|GetsPickedUp|Leg1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4",
+                    "staticSelection": "|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|SpeedAnimation_Dio1:ToyRobotPieces\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:ConveyorRig:CentralConveyor\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|RobotToyObjects\n|ConveyorScene:Lever:Lever|ConveyorScene:Lever:Geo",
                     "typeFilter": 1
                   }
                 },
@@ -526,12 +685,48 @@
           ],
           "expandedState": false,
           "name": "AO",
-          "renderable": true
+          "renderable": false
         }
       },
       {
         "renderSetupLayer": {
           "collections": [
+            {
+              "renderSettingsCollection": {
+                "children": [
+                  {
+                    "absUniqueOverride": {
+                      "attrValue": {
+                        "connectable": true,
+                        "max": 100.0,
+                        "min": -10.0,
+                        "softMax": 10.0,
+                        "softMin": 1.0,
+                        "type": "Int",
+                        "value": 1
+                      },
+                      "attribute": "AASamples",
+                      "localRender": false,
+                      "name": "AASamples1",
+                      "selfEnabled": true,
+                      "targetNodeName": "defaultArnoldRenderOptions"
+                    }
+                  }
+                ],
+                "isolateSelected": false,
+                "name": "RenderSettingsCollection3",
+                "selector": {
+                  "simpleSelector": {
+                    "customFilterValue": "",
+                    "pattern": "",
+                    "previousPattern": "",
+                    "staticSelection": "defaultRenderQuality\ndefaultArnoldFilter\ndefaultArnoldDriver\ndefaultArnoldRenderOptions\ndefaultRenderGlobals\ndefaultResolution",
+                    "typeFilter": 0
+                  }
+                },
+                "selfEnabled": true
+              }
+            },
             {
               "aovCollection": {
                 "children": [
@@ -624,7 +819,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|Lever:Lever|Lever:Geo\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|RobotToyObjects|GetsPickedUp|Body\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|RobotToyObjects|GetsPickedUp|Arm2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|RobotToyObjects|GetsPickedUp|Arm\n|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|SpeedAnimation_Dio1:ToyRobotPieces\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|RobotToyObjects|GetsPickedUp|Leg\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|RobotToyObjects|GetsPickedUp|Leg1",
+                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|SpeedAnimation_Dio1:ToyRobotPieces\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:ConveyorRig:CentralConveyor\n|RobotToyObjects\n|ConveyorScene:Lever:Lever|ConveyorScene:Lever:Geo",
                     "typeFilter": 1
                   }
                 },
@@ -634,125 +829,7 @@
           ],
           "expandedState": false,
           "name": "Shadow",
-          "renderable": true
-        }
-      },
-      {
-        "renderSetupLayer": {
-          "collections": [
-            {
-              "collection": {
-                "children": [
-                  {
-                    "collection": {
-                      "children": [
-                        {
-                          "absOverride": {
-                            "attrValue": {
-                              "connectable": true,
-                              "type": "Bool",
-                              "value": true
-                            },
-                            "attribute": "aiMatte",
-                            "localRender": false,
-                            "name": "aiMatte",
-                            "selfEnabled": true
-                          }
-                        }
-                      ],
-                      "isolateSelected": false,
-                      "name": "Negative_shapes",
-                      "selector": {
-                        "simpleSelector": {
-                          "customFilterValue": "",
-                          "pattern": "*",
-                          "previousPattern": "*",
-                          "staticSelection": "",
-                          "typeFilter": 2
-                        }
-                      },
-                      "selfEnabled": true
-                    }
-                  }
-                ],
-                "isolateSelected": false,
-                "name": "Negative",
-                "selector": {
-                  "simpleSelector": {
-                    "customFilterValue": "",
-                    "pattern": "",
-                    "previousPattern": "",
-                    "staticSelection": "|SpeedAnimation_Dio1:ToyRobotPieces\n|RobotToyObjects|GetsPickedUp|Arm\n|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Leg\n|RobotToyObjects|GetsPickedUp|Arm2\n|RobotToyObjects|GetsPickedUp|Leg1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo",
-                    "typeFilter": 1
-                  }
-                },
-                "selfEnabled": true
-              }
-            },
-            {
-              "collection": {
-                "children": [],
-                "isolateSelected": false,
-                "name": "Dio",
-                "selector": {
-                  "simpleSelector": {
-                    "customFilterValue": "",
-                    "pattern": "",
-                    "previousPattern": "",
-                    "staticSelection": "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main",
-                    "typeFilter": 1
-                  }
-                },
-                "selfEnabled": true
-              }
-            }
-          ],
-          "expandedState": false,
-          "name": "DioMain",
-          "renderable": true
-        }
-      },
-      {
-        "renderSetupLayer": {
-          "collections": [
-            {
-              "collection": {
-                "children": [],
-                "isolateSelected": false,
-                "name": "collection5",
-                "selector": {
-                  "simpleSelector": {
-                    "customFilterValue": "",
-                    "pattern": "",
-                    "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8",
-                    "typeFilter": 1
-                  }
-                },
-                "selfEnabled": true
-              }
-            },
-            {
-              "collection": {
-                "children": [],
-                "isolateSelected": false,
-                "name": "Negative6",
-                "selector": {
-                  "simpleSelector": {
-                    "customFilterValue": "",
-                    "pattern": "",
-                    "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|RobotToyObjects|GetsPickedUp|Arm\n|RobotToyObjects|GetsPickedUp|Body\n|RobotToyObjects|GetsPickedUp|Leg\n|SpeedAnimation_Dio1:ToyRobotPieces\n|RobotToyObjects|GetsPickedUp|Arm2\n|RobotToyObjects|GetsPickedUp|Leg1",
-                    "typeFilter": 1
-                  }
-                },
-                "selfEnabled": true
-              }
-            }
-          ],
-          "expandedState": false,
-          "name": "ConveyorFlaps",
-          "renderable": true
+          "renderable": false
         }
       }
     ]
@@ -1066,7 +1143,7 @@
         "defaultResolution.dotsPerInch": 72.0,
         "defaultResolution.fields": 0,
         "defaultResolution.frozen": false,
-        "defaultResolution.height": 2160,
+        "defaultResolution.height": 1440,
         "defaultResolution.imageSizeUnits": 0,
         "defaultResolution.isHistoricallyInteresting": 2,
         "defaultResolution.lockDeviceAspectRatio": false,
@@ -1075,7 +1152,7 @@
         "defaultResolution.oddFieldFirst": true,
         "defaultResolution.pixelAspect": 1.0,
         "defaultResolution.pixelDensityUnits": 0,
-        "defaultResolution.width": 3840,
+        "defaultResolution.width": 2560,
         "defaultResolution.zerothScanline": 0
       },
       "defaultRendererNodes": {
@@ -1139,17 +1216,17 @@
         "defaultArnoldRenderOptions.AASamples": 3,
         "defaultArnoldRenderOptions.AASamplesMax": 20,
         "defaultArnoldRenderOptions.AA_seed": 0.0,
-        "defaultArnoldRenderOptions.ARV_options": "",
+        "defaultArnoldRenderOptions.ARV_options": "Test Resolution=100%;Camera=RenderCamShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1 1;Background.Offset=0 0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1 1;Foreground.Offset=0 0;Foreground.Apply Color Management=1;",
         "defaultArnoldRenderOptions.GIDiffuseDepth": 1,
-        "defaultArnoldRenderOptions.GIDiffuseSamples": 2,
+        "defaultArnoldRenderOptions.GIDiffuseSamples": 1,
         "defaultArnoldRenderOptions.GISpecularDepth": 1,
-        "defaultArnoldRenderOptions.GISpecularSamples": 2,
-        "defaultArnoldRenderOptions.GISssSamples": 2,
+        "defaultArnoldRenderOptions.GISpecularSamples": 1,
+        "defaultArnoldRenderOptions.GISssSamples": 1,
         "defaultArnoldRenderOptions.GITotalDepth": 10,
         "defaultArnoldRenderOptions.GITransmissionDepth": 8,
-        "defaultArnoldRenderOptions.GITransmissionSamples": 2,
+        "defaultArnoldRenderOptions.GITransmissionSamples": 1,
         "defaultArnoldRenderOptions.GIVolumeDepth": 0,
-        "defaultArnoldRenderOptions.GIVolumeSamples": 2,
+        "defaultArnoldRenderOptions.GIVolumeSamples": 1,
         "defaultArnoldRenderOptions.GI_glossy_samples": 1,
         "defaultArnoldRenderOptions.GI_refraction_samples": 1,
         "defaultArnoldRenderOptions.IPRRefinementFinished": "",
@@ -1158,7 +1235,7 @@
         "defaultArnoldRenderOptions.IPRStepStarted": "",
         "defaultArnoldRenderOptions.PostTranslation": "",
         "defaultArnoldRenderOptions.abortOnError": true,
-        "defaultArnoldRenderOptions.abortOnLicenseFail": true,
+        "defaultArnoldRenderOptions.abortOnLicenseFail": false,
         "defaultArnoldRenderOptions.absoluteProceduralPaths": true,
         "defaultArnoldRenderOptions.absoluteTexturePaths": true,
         "defaultArnoldRenderOptions.aiUserOptions": "",
