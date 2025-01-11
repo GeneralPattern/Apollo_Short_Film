@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: PaintingScene.ma
-//Last modified: Fri, Jan 10, 2025 09:31:08 PM
+//Last modified: Fri, Jan 10, 2025 09:34:50 PM
 //Codeset: 1252
 file -rdi 1 -ns "Apollo" -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
 file -rdi 1 -ns "Dionysus_Asset_Rig" -rfn "Dionysus_Asset_RigRN" -op "v=0;"
@@ -27,17 +27,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26120)";
-fileInfo "UUID" "968D6E8C-487F-A0D6-D8F2-538497E8E33C";
+fileInfo "UUID" "C21342B2-45D5-1F91-559E-AB99A529E6A6";
 createNode transform -s -n "persp";
 	rename -uid "5B564075-43B3-DAAE-982C-D79B0D607869";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.5083971688073827 6.8515689238394462 15.040979340230379 ;
-	setAttr ".r" -type "double3" -5.7383527297221919 -731.39999999991426 0 ;
+	setAttr ".t" -type "double3" 12.164825991363371 6.3926383913578189 3.7474758829139208 ;
+	setAttr ".r" -type "double3" -11.138352730018026 -1027.800000000301 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "975F7580-4A80-0160-77A5-FF8355D115FC";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 20.587937171275485;
+	setAttr ".coi" 14.213910349391147;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -94,7 +94,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode fosterParent -n "PaintGunRNfosterParent1";
-	rename -uid "8ED64D1F-486C-7108-7BC7-D1985C04A204";
+	rename -uid "B0AABBBE-4141-15AE-98C5-9C99708F791F";
 createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint1" -p "PaintGunRNfosterParent1";
 	rename -uid "5C19CC19-4F0F-22A5-7C2F-258751E923B2";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Two_Handed_Prop_CtrlW0" -dv 1 -min 
@@ -310,7 +310,7 @@ createNode reference -n "PaintGunRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PaintGunRN"
 		"PaintGunRN" 0
-		"PaintGunRN" 25
+		"PaintGunRN" 27
 		0 "|PaintGunRNfosterParent1|Gun_Ctrl_Grp_parentConstraint1" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp" 
 		"-s -r "
 		1 "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl" "Follow" "Follow" 
@@ -321,13 +321,18 @@ createNode reference -n "PaintGunRN";
 		
 		2 "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl" "MasterScale" 
 		" -k 1 0.2"
+		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl" 
+		"translate" " -type \"double3\" -2.12420412327013697 2.34228615202166202 2.4165717585019466e-09"
+		
+		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl" 
+		"rotate" " -type \"double3\" 0 0 88.84552495350726531"
 		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl" 
-		"translate" " -type \"double3\" 21.37927436624476485 7.71881777825449689 2.82604127268082106"
+		"translate" " -type \"double3\" 11.16738720984390554 10.36485116281238561 1.28521797255425474"
 		
 		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl" 
 		"rotate" " -type \"double3\" 0 26.56590554513682179 43.19986291898031538"
 		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl" 
-		"translate" " -type \"double3\" 7.73740116562133551 22.58962775562049785 5.77757690626887843"
+		"translate" " -type \"double3\" 3.07309046968426713 22.58962775562049785 5.77757690626887843"
 		
 		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 159.89692346012424196"
@@ -444,7 +449,7 @@ createNode objectSet -n "referenceViewSet1";
 	setAttr ".ihi" 0;
 	setAttr ".an" -type "string" "referenceViewSet";
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "73EEBC9E-4E99-66C7-817A-09A44AB41566";
+	rename -uid "87B954E9-4116-A305-7AC3-279489E25A0E";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 0;
