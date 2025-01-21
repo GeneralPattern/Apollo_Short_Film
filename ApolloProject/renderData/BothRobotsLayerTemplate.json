@@ -61,7 +61,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|Lever:Lever\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Scene_Geo\n|Analog_Sign:Analog_Sign_Asset\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8",
+                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Scene_Geo\n|Analog_Sign:Analog_Sign_Asset\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:Lever:Lever",
                     "typeFilter": 1
                   }
                 },
@@ -71,7 +71,7 @@
           ],
           "expandedState": false,
           "name": "StaticBackground",
-          "renderable": true
+          "renderable": false
         }
       },
       {
@@ -129,6 +129,7 @@
                     }
                   }
                 ],
+                "expandedState": false,
                 "isolateSelected": false,
                 "name": "Negative3",
                 "selector": {
@@ -146,78 +147,6 @@
           ],
           "expandedState": false,
           "name": "ApolloFace",
-          "renderable": false
-        }
-      },
-      {
-        "renderSetupLayer": {
-          "collections": [
-            {
-              "collection": {
-                "children": [
-                  {
-                    "materialOverride": {
-                      "attribute": "",
-                      "connectionStr": "aiAmbientOcclusion1SG.message",
-                      "localRender": false,
-                      "name": "materialOverride1",
-                      "selfEnabled": true
-                    }
-                  }
-                ],
-                "isolateSelected": false,
-                "name": "Everything",
-                "selector": {
-                  "simpleSelector": {
-                    "customFilterValue": "",
-                    "pattern": "",
-                    "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|Analog_Sign:Analog_Sign_Asset\n|Lever:Lever\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8",
-                    "typeFilter": 1
-                  }
-                },
-                "selfEnabled": true
-              }
-            }
-          ],
-          "expandedState": false,
-          "name": "AO",
-          "renderable": false
-        }
-      },
-      {
-        "renderSetupLayer": {
-          "collections": [
-            {
-              "collection": {
-                "children": [
-                  {
-                    "materialOverride": {
-                      "attribute": "",
-                      "connectionStr": "aiShadowMatte1SG.message",
-                      "localRender": false,
-                      "name": "materialOverride2",
-                      "selfEnabled": true
-                    }
-                  }
-                ],
-                "isolateSelected": false,
-                "name": "Everything1",
-                "selector": {
-                  "simpleSelector": {
-                    "customFilterValue": "",
-                    "pattern": "",
-                    "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|Dionysus_Asset_Rig:Dionysus\n|Lever:Lever\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Scene_Geo\n|Analog_Sign:Analog_Sign_Asset\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7",
-                    "typeFilter": 1
-                  }
-                },
-                "selfEnabled": true
-              }
-            }
-          ],
-          "expandedState": false,
-          "name": "Shadow",
           "renderable": false
         }
       },
@@ -339,82 +268,7 @@
           ],
           "expandedState": false,
           "name": "Apollo",
-          "renderable": true
-        }
-      },
-      {
-        "renderSetupLayer": {
-          "collections": [
-            {
-              "collection": {
-                "children": [],
-                "isolateSelected": false,
-                "name": "collection5",
-                "selector": {
-                  "simpleSelector": {
-                    "customFilterValue": "",
-                    "pattern": "",
-                    "previousPattern": "",
-                    "staticSelection": "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo",
-                    "typeFilter": 1
-                  }
-                },
-                "selfEnabled": true
-              }
-            },
-            {
-              "collection": {
-                "children": [
-                  {
-                    "collection": {
-                      "children": [
-                        {
-                          "absOverride": {
-                            "attrValue": {
-                              "connectable": true,
-                              "type": "Bool",
-                              "value": true
-                            },
-                            "attribute": "aiMatte",
-                            "localRender": false,
-                            "name": "aiMatte5",
-                            "selfEnabled": true
-                          }
-                        }
-                      ],
-                      "isolateSelected": false,
-                      "name": "Negative4_shapes",
-                      "selector": {
-                        "simpleSelector": {
-                          "customFilterValue": "",
-                          "pattern": "*",
-                          "previousPattern": "",
-                          "staticSelection": "",
-                          "typeFilter": 2
-                        }
-                      },
-                      "selfEnabled": true
-                    }
-                  }
-                ],
-                "isolateSelected": false,
-                "name": "Negative4",
-                "selector": {
-                  "simpleSelector": {
-                    "customFilterValue": "",
-                    "pattern": "",
-                    "previousPattern": "",
-                    "staticSelection": "|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo|Apollo1:MainArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo",
-                    "typeFilter": 1
-                  }
-                },
-                "selfEnabled": true
-              }
-            }
-          ],
-          "expandedState": false,
-          "name": "ApolloFace1",
-          "renderable": true
+          "renderable": false
         }
       },
       {
@@ -479,7 +333,7 @@
                     "customFilterValue": "",
                     "pattern": "",
                     "previousPattern": "",
-                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Lever:polySurface213\n|Lever:Lever",
+                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Lever:Lever",
                     "typeFilter": 1
                   }
                 },
@@ -489,7 +343,7 @@
           ],
           "expandedState": false,
           "name": "Dio",
-          "renderable": true
+          "renderable": false
         }
       },
       {
@@ -564,7 +418,151 @@
           ],
           "expandedState": false,
           "name": "DioFace",
-          "renderable": true
+          "renderable": false
+        }
+      },
+      {
+        "renderSetupLayer": {
+          "collections": [
+            {
+              "renderSettingsCollection": {
+                "children": [
+                  {
+                    "absUniqueOverride": {
+                      "attrValue": {
+                        "connectable": true,
+                        "max": 100.0,
+                        "min": -10.0,
+                        "softMax": 10.0,
+                        "softMin": 1.0,
+                        "type": "Int",
+                        "value": 1
+                      },
+                      "attribute": "AASamples",
+                      "localRender": false,
+                      "name": "AASamples1",
+                      "selfEnabled": true,
+                      "targetNodeName": "defaultArnoldRenderOptions"
+                    }
+                  }
+                ],
+                "isolateSelected": false,
+                "name": "RenderSettingsCollection3",
+                "selector": {
+                  "simpleSelector": {
+                    "customFilterValue": "",
+                    "pattern": "",
+                    "previousPattern": "",
+                    "staticSelection": "defaultArnoldFilter\ndefaultArnoldDriver\ndefaultArnoldRenderOptions\ndefaultRenderQuality\ndefaultResolution\ndefaultRenderGlobals",
+                    "typeFilter": 0
+                  }
+                },
+                "selfEnabled": true
+              }
+            },
+            {
+              "collection": {
+                "children": [
+                  {
+                    "materialOverride": {
+                      "attribute": "",
+                      "connectionStr": "aiAmbientOcclusion1SG.message",
+                      "localRender": false,
+                      "name": "materialOverride1",
+                      "selfEnabled": true
+                    }
+                  }
+                ],
+                "isolateSelected": false,
+                "name": "Everything",
+                "selector": {
+                  "simpleSelector": {
+                    "customFilterValue": "",
+                    "pattern": "",
+                    "previousPattern": "",
+                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|Analog_Sign:Analog_Sign_Asset\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:Lever:Lever",
+                    "typeFilter": 1
+                  }
+                },
+                "selfEnabled": true
+              }
+            }
+          ],
+          "expandedState": false,
+          "name": "AO",
+          "renderable": false
+        }
+      },
+      {
+        "renderSetupLayer": {
+          "collections": [
+            {
+              "renderSettingsCollection": {
+                "children": [
+                  {
+                    "absUniqueOverride": {
+                      "attrValue": {
+                        "connectable": true,
+                        "max": 100.0,
+                        "min": -10.0,
+                        "softMax": 10.0,
+                        "softMin": 1.0,
+                        "type": "Int",
+                        "value": 1
+                      },
+                      "attribute": "AASamples",
+                      "localRender": false,
+                      "name": "AASamples",
+                      "selfEnabled": true,
+                      "targetNodeName": "defaultArnoldRenderOptions"
+                    }
+                  }
+                ],
+                "isolateSelected": false,
+                "name": "RenderSettingsCollection2",
+                "selector": {
+                  "simpleSelector": {
+                    "customFilterValue": "",
+                    "pattern": "",
+                    "previousPattern": "",
+                    "staticSelection": "defaultArnoldFilter\ndefaultArnoldDriver\ndefaultArnoldRenderOptions\ndefaultRenderQuality\ndefaultResolution\ndefaultRenderGlobals",
+                    "typeFilter": 0
+                  }
+                },
+                "selfEnabled": true
+              }
+            },
+            {
+              "collection": {
+                "children": [
+                  {
+                    "materialOverride": {
+                      "attribute": "",
+                      "connectionStr": "aiShadowMatte1SG.message",
+                      "localRender": false,
+                      "name": "materialOverride2",
+                      "selfEnabled": true
+                    }
+                  }
+                ],
+                "isolateSelected": false,
+                "name": "Everything1",
+                "selector": {
+                  "simpleSelector": {
+                    "customFilterValue": "",
+                    "pattern": "",
+                    "previousPattern": "",
+                    "staticSelection": "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Scene_Geo\n|Analog_Sign:Analog_Sign_Asset\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Lever:Lever",
+                    "typeFilter": 1
+                  }
+                },
+                "selfEnabled": true
+              }
+            }
+          ],
+          "expandedState": false,
+          "name": "Shadow",
+          "renderable": false
         }
       }
     ]
@@ -648,6 +646,8 @@
             "defaultArnoldDriver.outputMode": 2,
             "defaultArnoldDriver.outputPadded": false,
             "defaultArnoldDriver.pngFormat": 0,
+            "defaultArnoldDriver.pngSkipAlpha": true,
+            "defaultArnoldDriver.pngUnpremultAlpha": false,
             "defaultArnoldDriver.prefix": "",
             "defaultArnoldDriver.preserveLayerName": false,
             "defaultArnoldDriver.quality": 100,
@@ -876,7 +876,7 @@
         "defaultResolution.dotsPerInch": 72.0,
         "defaultResolution.fields": 0,
         "defaultResolution.frozen": false,
-        "defaultResolution.height": 2160,
+        "defaultResolution.height": 1440,
         "defaultResolution.imageSizeUnits": 0,
         "defaultResolution.isHistoricallyInteresting": 2,
         "defaultResolution.lockDeviceAspectRatio": false,
@@ -885,7 +885,7 @@
         "defaultResolution.oddFieldFirst": true,
         "defaultResolution.pixelAspect": 1.0,
         "defaultResolution.pixelDensityUnits": 0,
-        "defaultResolution.width": 3840,
+        "defaultResolution.width": 2560,
         "defaultResolution.zerothScanline": 0
       },
       "defaultRendererNodes": {
@@ -915,6 +915,8 @@
         "defaultArnoldDriver.outputMode": 2,
         "defaultArnoldDriver.outputPadded": false,
         "defaultArnoldDriver.pngFormat": 0,
+        "defaultArnoldDriver.pngSkipAlpha": true,
+        "defaultArnoldDriver.pngUnpremultAlpha": false,
         "defaultArnoldDriver.prefix": "",
         "defaultArnoldDriver.preserveLayerName": false,
         "defaultArnoldDriver.quality": 100,
@@ -966,7 +968,7 @@
         "defaultArnoldRenderOptions.IPRStepStarted": "",
         "defaultArnoldRenderOptions.PostTranslation": "",
         "defaultArnoldRenderOptions.abortOnError": true,
-        "defaultArnoldRenderOptions.abortOnLicenseFail": true,
+        "defaultArnoldRenderOptions.abortOnLicenseFail": false,
         "defaultArnoldRenderOptions.absoluteProceduralPaths": true,
         "defaultArnoldRenderOptions.absoluteTexturePaths": true,
         "defaultArnoldRenderOptions.aiUserOptions": "",
@@ -1066,11 +1068,11 @@
         "defaultArnoldRenderOptions.mb_objects_enable": true,
         "defaultArnoldRenderOptions.mb_shader_enable": false,
         "defaultArnoldRenderOptions.message": null,
-        "defaultArnoldRenderOptions.motion_blur_enable": false,
+        "defaultArnoldRenderOptions.motion_blur_enable": true,
         "defaultArnoldRenderOptions.motion_end": 0.25,
-        "defaultArnoldRenderOptions.motion_frames": 0.5,
+        "defaultArnoldRenderOptions.motion_frames": 0.30000001192092896,
         "defaultArnoldRenderOptions.motion_start": -0.25,
-        "defaultArnoldRenderOptions.motion_steps": 2,
+        "defaultArnoldRenderOptions.motion_steps": 4,
         "defaultArnoldRenderOptions.mtoa_translation_info": false,
         "defaultArnoldRenderOptions.nodeState": 0,
         "defaultArnoldRenderOptions.offsetOrigin": false,
