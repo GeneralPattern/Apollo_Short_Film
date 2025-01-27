@@ -8,3 +8,8 @@
 *.exr
 
 ApolloProject/cache/TestPile3.abc
+
+ApolloProject/scenes/Animation Scenes/Autosaves
+*.avi
+
+*.atom
