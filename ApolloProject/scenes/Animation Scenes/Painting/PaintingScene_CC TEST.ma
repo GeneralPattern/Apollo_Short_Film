@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: PaintingScene_CC.ma
-//Last modified: Tue, Jan 28, 2025 01:41:18 PM
+//Name: PaintingScene_CC TEST.ma
+//Last modified: Tue, Jan 28, 2025 01:26:39 PM
 //Codeset: 1252
 file -rdi 1 -ns "Apollo" -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
 file -rdi 1 -ns "Dionysus_Asset_Rig" -rfn "Dionysus_Asset_RigRN" -op "v=0;"
@@ -24,14 +24,13 @@ requires maya "2025ff03";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.4.2.1";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "41308E02-422A-2ED1-59FA-E2A0AC1040F6";
+fileInfo "UUID" "8ADFB9BF-4DB1-EA33-B8A5-3A831D49578E";
 fileInfo "license" "education";
 fileInfo "exportedFrom" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/Painting/PaintingScene_CC.ma";
 createNode transform -s -n "persp";
@@ -756,7 +755,7 @@ createNode mesh -n "pCubeShape8" -p "pCube8";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "PaintGunRNfosterParent1";
-	rename -uid "EB865E69-435A-F4FE-BB98-57B44AB9AA12";
+	rename -uid "1D6EBCB3-4E5F-2D1F-0214-6F9947812289";
 createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint1" -p "PaintGunRNfosterParent1";
 	rename -uid "5C19CC19-4F0F-22A5-7C2F-258751E923B2";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "Prop_CtrlW1" -dv 1 -min 0 -at "double";
@@ -784,7 +783,7 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint1" -p "PaintGunRNfo
 	setAttr ".tg[2].tor" -type "double3" -92.943761466109564 49.73043395341562 -0.58327215687296086 ;
 	setAttr ".tg[3].tot" -type "double3" 2.2617059510423596 23.219875616172878 -1.6203246995853009 ;
 	setAttr ".tg[3].tor" -type "double3" -92.937531807376402 -49.61970166274704 3.9021969821190687 ;
-	setAttr ".lr" -type "double3" 39.660372852135502 -8.7513424202049102 -5.0673706438877408 ;
+	setAttr ".lr" -type "double3" 23.897527005856983 -4.5559116496181185 -21.838090361378249 ;
 	setAttr ".rst" -type "double3" -2.3592239273284576e-16 2.6821891474065169 -0.15007850329514572 ;
 	setAttr ".rsrr" -type "double3" 1.4113711398994355e-14 1.5902773407317582e-15 8.1998675381481314e-16 ;
 	setAttr -k on ".w1";
@@ -792,7 +791,7 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint1" -p "PaintGunRNfo
 	setAttr -k on ".w2";
 	setAttr -k on ".w0";
 createNode fosterParent -n "PaintGunRN1fosterParent1";
-	rename -uid "EC8890D9-481D-B1EB-2B65-D8A88F20B7E2";
+	rename -uid "FA867B1C-4951-44C2-2AA5-4D83438E4424";
 createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint2" -p "PaintGunRN1fosterParent1";
 	rename -uid "306EB861-42A5-F4D7-918A-8EB8F96F58D3";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Prop_CtrlW0" -dv 1 -min 0 -at "double";
@@ -820,7 +819,7 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint2" -p "PaintGunRN1f
 	setAttr ".tg[2].tot" -type "double3" -10.175987613400997 23.114302366114572 6.0742832446079662 ;
 	setAttr ".tg[2].tor" -type "double3" -92.943761466109564 49.73043395341562 -0.58327215687296086 ;
 	setAttr ".tg[3].tot" -type "double3" -5.0892196315362535 -1.2175539696897868 16.701260531652018 ;
-	setAttr ".lr" -type "double3" -34.937368708940824 36.23161059859099 99.469471370845 ;
+	setAttr ".lr" -type "double3" -73.266922505123844 31.112328840230298 14.576262862090983 ;
 	setAttr ".rst" -type "double3" -2.3592239273284576e-16 2.6821891474065169 -0.15007850329514572 ;
 	setAttr ".rsrr" -type "double3" 1.4113711398994355e-14 1.5902773407317582e-15 8.1998675381481314e-16 ;
 	setAttr -k on ".w0";
@@ -828,23 +827,23 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint2" -p "PaintGunRN1f
 	setAttr -k on ".w2";
 	setAttr -k on ".w3";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "997BD8E1-4CE5-74FC-E5C0-51AC842793BC";
+	rename -uid "DFFDD930-4F3B-2E64-BBED-FCA45EEBE7E2";
 	setAttr -s 198 ".lnk";
 	setAttr -s 198 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "A72C5C7C-44F5-897B-B4CC-81B629D15454";
+	rename -uid "20599A44-4D85-08CB-201A-26B84F547284";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 0 1 2 ;
 	setAttr -s 3 ".bspr";
 	setAttr -s 3 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "418789A9-4F47-4D78-6FB8-849A822C6BF2";
+	rename -uid "77076E85-4F25-2151-2222-E69CB59FA105";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "C99ABFEF-45F9-588C-5052-93B117FC76AE";
+	rename -uid "347F8D87-4123-13CC-227E-BAA8114233F6";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "0DFBE31B-4B53-7FF6-5DDE-8ABD325E78B9";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "BF49A1BB-4633-67A7-3CEB-C19BF40F53CC";
+	rename -uid "5803A7B9-4FBC-E425-7745-75BE22B5F14F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "625535CE-4208-D65F-6936-AC85A8EB8F28";
 	setAttr ".g" yes;
@@ -879,12 +878,12 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1957\n            -height 810\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
-		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
-		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
-		+ "            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
+		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
+		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
 		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
 		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n"
@@ -13126,272 +13125,6 @@ createNode animCurveTU -n "pCube12_scaleZ";
 createNode reference -n "ApolloRN";
 	rename -uid "BA397E9C-48DE-E665-DE3C-B8A58CEAD598";
 	setAttr -s 273 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
-	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
-	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
-	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
-	setAttr ".phl[158]" 0;
-	setAttr ".phl[159]" 0;
-	setAttr ".phl[160]" 0;
-	setAttr ".phl[161]" 0;
-	setAttr ".phl[162]" 0;
-	setAttr ".phl[163]" 0;
-	setAttr ".phl[164]" 0;
-	setAttr ".phl[165]" 0;
-	setAttr ".phl[166]" 0;
-	setAttr ".phl[167]" 0;
-	setAttr ".phl[168]" 0;
-	setAttr ".phl[169]" 0;
-	setAttr ".phl[170]" 0;
-	setAttr ".phl[171]" 0;
-	setAttr ".phl[172]" 0;
-	setAttr ".phl[173]" 0;
-	setAttr ".phl[174]" 0;
-	setAttr ".phl[175]" 0;
-	setAttr ".phl[176]" 0;
-	setAttr ".phl[177]" 0;
-	setAttr ".phl[178]" 0;
-	setAttr ".phl[179]" 0;
-	setAttr ".phl[180]" 0;
-	setAttr ".phl[181]" 0;
-	setAttr ".phl[182]" 0;
-	setAttr ".phl[183]" 0;
-	setAttr ".phl[184]" 0;
-	setAttr ".phl[185]" 0;
-	setAttr ".phl[186]" 0;
-	setAttr ".phl[187]" 0;
-	setAttr ".phl[188]" 0;
-	setAttr ".phl[189]" 0;
-	setAttr ".phl[190]" 0;
-	setAttr ".phl[191]" 0;
-	setAttr ".phl[192]" 0;
-	setAttr ".phl[193]" 0;
-	setAttr ".phl[194]" 0;
-	setAttr ".phl[195]" 0;
-	setAttr ".phl[196]" 0;
-	setAttr ".phl[197]" 0;
-	setAttr ".phl[198]" 0;
-	setAttr ".phl[199]" 0;
-	setAttr ".phl[200]" 0;
-	setAttr ".phl[201]" 0;
-	setAttr ".phl[202]" 0;
-	setAttr ".phl[203]" 0;
-	setAttr ".phl[204]" 0;
-	setAttr ".phl[205]" 0;
-	setAttr ".phl[206]" 0;
-	setAttr ".phl[207]" 0;
-	setAttr ".phl[208]" 0;
-	setAttr ".phl[209]" 0;
-	setAttr ".phl[210]" 0;
-	setAttr ".phl[211]" 0;
-	setAttr ".phl[212]" 0;
-	setAttr ".phl[213]" 0;
-	setAttr ".phl[214]" 0;
-	setAttr ".phl[215]" 0;
-	setAttr ".phl[216]" 0;
-	setAttr ".phl[217]" 0;
-	setAttr ".phl[218]" 0;
-	setAttr ".phl[219]" 0;
-	setAttr ".phl[220]" 0;
-	setAttr ".phl[221]" 0;
-	setAttr ".phl[222]" 0;
-	setAttr ".phl[223]" 0;
-	setAttr ".phl[224]" 0;
-	setAttr ".phl[225]" 0;
-	setAttr ".phl[226]" 0;
-	setAttr ".phl[227]" 0;
-	setAttr ".phl[228]" 0;
-	setAttr ".phl[229]" 0;
-	setAttr ".phl[230]" 0;
-	setAttr ".phl[231]" 0;
-	setAttr ".phl[232]" 0;
-	setAttr ".phl[233]" 0;
-	setAttr ".phl[234]" 0;
-	setAttr ".phl[235]" 0;
-	setAttr ".phl[236]" 0;
-	setAttr ".phl[237]" 0;
-	setAttr ".phl[238]" 0;
-	setAttr ".phl[239]" 0;
-	setAttr ".phl[240]" 0;
-	setAttr ".phl[241]" 0;
-	setAttr ".phl[242]" 0;
-	setAttr ".phl[243]" 0;
-	setAttr ".phl[244]" 0;
-	setAttr ".phl[245]" 0;
-	setAttr ".phl[246]" 0;
-	setAttr ".phl[247]" 0;
-	setAttr ".phl[248]" 0;
-	setAttr ".phl[249]" 0;
-	setAttr ".phl[250]" 0;
-	setAttr ".phl[251]" 0;
-	setAttr ".phl[252]" 0;
-	setAttr ".phl[253]" 0;
-	setAttr ".phl[254]" 0;
-	setAttr ".phl[255]" 0;
-	setAttr ".phl[256]" 0;
-	setAttr ".phl[257]" 0;
-	setAttr ".phl[258]" 0;
-	setAttr ".phl[259]" 0;
-	setAttr ".phl[260]" 0;
-	setAttr ".phl[261]" 0;
-	setAttr ".phl[262]" 0;
-	setAttr ".phl[263]" 0;
-	setAttr ".phl[264]" 0;
-	setAttr ".phl[265]" 0;
-	setAttr ".phl[266]" 0;
 	setAttr ".phl[267]" 0;
 	setAttr ".phl[268]" 0;
 	setAttr ".phl[269]" 0;
@@ -13399,10 +13132,286 @@ createNode reference -n "ApolloRN";
 	setAttr ".phl[271]" 0;
 	setAttr ".phl[272]" 0;
 	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
+	setAttr ".phl[285]" 0;
+	setAttr ".phl[286]" 0;
+	setAttr ".phl[287]" 0;
+	setAttr ".phl[288]" 0;
+	setAttr ".phl[289]" 0;
+	setAttr ".phl[290]" 0;
+	setAttr ".phl[291]" 0;
+	setAttr ".phl[292]" 0;
+	setAttr ".phl[293]" 0;
+	setAttr ".phl[294]" 0;
+	setAttr ".phl[295]" 0;
+	setAttr ".phl[296]" 0;
+	setAttr ".phl[297]" 0;
+	setAttr ".phl[298]" 0;
+	setAttr ".phl[299]" 0;
+	setAttr ".phl[300]" 0;
+	setAttr ".phl[301]" 0;
+	setAttr ".phl[302]" 0;
+	setAttr ".phl[303]" 0;
+	setAttr ".phl[304]" 0;
+	setAttr ".phl[305]" 0;
+	setAttr ".phl[306]" 0;
+	setAttr ".phl[307]" 0;
+	setAttr ".phl[308]" 0;
+	setAttr ".phl[309]" 0;
+	setAttr ".phl[310]" 0;
+	setAttr ".phl[311]" 0;
+	setAttr ".phl[312]" 0;
+	setAttr ".phl[313]" 0;
+	setAttr ".phl[314]" 0;
+	setAttr ".phl[315]" 0;
+	setAttr ".phl[316]" 0;
+	setAttr ".phl[317]" 0;
+	setAttr ".phl[318]" 0;
+	setAttr ".phl[319]" 0;
+	setAttr ".phl[320]" 0;
+	setAttr ".phl[321]" 0;
+	setAttr ".phl[322]" 0;
+	setAttr ".phl[323]" 0;
+	setAttr ".phl[324]" 0;
+	setAttr ".phl[325]" 0;
+	setAttr ".phl[326]" 0;
+	setAttr ".phl[327]" 0;
+	setAttr ".phl[328]" 0;
+	setAttr ".phl[329]" 0;
+	setAttr ".phl[330]" 0;
+	setAttr ".phl[331]" 0;
+	setAttr ".phl[332]" 0;
+	setAttr ".phl[333]" 0;
+	setAttr ".phl[334]" 0;
+	setAttr ".phl[335]" 0;
+	setAttr ".phl[336]" 0;
+	setAttr ".phl[337]" 0;
+	setAttr ".phl[338]" 0;
+	setAttr ".phl[339]" 0;
+	setAttr ".phl[340]" 0;
+	setAttr ".phl[341]" 0;
+	setAttr ".phl[342]" 0;
+	setAttr ".phl[343]" 0;
+	setAttr ".phl[344]" 0;
+	setAttr ".phl[345]" 0;
+	setAttr ".phl[346]" 0;
+	setAttr ".phl[347]" 0;
+	setAttr ".phl[348]" 0;
+	setAttr ".phl[349]" 0;
+	setAttr ".phl[350]" 0;
+	setAttr ".phl[351]" 0;
+	setAttr ".phl[352]" 0;
+	setAttr ".phl[353]" 0;
+	setAttr ".phl[354]" 0;
+	setAttr ".phl[355]" 0;
+	setAttr ".phl[356]" 0;
+	setAttr ".phl[357]" 0;
+	setAttr ".phl[358]" 0;
+	setAttr ".phl[359]" 0;
+	setAttr ".phl[360]" 0;
+	setAttr ".phl[361]" 0;
+	setAttr ".phl[362]" 0;
+	setAttr ".phl[363]" 0;
+	setAttr ".phl[364]" 0;
+	setAttr ".phl[365]" 0;
+	setAttr ".phl[366]" 0;
+	setAttr ".phl[367]" 0;
+	setAttr ".phl[368]" 0;
+	setAttr ".phl[369]" 0;
+	setAttr ".phl[370]" 0;
+	setAttr ".phl[371]" 0;
+	setAttr ".phl[372]" 0;
+	setAttr ".phl[373]" 0;
+	setAttr ".phl[374]" 0;
+	setAttr ".phl[375]" 0;
+	setAttr ".phl[376]" 0;
+	setAttr ".phl[377]" 0;
+	setAttr ".phl[378]" 0;
+	setAttr ".phl[379]" 0;
+	setAttr ".phl[380]" 0;
+	setAttr ".phl[381]" 0;
+	setAttr ".phl[382]" 0;
+	setAttr ".phl[383]" 0;
+	setAttr ".phl[384]" 0;
+	setAttr ".phl[385]" 0;
+	setAttr ".phl[386]" 0;
+	setAttr ".phl[387]" 0;
+	setAttr ".phl[388]" 0;
+	setAttr ".phl[389]" 0;
+	setAttr ".phl[390]" 0;
+	setAttr ".phl[391]" 0;
+	setAttr ".phl[392]" 0;
+	setAttr ".phl[393]" 0;
+	setAttr ".phl[394]" 0;
+	setAttr ".phl[395]" 0;
+	setAttr ".phl[396]" 0;
+	setAttr ".phl[397]" 0;
+	setAttr ".phl[398]" 0;
+	setAttr ".phl[399]" 0;
+	setAttr ".phl[400]" 0;
+	setAttr ".phl[401]" 0;
+	setAttr ".phl[402]" 0;
+	setAttr ".phl[403]" 0;
+	setAttr ".phl[404]" 0;
+	setAttr ".phl[405]" 0;
+	setAttr ".phl[406]" 0;
+	setAttr ".phl[407]" 0;
+	setAttr ".phl[408]" 0;
+	setAttr ".phl[409]" 0;
+	setAttr ".phl[410]" 0;
+	setAttr ".phl[411]" 0;
+	setAttr ".phl[412]" 0;
+	setAttr ".phl[413]" 0;
+	setAttr ".phl[414]" 0;
+	setAttr ".phl[415]" 0;
+	setAttr ".phl[416]" 0;
+	setAttr ".phl[417]" 0;
+	setAttr ".phl[418]" 0;
+	setAttr ".phl[419]" 0;
+	setAttr ".phl[420]" 0;
+	setAttr ".phl[421]" 0;
+	setAttr ".phl[422]" 0;
+	setAttr ".phl[423]" 0;
+	setAttr ".phl[424]" 0;
+	setAttr ".phl[425]" 0;
+	setAttr ".phl[426]" 0;
+	setAttr ".phl[427]" 0;
+	setAttr ".phl[428]" 0;
+	setAttr ".phl[429]" 0;
+	setAttr ".phl[430]" 0;
+	setAttr ".phl[431]" 0;
+	setAttr ".phl[432]" 0;
+	setAttr ".phl[433]" 0;
+	setAttr ".phl[434]" 0;
+	setAttr ".phl[435]" 0;
+	setAttr ".phl[436]" 0;
+	setAttr ".phl[437]" 0;
+	setAttr ".phl[438]" 0;
+	setAttr ".phl[439]" 0;
+	setAttr ".phl[440]" 0;
+	setAttr ".phl[441]" 0;
+	setAttr ".phl[442]" 0;
+	setAttr ".phl[443]" 0;
+	setAttr ".phl[444]" 0;
+	setAttr ".phl[445]" 0;
+	setAttr ".phl[446]" 0;
+	setAttr ".phl[447]" 0;
+	setAttr ".phl[448]" 0;
+	setAttr ".phl[449]" 0;
+	setAttr ".phl[450]" 0;
+	setAttr ".phl[451]" 0;
+	setAttr ".phl[452]" 0;
+	setAttr ".phl[453]" 0;
+	setAttr ".phl[454]" 0;
+	setAttr ".phl[455]" 0;
+	setAttr ".phl[456]" 0;
+	setAttr ".phl[457]" 0;
+	setAttr ".phl[458]" 0;
+	setAttr ".phl[459]" 0;
+	setAttr ".phl[460]" 0;
+	setAttr ".phl[461]" 0;
+	setAttr ".phl[462]" 0;
+	setAttr ".phl[463]" 0;
+	setAttr ".phl[464]" 0;
+	setAttr ".phl[465]" 0;
+	setAttr ".phl[466]" 0;
+	setAttr ".phl[467]" 0;
+	setAttr ".phl[468]" 0;
+	setAttr ".phl[469]" 0;
+	setAttr ".phl[470]" 0;
+	setAttr ".phl[471]" 0;
+	setAttr ".phl[472]" 0;
+	setAttr ".phl[473]" 0;
+	setAttr ".phl[474]" 0;
+	setAttr ".phl[475]" 0;
+	setAttr ".phl[476]" 0;
+	setAttr ".phl[477]" 0;
+	setAttr ".phl[478]" 0;
+	setAttr ".phl[479]" 0;
+	setAttr ".phl[480]" 0;
+	setAttr ".phl[481]" 0;
+	setAttr ".phl[482]" 0;
+	setAttr ".phl[483]" 0;
+	setAttr ".phl[484]" 0;
+	setAttr ".phl[485]" 0;
+	setAttr ".phl[486]" 0;
+	setAttr ".phl[487]" 0;
+	setAttr ".phl[488]" 0;
+	setAttr ".phl[489]" 0;
+	setAttr ".phl[490]" 0;
+	setAttr ".phl[491]" 0;
+	setAttr ".phl[492]" 0;
+	setAttr ".phl[493]" 0;
+	setAttr ".phl[494]" 0;
+	setAttr ".phl[495]" 0;
+	setAttr ".phl[496]" 0;
+	setAttr ".phl[497]" 0;
+	setAttr ".phl[498]" 0;
+	setAttr ".phl[499]" 0;
+	setAttr ".phl[500]" 0;
+	setAttr ".phl[501]" 0;
+	setAttr ".phl[502]" 0;
+	setAttr ".phl[503]" 0;
+	setAttr ".phl[504]" 0;
+	setAttr ".phl[505]" 0;
+	setAttr ".phl[506]" 0;
+	setAttr ".phl[507]" 0;
+	setAttr ".phl[508]" 0;
+	setAttr ".phl[509]" 0;
+	setAttr ".phl[510]" 0;
+	setAttr ".phl[511]" 0;
+	setAttr ".phl[512]" 0;
+	setAttr ".phl[513]" 0;
+	setAttr ".phl[514]" 0;
+	setAttr ".phl[515]" 0;
+	setAttr ".phl[516]" 0;
+	setAttr ".phl[517]" 0;
+	setAttr ".phl[518]" 0;
+	setAttr ".phl[519]" 0;
+	setAttr ".phl[520]" 0;
+	setAttr ".phl[521]" 0;
+	setAttr ".phl[522]" 0;
+	setAttr ".phl[523]" 0;
+	setAttr ".phl[524]" 0;
+	setAttr ".phl[525]" 0;
+	setAttr ".phl[526]" 0;
+	setAttr ".phl[527]" 0;
+	setAttr ".phl[528]" 0;
+	setAttr ".phl[529]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"ApolloRN"
-		"ApolloRN" 0
-		"ApolloRN" 290
+		"ApolloRN" 10
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.visibility" 
+		"ApolloRN.placeHolderList[257]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[258]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[259]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[260]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[261]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateY" 
+		"ApolloRN.placeHolderList[262]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[263]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleX" 
+		"ApolloRN.placeHolderList[264]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleY" 
+		"ApolloRN.placeHolderList[265]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleZ" 
+		"ApolloRN.placeHolderList[266]" ""
+		"ApolloRN" 280
 		2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape" 
 		"instObjGroups.objectGroups" " -s 4"
 		2 "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl" 
@@ -13426,557 +13435,537 @@ createNode reference -n "ApolloRN";
 		
 		2 "Apollo:groupParts100" "groupId" " 113"
 		3 "Apollo:groupId766.message" ":defaultLastHiddenSet.groupNodes" "-na"
+		3 "Apollo:groupId766.groupId" "Apollo:groupParts100.groupId" ""
 		3 "Apollo:groupId766.groupId" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[42].objectGroupId" 
 		""
 		3 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[42]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
-		3 "Apollo:groupId766.groupId" "Apollo:groupParts100.groupId" ""
 		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.ArmIKFK" 
-		"ApolloRN.placeHolderList[1]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.MasterScale" 
-		"ApolloRN.placeHolderList[2]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[3]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[4]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[5]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[6]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateY" 
-		"ApolloRN.placeHolderList[7]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[8]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[9]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[10]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[11]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[12]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[13]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[14]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateY" 
-		"ApolloRN.placeHolderList[15]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[16]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[17]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[18]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[19]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[20]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[21]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[22]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[23]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[24]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[25]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[26]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[27]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[28]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[29]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[30]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[31]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[32]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[33]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[34]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[35]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[36]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[37]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[38]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[39]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[40]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[41]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[42]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[43]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[44]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[45]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[46]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[47]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[48]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[49]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[50]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[51]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[52]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[53]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[54]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[55]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_Swing_Ctrl.Swing" 
-		"ApolloRN.placeHolderList[56]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[57]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[58]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[59]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[60]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[61]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[62]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[63]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[64]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[65]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[66]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[67]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[68]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[69]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[70]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[71]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[72]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[73]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[74]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[75]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[76]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[77]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[78]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[79]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[80]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[81]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[82]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[83]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[84]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[85]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[86]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[87]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[88]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[89]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[90]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[91]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[92]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[93]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[94]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[95]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_Swing_Ctrl.Swing" 
-		"ApolloRN.placeHolderList[96]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[97]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[98]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[99]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[100]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[101]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[102]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateY" 
-		"ApolloRN.placeHolderList[103]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[104]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[105]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[106]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[107]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[108]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[109]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[110]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[111]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[112]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[113]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.rotateY" 
-		"ApolloRN.placeHolderList[114]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[115]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[116]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl|Apollo:Arm_Base_Jnt_02_Ctrl_Grp|Apollo:Arm_Base_Jnt_02_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[117]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[118]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[119]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[120]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[121]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[122]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[123]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[124]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateY" 
-		"ApolloRN.placeHolderList[125]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[126]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[127]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[128]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[129]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[130]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[131]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Neutral" 
-		"ApolloRN.placeHolderList[132]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Oooh" 
-		"ApolloRN.placeHolderList[133]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Bored" 
-		"ApolloRN.placeHolderList[134]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Smirk" 
-		"ApolloRN.placeHolderList[135]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.MouthScale" 
-		"ApolloRN.placeHolderList[136]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[137]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[138]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.ExclamationPoint" 
-		"ApolloRN.placeHolderList[139]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.REye" 
-		"ApolloRN.placeHolderList[140]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.LEye" 
-		"ApolloRN.placeHolderList[141]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.Mouth" 
-		"ApolloRN.placeHolderList[142]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.X1" 
-		"ApolloRN.placeHolderList[143]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.X2" 
-		"ApolloRN.placeHolderList[144]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[145]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[146]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Open" 
-		"ApolloRN.placeHolderList[147]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Squint" 
-		"ApolloRN.placeHolderList[148]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Close" 
-		"ApolloRN.placeHolderList[149]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Sad" 
-		"ApolloRN.placeHolderList[150]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Wink" 
-		"ApolloRN.placeHolderList[151]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Bored" 
-		"ApolloRN.placeHolderList[152]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Smirk" 
-		"ApolloRN.placeHolderList[153]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.EyeScale" 
-		"ApolloRN.placeHolderList[154]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Determined" 
-		"ApolloRN.placeHolderList[155]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[156]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[157]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Open" 
-		"ApolloRN.placeHolderList[158]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Squint" 
-		"ApolloRN.placeHolderList[159]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Close" 
-		"ApolloRN.placeHolderList[160]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Sad" 
-		"ApolloRN.placeHolderList[161]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Wink" 
-		"ApolloRN.placeHolderList[162]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Bored" 
-		"ApolloRN.placeHolderList[163]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Smirk" 
-		"ApolloRN.placeHolderList[164]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.EyeScale" 
-		"ApolloRN.placeHolderList[165]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Determined" 
-		"ApolloRN.placeHolderList[166]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Visor_Ctrl_Grp|Apollo:Visor_Ctrl.L_Visor" 
-		"ApolloRN.placeHolderList[167]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Visor_Ctrl_Grp|Apollo:Visor_Ctrl.RVisor" 
-		"ApolloRN.placeHolderList[168]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Wipers_Ctrl_Grp|Apollo:R_Wiper_Ctrl_Grp|Apollo:R_Wiper_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[169]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Wipers_Ctrl_Grp|Apollo:L_Wiper_Ctrl_Grp|Apollo:L_Wiper_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[170]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Jnt_Ctrl_Grp|Apollo:Hand_Jnt_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[171]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[172]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[173]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[174]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[175]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[176]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[177]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[178]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[179]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[180]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[181]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[182]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[183]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[184]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[185]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[186]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[187]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[188]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[189]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[190]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[191]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[192]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[193]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[194]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[195]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[196]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[197]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[198]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[199]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[200]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[201]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_01_Ctrl_Grp|Apollo:Piston_01_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[202]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_02_Ctrl_Grp|Apollo:Piston_02_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[203]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_03_Ctrl_Grp|Apollo:Piston_03_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[204]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.Follow" 
-		"ApolloRN.placeHolderList[205]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
-		"ApolloRN.placeHolderList[206]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
-		"ApolloRN.placeHolderList[207]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[208]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[209]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[210]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
-		"ApolloRN.placeHolderList[211]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
-		"ApolloRN.placeHolderList[212]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
-		"ApolloRN.placeHolderList[213]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
-		"ApolloRN.placeHolderList[214]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
-		"ApolloRN.placeHolderList[215]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
-		"ApolloRN.placeHolderList[216]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[217]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateY" 
-		"ApolloRN.placeHolderList[218]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[219]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
-		"ApolloRN.placeHolderList[220]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
-		"ApolloRN.placeHolderList[221]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
-		"ApolloRN.placeHolderList[222]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
-		"ApolloRN.placeHolderList[223]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleX" 
-		"ApolloRN.placeHolderList[224]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleY" 
-		"ApolloRN.placeHolderList[225]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleZ" 
-		"ApolloRN.placeHolderList[226]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
-		"ApolloRN.placeHolderList[227]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
-		"ApolloRN.placeHolderList[228]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.message" 
-		"ApolloRN.placeHolderList[229]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[230]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[231]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.TreadsRoll" 
-		"ApolloRN.placeHolderList[232]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.IndividualRoll" 
-		"ApolloRN.placeHolderList[233]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[234]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateY" 
-		"ApolloRN.placeHolderList[235]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[236]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[237]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[238]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[239]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.Roll" 
-		"ApolloRN.placeHolderList[240]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[241]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_03_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_03_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[242]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_02_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_02_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[243]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_01_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_01_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[244]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Mid_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[245]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Front_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Front_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[246]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[247]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.FollowTranslate" 
-		"ApolloRN.placeHolderList[248]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.FollowRotate" 
-		"ApolloRN.placeHolderList[249]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.Roll" 
-		"ApolloRN.placeHolderList[250]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Front_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Front_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[251]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Mid_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[252]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_01_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_01_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[253]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_02_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_02_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[254]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_03_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_03_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[255]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[256]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.visibility" 
-		"ApolloRN.placeHolderList[257]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateX" 
-		"ApolloRN.placeHolderList[258]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateY" 
-		"ApolloRN.placeHolderList[259]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateZ" 
-		"ApolloRN.placeHolderList[260]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateX" 
-		"ApolloRN.placeHolderList[261]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateY" 
-		"ApolloRN.placeHolderList[262]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateZ" 
-		"ApolloRN.placeHolderList[263]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleX" 
-		"ApolloRN.placeHolderList[264]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleY" 
-		"ApolloRN.placeHolderList[265]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleZ" 
-		"ApolloRN.placeHolderList[266]" ""
-		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
 		"ApolloRN.placeHolderList[267]" ""
-		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.MasterScale" 
 		"ApolloRN.placeHolderList[268]" ""
-		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[269]" ""
-		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[270]" ""
-		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[271]" ""
-		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[272]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateY" 
+		"ApolloRN.placeHolderList[273]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[274]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[275]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[276]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[277]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[278]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[279]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[280]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateY" 
+		"ApolloRN.placeHolderList[281]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[282]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[283]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[284]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[285]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[286]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[287]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[288]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[289]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[290]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[291]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[292]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[293]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[294]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[295]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[296]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[297]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[298]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[299]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[300]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[301]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[302]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[303]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[304]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[305]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[306]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[307]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[308]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[309]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[310]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[311]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[312]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[313]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[314]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[315]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[316]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[317]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[318]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[319]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[320]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[321]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_Swing_Ctrl.Swing" 
+		"ApolloRN.placeHolderList[322]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[323]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[324]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[325]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[326]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[327]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[328]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[329]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[330]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[331]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[332]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[333]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[334]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[335]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[336]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[337]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[338]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[339]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[340]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[341]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[342]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[343]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[344]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[345]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[346]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[347]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[348]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[349]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[350]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[351]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[352]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[353]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[354]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[355]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[356]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[357]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[358]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[359]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[360]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[361]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_Swing_Ctrl.Swing" 
+		"ApolloRN.placeHolderList[362]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[363]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[364]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[365]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[366]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[367]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[368]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateY" 
+		"ApolloRN.placeHolderList[369]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[370]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[371]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[372]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[373]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[374]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[375]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[376]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[377]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[378]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[379]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.rotateY" 
+		"ApolloRN.placeHolderList[380]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[381]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[382]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl|Apollo:Arm_Base_Jnt_02_Ctrl_Grp|Apollo:Arm_Base_Jnt_02_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[383]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[384]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[385]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[386]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[387]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[388]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[389]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[390]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateY" 
+		"ApolloRN.placeHolderList[391]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[392]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[393]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[394]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[395]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[396]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[397]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Neutral" 
+		"ApolloRN.placeHolderList[398]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Oooh" 
+		"ApolloRN.placeHolderList[399]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Bored" 
+		"ApolloRN.placeHolderList[400]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Smirk" 
+		"ApolloRN.placeHolderList[401]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.MouthScale" 
+		"ApolloRN.placeHolderList[402]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[403]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[404]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.ExclamationPoint" 
+		"ApolloRN.placeHolderList[405]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.REye" 
+		"ApolloRN.placeHolderList[406]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.LEye" 
+		"ApolloRN.placeHolderList[407]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.Mouth" 
+		"ApolloRN.placeHolderList[408]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.X1" 
+		"ApolloRN.placeHolderList[409]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.X2" 
+		"ApolloRN.placeHolderList[410]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[411]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[412]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Open" 
+		"ApolloRN.placeHolderList[413]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Squint" 
+		"ApolloRN.placeHolderList[414]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Close" 
+		"ApolloRN.placeHolderList[415]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Sad" 
+		"ApolloRN.placeHolderList[416]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Wink" 
+		"ApolloRN.placeHolderList[417]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Bored" 
+		"ApolloRN.placeHolderList[418]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Smirk" 
+		"ApolloRN.placeHolderList[419]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.EyeScale" 
+		"ApolloRN.placeHolderList[420]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Determined" 
+		"ApolloRN.placeHolderList[421]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[422]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[423]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Open" 
+		"ApolloRN.placeHolderList[424]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Squint" 
+		"ApolloRN.placeHolderList[425]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Close" 
+		"ApolloRN.placeHolderList[426]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Sad" 
+		"ApolloRN.placeHolderList[427]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Wink" 
+		"ApolloRN.placeHolderList[428]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Bored" 
+		"ApolloRN.placeHolderList[429]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Smirk" 
+		"ApolloRN.placeHolderList[430]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.EyeScale" 
+		"ApolloRN.placeHolderList[431]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Determined" 
+		"ApolloRN.placeHolderList[432]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Visor_Ctrl_Grp|Apollo:Visor_Ctrl.L_Visor" 
+		"ApolloRN.placeHolderList[433]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Visor_Ctrl_Grp|Apollo:Visor_Ctrl.RVisor" 
+		"ApolloRN.placeHolderList[434]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Wipers_Ctrl_Grp|Apollo:R_Wiper_Ctrl_Grp|Apollo:R_Wiper_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[435]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Wipers_Ctrl_Grp|Apollo:L_Wiper_Ctrl_Grp|Apollo:L_Wiper_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[436]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Jnt_Ctrl_Grp|Apollo:Hand_Jnt_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[437]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[438]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[439]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[440]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[441]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[442]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[443]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[444]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[445]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[446]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[447]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[448]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[449]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[450]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[451]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[452]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[453]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[454]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[455]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[456]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[457]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[458]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[459]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[460]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[461]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[462]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[463]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[464]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[465]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[466]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[467]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_01_Ctrl_Grp|Apollo:Piston_01_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[468]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_02_Ctrl_Grp|Apollo:Piston_02_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[469]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_03_Ctrl_Grp|Apollo:Piston_03_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[470]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.Follow" 
+		"ApolloRN.placeHolderList[471]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
+		"ApolloRN.placeHolderList[472]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
+		"ApolloRN.placeHolderList[473]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateX" 
+		"ApolloRN.placeHolderList[474]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateY" 
+		"ApolloRN.placeHolderList[475]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateZ" 
+		"ApolloRN.placeHolderList[476]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
+		"ApolloRN.placeHolderList[477]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
+		"ApolloRN.placeHolderList[478]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
+		"ApolloRN.placeHolderList[479]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
+		"ApolloRN.placeHolderList[480]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
+		"ApolloRN.placeHolderList[481]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
+		"ApolloRN.placeHolderList[482]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[483]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateY" 
+		"ApolloRN.placeHolderList[484]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[485]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
+		"ApolloRN.placeHolderList[486]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
+		"ApolloRN.placeHolderList[487]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
+		"ApolloRN.placeHolderList[488]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
+		"ApolloRN.placeHolderList[489]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleX" 
+		"ApolloRN.placeHolderList[490]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleY" 
+		"ApolloRN.placeHolderList[491]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleZ" 
+		"ApolloRN.placeHolderList[492]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
+		"ApolloRN.placeHolderList[493]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
+		"ApolloRN.placeHolderList[494]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.message" 
+		"ApolloRN.placeHolderList[495]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[496]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[497]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.TreadsRoll" 
+		"ApolloRN.placeHolderList[498]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.IndividualRoll" 
+		"ApolloRN.placeHolderList[499]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateX" 
+		"ApolloRN.placeHolderList[500]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateY" 
+		"ApolloRN.placeHolderList[501]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[502]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[503]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[504]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[505]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.Roll" 
+		"ApolloRN.placeHolderList[506]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[507]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_03_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_03_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[508]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_02_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_02_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[509]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_01_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_01_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[510]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Mid_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[511]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Front_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Front_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[512]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[513]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.FollowTranslate" 
+		"ApolloRN.placeHolderList[514]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.FollowRotate" 
+		"ApolloRN.placeHolderList[515]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.Roll" 
+		"ApolloRN.placeHolderList[516]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Front_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Front_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[517]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Mid_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[518]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_01_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_01_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[519]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_02_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_02_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[520]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_03_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_03_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[521]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		"ApolloRN.placeHolderList[522]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
+		"ApolloRN.placeHolderList[523]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
+		"ApolloRN.placeHolderList[524]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
+		"ApolloRN.placeHolderList[525]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
+		"ApolloRN.placeHolderList[526]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
+		"ApolloRN.placeHolderList[527]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
+		"ApolloRN.placeHolderList[528]" ""
 		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
-		"ApolloRN.placeHolderList[273]" "";
+		"ApolloRN.placeHolderList[529]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Dionysus_Asset_RigRN";
@@ -14749,9 +14738,9 @@ createNode reference -n "Dionysus_Asset_RigRN";
 		"PropSpeed" " -k 1 75"
 		2 "Dionysus_Asset_Rig:Dionysus_Ctrl" "visibility" " 1"
 		2 "Dionysus_Asset_Rig:Dionysus_Geo" "visibility" " 1"
-		3 "Dionysus_Asset_Rig:unitConversion66.output" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Dionysus_Asset_Rig:Prop_02_Ctrl.rotateY" 
-		""
 		3 "Dionysus_Asset_Rig:unitConversion67.output" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_01_Ctrl_Grp|Dionysus_Asset_Rig:Prop_01_Ctrl.rotateY" 
+		""
+		3 "Dionysus_Asset_Rig:unitConversion66.output" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Dionysus_Asset_Rig:Prop_02_Ctrl.rotateY" 
 		""
 		5 4 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Booster_Ctrl_Grp|Dionysus_Asset_Rig:Booster_Ctrl.FollowTranslate" 
 		"Dionysus_Asset_RigRN.placeHolderList[1]" ""
@@ -16223,6 +16212,259 @@ lockNode -l 1 ;
 createNode reference -n "PaintGunRN";
 	rename -uid "D0B384AE-4691-9108-F69F-6B837279AF43";
 	setAttr -s 55 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"PaintGunRN"
+		"PaintGunRN" 0
+		"PaintGunRN" 65
+		0 "|PaintGunRNfosterParent1|Gun_Ctrl_Grp_parentConstraint1" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp" 
+		"-s -r "
+		1 "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl" "Follow" "Follow" 
+		" -ci 1 -min 0 -max 4 -en \"DioTwoHand:Apollo:DioLeft:DioRight:Self\" -at \"enum\""
+		
+		2 "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl" "Follow" " -k 1"
+		
+		2 "|PaintGun:PaintGun|PaintGun:IKStuff|PaintGun:ikHandle1" "translate" " -type \"double3\" 0.7682348639648332 6.96275221348286877 -2.23791801376502208"
+		
+		2 "|PaintGun:PaintGun|PaintGun:IKStuff|PaintGun:ikHandle1" "rotate" " -type \"double3\" 171.10628728931160936 -2.89114505498191265 176.69406951857257582"
+		
+		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp" 
+		"translate" " -type \"double3\" 5.17684528281498757 21.40250146948107357 -10.43927950831913165"
+		
+		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp" 
+		"rotate" " -type \"double3\" 80.962133210280399 -0.057817145441680755 179.63651680850264825"
+		
+		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl" 
+		"translate" " -type \"double3\" 1.29180231455155581 0 -0.0082983058294336352"
+		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl" 
+		"scale" " -type \"double3\" 0.99999999999999967 0.99999999999999967 0.99999999999999967"
+		
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.translateX" 
+		"PaintGunRN.placeHolderList[1]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.translateY" 
+		"PaintGunRN.placeHolderList[2]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.translateZ" 
+		"PaintGunRN.placeHolderList[3]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateX" 
+		"PaintGunRN.placeHolderList[4]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateY" 
+		"PaintGunRN.placeHolderList[5]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateZ" 
+		"PaintGunRN.placeHolderList[6]" ""
+		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateOrder" 
+		"PaintGunRN.placeHolderList[7]" ""
+		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.parentInverseMatrix" 
+		"PaintGunRN.placeHolderList[8]" ""
+		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotatePivot" 
+		"PaintGunRN.placeHolderList[9]" ""
+		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotatePivotTranslate" 
+		"PaintGunRN.placeHolderList[10]" ""
+		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.message" 
+		"PaintGunRN.placeHolderList[11]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.MasterScale" 
+		"PaintGunRN.placeHolderList[12]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.translateX" 
+		"PaintGunRN.placeHolderList[13]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.translateY" 
+		"PaintGunRN.placeHolderList[14]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.translateZ" 
+		"PaintGunRN.placeHolderList[15]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.rotateX" 
+		"PaintGunRN.placeHolderList[16]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.rotateY" 
+		"PaintGunRN.placeHolderList[17]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.rotateZ" 
+		"PaintGunRN.placeHolderList[18]" ""
+		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.message" 
+		"PaintGunRN.placeHolderList[19]" ""
+		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
+		"PaintGunRN.placeHolderList[20]" ""
+		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
+		"PaintGunRN.placeHolderList[21]" ""
+		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
+		"PaintGunRN.placeHolderList[22]" ""
+		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
+		"PaintGunRN.placeHolderList[23]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
+		"PaintGunRN.placeHolderList[24]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:IKStuff|PaintGun:TubeIKCurve.visibility" 
+		"PaintGunRN.placeHolderList[25]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.translateX" 
+		"PaintGunRN.placeHolderList[26]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.translateY" 
+		"PaintGunRN.placeHolderList[27]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.translateZ" 
+		"PaintGunRN.placeHolderList[28]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.rotateX" 
+		"PaintGunRN.placeHolderList[29]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.rotateY" 
+		"PaintGunRN.placeHolderList[30]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.rotateZ" 
+		"PaintGunRN.placeHolderList[31]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.scaleX" 
+		"PaintGunRN.placeHolderList[32]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.scaleY" 
+		"PaintGunRN.placeHolderList[33]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.scaleZ" 
+		"PaintGunRN.placeHolderList[34]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.visibility" 
+		"PaintGunRN.placeHolderList[35]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.translateX" 
+		"PaintGunRN.placeHolderList[36]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.translateY" 
+		"PaintGunRN.placeHolderList[37]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.translateZ" 
+		"PaintGunRN.placeHolderList[38]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.rotateX" 
+		"PaintGunRN.placeHolderList[39]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.rotateY" 
+		"PaintGunRN.placeHolderList[40]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.rotateZ" 
+		"PaintGunRN.placeHolderList[41]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.scaleX" 
+		"PaintGunRN.placeHolderList[42]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.scaleY" 
+		"PaintGunRN.placeHolderList[43]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.scaleZ" 
+		"PaintGunRN.placeHolderList[44]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.visibility" 
+		"PaintGunRN.placeHolderList[45]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.translateX" 
+		"PaintGunRN.placeHolderList[46]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.translateY" 
+		"PaintGunRN.placeHolderList[47]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.translateZ" 
+		"PaintGunRN.placeHolderList[48]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.rotateX" 
+		"PaintGunRN.placeHolderList[49]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.rotateY" 
+		"PaintGunRN.placeHolderList[50]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.rotateZ" 
+		"PaintGunRN.placeHolderList[51]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.scaleX" 
+		"PaintGunRN.placeHolderList[52]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.scaleY" 
+		"PaintGunRN.placeHolderList[53]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.scaleZ" 
+		"PaintGunRN.placeHolderList[54]" ""
+		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.visibility" 
+		"PaintGunRN.placeHolderList[55]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "PaintGunRN1";
+	rename -uid "AEC5507E-4B5E-DA89-14DC-5CBA3216105F";
+	setAttr -s 99 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
 	setAttr ".phl[56]" 0;
 	setAttr ".phl[57]" 0;
 	setAttr ".phl[58]" 0;
@@ -16267,263 +16509,10 @@ createNode reference -n "PaintGunRN";
 	setAttr ".phl[97]" 0;
 	setAttr ".phl[98]" 0;
 	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"PaintGunRN"
-		"PaintGunRN" 3
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.visibility" 
-		"PaintGunRN.placeHolderList[35]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.visibility" 
-		"PaintGunRN.placeHolderList[45]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.visibility" 
-		"PaintGunRN.placeHolderList[55]" ""
-		"PaintGunRN" 62
-		0 "|PaintGunRNfosterParent1|Gun_Ctrl_Grp_parentConstraint1" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp" 
-		"-s -r "
-		1 "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl" "Follow" "Follow" 
-		" -ci 1 -min 0 -max 4 -en \"DioTwoHand:Apollo:DioLeft:DioRight:Self\" -at \"enum\""
-		
-		2 "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl" "Follow" " -k 1"
-		
-		2 "|PaintGun:PaintGun|PaintGun:IKStuff|PaintGun:ikHandle1" "translate" " -type \"double3\" 0.71884101244314169 6.96309268825675431 -2.23782834852365609"
-		
-		2 "|PaintGun:PaintGun|PaintGun:IKStuff|PaintGun:ikHandle1" "rotate" " -type \"double3\" 171.11228814137524523 -3.01250973064727656 176.71780858876033449"
-		
-		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp" 
-		"translate" " -type \"double3\" 5.17684528281498757 21.40250146948107357 -10.43927950831913165"
-		
-		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp" 
-		"rotate" " -type \"double3\" 80.962133210280399 -0.057817145441680755 179.63651680850264825"
-		
-		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl" 
-		"translate" " -type \"double3\" 1.29180231455155581 0 -0.0082983058294336352"
-		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl" 
-		"rotate" " -type \"double3\" 0 0 0"
-		2 "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl" 
-		"scale" " -type \"double3\" 0.99999999999999967 0.99999999999999967 0.99999999999999967"
-		
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.translateX" 
-		"PaintGunRN.placeHolderList[56]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.translateY" 
-		"PaintGunRN.placeHolderList[57]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.translateZ" 
-		"PaintGunRN.placeHolderList[58]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateX" 
-		"PaintGunRN.placeHolderList[59]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateY" 
-		"PaintGunRN.placeHolderList[60]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateZ" 
-		"PaintGunRN.placeHolderList[61]" ""
-		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateOrder" 
-		"PaintGunRN.placeHolderList[62]" ""
-		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.parentInverseMatrix" 
-		"PaintGunRN.placeHolderList[63]" ""
-		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotatePivot" 
-		"PaintGunRN.placeHolderList[64]" ""
-		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotatePivotTranslate" 
-		"PaintGunRN.placeHolderList[65]" ""
-		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.message" 
-		"PaintGunRN.placeHolderList[66]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.MasterScale" 
-		"PaintGunRN.placeHolderList[67]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.translateX" 
-		"PaintGunRN.placeHolderList[68]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.translateY" 
-		"PaintGunRN.placeHolderList[69]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.translateZ" 
-		"PaintGunRN.placeHolderList[70]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.rotateX" 
-		"PaintGunRN.placeHolderList[71]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.rotateY" 
-		"PaintGunRN.placeHolderList[72]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.rotateZ" 
-		"PaintGunRN.placeHolderList[73]" ""
-		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.message" 
-		"PaintGunRN.placeHolderList[74]" ""
-		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
-		"PaintGunRN.placeHolderList[75]" ""
-		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
-		"PaintGunRN.placeHolderList[76]" ""
-		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
-		"PaintGunRN.placeHolderList[77]" ""
-		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
-		"PaintGunRN.placeHolderList[78]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
-		"PaintGunRN.placeHolderList[79]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:IKStuff|PaintGun:TubeIKCurve.visibility" 
-		"PaintGunRN.placeHolderList[80]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.translateX" 
-		"PaintGunRN.placeHolderList[81]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.translateY" 
-		"PaintGunRN.placeHolderList[82]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.translateZ" 
-		"PaintGunRN.placeHolderList[83]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.rotateX" 
-		"PaintGunRN.placeHolderList[84]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.rotateY" 
-		"PaintGunRN.placeHolderList[85]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.rotateZ" 
-		"PaintGunRN.placeHolderList[86]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.scaleX" 
-		"PaintGunRN.placeHolderList[87]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.scaleY" 
-		"PaintGunRN.placeHolderList[88]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.scaleZ" 
-		"PaintGunRN.placeHolderList[89]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.translateX" 
-		"PaintGunRN.placeHolderList[90]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.translateY" 
-		"PaintGunRN.placeHolderList[91]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.translateZ" 
-		"PaintGunRN.placeHolderList[92]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.rotateX" 
-		"PaintGunRN.placeHolderList[93]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.rotateY" 
-		"PaintGunRN.placeHolderList[94]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.rotateZ" 
-		"PaintGunRN.placeHolderList[95]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.scaleX" 
-		"PaintGunRN.placeHolderList[96]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.scaleY" 
-		"PaintGunRN.placeHolderList[97]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.scaleZ" 
-		"PaintGunRN.placeHolderList[98]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.translateX" 
-		"PaintGunRN.placeHolderList[99]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.translateY" 
-		"PaintGunRN.placeHolderList[100]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.translateZ" 
-		"PaintGunRN.placeHolderList[101]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.rotateX" 
-		"PaintGunRN.placeHolderList[102]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.rotateY" 
-		"PaintGunRN.placeHolderList[103]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.rotateZ" 
-		"PaintGunRN.placeHolderList[104]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.scaleX" 
-		"PaintGunRN.placeHolderList[105]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.scaleY" 
-		"PaintGunRN.placeHolderList[106]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.scaleZ" 
-		"PaintGunRN.placeHolderList[107]" "";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "PaintGunRN1";
-	rename -uid "AEC5507E-4B5E-DA89-14DC-5CBA3216105F";
-	setAttr -s 99 ".phl";
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
-	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
-	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
-	setAttr ".phl[158]" 0;
-	setAttr ".phl[159]" 0;
-	setAttr ".phl[160]" 0;
-	setAttr ".phl[161]" 0;
-	setAttr ".phl[162]" 0;
-	setAttr ".phl[163]" 0;
-	setAttr ".phl[164]" 0;
-	setAttr ".phl[165]" 0;
-	setAttr ".phl[166]" 0;
-	setAttr ".phl[167]" 0;
-	setAttr ".phl[168]" 0;
-	setAttr ".phl[169]" 0;
-	setAttr ".phl[170]" 0;
-	setAttr ".phl[171]" 0;
-	setAttr ".phl[172]" 0;
-	setAttr ".phl[173]" 0;
-	setAttr ".phl[174]" 0;
-	setAttr ".phl[175]" 0;
-	setAttr ".phl[176]" 0;
-	setAttr ".phl[177]" 0;
-	setAttr ".phl[178]" 0;
-	setAttr ".phl[179]" 0;
-	setAttr ".phl[180]" 0;
-	setAttr ".phl[181]" 0;
-	setAttr ".phl[182]" 0;
-	setAttr ".phl[183]" 0;
-	setAttr ".phl[184]" 0;
-	setAttr ".phl[185]" 0;
-	setAttr ".phl[186]" 0;
-	setAttr ".phl[187]" 0;
-	setAttr ".phl[188]" 0;
-	setAttr ".phl[189]" 0;
-	setAttr ".phl[190]" 0;
-	setAttr ".phl[191]" 0;
-	setAttr ".phl[192]" 0;
-	setAttr ".phl[193]" 0;
-	setAttr ".phl[194]" 0;
-	setAttr ".phl[195]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PaintGunRN1"
-		"PaintGunRN1" 3
-		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.visibility" 
-		"PaintGunRN1.placeHolderList[38]" ""
-		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.visibility" 
-		"PaintGunRN1.placeHolderList[89]" ""
-		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.visibility" 
-		"PaintGunRN1.placeHolderList[99]" ""
-		"PaintGunRN1" 114
+		"PaintGunRN1" 0
+		"PaintGunRN1" 117
 		0 "|PaintGunRN1fosterParent1|Gun_Ctrl_Grp_parentConstraint2" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp" 
 		"-s -r "
 		1 "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl" "Follow" 
@@ -16543,9 +16532,9 @@ createNode reference -n "PaintGunRN1";
 		2 "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl" "Follow" 
 		" -k 1"
 		2 "|PaintGun1:PaintGun|PaintGun1:IKStuff|PaintGun1:ikHandle1" "translate" 
-		" -type \"double3\" -0.96867552620586062 6.9626276842431718 -2.23793256682811004"
+		" -type \"double3\" -0.97017708509741574 6.96263341133227875 -2.23793243757080562"
 		
-		2 "|PaintGun1:PaintGun|PaintGun1:IKStuff|PaintGun1:ikHandle1" "rotate" " -type \"double3\" 9.07267030256924123 -2.06820612568982432 -1.47899669661647359"
+		2 "|PaintGun1:PaintGun|PaintGun1:IKStuff|PaintGun1:ikHandle1" "rotate" " -type \"double3\" 9.17869161011312329 -2.26554625223887163 -3.79205815037378224"
 		
 		2 "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl" 
 		"Follow" " -k 1 0"
@@ -16577,193 +16566,199 @@ createNode reference -n "PaintGunRN1";
 		"translate" " -type \"double3\" 0.29283041838024998 0.00011782386651851987 0.0018810901151525214"
 		
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp.translateX" 
-		"PaintGunRN1.placeHolderList[100]" ""
+		"PaintGunRN1.placeHolderList[1]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp.translateY" 
-		"PaintGunRN1.placeHolderList[101]" ""
+		"PaintGunRN1.placeHolderList[2]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp.translateZ" 
-		"PaintGunRN1.placeHolderList[102]" ""
+		"PaintGunRN1.placeHolderList[3]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp.rotateX" 
-		"PaintGunRN1.placeHolderList[103]" ""
+		"PaintGunRN1.placeHolderList[4]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp.rotateY" 
-		"PaintGunRN1.placeHolderList[104]" ""
+		"PaintGunRN1.placeHolderList[5]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp.rotateZ" 
-		"PaintGunRN1.placeHolderList[105]" ""
+		"PaintGunRN1.placeHolderList[6]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp.rotateOrder" 
-		"PaintGunRN1.placeHolderList[106]" ""
+		"PaintGunRN1.placeHolderList[7]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp.parentInverseMatrix" 
-		"PaintGunRN1.placeHolderList[107]" ""
+		"PaintGunRN1.placeHolderList[8]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp.rotatePivot" 
-		"PaintGunRN1.placeHolderList[108]" ""
+		"PaintGunRN1.placeHolderList[9]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp.rotatePivotTranslate" 
-		"PaintGunRN1.placeHolderList[109]" ""
+		"PaintGunRN1.placeHolderList[10]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.MasterScale" 
-		"PaintGunRN1.placeHolderList[110]" ""
+		"PaintGunRN1.placeHolderList[11]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.translateX" 
-		"PaintGunRN1.placeHolderList[111]" ""
+		"PaintGunRN1.placeHolderList[12]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.translateY" 
-		"PaintGunRN1.placeHolderList[112]" ""
+		"PaintGunRN1.placeHolderList[13]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.translateZ" 
-		"PaintGunRN1.placeHolderList[113]" ""
+		"PaintGunRN1.placeHolderList[14]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.rotateX" 
-		"PaintGunRN1.placeHolderList[114]" ""
+		"PaintGunRN1.placeHolderList[15]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.rotateY" 
-		"PaintGunRN1.placeHolderList[115]" ""
+		"PaintGunRN1.placeHolderList[16]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.rotateZ" 
-		"PaintGunRN1.placeHolderList[116]" ""
+		"PaintGunRN1.placeHolderList[17]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.Follow" 
-		"PaintGunRN1.placeHolderList[117]" ""
+		"PaintGunRN1.placeHolderList[18]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.Follow" 
-		"PaintGunRN1.placeHolderList[118]" ""
+		"PaintGunRN1.placeHolderList[19]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.Follow" 
-		"PaintGunRN1.placeHolderList[119]" ""
+		"PaintGunRN1.placeHolderList[20]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.Follow" 
-		"PaintGunRN1.placeHolderList[120]" ""
+		"PaintGunRN1.placeHolderList[21]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Gun_Ctrl_Grp|PaintGun1:Gun_Ctrl.Follow" 
-		"PaintGunRN1.placeHolderList[121]" ""
+		"PaintGunRN1.placeHolderList[22]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:IKStuff|PaintGun1:TubeIKCurve.visibility" 
-		"PaintGunRN1.placeHolderList[122]" ""
+		"PaintGunRN1.placeHolderList[23]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.translateX" 
-		"PaintGunRN1.placeHolderList[123]" ""
+		"PaintGunRN1.placeHolderList[24]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.translateY" 
-		"PaintGunRN1.placeHolderList[124]" ""
+		"PaintGunRN1.placeHolderList[25]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.translateZ" 
-		"PaintGunRN1.placeHolderList[125]" ""
+		"PaintGunRN1.placeHolderList[26]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.rotateX" 
-		"PaintGunRN1.placeHolderList[126]" ""
+		"PaintGunRN1.placeHolderList[27]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.rotateY" 
-		"PaintGunRN1.placeHolderList[127]" ""
+		"PaintGunRN1.placeHolderList[28]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.rotateZ" 
-		"PaintGunRN1.placeHolderList[128]" ""
+		"PaintGunRN1.placeHolderList[29]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.scaleX" 
-		"PaintGunRN1.placeHolderList[129]" ""
+		"PaintGunRN1.placeHolderList[30]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.scaleY" 
-		"PaintGunRN1.placeHolderList[130]" ""
+		"PaintGunRN1.placeHolderList[31]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.scaleZ" 
-		"PaintGunRN1.placeHolderList[131]" ""
+		"PaintGunRN1.placeHolderList[32]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.Follow" 
-		"PaintGunRN1.placeHolderList[132]" ""
+		"PaintGunRN1.placeHolderList[33]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.Follow" 
-		"PaintGunRN1.placeHolderList[133]" ""
+		"PaintGunRN1.placeHolderList[34]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.Follow" 
-		"PaintGunRN1.placeHolderList[134]" ""
+		"PaintGunRN1.placeHolderList[35]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.Follow" 
-		"PaintGunRN1.placeHolderList[135]" ""
+		"PaintGunRN1.placeHolderList[36]" ""
 		5 3 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.Follow" 
-		"PaintGunRN1.placeHolderList[136]" ""
+		"PaintGunRN1.placeHolderList[37]" ""
+		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl.visibility" 
+		"PaintGunRN1.placeHolderList[38]" ""
 		5 0 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.Two_Handed_Prop_CtrlW1" 
 		"|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[1].targetWeight" 
-		"PaintGunRN1.placeHolderList[137]" "PaintGunRN1.placeHolderList[138]" ""
+		"PaintGunRN1.placeHolderList[39]" "PaintGunRN1.placeHolderList[40]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[1].targetTranslate" 
-		"PaintGunRN1.placeHolderList[139]" ""
+		"PaintGunRN1.placeHolderList[41]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[1].targetRotatePivot" 
-		"PaintGunRN1.placeHolderList[140]" ""
+		"PaintGunRN1.placeHolderList[42]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[1].targetRotateTranslate" 
-		"PaintGunRN1.placeHolderList[141]" ""
+		"PaintGunRN1.placeHolderList[43]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[1].targetRotate" 
-		"PaintGunRN1.placeHolderList[142]" ""
+		"PaintGunRN1.placeHolderList[44]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[1].targetRotateOrder" 
-		"PaintGunRN1.placeHolderList[143]" ""
+		"PaintGunRN1.placeHolderList[45]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[1].targetScale" 
-		"PaintGunRN1.placeHolderList[144]" ""
+		"PaintGunRN1.placeHolderList[46]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[1].targetParentMatrix" 
-		"PaintGunRN1.placeHolderList[145]" ""
+		"PaintGunRN1.placeHolderList[47]" ""
 		5 0 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.R_Hand_Prop_CtrlW2" 
 		"|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[2].targetWeight" 
-		"PaintGunRN1.placeHolderList[146]" "PaintGunRN1.placeHolderList[147]" ""
+		"PaintGunRN1.placeHolderList[48]" "PaintGunRN1.placeHolderList[49]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[2].targetTranslate" 
-		"PaintGunRN1.placeHolderList[148]" ""
+		"PaintGunRN1.placeHolderList[50]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[2].targetRotatePivot" 
-		"PaintGunRN1.placeHolderList[149]" ""
+		"PaintGunRN1.placeHolderList[51]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[2].targetRotateTranslate" 
-		"PaintGunRN1.placeHolderList[150]" ""
+		"PaintGunRN1.placeHolderList[52]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[2].targetRotate" 
-		"PaintGunRN1.placeHolderList[151]" ""
+		"PaintGunRN1.placeHolderList[53]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[2].targetRotateOrder" 
-		"PaintGunRN1.placeHolderList[152]" ""
+		"PaintGunRN1.placeHolderList[54]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[2].targetScale" 
-		"PaintGunRN1.placeHolderList[153]" ""
+		"PaintGunRN1.placeHolderList[55]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[2].targetParentMatrix" 
-		"PaintGunRN1.placeHolderList[154]" ""
+		"PaintGunRN1.placeHolderList[56]" ""
 		5 0 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.L_Hand_Prop_CtrlW3" 
 		"|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[3].targetWeight" 
-		"PaintGunRN1.placeHolderList[155]" "PaintGunRN1.placeHolderList[156]" ""
+		"PaintGunRN1.placeHolderList[57]" "PaintGunRN1.placeHolderList[58]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[3].targetTranslate" 
-		"PaintGunRN1.placeHolderList[157]" ""
+		"PaintGunRN1.placeHolderList[59]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[3].targetRotatePivot" 
-		"PaintGunRN1.placeHolderList[158]" ""
+		"PaintGunRN1.placeHolderList[60]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[3].targetRotateTranslate" 
-		"PaintGunRN1.placeHolderList[159]" ""
+		"PaintGunRN1.placeHolderList[61]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[3].targetRotate" 
-		"PaintGunRN1.placeHolderList[160]" ""
+		"PaintGunRN1.placeHolderList[62]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[3].targetRotateOrder" 
-		"PaintGunRN1.placeHolderList[161]" ""
+		"PaintGunRN1.placeHolderList[63]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[3].targetScale" 
-		"PaintGunRN1.placeHolderList[162]" ""
+		"PaintGunRN1.placeHolderList[64]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[3].targetParentMatrix" 
-		"PaintGunRN1.placeHolderList[163]" ""
+		"PaintGunRN1.placeHolderList[65]" ""
 		5 0 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.Prop_CtrlW4" 
 		"|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[4].targetWeight" 
-		"PaintGunRN1.placeHolderList[164]" "PaintGunRN1.placeHolderList[165]" ""
+		"PaintGunRN1.placeHolderList[66]" "PaintGunRN1.placeHolderList[67]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[4].targetTranslate" 
-		"PaintGunRN1.placeHolderList[166]" ""
+		"PaintGunRN1.placeHolderList[68]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[4].targetRotatePivot" 
-		"PaintGunRN1.placeHolderList[167]" ""
+		"PaintGunRN1.placeHolderList[69]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[4].targetRotateTranslate" 
-		"PaintGunRN1.placeHolderList[168]" ""
+		"PaintGunRN1.placeHolderList[70]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[4].targetRotate" 
-		"PaintGunRN1.placeHolderList[169]" ""
+		"PaintGunRN1.placeHolderList[71]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[4].targetRotateOrder" 
-		"PaintGunRN1.placeHolderList[170]" ""
+		"PaintGunRN1.placeHolderList[72]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[4].targetScale" 
-		"PaintGunRN1.placeHolderList[171]" ""
+		"PaintGunRN1.placeHolderList[73]" ""
 		5 2 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.target[4].targetParentMatrix" 
-		"PaintGunRN1.placeHolderList[172]" ""
+		"PaintGunRN1.placeHolderList[74]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.Gun_CtrlW0" 
-		"PaintGunRN1.placeHolderList[173]" ""
+		"PaintGunRN1.placeHolderList[75]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.Two_Handed_Prop_CtrlW1" 
-		"PaintGunRN1.placeHolderList[174]" ""
+		"PaintGunRN1.placeHolderList[76]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.R_Hand_Prop_CtrlW2" 
-		"PaintGunRN1.placeHolderList[175]" ""
+		"PaintGunRN1.placeHolderList[77]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.L_Hand_Prop_CtrlW3" 
-		"PaintGunRN1.placeHolderList[176]" ""
+		"PaintGunRN1.placeHolderList[78]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1.Prop_CtrlW4" 
-		"PaintGunRN1.placeHolderList[177]" ""
+		"PaintGunRN1.placeHolderList[79]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.translateX" 
-		"PaintGunRN1.placeHolderList[178]" ""
+		"PaintGunRN1.placeHolderList[80]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.translateY" 
-		"PaintGunRN1.placeHolderList[179]" ""
+		"PaintGunRN1.placeHolderList[81]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.translateZ" 
-		"PaintGunRN1.placeHolderList[180]" ""
+		"PaintGunRN1.placeHolderList[82]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.rotateX" 
-		"PaintGunRN1.placeHolderList[181]" ""
+		"PaintGunRN1.placeHolderList[83]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.rotateY" 
-		"PaintGunRN1.placeHolderList[182]" ""
+		"PaintGunRN1.placeHolderList[84]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.rotateZ" 
-		"PaintGunRN1.placeHolderList[183]" ""
+		"PaintGunRN1.placeHolderList[85]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.scaleX" 
-		"PaintGunRN1.placeHolderList[184]" ""
+		"PaintGunRN1.placeHolderList[86]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.scaleY" 
-		"PaintGunRN1.placeHolderList[185]" ""
+		"PaintGunRN1.placeHolderList[87]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.scaleZ" 
-		"PaintGunRN1.placeHolderList[186]" ""
+		"PaintGunRN1.placeHolderList[88]" ""
+		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_03_Ctrl.visibility" 
+		"PaintGunRN1.placeHolderList[89]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.translateX" 
-		"PaintGunRN1.placeHolderList[187]" ""
+		"PaintGunRN1.placeHolderList[90]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.translateY" 
-		"PaintGunRN1.placeHolderList[188]" ""
+		"PaintGunRN1.placeHolderList[91]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.translateZ" 
-		"PaintGunRN1.placeHolderList[189]" ""
+		"PaintGunRN1.placeHolderList[92]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.rotateX" 
-		"PaintGunRN1.placeHolderList[190]" ""
+		"PaintGunRN1.placeHolderList[93]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.rotateY" 
-		"PaintGunRN1.placeHolderList[191]" ""
+		"PaintGunRN1.placeHolderList[94]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.rotateZ" 
-		"PaintGunRN1.placeHolderList[192]" ""
+		"PaintGunRN1.placeHolderList[95]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.scaleX" 
-		"PaintGunRN1.placeHolderList[193]" ""
+		"PaintGunRN1.placeHolderList[96]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.scaleY" 
-		"PaintGunRN1.placeHolderList[194]" ""
+		"PaintGunRN1.placeHolderList[97]" ""
 		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.scaleZ" 
-		"PaintGunRN1.placeHolderList[195]" "";
+		"PaintGunRN1.placeHolderList[98]" ""
+		5 4 "PaintGunRN1" "|PaintGun1:PaintGun|PaintGun1:Ctrls|PaintGun1:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun1:Tube_Driver_Jnt_04_Ctrl.visibility" 
+		"PaintGunRN1.placeHolderList[99]" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "pCube2_translateX";
 	rename -uid "F7B7A789-4CA1-5F0D-7E1B-9F90E71B33D7";
@@ -28001,8 +27996,8 @@ createNode animCurveTU -n "Treads_Base_FK_Jnt_Ctrl_IndividualRoll";
 	setAttr -s 4 ".kox[0:3]"  1 1 1 1;
 	setAttr -s 4 ".koy[0:3]"  0 0 0 0;
 select -ne :time1;
-	setAttr ".o" 90;
-	setAttr ".unw" 90;
+	setAttr ".o" 40;
+	setAttr ".unw" 40;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -28022,7 +28017,7 @@ select -ne :defaultRenderUtilityList1;
 select -ne :defaultRenderingList1;
 	setAttr -s 8 ".r";
 select -ne :lightList1;
-	setAttr -s 18 ".l";
+	setAttr -s 10 ".l";
 select -ne :defaultTextureList1;
 	setAttr -s 376 ".tx";
 select -ne :standardSurface1;
@@ -28030,7 +28025,7 @@ select -ne :standardSurface1;
 select -ne :initialShadingGroup;
 	setAttr -s 56 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 30 ".gn";
+	setAttr -s 29 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
@@ -28046,7 +28041,7 @@ select -ne :defaultResolution;
 	setAttr ".pa" 1;
 	setAttr ".dar" 1.7769999504089355;
 select -ne :defaultLightSet;
-	setAttr -s 18 ".dsm";
+	setAttr -s 10 ".dsm";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -28061,272 +28056,262 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 5 ".sol";
-connectAttr "Transform_Ctrl_ArmIKFK.o" "ApolloRN.phl[1]";
-connectAttr "Transform_Ctrl_MasterScale1.o" "ApolloRN.phl[2]";
-connectAttr "Transform_Ctrl_translateX1.o" "ApolloRN.phl[3]";
-connectAttr "Transform_Ctrl_translateY1.o" "ApolloRN.phl[4]";
-connectAttr "Transform_Ctrl_translateZ1.o" "ApolloRN.phl[5]";
-connectAttr "Transform_Ctrl_rotateX1.o" "ApolloRN.phl[6]";
-connectAttr "Transform_Ctrl_rotateY1.o" "ApolloRN.phl[7]";
-connectAttr "Transform_Ctrl_rotateZ1.o" "ApolloRN.phl[8]";
-connectAttr "Cog_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[9]";
-connectAttr "Cog_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[10]";
-connectAttr "Cog_Jnt_Ctrl_translateX.o" "ApolloRN.phl[11]";
-connectAttr "Cog_Jnt_Ctrl_translateY.o" "ApolloRN.phl[12]";
-connectAttr "Cog_Jnt_Ctrl_translateZ.o" "ApolloRN.phl[13]";
-connectAttr "Cog_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[14]";
-connectAttr "Cog_Jnt_Ctrl_rotateY.o" "ApolloRN.phl[15]";
-connectAttr "Cog_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[16]";
-connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateX.o" "ApolloRN.phl[17]";
-connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateY.o" "ApolloRN.phl[18]";
-connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateZ.o" "ApolloRN.phl[19]";
-connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateX.o" "ApolloRN.phl[20]";
-connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateY.o" "ApolloRN.phl[21]";
-connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateZ.o" "ApolloRN.phl[22]";
-connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateX.o" "ApolloRN.phl[23]";
-connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateY.o" "ApolloRN.phl[24]";
-connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateZ.o" "ApolloRN.phl[25]";
-connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateX.o" "ApolloRN.phl[26]";
-connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateY.o" "ApolloRN.phl[27]";
-connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateZ.o" "ApolloRN.phl[28]";
-connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateX.o" "ApolloRN.phl[29]";
-connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateY.o" "ApolloRN.phl[30]";
-connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateZ.o" "ApolloRN.phl[31]";
-connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateX.o" "ApolloRN.phl[32]";
-connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateY.o" "ApolloRN.phl[33]";
-connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateZ.o" "ApolloRN.phl[34]";
-connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateX.o" "ApolloRN.phl[35]";
-connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateY.o" "ApolloRN.phl[36]";
-connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateZ.o" "ApolloRN.phl[37]";
-connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateX.o" "ApolloRN.phl[38]";
-connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateY.o" "ApolloRN.phl[39]";
-connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateZ.o" "ApolloRN.phl[40]";
-connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateX.o" "ApolloRN.phl[41]";
-connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateY.o" "ApolloRN.phl[42]";
-connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateZ.o" "ApolloRN.phl[43]";
-connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateX.o" "ApolloRN.phl[44]";
-connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateY.o" "ApolloRN.phl[45]";
-connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateZ.o" "ApolloRN.phl[46]";
-connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateX.o" "ApolloRN.phl[47]";
-connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateY.o" "ApolloRN.phl[48]";
-connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateZ.o" "ApolloRN.phl[49]";
-connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[50]";
-connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateY.o" "ApolloRN.phl[51]";
-connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateZ.o" "ApolloRN.phl[52]";
-connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateX.o" "ApolloRN.phl[53]";
-connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateY.o" "ApolloRN.phl[54]";
-connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateZ.o" "ApolloRN.phl[55]";
-connectAttr "L_Hose_Swing_Ctrl_Swing.o" "ApolloRN.phl[56]";
-connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateX.o" "ApolloRN.phl[57]";
-connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateY.o" "ApolloRN.phl[58]";
-connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateZ.o" "ApolloRN.phl[59]";
-connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateX.o" "ApolloRN.phl[60]";
-connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateY.o" "ApolloRN.phl[61]";
-connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateZ.o" "ApolloRN.phl[62]";
-connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateX.o" "ApolloRN.phl[63]";
-connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateY.o" "ApolloRN.phl[64]";
-connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateZ.o" "ApolloRN.phl[65]";
-connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateX.o" "ApolloRN.phl[66]";
-connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateY.o" "ApolloRN.phl[67]";
-connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateZ.o" "ApolloRN.phl[68]";
-connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateX.o" "ApolloRN.phl[69]";
-connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateY.o" "ApolloRN.phl[70]";
-connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateZ.o" "ApolloRN.phl[71]";
-connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateX.o" "ApolloRN.phl[72]";
-connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateY.o" "ApolloRN.phl[73]";
-connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateZ.o" "ApolloRN.phl[74]";
-connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateX.o" "ApolloRN.phl[75]";
-connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateY.o" "ApolloRN.phl[76]";
-connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateZ.o" "ApolloRN.phl[77]";
-connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateX.o" "ApolloRN.phl[78]";
-connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateY.o" "ApolloRN.phl[79]";
-connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateZ.o" "ApolloRN.phl[80]";
-connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateX.o" "ApolloRN.phl[81]";
-connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateY.o" "ApolloRN.phl[82]";
-connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateZ.o" "ApolloRN.phl[83]";
-connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateX.o" "ApolloRN.phl[84]";
-connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateY.o" "ApolloRN.phl[85]";
-connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateZ.o" "ApolloRN.phl[86]";
-connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateX.o" "ApolloRN.phl[87]";
-connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateY.o" "ApolloRN.phl[88]";
-connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateZ.o" "ApolloRN.phl[89]";
-connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[90]";
-connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateY.o" "ApolloRN.phl[91]";
-connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateZ.o" "ApolloRN.phl[92]";
-connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateX.o" "ApolloRN.phl[93]";
-connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateY.o" "ApolloRN.phl[94]";
-connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateZ.o" "ApolloRN.phl[95]";
-connectAttr "R_Hose_Swing_Ctrl_Swing.o" "ApolloRN.phl[96]";
-connectAttr "Arm_FK_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[97]";
-connectAttr "Arm_FK_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[98]";
-connectAttr "Arm_FK_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[99]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[100]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[101]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[102]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_rotateY.o" "ApolloRN.phl[103]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[104]";
-connectAttr "Arm_FK_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[105]";
-connectAttr "Arm_FK_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[106]";
-connectAttr "Arm_FK_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[107]";
-connectAttr "Arm_FK_Jnt_04_Ctrl_rotateZ.o" "ApolloRN.phl[108]";
-connectAttr "Arm_FK_Jnt_04_Ctrl_FollowTranslate.o" "ApolloRN.phl[109]";
-connectAttr "Arm_FK_Jnt_04_Ctrl_FollowRotate.o" "ApolloRN.phl[110]";
-connectAttr "Arm_FK_Jnt_05_Ctrl_rotateZ.o" "ApolloRN.phl[111]";
-connectAttr "Arm_FK_Jnt_05_Ctrl_FollowTranslate.o" "ApolloRN.phl[112]";
-connectAttr "Arm_FK_Jnt_05_Ctrl_FollowRotate.o" "ApolloRN.phl[113]";
-connectAttr "Arm_Base_Jnt_01_Ctrl_rotateY.o" "ApolloRN.phl[114]";
-connectAttr "Arm_Base_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[115]";
-connectAttr "Arm_Base_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[116]";
-connectAttr "Arm_Base_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[117]";
-connectAttr "Head_FK_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[118]";
-connectAttr "Head_FK_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[119]";
-connectAttr "Head_FK_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[120]";
-connectAttr "Head_FK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[121]";
-connectAttr "Head_FK_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[122]";
-connectAttr "Head_FK_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[123]";
-connectAttr "Head_FK_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[124]";
-connectAttr "Head_FK_Jnt_02_Ctrl_rotateY.o" "ApolloRN.phl[125]";
-connectAttr "Head_FK_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[126]";
-connectAttr "Head_FK_Jnt_03_Ctrl_rotateX.o" "ApolloRN.phl[127]";
-connectAttr "Head_FK_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[128]";
-connectAttr "Head_FK_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[129]";
-connectAttr "Mouth_Ctrl_translateX.o" "ApolloRN.phl[130]";
-connectAttr "Mouth_Ctrl_translateY.o" "ApolloRN.phl[131]";
-connectAttr "Mouth_Ctrl_Neutral.o" "ApolloRN.phl[132]";
-connectAttr "Mouth_Ctrl_Oooh.o" "ApolloRN.phl[133]";
-connectAttr "Mouth_Ctrl_Bored.o" "ApolloRN.phl[134]";
-connectAttr "Mouth_Ctrl_Smirk.o" "ApolloRN.phl[135]";
-connectAttr "Mouth_Ctrl_MouthScale.o" "ApolloRN.phl[136]";
-connectAttr "Eyes_Ctrl_translateX.o" "ApolloRN.phl[137]";
-connectAttr "Eyes_Ctrl_translateY.o" "ApolloRN.phl[138]";
-connectAttr "Eyes_Ctrl_ExclamationPoint.o" "ApolloRN.phl[139]";
-connectAttr "Eyes_Ctrl_REye.o" "ApolloRN.phl[140]";
-connectAttr "Eyes_Ctrl_LEye.o" "ApolloRN.phl[141]";
-connectAttr "Eyes_Ctrl_Mouth.o" "ApolloRN.phl[142]";
-connectAttr "Eyes_Ctrl_X1.o" "ApolloRN.phl[143]";
-connectAttr "Eyes_Ctrl_X2.o" "ApolloRN.phl[144]";
-connectAttr "L_Eye_Ctrl_translateX1.o" "ApolloRN.phl[145]";
-connectAttr "L_Eye_Ctrl_translateY.o" "ApolloRN.phl[146]";
-connectAttr "L_Eye_Ctrl_Open.o" "ApolloRN.phl[147]";
-connectAttr "L_Eye_Ctrl_Squint.o" "ApolloRN.phl[148]";
-connectAttr "L_Eye_Ctrl_Close.o" "ApolloRN.phl[149]";
-connectAttr "L_Eye_Ctrl_Sad.o" "ApolloRN.phl[150]";
-connectAttr "L_Eye_Ctrl_Wink.o" "ApolloRN.phl[151]";
-connectAttr "L_Eye_Ctrl_Bored.o" "ApolloRN.phl[152]";
-connectAttr "L_Eye_Ctrl_Smirk.o" "ApolloRN.phl[153]";
-connectAttr "L_Eye_Ctrl_EyeScale1.o" "ApolloRN.phl[154]";
-connectAttr "L_Eye_Ctrl_Determined.o" "ApolloRN.phl[155]";
-connectAttr "R_Eye_Ctrl_translateX1.o" "ApolloRN.phl[156]";
-connectAttr "R_Eye_Ctrl_translateY.o" "ApolloRN.phl[157]";
-connectAttr "R_Eye_Ctrl_Open.o" "ApolloRN.phl[158]";
-connectAttr "R_Eye_Ctrl_Squint.o" "ApolloRN.phl[159]";
-connectAttr "R_Eye_Ctrl_Close.o" "ApolloRN.phl[160]";
-connectAttr "R_Eye_Ctrl_Sad.o" "ApolloRN.phl[161]";
-connectAttr "R_Eye_Ctrl_Wink.o" "ApolloRN.phl[162]";
-connectAttr "R_Eye_Ctrl_Bored.o" "ApolloRN.phl[163]";
-connectAttr "R_Eye_Ctrl_Smirk.o" "ApolloRN.phl[164]";
-connectAttr "R_Eye_Ctrl_EyeScale1.o" "ApolloRN.phl[165]";
-connectAttr "R_Eye_Ctrl_Determined.o" "ApolloRN.phl[166]";
-connectAttr "Visor_Ctrl_L_Visor.o" "ApolloRN.phl[167]";
-connectAttr "Visor_Ctrl_RVisor.o" "ApolloRN.phl[168]";
-connectAttr "R_Wiper_Ctrl_rotateZ.o" "ApolloRN.phl[169]";
-connectAttr "L_Wiper_Ctrl_rotateZ.o" "ApolloRN.phl[170]";
-connectAttr "Hand_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[171]";
-connectAttr "Hand_Ring_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[172]";
-connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[173]";
-connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[174]";
-connectAttr "Hand_Ring_Jnt_03_Ctrl_rotateX.o" "ApolloRN.phl[175]";
-connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[176]";
-connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[177]";
-connectAttr "Hand_Ring_Jnt_01_Ctrl_rotateX.o" "ApolloRN.phl[178]";
-connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[179]";
-connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[180]";
-connectAttr "Finger_02_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[181]";
-connectAttr "Finger_02_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[182]";
-connectAttr "Finger_02_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[183]";
-connectAttr "Finger_01_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[184]";
-connectAttr "Finger_01_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[185]";
-connectAttr "Finger_01_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[186]";
-connectAttr "Finger_01_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[187]";
-connectAttr "Finger_01_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[188]";
-connectAttr "Finger_01_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[189]";
-connectAttr "Finger_02_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[190]";
-connectAttr "Finger_02_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[191]";
-connectAttr "Finger_02_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[192]";
-connectAttr "Finger_03_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[193]";
-connectAttr "Finger_03_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[194]";
-connectAttr "Finger_03_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[195]";
-connectAttr "Finger_03_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[196]";
-connectAttr "Finger_03_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[197]";
-connectAttr "Finger_03_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[198]";
-connectAttr "Palm_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[199]";
-connectAttr "Palm_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[200]";
-connectAttr "Palm_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[201]";
-connectAttr "Piston_01_Ctrl_translateX.o" "ApolloRN.phl[202]";
-connectAttr "Piston_02_Ctrl_translateX.o" "ApolloRN.phl[203]";
-connectAttr "Piston_03_Ctrl_translateX.o" "ApolloRN.phl[204]";
-connectAttr "Prop_Ctrl_Follow.o" "ApolloRN.phl[205]";
-connectAttr "ApolloRN.phl[206]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tt";
-connectAttr "ApolloRN.phl[207]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tt";
-connectAttr "Prop_Ctrl_translateX.o" "ApolloRN.phl[208]";
-connectAttr "Prop_Ctrl_translateY.o" "ApolloRN.phl[209]";
-connectAttr "Prop_Ctrl_translateZ.o" "ApolloRN.phl[210]";
-connectAttr "ApolloRN.phl[211]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trp";
-connectAttr "ApolloRN.phl[212]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trp";
-connectAttr "ApolloRN.phl[213]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trt";
-connectAttr "ApolloRN.phl[214]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trt";
-connectAttr "ApolloRN.phl[215]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tr";
-connectAttr "ApolloRN.phl[216]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tr";
-connectAttr "Prop_Ctrl_rotateX.o" "ApolloRN.phl[217]";
-connectAttr "Prop_Ctrl_rotateY.o" "ApolloRN.phl[218]";
-connectAttr "Prop_Ctrl_rotateZ.o" "ApolloRN.phl[219]";
-connectAttr "ApolloRN.phl[220]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tro";
-connectAttr "ApolloRN.phl[221]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tro";
-connectAttr "ApolloRN.phl[222]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].ts";
-connectAttr "ApolloRN.phl[223]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].ts";
-connectAttr "Prop_Ctrl_scaleX.o" "ApolloRN.phl[224]";
-connectAttr "Prop_Ctrl_scaleY.o" "ApolloRN.phl[225]";
-connectAttr "Prop_Ctrl_scaleZ.o" "ApolloRN.phl[226]";
-connectAttr "ApolloRN.phl[227]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tpm";
-connectAttr "ApolloRN.phl[228]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tpm";
-connectAttr "ApolloRN.phl[229]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[230]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[231]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_TreadsRoll.o" "ApolloRN.phl[232]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_IndividualRoll.o" "ApolloRN.phl[233]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[234]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateY.o" "ApolloRN.phl[235]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[236]";
-connectAttr "R_Treads_Ctrl_rotateZ.o" "ApolloRN.phl[237]";
-connectAttr "R_Treads_Ctrl_FollowTranslate.o" "ApolloRN.phl[238]";
-connectAttr "R_Treads_Ctrl_FollowRotate.o" "ApolloRN.phl[239]";
-connectAttr "R_Treads_Ctrl_Roll.o" "ApolloRN.phl[240]";
-connectAttr "R_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[241]";
-connectAttr "R_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[242]";
-connectAttr "R_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[243]";
-connectAttr "R_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[244]";
-connectAttr "R_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[245]";
-connectAttr "R_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[246]";
-connectAttr "L_Treads_Ctrl_rotateZ.o" "ApolloRN.phl[247]";
-connectAttr "L_Treads_Ctrl_FollowTranslate.o" "ApolloRN.phl[248]";
-connectAttr "L_Treads_Ctrl_FollowRotate.o" "ApolloRN.phl[249]";
-connectAttr "L_Treads_Ctrl_Roll.o" "ApolloRN.phl[250]";
-connectAttr "L_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[251]";
-connectAttr "L_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[252]";
-connectAttr "L_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[253]";
-connectAttr "L_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[254]";
-connectAttr "L_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[255]";
-connectAttr "L_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[256]";
-connectAttr "Light_Rig_Ctrl_visibility.o" "ApolloRN.phl[257]";
-connectAttr "Light_Rig_Ctrl_translateX.o" "ApolloRN.phl[258]";
-connectAttr "Light_Rig_Ctrl_translateY.o" "ApolloRN.phl[259]";
-connectAttr "Light_Rig_Ctrl_translateZ.o" "ApolloRN.phl[260]";
-connectAttr "Light_Rig_Ctrl_rotateX.o" "ApolloRN.phl[261]";
-connectAttr "Light_Rig_Ctrl_rotateY.o" "ApolloRN.phl[262]";
-connectAttr "Light_Rig_Ctrl_rotateZ.o" "ApolloRN.phl[263]";
-connectAttr "Light_Rig_Ctrl_scaleX.o" "ApolloRN.phl[264]";
-connectAttr "Light_Rig_Ctrl_scaleY.o" "ApolloRN.phl[265]";
-connectAttr "Light_Rig_Ctrl_scaleZ.o" "ApolloRN.phl[266]";
+connectAttr "Transform_Ctrl_ArmIKFK.o" "ApolloRN.phl[267]";
+connectAttr "Transform_Ctrl_MasterScale1.o" "ApolloRN.phl[268]";
+connectAttr "Transform_Ctrl_translateX1.o" "ApolloRN.phl[269]";
+connectAttr "Transform_Ctrl_translateY1.o" "ApolloRN.phl[270]";
+connectAttr "Transform_Ctrl_translateZ1.o" "ApolloRN.phl[271]";
+connectAttr "Transform_Ctrl_rotateX1.o" "ApolloRN.phl[272]";
+connectAttr "Transform_Ctrl_rotateY1.o" "ApolloRN.phl[273]";
+connectAttr "Transform_Ctrl_rotateZ1.o" "ApolloRN.phl[274]";
+connectAttr "Cog_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[275]";
+connectAttr "Cog_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[276]";
+connectAttr "Cog_Jnt_Ctrl_translateX.o" "ApolloRN.phl[277]";
+connectAttr "Cog_Jnt_Ctrl_translateY.o" "ApolloRN.phl[278]";
+connectAttr "Cog_Jnt_Ctrl_translateZ.o" "ApolloRN.phl[279]";
+connectAttr "Cog_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[280]";
+connectAttr "Cog_Jnt_Ctrl_rotateY.o" "ApolloRN.phl[281]";
+connectAttr "Cog_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[282]";
+connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateX.o" "ApolloRN.phl[283]";
+connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateY.o" "ApolloRN.phl[284]";
+connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateZ.o" "ApolloRN.phl[285]";
+connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateX.o" "ApolloRN.phl[286]";
+connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateY.o" "ApolloRN.phl[287]";
+connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateZ.o" "ApolloRN.phl[288]";
+connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateX.o" "ApolloRN.phl[289]";
+connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateY.o" "ApolloRN.phl[290]";
+connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateZ.o" "ApolloRN.phl[291]";
+connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateX.o" "ApolloRN.phl[292]";
+connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateY.o" "ApolloRN.phl[293]";
+connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateZ.o" "ApolloRN.phl[294]";
+connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateX.o" "ApolloRN.phl[295]";
+connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateY.o" "ApolloRN.phl[296]";
+connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateZ.o" "ApolloRN.phl[297]";
+connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateX.o" "ApolloRN.phl[298]";
+connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateY.o" "ApolloRN.phl[299]";
+connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateZ.o" "ApolloRN.phl[300]";
+connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateX.o" "ApolloRN.phl[301]";
+connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateY.o" "ApolloRN.phl[302]";
+connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateZ.o" "ApolloRN.phl[303]";
+connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateX.o" "ApolloRN.phl[304]";
+connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateY.o" "ApolloRN.phl[305]";
+connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateZ.o" "ApolloRN.phl[306]";
+connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateX.o" "ApolloRN.phl[307]";
+connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateY.o" "ApolloRN.phl[308]";
+connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateZ.o" "ApolloRN.phl[309]";
+connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateX.o" "ApolloRN.phl[310]";
+connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateY.o" "ApolloRN.phl[311]";
+connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateZ.o" "ApolloRN.phl[312]";
+connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateX.o" "ApolloRN.phl[313]";
+connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateY.o" "ApolloRN.phl[314]";
+connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateZ.o" "ApolloRN.phl[315]";
+connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[316]";
+connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateY.o" "ApolloRN.phl[317]";
+connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateZ.o" "ApolloRN.phl[318]";
+connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateX.o" "ApolloRN.phl[319]";
+connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateY.o" "ApolloRN.phl[320]";
+connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateZ.o" "ApolloRN.phl[321]";
+connectAttr "L_Hose_Swing_Ctrl_Swing.o" "ApolloRN.phl[322]";
+connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateX.o" "ApolloRN.phl[323]";
+connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateY.o" "ApolloRN.phl[324]";
+connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateZ.o" "ApolloRN.phl[325]";
+connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateX.o" "ApolloRN.phl[326]";
+connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateY.o" "ApolloRN.phl[327]";
+connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateZ.o" "ApolloRN.phl[328]";
+connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateX.o" "ApolloRN.phl[329]";
+connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateY.o" "ApolloRN.phl[330]";
+connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateZ.o" "ApolloRN.phl[331]";
+connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateX.o" "ApolloRN.phl[332]";
+connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateY.o" "ApolloRN.phl[333]";
+connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateZ.o" "ApolloRN.phl[334]";
+connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateX.o" "ApolloRN.phl[335]";
+connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateY.o" "ApolloRN.phl[336]";
+connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateZ.o" "ApolloRN.phl[337]";
+connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateX.o" "ApolloRN.phl[338]";
+connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateY.o" "ApolloRN.phl[339]";
+connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateZ.o" "ApolloRN.phl[340]";
+connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateX.o" "ApolloRN.phl[341]";
+connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateY.o" "ApolloRN.phl[342]";
+connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateZ.o" "ApolloRN.phl[343]";
+connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateX.o" "ApolloRN.phl[344]";
+connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateY.o" "ApolloRN.phl[345]";
+connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateZ.o" "ApolloRN.phl[346]";
+connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateX.o" "ApolloRN.phl[347]";
+connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateY.o" "ApolloRN.phl[348]";
+connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateZ.o" "ApolloRN.phl[349]";
+connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateX.o" "ApolloRN.phl[350]";
+connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateY.o" "ApolloRN.phl[351]";
+connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateZ.o" "ApolloRN.phl[352]";
+connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateX.o" "ApolloRN.phl[353]";
+connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateY.o" "ApolloRN.phl[354]";
+connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateZ.o" "ApolloRN.phl[355]";
+connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[356]";
+connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateY.o" "ApolloRN.phl[357]";
+connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateZ.o" "ApolloRN.phl[358]";
+connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateX.o" "ApolloRN.phl[359]";
+connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateY.o" "ApolloRN.phl[360]";
+connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateZ.o" "ApolloRN.phl[361]";
+connectAttr "R_Hose_Swing_Ctrl_Swing.o" "ApolloRN.phl[362]";
+connectAttr "Arm_FK_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[363]";
+connectAttr "Arm_FK_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[364]";
+connectAttr "Arm_FK_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[365]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[366]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[367]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[368]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_rotateY.o" "ApolloRN.phl[369]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[370]";
+connectAttr "Arm_FK_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[371]";
+connectAttr "Arm_FK_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[372]";
+connectAttr "Arm_FK_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[373]";
+connectAttr "Arm_FK_Jnt_04_Ctrl_rotateZ.o" "ApolloRN.phl[374]";
+connectAttr "Arm_FK_Jnt_04_Ctrl_FollowTranslate.o" "ApolloRN.phl[375]";
+connectAttr "Arm_FK_Jnt_04_Ctrl_FollowRotate.o" "ApolloRN.phl[376]";
+connectAttr "Arm_FK_Jnt_05_Ctrl_rotateZ.o" "ApolloRN.phl[377]";
+connectAttr "Arm_FK_Jnt_05_Ctrl_FollowTranslate.o" "ApolloRN.phl[378]";
+connectAttr "Arm_FK_Jnt_05_Ctrl_FollowRotate.o" "ApolloRN.phl[379]";
+connectAttr "Arm_Base_Jnt_01_Ctrl_rotateY.o" "ApolloRN.phl[380]";
+connectAttr "Arm_Base_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[381]";
+connectAttr "Arm_Base_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[382]";
+connectAttr "Arm_Base_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[383]";
+connectAttr "Head_FK_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[384]";
+connectAttr "Head_FK_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[385]";
+connectAttr "Head_FK_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[386]";
+connectAttr "Head_FK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[387]";
+connectAttr "Head_FK_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[388]";
+connectAttr "Head_FK_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[389]";
+connectAttr "Head_FK_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[390]";
+connectAttr "Head_FK_Jnt_02_Ctrl_rotateY.o" "ApolloRN.phl[391]";
+connectAttr "Head_FK_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[392]";
+connectAttr "Head_FK_Jnt_03_Ctrl_rotateX.o" "ApolloRN.phl[393]";
+connectAttr "Head_FK_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[394]";
+connectAttr "Head_FK_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[395]";
+connectAttr "Mouth_Ctrl_translateX.o" "ApolloRN.phl[396]";
+connectAttr "Mouth_Ctrl_translateY.o" "ApolloRN.phl[397]";
+connectAttr "Mouth_Ctrl_Neutral.o" "ApolloRN.phl[398]";
+connectAttr "Mouth_Ctrl_Oooh.o" "ApolloRN.phl[399]";
+connectAttr "Mouth_Ctrl_Bored.o" "ApolloRN.phl[400]";
+connectAttr "Mouth_Ctrl_Smirk.o" "ApolloRN.phl[401]";
+connectAttr "Mouth_Ctrl_MouthScale.o" "ApolloRN.phl[402]";
+connectAttr "Eyes_Ctrl_translateX.o" "ApolloRN.phl[403]";
+connectAttr "Eyes_Ctrl_translateY.o" "ApolloRN.phl[404]";
+connectAttr "Eyes_Ctrl_ExclamationPoint.o" "ApolloRN.phl[405]";
+connectAttr "Eyes_Ctrl_REye.o" "ApolloRN.phl[406]";
+connectAttr "Eyes_Ctrl_LEye.o" "ApolloRN.phl[407]";
+connectAttr "Eyes_Ctrl_Mouth.o" "ApolloRN.phl[408]";
+connectAttr "Eyes_Ctrl_X1.o" "ApolloRN.phl[409]";
+connectAttr "Eyes_Ctrl_X2.o" "ApolloRN.phl[410]";
+connectAttr "L_Eye_Ctrl_translateX1.o" "ApolloRN.phl[411]";
+connectAttr "L_Eye_Ctrl_translateY.o" "ApolloRN.phl[412]";
+connectAttr "L_Eye_Ctrl_Open.o" "ApolloRN.phl[413]";
+connectAttr "L_Eye_Ctrl_Squint.o" "ApolloRN.phl[414]";
+connectAttr "L_Eye_Ctrl_Close.o" "ApolloRN.phl[415]";
+connectAttr "L_Eye_Ctrl_Sad.o" "ApolloRN.phl[416]";
+connectAttr "L_Eye_Ctrl_Wink.o" "ApolloRN.phl[417]";
+connectAttr "L_Eye_Ctrl_Bored.o" "ApolloRN.phl[418]";
+connectAttr "L_Eye_Ctrl_Smirk.o" "ApolloRN.phl[419]";
+connectAttr "L_Eye_Ctrl_EyeScale1.o" "ApolloRN.phl[420]";
+connectAttr "L_Eye_Ctrl_Determined.o" "ApolloRN.phl[421]";
+connectAttr "R_Eye_Ctrl_translateX1.o" "ApolloRN.phl[422]";
+connectAttr "R_Eye_Ctrl_translateY.o" "ApolloRN.phl[423]";
+connectAttr "R_Eye_Ctrl_Open.o" "ApolloRN.phl[424]";
+connectAttr "R_Eye_Ctrl_Squint.o" "ApolloRN.phl[425]";
+connectAttr "R_Eye_Ctrl_Close.o" "ApolloRN.phl[426]";
+connectAttr "R_Eye_Ctrl_Sad.o" "ApolloRN.phl[427]";
+connectAttr "R_Eye_Ctrl_Wink.o" "ApolloRN.phl[428]";
+connectAttr "R_Eye_Ctrl_Bored.o" "ApolloRN.phl[429]";
+connectAttr "R_Eye_Ctrl_Smirk.o" "ApolloRN.phl[430]";
+connectAttr "R_Eye_Ctrl_EyeScale1.o" "ApolloRN.phl[431]";
+connectAttr "R_Eye_Ctrl_Determined.o" "ApolloRN.phl[432]";
+connectAttr "Visor_Ctrl_L_Visor.o" "ApolloRN.phl[433]";
+connectAttr "Visor_Ctrl_RVisor.o" "ApolloRN.phl[434]";
+connectAttr "R_Wiper_Ctrl_rotateZ.o" "ApolloRN.phl[435]";
+connectAttr "L_Wiper_Ctrl_rotateZ.o" "ApolloRN.phl[436]";
+connectAttr "Hand_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[437]";
+connectAttr "Hand_Ring_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[438]";
+connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[439]";
+connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[440]";
+connectAttr "Hand_Ring_Jnt_03_Ctrl_rotateX.o" "ApolloRN.phl[441]";
+connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[442]";
+connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[443]";
+connectAttr "Hand_Ring_Jnt_01_Ctrl_rotateX.o" "ApolloRN.phl[444]";
+connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[445]";
+connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[446]";
+connectAttr "Finger_02_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[447]";
+connectAttr "Finger_02_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[448]";
+connectAttr "Finger_02_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[449]";
+connectAttr "Finger_01_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[450]";
+connectAttr "Finger_01_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[451]";
+connectAttr "Finger_01_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[452]";
+connectAttr "Finger_01_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[453]";
+connectAttr "Finger_01_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[454]";
+connectAttr "Finger_01_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[455]";
+connectAttr "Finger_02_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[456]";
+connectAttr "Finger_02_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[457]";
+connectAttr "Finger_02_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[458]";
+connectAttr "Finger_03_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[459]";
+connectAttr "Finger_03_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[460]";
+connectAttr "Finger_03_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[461]";
+connectAttr "Finger_03_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[462]";
+connectAttr "Finger_03_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[463]";
+connectAttr "Finger_03_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[464]";
+connectAttr "Palm_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[465]";
+connectAttr "Palm_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[466]";
+connectAttr "Palm_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[467]";
+connectAttr "Piston_01_Ctrl_translateX.o" "ApolloRN.phl[468]";
+connectAttr "Piston_02_Ctrl_translateX.o" "ApolloRN.phl[469]";
+connectAttr "Piston_03_Ctrl_translateX.o" "ApolloRN.phl[470]";
+connectAttr "Prop_Ctrl_Follow.o" "ApolloRN.phl[471]";
+connectAttr "ApolloRN.phl[472]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tt";
+connectAttr "ApolloRN.phl[473]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tt";
+connectAttr "Prop_Ctrl_translateX.o" "ApolloRN.phl[474]";
+connectAttr "Prop_Ctrl_translateY.o" "ApolloRN.phl[475]";
+connectAttr "Prop_Ctrl_translateZ.o" "ApolloRN.phl[476]";
+connectAttr "ApolloRN.phl[477]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trp";
+connectAttr "ApolloRN.phl[478]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trp";
+connectAttr "ApolloRN.phl[479]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trt";
+connectAttr "ApolloRN.phl[480]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trt";
+connectAttr "ApolloRN.phl[481]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tr";
+connectAttr "ApolloRN.phl[482]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tr";
+connectAttr "Prop_Ctrl_rotateX.o" "ApolloRN.phl[483]";
+connectAttr "Prop_Ctrl_rotateY.o" "ApolloRN.phl[484]";
+connectAttr "Prop_Ctrl_rotateZ.o" "ApolloRN.phl[485]";
+connectAttr "ApolloRN.phl[486]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tro";
+connectAttr "ApolloRN.phl[487]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tro";
+connectAttr "ApolloRN.phl[488]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].ts";
+connectAttr "ApolloRN.phl[489]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].ts";
+connectAttr "Prop_Ctrl_scaleX.o" "ApolloRN.phl[490]";
+connectAttr "Prop_Ctrl_scaleY.o" "ApolloRN.phl[491]";
+connectAttr "Prop_Ctrl_scaleZ.o" "ApolloRN.phl[492]";
+connectAttr "ApolloRN.phl[493]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tpm";
+connectAttr "ApolloRN.phl[494]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tpm";
+connectAttr "ApolloRN.phl[495]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[496]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[497]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_TreadsRoll.o" "ApolloRN.phl[498]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_IndividualRoll.o" "ApolloRN.phl[499]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[500]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateY.o" "ApolloRN.phl[501]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[502]";
+connectAttr "R_Treads_Ctrl_rotateZ.o" "ApolloRN.phl[503]";
+connectAttr "R_Treads_Ctrl_FollowTranslate.o" "ApolloRN.phl[504]";
+connectAttr "R_Treads_Ctrl_FollowRotate.o" "ApolloRN.phl[505]";
+connectAttr "R_Treads_Ctrl_Roll.o" "ApolloRN.phl[506]";
+connectAttr "R_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[507]";
+connectAttr "R_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[508]";
+connectAttr "R_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[509]";
+connectAttr "R_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[510]";
+connectAttr "R_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[511]";
+connectAttr "R_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[512]";
+connectAttr "L_Treads_Ctrl_rotateZ.o" "ApolloRN.phl[513]";
+connectAttr "L_Treads_Ctrl_FollowTranslate.o" "ApolloRN.phl[514]";
+connectAttr "L_Treads_Ctrl_FollowRotate.o" "ApolloRN.phl[515]";
+connectAttr "L_Treads_Ctrl_Roll.o" "ApolloRN.phl[516]";
+connectAttr "L_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[517]";
+connectAttr "L_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[518]";
+connectAttr "L_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[519]";
+connectAttr "L_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[520]";
+connectAttr "L_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[521]";
+connectAttr "L_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[522]";
 connectAttr "Booster_Ctrl_FollowTranslate.o" "Dionysus_Asset_RigRN.phl[1]";
 connectAttr "Booster_Ctrl_FollowRotate.o" "Dionysus_Asset_RigRN.phl[2]";
 connectAttr "Booster_Ctrl_translateX.o" "Dionysus_Asset_RigRN.phl[3]";
@@ -29190,63 +29175,63 @@ connectAttr "L_Clav_Ctrl_scaleX.o" "Dionysus_Asset_RigRN.phl[643]";
 connectAttr "L_Clav_Ctrl_scaleY.o" "Dionysus_Asset_RigRN.phl[644]";
 connectAttr "L_Clav_Ctrl_scaleZ.o" "Dionysus_Asset_RigRN.phl[645]";
 connectAttr "L_Clav_Ctrl_visibility.o" "Dionysus_Asset_RigRN.phl[646]";
-connectAttr "Dionysus_Asset_RigRN.phl[647]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[647]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[648]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[648]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[649]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[649]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[650]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[650]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[651]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[651]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[652]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[652]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[653]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[653]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tr"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[654]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[654]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tr"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[655]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[655]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tro"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[656]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[656]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tro"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[657]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[657]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].ts"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[658]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[658]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].ts"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[659]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[659]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tpm"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[660]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[660]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tpm"
 		;
 connectAttr "Dionysus_Asset_RigRN.phl[661]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[662]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[662]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[663]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[663]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[664]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[664]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[665]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[665]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[666]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[666]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[667]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[667]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[668]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[668]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tr"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[669]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[669]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tr"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[670]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[670]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tro"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[671]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[671]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tro"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[672]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[672]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].ts"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[673]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[673]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].ts"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[674]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[674]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tpm"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[675]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[675]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tpm"
 		;
 connectAttr "Dionysus_Asset_RigRN.phl[676]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
@@ -29295,167 +29280,173 @@ connectAttr "Dionysus_Asset_RigRN.phl[705]" "Gun_Ctrl_Grp_parentConstraint2.tg[3
 		;
 connectAttr "Dionysus_Asset_RigRN.phl[706]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.ctx" "PaintGunRN.phl[56]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.cty" "PaintGunRN.phl[57]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.ctz" "PaintGunRN.phl[58]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.crx" "PaintGunRN.phl[59]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.cry" "PaintGunRN.phl[60]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.crz" "PaintGunRN.phl[61]";
-connectAttr "PaintGunRN.phl[62]" "Gun_Ctrl_Grp_parentConstraint1.cro";
-connectAttr "PaintGunRN.phl[63]" "Gun_Ctrl_Grp_parentConstraint1.cpim";
-connectAttr "PaintGunRN.phl[64]" "Gun_Ctrl_Grp_parentConstraint1.crp";
-connectAttr "PaintGunRN.phl[65]" "Gun_Ctrl_Grp_parentConstraint1.crt";
-connectAttr "PaintGunRN.phl[66]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn";
-connectAttr "Gun_Ctrl_MasterScale1.o" "PaintGunRN.phl[67]";
-connectAttr "Gun_Ctrl_translateX1.o" "PaintGunRN.phl[68]";
-connectAttr "Gun_Ctrl_translateY1.o" "PaintGunRN.phl[69]";
-connectAttr "Gun_Ctrl_translateZ1.o" "PaintGunRN.phl[70]";
-connectAttr "Gun_Ctrl_rotateX1.o" "PaintGunRN.phl[71]";
-connectAttr "Gun_Ctrl_rotateY1.o" "PaintGunRN.phl[72]";
-connectAttr "Gun_Ctrl_rotateZ1.o" "PaintGunRN.phl[73]";
-connectAttr "PaintGunRN.phl[74]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
-connectAttr "PaintGunRN.phl[75]" "Gun_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW0.i"
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.ctx" "PaintGunRN.phl[1]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.cty" "PaintGunRN.phl[2]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.ctz" "PaintGunRN.phl[3]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.crx" "PaintGunRN.phl[4]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.cry" "PaintGunRN.phl[5]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.crz" "PaintGunRN.phl[6]";
+connectAttr "PaintGunRN.phl[7]" "Gun_Ctrl_Grp_parentConstraint1.cro";
+connectAttr "PaintGunRN.phl[8]" "Gun_Ctrl_Grp_parentConstraint1.cpim";
+connectAttr "PaintGunRN.phl[9]" "Gun_Ctrl_Grp_parentConstraint1.crp";
+connectAttr "PaintGunRN.phl[10]" "Gun_Ctrl_Grp_parentConstraint1.crt";
+connectAttr "PaintGunRN.phl[11]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn";
+connectAttr "Gun_Ctrl_MasterScale1.o" "PaintGunRN.phl[12]";
+connectAttr "Gun_Ctrl_translateX1.o" "PaintGunRN.phl[13]";
+connectAttr "Gun_Ctrl_translateY1.o" "PaintGunRN.phl[14]";
+connectAttr "Gun_Ctrl_translateZ1.o" "PaintGunRN.phl[15]";
+connectAttr "Gun_Ctrl_rotateX1.o" "PaintGunRN.phl[16]";
+connectAttr "Gun_Ctrl_rotateY1.o" "PaintGunRN.phl[17]";
+connectAttr "Gun_Ctrl_rotateZ1.o" "PaintGunRN.phl[18]";
+connectAttr "PaintGunRN.phl[19]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
+connectAttr "PaintGunRN.phl[20]" "Gun_Ctrl_Grp_parentConstraint1_Prop_CtrlW1.i";
+connectAttr "PaintGunRN.phl[21]" "Gun_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW0.i"
 		;
-connectAttr "PaintGunRN.phl[76]" "Gun_Ctrl_Grp_parentConstraint1_Prop_CtrlW1.i";
-connectAttr "PaintGunRN.phl[77]" "Gun_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW2.i"
+connectAttr "PaintGunRN.phl[22]" "Gun_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW2.i"
 		;
-connectAttr "PaintGunRN.phl[78]" "Gun_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW3.i"
+connectAttr "PaintGunRN.phl[23]" "Gun_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW3.i"
 		;
-connectAttr "Gun_Ctrl_Follow1.o" "PaintGunRN.phl[79]";
-connectAttr "TubeIKCurve_visibility1.o" "PaintGunRN.phl[80]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_translateX1.o" "PaintGunRN.phl[81]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_translateY1.o" "PaintGunRN.phl[82]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_translateZ1.o" "PaintGunRN.phl[83]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateX1.o" "PaintGunRN.phl[84]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateY1.o" "PaintGunRN.phl[85]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateZ1.o" "PaintGunRN.phl[86]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleX1.o" "PaintGunRN.phl[87]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleY1.o" "PaintGunRN.phl[88]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleZ1.o" "PaintGunRN.phl[89]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_translateX1.o" "PaintGunRN.phl[90]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_translateY1.o" "PaintGunRN.phl[91]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_translateZ1.o" "PaintGunRN.phl[92]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateX1.o" "PaintGunRN.phl[93]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateY1.o" "PaintGunRN.phl[94]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateZ1.o" "PaintGunRN.phl[95]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleX1.o" "PaintGunRN.phl[96]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleY1.o" "PaintGunRN.phl[97]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleZ1.o" "PaintGunRN.phl[98]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_translateX1.o" "PaintGunRN.phl[99]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_translateY1.o" "PaintGunRN.phl[100]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_translateZ1.o" "PaintGunRN.phl[101]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateX1.o" "PaintGunRN.phl[102]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateY1.o" "PaintGunRN.phl[103]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateZ1.o" "PaintGunRN.phl[104]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleX1.o" "PaintGunRN.phl[105]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleY1.o" "PaintGunRN.phl[106]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleZ1.o" "PaintGunRN.phl[107]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint2.ctx" "PaintGunRN1.phl[100]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint2.cty" "PaintGunRN1.phl[101]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint2.ctz" "PaintGunRN1.phl[102]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint2.crx" "PaintGunRN1.phl[103]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint2.cry" "PaintGunRN1.phl[104]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint2.crz" "PaintGunRN1.phl[105]";
-connectAttr "PaintGunRN1.phl[106]" "Gun_Ctrl_Grp_parentConstraint2.cro";
-connectAttr "PaintGunRN1.phl[107]" "Gun_Ctrl_Grp_parentConstraint2.cpim";
-connectAttr "PaintGunRN1.phl[108]" "Gun_Ctrl_Grp_parentConstraint2.crp";
-connectAttr "PaintGunRN1.phl[109]" "Gun_Ctrl_Grp_parentConstraint2.crt";
-connectAttr "Gun_Ctrl_MasterScale.o" "PaintGunRN1.phl[110]";
-connectAttr "Gun_Ctrl_translateX.o" "PaintGunRN1.phl[111]";
-connectAttr "Gun_Ctrl_translateY.o" "PaintGunRN1.phl[112]";
-connectAttr "Gun_Ctrl_translateZ.o" "PaintGunRN1.phl[113]";
-connectAttr "Gun_Ctrl_rotateX.o" "PaintGunRN1.phl[114]";
-connectAttr "Gun_Ctrl_rotateY.o" "PaintGunRN1.phl[115]";
-connectAttr "Gun_Ctrl_rotateZ.o" "PaintGunRN1.phl[116]";
-connectAttr "PaintGunRN1.phl[117]" "Gun_Ctrl_Grp_parentConstraint2_R_Hand_Prop_CtrlW1.i"
+connectAttr "Gun_Ctrl_Follow1.o" "PaintGunRN.phl[24]";
+connectAttr "TubeIKCurve_visibility1.o" "PaintGunRN.phl[25]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_translateX1.o" "PaintGunRN.phl[26]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_translateY1.o" "PaintGunRN.phl[27]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_translateZ1.o" "PaintGunRN.phl[28]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateX1.o" "PaintGunRN.phl[29]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateY1.o" "PaintGunRN.phl[30]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateZ1.o" "PaintGunRN.phl[31]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleX1.o" "PaintGunRN.phl[32]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleY1.o" "PaintGunRN.phl[33]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleZ1.o" "PaintGunRN.phl[34]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_visibility1.o" "PaintGunRN.phl[35]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_translateX1.o" "PaintGunRN.phl[36]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_translateY1.o" "PaintGunRN.phl[37]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_translateZ1.o" "PaintGunRN.phl[38]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateX1.o" "PaintGunRN.phl[39]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateY1.o" "PaintGunRN.phl[40]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateZ1.o" "PaintGunRN.phl[41]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleX1.o" "PaintGunRN.phl[42]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleY1.o" "PaintGunRN.phl[43]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleZ1.o" "PaintGunRN.phl[44]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_visibility1.o" "PaintGunRN.phl[45]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_translateX1.o" "PaintGunRN.phl[46]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_translateY1.o" "PaintGunRN.phl[47]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_translateZ1.o" "PaintGunRN.phl[48]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateX1.o" "PaintGunRN.phl[49]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateY1.o" "PaintGunRN.phl[50]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateZ1.o" "PaintGunRN.phl[51]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleX1.o" "PaintGunRN.phl[52]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleY1.o" "PaintGunRN.phl[53]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleZ1.o" "PaintGunRN.phl[54]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_visibility1.o" "PaintGunRN.phl[55]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint2.ctx" "PaintGunRN1.phl[1]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint2.cty" "PaintGunRN1.phl[2]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint2.ctz" "PaintGunRN1.phl[3]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint2.crx" "PaintGunRN1.phl[4]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint2.cry" "PaintGunRN1.phl[5]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint2.crz" "PaintGunRN1.phl[6]";
+connectAttr "PaintGunRN1.phl[7]" "Gun_Ctrl_Grp_parentConstraint2.cro";
+connectAttr "PaintGunRN1.phl[8]" "Gun_Ctrl_Grp_parentConstraint2.cpim";
+connectAttr "PaintGunRN1.phl[9]" "Gun_Ctrl_Grp_parentConstraint2.crp";
+connectAttr "PaintGunRN1.phl[10]" "Gun_Ctrl_Grp_parentConstraint2.crt";
+connectAttr "Gun_Ctrl_MasterScale.o" "PaintGunRN1.phl[11]";
+connectAttr "Gun_Ctrl_translateX.o" "PaintGunRN1.phl[12]";
+connectAttr "Gun_Ctrl_translateY.o" "PaintGunRN1.phl[13]";
+connectAttr "Gun_Ctrl_translateZ.o" "PaintGunRN1.phl[14]";
+connectAttr "Gun_Ctrl_rotateX.o" "PaintGunRN1.phl[15]";
+connectAttr "Gun_Ctrl_rotateY.o" "PaintGunRN1.phl[16]";
+connectAttr "Gun_Ctrl_rotateZ.o" "PaintGunRN1.phl[17]";
+connectAttr "PaintGunRN1.phl[18]" "Gun_Ctrl_Grp_parentConstraint2_Prop_CtrlW0.i"
 		;
-connectAttr "PaintGunRN1.phl[118]" "Gun_Ctrl_Grp_parentConstraint2_Prop_CtrlW0.i"
+connectAttr "PaintGunRN1.phl[19]" "Gun_Ctrl_Grp_parentConstraint2_R_Hand_Prop_CtrlW1.i"
 		;
-connectAttr "PaintGunRN1.phl[119]" "Gun_Ctrl_Grp_parentConstraint2_L_Hand_Prop_CtrlW2.i"
+connectAttr "PaintGunRN1.phl[20]" "Gun_Ctrl_Grp_parentConstraint2_L_Hand_Prop_CtrlW2.i"
 		;
-connectAttr "PaintGunRN1.phl[120]" "Gun_Ctrl_Grp_parentConstraint2_Two_Handed_Prop_CtrlW3.i"
+connectAttr "PaintGunRN1.phl[21]" "Gun_Ctrl_Grp_parentConstraint2_Two_Handed_Prop_CtrlW3.i"
 		;
-connectAttr "Gun_Ctrl_Follow.o" "PaintGunRN1.phl[121]";
-connectAttr "TubeIKCurve_visibility.o" "PaintGunRN1.phl[122]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_translateX.o" "PaintGunRN1.phl[123]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_translateY.o" "PaintGunRN1.phl[124]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_translateZ.o" "PaintGunRN1.phl[125]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateX.o" "PaintGunRN1.phl[126]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateY.o" "PaintGunRN1.phl[127]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateZ.o" "PaintGunRN1.phl[128]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleX.o" "PaintGunRN1.phl[129]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleY.o" "PaintGunRN1.phl[130]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleZ.o" "PaintGunRN1.phl[131]";
-connectAttr "PaintGunRN1.phl[132]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.i"
+connectAttr "Gun_Ctrl_Follow.o" "PaintGunRN1.phl[22]";
+connectAttr "TubeIKCurve_visibility.o" "PaintGunRN1.phl[23]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_translateX.o" "PaintGunRN1.phl[24]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_translateY.o" "PaintGunRN1.phl[25]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_translateZ.o" "PaintGunRN1.phl[26]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateX.o" "PaintGunRN1.phl[27]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateY.o" "PaintGunRN1.phl[28]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateZ.o" "PaintGunRN1.phl[29]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleX.o" "PaintGunRN1.phl[30]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleY.o" "PaintGunRN1.phl[31]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleZ.o" "PaintGunRN1.phl[32]";
+connectAttr "PaintGunRN1.phl[33]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Gun_CtrlW0.i"
 		;
-connectAttr "PaintGunRN1.phl[133]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Gun_CtrlW0.i"
+connectAttr "PaintGunRN1.phl[34]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.i"
 		;
-connectAttr "PaintGunRN1.phl[134]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.i"
+connectAttr "PaintGunRN1.phl[35]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.i"
 		;
-connectAttr "PaintGunRN1.phl[135]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.i"
+connectAttr "PaintGunRN1.phl[36]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.i"
 		;
-connectAttr "PaintGunRN1.phl[136]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.i"
+connectAttr "PaintGunRN1.phl[37]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.i"
 		;
-connectAttr "PaintGunRN1.phl[137]" "PaintGunRN1.phl[138]";
-connectAttr "Dionysus_Asset_RigRN.phl[707]" "PaintGunRN1.phl[139]";
-connectAttr "Dionysus_Asset_RigRN.phl[708]" "PaintGunRN1.phl[140]";
-connectAttr "Dionysus_Asset_RigRN.phl[709]" "PaintGunRN1.phl[141]";
-connectAttr "Dionysus_Asset_RigRN.phl[710]" "PaintGunRN1.phl[142]";
-connectAttr "Dionysus_Asset_RigRN.phl[711]" "PaintGunRN1.phl[143]";
-connectAttr "Dionysus_Asset_RigRN.phl[712]" "PaintGunRN1.phl[144]";
-connectAttr "Dionysus_Asset_RigRN.phl[713]" "PaintGunRN1.phl[145]";
-connectAttr "PaintGunRN1.phl[146]" "PaintGunRN1.phl[147]";
-connectAttr "Dionysus_Asset_RigRN.phl[714]" "PaintGunRN1.phl[148]";
-connectAttr "Dionysus_Asset_RigRN.phl[715]" "PaintGunRN1.phl[149]";
-connectAttr "Dionysus_Asset_RigRN.phl[716]" "PaintGunRN1.phl[150]";
-connectAttr "Dionysus_Asset_RigRN.phl[717]" "PaintGunRN1.phl[151]";
-connectAttr "Dionysus_Asset_RigRN.phl[718]" "PaintGunRN1.phl[152]";
-connectAttr "Dionysus_Asset_RigRN.phl[719]" "PaintGunRN1.phl[153]";
-connectAttr "Dionysus_Asset_RigRN.phl[720]" "PaintGunRN1.phl[154]";
-connectAttr "PaintGunRN1.phl[155]" "PaintGunRN1.phl[156]";
-connectAttr "Dionysus_Asset_RigRN.phl[721]" "PaintGunRN1.phl[157]";
-connectAttr "Dionysus_Asset_RigRN.phl[722]" "PaintGunRN1.phl[158]";
-connectAttr "Dionysus_Asset_RigRN.phl[723]" "PaintGunRN1.phl[159]";
-connectAttr "Dionysus_Asset_RigRN.phl[724]" "PaintGunRN1.phl[160]";
-connectAttr "Dionysus_Asset_RigRN.phl[725]" "PaintGunRN1.phl[161]";
-connectAttr "Dionysus_Asset_RigRN.phl[726]" "PaintGunRN1.phl[162]";
-connectAttr "Dionysus_Asset_RigRN.phl[727]" "PaintGunRN1.phl[163]";
-connectAttr "PaintGunRN1.phl[164]" "PaintGunRN1.phl[165]";
-connectAttr "ApolloRN.phl[267]" "PaintGunRN1.phl[166]";
-connectAttr "ApolloRN.phl[268]" "PaintGunRN1.phl[167]";
-connectAttr "ApolloRN.phl[269]" "PaintGunRN1.phl[168]";
-connectAttr "ApolloRN.phl[270]" "PaintGunRN1.phl[169]";
-connectAttr "ApolloRN.phl[271]" "PaintGunRN1.phl[170]";
-connectAttr "ApolloRN.phl[272]" "PaintGunRN1.phl[171]";
-connectAttr "ApolloRN.phl[273]" "PaintGunRN1.phl[172]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Gun_CtrlW0.o" "PaintGunRN1.phl[173]"
+connectAttr "Tube_Driver_Jnt_01_Ctrl_visibility.o" "PaintGunRN1.phl[38]";
+connectAttr "PaintGunRN1.phl[39]" "PaintGunRN1.phl[40]";
+connectAttr "Dionysus_Asset_RigRN.phl[707]" "PaintGunRN1.phl[41]";
+connectAttr "Dionysus_Asset_RigRN.phl[708]" "PaintGunRN1.phl[42]";
+connectAttr "Dionysus_Asset_RigRN.phl[709]" "PaintGunRN1.phl[43]";
+connectAttr "Dionysus_Asset_RigRN.phl[710]" "PaintGunRN1.phl[44]";
+connectAttr "Dionysus_Asset_RigRN.phl[711]" "PaintGunRN1.phl[45]";
+connectAttr "Dionysus_Asset_RigRN.phl[712]" "PaintGunRN1.phl[46]";
+connectAttr "Dionysus_Asset_RigRN.phl[713]" "PaintGunRN1.phl[47]";
+connectAttr "PaintGunRN1.phl[48]" "PaintGunRN1.phl[49]";
+connectAttr "Dionysus_Asset_RigRN.phl[714]" "PaintGunRN1.phl[50]";
+connectAttr "Dionysus_Asset_RigRN.phl[715]" "PaintGunRN1.phl[51]";
+connectAttr "Dionysus_Asset_RigRN.phl[716]" "PaintGunRN1.phl[52]";
+connectAttr "Dionysus_Asset_RigRN.phl[717]" "PaintGunRN1.phl[53]";
+connectAttr "Dionysus_Asset_RigRN.phl[718]" "PaintGunRN1.phl[54]";
+connectAttr "Dionysus_Asset_RigRN.phl[719]" "PaintGunRN1.phl[55]";
+connectAttr "Dionysus_Asset_RigRN.phl[720]" "PaintGunRN1.phl[56]";
+connectAttr "PaintGunRN1.phl[57]" "PaintGunRN1.phl[58]";
+connectAttr "Dionysus_Asset_RigRN.phl[721]" "PaintGunRN1.phl[59]";
+connectAttr "Dionysus_Asset_RigRN.phl[722]" "PaintGunRN1.phl[60]";
+connectAttr "Dionysus_Asset_RigRN.phl[723]" "PaintGunRN1.phl[61]";
+connectAttr "Dionysus_Asset_RigRN.phl[724]" "PaintGunRN1.phl[62]";
+connectAttr "Dionysus_Asset_RigRN.phl[725]" "PaintGunRN1.phl[63]";
+connectAttr "Dionysus_Asset_RigRN.phl[726]" "PaintGunRN1.phl[64]";
+connectAttr "Dionysus_Asset_RigRN.phl[727]" "PaintGunRN1.phl[65]";
+connectAttr "PaintGunRN1.phl[66]" "PaintGunRN1.phl[67]";
+connectAttr "ApolloRN.phl[523]" "PaintGunRN1.phl[68]";
+connectAttr "ApolloRN.phl[524]" "PaintGunRN1.phl[69]";
+connectAttr "ApolloRN.phl[525]" "PaintGunRN1.phl[70]";
+connectAttr "ApolloRN.phl[526]" "PaintGunRN1.phl[71]";
+connectAttr "ApolloRN.phl[527]" "PaintGunRN1.phl[72]";
+connectAttr "ApolloRN.phl[528]" "PaintGunRN1.phl[73]";
+connectAttr "ApolloRN.phl[529]" "PaintGunRN1.phl[74]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Gun_CtrlW0.o" "PaintGunRN1.phl[75]"
 		;
-connectAttr "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.o" "PaintGunRN1.phl[174]"
+connectAttr "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.o" "PaintGunRN1.phl[76]"
 		;
-connectAttr "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.o" "PaintGunRN1.phl[175]"
+connectAttr "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.o" "PaintGunRN1.phl[77]"
 		;
-connectAttr "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.o" "PaintGunRN1.phl[176]"
+connectAttr "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.o" "PaintGunRN1.phl[78]"
 		;
-connectAttr "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.o" "PaintGunRN1.phl[177]"
+connectAttr "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.o" "PaintGunRN1.phl[79]"
 		;
-connectAttr "Tube_Driver_Jnt_03_Ctrl_translateX.o" "PaintGunRN1.phl[178]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_translateY.o" "PaintGunRN1.phl[179]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_translateZ.o" "PaintGunRN1.phl[180]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateX.o" "PaintGunRN1.phl[181]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateY.o" "PaintGunRN1.phl[182]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateZ.o" "PaintGunRN1.phl[183]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleX.o" "PaintGunRN1.phl[184]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleY.o" "PaintGunRN1.phl[185]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleZ.o" "PaintGunRN1.phl[186]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_translateX.o" "PaintGunRN1.phl[187]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_translateY.o" "PaintGunRN1.phl[188]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_translateZ.o" "PaintGunRN1.phl[189]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateX.o" "PaintGunRN1.phl[190]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateY.o" "PaintGunRN1.phl[191]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateZ.o" "PaintGunRN1.phl[192]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleX.o" "PaintGunRN1.phl[193]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleY.o" "PaintGunRN1.phl[194]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleZ.o" "PaintGunRN1.phl[195]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_translateX.o" "PaintGunRN1.phl[80]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_translateY.o" "PaintGunRN1.phl[81]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_translateZ.o" "PaintGunRN1.phl[82]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateX.o" "PaintGunRN1.phl[83]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateY.o" "PaintGunRN1.phl[84]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateZ.o" "PaintGunRN1.phl[85]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleX.o" "PaintGunRN1.phl[86]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleY.o" "PaintGunRN1.phl[87]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleZ.o" "PaintGunRN1.phl[88]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_visibility.o" "PaintGunRN1.phl[89]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_translateX.o" "PaintGunRN1.phl[90]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_translateY.o" "PaintGunRN1.phl[91]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_translateZ.o" "PaintGunRN1.phl[92]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateX.o" "PaintGunRN1.phl[93]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateY.o" "PaintGunRN1.phl[94]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateZ.o" "PaintGunRN1.phl[95]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleX.o" "PaintGunRN1.phl[96]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleY.o" "PaintGunRN1.phl[97]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleZ.o" "PaintGunRN1.phl[98]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_visibility.o" "PaintGunRN1.phl[99]";
 connectAttr "Apollo_Closeup_Cam_translateX.o" "Apollo_Closeup_Cam.tx";
 connectAttr "Apollo_Closeup_Cam_translateY.o" "Apollo_Closeup_Cam.ty";
 connectAttr "Apollo_Closeup_Cam_translateZ.o" "Apollo_Closeup_Cam.tz";
@@ -29613,13 +29604,17 @@ connectAttr "pCylinderShape1.wm" "polyExtrudeFace1.mp";
 connectAttr "polyTweak1.out" "polyExtrudeFace2.ip";
 connectAttr "pCylinderShape1.wm" "polyExtrudeFace2.mp";
 connectAttr "polyExtrudeFace1.out" "polyTweak1.ip";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_visibility1.o" "PaintGunRN.phl[35]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_visibility1.o" "PaintGunRN.phl[45]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_visibility1.o" "PaintGunRN.phl[55]";
+connectAttr "Light_Rig_Ctrl_visibility.o" "ApolloRN.phl[257]";
+connectAttr "Light_Rig_Ctrl_translateX.o" "ApolloRN.phl[258]";
+connectAttr "Light_Rig_Ctrl_translateY.o" "ApolloRN.phl[259]";
+connectAttr "Light_Rig_Ctrl_translateZ.o" "ApolloRN.phl[260]";
+connectAttr "Light_Rig_Ctrl_rotateX.o" "ApolloRN.phl[261]";
+connectAttr "Light_Rig_Ctrl_rotateY.o" "ApolloRN.phl[262]";
+connectAttr "Light_Rig_Ctrl_rotateZ.o" "ApolloRN.phl[263]";
+connectAttr "Light_Rig_Ctrl_scaleX.o" "ApolloRN.phl[264]";
+connectAttr "Light_Rig_Ctrl_scaleY.o" "ApolloRN.phl[265]";
+connectAttr "Light_Rig_Ctrl_scaleZ.o" "ApolloRN.phl[266]";
 connectAttr "PaintGunRNfosterParent1.msg" "PaintGunRN.fp";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_visibility.o" "PaintGunRN1.phl[38]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_visibility.o" "PaintGunRN1.phl[89]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_visibility.o" "PaintGunRN1.phl[99]";
 connectAttr "PaintGunRN1fosterParent1.msg" "PaintGunRN1.fp";
 connectAttr "sharedReferenceNode.sr" "RocketRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
@@ -29636,4 +29631,4 @@ connectAttr "pCubeShape9.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape10.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape11.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape12.iog" ":initialShadingGroup.dsm" -na;
-// End of PaintingScene_CC.ma
+// End of PaintingScene_CC TEST.ma
