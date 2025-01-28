@@ -1,6 +1,6 @@
-//Maya ASCII 2025ff03 scene
+//Maya ASCII 2024 scene
 //Name: PaintingScene_CC.ma
-//Last modified: Tue, Jan 28, 2025 01:41:18 PM
+//Last modified: Tue, Jan 28, 2025 01:54:01 PM
 //Codeset: 1252
 file -rdi 1 -ns "Apollo" -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
 file -rdi 1 -ns "Dionysus_Asset_Rig" -rfn "Dionysus_Asset_RigRN" -op "v=0;"
@@ -11,7 +11,11 @@ file -rdi 2 -ns "Hopper_Bin" -rfn "Painting_Scene:Hopper_BinRN" -op "v=0;"
 		-typ "mayaAscii" "C:/Users/Canne/Documents/GitRepo/Apollo_Short_Film/ApolloProject//scenes/Props/Act 1 _ Conveyor/Hopper Bin.ma";
 file -rdi 1 -ns "PaintGun" -rfn "PaintGunRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/PaintGun.ma";
 file -rdi 1 -ns "PaintGun1" -rfn "PaintGunRN1" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/PaintGun.ma";
-file -rdi 1 -ns "Rocket" -dr 1 -rfn "RocketRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10876761/Downloads/Apollo_Short_Film-main (5)/Apollo_Short_Film-main/ApolloProject//scenes/Props/PaintScene/Rocket.ma";
+file -rdi 1 -ns "Rocket" -rfn "RocketRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/Rocket.ma";
+file -rdi 1 -ns "PaintBrush" -rfn "PaintBrushRN" -op "v=0;" -typ "mayaAscii"
+		 "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/PaintBrush.ma";
+file -rdi 1 -ns "PaintBucket" -rfn "PaintBucketRN" -op "v=0;" -typ "mayaAscii"
+		 "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/PaintBucket.ma";
 file -r -ns "Apollo" -dr 1 -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
 file -r -ns "Dionysus_Asset_Rig" -dr 1 -rfn "Dionysus_Asset_RigRN" -op "v=0;" -typ
 		 "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Characters/Dionysus_Asset_Rig.ma";
@@ -19,38 +23,39 @@ file -r -ns "Painting_Scene" -dr 1 -rfn "Painting_SceneRN" -op "v=0;" -typ "maya
 		 "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 3 _ Painting/Painting Scene.ma";
 file -r -ns "PaintGun" -dr 1 -rfn "PaintGunRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/PaintGun.ma";
 file -r -ns "PaintGun1" -dr 1 -rfn "PaintGunRN1" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/PaintGun.ma";
-file -r -ns "Rocket" -dr 1 -rfn "RocketRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10876761/Downloads/Apollo_Short_Film-main (5)/Apollo_Short_Film-main/ApolloProject//scenes/Props/PaintScene/Rocket.ma";
-requires maya "2025ff03";
+file -r -ns "Rocket" -dr 1 -rfn "RocketRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/Rocket.ma";
+file -r -ns "PaintBrush" -dr 1 -rfn "PaintBrushRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/PaintBrush.ma";
+file -r -ns "PaintBucket" -dr 1 -rfn "PaintBucketRN" -op "v=0;" -typ "mayaAscii"
+		 "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/PaintBucket.ma";
+requires maya "2024";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.4.2.1";
-requires "stereoCamera" "10.0";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
+requires -nodeType "mayaUsdLayerManager" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.25.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2025";
-fileInfo "version" "2025";
-fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
-fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "41308E02-422A-2ED1-59FA-E2A0AC1040F6";
+fileInfo "product" "Maya 2024";
+fileInfo "version" "2024";
+fileInfo "cutIdentifier" "202310181224-69282f2959";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26120)";
+fileInfo "UUID" "DD4BE02A-47C3-5F58-96EE-38AF0FA0496E";
 fileInfo "license" "education";
 fileInfo "exportedFrom" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/Painting/PaintingScene_CC.ma";
 createNode transform -s -n "persp";
 	rename -uid "5B564075-43B3-DAAE-982C-D79B0D607869";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.32219210308142499 2.8847440088882763 10.899441198904645 ;
-	setAttr ".r" -type "double3" -4.5383527266126364 -1439.5999999999956 -3.4166947366690029e-17 ;
+	setAttr ".t" -type "double3" -2.9180934223151773 6.4896222701102211 18.08636847664965 ;
+	setAttr ".r" -type "double3" -11.138352726793828 -1437.5999999999992 9.9479594301634151e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "975F7580-4A80-0160-77A5-FF8355D115FC";
 	setAttr -k off ".v" no;
-	setAttr ".ovr" 1.3;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 16.792606790505157;
+	setAttr ".coi" 20.090650976622136;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -5.6292590316479769 2.7704684367848498 -7.8746314703948617 ;
+	setAttr ".tp" -type "double3" -2.3781626518500598 2.0918891293375528 -1.357512765496147 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
-	setAttr ".dfg" yes;
 createNode transform -s -n "top";
 	rename -uid "F61F506B-4AAE-0839-C4F2-EA92A2F7670D";
 	setAttr ".v" no;
@@ -237,26 +242,6 @@ createNode camera -n "Dio_GunShape" -p "Dio_Gun";
 	setAttr ".tp" -type "double3" -9.1564981091335103 2.682263889554954 -6.7648962916819437 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dr" yes;
-createNode transform -n "pCylinder1";
-	rename -uid "512C95A3-4167-52E6-0C1B-3FBA37FDABC8";
-	setAttr ".t" -type "double3" -3.3146261299131532 2.2368635045258336 -1.2956332328679958 ;
-	setAttr ".s" -type "double3" 0.21929446386506696 0.21929446386506696 0.21929446386506696 ;
-createNode mesh -n "pCylinderShape1" -p "pCylinder1";
-	rename -uid "6A0345E6-4831-50FF-1B3A-4A98167B3BEB";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.49999998509883881 0.84374997019767761 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 21 ".pt[61:81]" -type "float3"  0 -0.2584525 0 0 -0.2584525 
-		0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 
-		0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 
-		0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 0 0 -0.2584525 
-		0 0 -0.2584525 0;
 createNode transform -n "PLACEHOLDERS";
 	rename -uid "BAB1C77B-4755-E267-26EB-C2A0AEE734D7";
 	setAttr ".v" no;
@@ -756,7 +741,7 @@ createNode mesh -n "pCubeShape8" -p "pCube8";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "PaintGunRNfosterParent1";
-	rename -uid "EB865E69-435A-F4FE-BB98-57B44AB9AA12";
+	rename -uid "BA599F2E-4ADD-C350-26E1-2C89EF9ED964";
 createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint1" -p "PaintGunRNfosterParent1";
 	rename -uid "5C19CC19-4F0F-22A5-7C2F-258751E923B2";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "Prop_CtrlW1" -dv 1 -min 0 -at "double";
@@ -792,7 +777,7 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint1" -p "PaintGunRNfo
 	setAttr -k on ".w2";
 	setAttr -k on ".w0";
 createNode fosterParent -n "PaintGunRN1fosterParent1";
-	rename -uid "EC8890D9-481D-B1EB-2B65-D8A88F20B7E2";
+	rename -uid "1F488C10-43BF-447D-1129-5BB61FFB2395";
 createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint2" -p "PaintGunRN1fosterParent1";
 	rename -uid "306EB861-42A5-F4D7-918A-8EB8F96F58D3";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Prop_CtrlW0" -dv 1 -min 0 -at "double";
@@ -828,23 +813,23 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint2" -p "PaintGunRN1f
 	setAttr -k on ".w2";
 	setAttr -k on ".w3";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "997BD8E1-4CE5-74FC-E5C0-51AC842793BC";
-	setAttr -s 198 ".lnk";
-	setAttr -s 198 ".slnk";
+	rename -uid "3387A2AC-470D-782F-4DA1-E5A013BE4006";
+	setAttr -s 204 ".lnk";
+	setAttr -s 204 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "A72C5C7C-44F5-897B-B4CC-81B629D15454";
+	rename -uid "E2304340-411A-5CFF-BA04-BEA4CA027A98";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 0 1 2 ;
 	setAttr -s 3 ".bspr";
 	setAttr -s 3 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "418789A9-4F47-4D78-6FB8-849A822C6BF2";
+	rename -uid "714A52C0-4C10-C0D0-2048-21A72A0A0F2E";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "C99ABFEF-45F9-588C-5052-93B117FC76AE";
+	rename -uid "183D20F3-4543-0272-434C-80B20AA87324";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "0DFBE31B-4B53-7FF6-5DDE-8ABD325E78B9";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "BF49A1BB-4633-67A7-3CEB-C19BF40F53CC";
+	rename -uid "3501652C-4E90-45EB-C77C-1693A0737A50";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "625535CE-4208-D65F-6936-AC85A8EB8F28";
 	setAttr ".g" yes;
@@ -870,44 +855,45 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
 		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1957\n            -height 810\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 2569\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
 		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
 		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
-		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
-		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
-		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
-		+ "            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
-		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n"
-		+ "                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
-		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
-		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
-		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
-		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|Apollo_Closeup_Cam\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n"
-		+ "                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n"
-		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n"
-		+ "                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1957\\n    -height 810\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1957\\n    -height 810\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2569\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
+		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
+		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n"
+		+ "            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
+		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
+		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
+		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n"
+		+ "                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n"
+		+ "                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
+		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
+		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n"
+		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n"
+		+ "\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
+		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
+		+ "                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|Apollo_Closeup_Cam\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
+		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
+		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2569\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2569\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -12540,50 +12526,9 @@ createNode animCurveTU -n "pCube7_scaleZ";
 	setAttr -s 8 ".kiy[3:7]"  0 0 0 0 0;
 	setAttr -s 8 ".kox[3:7]"  1 1 1 1 1;
 	setAttr -s 8 ".koy[3:7]"  0 0 0 0 0;
-createNode polyCylinder -n "polyCylinder1";
-	rename -uid "22511A06-4F9C-8815-F661-FABD45311261";
-	setAttr ".sc" 1;
-	setAttr ".cuv" 3;
 createNode polyCube -n "polyCube2";
 	rename -uid "3283D19B-46A4-7404-ABF6-C2B68A4DF21C";
 	setAttr ".cuv" 4;
-createNode polyExtrudeFace -n "polyExtrudeFace1";
-	rename -uid "ADC80972-448A-AD0B-8D46-7B8163838617";
-	setAttr ".ics" -type "componentList" 1 "f[40:59]";
-	setAttr ".ix" -type "matrix" 0.21929446386506696 0 0 0 0 0.21929446386506696 0 0
-		 0 0 0.21929446386506696 0 -3.3146261299131532 2.2368635045258336 -1.2956332328679958 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -3.3146262 2.4561579 -1.2956333 ;
-	setAttr ".rs" 36495;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -3.5339206460620947 2.4561579683909005 -1.5149278013008116 ;
-	setAttr ".cbx" -type "double3" -3.0953316660480863 2.4561579683909005 -1.0763387428609916 ;
-	setAttr ".raf" no;
-createNode polyExtrudeFace -n "polyExtrudeFace2";
-	rename -uid "5412B5F3-45B7-D98A-1A18-90A8A14FD398";
-	setAttr ".ics" -type "componentList" 1 "f[40:59]";
-	setAttr ".ix" -type "matrix" 0.21929446386506696 0 0 0 0 0.21929446386506696 0 0
-		 0 0 0.21929446386506696 0 -3.3146261299131532 2.2368635045258336 -1.2956332328679958 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -3.3146262 2.4561582 -1.2956333 ;
-	setAttr ".rs" 52901;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -3.496797866510565 2.4561581513844613 -1.477805060962188 ;
-	setAttr ".cbx" -type "double3" -3.1324543933157414 2.4561581513844613 -1.1134614962705838 ;
-	setAttr ".raf" no;
-createNode polyTweak -n "polyTweak1";
-	rename -uid "C09326F3-4CE2-A2D6-3F3D-D58CF4E5FAA6";
-	setAttr ".uopa" yes;
-	setAttr -s 21 ".tk[41:61]" -type "float3"  -0.16099742 -1.6226458e-07
-		 0.0523111 -0.13695249 -1.6226458e-07 0.099501826 -2.0180051e-08 -1.6226458e-07 -3.027008e-08
-		 -0.099501893 -1.6226458e-07 0.13695253 -0.052311242 -1.6226458e-07 0.16099735 -2.0180051e-08
-		 -1.6226458e-07 0.16928262 0.052311186 -1.6226458e-07 0.16099735 0.099501848 -1.6226458e-07
-		 0.13695246 0.13695247 -1.6226458e-07 0.099501759 0.16099738 -1.6226458e-07 0.0523111
-		 0.16928253 -1.6226458e-07 -3.027008e-08 0.16099738 -1.6226458e-07 -0.052311249 0.13695247
-		 -1.6226458e-07 -0.099501811 0.099501848 -1.6226458e-07 -0.1369525 0.052311186 -1.6226458e-07
-		 -0.16099732 -2.0180051e-08 -1.6226458e-07 -0.16928259 -0.052311242 -1.6226458e-07
-		 -0.16099732 -0.099501893 -1.6226458e-07 -0.1369525 -0.13695249 -1.6226458e-07 -0.099501811
-		 -0.16099732 -1.6226458e-07 -0.052311249 -0.16928256 -1.6226458e-07 -3.027008e-08;
 createNode polyCube -n "polyCube3";
 	rename -uid "95427172-42EC-775A-0E9A-F08901FFFDB4";
 	setAttr ".cuv" 4;
@@ -13125,7 +13070,7 @@ createNode animCurveTU -n "pCube12_scaleZ";
 	setAttr -s 6 ".koy[1:5]"  0 0 0 0 0;
 createNode reference -n "ApolloRN";
 	rename -uid "BA397E9C-48DE-E665-DE3C-B8A58CEAD598";
-	setAttr -s 273 ".phl";
+	setAttr -s 287 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -13399,10 +13344,24 @@ createNode reference -n "ApolloRN";
 	setAttr ".phl[271]" 0;
 	setAttr ".phl[272]" 0;
 	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
+	setAttr ".phl[285]" 0;
+	setAttr ".phl[286]" 0;
+	setAttr ".phl[287]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"ApolloRN"
 		"ApolloRN" 0
-		"ApolloRN" 290
+		"ApolloRN" 304
 		2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape" 
 		"instObjGroups.objectGroups" " -s 4"
 		2 "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl" 
@@ -13426,11 +13385,11 @@ createNode reference -n "ApolloRN";
 		
 		2 "Apollo:groupParts100" "groupId" " 113"
 		3 "Apollo:groupId766.message" ":defaultLastHiddenSet.groupNodes" "-na"
+		3 "Apollo:groupId766.groupId" "Apollo:groupParts100.groupId" ""
 		3 "Apollo:groupId766.groupId" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[42].objectGroupId" 
 		""
 		3 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[42]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
-		3 "Apollo:groupId766.groupId" "Apollo:groupParts100.groupId" ""
 		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.ArmIKFK" 
 		"ApolloRN.placeHolderList[1]" ""
 		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.MasterScale" 
@@ -13976,12 +13935,40 @@ createNode reference -n "ApolloRN";
 		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
 		"ApolloRN.placeHolderList[272]" ""
 		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
-		"ApolloRN.placeHolderList[273]" "";
+		"ApolloRN.placeHolderList[273]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
+		"ApolloRN.placeHolderList[274]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
+		"ApolloRN.placeHolderList[275]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
+		"ApolloRN.placeHolderList[276]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
+		"ApolloRN.placeHolderList[277]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
+		"ApolloRN.placeHolderList[278]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
+		"ApolloRN.placeHolderList[279]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
+		"ApolloRN.placeHolderList[280]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
+		"ApolloRN.placeHolderList[281]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
+		"ApolloRN.placeHolderList[282]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
+		"ApolloRN.placeHolderList[283]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
+		"ApolloRN.placeHolderList[284]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
+		"ApolloRN.placeHolderList[285]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
+		"ApolloRN.placeHolderList[286]" ""
+		5 1 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
+		"ApolloRN.placeHolderList[287]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Dionysus_Asset_RigRN";
 	rename -uid "4C5360A2-44D7-4D37-0503-2AB827F02163";
-	setAttr -s 727 ".phl";
+	setAttr -s 769 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -14709,10 +14696,52 @@ createNode reference -n "Dionysus_Asset_RigRN";
 	setAttr ".phl[725]" 0;
 	setAttr ".phl[726]" 0;
 	setAttr ".phl[727]" 0;
+	setAttr ".phl[728]" 0;
+	setAttr ".phl[729]" 0;
+	setAttr ".phl[730]" 0;
+	setAttr ".phl[731]" 0;
+	setAttr ".phl[732]" 0;
+	setAttr ".phl[733]" 0;
+	setAttr ".phl[734]" 0;
+	setAttr ".phl[735]" 0;
+	setAttr ".phl[736]" 0;
+	setAttr ".phl[737]" 0;
+	setAttr ".phl[738]" 0;
+	setAttr ".phl[739]" 0;
+	setAttr ".phl[740]" 0;
+	setAttr ".phl[741]" 0;
+	setAttr ".phl[742]" 0;
+	setAttr ".phl[743]" 0;
+	setAttr ".phl[744]" 0;
+	setAttr ".phl[745]" 0;
+	setAttr ".phl[746]" 0;
+	setAttr ".phl[747]" 0;
+	setAttr ".phl[748]" 0;
+	setAttr ".phl[749]" 0;
+	setAttr ".phl[750]" 0;
+	setAttr ".phl[751]" 0;
+	setAttr ".phl[752]" 0;
+	setAttr ".phl[753]" 0;
+	setAttr ".phl[754]" 0;
+	setAttr ".phl[755]" 0;
+	setAttr ".phl[756]" 0;
+	setAttr ".phl[757]" 0;
+	setAttr ".phl[758]" 0;
+	setAttr ".phl[759]" 0;
+	setAttr ".phl[760]" 0;
+	setAttr ".phl[761]" 0;
+	setAttr ".phl[762]" 0;
+	setAttr ".phl[763]" 0;
+	setAttr ".phl[764]" 0;
+	setAttr ".phl[765]" 0;
+	setAttr ".phl[766]" 0;
+	setAttr ".phl[767]" 0;
+	setAttr ".phl[768]" 0;
+	setAttr ".phl[769]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Dionysus_Asset_RigRN"
 		"Dionysus_Asset_RigRN" 0
-		"Dionysus_Asset_RigRN" 746
+		"Dionysus_Asset_RigRN" 788
 		2 "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Dionysus_Asset_Rig:Neck_05_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Dionysus_Asset_Rig:Prop_02_Ctrl" 
@@ -14749,9 +14778,9 @@ createNode reference -n "Dionysus_Asset_RigRN";
 		"PropSpeed" " -k 1 75"
 		2 "Dionysus_Asset_Rig:Dionysus_Ctrl" "visibility" " 1"
 		2 "Dionysus_Asset_Rig:Dionysus_Geo" "visibility" " 1"
-		3 "Dionysus_Asset_Rig:unitConversion66.output" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Dionysus_Asset_Rig:Prop_02_Ctrl.rotateY" 
-		""
 		3 "Dionysus_Asset_Rig:unitConversion67.output" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_01_Ctrl_Grp|Dionysus_Asset_Rig:Prop_01_Ctrl.rotateY" 
+		""
+		3 "Dionysus_Asset_Rig:unitConversion66.output" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Dionysus_Asset_Rig:Prop_02_Ctrl.rotateY" 
 		""
 		5 4 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Booster_Ctrl_Grp|Dionysus_Asset_Rig:Booster_Ctrl.FollowTranslate" 
 		"Dionysus_Asset_RigRN.placeHolderList[1]" ""
@@ -16206,7 +16235,91 @@ createNode reference -n "Dionysus_Asset_RigRN";
 		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.scale" 
 		"Dionysus_Asset_RigRN.placeHolderList[726]" ""
 		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.parentMatrix" 
-		"Dionysus_Asset_RigRN.placeHolderList[727]" "";
+		"Dionysus_Asset_RigRN.placeHolderList[727]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.translate" 
+		"Dionysus_Asset_RigRN.placeHolderList[728]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotatePivot" 
+		"Dionysus_Asset_RigRN.placeHolderList[729]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotatePivotTranslate" 
+		"Dionysus_Asset_RigRN.placeHolderList[730]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotate" 
+		"Dionysus_Asset_RigRN.placeHolderList[731]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotateOrder" 
+		"Dionysus_Asset_RigRN.placeHolderList[732]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.scale" 
+		"Dionysus_Asset_RigRN.placeHolderList[733]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.parentMatrix" 
+		"Dionysus_Asset_RigRN.placeHolderList[734]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.translate" 
+		"Dionysus_Asset_RigRN.placeHolderList[735]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.rotatePivot" 
+		"Dionysus_Asset_RigRN.placeHolderList[736]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.rotatePivotTranslate" 
+		"Dionysus_Asset_RigRN.placeHolderList[737]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.rotate" 
+		"Dionysus_Asset_RigRN.placeHolderList[738]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.rotateOrder" 
+		"Dionysus_Asset_RigRN.placeHolderList[739]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.scale" 
+		"Dionysus_Asset_RigRN.placeHolderList[740]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.parentMatrix" 
+		"Dionysus_Asset_RigRN.placeHolderList[741]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.translate" 
+		"Dionysus_Asset_RigRN.placeHolderList[742]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.rotatePivot" 
+		"Dionysus_Asset_RigRN.placeHolderList[743]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.rotatePivotTranslate" 
+		"Dionysus_Asset_RigRN.placeHolderList[744]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.rotate" 
+		"Dionysus_Asset_RigRN.placeHolderList[745]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.rotateOrder" 
+		"Dionysus_Asset_RigRN.placeHolderList[746]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.scale" 
+		"Dionysus_Asset_RigRN.placeHolderList[747]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.parentMatrix" 
+		"Dionysus_Asset_RigRN.placeHolderList[748]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.translate" 
+		"Dionysus_Asset_RigRN.placeHolderList[749]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotatePivot" 
+		"Dionysus_Asset_RigRN.placeHolderList[750]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotatePivotTranslate" 
+		"Dionysus_Asset_RigRN.placeHolderList[751]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotate" 
+		"Dionysus_Asset_RigRN.placeHolderList[752]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotateOrder" 
+		"Dionysus_Asset_RigRN.placeHolderList[753]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.scale" 
+		"Dionysus_Asset_RigRN.placeHolderList[754]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.parentMatrix" 
+		"Dionysus_Asset_RigRN.placeHolderList[755]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.translate" 
+		"Dionysus_Asset_RigRN.placeHolderList[756]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.rotatePivot" 
+		"Dionysus_Asset_RigRN.placeHolderList[757]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.rotatePivotTranslate" 
+		"Dionysus_Asset_RigRN.placeHolderList[758]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.rotate" 
+		"Dionysus_Asset_RigRN.placeHolderList[759]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.rotateOrder" 
+		"Dionysus_Asset_RigRN.placeHolderList[760]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.scale" 
+		"Dionysus_Asset_RigRN.placeHolderList[761]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl.parentMatrix" 
+		"Dionysus_Asset_RigRN.placeHolderList[762]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.translate" 
+		"Dionysus_Asset_RigRN.placeHolderList[763]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.rotatePivot" 
+		"Dionysus_Asset_RigRN.placeHolderList[764]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.rotatePivotTranslate" 
+		"Dionysus_Asset_RigRN.placeHolderList[765]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.rotate" 
+		"Dionysus_Asset_RigRN.placeHolderList[766]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.rotateOrder" 
+		"Dionysus_Asset_RigRN.placeHolderList[767]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.scale" 
+		"Dionysus_Asset_RigRN.placeHolderList[768]" ""
+		5 1 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl.parentMatrix" 
+		"Dionysus_Asset_RigRN.placeHolderList[769]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Painting_SceneRN";
@@ -27769,19 +27882,6 @@ createNode animCurveTU -n "Gun_Ctrl_Follow";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  43 3;
 	setAttr ".kot[0]"  5;
-createNode reference -n "RocketRN";
-	rename -uid "BD5E102C-48DB-599D-CA77-35A5D81560E8";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"RocketRN"
-		"RocketRN" 1
-		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:Transform_Ctrl_Grp|Rocket:Transform_Ctrl" 
-		"translate" " -type \"double3\" 0 0 5.12184834944479928";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "sharedReferenceNode";
-	rename -uid "2C56ADD2-4B4E-800D-701E-E59AC2756CDC";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"sharedReferenceNode";
 createNode animCurveTA -n "R_Treads_Ctrl_rotateZ";
 	rename -uid "13146794-481A-4A6F-4D77-3DB6E8275F45";
 	setAttr ".tan" 2;
@@ -28000,6 +28100,1800 @@ createNode animCurveTU -n "Treads_Base_FK_Jnt_Ctrl_IndividualRoll";
 	setAttr -s 4 ".kiy[0:3]"  0 0 0 0;
 	setAttr -s 4 ".kox[0:3]"  1 1 1 1;
 	setAttr -s 4 ".koy[0:3]"  0 0 0 0;
+createNode reference -n "RocketRN";
+	rename -uid "8F93DDF5-4C01-50DF-85CF-898E4876391C";
+	setAttr -s 46 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"RocketRN"
+		"RocketRN" 0
+		"RocketRN" 59
+		1 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl" "follow" 
+		"follow" " -ci 1 -k 1 -min 0 -max 4 -en \"Transform:Dio Two Hand:Dio Right Hand:Dio Left Hand:Apollo Hand\" -at \"enum\""
+		
+		1 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"Two_Handed_Prop_CtrlW1" "w1" " -dcb 0 -ci 1 -k 1 -dv 1 -min 0 -at \"double\""
+		1 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"R_Hand_Prop_CtrlW2" "w2" " -dcb 0 -ci 1 -k 1 -dv 1 -min 0 -at \"double\""
+		1 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"L_Hand_Prop_CtrlW3" "w3" " -dcb 0 -ci 1 -k 1 -dv 1 -min 0 -at \"double\""
+		1 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"Prop_CtrlW4" "w4" " -dcb 0 -ci 1 -k 1 -dv 1 -min 0 -at \"double\""
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl" "follow" 
+		" -k 1 0"
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"enableRestPosition" " 1"
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"target" " -s 5"
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"restTranslate" " -type \"double3\" -2.37816265185005982 2.72867093911626402 -1.35751276549614697"
+		
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"restRotate" " -type \"double3\" 0 0 0"
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"Transform_CtrlW0" " -k 1"
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"Two_Handed_Prop_CtrlW1" " -k 1"
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"R_Hand_Prop_CtrlW2" " -k 1"
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"L_Hand_Prop_CtrlW3" " -k 1"
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1" 
+		"Prop_CtrlW4" " -k 1"
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:Transform_Ctrl_Grp|Rocket:Transform_Ctrl" 
+		"translate" " -type \"double3\" -2.37816265185005982 2.09188912933755278 -1.35751276549614697"
+		
+		2 "|Rocket:Rocket|Rocket:Ctrls|Rocket:Transform_Ctrl_Grp|Rocket:Transform_Ctrl" 
+		"scale" " -type \"double3\" 0.1 0.1 0.1"
+		5 3 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl.follow" 
+		"RocketRN.placeHolderList[1]" ""
+		5 3 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl.follow" 
+		"RocketRN.placeHolderList[2]" ""
+		5 3 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl.follow" 
+		"RocketRN.placeHolderList[3]" ""
+		5 3 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl.follow" 
+		"RocketRN.placeHolderList[4]" ""
+		5 3 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl.follow" 
+		"RocketRN.placeHolderList[5]" ""
+		5 0 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.Two_Handed_Prop_CtrlW1" 
+		"|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[1].targetWeight" 
+		"RocketRN.placeHolderList[6]" "RocketRN.placeHolderList[7]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[1].targetTranslate" 
+		"RocketRN.placeHolderList[8]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[1].targetRotatePivot" 
+		"RocketRN.placeHolderList[9]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[1].targetRotateTranslate" 
+		"RocketRN.placeHolderList[10]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[1].targetRotate" 
+		"RocketRN.placeHolderList[11]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[1].targetRotateOrder" 
+		"RocketRN.placeHolderList[12]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[1].targetScale" 
+		"RocketRN.placeHolderList[13]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[1].targetParentMatrix" 
+		"RocketRN.placeHolderList[14]" ""
+		5 0 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.R_Hand_Prop_CtrlW2" 
+		"|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[2].targetWeight" 
+		"RocketRN.placeHolderList[15]" "RocketRN.placeHolderList[16]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[2].targetTranslate" 
+		"RocketRN.placeHolderList[17]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[2].targetRotatePivot" 
+		"RocketRN.placeHolderList[18]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[2].targetRotateTranslate" 
+		"RocketRN.placeHolderList[19]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[2].targetRotate" 
+		"RocketRN.placeHolderList[20]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[2].targetRotateOrder" 
+		"RocketRN.placeHolderList[21]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[2].targetScale" 
+		"RocketRN.placeHolderList[22]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[2].targetParentMatrix" 
+		"RocketRN.placeHolderList[23]" ""
+		5 0 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.L_Hand_Prop_CtrlW3" 
+		"|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[3].targetWeight" 
+		"RocketRN.placeHolderList[24]" "RocketRN.placeHolderList[25]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[3].targetTranslate" 
+		"RocketRN.placeHolderList[26]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[3].targetRotatePivot" 
+		"RocketRN.placeHolderList[27]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[3].targetRotateTranslate" 
+		"RocketRN.placeHolderList[28]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[3].targetRotate" 
+		"RocketRN.placeHolderList[29]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[3].targetRotateOrder" 
+		"RocketRN.placeHolderList[30]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[3].targetScale" 
+		"RocketRN.placeHolderList[31]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[3].targetParentMatrix" 
+		"RocketRN.placeHolderList[32]" ""
+		5 0 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.Prop_CtrlW4" 
+		"|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[4].targetWeight" 
+		"RocketRN.placeHolderList[33]" "RocketRN.placeHolderList[34]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[4].targetTranslate" 
+		"RocketRN.placeHolderList[35]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[4].targetRotatePivot" 
+		"RocketRN.placeHolderList[36]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[4].targetRotateTranslate" 
+		"RocketRN.placeHolderList[37]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[4].targetRotate" 
+		"RocketRN.placeHolderList[38]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[4].targetRotateOrder" 
+		"RocketRN.placeHolderList[39]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[4].targetScale" 
+		"RocketRN.placeHolderList[40]" ""
+		5 2 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.target[4].targetParentMatrix" 
+		"RocketRN.placeHolderList[41]" ""
+		5 4 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.Transform_CtrlW0" 
+		"RocketRN.placeHolderList[42]" ""
+		5 4 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.Two_Handed_Prop_CtrlW1" 
+		"RocketRN.placeHolderList[43]" ""
+		5 4 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.R_Hand_Prop_CtrlW2" 
+		"RocketRN.placeHolderList[44]" ""
+		5 4 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.L_Hand_Prop_CtrlW3" 
+		"RocketRN.placeHolderList[45]" ""
+		5 4 "RocketRN" "|Rocket:Rocket|Rocket:Ctrls|Rocket:COG_Ctrl_Grp|Rocket:COG_Ctrl_Grp_parentConstraint1.Prop_CtrlW4" 
+		"RocketRN.placeHolderList[46]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "PaintBrushRN";
+	rename -uid "CF57B448-45BA-D7BE-D643-77826BB9471F";
+	setAttr -s 46 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"PaintBrushRN"
+		"PaintBrushRN" 0
+		"PaintBrushRN" 58
+		1 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl" "follow" 
+		"follow" " -ci 1 -k 1 -min 0 -max 4 -en \"Transform:Dio Two Hand:Dio Right Hand:Dio Left Hand:Apollo Hand\" -at \"enum\""
+		
+		1 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"Two_Handed_Prop_CtrlW1" "w1" " -dcb 0 -ci 1 -k 1 -dv 1 -min 0 -at \"double\""
+		1 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"R_Hand_Prop_CtrlW2" "w2" " -dcb 0 -ci 1 -k 1 -dv 1 -min 0 -at \"double\""
+		1 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"L_Hand_Prop_CtrlW3" "w3" " -dcb 0 -ci 1 -k 1 -dv 1 -min 0 -at \"double\""
+		1 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"Prop_CtrlW4" "w4" " -dcb 0 -ci 1 -k 1 -dv 1 -min 0 -at \"double\""
+		2 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl" "follow" 
+		" -k 1 0"
+		2 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"enableRestPosition" " 1"
+		2 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"target" " -s 5"
+		2 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"restTranslate" " -type \"double3\" -2.83845475739463904 2.55128684072996359 -1.29563323286799581"
+		
+		2 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"restRotate" " -type \"double3\" 0 0 0"
+		2 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"Two_Handed_Prop_CtrlW1" " -k 1"
+		2 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"R_Hand_Prop_CtrlW2" " -k 1"
+		2 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"L_Hand_Prop_CtrlW3" " -k 1"
+		2 "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1" 
+		"Prop_CtrlW4" " -k 1"
+		2 "|PaintBrush:PaintBrush|PaintBrush:Transform_Ctrl_Grp|PaintBrush:Transform_Ctrl" 
+		"translate" " -type \"double3\" -2.83845475739463904 2.2368635045258336 -1.29563323286799581"
+		
+		2 "|PaintBrush:PaintBrush|PaintBrush:Transform_Ctrl_Grp|PaintBrush:Transform_Ctrl" 
+		"MasterScale" " -k 1 0.075"
+		5 3 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl.follow" 
+		"PaintBrushRN.placeHolderList[1]" ""
+		5 3 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl.follow" 
+		"PaintBrushRN.placeHolderList[2]" ""
+		5 3 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl.follow" 
+		"PaintBrushRN.placeHolderList[3]" ""
+		5 3 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl.follow" 
+		"PaintBrushRN.placeHolderList[4]" ""
+		5 3 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl.follow" 
+		"PaintBrushRN.placeHolderList[5]" ""
+		5 0 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.Two_Handed_Prop_CtrlW1" 
+		"|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[1].targetWeight" 
+		"PaintBrushRN.placeHolderList[6]" "PaintBrushRN.placeHolderList[7]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[1].targetTranslate" 
+		"PaintBrushRN.placeHolderList[8]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[1].targetRotatePivot" 
+		"PaintBrushRN.placeHolderList[9]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[1].targetRotateTranslate" 
+		"PaintBrushRN.placeHolderList[10]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[1].targetRotate" 
+		"PaintBrushRN.placeHolderList[11]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[1].targetRotateOrder" 
+		"PaintBrushRN.placeHolderList[12]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[1].targetScale" 
+		"PaintBrushRN.placeHolderList[13]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[1].targetParentMatrix" 
+		"PaintBrushRN.placeHolderList[14]" ""
+		5 0 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.R_Hand_Prop_CtrlW2" 
+		"|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[2].targetWeight" 
+		"PaintBrushRN.placeHolderList[15]" "PaintBrushRN.placeHolderList[16]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[2].targetTranslate" 
+		"PaintBrushRN.placeHolderList[17]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[2].targetRotatePivot" 
+		"PaintBrushRN.placeHolderList[18]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[2].targetRotateTranslate" 
+		"PaintBrushRN.placeHolderList[19]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[2].targetRotate" 
+		"PaintBrushRN.placeHolderList[20]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[2].targetRotateOrder" 
+		"PaintBrushRN.placeHolderList[21]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[2].targetScale" 
+		"PaintBrushRN.placeHolderList[22]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[2].targetParentMatrix" 
+		"PaintBrushRN.placeHolderList[23]" ""
+		5 0 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.L_Hand_Prop_CtrlW3" 
+		"|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[3].targetWeight" 
+		"PaintBrushRN.placeHolderList[24]" "PaintBrushRN.placeHolderList[25]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[3].targetTranslate" 
+		"PaintBrushRN.placeHolderList[26]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[3].targetRotatePivot" 
+		"PaintBrushRN.placeHolderList[27]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[3].targetRotateTranslate" 
+		"PaintBrushRN.placeHolderList[28]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[3].targetRotate" 
+		"PaintBrushRN.placeHolderList[29]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[3].targetRotateOrder" 
+		"PaintBrushRN.placeHolderList[30]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[3].targetScale" 
+		"PaintBrushRN.placeHolderList[31]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[3].targetParentMatrix" 
+		"PaintBrushRN.placeHolderList[32]" ""
+		5 0 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.Prop_CtrlW4" 
+		"|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[4].targetWeight" 
+		"PaintBrushRN.placeHolderList[33]" "PaintBrushRN.placeHolderList[34]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[4].targetTranslate" 
+		"PaintBrushRN.placeHolderList[35]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[4].targetRotatePivot" 
+		"PaintBrushRN.placeHolderList[36]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[4].targetRotateTranslate" 
+		"PaintBrushRN.placeHolderList[37]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[4].targetRotate" 
+		"PaintBrushRN.placeHolderList[38]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[4].targetRotateOrder" 
+		"PaintBrushRN.placeHolderList[39]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[4].targetScale" 
+		"PaintBrushRN.placeHolderList[40]" ""
+		5 2 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.target[4].targetParentMatrix" 
+		"PaintBrushRN.placeHolderList[41]" ""
+		5 4 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.Transform_CtrlW0" 
+		"PaintBrushRN.placeHolderList[42]" ""
+		5 4 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.Two_Handed_Prop_CtrlW1" 
+		"PaintBrushRN.placeHolderList[43]" ""
+		5 4 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.R_Hand_Prop_CtrlW2" 
+		"PaintBrushRN.placeHolderList[44]" ""
+		5 4 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.L_Hand_Prop_CtrlW3" 
+		"PaintBrushRN.placeHolderList[45]" ""
+		5 4 "PaintBrushRN" "|PaintBrush:PaintBrush|PaintBrush:Cog_Ctrl_Grp|PaintBrush:Cog_Ctrl_Grp_parentConstraint1.Prop_CtrlW4" 
+		"PaintBrushRN.placeHolderList[46]" "";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "PaintBucketRN";
+	rename -uid "4C5D9C00-4942-7B1B-8220-8296FC0BFD88";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"PaintBucketRN"
+		"PaintBucketRN" 0
+		"PaintBucketRN" 688
+		2 "|PaintBucket:PaintBucket" "translate" " -type \"double3\" -3.33644649629575207 0.90199159529395478 -1.29563323286799581"
+		
+		2 "|PaintBucket:PaintBucket" "rotate" " -type \"double3\" 0 -42.80822698358651479 0"
+		
+		2 "|PaintBucket:PaintBucket" "scale" " -type \"double3\" 0.21929446386506696 0.21929446386506696 0.21929446386506696"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "uvPivot" " -type \"double2\" 0.65642626583576202 0.78182107210159302"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts" " -s 683"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2186]" " -type \"float3\" 0 0 0"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2686]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2687]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2688]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2689]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2690]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2691]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2692]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2693]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2694]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2695]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2696]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2697]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2698]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2699]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2700]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2701]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2702]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2703]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2704]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2705]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2706]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2707]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2708]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2709]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2710]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2711]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2712]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2713]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2714]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2715]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2716]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2717]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2718]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2719]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2720]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2721]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2722]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2723]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2724]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2725]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2726]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2727]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2728]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2729]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2730]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2731]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2732]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2733]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2734]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2735]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2736]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2737]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2738]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2739]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2740]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2741]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2742]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2743]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2744]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2745]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2746]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2747]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2748]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2749]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2750]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2751]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2752]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2753]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2754]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2755]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2756]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2757]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2758]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2759]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2760]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2761]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2762]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2763]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2764]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2765]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2766]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2767]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2768]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2769]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2770]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2771]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2772]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2773]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2774]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2775]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2776]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2777]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2778]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2779]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2780]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2781]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2782]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2783]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2784]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2785]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2786]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2787]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2788]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2789]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2790]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2791]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2792]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2793]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2794]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2795]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2796]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2797]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2798]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2799]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2800]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2801]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2802]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2803]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2804]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2805]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2806]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2807]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2808]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2809]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2810]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2811]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2812]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2813]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2814]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2815]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2816]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2817]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2818]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2819]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2820]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2821]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2822]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2823]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2824]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2825]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2826]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2827]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2828]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2829]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2830]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2831]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2832]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2833]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2834]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2835]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2836]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2837]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2838]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2839]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2840]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2841]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2842]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2843]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2844]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2845]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2846]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2847]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2848]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2849]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2850]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2851]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2852]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2853]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2854]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2855]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2856]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2857]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2858]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2859]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2860]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2861]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2862]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2863]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2864]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[2865]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3188]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3191]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3193]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3195]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3197]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3199]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3201]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3203]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3205]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3207]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3209]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3211]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3213]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3215]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3217]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3219]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3221]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3223]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3225]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3226]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3227]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3228]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3229]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3230]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3231]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3232]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3233]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3234]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3235]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3236]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3237]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3238]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3239]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3240]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3241]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3242]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3243]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3244]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3245]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3246]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3247]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3248]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3249]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3250]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3251]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3252]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3253]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3254]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3255]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3256]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3257]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3258]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3259]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3260]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3261]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3262]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3263]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3264]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3265]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3266]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3267]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3268]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3269]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3270]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3271]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3272]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3273]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3274]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3275]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3276]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3277]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3278]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3279]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3280]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3281]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3282]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3283]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3284]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3285]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3286]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3287]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3288]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3289]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3290]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3291]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3292]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3293]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3294]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3295]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3296]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3297]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3298]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3299]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3300]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3301]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3302]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3303]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3304]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3305]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3306]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3307]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3308]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3309]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3310]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3311]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3312]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3313]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3314]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3315]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3316]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3317]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3318]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3319]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3320]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3321]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3322]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3323]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3324]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3325]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3326]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3327]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3328]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3329]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3330]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3331]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3332]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3333]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3334]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3335]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3336]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3337]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3338]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3339]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3340]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3341]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3342]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3343]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3344]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3345]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3346]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3347]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3348]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3349]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3350]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3351]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3352]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3353]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3354]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3355]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3356]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3357]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3358]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3359]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3360]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3361]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3362]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3363]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3364]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3365]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3366]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3367]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3368]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3369]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3370]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3371]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3372]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3373]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3374]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3375]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3376]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3377]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3378]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3379]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3380]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3381]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3382]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3383]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3384]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3385]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3386]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3387]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3388]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3389]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3390]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3391]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3392]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3393]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3394]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3395]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3396]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3397]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3398]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3399]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3400]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3401]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3402]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3403]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3404]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3405]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3406]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3407]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3408]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3409]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3410]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3411]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3412]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3413]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3414]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3415]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3416]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3417]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3418]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3419]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3420]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3421]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3422]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3423]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3424]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3425]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3426]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3427]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3428]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3429]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3430]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3431]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3432]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3433]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3434]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3435]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3436]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3437]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3438]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3439]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3440]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3441]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3442]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3443]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3444]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3445]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3446]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3447]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3448]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3449]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3450]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3451]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3452]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3453]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3454]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3455]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3456]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3457]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3458]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3459]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3460]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3461]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3462]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3463]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3464]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3465]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3466]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3467]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3468]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3469]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3470]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3471]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3472]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3473]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3474]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3475]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3476]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3477]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3478]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3479]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3480]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3481]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3482]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3483]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3484]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3485]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3486]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3487]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3488]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3489]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3490]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3491]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3492]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3493]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3494]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3495]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3496]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3497]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3498]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3499]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3500]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3501]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3502]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3503]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3504]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3505]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3506]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3507]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3508]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3509]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3510]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3511]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3512]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3513]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3514]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3515]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3516]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3517]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3518]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3519]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3520]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3521]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3522]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3523]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3524]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3525]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3526]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3527]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3528]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3529]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3530]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3531]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3532]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3533]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3534]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3535]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3536]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3537]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3538]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3539]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3540]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3541]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3542]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3543]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3544]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3545]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[3546]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4706]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4707]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4708]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4709]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4710]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4711]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4712]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4713]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4714]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4715]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4716]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4717]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4718]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4719]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4720]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4721]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4722]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4723]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4724]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4725]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4726]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4727]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4728]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4729]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4730]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4731]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4732]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4733]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4734]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4735]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4736]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4737]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4738]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4739]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4740]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4741]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4742]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4743]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4744]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4745]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4746]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4747]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4748]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4749]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4750]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4751]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4752]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4753]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4754]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4755]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4756]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4757]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4758]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4759]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4760]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4761]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4762]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4763]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4764]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4765]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4766]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4767]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4768]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4769]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4770]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4771]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4772]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4773]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4774]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4775]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4776]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4777]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4778]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4779]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4780]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4781]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4782]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4783]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4784]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4785]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4786]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4787]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4788]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4789]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4790]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4791]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4792]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4793]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4794]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4795]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4796]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4797]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4798]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4799]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4800]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4801]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4802]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4803]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4804]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4805]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4806]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4807]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4808]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4809]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4810]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4811]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4812]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4813]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4814]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4815]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4816]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4817]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4818]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4819]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4820]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4821]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4822]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4823]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4824]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4825]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4826]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4827]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4828]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4829]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4830]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4831]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4832]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4833]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4834]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4835]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4836]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4837]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4838]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4839]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4840]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4841]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4842]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4843]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4844]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4845]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4846]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4847]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4848]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4849]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4850]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4851]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4852]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4853]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4854]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4855]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4856]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4857]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4858]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4859]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4860]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4861]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4862]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4863]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4864]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4865]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4866]" " -type \"float3\" 0 -1.1920929000000001e-07 5.9604644999999993e-08"
+		
+		2 "|PaintBucket:PaintBucket|PaintBucket:PaintBucketShape" "pnts[4953]" " -type \"float3\" 0 0 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode animCurveUU -n "COG_Ctrl_Grp_parentConstraint1_Transform_CtrlW0";
+	rename -uid "E5B55D11-417D-2FF8-16A0-D3AF851B4F25";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 1 1 0 2 0 3 0 4 0;
+createNode animCurveUU -n "COG_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1";
+	rename -uid "3E6625C7-4D98-DF9E-FF36-5C8196D114FF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 1 1 2 0 3 0 4 0;
+createNode animCurveUU -n "COG_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2";
+	rename -uid "7DB4AFD4-4A81-3116-FB79-CA89DEF14F2B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 1 3 0 4 0;
+createNode animCurveUU -n "COG_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3";
+	rename -uid "E5244AC2-47FC-87F2-8BB6-A39EDEB8B5F8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 1 4 0;
+createNode animCurveUU -n "COG_Ctrl_Grp_parentConstraint1_Prop_CtrlW4";
+	rename -uid "61C1571B-448F-5260-F972-A184028733D0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 1;
+createNode animCurveUU -n "Cog_Ctrl_Grp_parentConstraint1_Transform_CtrlW0";
+	rename -uid "5D44C6E8-4368-5075-139C-84B67579D46B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 1 1 0 2 0 3 0 4 0;
+createNode animCurveUU -n "Cog_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1";
+	rename -uid "CB360CAB-4274-B34A-1053-009AB5525E03";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 1 1 2 0 3 0 4 0;
+createNode animCurveUU -n "Cog_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2";
+	rename -uid "489517E8-4AED-A3C2-C232-F99AD8ADBE2D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 1 3 0 4 0;
+createNode animCurveUU -n "Cog_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3";
+	rename -uid "9D8491CC-4AEF-1A7F-E7C7-828709949ECB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 1 4 0;
+createNode animCurveUU -n "Cog_Ctrl_Grp_parentConstraint1_Prop_CtrlW4";
+	rename -uid "8CA84BC5-47CB-C0B6-B703-5CABD6B401A7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 1;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "BFA3A3D9-47B9-84EE-E773-9A8BE39223DF";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 90;
 	setAttr ".unw" 90;
@@ -28011,26 +29905,26 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 198 ".st";
+	setAttr -s 202 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 46 ".s";
+	setAttr -s 47 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 321 ".u";
+	setAttr -s 325 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 8 ".r";
+	setAttr -s 11 ".r";
 select -ne :lightList1;
 	setAttr -s 18 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 376 ".tx";
+	setAttr -s 382 ".tx";
 select -ne :standardSurface1;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 56 ".dsm";
+	setAttr -s 58 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 30 ".gn";
+	setAttr -s 33 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :initialMaterialInfo;
@@ -28060,7 +29954,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 5 ".sol";
+	setAttr -s 7 ".sol";
 connectAttr "Transform_Ctrl_ArmIKFK.o" "ApolloRN.phl[1]";
 connectAttr "Transform_Ctrl_MasterScale1.o" "ApolloRN.phl[2]";
 connectAttr "Transform_Ctrl_translateX1.o" "ApolloRN.phl[3]";
@@ -28266,29 +30160,29 @@ connectAttr "Piston_01_Ctrl_translateX.o" "ApolloRN.phl[202]";
 connectAttr "Piston_02_Ctrl_translateX.o" "ApolloRN.phl[203]";
 connectAttr "Piston_03_Ctrl_translateX.o" "ApolloRN.phl[204]";
 connectAttr "Prop_Ctrl_Follow.o" "ApolloRN.phl[205]";
-connectAttr "ApolloRN.phl[206]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tt";
-connectAttr "ApolloRN.phl[207]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tt";
+connectAttr "ApolloRN.phl[206]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tt";
+connectAttr "ApolloRN.phl[207]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tt";
 connectAttr "Prop_Ctrl_translateX.o" "ApolloRN.phl[208]";
 connectAttr "Prop_Ctrl_translateY.o" "ApolloRN.phl[209]";
 connectAttr "Prop_Ctrl_translateZ.o" "ApolloRN.phl[210]";
-connectAttr "ApolloRN.phl[211]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trp";
-connectAttr "ApolloRN.phl[212]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trp";
-connectAttr "ApolloRN.phl[213]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trt";
-connectAttr "ApolloRN.phl[214]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trt";
-connectAttr "ApolloRN.phl[215]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tr";
-connectAttr "ApolloRN.phl[216]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tr";
+connectAttr "ApolloRN.phl[211]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trp";
+connectAttr "ApolloRN.phl[212]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trp";
+connectAttr "ApolloRN.phl[213]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trt";
+connectAttr "ApolloRN.phl[214]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trt";
+connectAttr "ApolloRN.phl[215]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tr";
+connectAttr "ApolloRN.phl[216]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tr";
 connectAttr "Prop_Ctrl_rotateX.o" "ApolloRN.phl[217]";
 connectAttr "Prop_Ctrl_rotateY.o" "ApolloRN.phl[218]";
 connectAttr "Prop_Ctrl_rotateZ.o" "ApolloRN.phl[219]";
-connectAttr "ApolloRN.phl[220]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tro";
-connectAttr "ApolloRN.phl[221]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tro";
-connectAttr "ApolloRN.phl[222]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].ts";
-connectAttr "ApolloRN.phl[223]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].ts";
+connectAttr "ApolloRN.phl[220]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tro";
+connectAttr "ApolloRN.phl[221]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tro";
+connectAttr "ApolloRN.phl[222]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].ts";
+connectAttr "ApolloRN.phl[223]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].ts";
 connectAttr "Prop_Ctrl_scaleX.o" "ApolloRN.phl[224]";
 connectAttr "Prop_Ctrl_scaleY.o" "ApolloRN.phl[225]";
 connectAttr "Prop_Ctrl_scaleZ.o" "ApolloRN.phl[226]";
-connectAttr "ApolloRN.phl[227]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tpm";
-connectAttr "ApolloRN.phl[228]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tpm";
+connectAttr "ApolloRN.phl[227]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tpm";
+connectAttr "ApolloRN.phl[228]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tpm";
 connectAttr "ApolloRN.phl[229]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
 connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[230]";
 connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[231]";
@@ -29190,63 +31084,63 @@ connectAttr "L_Clav_Ctrl_scaleX.o" "Dionysus_Asset_RigRN.phl[643]";
 connectAttr "L_Clav_Ctrl_scaleY.o" "Dionysus_Asset_RigRN.phl[644]";
 connectAttr "L_Clav_Ctrl_scaleZ.o" "Dionysus_Asset_RigRN.phl[645]";
 connectAttr "L_Clav_Ctrl_visibility.o" "Dionysus_Asset_RigRN.phl[646]";
-connectAttr "Dionysus_Asset_RigRN.phl[647]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[647]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[648]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[648]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[649]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[649]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[650]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[650]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[651]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[651]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[652]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[652]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[653]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[653]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tr"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[654]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[654]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tr"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[655]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[655]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tro"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[656]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[656]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tro"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[657]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[657]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].ts"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[658]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[658]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].ts"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[659]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[659]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tpm"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[660]" "Gun_Ctrl_Grp_parentConstraint2.tg[2].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[660]" "Gun_Ctrl_Grp_parentConstraint1.tg[2].tpm"
 		;
 connectAttr "Dionysus_Asset_RigRN.phl[661]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[662]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[662]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[663]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[663]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[664]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[664]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[665]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[665]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[666]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[666]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[667]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[667]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[668]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[668]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tr"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[669]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[669]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tr"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[670]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[670]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tro"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[671]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[671]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tro"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[672]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[672]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].ts"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[673]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[673]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].ts"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[674]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[674]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tpm"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[675]" "Gun_Ctrl_Grp_parentConstraint2.tg[1].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[675]" "Gun_Ctrl_Grp_parentConstraint1.tg[3].tpm"
 		;
 connectAttr "Dionysus_Asset_RigRN.phl[676]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
@@ -29314,9 +31208,9 @@ connectAttr "Gun_Ctrl_rotateX1.o" "PaintGunRN.phl[71]";
 connectAttr "Gun_Ctrl_rotateY1.o" "PaintGunRN.phl[72]";
 connectAttr "Gun_Ctrl_rotateZ1.o" "PaintGunRN.phl[73]";
 connectAttr "PaintGunRN.phl[74]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
-connectAttr "PaintGunRN.phl[75]" "Gun_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW0.i"
+connectAttr "PaintGunRN.phl[75]" "Gun_Ctrl_Grp_parentConstraint1_Prop_CtrlW1.i";
+connectAttr "PaintGunRN.phl[76]" "Gun_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW0.i"
 		;
-connectAttr "PaintGunRN.phl[76]" "Gun_Ctrl_Grp_parentConstraint1_Prop_CtrlW1.i";
 connectAttr "PaintGunRN.phl[77]" "Gun_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW2.i"
 		;
 connectAttr "PaintGunRN.phl[78]" "Gun_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW3.i"
@@ -29367,9 +31261,9 @@ connectAttr "Gun_Ctrl_translateZ.o" "PaintGunRN1.phl[113]";
 connectAttr "Gun_Ctrl_rotateX.o" "PaintGunRN1.phl[114]";
 connectAttr "Gun_Ctrl_rotateY.o" "PaintGunRN1.phl[115]";
 connectAttr "Gun_Ctrl_rotateZ.o" "PaintGunRN1.phl[116]";
-connectAttr "PaintGunRN1.phl[117]" "Gun_Ctrl_Grp_parentConstraint2_R_Hand_Prop_CtrlW1.i"
+connectAttr "PaintGunRN1.phl[117]" "Gun_Ctrl_Grp_parentConstraint2_Prop_CtrlW0.i"
 		;
-connectAttr "PaintGunRN1.phl[118]" "Gun_Ctrl_Grp_parentConstraint2_Prop_CtrlW0.i"
+connectAttr "PaintGunRN1.phl[118]" "Gun_Ctrl_Grp_parentConstraint2_R_Hand_Prop_CtrlW1.i"
 		;
 connectAttr "PaintGunRN1.phl[119]" "Gun_Ctrl_Grp_parentConstraint2_L_Hand_Prop_CtrlW2.i"
 		;
@@ -29386,9 +31280,9 @@ connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateZ.o" "PaintGunRN1.phl[128]";
 connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleX.o" "PaintGunRN1.phl[129]";
 connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleY.o" "PaintGunRN1.phl[130]";
 connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleZ.o" "PaintGunRN1.phl[131]";
-connectAttr "PaintGunRN1.phl[132]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.i"
+connectAttr "PaintGunRN1.phl[132]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Gun_CtrlW0.i"
 		;
-connectAttr "PaintGunRN1.phl[133]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Gun_CtrlW0.i"
+connectAttr "PaintGunRN1.phl[133]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.i"
 		;
 connectAttr "PaintGunRN1.phl[134]" "Tube_Driver_Jnt_01_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.i"
 		;
@@ -29456,6 +31350,108 @@ connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateZ.o" "PaintGunRN1.phl[192]";
 connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleX.o" "PaintGunRN1.phl[193]";
 connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleY.o" "PaintGunRN1.phl[194]";
 connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleZ.o" "PaintGunRN1.phl[195]";
+connectAttr "RocketRN.phl[1]" "COG_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.i"
+		;
+connectAttr "RocketRN.phl[2]" "COG_Ctrl_Grp_parentConstraint1_Transform_CtrlW0.i"
+		;
+connectAttr "RocketRN.phl[3]" "COG_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.i"
+		;
+connectAttr "RocketRN.phl[4]" "COG_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.i"
+		;
+connectAttr "RocketRN.phl[5]" "COG_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.i";
+connectAttr "RocketRN.phl[6]" "RocketRN.phl[7]";
+connectAttr "Dionysus_Asset_RigRN.phl[728]" "RocketRN.phl[8]";
+connectAttr "Dionysus_Asset_RigRN.phl[729]" "RocketRN.phl[9]";
+connectAttr "Dionysus_Asset_RigRN.phl[730]" "RocketRN.phl[10]";
+connectAttr "Dionysus_Asset_RigRN.phl[731]" "RocketRN.phl[11]";
+connectAttr "Dionysus_Asset_RigRN.phl[732]" "RocketRN.phl[12]";
+connectAttr "Dionysus_Asset_RigRN.phl[733]" "RocketRN.phl[13]";
+connectAttr "Dionysus_Asset_RigRN.phl[734]" "RocketRN.phl[14]";
+connectAttr "RocketRN.phl[15]" "RocketRN.phl[16]";
+connectAttr "Dionysus_Asset_RigRN.phl[735]" "RocketRN.phl[17]";
+connectAttr "Dionysus_Asset_RigRN.phl[736]" "RocketRN.phl[18]";
+connectAttr "Dionysus_Asset_RigRN.phl[737]" "RocketRN.phl[19]";
+connectAttr "Dionysus_Asset_RigRN.phl[738]" "RocketRN.phl[20]";
+connectAttr "Dionysus_Asset_RigRN.phl[739]" "RocketRN.phl[21]";
+connectAttr "Dionysus_Asset_RigRN.phl[740]" "RocketRN.phl[22]";
+connectAttr "Dionysus_Asset_RigRN.phl[741]" "RocketRN.phl[23]";
+connectAttr "RocketRN.phl[24]" "RocketRN.phl[25]";
+connectAttr "Dionysus_Asset_RigRN.phl[742]" "RocketRN.phl[26]";
+connectAttr "Dionysus_Asset_RigRN.phl[743]" "RocketRN.phl[27]";
+connectAttr "Dionysus_Asset_RigRN.phl[744]" "RocketRN.phl[28]";
+connectAttr "Dionysus_Asset_RigRN.phl[745]" "RocketRN.phl[29]";
+connectAttr "Dionysus_Asset_RigRN.phl[746]" "RocketRN.phl[30]";
+connectAttr "Dionysus_Asset_RigRN.phl[747]" "RocketRN.phl[31]";
+connectAttr "Dionysus_Asset_RigRN.phl[748]" "RocketRN.phl[32]";
+connectAttr "RocketRN.phl[33]" "RocketRN.phl[34]";
+connectAttr "ApolloRN.phl[274]" "RocketRN.phl[35]";
+connectAttr "ApolloRN.phl[275]" "RocketRN.phl[36]";
+connectAttr "ApolloRN.phl[276]" "RocketRN.phl[37]";
+connectAttr "ApolloRN.phl[277]" "RocketRN.phl[38]";
+connectAttr "ApolloRN.phl[278]" "RocketRN.phl[39]";
+connectAttr "ApolloRN.phl[279]" "RocketRN.phl[40]";
+connectAttr "ApolloRN.phl[280]" "RocketRN.phl[41]";
+connectAttr "COG_Ctrl_Grp_parentConstraint1_Transform_CtrlW0.o" "RocketRN.phl[42]"
+		;
+connectAttr "COG_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.o" "RocketRN.phl[43]"
+		;
+connectAttr "COG_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.o" "RocketRN.phl[44]"
+		;
+connectAttr "COG_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.o" "RocketRN.phl[45]"
+		;
+connectAttr "COG_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.o" "RocketRN.phl[46]";
+connectAttr "PaintBrushRN.phl[1]" "Cog_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.i"
+		;
+connectAttr "PaintBrushRN.phl[2]" "Cog_Ctrl_Grp_parentConstraint1_Transform_CtrlW0.i"
+		;
+connectAttr "PaintBrushRN.phl[3]" "Cog_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.i"
+		;
+connectAttr "PaintBrushRN.phl[4]" "Cog_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.i"
+		;
+connectAttr "PaintBrushRN.phl[5]" "Cog_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.i"
+		;
+connectAttr "PaintBrushRN.phl[6]" "PaintBrushRN.phl[7]";
+connectAttr "Dionysus_Asset_RigRN.phl[749]" "PaintBrushRN.phl[8]";
+connectAttr "Dionysus_Asset_RigRN.phl[750]" "PaintBrushRN.phl[9]";
+connectAttr "Dionysus_Asset_RigRN.phl[751]" "PaintBrushRN.phl[10]";
+connectAttr "Dionysus_Asset_RigRN.phl[752]" "PaintBrushRN.phl[11]";
+connectAttr "Dionysus_Asset_RigRN.phl[753]" "PaintBrushRN.phl[12]";
+connectAttr "Dionysus_Asset_RigRN.phl[754]" "PaintBrushRN.phl[13]";
+connectAttr "Dionysus_Asset_RigRN.phl[755]" "PaintBrushRN.phl[14]";
+connectAttr "PaintBrushRN.phl[15]" "PaintBrushRN.phl[16]";
+connectAttr "Dionysus_Asset_RigRN.phl[756]" "PaintBrushRN.phl[17]";
+connectAttr "Dionysus_Asset_RigRN.phl[757]" "PaintBrushRN.phl[18]";
+connectAttr "Dionysus_Asset_RigRN.phl[758]" "PaintBrushRN.phl[19]";
+connectAttr "Dionysus_Asset_RigRN.phl[759]" "PaintBrushRN.phl[20]";
+connectAttr "Dionysus_Asset_RigRN.phl[760]" "PaintBrushRN.phl[21]";
+connectAttr "Dionysus_Asset_RigRN.phl[761]" "PaintBrushRN.phl[22]";
+connectAttr "Dionysus_Asset_RigRN.phl[762]" "PaintBrushRN.phl[23]";
+connectAttr "PaintBrushRN.phl[24]" "PaintBrushRN.phl[25]";
+connectAttr "Dionysus_Asset_RigRN.phl[763]" "PaintBrushRN.phl[26]";
+connectAttr "Dionysus_Asset_RigRN.phl[764]" "PaintBrushRN.phl[27]";
+connectAttr "Dionysus_Asset_RigRN.phl[765]" "PaintBrushRN.phl[28]";
+connectAttr "Dionysus_Asset_RigRN.phl[766]" "PaintBrushRN.phl[29]";
+connectAttr "Dionysus_Asset_RigRN.phl[767]" "PaintBrushRN.phl[30]";
+connectAttr "Dionysus_Asset_RigRN.phl[768]" "PaintBrushRN.phl[31]";
+connectAttr "Dionysus_Asset_RigRN.phl[769]" "PaintBrushRN.phl[32]";
+connectAttr "PaintBrushRN.phl[33]" "PaintBrushRN.phl[34]";
+connectAttr "ApolloRN.phl[281]" "PaintBrushRN.phl[35]";
+connectAttr "ApolloRN.phl[282]" "PaintBrushRN.phl[36]";
+connectAttr "ApolloRN.phl[283]" "PaintBrushRN.phl[37]";
+connectAttr "ApolloRN.phl[284]" "PaintBrushRN.phl[38]";
+connectAttr "ApolloRN.phl[285]" "PaintBrushRN.phl[39]";
+connectAttr "ApolloRN.phl[286]" "PaintBrushRN.phl[40]";
+connectAttr "ApolloRN.phl[287]" "PaintBrushRN.phl[41]";
+connectAttr "Cog_Ctrl_Grp_parentConstraint1_Transform_CtrlW0.o" "PaintBrushRN.phl[42]"
+		;
+connectAttr "Cog_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.o" "PaintBrushRN.phl[43]"
+		;
+connectAttr "Cog_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.o" "PaintBrushRN.phl[44]"
+		;
+connectAttr "Cog_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.o" "PaintBrushRN.phl[45]"
+		;
+connectAttr "Cog_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.o" "PaintBrushRN.phl[46]"
+		;
 connectAttr "Apollo_Closeup_Cam_translateX.o" "Apollo_Closeup_Cam.tx";
 connectAttr "Apollo_Closeup_Cam_translateY.o" "Apollo_Closeup_Cam.ty";
 connectAttr "Apollo_Closeup_Cam_translateZ.o" "Apollo_Closeup_Cam.tz";
@@ -29485,7 +31481,6 @@ connectAttr "Dio_Standoff_Cam_translateZ.o" "Dio_Standoff_Cam.tz";
 connectAttr "Dio_Standoff_Cam_scaleX.o" "Dio_Standoff_Cam.sx";
 connectAttr "Dio_Standoff_Cam_scaleY.o" "Dio_Standoff_Cam.sy";
 connectAttr "Dio_Standoff_Cam_scaleZ.o" "Dio_Standoff_Cam.sz";
-connectAttr "polyExtrudeFace2.out" "pCylinderShape1.i";
 connectAttr "pCube1_translateX.o" "pCube1.tx";
 connectAttr "pCube1_translateY.o" "pCube1.ty";
 connectAttr "pCube1_translateZ.o" "pCube1.tz";
@@ -29608,11 +31603,6 @@ connectAttr "Gun_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW3.msg" "MayaNodeEdi
 		;
 connectAttr "Gun_Ctrl_Grp_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "polyCylinder1.out" "polyExtrudeFace1.ip";
-connectAttr "pCylinderShape1.wm" "polyExtrudeFace1.mp";
-connectAttr "polyTweak1.out" "polyExtrudeFace2.ip";
-connectAttr "pCylinderShape1.wm" "polyExtrudeFace2.mp";
-connectAttr "polyExtrudeFace1.out" "polyTweak1.ip";
 connectAttr "Tube_Driver_Jnt_01_Ctrl_visibility1.o" "PaintGunRN.phl[35]";
 connectAttr "Tube_Driver_Jnt_03_Ctrl_visibility1.o" "PaintGunRN.phl[45]";
 connectAttr "Tube_Driver_Jnt_04_Ctrl_visibility1.o" "PaintGunRN.phl[55]";
@@ -29621,7 +31611,6 @@ connectAttr "Tube_Driver_Jnt_01_Ctrl_visibility.o" "PaintGunRN1.phl[38]";
 connectAttr "Tube_Driver_Jnt_03_Ctrl_visibility.o" "PaintGunRN1.phl[89]";
 connectAttr "Tube_Driver_Jnt_04_Ctrl_visibility.o" "PaintGunRN1.phl[99]";
 connectAttr "PaintGunRN1fosterParent1.msg" "PaintGunRN1.fp";
-connectAttr "sharedReferenceNode.sr" "RocketRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
@@ -29630,7 +31619,6 @@ connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape7.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape8.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape9.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape10.iog" ":initialShadingGroup.dsm" -na;
