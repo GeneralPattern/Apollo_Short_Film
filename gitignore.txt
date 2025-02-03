@@ -11,6 +11,7 @@
 *.tif
 *.spp
 *.png
+*.jpg
 
 Maya_Lab/**/incrementalSave/
 Maya_Lab/**/images/tmp/
