@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: SpeedAnimation_Apollo1_CC.ma
-//Last modified: Tue, Feb 11, 2025 07:19:03 PM
+//Last modified: Thu, Feb 13, 2025 09:21:50 PM
 //Codeset: 1252
 file -rdi 1 -ns "Apollo1" -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
 file -rdi 1 -ns "ConveyorScene" -rfn "ConveyorSceneRN" -op "v=0;" -typ "mayaAscii"
@@ -24,7 +24,8 @@ requires maya "2024";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
-		 -nodeType "aiAmbientOcclusion" -nodeType "aiMatte" -nodeType "aiShadowMatte" "mtoa" "5.3.1.1";
+		 -nodeType "aiAmbientOcclusion" -nodeType "aiMatte" -nodeType "aiShadowMatte" "mtoa" "5.3.4.1";
+requires -nodeType "mayaUsdLayerManager" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.25.0";
 requires -nodeType "simpleSelector" -nodeType "renderSetupLayer" -nodeType "renderSetup"
 		 -nodeType "collection" -nodeType "renderSettingsCollection" -nodeType "aovCollection"
 		 -nodeType "aovChildCollection" -nodeType "absOverride" -nodeType "absUniqueOverride"
@@ -34,22 +35,22 @@ currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
-fileInfo "cutIdentifier" "202304191415-7fa20164c6";
-fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 22621)";
-fileInfo "UUID" "1A0EB2AA-4A0F-447C-E039-3D8DA56C3BBD";
+fileInfo "cutIdentifier" "202310181224-69282f2959";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26120)";
+fileInfo "UUID" "C34DB2A5-4587-DFA5-C0FB-2A8AF20415A2";
 fileInfo "exportedFrom" "C:/Users/10876761/Downloads/Apollo_Short_Film-main (3)/Apollo_Short_Film-main/ApolloProject/scenes/Animation Scenes/SpeedAnimation_Apollo1_CC.ma";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "D0EC6E35-4D87-6031-DB06-1E88D6BA6026";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.533678690796972 4.2942342558164466 5.9327491155769518 ;
-	setAttr ".r" -type "double3" -4.5383527645626396 -630.99999999988881 -2.2780201495755761e-14 ;
+	setAttr ".t" -type "double3" 7.7170398788302244 4.4167430112769166 -2.7150904858764804 ;
+	setAttr ".r" -type "double3" -10.538352764494716 -589.39999999986151 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "6DE84F4C-41A5-0969-41E3-A29D5DA06CCC";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 12.564065677047545;
+	setAttr ".coi" 12.250836994506727;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -131,8 +132,8 @@ createNode camera -n "RenderCamShape" -p "RenderCam";
 	setAttr ".dr" yes;
 createNode transform -n "RobotToyObjects";
 	rename -uid "2B7F00F1-486F-295E-B206-34BEA86048B8";
-	setAttr -s 8 ".rlio";
-	setAttr -s 8 ".rlio";
+	setAttr -s 8 ".rlio[6:7]" 6 yes 0 14 no 0;
+	setAttr -s 7 ".rlio";
 createNode transform -n "GetsPickedUp" -p "RobotToyObjects";
 	rename -uid "51596121-4A20-0A9C-891F-EE87A03298A9";
 createNode transform -n "Leg" -p "GetsPickedUp";
@@ -6466,6 +6467,7 @@ createNode parentConstraint -n "COG_Ctrl_Grp_parentConstraint1" -p "|RobotToyObj
 	setAttr ".tg[0].tor" -type "double3" 173.13778014587106 25.4459015089232 7.8278236752072985 ;
 	setAttr ".tg[3].tot" -type "double3" -5.2735593669694936e-16 0.22108663189869082 
 		0.046374068424331671 ;
+	setAttr ".lr" -type "double3" -13.29683140499916 -3.6888908148069532 -73.264458905055164 ;
 	setAttr ".rst" -type "double3" 0.21010913604945272 -2.0745187508475573 -3.7930991646720891 ;
 	setAttr ".rsrr" -type "double3" 1.987846675914698e-15 -2.5842006786891076e-15 4.9696166897867406e-17 ;
 	setAttr -k on ".w0";
@@ -18575,11 +18577,12 @@ createNode parentConstraint -n "COG_Ctrl_Grp_parentConstraint5" -p "|RobotToyObj
 	setAttr -k on ".w0";
 	setAttr -k on ".w3";
 createNode fosterParent -n "ConveyorSceneRNfosterParent1";
-	rename -uid "E6EDDD9F-414D-BAAD-A196-498214B1B762";
+	rename -uid "A9F21C31-4BBE-52EB-56A9-5AA7F2E15CD2";
 createNode transform -n "ReanimatedFlaps" -p "ConveyorSceneRNfosterParent1";
 	rename -uid "707FE976-4CC2-83C6-271F-87BB12F9D0D9";
-	setAttr -s 6 ".rlio";
-	setAttr -s 6 ".rlio";
+	setAttr -s 6 ".rlio[3:5]" 11 yes 0 9 yes 0 10 
+		yes 0;
+	setAttr -s 5 ".rlio";
 createNode transform -n "Apollo1Flaps:ConveyorScene:ConveyorRig:SideConveyor" -p "ReanimatedFlaps";
 	rename -uid "86C3463E-4882-0044-D992-1AAB5F8B0BBD";
 	setAttr ".rlio[0]" 6 yes 0;
@@ -24363,7 +24366,7 @@ createNode parentConstraint -n "Apollo1Flaps:ConveyorScene:ConveyorRig:Flap_05_J
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 8.8817841970012523e-16 3.5527136788005009e-15 
 		-1.3877787807814457e-17 ;
-	setAttr ".lr" -type "double3" 0 0 180 ;
+	setAttr ".lr" -type "double3" 0 0 180.62670396034051 ;
 	setAttr ".rst" -type "double3" 0.55578875541687012 2.6645352591003757e-15 0 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Apollo1Flaps:ConveyorScene:ConveyorRig:Flap_05_Jnt_03_scaleConstraint1" 
@@ -24913,19 +24916,19 @@ createNode scaleConstraint -n "Apollo1Flaps:ConveyorScene:ConveyorRig:Flap_08_Jn
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "0F1B6B3C-4539-5F54-BDC6-CDA8BB890C58";
+	rename -uid "7DDBE801-4765-CE68-FE66-DD9A95619132";
 	setAttr -s 131 ".lnk";
 	setAttr -s 81 ".ign";
 	setAttr -s 129 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3C2BCD2E-4F51-2694-840C-89BC5A8A72D8";
+	rename -uid "6E7FC4FF-433B-3915-2BE7-459A5C31C3C2";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 1 0 2 ;
 	setAttr -s 3 ".bspr";
 	setAttr -s 3 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "304CA5D9-4735-3F31-4BE5-3AB7DFC41697";
+	rename -uid "C683D75B-4C2E-DCEE-C9C8-AA8D0DCCF4B1";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "97D826FD-4840-4830-EB2D-35BD06B081D6";
+	rename -uid "61E4201C-46A6-8631-AD1E-3EBFD6B2C4B8";
 	setAttr ".cdl" 4;
 	setAttr -s 13 ".dli[1:12]"  2 4 5 14 11 13 1 3 
 		6 7 8 9;
@@ -24934,7 +24937,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "A3E78D38-4E3A-525C-0C03-70A9B26C2A6D";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A547F98D-4F05-3D39-455C-A7BC3727E9A5";
+	rename -uid "4B3B95D6-4374-6E03-CC94-19A448808186";
 	setAttr -s 15 ".rlmi[1:14]"  1 2 3 4 5 6 7 8 
 		9 10 11 12 13 14;
 	setAttr -s 11 ".rlmi";
@@ -24959,8 +24962,8 @@ createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	setAttr ".ai_translator" -type "string" "exr";
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "F13FB0BC-4FFA-20B0-2098-A991EE3808FA";
-	setAttr ".output_mode" 0;
 	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
 createNode ikSpringSolver -s -n "ikSpringSolver";
 	rename -uid "8847349B-40FC-240A-6780-C08398D6317E";
 createNode script -n "uiConfigurationScriptNode";
@@ -24969,45 +24972,45 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 656\n            -height 333\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2535\n            -height 1051\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 656\n            -height 332\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 656\n            -height 332\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1119\n            -height 710\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
-		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
-		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
-		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
-		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
-		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
-		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n"
-		+ "            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n"
-		+ "                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
-		+ "                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n"
-		+ "                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
-		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
-		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
-		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
-		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1119\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2535\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
+		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
+		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n"
+		+ "            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
+		+ "            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n"
+		+ "                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n"
+		+ "                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
+		+ "                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n"
+		+ "                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
+		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
+		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
+		+ "                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
+		+ "                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
+		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n"
+		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
+		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n"
+		+ "                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2535\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2535\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -35484,6 +35487,7 @@ createNode simpleSelector -n "collection5Selector";
 createNode renderSettingsCollection -n "RenderSettingsCollection1";
 	rename -uid "D57B6FB2-4A3A-B034-37E9-84940295F411";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode simpleSelector -n "RenderSettingsCollection1Selector";
 	rename -uid "B6BFAD04-4F0B-379F-F1F4-DB830CC2EB47";
 	setAttr ".ssl" -type "string" "defaultArnoldRenderOptions\ndefaultRenderQuality\ndefaultArnoldDriver\ndefaultArnoldFilter\ndefaultResolution\ndefaultRenderGlobals";
@@ -35573,28 +35577,6 @@ createNode collection -n "Negative2_shapes";
 createNode simpleSelector -n "Negative2_shapesSelector";
 	rename -uid "D364C33E-4DC4-8BCB-DAD4-AB8225D179A7";
 	setAttr ".pat" -type "string" "*";
-	setAttr ".tf" 2;
-createNode collection -n "Negative4";
-	rename -uid "00B1E1B7-44F1-7D44-45C5-768FEDFB920B";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-createNode simpleSelector -n "collection10Selector";
-	rename -uid "766E6D12-4062-5BCA-7EB6-098A2A7192A7";
-	setAttr ".ssl" -type "string" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|RobotToyObjects\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ReanimatedFlaps";
-createNode absOverride -n "aiMatte4";
-	rename -uid "904B66E2-4571-7D4A-5E61-F0884031B73A";
-	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "aiMatte";
-	setAttr ".atv" yes;
-	setAttr ".es" yes;
-createNode collection -n "Negative4_shapes";
-	rename -uid "A91CC276-48E9-9316-08F7-A58FA07C03AE";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "Negative4_shapesSelector";
-	rename -uid "ACAE156C-45C8-D8C1-67E5-C589730FDF64";
-	setAttr ".pat" -type "string" "*";
-	setAttr ".ppa" -type "string" "*";
 	setAttr ".tf" 2;
 createNode collection -n "Negative5";
 	rename -uid "4196EF98-4DE7-06E0-6A94-828F11C2FFA6";
@@ -36334,19 +36316,19 @@ createNode reference -n "ApolloRN";
 		
 		2 "Apollo1:set413" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		2 "Apollo1:file2138" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Characters/Apollo/Treads/Treads_Treads_BaseColor.png\""
+		2 "Apollo1:file2138" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Characters/Apollo/Treads/Treads_Treads_BaseColor.png\""
 		
 		2 "Apollo1:file2138" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Apollo1:file2139" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Characters/Apollo/Treads/Treads_Treads_Height.png\""
+		2 "Apollo1:file2139" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Characters/Apollo/Treads/Treads_Treads_Height.png\""
 		
 		2 "Apollo1:file2139" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Apollo1:file2140" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Characters/Apollo/Treads/Treads_Treads_Metallic.png\""
+		2 "Apollo1:file2140" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Characters/Apollo/Treads/Treads_Treads_Metallic.png\""
 		
 		2 "Apollo1:file2140" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Apollo1:file2141" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Characters/Apollo/Treads/Treads_Treads_Normal.png\""
+		2 "Apollo1:file2141" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Characters/Apollo/Treads/Treads_Treads_Normal.png\""
 		
 		2 "Apollo1:file2141" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Apollo1:file2142" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Characters/Apollo/Treads/Treads_Treads_Roughness.png\""
+		2 "Apollo1:file2142" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Characters/Apollo/Treads/Treads_Treads_Roughness.png\""
 		
 		2 "Apollo1:file2142" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "Apollo1:set414" "aiCustomAOVs" " -s 2"
@@ -36414,9 +36396,18 @@ createNode reference -n "ApolloRN";
 		
 		2 "Apollo1:groupParts102" "inputComponents" " -type \"componentList\" 1 \"f[19360]\""
 		
-		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:R_Eye_BlendShapes|Apollo1:R_Eye_Close|Apollo1:R_Eye_CloseShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 "Apollo1:surfaceShader3SG.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Eye_X_1_Grp|Apollo1:Eye_X_1|Apollo1:Eye_X_1Shape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Ref|Apollo1:L_Eye_Close|Apollo1:L_Eye_CloseShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 "Apollo1:surfaceShader3SG.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Eye_X_2_Grp|Apollo1:Eye_X_2|Apollo1:Eye_X_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Apollo1:groupId766.message" ":defaultLastHiddenSet.groupNodes" "-na"
+		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Face_Glass5|Apollo1:Face_GlassShape1.instObjGroups" 
+		"Apollo1:standardSurface8SG4.dagSetMembers" "-na"
+		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo|Apollo1:MainArmGeo|Apollo1:MainArmGeoShape.instObjGroups.objectGroups[46]" 
+		"Apollo1:standardSurface10SG.dagSetMembers" "-na"
+		3 "Apollo1:groupId775.message" "Apollo1:standardSurface10SG.groupNodes" "-na"
+		
+		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:R_Eye_BlendShapes|Apollo1:R_Eye_Sad|Apollo1:R_Eye_SadShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "Apollo1:groupId766.groupId" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo|Apollo1:MainArmGeo|Apollo1:MainArmGeoShape.instObjGroups.objectGroups[42].objectGroupId" 
 		""
@@ -36428,7 +36419,9 @@ createNode reference -n "ApolloRN";
 		""
 		3 "Apollo1:set418.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo|Apollo1:MainArmGeo|Apollo1:MainArmGeoShape.instObjGroups.objectGroups[45].objectGrpColor" 
 		""
-		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Ref|Apollo1:L_Eye_Open|Apollo1:L_Eye_OpenShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:L_Eye_Close|Apollo1:L_Eye_Close_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Ref|Apollo1:L_Eye_Close|Apollo1:L_Eye_CloseShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Mouth_Grp|Apollo1:Mouth|Apollo1:MouthShape.instObjGroups" 
 		"Apollo1:surfaceShader3SG.dagSetMembers" "-na"
@@ -36450,45 +36443,32 @@ createNode reference -n "ApolloRN";
 		"Apollo1:surfaceShader3SG.dagSetMembers" "-na"
 		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Left_Eye_Determined|Apollo1:Left_Eye_DeterminedShape.instObjGroups" 
 		"Apollo1:surfaceShader3SG.dagSetMembers" "-na"
-		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Face_Glass5|Apollo1:Face_GlassShape1.instObjGroups" 
-		"Apollo1:standardSurface8SG4.dagSetMembers" "-na"
+		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Ref|Apollo1:L_Eye_Sad|Apollo1:L_Eye_SadShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Apollo1:groupId766.groupId" "Apollo1:groupParts100.groupId" ""
 		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Exclamation_Point_Grp|Apollo1:Exclamation_Point|Apollo1:Exclamation_PointShape.instObjGroups.objectGroups[0]" 
 		"Apollo1:polySurface733SG.dagSetMembers" "-na"
 		3 "Apollo1:groupId767.message" "Apollo1:polySurface733SG.groupNodes" "-na"
 		
-		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:R_Eye_BlendShapes|Apollo1:R_Eye_Sad|Apollo1:R_Eye_SadShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:L_Eye_Sad|Apollo1:L_Eye_Sad_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:R_Eye_BlendShapes|Apollo1:R_Eye_Squint|Apollo1:R_Eye_SquintShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
 		3 "Apollo1:polySurface733SG.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Exclamation_Point_Grp|Apollo1:Exclamation_Point|Apollo1:Exclamation_PointShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:L_Eye_Open|Apollo1:L_Eye_Open_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:L_Eye_Close|Apollo1:L_Eye_Close_Shape1.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Ref|Apollo1:L_Eye_Squint|Apollo1:L_Eye_SquintShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "Apollo1:surfaceShader3SG.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Eye_X_1_Grp|Apollo1:Eye_X_1|Apollo1:Eye_X_1Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:R_Eye_BlendShapes|Apollo1:R_Eye_Squint|Apollo1:R_Eye_SquintShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo|Apollo1:MainArmGeo|Apollo1:MainArmGeoShape.instObjGroups.objectGroups[45]" 
 		"Apollo1:set418.dagSetMembers" "-na"
 		3 "Apollo1:groupId773.message" "Apollo1:set418.groupNodes" "-na"
-		3 "Apollo1:groupId766.message" ":defaultLastHiddenSet.groupNodes" "-na"
+		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:L_Eye_Sad|Apollo1:L_Eye_Sad_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:R_Eye_BlendShapes|Apollo1:R_Eye_Close|Apollo1:R_Eye_CloseShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:L_Eye_Open|Apollo1:L_Eye_Open_Shape1.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:R_Eye_BlendShapes|Apollo1:R_Eye_Open|Apollo1:R_Eye_OpenShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "Apollo1:surfaceShader3SG.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Eye_X_2_Grp|Apollo1:Eye_X_2|Apollo1:Eye_X_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Ref|Apollo1:L_Eye_Open|Apollo1:L_Eye_OpenShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:L_Eye_Squint|Apollo1:L_Eye_Squint_Shape1.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo|Apollo1:MainArmGeo|Apollo1:MainArmGeoShape.instObjGroups.objectGroups[46]" 
-		"Apollo1:standardSurface10SG.dagSetMembers" "-na"
-		3 "Apollo1:groupId775.message" "Apollo1:standardSurface10SG.groupNodes" "-na"
-		
-		3 "Apollo1:groupId766.groupId" "Apollo1:groupParts100.groupId" ""
-		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Ref|Apollo1:L_Eye_Sad|Apollo1:L_Eye_SadShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
 		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Ref|Apollo1:L_Eye_Sad|Apollo1:L_Eye_SadShape.instObjGroups.objectGroups[0]" 
 		"Apollo1:surfaceShader1SG4.dagSetMembers" "-na"
 		3 "Apollo1:groupId515.message" "Apollo1:surfaceShader1SG4.groupNodes" "-na"
@@ -36539,6 +36519,8 @@ createNode reference -n "ApolloRN";
 		"Apollo1:surfaceShader1SG4.dagSetMembers" "-na"
 		3 "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Left_Eye_Arrow|Apollo1:Left_Eye_ArrowShape.instObjGroups" 
 		"Apollo1:surfaceShader1SG4.dagSetMembers" "-na"
+		3 "Apollo1:surfaceShader1SG4.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:BlendShapeGeo|Apollo1:L_Eye_BlendShapes|Apollo1:Ref|Apollo1:L_Eye_Squint|Apollo1:L_Eye_SquintShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
 		5 0 "ApolloRN" "Apollo1:set418.memberWireframeColor" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo|Apollo1:MainArmGeo|Apollo1:MainArmGeoShape.instObjGroups.objectGroups[45].objectGrpColor" 
 		"ApolloRN.placeHolderList[1]" "ApolloRN.placeHolderList[2]" "Apollo1:MainArmGeoShape.iog.og[45].gco"
 		
@@ -48955,19 +48937,19 @@ createNode reference -n "ConveyorSceneRN";
 		
 		2 "ConveyorScene:aiStandardSurface1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		2 "ConveyorScene:file54" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Wall/ConveyorSceneBackground_BackWallMat_Emissive.1006.png\""
+		2 "ConveyorScene:file54" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Wall/ConveyorSceneBackground_BackWallMat_Emissive.1006.png\""
 		
 		2 "ConveyorScene:file54" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file55" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Wall/ConveyorSceneBackground_BackWallMat_Normal.1006.png\""
+		2 "ConveyorScene:file55" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Wall/ConveyorSceneBackground_BackWallMat_Normal.1006.png\""
 		
 		2 "ConveyorScene:file55" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file56" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Wall/ConveyorSceneBackground_BackWallMat_BaseColor.1006.png\""
+		2 "ConveyorScene:file56" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Wall/ConveyorSceneBackground_BackWallMat_BaseColor.1006.png\""
 		
 		2 "ConveyorScene:file56" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file58" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Wall/ConveyorSceneBackground_BackWallMat_Roughness.1006.png\""
+		2 "ConveyorScene:file58" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Wall/ConveyorSceneBackground_BackWallMat_Roughness.1006.png\""
 		
 		2 "ConveyorScene:file58" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file59" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Wall/ConveyorSceneBackground_BackWallMat_Metalness.1006.png\""
+		2 "ConveyorScene:file59" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Wall/ConveyorSceneBackground_BackWallMat_Metalness.1006.png\""
 		
 		2 "ConveyorScene:file59" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "ConveyorScene:set10" "aiCustomAOVs" " -s 2"
@@ -48975,16 +48957,16 @@ createNode reference -n "ConveyorSceneRN";
 		
 		2 "ConveyorScene:set10" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		2 "ConveyorScene:file60" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Floor/ConveyorSceneBackground_FloorMat_Metalness.1001.png\""
+		2 "ConveyorScene:file60" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Floor/ConveyorSceneBackground_FloorMat_Metalness.1001.png\""
 		
 		2 "ConveyorScene:file60" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file62" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Floor/ConveyorSceneBackground_FloorMat_Roughness.1001.png\""
+		2 "ConveyorScene:file62" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Floor/ConveyorSceneBackground_FloorMat_Roughness.1001.png\""
 		
 		2 "ConveyorScene:file62" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file63" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Floor/ConveyorSceneBackground_FloorMat_Normal.1001.png\""
+		2 "ConveyorScene:file63" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Floor/ConveyorSceneBackground_FloorMat_Normal.1001.png\""
 		
 		2 "ConveyorScene:file63" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file64" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Floor/ConveyorSceneBackground_FloorMat_BaseColor.1001.png\""
+		2 "ConveyorScene:file64" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Floor/ConveyorSceneBackground_FloorMat_BaseColor.1001.png\""
 		
 		2 "ConveyorScene:file64" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "ConveyorScene:set11" "aiCustomAOVs" " -s 2"
@@ -48992,16 +48974,16 @@ createNode reference -n "ConveyorSceneRN";
 		
 		2 "ConveyorScene:set11" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		2 "ConveyorScene:file65" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Hall/ConveyorSceneBackground_HallMat_BaseColor.1001.png\""
+		2 "ConveyorScene:file65" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Hall/ConveyorSceneBackground_HallMat_BaseColor.1001.png\""
 		
 		2 "ConveyorScene:file65" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file66" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Hall/ConveyorSceneBackground_HallMat_Roughness.1001.png\""
+		2 "ConveyorScene:file66" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Hall/ConveyorSceneBackground_HallMat_Roughness.1001.png\""
 		
 		2 "ConveyorScene:file66" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file67" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Hall/ConveyorSceneBackground_HallMat_Normal.1001.png\""
+		2 "ConveyorScene:file67" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Hall/ConveyorSceneBackground_HallMat_Normal.1001.png\""
 		
 		2 "ConveyorScene:file67" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file68" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Hall/ConveyorSceneBackground_HallMat_Metalness.1001.png\""
+		2 "ConveyorScene:file68" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Hall/ConveyorSceneBackground_HallMat_Metalness.1001.png\""
 		
 		2 "ConveyorScene:file68" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "ConveyorScene:set12" "aiCustomAOVs" " -s 2"
@@ -49009,16 +48991,16 @@ createNode reference -n "ConveyorSceneRN";
 		
 		2 "ConveyorScene:set12" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		2 "ConveyorScene:file70" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Posters/ConveyorSceneBackground_PosterMat_Normal.1001.png\""
+		2 "ConveyorScene:file70" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Posters/ConveyorSceneBackground_PosterMat_Normal.1001.png\""
 		
 		2 "ConveyorScene:file70" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file71" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Posters/ConveyorSceneBackground_PosterMat_BaseColor.1001.png\""
+		2 "ConveyorScene:file71" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Posters/ConveyorSceneBackground_PosterMat_BaseColor.1001.png\""
 		
 		2 "ConveyorScene:file71" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file72" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Posters/ConveyorSceneBackground_PosterMat_Roughness.1001.png\""
+		2 "ConveyorScene:file72" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Posters/ConveyorSceneBackground_PosterMat_Roughness.1001.png\""
 		
 		2 "ConveyorScene:file72" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file74" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Posters/ConveyorSceneBackground_PosterMat_Metalness.1001.png\""
+		2 "ConveyorScene:file74" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Posters/ConveyorSceneBackground_PosterMat_Metalness.1001.png\""
 		
 		2 "ConveyorScene:file74" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "ConveyorScene:set13" "aiCustomAOVs" " -s 2"
@@ -49026,16 +49008,16 @@ createNode reference -n "ConveyorSceneRN";
 		
 		2 "ConveyorScene:set13" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		2 "ConveyorScene:file75" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Table/ConveyorSceneBackground_TableMat_BaseColor.1001.png\""
+		2 "ConveyorScene:file75" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Table/ConveyorSceneBackground_TableMat_BaseColor.1001.png\""
 		
 		2 "ConveyorScene:file75" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file76" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Table/ConveyorSceneBackground_TableMat_Normal.1001.png\""
+		2 "ConveyorScene:file76" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Table/ConveyorSceneBackground_TableMat_Normal.1001.png\""
 		
 		2 "ConveyorScene:file76" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file77" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Table/ConveyorSceneBackground_TableMat_Roughness.1001.png\""
+		2 "ConveyorScene:file77" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Table/ConveyorSceneBackground_TableMat_Roughness.1001.png\""
 		
 		2 "ConveyorScene:file77" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file79" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Table/ConveyorSceneBackground_TableMat_Metalness.1001.png\""
+		2 "ConveyorScene:file79" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Back Table/ConveyorSceneBackground_TableMat_Metalness.1001.png\""
 		
 		2 "ConveyorScene:file79" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "ConveyorScene:set14" "aiCustomAOVs" " -s 2"
@@ -49043,16 +49025,16 @@ createNode reference -n "ConveyorSceneRN";
 		
 		2 "ConveyorScene:set14" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		2 "ConveyorScene:file80" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Teddy Shelf/ConveyorSceneBackground_TeddyShelf_BaseColor.1001.png\""
+		2 "ConveyorScene:file80" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Teddy Shelf/ConveyorSceneBackground_TeddyShelf_BaseColor.1001.png\""
 		
 		2 "ConveyorScene:file80" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file81" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Teddy Shelf/ConveyorSceneBackground_TeddyShelf_Normal.1001.png\""
+		2 "ConveyorScene:file81" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Teddy Shelf/ConveyorSceneBackground_TeddyShelf_Normal.1001.png\""
 		
 		2 "ConveyorScene:file81" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file82" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Teddy Shelf/ConveyorSceneBackground_TeddyShelf_Roughness.1001.png\""
+		2 "ConveyorScene:file82" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Teddy Shelf/ConveyorSceneBackground_TeddyShelf_Roughness.1001.png\""
 		
 		2 "ConveyorScene:file82" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file84" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Teddy Shelf/ConveyorSceneBackground_TeddyShelf_Metalness.1001.png\""
+		2 "ConveyorScene:file84" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Teddy Shelf/ConveyorSceneBackground_TeddyShelf_Metalness.1001.png\""
 		
 		2 "ConveyorScene:file84" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "ConveyorScene:set15" "aiCustomAOVs" " -s 2"
@@ -49060,16 +49042,16 @@ createNode reference -n "ConveyorSceneRN";
 		
 		2 "ConveyorScene:set15" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		2 "ConveyorScene:file85" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Track/ConveyorSceneBackground_TrackAndPlatformMat_Metalness.1001.png\""
+		2 "ConveyorScene:file85" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Track/ConveyorSceneBackground_TrackAndPlatformMat_Metalness.1001.png\""
 		
 		2 "ConveyorScene:file85" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file86" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Track/ConveyorSceneBackground_TrackAndPlatformMat_Roughness.1001.png\""
+		2 "ConveyorScene:file86" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Track/ConveyorSceneBackground_TrackAndPlatformMat_Roughness.1001.png\""
 		
 		2 "ConveyorScene:file86" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file88" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Track/ConveyorSceneBackground_TrackAndPlatformMat_BaseColor.1001.png\""
+		2 "ConveyorScene:file88" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Track/ConveyorSceneBackground_TrackAndPlatformMat_BaseColor.1001.png\""
 		
 		2 "ConveyorScene:file88" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file89" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Track/ConveyorSceneBackground_TrackAndPlatformMat_Normal.1001.png\""
+		2 "ConveyorScene:file89" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Track/ConveyorSceneBackground_TrackAndPlatformMat_Normal.1001.png\""
 		
 		2 "ConveyorScene:file89" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "ConveyorScene:set16" "aiCustomAOVs" " -s 2"
@@ -49077,16 +49059,16 @@ createNode reference -n "ConveyorSceneRN";
 		
 		2 "ConveyorScene:set16" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		2 "ConveyorScene:file90" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Car/ConveyorSceneBackground_TrackCarMat_BaseColor.1001.png\""
+		2 "ConveyorScene:file90" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Car/ConveyorSceneBackground_TrackCarMat_BaseColor.1001.png\""
 		
 		2 "ConveyorScene:file90" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file91" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Car/ConveyorSceneBackground_TrackCarMat_Normal.1001.png\""
+		2 "ConveyorScene:file91" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Car/ConveyorSceneBackground_TrackCarMat_Normal.1001.png\""
 		
 		2 "ConveyorScene:file91" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file92" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Car/ConveyorSceneBackground_TrackCarMat_Roughness.1001.png\""
+		2 "ConveyorScene:file92" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Car/ConveyorSceneBackground_TrackCarMat_Roughness.1001.png\""
 		
 		2 "ConveyorScene:file92" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file94" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Car/ConveyorSceneBackground_TrackCarMat_Metalness.1001.png\""
+		2 "ConveyorScene:file94" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Car/ConveyorSceneBackground_TrackCarMat_Metalness.1001.png\""
 		
 		2 "ConveyorScene:file94" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "ConveyorScene:set17" "aiCustomAOVs" " -s 2"
@@ -49094,16 +49076,16 @@ createNode reference -n "ConveyorSceneRN";
 		
 		2 "ConveyorScene:set17" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		2 "ConveyorScene:file95" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Trash/ConveyorSceneBackground_TrashMat_BaseColor.1001.png\""
+		2 "ConveyorScene:file95" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Trash/ConveyorSceneBackground_TrashMat_BaseColor.1001.png\""
 		
 		2 "ConveyorScene:file95" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file96" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Trash/ConveyorSceneBackground_TrashMat_Normal.1001.png\""
+		2 "ConveyorScene:file96" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Trash/ConveyorSceneBackground_TrashMat_Normal.1001.png\""
 		
 		2 "ConveyorScene:file96" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file97" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Trash/ConveyorSceneBackground_TrashMat_Roughness.1001.png\""
+		2 "ConveyorScene:file97" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Trash/ConveyorSceneBackground_TrashMat_Roughness.1001.png\""
 		
 		2 "ConveyorScene:file97" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "ConveyorScene:file99" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Trash/ConveyorSceneBackground_TrashMat_Metalness.1001.png\""
+		2 "ConveyorScene:file99" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Trash/ConveyorSceneBackground_TrashMat_Metalness.1001.png\""
 		
 		2 "ConveyorScene:file99" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "ConveyorScene:set18" "aiCustomAOVs" " -s 2"
@@ -49616,94 +49598,94 @@ createNode reference -n "Analog_SignRN";
 		"rotateY" " -90"
 		2 "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Ctrl|Analog_Sign:Transform_Ctrl_Grp|Analog_Sign:Transform_Ctrl" 
 		"MasterScale" " -k 1 0.05"
-		2 "Analog_Sign:file12" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Roughness.png\""
+		2 "Analog_Sign:file12" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Roughness.png\""
 		
 		2 "Analog_Sign:file12" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file13" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Normal.png\""
+		2 "Analog_Sign:file13" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Normal.png\""
 		
 		2 "Analog_Sign:file13" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file14" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Metallic.png\""
+		2 "Analog_Sign:file14" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Metallic.png\""
 		
 		2 "Analog_Sign:file14" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file15" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Height.png\""
+		2 "Analog_Sign:file15" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Height.png\""
 		
 		2 "Analog_Sign:file15" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file16" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_BaseColor.png\""
+		2 "Analog_Sign:file16" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_BaseColor.png\""
 		
 		2 "Analog_Sign:file16" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file17" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_BaseColor.png\""
+		2 "Analog_Sign:file17" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_BaseColor.png\""
 		
 		2 "Analog_Sign:file17" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file18" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Height.png\""
+		2 "Analog_Sign:file18" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Height.png\""
 		
 		2 "Analog_Sign:file18" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file19" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Metallic.png\""
+		2 "Analog_Sign:file19" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Metallic.png\""
 		
 		2 "Analog_Sign:file19" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file20" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Normal.png\""
+		2 "Analog_Sign:file20" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Normal.png\""
 		
 		2 "Analog_Sign:file20" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file21" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Roughness.png\""
+		2 "Analog_Sign:file21" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Roughness.png\""
 		
 		2 "Analog_Sign:file21" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file22" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_BaseColor.png\""
+		2 "Analog_Sign:file22" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_BaseColor.png\""
 		
 		2 "Analog_Sign:file22" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file23" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Height.png\""
+		2 "Analog_Sign:file23" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Height.png\""
 		
 		2 "Analog_Sign:file23" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file24" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Metallic.png\""
+		2 "Analog_Sign:file24" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Metallic.png\""
 		
 		2 "Analog_Sign:file24" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file25" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Normal.png\""
+		2 "Analog_Sign:file25" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Normal.png\""
 		
 		2 "Analog_Sign:file25" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file26" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Roughness.png\""
+		2 "Analog_Sign:file26" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Brace_Roughness.png\""
 		
 		2 "Analog_Sign:file26" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file27" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Front Sign_BaseColor.png\""
+		2 "Analog_Sign:file27" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Front Sign_BaseColor.png\""
 		
 		2 "Analog_Sign:file27" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file28" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Front Sign_Height.png\""
+		2 "Analog_Sign:file28" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Front Sign_Height.png\""
 		
 		2 "Analog_Sign:file28" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file29" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Front Sign_Metallic.png\""
+		2 "Analog_Sign:file29" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Front Sign_Metallic.png\""
 		
 		2 "Analog_Sign:file29" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file30" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Front Sign_Normal.png\""
+		2 "Analog_Sign:file30" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Front Sign_Normal.png\""
 		
 		2 "Analog_Sign:file30" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file31" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Front Sign_Roughness.png\""
+		2 "Analog_Sign:file31" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Front Sign_Roughness.png\""
 		
 		2 "Analog_Sign:file31" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file32" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Signs_BaseColor.png\""
+		2 "Analog_Sign:file32" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Signs_BaseColor.png\""
 		
 		2 "Analog_Sign:file32" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file33" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Signs_Height.png\""
+		2 "Analog_Sign:file33" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Signs_Height.png\""
 		
 		2 "Analog_Sign:file33" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file34" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Signs_Metallic.png\""
+		2 "Analog_Sign:file34" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Signs_Metallic.png\""
 		
 		2 "Analog_Sign:file34" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file35" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Signs_Normal.png\""
+		2 "Analog_Sign:file35" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Signs_Normal.png\""
 		
 		2 "Analog_Sign:file35" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file36" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Signs_Roughness.png\""
+		2 "Analog_Sign:file36" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Signs_Roughness.png\""
 		
 		2 "Analog_Sign:file36" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file37" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Top sign_BaseColor.png\""
+		2 "Analog_Sign:file37" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Top sign_BaseColor.png\""
 		
 		2 "Analog_Sign:file37" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file38" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Top sign_Height.png\""
+		2 "Analog_Sign:file38" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Top sign_Height.png\""
 		
 		2 "Analog_Sign:file38" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file39" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Top sign_Metallic.png\""
+		2 "Analog_Sign:file39" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Top sign_Metallic.png\""
 		
 		2 "Analog_Sign:file39" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file40" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Top sign_Normal.png\""
+		2 "Analog_Sign:file40" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Top sign_Normal.png\""
 		
 		2 "Analog_Sign:file40" "colorSpace" " -type \"string\" \"sRGB\""
-		2 "Analog_Sign:file41" "fileTextureName" " -type \"string\" \"C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Top sign_Roughness.png\""
+		2 "Analog_Sign:file41" "fileTextureName" " -type \"string\" \"D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Sign/Flippy SIgn_Top sign_Roughness.png\""
 		
 		2 "Analog_Sign:file41" "colorSpace" " -type \"string\" \"sRGB\""
 		5 0 "Analog_SignRN" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[31]" 
@@ -49959,7 +49941,7 @@ createNode multiplyDivide -n "Apollo1Flaps:ConveyorScene:multiplyDivide19";
 	rename -uid "F9BBA6E1-4308-2090-D80D-F9A9820CBC8A";
 createNode file -n "Apollo1Flaps:ConveyorScene:file100";
 	rename -uid "DED39A85-467F-E832-DE97-969B7D1FDD35";
-	setAttr ".ftn" -type "string" "C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Conveyor/Conveyor_Base_color.png";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Conveyor/Conveyor_Base_color.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "Apollo1Flaps:ConveyorScene:place2dTexture22";
 	rename -uid "7D695349-4D90-AD67-27F4-6F8F30B4E0E3";
@@ -49971,17 +49953,17 @@ createNode bump2d -n "Apollo1Flaps:ConveyorScene:bump2d19";
 createNode file -n "Apollo1Flaps:ConveyorScene:file101";
 	rename -uid "021981D5-41A1-3712-6BA8-81A14F18DC60";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Conveyor/Conveyor_Normal.png";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Conveyor/Conveyor_Normal.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Apollo1Flaps:ConveyorScene:file102";
 	rename -uid "18005021-4A5A-1EE8-A7C1-A7A1D7E02E59";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Conveyor/Conveyor_Roughness.png";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Conveyor/Conveyor_Roughness.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Apollo1Flaps:ConveyorScene:file104";
 	rename -uid "241E24D6-441F-EDB7-E5CA-DBA07D50E16B";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/10695841/Documents/CoryGit/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Conveyor/Conveyor_Metallic.png";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Conveyor Scene/Conveyor/Conveyor_Metallic.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode skinCluster -n "Apollo1Flaps:ConveyorScene:ConveyorRig:skinCluster2";
 	rename -uid "2CD46FA4-4260-2A57-93DE-CCB76524446D";
@@ -51699,7 +51681,6 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 createNode renderSetupLayer -n "FOG";
 	rename -uid "9C616F9C-4EE4-B519-AB8B-2F980736A91D";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
 createNode renderLayer -n "rs_FOG";
 	rename -uid "9706C8BC-4C23-07F4-2F92-E0AB3014B185";
 	setAttr ".rndr" no;
@@ -51763,9 +51744,12 @@ createNode absUniqueOverride -n "startFrame";
 	setAttr ".tgName" -type "string" "defaultRenderGlobals";
 	setAttr ".atv" 178;
 	setAttr ".es" yes;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "0F2194C7-464B-91D0-2252-09B95F7B0769";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
-	setAttr ".o" 178;
-	setAttr ".unw" 178;
+	setAttr ".o" 210;
+	setAttr ".unw" 210;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -52077,35 +52061,35 @@ connectAttr "Piston_01_Ctrl_translateX1.o" "ApolloRN.phl[239]";
 connectAttr "Piston_02_Ctrl_translateX1.o" "ApolloRN.phl[240]";
 connectAttr "Piston_03_Ctrl_translateX1.o" "ApolloRN.phl[241]";
 connectAttr "Prop_Ctrl_Follow1.o" "ApolloRN.phl[242]";
-connectAttr "ApolloRN.phl[243]" "COG_Ctrl_Grp_parentConstraint1.tg[0].trt";
-connectAttr "ApolloRN.phl[244]" "COG_Ctrl_Grp_parentConstraint2.tg[0].trt";
+connectAttr "ApolloRN.phl[243]" "COG_Ctrl_Grp_parentConstraint2.tg[0].trt";
+connectAttr "ApolloRN.phl[244]" "COG_Ctrl_Grp_parentConstraint1.tg[0].trt";
 connectAttr "ApolloRN.phl[245]" "COG_Ctrl_Grp_parentConstraint5.tg[0].trt";
-connectAttr "ApolloRN.phl[246]" "COG_Ctrl_Grp_parentConstraint1.tg[0].tt";
-connectAttr "ApolloRN.phl[247]" "COG_Ctrl_Grp_parentConstraint2.tg[0].tt";
+connectAttr "ApolloRN.phl[246]" "COG_Ctrl_Grp_parentConstraint2.tg[0].tt";
+connectAttr "ApolloRN.phl[247]" "COG_Ctrl_Grp_parentConstraint1.tg[0].tt";
 connectAttr "ApolloRN.phl[248]" "COG_Ctrl_Grp_parentConstraint5.tg[0].tt";
 connectAttr "Prop_Ctrl_translateX1.o" "ApolloRN.phl[249]";
 connectAttr "Prop_Ctrl_translateY1.o" "ApolloRN.phl[250]";
 connectAttr "Prop_Ctrl_translateZ1.o" "ApolloRN.phl[251]";
-connectAttr "ApolloRN.phl[252]" "COG_Ctrl_Grp_parentConstraint1.tg[0].tr";
-connectAttr "ApolloRN.phl[253]" "COG_Ctrl_Grp_parentConstraint2.tg[0].tr";
+connectAttr "ApolloRN.phl[252]" "COG_Ctrl_Grp_parentConstraint2.tg[0].tr";
+connectAttr "ApolloRN.phl[253]" "COG_Ctrl_Grp_parentConstraint1.tg[0].tr";
 connectAttr "ApolloRN.phl[254]" "COG_Ctrl_Grp_parentConstraint5.tg[0].tr";
 connectAttr "Prop_Ctrl_rotateX1.o" "ApolloRN.phl[255]";
 connectAttr "Prop_Ctrl_rotateY1.o" "ApolloRN.phl[256]";
 connectAttr "Prop_Ctrl_rotateZ1.o" "ApolloRN.phl[257]";
-connectAttr "ApolloRN.phl[258]" "COG_Ctrl_Grp_parentConstraint1.tg[0].ts";
-connectAttr "ApolloRN.phl[259]" "COG_Ctrl_Grp_parentConstraint2.tg[0].ts";
+connectAttr "ApolloRN.phl[258]" "COG_Ctrl_Grp_parentConstraint2.tg[0].ts";
+connectAttr "ApolloRN.phl[259]" "COG_Ctrl_Grp_parentConstraint1.tg[0].ts";
 connectAttr "ApolloRN.phl[260]" "COG_Ctrl_Grp_parentConstraint5.tg[0].ts";
 connectAttr "Prop_Ctrl_scaleX1.o" "ApolloRN.phl[261]";
 connectAttr "Prop_Ctrl_scaleY1.o" "ApolloRN.phl[262]";
 connectAttr "Prop_Ctrl_scaleZ1.o" "ApolloRN.phl[263]";
-connectAttr "ApolloRN.phl[264]" "COG_Ctrl_Grp_parentConstraint1.tg[0].tpm";
-connectAttr "ApolloRN.phl[265]" "COG_Ctrl_Grp_parentConstraint2.tg[0].tpm";
+connectAttr "ApolloRN.phl[264]" "COG_Ctrl_Grp_parentConstraint2.tg[0].tpm";
+connectAttr "ApolloRN.phl[265]" "COG_Ctrl_Grp_parentConstraint1.tg[0].tpm";
 connectAttr "ApolloRN.phl[266]" "COG_Ctrl_Grp_parentConstraint5.tg[0].tpm";
-connectAttr "ApolloRN.phl[267]" "COG_Ctrl_Grp_parentConstraint1.tg[0].trp";
-connectAttr "ApolloRN.phl[268]" "COG_Ctrl_Grp_parentConstraint2.tg[0].trp";
+connectAttr "ApolloRN.phl[267]" "COG_Ctrl_Grp_parentConstraint2.tg[0].trp";
+connectAttr "ApolloRN.phl[268]" "COG_Ctrl_Grp_parentConstraint1.tg[0].trp";
 connectAttr "ApolloRN.phl[269]" "COG_Ctrl_Grp_parentConstraint5.tg[0].trp";
-connectAttr "ApolloRN.phl[270]" "COG_Ctrl_Grp_parentConstraint1.tg[0].tro";
-connectAttr "ApolloRN.phl[271]" "COG_Ctrl_Grp_parentConstraint2.tg[0].tro";
+connectAttr "ApolloRN.phl[270]" "COG_Ctrl_Grp_parentConstraint2.tg[0].tro";
+connectAttr "ApolloRN.phl[271]" "COG_Ctrl_Grp_parentConstraint1.tg[0].tro";
 connectAttr "ApolloRN.phl[272]" "COG_Ctrl_Grp_parentConstraint5.tg[0].tro";
 connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowTranslate1.o" "ApolloRN.phl[273]";
 connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowRotate1.o" "ApolloRN.phl[274]";
@@ -52205,8 +52189,8 @@ connectAttr "ArmShape.iog.og[1]" "ConveyorSceneRN.phl[52]";
 connectAttr "ArmShape.iog.og[0]" "ConveyorSceneRN.phl[53]";
 connectAttr "Leg_Right1Shape.iog.og[0]" "ConveyorSceneRN.phl[54]";
 connectAttr "Leg_Right1Shape.iog.og[1]" "ConveyorSceneRN.phl[55]";
-connectAttr "ConveyorSceneRN.phl[56]" "Leg_RightShape.iog.og[1].gco";
-connectAttr "ConveyorSceneRN.phl[57]" "Leg_RightShape.iog.og[0].gco";
+connectAttr "ConveyorSceneRN.phl[56]" "Leg_RightShape.iog.og[0].gco";
+connectAttr "ConveyorSceneRN.phl[57]" "Leg_RightShape.iog.og[1].gco";
 connectAttr "ConveyorSceneRN.phl[58]" "ArmShape.iog.og[1].gco";
 connectAttr "ConveyorSceneRN.phl[59]" "ArmShape.iog.og[0].gco";
 connectAttr "ConveyorSceneRN.phl[60]" "Leg_Right1Shape.iog.og[1].gco";
@@ -52239,8 +52223,7 @@ connectAttr "rs_Flaps.ri" "RobotToyObjects.rlio[1]";
 connectAttr "rs_AO.ri" "RobotToyObjects.rlio[2]";
 connectAttr "rs_Shadow.ri" "RobotToyObjects.rlio[3]";
 connectAttr "rs_ApolloMain.ri" "RobotToyObjects.rlio[4]";
-connectAttr "rs_ApolloConveyorMain.ri" "RobotToyObjects.rlio[5]";
-connectAttr "rs_ApolloConveyorBelt.ri" "RobotToyObjects.rlio[6]";
+connectAttr "rs_ApolloConveyorBelt.ri" "RobotToyObjects.rlio[5]";
 connectAttr "rs_FOG.ri" "RobotToyObjects.rlio[7]";
 connectAttr "Leg_Transform_Ctrl_translateX.o" "|RobotToyObjects|GetsPickedUp|Leg|Leg_Transform_Ctrl.tx"
 		;
@@ -52462,10 +52445,9 @@ connectAttr "|RobotToyObjects|GetsPickedUp|Leg1|Leg_Transform_Ctrl|COG_Ctrl_Grp.
 		;
 connectAttr "|RobotToyObjects|GetsPickedUp|Leg1|Leg_Transform_Ctrl|COG_Ctrl_Grp.rpt" "COG_Ctrl_Grp_parentConstraint5.crt"
 		;
-connectAttr "rs_ApolloConveyorMain.ri" "ReanimatedFlaps.rlio[0]";
-connectAttr "rs_ApolloConveyorBelt.ri" "ReanimatedFlaps.rlio[1]";
-connectAttr "rs_RobotToys.ri" "ReanimatedFlaps.rlio[2]";
-connectAttr "rs_Flaps.ri" "ReanimatedFlaps.rlio[3]";
+connectAttr "rs_ApolloConveyorBelt.ri" "ReanimatedFlaps.rlio[0]";
+connectAttr "rs_RobotToys.ri" "ReanimatedFlaps.rlio[1]";
+connectAttr "rs_Flaps.ri" "ReanimatedFlaps.rlio[2]";
 connectAttr "rs_AO.ri" "ReanimatedFlaps.rlio[4]";
 connectAttr "rs_Shadow.ri" "ReanimatedFlaps.rlio[5]";
 connectAttr "Apollo1Flaps:ConveyorScene:ConveyorRig:skinCluster1.og[0]" "Apollo1Flaps:ConveyorScene:ConveyorRig:FlapShape8.i"
@@ -53892,7 +53874,7 @@ connectAttr "rs_ApolloConveyorMain.msg" "ApolloConveyorMain.lrl";
 connectAttr "ApolloFace1.nxt" "ApolloConveyorMain.prv";
 connectAttr "renderSetup.lit" "ApolloConveyorMain.pls";
 connectAttr "RenderSettingsCollection1.msg" "ApolloConveyorMain.cl";
-connectAttr "Negative4.msg" "ApolloConveyorMain.ch";
+connectAttr "ConveyorBody.msg" "ApolloConveyorMain.ch";
 connectAttr "renderLayerManager.rlmi[4]" "rs_ApolloConveyorMain.rlid";
 connectAttr "collection3Selector.c" "ConveyorBody.sel";
 connectAttr "ApolloConveyorMain.lit" "ConveyorBody.pls";
@@ -53978,21 +53960,6 @@ connectAttr "RobotToys.nic" "Negative2_shapes.pic";
 connectAttr "aiMatte2.msg" "Negative2_shapes.cl";
 connectAttr "aiMatte2.msg" "Negative2_shapes.ch";
 connectAttr "collection8Selector.out" "Negative2_shapesSelector.in";
-connectAttr "collection10Selector.c" "Negative4.sel";
-connectAttr "ConveyorBody.nxt" "Negative4.prv";
-connectAttr "ApolloConveyorMain.lit" "Negative4.pls";
-connectAttr "ApolloConveyorMain.nic" "Negative4.pic";
-connectAttr "Negative4_shapes.msg" "Negative4.cl";
-connectAttr "Negative4_shapes.msg" "Negative4.ch";
-connectAttr "Negative4_shapes.lit" "aiMatte4.pls";
-connectAttr "Negative4_shapes.en" "aiMatte4.pen";
-connectAttr "Negative4_shapesSelector.c" "Negative4_shapes.sel";
-connectAttr "Negative4.lit" "Negative4_shapes.pls";
-connectAttr "Negative4.en" "Negative4_shapes.pen";
-connectAttr "ApolloConveyorMain.nic" "Negative4_shapes.pic";
-connectAttr "aiMatte4.msg" "Negative4_shapes.cl";
-connectAttr "aiMatte4.msg" "Negative4_shapes.ch";
-connectAttr "collection10Selector.out" "Negative4_shapesSelector.in";
 connectAttr "collection11Selector.c" "Negative5.sel";
 connectAttr "Belt.nxt" "Negative5.prv";
 connectAttr "ApolloConveyorBelt.lit" "Negative5.pls";
