@@ -1,6 +1,6 @@
-//Maya ASCII 2023 scene
+//Maya ASCII 2025ff03 scene
 //Name: Hallway_CC.ma
-//Last modified: Mon, Mar 03, 2025 01:06:42 PM
+//Last modified: Mon, Mar 03, 2025 02:22:32 PM
 //Codeset: 1252
 file -rdi 1 -ns "Hallway" -rfn "HallwayRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 2 _ Cleaning/Hallway.ma";
 file -rdi 1 -ns "Apollo" -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
@@ -10,33 +10,41 @@ file -r -ns "Hallway" -dr 1 -rfn "HallwayRN" -op "v=0;" -typ "mayaAscii" "C:/Use
 file -r -ns "Apollo" -dr 1 -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
 file -r -ns "Dionysus_Asset_Rig" -dr 1 -rfn "Dionysus_Asset_RigRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Characters/Dionysus_Asset_Rig.ma";
-requires maya "2023";
+requires maya "2025ff03";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.0";
+requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
+		 -nodeType "aiAmbientOcclusion" -nodeType "aiAtmosphereVolume" -nodeType "aiShadowMatte"
+		 "mtoa" "5.4.2.1";
+requires -nodeType "simpleSelector" -nodeType "renderSetupLayer" -nodeType "renderSetup"
+		 -nodeType "collection" -nodeType "renderSettingsCollection" -nodeType "aovCollection"
+		 -nodeType "aovChildCollection" -nodeType "absOverride" -nodeType "absUniqueOverride"
+		 -nodeType "materialOverride" -nodeType "applyAbsIntOverride" -nodeType "applyAbsBoolOverride"
+		 -nodeType "applyConnectionOverride" -nodeType "arnoldAOVChildSelector" "renderSetup.py" "1.0";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2023";
-fileInfo "version" "2023";
-fileInfo "cutIdentifier" "202208031415-1dee56799d";
-fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "073A7115-4A26-77B9-8A2D-84B270B76DA1";
+fileInfo "product" "Maya 2025";
+fileInfo "version" "2025";
+fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
+fileInfo "UUID" "0107B984-41F2-2119-874D-818480732C56";
 fileInfo "exportedFrom" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/Hallway_CC.ma";
 createNode transform -s -n "persp";
 	rename -uid "0A6F6713-4910-2930-9E23-629E991204E6";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.6924612991609149 4.1473886425368729 -11.412594642966955 ;
-	setAttr ".r" -type "double3" -11.138352727378777 -171.0000000001036 0 ;
+	setAttr ".t" -type "double3" 3.0059530510012511 6.7864509290808179 -53.569532819865429 ;
+	setAttr ".r" -type "double3" -8.7383527273731758 -193.80000000009326 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "26BF6CB6-4ABC-A186-9AA2-7594471C2D91";
 	setAttr -k off ".v" no;
+	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 20.985029410288284;
+	setAttr ".coi" 18.428762385733176;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.030248496545101755 2.8820050069590688 1.1839354112472371 ;
+	setAttr ".tp" -type "double3" -4.9483008089059979 3.7382143662707681 -36.379741990039449 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "A8B1CB16-4CDB-9233-31C3-9D875F66FB92";
@@ -104,79 +112,85 @@ createNode camera -n "MAIN_CAMERAShape" -p "MAIN_CAMERA";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dfg" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "3FA7F54D-4B93-A2EE-2532-72BD2BD5E27F";
-	setAttr -s 229 ".lnk";
-	setAttr -s 229 ".slnk";
+	rename -uid "20501A65-41DA-FBE1-3EBB-388606026CC4";
+	setAttr -s 231 ".lnk";
+	setAttr -s 231 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "4AE2E467-42CF-A424-D6A5-47AEB80C4941";
+	rename -uid "69D3AE07-48E5-C63F-4BCA-E8B93F2B34CE";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 0 1 2 ;
 	setAttr -s 3 ".bspr";
 	setAttr -s 3 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "859C2434-442E-8A7E-F5E3-C48058DDD3D4";
+	rename -uid "832DC4DD-4FE7-56DA-A1A6-DAB3849E5358";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7CDFEA21-4B74-66D4-378D-5C9E2955AD76";
+	rename -uid "2F66C8DE-4435-37FE-DFF6-DFA01B027C14";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "7384DFD8-4F86-84D3-3642-D68EF86C6DA9";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "292226C8-4403-8D76-9881-B8954EE9247E";
+	rename -uid "44619953-441F-A1D4-EEFC-739A4E0C4C02";
+	setAttr ".crl" 6;
+	setAttr -s 6 ".rlmi[1:6]"  1 2 3 4 5 6;
+	setAttr -s 7 ".rlmi";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "784E522F-4C84-2653-01B8-EE89A29944A7";
 	setAttr ".g" yes;
+	setAttr ".rndr" no;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "14E63941-48AA-2F2F-0FB3-74A8E87EE074";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n"
-		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
-		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n"
-		+ "        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n"
-		+ "            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n"
-		+ "            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n"
-		+ "            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|MAIN_CAMERA\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
-		+ "            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n"
-		+ "            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n"
-		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2573\n            -height 1450\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
+		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
+		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|MAIN_CAMERA\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1163\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
+		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
+		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
-		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n"
-		+ "            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n"
-		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
-		+ "                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
-		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n"
-		+ "                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n"
-		+ "                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
-		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
-		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n"
-		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n"
-		+ "\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
-		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
-		+ "                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|MAIN_CAMERA\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
-		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
-		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
-		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2573\\n    -height 1450\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2573\\n    -height 1450\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
+		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
+		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
+		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
+		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n"
+		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n"
+		+ "                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n"
+		+ "                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n"
+		+ "                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|MAIN_CAMERA\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
+		+ "                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n"
+		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
+		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1163\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1163\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "1A00936D-42FE-095F-3910-D7AE85A6EE6A";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 65 -ast 1 -aet 140 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 65 -ast 1 -aet 65 ";
 	setAttr ".st" 6;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "ABF4D4BE-4F34-57A8-6EE0-27A77CCE2BD9";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
+	setAttr -s 2 ".aovs";
 	setAttr ".version" -type "string" "5.2.0";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "086D7B8E-447A-3969-EB1E-5D9DE16378D8";
@@ -186,8 +200,8 @@ createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	setAttr ".ai_translator" -type "string" "exr";
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "27B90618-440E-65F7-D1F9-BEAC48E4BA77";
-	setAttr ".output_mode" 0;
 	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
 createNode ikSpringSolver -s -n "ikSpringSolver";
 	rename -uid "8847349B-40FC-240A-6780-C08398D6317E";
 createNode timeEditor -s -n "timeEditor";
@@ -8952,7 +8966,7 @@ createNode animCurveTU -n "FK_R_Finger02_Three_Jnt_Ctrl_visibility";
 	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode reference -n "HallwayRN";
 	rename -uid "2C7D62B1-47AC-8C20-EE75-88A2B25D81AE";
-	setAttr ".fn[0]" -type "string" "C:/Users/Canne/Documents/GitRepo/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 2 _ Cleaning/Hallway.ma";
+	setAttr ".fn[0]" -type "string" "C:/Users/newsi/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 2 _ Cleaning/Hallway.ma";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"HallwayRN"
 		"HallwayRN" 8
@@ -8970,16 +8984,675 @@ createNode reference -n "HallwayRN";
 		2 "|Hallway:Geo|Hallway:curve1" "rotate" " -type \"double3\" 0 270.00000000000005684 0"
 		
 		2 "|Hallway:Geo|Hallway:curve1" "scale" " -type \"double3\" 1 1 1"
-		"HallwayRN" 8
+		"HallwayRN" 404
 		2 "|Hallway:aiSkyDomeLight1" "translate" " -type \"double3\" 0 0 0"
 		2 "|Hallway:Geo|Hallway:polySurface5" "translate" " -type \"double3\" 0 0 -0.86862029301351318"
+		
+		2 "Hallway:pasted__standardSurface7SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:pasted__standardSurface7SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:pasted__standardSurface7SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:pasted__standardSurface4SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:pasted__standardSurface4SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:pasted__standardSurface4SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:standardSurface2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:standardSurface2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set406" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set406" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set406" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set407" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set407" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set407" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set4" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set5" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set5" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set5" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set6" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set6" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set6" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set7" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set7" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set7" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set8" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set8" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set8" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set9" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set9" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set9" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set10" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set10" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set10" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set11" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set11" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set11" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set12" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set12" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set12" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set13" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set13" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set13" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set14" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set14" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set14" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set16" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set16" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set16" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set17" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set17" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set17" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set18" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set18" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set18" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set19" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set19" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set19" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set20" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set20" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set20" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set26" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set26" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set26" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set36" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set36" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set36" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set37" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set37" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set37" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set38" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set38" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set38" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set39" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set39" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set39" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set40" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set40" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set40" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set41" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set41" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set41" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set42" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set42" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set42" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set73" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set73" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set73" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set74" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set74" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set74" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set75" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set75" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set75" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set76" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set76" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set76" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set78" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set78" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set78" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set79" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set79" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set79" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set348" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set348" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set348" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set350" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set350" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set350" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set351" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set351" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set351" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set352" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set352" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set352" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set353" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set353" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set353" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:surfaceShader1SG4" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:surfaceShader1SG4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:surfaceShader1SG4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:lambert8SG4" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:lambert8SG4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:lambert8SG4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:standardSurface8SG4" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:standardSurface8SG4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:standardSurface8SG4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:pasted__set276" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:pasted__set276" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:pasted__set276" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set401" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set401" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set401" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set402" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set402" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set402" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set403" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set403" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set403" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:aiStandardSurface6SG1" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:aiStandardSurface6SG1" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:aiStandardSurface6SG1" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
 		2 "Hallway:Apollo:Geo_Layer" "visibility" " 1"
 		2 "Hallway:Apollo:Geo_Layer" "displayOrder" " 3"
 		2 "Hallway:Apollo:Skeleton_Layer" "displayOrder" " 7"
 		2 "Hallway:Apollo:CTRL_Layer" "visibility" " 1"
 		2 "Hallway:Apollo:CTRL_Layer" "displayOrder" " 9"
-		2 "Hallway:Apollo1:Skeleton_Layer" "visibility" " 0";
+		2 "Hallway:Apollo:set408" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set408" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set408" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set409" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set409" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set409" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set410" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set410" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set410" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set411" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set411" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set411" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set412" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set412" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set412" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set413" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set413" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set413" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set414" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set414" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set414" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set415" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set415" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set415" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:Face_Backer_ProjectionSG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:Face_Backer_ProjectionSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:Face_Backer_ProjectionSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:set416" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:set416" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:set416" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:Left_Eye_ArrowSG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:Left_Eye_ArrowSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:Left_Eye_ArrowSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:Right_Eye_BoredSG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:Right_Eye_BoredSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:Right_Eye_BoredSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:Right_Eye_SmirkSG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:Right_Eye_SmirkSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:Right_Eye_SmirkSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:polySurface733SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:polySurface733SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:polySurface733SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:standardSurface9SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:standardSurface9SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:standardSurface9SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:surfaceShader2SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:surfaceShader2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:surfaceShader2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:standardSurface10SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:standardSurface10SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:standardSurface10SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo:surfaceShader3SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo:surfaceShader3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo:surfaceShader3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set406" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set406" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set406" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set407" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set407" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set407" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set4" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set5" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set5" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set5" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set6" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set6" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set6" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set7" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set7" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set7" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set8" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set8" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set8" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set9" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set9" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set9" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set10" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set10" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set10" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set11" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set11" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set11" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set12" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set12" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set12" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set13" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set13" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set13" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set14" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set14" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set14" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set16" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set16" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set16" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set17" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set17" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set17" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set18" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set18" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set18" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set19" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set19" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set19" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set20" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set20" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set20" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set26" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set26" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set26" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set36" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set36" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set36" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set37" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set37" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set37" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set38" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set38" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set38" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set39" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set39" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set39" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set40" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set40" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set40" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set41" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set41" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set41" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set42" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set42" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set42" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set73" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set73" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set73" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set74" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set74" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set74" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set75" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set75" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set75" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set76" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set76" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set76" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set78" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set78" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set78" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set79" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set79" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set79" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set348" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set348" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set348" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set350" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set350" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set350" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set351" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set351" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set351" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set352" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set352" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set352" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set353" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set353" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set353" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:surfaceShader1SG4" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:surfaceShader1SG4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:surfaceShader1SG4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:lambert8SG4" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:lambert8SG4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:lambert8SG4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:standardSurface8SG4" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:standardSurface8SG4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:standardSurface8SG4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:pasted__set276" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:pasted__set276" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:pasted__set276" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set401" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set401" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set401" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set402" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set402" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set402" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set403" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set403" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set403" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:aiStandardSurface6SG1" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:aiStandardSurface6SG1" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:aiStandardSurface6SG1" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:Skeleton_Layer" "visibility" " 0"
+		2 "Hallway:Apollo1:set408" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set408" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set408" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set409" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set409" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set409" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set410" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set410" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set410" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set411" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set411" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set411" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set412" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set412" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set412" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set413" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set413" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set413" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set414" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set414" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set414" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set415" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set415" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set415" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:Face_Backer_ProjectionSG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:Face_Backer_ProjectionSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:Face_Backer_ProjectionSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:set416" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:set416" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:set416" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:Left_Eye_ArrowSG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:Left_Eye_ArrowSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:Left_Eye_ArrowSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:Right_Eye_BoredSG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:Right_Eye_BoredSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:Right_Eye_BoredSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:Right_Eye_SmirkSG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:Right_Eye_SmirkSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:Right_Eye_SmirkSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:polySurface733SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:polySurface733SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:polySurface733SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:standardSurface9SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:standardSurface9SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:standardSurface9SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:surfaceShader2SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:surfaceShader2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:surfaceShader2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:standardSurface10SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:standardSurface10SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:standardSurface10SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:Apollo1:surfaceShader3SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:Apollo1:surfaceShader3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:Apollo1:surfaceShader3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:set1" "aiCustomAOVs" " -s 2"
+		2 "Hallway:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:standardSurface3SG" "aiCustomAOVs" " -s 2"
+		2 "Hallway:standardSurface3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:standardSurface3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Hallway:set2" "aiCustomAOVs" " -s 2"
+		2 "Hallway:set2" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Hallway:set2" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "ApolloRN";
@@ -9210,8 +9883,10 @@ createNode reference -n "ApolloRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"ApolloRN"
 		"ApolloRN" 0
-		"ApolloRN" 253
+		"ApolloRN" 449
 		2 "|Apollo:Apollo" "visibility" " 1"
+		2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape" 
+		"aiMatte" " 0"
 		2 "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl" 
@@ -9260,12 +9935,337 @@ createNode reference -n "ApolloRN";
 		"EyeScale" " -k 1 1"
 		2 "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl" 
 		"Determined" " -k 1 0"
+		2 "Apollo:set406" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set406" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set406" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set407" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set407" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set407" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set4" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set5" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set5" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set5" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set6" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set6" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set6" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set7" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set7" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set7" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set8" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set8" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set8" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set9" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set9" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set9" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set10" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set10" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set10" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set11" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set11" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set11" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set12" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set12" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set12" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set13" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set13" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set13" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set14" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set14" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set14" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set16" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set16" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set16" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set17" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set17" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set17" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set18" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set18" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set18" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set19" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set19" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set19" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set20" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set20" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set20" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set26" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set26" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set26" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set36" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set36" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set36" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set37" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set37" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set37" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set38" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set38" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set38" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set39" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set39" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set39" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set40" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set40" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set40" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set41" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set41" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set41" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set42" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set42" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set42" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set73" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set73" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set73" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set74" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set74" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set74" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set75" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set75" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set75" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set76" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set76" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set76" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set78" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set78" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set78" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set79" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set79" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set79" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set348" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set348" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set348" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set350" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set350" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set350" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set351" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set351" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set351" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set352" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set352" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set352" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set353" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set353" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set353" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:surfaceShader1SG4" "aiCustomAOVs" " -s 2"
+		2 "Apollo:surfaceShader1SG4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:surfaceShader1SG4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:lambert8SG4" "aiCustomAOVs" " -s 2"
+		2 "Apollo:lambert8SG4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:lambert8SG4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:standardSurface8SG4" "aiCustomAOVs" " -s 2"
+		2 "Apollo:standardSurface8SG4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:standardSurface8SG4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:pasted__set276" "aiCustomAOVs" " -s 2"
+		2 "Apollo:pasted__set276" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:pasted__set276" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set401" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set401" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set401" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set402" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set402" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set402" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set403" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set403" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set403" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:aiStandardSurface6SG1" "aiCustomAOVs" " -s 2"
+		2 "Apollo:aiStandardSurface6SG1" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:aiStandardSurface6SG1" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
 		2 "Apollo:Geo_Layer" "visibility" " 1"
 		2 "Apollo:Skeleton_Layer" "visibility" " 0"
 		2 "Apollo:Skeleton_Layer" "displayOrder" " 4"
 		2 "Apollo:CTRL_Layer" "visibility" " 1"
 		2 "Apollo:CTRL_Layer" "displayOrder" " 6"
+		2 "Apollo:set408" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set408" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set408" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set409" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set409" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set409" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set410" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set410" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set410" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set411" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set411" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set411" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set412" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set412" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set412" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set413" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set413" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set413" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set414" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set414" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set414" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set415" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set415" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set415" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:Face_Backer_ProjectionSG" "aiCustomAOVs" " -s 2"
+		2 "Apollo:Face_Backer_ProjectionSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:Face_Backer_ProjectionSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
 		2 "Apollo:groupParts100" "inputComponents" " -type \"componentList\" 1 \"f[13833:14052]\""
+		
+		2 "Apollo:set416" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set416" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set416" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:Left_Eye_ArrowSG" "aiCustomAOVs" " -s 2"
+		2 "Apollo:Left_Eye_ArrowSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:Left_Eye_ArrowSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:Right_Eye_BoredSG" "aiCustomAOVs" " -s 2"
+		2 "Apollo:Right_Eye_BoredSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:Right_Eye_BoredSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:Right_Eye_SmirkSG" "aiCustomAOVs" " -s 2"
+		2 "Apollo:Right_Eye_SmirkSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:Right_Eye_SmirkSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:polySurface733SG" "aiCustomAOVs" " -s 2"
+		2 "Apollo:polySurface733SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:polySurface733SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:standardSurface9SG" "aiCustomAOVs" " -s 2"
+		2 "Apollo:standardSurface9SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:standardSurface9SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:surfaceShader2SG" "aiCustomAOVs" " -s 2"
+		2 "Apollo:surfaceShader2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:surfaceShader2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:standardSurface10SG" "aiCustomAOVs" " -s 2"
+		2 "Apollo:standardSurface10SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:standardSurface10SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:surfaceShader3SG" "aiCustomAOVs" " -s 2"
+		2 "Apollo:surfaceShader3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:surfaceShader3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set417" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set417" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set417" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Apollo:set418" "aiCustomAOVs" " -s 2"
+		2 "Apollo:set418" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Apollo:set418" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
 		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.ArmIKFK" 
 		"ApolloRN.placeHolderList[1]" ""
@@ -10463,7 +11463,7 @@ createNode reference -n "Dionysus_Asset_RigRN";
 		"Dionysus_Asset_RigRN.placeHolderList[229]" ""
 		5 4 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Dionysus_Asset_Rig:R_Eye_Ctrl.visibility" 
 		"Dionysus_Asset_RigRN.placeHolderList[230]" ""
-		"Dionysus_Asset_RigRN" 696
+		"Dionysus_Asset_RigRN" 786
 		2 "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Booster_Ctrl_Grp|Dionysus_Asset_Rig:Booster_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:COG_Ctrl_Grp|Dionysus_Asset_Rig:COG_Ctrl" 
@@ -10611,12 +11611,162 @@ createNode reference -n "Dionysus_Asset_RigRN";
 		"FollowRotate" " -k 1 1"
 		2 "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_01_Ctrl_Grp|Dionysus_Asset_Rig:Prop_01_Ctrl" 
 		"PropSpeed" " -k 1 75"
+		2 "Dionysus_Asset_Rig:set1" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set2" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set2" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set2" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:typeBlinnSG" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:typeBlinnSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:typeBlinnSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set3" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set3" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set3" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set4" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set4" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set5" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set5" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set5" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set6" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set6" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set6" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set7" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set7" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set7" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set8" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set8" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set8" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set9" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set9" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set9" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set10" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set10" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set10" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set11" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set11" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set11" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set12" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set12" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set12" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set13" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set13" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set13" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set14" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set14" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set14" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set15" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set15" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set15" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set16" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set16" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set16" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:standardSurface2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:standardSurface2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:standardSurface3SG" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:standardSurface3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:standardSurface3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set17" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set17" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set17" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set18" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set18" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set18" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:standardSurface4SG" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:standardSurface4SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:standardSurface4SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set19" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set19" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set19" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
 		2 "Dionysus_Asset_Rig:Dionysus_Ctrl" "visibility" " 1"
 		2 "Dionysus_Asset_Rig:Dionysus_Ctrl" "displayOrder" " 2"
 		2 "Dionysus_Asset_Rig:Dionysus_Geo" "visibility" " 1"
 		2 "Dionysus_Asset_Rig:Dionysus_Geo" "displayOrder" " 5"
 		2 "Dionysus_Asset_Rig:Dionysus_Skele" "visibility" " 0"
 		2 "Dionysus_Asset_Rig:Dionysus_Skele" "displayOrder" " 8"
+		2 "Dionysus_Asset_Rig:pasted__surfaceShader1SG4" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:pasted__surfaceShader1SG4" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"diffuse\""
+		2 "Dionysus_Asset_Rig:pasted__surfaceShader1SG4" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"specular\""
+		2 "Dionysus_Asset_Rig:typeBlinn1SG" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:typeBlinn1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:typeBlinn1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:typeBlinn2SG" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:typeBlinn2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:typeBlinn2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:set20" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:set20" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:set20" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:surfaceShader1SG" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:surfaceShader1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:surfaceShader1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:surfaceShader2SG" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:surfaceShader2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Dionysus_Asset_Rig:surfaceShader2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
+		
+		2 "Dionysus_Asset_Rig:pasted__surfaceShader3SG" "aiCustomAOVs" " -s 2"
+		2 "Dionysus_Asset_Rig:pasted__surfaceShader3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"diffuse\""
+		2 "Dionysus_Asset_Rig:pasted__surfaceShader3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"specular\""
 		5 4 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Booster_Ctrl_Grp|Dionysus_Asset_Rig:Booster_Ctrl.FollowTranslate" 
 		"Dionysus_Asset_RigRN.placeHolderList[231]" ""
 		5 4 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Booster_Ctrl_Grp|Dionysus_Asset_Rig:Booster_Ctrl.FollowRotate" 
@@ -11859,53 +13009,3669 @@ createNode reference -n "Dionysus_Asset_RigRN";
 		"Dionysus_Asset_RigRN.placeHolderList[850]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode renderSetup -n "renderSetup";
+	rename -uid "19131F91-43FC-E9D3-0A22-7EB5F153B70E";
+createNode renderSetupLayer -n "Dio";
+	rename -uid "E76F0126-4E50-5C7C-139E-1F81F7F327FB";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_Dio";
+	rename -uid "E53DB419-4B7F-3F4D-92CF-1D8F4005DCF7";
+	setAttr ".do" 1;
+createNode renderSetupLayer -n "Apollo1";
+	rename -uid "F35BA6DD-4250-B2AE-6696-F881A1310AF1";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_Apollo1";
+	rename -uid "06D303A8-454E-3D70-2304-109D7CEE7595";
+	setAttr ".do" 2;
+createNode renderSetupLayer -n "Environment";
+	rename -uid "69C30AE2-465A-E517-F95C-509FAAEE73A2";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_Environment";
+	rename -uid "67E95B97-4119-2F07-1AB4-DC983FA9341F";
+	setAttr ".do" 3;
+createNode renderSetupLayer -n "FOG";
+	rename -uid "1D579E9D-4B88-3B55-2B93-A0AB7447B659";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_FOG";
+	rename -uid "F35629EE-415D-DAC1-C3A6-6BBC184D597E";
+	setAttr ".do" 4;
+createNode collection -n "collection1";
+	rename -uid "5874101D-4935-AA61-61C6-F2A0A43BE2F4";
+createNode simpleSelector -n "collection1Selector";
+	rename -uid "A74C5C24-479B-19CB-DC7A-DA8F351193CD";
+	setAttr ".ssl" -type "string" "|Hallway:Geo";
+createNode collection -n "collection2";
+	rename -uid "07BC50A5-4132-29A7-8DEC-DB9C7CAF7FEF";
+createNode simpleSelector -n "collection2Selector";
+	rename -uid "1D1F4BFD-4A54-7A5B-E8DE-A8BFDD0F8217";
+	setAttr ".ssl" -type "string" "|Apollo:Apollo";
+createNode collection -n "collection3";
+	rename -uid "545BA400-4819-4AFD-860B-2F9F624FC6FB";
+createNode simpleSelector -n "collection3Selector";
+	rename -uid "BBCF7D2A-4FD0-94F1-0B4D-0DB24207CE14";
+	setAttr ".ssl" -type "string" "|Dionysus_Asset_Rig:Dionysus";
+createNode collection -n "collection4";
+	rename -uid "52E3ABDB-49FD-9373-5D72-518125010D4F";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode simpleSelector -n "collection4Selector";
+	rename -uid "B6611276-4791-033E-00D2-569D52ABD015";
+	setAttr ".ssl" -type "string" "|Dionysus_Asset_Rig:Dionysus\n|Apollo:Apollo\n|Hallway:Geo";
+createNode aiAtmosphereVolume -n "aiAtmosphereVolume";
+	rename -uid "F40F1CFC-46A8-B990-6D5E-068E3F5EE675";
+createNode collection -n "aiAtmosphereVolume_col";
+	rename -uid "043D2F17-4E3F-63F0-5B25-5E8882023CC3";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode simpleSelector -n "aiAtmosphereVolume_colSelector";
+	rename -uid "F7537608-498F-0FA9-FDFD-5E82DF3793FF";
+	setAttr ".ssl" -type "string" "aiAtmosphereVolume";
+	setAttr ".tf" 3;
+createNode absOverride -n "density";
+	rename -uid "6B9B60E9-4088-DDE2-B0A8-7CBF60D790C9";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "float";
+	setAttr ".atr" -type "string" "density";
+	setAttr ".atv" 0.004999999888241291;
+createNode absOverride -n "aiMatte";
+	rename -uid "DAD42180-4747-E422-AAF0-2C8E3572BCEB";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "aiMatte";
+	setAttr ".atv" yes;
+createNode collection -n "collection4_shapes";
+	rename -uid "27829D29-4885-B8B0-AE16-4DA9CCA35997";
+createNode simpleSelector -n "collection4_shapesSelector";
+	rename -uid "88982982-4A31-6DA0-B488-9B9AA86BE485";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".ppa" -type "string" "*";
+	setAttr ".tf" 2;
+createNode aiAOV -n "aiAOV_diffuse";
+	rename -uid "1487C24C-4EB0-02A3-9A55-C5B008E04B7A";
+	setAttr ".aovn" -type "string" "diffuse";
+	setAttr ".aovt" 5;
+createNode aiAOV -n "aiAOV_specular";
+	rename -uid "CD0A6DEC-4878-7CD0-907C-459D682C96A9";
+	setAttr ".aovn" -type "string" "specular";
+	setAttr ".aovt" 5;
+createNode renderSetupLayer -n "AO";
+	rename -uid "F9856D3F-47AB-4F93-E3AD-D395619C4C84";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_AO";
+	rename -uid "809479EB-47D9-79F0-7679-F6BDFFA0E05B";
+	setAttr ".do" 5;
+createNode collection -n "collection5";
+	rename -uid "46C97B53-4AC3-1C82-2E1C-AA9E7193958C";
+createNode simpleSelector -n "collection5Selector";
+	rename -uid "6A6EF257-4D30-8160-CE84-4F8831C73B2A";
+	setAttr ".ssl" -type "string" "|Dionysus_Asset_Rig:Dionysus\n|Apollo:Apollo\n|Hallway:Geo";
+createNode materialOverride -n "materialOverride1";
+	rename -uid "F7F418F6-4771-8655-970E-E68F2E41A5C4";
+	addAttr -s false -ci true -sn "atv" -ln "attrValue" -at "message";
+createNode aiAmbientOcclusion -n "aiAmbientOcclusion1";
+	rename -uid "0F8887E7-4105-5901-01B8-9AB5CA53BAAC";
+createNode shadingEngine -n "aiAmbientOcclusion1SG";
+	rename -uid "BD4943F8-4750-C338-6F95-43AE39F09A8B";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
+	setAttr ".aovs[1].aov_name" -type "string" "specular";
+	setAttr ".aal" -type "attributeAlias" 4 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_specular" "aiCustomAOVs[1]" ;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "30F03004-4331-6AA4-FD8A-22A14E2EE118";
+createNode renderSettingsCollection -n "RenderSettingsCollection";
+	rename -uid "D266050A-474C-8D2A-5D5A-23A0A6284C61";
+createNode simpleSelector -n "RenderSettingsCollectionSelector";
+	rename -uid "82C9109A-4273-6D2B-F7F2-319958B6EAD8";
+	setAttr ".ssl" -type "string" "defaultArnoldFilter\ndefaultArnoldDriver\ndefaultArnoldRenderOptions\ndefaultResolution\ndefaultRenderQuality\ndefaultRenderGlobals";
+	setAttr ".tf" 0;
+createNode absUniqueOverride -n "AASamples";
+	rename -uid "A7D24E39-46D6-1537-B3E5-A39A9B447485";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min -10 -max 1020 -smn 1 -smx 50 -at "long";
+	setAttr ".atr" -type "string" "AASamples";
+	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
+	setAttr ".atv" 1;
+createNode renderSetupLayer -n "Shadow";
+	rename -uid "EA1799E3-472C-16B5-9173-AAA88748497D";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_Shadow";
+	rename -uid "3999FE7A-4169-B4DE-7CF7-4BA3B2924756";
+	setAttr ".do" 6;
+createNode renderSettingsCollection -n "RenderSettingsCollection1";
+	rename -uid "9173A3F5-4100-F2E0-1532-FBAFBE6D5F7E";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode simpleSelector -n "RenderSettingsCollection1Selector";
+	rename -uid "1C1EA2D4-4430-7003-17DB-0EA709480C91";
+	setAttr ".ssl" -type "string" "defaultArnoldFilter\ndefaultArnoldDriver\ndefaultArnoldRenderOptions\ndefaultResolution\ndefaultRenderQuality\ndefaultRenderGlobals";
+	setAttr ".tf" 0;
+createNode absUniqueOverride -n "AASamples1";
+	rename -uid "6FA648A6-4613-A3ED-D755-EFBF68D8F328";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min -10 -max 1020 -smn 1 -smx 50 -at "long";
+	setAttr ".atr" -type "string" "AASamples";
+	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
+	setAttr ".atv" 1;
+createNode collection -n "collection6";
+	rename -uid "97C3DA4C-4F7F-5915-CAA4-C0B2AFDE94CF";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "collection6Selector";
+	rename -uid "89960E40-4CD4-2197-1290-868285C741F9";
+	setAttr ".ssl" -type "string" "|Dionysus_Asset_Rig:Dionysus\n|Apollo:Apollo\n|Hallway:Geo";
+createNode materialOverride -n "materialOverride2";
+	rename -uid "6AFCDC8F-4209-DAE3-EA6D-BD9FCF487422";
+	addAttr -s false -ci true -sn "atv" -ln "attrValue" -at "message";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+createNode aiShadowMatte -n "aiShadowMatte1";
+	rename -uid "6DA32688-464B-E5A4-A4F6-A6B6A6664886";
+createNode shadingEngine -n "aiShadowMatte1SG";
+	rename -uid "FF8B2001-43D9-0827-8D28-40B752B661CC";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr ".ihi" 0;
+	setAttr -s 603 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
+	setAttr ".aovs[1].aov_name" -type "string" "specular";
+	setAttr ".aal" -type "attributeAlias" 4 "ai_aov_diffuse" "aiCustomAOVs[0]" "ai_aov_specular" "aiCustomAOVs[1]" ;
+createNode materialInfo -n "materialInfo2";
+	rename -uid "F397770D-4F5B-0A6F-3FCB-CD875DFA8B98";
+createNode renderSettingsCollection -n "RenderSettingsCollection2";
+	rename -uid "2B09FF51-4395-2D37-C75F-058B9D2A8B3C";
+createNode simpleSelector -n "RenderSettingsCollection2Selector";
+	rename -uid "8119EBB2-41A1-CF37-1672-0DB658467E85";
+	setAttr ".ssl" -type "string" "defaultArnoldFilter\ndefaultArnoldDriver\ndefaultArnoldRenderOptions\ndefaultResolution\ndefaultRenderQuality\ndefaultRenderGlobals";
+	setAttr ".tf" 0;
+createNode absUniqueOverride -n "AASamples2";
+	rename -uid "B2841252-44F0-2618-A893-2FBF004CA704";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min -10 -max 1020 -smn 1 -smx 50 -at "long";
+	setAttr ".atr" -type "string" "AASamples";
+	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
+	setAttr ".atv" 2;
+createNode aovCollection -n "AOVCollection";
+	rename -uid "80701DFD-48BE-FC32-3C4D-548DF6E8AE0C";
+createNode simpleSelector -n "AOVCollectionSelector";
+	rename -uid "CBBDDE02-4453-BE13-B37E-6EABFC0097AD";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 8;
+	setAttr ".cfv" -type "string" "aiAOV aiAOVDriver aiAOVFilter";
+createNode aovChildCollection -n "diffuse";
+	rename -uid "0A1A3DE5-4DAD-6A9D-E469-97A3942E83A2";
+createNode arnoldAOVChildSelector -n "diffuseSelector";
+	rename -uid "E9D5085E-4AF4-6B4C-2C23-5581DFB66371";
+	setAttr ".ann" -type "string" "aiAOV_diffuse";
+createNode absOverride -n "enabled";
+	rename -uid "704C5C7A-4726-0006-D71F-8492AA140D72";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode aovChildCollection -n "specular";
+	rename -uid "30840468-4883-66A1-8AB1-46A391FD7EF9";
+createNode arnoldAOVChildSelector -n "specularSelector";
+	rename -uid "89905F26-4371-4A3D-E96F-6BA681578677";
+	setAttr ".ann" -type "string" "aiAOV_specular";
+createNode absOverride -n "enabled1";
+	rename -uid "CF53C35C-48B1-7653-2482-B0BD1F952722";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode aovCollection -n "AOVCollection1";
+	rename -uid "A9B87E5C-40DA-006F-CA35-B2AB8B28F1F8";
+createNode simpleSelector -n "AOVCollection1Selector";
+	rename -uid "AD728822-4F42-8276-BCC4-528901D2A381";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 8;
+	setAttr ".cfv" -type "string" "aiAOV aiAOVDriver aiAOVFilter";
+createNode aovChildCollection -n "diffuse1";
+	rename -uid "44FCD456-484C-3116-8F80-18A2699E4741";
+createNode arnoldAOVChildSelector -n "diffuse1Selector";
+	rename -uid "9B2DE401-43E2-D693-7875-249DE11E3C66";
+	setAttr ".ann" -type "string" "aiAOV_diffuse";
+createNode absOverride -n "enabled2";
+	rename -uid "B27BF127-4541-0138-58C6-ED9413C7040B";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode aovChildCollection -n "specular1";
+	rename -uid "86222B81-43E0-4DE0-81AC-C0B02CBF9C6D";
+createNode arnoldAOVChildSelector -n "specular1Selector";
+	rename -uid "2FCDC29D-4054-3261-72ED-F3B61F32D0B3";
+	setAttr ".ann" -type "string" "aiAOV_specular";
+createNode absOverride -n "enabled3";
+	rename -uid "93CF0816-4C69-BEEB-BBA3-98A2AE61B651";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode applyAbsIntOverride -n "AASamples1_defaultArnoldRenderOptions_AA_samples";
+	rename -uid "C84F5C94-4D9E-C072-6B37-B6B23789E963";
+	setAttr ".ori" 3;
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape782_iog_0__og_0_";
+	rename -uid "2BD79052-43E4-C1F1-D182-679C319AC8C4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface709|Dionysus_Asset_Rig:polySurfaceShape782.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape864_iog_0_";
+	rename -uid "1A9125A4-4FC3-785F-1667-4F8E266E82C0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface709|Dionysus_Asset_Rig:polySurfaceShape864.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape783_iog_0__og_0_";
+	rename -uid "DFB5B23C-4023-B67F-BACD-EA9F9F40AFC1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface710|Dionysus_Asset_Rig:polySurfaceShape783.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape882_iog_0_";
+	rename -uid "AD7A255A-439B-FA27-75A7-F2A3FA3C46E1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface710|Dionysus_Asset_Rig:polySurfaceShape882.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Furnace_RimShape_iog_0__og_0_";
+	rename -uid "ABD60190-4A3C-6D55-6EA4-88A483082FA7";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Rim|Dionysus_Asset_Rig:Furnace_RimShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape816_iog_0_";
+	rename -uid "5B1416AF-4FE5-2816-2EDE-C19ECC136824";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Rim|Dionysus_Asset_Rig:polySurfaceShape816.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Furnace_backShape_iog_0__og_0_";
+	rename -uid "29845C93-420F-D0AB-64BF-218A4FCAA55D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_back|Dionysus_Asset_Rig:Furnace_backShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape838_iog_0_";
+	rename -uid "9AEFE398-442D-DF74-CFA0-CAA344BE94DA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_back|Dionysus_Asset_Rig:polySurfaceShape838.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Furnace_LidShape_iog_0_";
+	rename -uid "953D6C28-40AD-C601-5261-70955B94EDD4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Lid|Dionysus_Asset_Rig:Furnace_LidShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape820_iog_0_";
+	rename -uid "CA7C90E9-4375-AB88-4C80-BF972248468F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Lid|Dionysus_Asset_Rig:polySurfaceShape820.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Furnace_Hinge_Bolt_Shape3_iog_0_";
+	rename -uid "E6AE061D-45AE-64E7-9B63-9DB7FD4BF144";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_03|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape3.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape828_iog_0_";
+	rename -uid "50B9915C-4050-4097-0266-2F847E7C091D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_03|Dionysus_Asset_Rig:polySurfaceShape828.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Furnace_Hinge_Bolt_Shape4_iog_0_";
+	rename -uid "99508505-46F4-8FE2-49A0-D1A6B3A5EA31";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_04|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape4.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape850_iog_0_";
+	rename -uid "9C8FE6FD-41C0-98EE-FA54-3AA013E0B0AB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_04|Dionysus_Asset_Rig:polySurfaceShape850.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Furnace_Hinge_Bolt_Shape2_iog_0_";
+	rename -uid "26B8458E-4D19-6F7B-4451-19BCDDDF050F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_02|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape2.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape877_iog_0_";
+	rename -uid "DC626FD4-4203-7665-4C35-F48E5551AB82";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_02|Dionysus_Asset_Rig:polySurfaceShape877.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Furnace_Hinge_Bolt_Shape1_iog_0_";
+	rename -uid "05301FD6-4BE8-D3B5-C8CD-17BA324F76FF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_01|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape1.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape836_iog_0_";
+	rename -uid "46DD50DB-41A9-5396-932A-CAB99E68142A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_01|Dionysus_Asset_Rig:polySurfaceShape836.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Furnace_LightShape_iog_0_";
+	rename -uid "D871F1BA-44E2-B76E-D03F-779B63BDE481";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Light|Dionysus_Asset_Rig:Furnace_LightShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Electrical_Box_hinge_Shape1_iog_0__og_0_";
+	rename -uid "B054C1ED-4DFB-01E8-6957-A49CBD4253ED";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_Shape1.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Electrical_Box_Cover_Shape1_iog_0__og_0_";
+	rename -uid "DFE94D70-4A82-5108-75FC-C6A18E561E6E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_01|Dionysus_Asset_Rig:Electrical_Box_Cover_Shape1.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape890_iog_0_";
+	rename -uid "135F4BD4-4622-3ACB-A8AB-58B9F65CED4C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_01|Dionysus_Asset_Rig:polySurfaceShape890.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Electrical_Box_Cover_Shape2_iog_0__og_0_";
+	rename -uid "1D301182-4609-D1CB-D1B1-2BB5FD4FEC50";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_02|Dionysus_Asset_Rig:Electrical_Box_Cover_Shape2.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape854_iog_0_";
+	rename -uid "5E98DDEA-4FD1-711E-6F58-7089BE1CC8B5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_02|Dionysus_Asset_Rig:polySurfaceShape854.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Electrical_Box_hinge_02Shape_iog_0__og_0_";
+	rename -uid "3DF4BAB7-4C5D-3B9B-1421-5192F429C59A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_02|Dionysus_Asset_Rig:Electrical_Box_hinge_02Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape811_iog_0_";
+	rename -uid "CE5583BD-48FA-F494-00F3-8DB1D0856F8E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_02|Dionysus_Asset_Rig:polySurfaceShape811.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape878_iog_0_";
+	rename -uid "D0DF3207-4073-18C7-F271-0895BED2EF85";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:polySurfaceShape878.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Backpack_mainShape_iog_0_";
+	rename -uid "11879AE7-4A31-5B93-A8D2-12872A593681";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_mainShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Backpack_topperShape_iog_0_";
+	rename -uid "04F4BC44-44E1-212D-7900-EBBE6B093575";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_topper|Dionysus_Asset_Rig:Backpack_topperShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape851_iog_0_";
+	rename -uid "7938DE5F-4267-52C9-27D4-22841FF8DB68";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_topper|Dionysus_Asset_Rig:polySurfaceShape851.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape796_iog_0_";
+	rename -uid "FF2655B2-410D-BB74-8AEE-E7B699E54AAE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:polySurfaceShape796.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface666ShapeShape_iog_0__og_0_";
+	rename -uid "B5226C0B-4690-656E-79EA-13A442B92EB8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface666Shape|Dionysus_Asset_Rig:polySurface666ShapeShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape818_iog_0_";
+	rename -uid "1848C603-4713-4875-8DBF-87ADD8ED2F9F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface666Shape|Dionysus_Asset_Rig:polySurfaceShape818.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface665Shape_iog_0__og_0_";
+	rename -uid "0463DE9B-4DDF-24EB-8F74-2B97ED717834";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface665|Dionysus_Asset_Rig:polySurface665Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape855_iog_0_";
+	rename -uid "38DFB7DA-4B7E-0EDB-E262-B2974F4E09EF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface665|Dionysus_Asset_Rig:polySurfaceShape855.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape673_iog_0__og_0_";
+	rename -uid "047FF304-44DA-9162-3C43-D0A829FB6406";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface568|Dionysus_Asset_Rig:polySurfaceShape673.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape870_iog_0_";
+	rename -uid "70645B76-4D7A-DE1D-FEE9-2C9EA0D25CA7";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface568|Dionysus_Asset_Rig:polySurfaceShape870.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape681_iog_0__og_0_";
+	rename -uid "DD82CEA4-4B37-ABC7-F544-728CEABDF53B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface576|Dionysus_Asset_Rig:polySurfaceShape681.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape797_iog_0_";
+	rename -uid "83D178E9-438A-FE45-5D98-75957E9C9F5B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface576|Dionysus_Asset_Rig:polySurfaceShape797.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape588_iog_0__og_0_";
+	rename -uid "D604B59E-497A-960E-B7B8-75A9E110854E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface470|Dionysus_Asset_Rig:polySurfaceShape588.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape822_iog_0_";
+	rename -uid "AA96D3A9-47F6-746F-7D43-A08C1722E723";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface470|Dionysus_Asset_Rig:polySurfaceShape822.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape589_iog_0__og_0_";
+	rename -uid "634C4C2A-4E05-E8D2-642A-7191F161A846";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface471|Dionysus_Asset_Rig:polySurfaceShape589.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape865_iog_0_";
+	rename -uid "3AB37B79-4F41-7ACA-EE74-0F91ED657E81";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface471|Dionysus_Asset_Rig:polySurfaceShape865.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape590_iog_0__og_0_";
+	rename -uid "7EBDAA88-4512-04C3-1577-AAAF04354B3A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface472|Dionysus_Asset_Rig:polySurfaceShape590.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape817_iog_0_";
+	rename -uid "294B589A-475C-147E-BAEA-8CBAEDEE775F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface472|Dionysus_Asset_Rig:polySurfaceShape817.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape591_iog_0__og_0_";
+	rename -uid "715DCE4C-4966-7FD9-FF61-7A8B0EC0E83B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface473|Dionysus_Asset_Rig:polySurfaceShape591.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape866_iog_0_";
+	rename -uid "A0F651D9-40DB-AF0D-9E11-D59B07238835";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface473|Dionysus_Asset_Rig:polySurfaceShape866.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape592_iog_0__og_0_";
+	rename -uid "615802C8-47A0-C870-B07F-AE84AA25582E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface474|Dionysus_Asset_Rig:polySurfaceShape592.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape879_iog_0_";
+	rename -uid "FBC4B766-4915-8D31-774E-DBB8945BA466";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface474|Dionysus_Asset_Rig:polySurfaceShape879.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape593_iog_0__og_0_";
+	rename -uid "75B0E628-408A-B6C0-346B-3DA9C4FF7517";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface475|Dionysus_Asset_Rig:polySurfaceShape593.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape825_iog_0_";
+	rename -uid "4C14635A-4C9B-B392-6E47-0EA21BB6FF1F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface475|Dionysus_Asset_Rig:polySurfaceShape825.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape594_iog_0__og_0_";
+	rename -uid "C6DF3A5E-4329-3409-A182-90B612480B55";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface476|Dionysus_Asset_Rig:polySurfaceShape594.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape886_iog_0_";
+	rename -uid "C2238B51-4726-7101-E198-6F9ABD60A580";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface476|Dionysus_Asset_Rig:polySurfaceShape886.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape595_iog_0__og_0_";
+	rename -uid "571A4897-4089-1A4A-EE01-9F82BA156C9A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface477|Dionysus_Asset_Rig:polySurfaceShape595.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape868_iog_0_";
+	rename -uid "70823C99-4E95-F41C-8FF5-508051F2C440";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface477|Dionysus_Asset_Rig:polySurfaceShape868.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape596_iog_0__og_0_";
+	rename -uid "46A0ECF8-45BA-BBB9-C131-A38174100B74";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface478|Dionysus_Asset_Rig:polySurfaceShape596.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape806_iog_0_";
+	rename -uid "3F46FAEE-407A-5A2F-772F-038574CC2A91";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface478|Dionysus_Asset_Rig:polySurfaceShape806.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape597_iog_0__og_0_";
+	rename -uid "60D622DB-492C-143A-7F97-8BB9191EC5ED";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface479|Dionysus_Asset_Rig:polySurfaceShape597.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape849_iog_0_";
+	rename -uid "6B520C95-4CAB-D9D9-FB3F-4CA9F413AE51";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface479|Dionysus_Asset_Rig:polySurfaceShape849.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape598_iog_0__og_0_";
+	rename -uid "874849B4-42A0-CA1E-0A04-FDA6A624F1D6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface480|Dionysus_Asset_Rig:polySurfaceShape598.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape803_iog_0_";
+	rename -uid "79014E31-4CFD-C02A-E2E4-D690D4F832DE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface480|Dionysus_Asset_Rig:polySurfaceShape803.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape599_iog_0__og_0_";
+	rename -uid "53946174-4A8B-C422-BBAF-DF8423333220";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface481|Dionysus_Asset_Rig:polySurfaceShape599.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape814_iog_0_";
+	rename -uid "A14840FC-4CF0-24A7-5B6A-2FBD193EE1B9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface481|Dionysus_Asset_Rig:polySurfaceShape814.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape600_iog_0__og_0_";
+	rename -uid "12F98062-4357-7FA6-4773-ED870B78BE7A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface482|Dionysus_Asset_Rig:polySurfaceShape600.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape884_iog_0_";
+	rename -uid "A31DD0A3-4EDF-9027-3815-58ABE8003E96";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface482|Dionysus_Asset_Rig:polySurfaceShape884.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape601_iog_0__og_0_";
+	rename -uid "72C5C0DD-4DE9-2E11-2C63-7AB6E13C9268";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface483|Dionysus_Asset_Rig:polySurfaceShape601.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape826_iog_0_";
+	rename -uid "847CCDDB-41E3-60F1-6C98-F0B3893B43F9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface483|Dionysus_Asset_Rig:polySurfaceShape826.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape602_iog_0__og_0_";
+	rename -uid "C525D46E-4C80-1C57-1422-BCAAB115ADE8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface484|Dionysus_Asset_Rig:polySurfaceShape602.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape844_iog_0_";
+	rename -uid "746173BD-4928-6FA9-3F07-5E913BD0AE43";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface484|Dionysus_Asset_Rig:polySurfaceShape844.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape603_iog_0__og_0_";
+	rename -uid "B35B1CB8-4BF1-59C0-12E5-258BA206D6C7";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface485|Dionysus_Asset_Rig:polySurfaceShape603.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape835_iog_0_";
+	rename -uid "0A01ABB9-400A-3102-231B-70A6D108C47C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface485|Dionysus_Asset_Rig:polySurfaceShape835.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape604_iog_0__og_0_";
+	rename -uid "3AD7F5D4-4434-1E57-EB9D-28944C00820F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface486|Dionysus_Asset_Rig:polySurfaceShape604.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape875_iog_0_";
+	rename -uid "8C21F0A6-4C11-5D2B-02E6-209A97098B87";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface486|Dionysus_Asset_Rig:polySurfaceShape875.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape605_iog_0__og_0_";
+	rename -uid "2E9E172D-4560-A48E-33CE-EBBDDF7E059D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface487|Dionysus_Asset_Rig:polySurfaceShape605.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape840_iog_0_";
+	rename -uid "A64675CD-442D-C6E7-C869-2F88327B66D3";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface487|Dionysus_Asset_Rig:polySurfaceShape840.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape606_iog_0__og_0_";
+	rename -uid "460E5507-44D1-0D40-2379-3D863A6F4FF4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface488|Dionysus_Asset_Rig:polySurfaceShape606.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape819_iog_0_";
+	rename -uid "B8E142E9-4983-98B9-6006-ECB0674D99EF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface488|Dionysus_Asset_Rig:polySurfaceShape819.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape607_iog_0__og_0_";
+	rename -uid "464FD50A-463A-CEF9-A096-518D0D014F38";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface489|Dionysus_Asset_Rig:polySurfaceShape607.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape837_iog_0_";
+	rename -uid "D0EF8675-4AAC-C91C-7262-E6BE6AA51F51";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface489|Dionysus_Asset_Rig:polySurfaceShape837.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape608_iog_0__og_0_";
+	rename -uid "1EE3CA0F-46BB-1B95-9442-42B962D1F7D2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface490|Dionysus_Asset_Rig:polySurfaceShape608.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape853_iog_0_";
+	rename -uid "F7FCBB9D-4926-4664-7DFE-A794229A1657";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface490|Dionysus_Asset_Rig:polySurfaceShape853.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape648_iog_0__og_0_";
+	rename -uid "1AE413C9-461C-5205-799A-5DB03F95F53A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface542|Dionysus_Asset_Rig:polySurfaceShape648.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape830_iog_0_";
+	rename -uid "1274B10A-400C-A093-A954-8AB5ED8FF9D5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface542|Dionysus_Asset_Rig:polySurfaceShape830.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface560Shape_iog_0__og_0_";
+	rename -uid "5B673947-4568-3808-094C-3484998FD190";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface560|Dionysus_Asset_Rig:polySurface560Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape856_iog_0_";
+	rename -uid "3583F01E-4AAD-5291-DD8A-1689C284750B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface560|Dionysus_Asset_Rig:polySurfaceShape856.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape671_iog_0__og_0_";
+	rename -uid "D446F643-44EE-261A-7B50-2E818B236D40";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface566|Dionysus_Asset_Rig:polySurfaceShape671.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape834_iog_0_";
+	rename -uid "001E1AA6-4261-18EB-90B9-10833DA3FF5D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface566|Dionysus_Asset_Rig:polySurfaceShape834.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape674_iog_0__og_0_";
+	rename -uid "F7A5150F-400C-B986-F96F-B8920B2AF62E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface569|Dionysus_Asset_Rig:polySurfaceShape674.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape871_iog_0_";
+	rename -uid "4B5ADA4E-48B0-7ABC-381B-2F9576149404";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface569|Dionysus_Asset_Rig:polySurfaceShape871.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape677_iog_0__og_0_";
+	rename -uid "C5D0A03F-4A74-2011-7929-988724C8AD58";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface572|Dionysus_Asset_Rig:polySurfaceShape677.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape842_iog_0_";
+	rename -uid "FB93C05B-4CDD-7371-5830-91AE776507C5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface572|Dionysus_Asset_Rig:polySurfaceShape842.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape694_iog_0__og_0_";
+	rename -uid "243DE0CD-4996-032B-96B4-5E9C0E5D4FAB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface589|Dionysus_Asset_Rig:polySurfaceShape694.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape812_iog_0_";
+	rename -uid "B936D139-4F19-4804-71F5-B3B519F2D21C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface589|Dionysus_Asset_Rig:polySurfaceShape812.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape678_iog_0__og_0_";
+	rename -uid "AF57551C-47DD-D843-A551-6181DFDF805F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface573|Dionysus_Asset_Rig:polySurfaceShape678.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape863_iog_0_";
+	rename -uid "68A035BB-4EBA-C016-349E-0F93ABC1F081";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface573|Dionysus_Asset_Rig:polySurfaceShape863.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape685_iog_0__og_0_";
+	rename -uid "30DAF7AA-42E9-E872-C148-2DAED50EE0C8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface580|Dionysus_Asset_Rig:polySurfaceShape685.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape809_iog_0_";
+	rename -uid "872C1E63-4D9A-E226-3FC8-46A69E7211A9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface580|Dionysus_Asset_Rig:polySurfaceShape809.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape669_iog_0__og_0_";
+	rename -uid "5E50E80F-4AD6-26ED-2346-B7A6516D974D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface564|Dionysus_Asset_Rig:polySurfaceShape669.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape859_iog_0_";
+	rename -uid "A74502D4-465F-F6CF-687F-E397953CDC9A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface564|Dionysus_Asset_Rig:polySurfaceShape859.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape683_iog_0__og_0_";
+	rename -uid "02099786-40C0-030F-C416-F8BDA6D18667";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface578|Dionysus_Asset_Rig:polySurfaceShape683.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape833_iog_0_";
+	rename -uid "F59FEFFB-4928-27A4-31FA-E184D91421CE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface578|Dionysus_Asset_Rig:polySurfaceShape833.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape688_iog_0__og_0_";
+	rename -uid "5A580F19-45A6-7C74-3269-F9A3F22A9825";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface583|Dionysus_Asset_Rig:polySurfaceShape688.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape876_iog_0_";
+	rename -uid "1A924665-483F-2CCD-BD2F-F3B4192DCD9F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface583|Dionysus_Asset_Rig:polySurfaceShape876.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape682_iog_0__og_0_";
+	rename -uid "D080B30D-4A0A-5124-EA8F-AEAE90D59448";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface577|Dionysus_Asset_Rig:polySurfaceShape682.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape891_iog_0_";
+	rename -uid "AEA16D1A-4686-6117-FD5C-07B646CC27B4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface577|Dionysus_Asset_Rig:polySurfaceShape891.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape667_iog_0__og_0_";
+	rename -uid "5DE62BF8-4468-0F2B-5B91-2A892152C020";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface562|Dionysus_Asset_Rig:polySurfaceShape667.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape847_iog_0_";
+	rename -uid "30E87DE6-4B0E-E453-6865-9FBD3BD89D90";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface562|Dionysus_Asset_Rig:polySurfaceShape847.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape690_iog_0__og_0_";
+	rename -uid "46BDF707-4423-E8E3-4FCF-5D89175728AA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface585|Dionysus_Asset_Rig:polySurfaceShape690.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape858_iog_0_";
+	rename -uid "4A11065C-488B-4E18-711E-DB99097FFB47";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface585|Dionysus_Asset_Rig:polySurfaceShape858.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape679_iog_0__og_0_";
+	rename -uid "728816EE-48DD-77E9-0FD6-288BD26275AF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface574|Dionysus_Asset_Rig:polySurfaceShape679.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape823_iog_0_";
+	rename -uid "DAFC7ECC-4BD6-675C-164B-1B87D6CED237";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface574|Dionysus_Asset_Rig:polySurfaceShape823.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape684_iog_0__og_0_";
+	rename -uid "E4008474-41CB-35CF-27AD-E49EEFEC4C89";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface579|Dionysus_Asset_Rig:polySurfaceShape684.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape801_iog_0_";
+	rename -uid "8BE9D1F7-4CA0-ACB9-3674-3AA6257CF3D9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface579|Dionysus_Asset_Rig:polySurfaceShape801.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape672_iog_0__og_0_";
+	rename -uid "DA28BB1F-433B-16E5-7D77-CDB7B4148FA9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface567|Dionysus_Asset_Rig:polySurfaceShape672.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape810_iog_0_";
+	rename -uid "75FDA894-4F66-FADE-3347-869452F78E82";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface567|Dionysus_Asset_Rig:polySurfaceShape810.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape693_iog_0__og_0_";
+	rename -uid "817959A3-452F-BFD1-F8AE-8A94838BAD0F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface588|Dionysus_Asset_Rig:polySurfaceShape693.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape885_iog_0_";
+	rename -uid "D16F1181-4AA4-AF31-19D2-0FBEBBF875BE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface588|Dionysus_Asset_Rig:polySurfaceShape885.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape668_iog_0__og_0_";
+	rename -uid "214D8812-462D-BF59-9FA1-219B214B7733";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface668|Dionysus_Asset_Rig:polySurfaceShape668.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape846_iog_0_";
+	rename -uid "C1345DAA-47AE-6091-4BD3-CF93EDD653F9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface668|Dionysus_Asset_Rig:polySurfaceShape846.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Exhaust_Pipe1ShapeShape_iog_0__og_0_";
+	rename -uid "C9D4709C-4AF8-352E-6D7F-AD83C53D6762";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:L_Exhaust_Pipe1Shape|Dionysus_Asset_Rig:L_Exhaust_Pipe1ShapeShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape815_iog_0_";
+	rename -uid "7A67EED9-4098-8590-646B-0C83FBE2D31D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:L_Exhaust_Pipe1Shape|Dionysus_Asset_Rig:polySurfaceShape815.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface520Shape_iog_0__og_0_";
+	rename -uid "AD7424D7-40BB-225A-FFA0-3D84ED261D22";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface520|Dionysus_Asset_Rig:polySurface520Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface520ShapeOrig1_iog_0_";
+	rename -uid "E889175A-4017-CB99-9D4C-D5831AB1D2CE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface520|Dionysus_Asset_Rig:polySurface520ShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface526Shape_iog_0__og_0_";
+	rename -uid "A9F0E2C2-4167-8036-357A-3A98628A31E7";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526|Dionysus_Asset_Rig:polySurface526Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface526Shape_iog_0__og_1_";
+	rename -uid "4AE6759B-4F17-15B0-2E3B-499AB3EB786B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526|Dionysus_Asset_Rig:polySurface526Shape.instObjGroups[0].objectGroups[1]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:surfaceShader1SG";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape889_iog_0_";
+	rename -uid "AE09A551-47AD-2351-2231-449407D48D89";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526|Dionysus_Asset_Rig:polySurfaceShape889.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape617_iog_0__og_0_";
+	rename -uid "D9ED9618-42F7-8656-5317-A6A2A1C3CB18";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface505|Dionysus_Asset_Rig:polySurfaceShape617.instObjGroups[0].objectGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape618_iog_0__og_0_";
+	rename -uid "D584D7AA-405A-6EFF-093C-11B60245BBBE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface506|Dionysus_Asset_Rig:polySurfaceShape618.instObjGroups[0].objectGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape619_iog_0__og_0_";
+	rename -uid "63B13C03-498F-1D52-0120-24BF66FF84C0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface507|Dionysus_Asset_Rig:polySurfaceShape619.instObjGroups[0].objectGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape614_iog_0__og_0_";
+	rename -uid "994787AE-4A92-0DEF-DBAE-ACA78BACB3D5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface502|Dionysus_Asset_Rig:polySurfaceShape614.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape872_iog_0_";
+	rename -uid "6F5E61AC-40E8-FEE4-3C50-B4A9D367B7C9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface502|Dionysus_Asset_Rig:polySurfaceShape872.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape615_iog_0__og_0_";
+	rename -uid "EE90C725-4938-E154-D096-A786C67E9344";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface503|Dionysus_Asset_Rig:polySurfaceShape615.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape821_iog_0_";
+	rename -uid "658B3F9E-4548-C301-4FA1-18A11F6E4BF2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface503|Dionysus_Asset_Rig:polySurfaceShape821.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape637_iog_0__og_0_";
+	rename -uid "B4EBB671-4D63-1205-5E03-D99B682C1DB9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface530|Dionysus_Asset_Rig:polySurfaceShape637.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape637Orig1_iog_0_";
+	rename -uid "33DF7D20-4DB2-4445-58C9-E996E1A8017B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface530|Dionysus_Asset_Rig:polySurfaceShape637Orig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface670Shape_iog_0__og_0_";
+	rename -uid "DA406521-486F-2860-4A03-96BBC461DE83";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface670|Dionysus_Asset_Rig:polySurface670Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape852_iog_0_";
+	rename -uid "36F2E074-41F6-8837-3B32-C0B9FFB38EEC";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface670|Dionysus_Asset_Rig:polySurfaceShape852.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface671Shape_iog_0__og_0_";
+	rename -uid "4ADD99CC-4F2D-B06A-4FD2-DAB94A09116F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface671|Dionysus_Asset_Rig:polySurface671Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape869_iog_0_";
+	rename -uid "CE29E33D-4B15-6577-8222-BC96802008BB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface671|Dionysus_Asset_Rig:polySurfaceShape869.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface664Shape_iog_0__og_0_";
+	rename -uid "CC704B29-4CF3-1B50-2901-728F7A068B9B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface664|Dionysus_Asset_Rig:polySurface664Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape867_iog_0_";
+	rename -uid "85E91789-4C93-0054-CD20-F9A6ED153BC8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface664|Dionysus_Asset_Rig:polySurfaceShape867.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape702_iog_0__og_0_";
+	rename -uid "92B28EEB-49A5-D3FE-AB57-BB85417ADA96";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface597|Dionysus_Asset_Rig:polySurfaceShape702.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape800_iog_0_";
+	rename -uid "BEF1932C-4D11-6A03-4156-CF92D069FE26";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface597|Dionysus_Asset_Rig:polySurfaceShape800.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape747_iog_0__og_0_";
+	rename -uid "3EDA489A-46BD-A251-8F60-9D988386E499";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface642|Dionysus_Asset_Rig:polySurfaceShape747.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape829_iog_0_";
+	rename -uid "2415B66C-495B-22D8-C891-66BDD4637CA6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface642|Dionysus_Asset_Rig:polySurfaceShape829.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape703_iog_0__og_0_";
+	rename -uid "8C788A73-4773-6EAA-8F7D-3F96F95B6D6C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface598|Dionysus_Asset_Rig:polySurfaceShape703.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape861_iog_0_";
+	rename -uid "110ECA7D-4D18-07F7-9A0E-4F955B816C5F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface598|Dionysus_Asset_Rig:polySurfaceShape861.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape713_iog_0__og_0_";
+	rename -uid "14CD5AF6-4E1C-B32E-FD7F-E585710C39F8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface608|Dionysus_Asset_Rig:polySurfaceShape713.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape798_iog_0_";
+	rename -uid "BAA71920-4E28-4CBE-3A12-5FB1EDD7B840";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface608|Dionysus_Asset_Rig:polySurfaceShape798.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape705_iog_0__og_0_";
+	rename -uid "08BC6FA7-4CED-6CBB-B1CF-ED81A467D4F6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface600|Dionysus_Asset_Rig:polySurfaceShape705.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape881_iog_0_";
+	rename -uid "30CA8438-4D9C-C06E-A0C7-D0B7168CE440";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface600|Dionysus_Asset_Rig:polySurfaceShape881.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape709_iog_0__og_0_";
+	rename -uid "D90CCA86-4627-C88B-FBE8-CDBDF2CA0A8C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface604|Dionysus_Asset_Rig:polySurfaceShape709.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape845_iog_0_";
+	rename -uid "F577978D-4744-4944-C1F1-17BDAD1ED459";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface604|Dionysus_Asset_Rig:polySurfaceShape845.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape699_iog_0__og_0_";
+	rename -uid "BEAB443D-4C82-A034-B4A9-FB85AC3B62A0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface594|Dionysus_Asset_Rig:polySurfaceShape699.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape883_iog_0_";
+	rename -uid "9373EE3A-43EB-39C0-5F1D-1D8FE6C4C5D9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface594|Dionysus_Asset_Rig:polySurfaceShape883.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape744_iog_0__og_0_";
+	rename -uid "357353B8-49E1-5BAD-4578-BBACF5D60574";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface639|Dionysus_Asset_Rig:polySurfaceShape744.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape839_iog_0_";
+	rename -uid "B510DF8F-47D1-4CE8-3B87-60B326795BDE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface639|Dionysus_Asset_Rig:polySurfaceShape839.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape711_iog_0__og_0_";
+	rename -uid "322415CD-4518-6918-A6D2-5FADF871018B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface606|Dionysus_Asset_Rig:polySurfaceShape711.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape874_iog_0_";
+	rename -uid "00F61187-429A-3599-F962-EC959FC4E954";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface606|Dionysus_Asset_Rig:polySurfaceShape874.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape739_iog_0__og_0_";
+	rename -uid "6F1C2FE6-4F44-F1CE-976C-D186E379D072";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface634|Dionysus_Asset_Rig:polySurfaceShape739.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape841_iog_0_";
+	rename -uid "2850E30E-49A5-2E6F-2658-3D8D01157B55";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface634|Dionysus_Asset_Rig:polySurfaceShape841.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape766_iog_0__og_0_";
+	rename -uid "94D3140B-4C54-A770-C77C-5EA21675046B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface661|Dionysus_Asset_Rig:polySurfaceShape766.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape848_iog_0_";
+	rename -uid "DA88317F-4A83-E7E6-218C-CD9DE42DCED0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface661|Dionysus_Asset_Rig:polySurfaceShape848.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape752_iog_0__og_0_";
+	rename -uid "AA09F4BB-493F-DD71-4ED2-E0A1EFECDB4D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface647|Dionysus_Asset_Rig:polySurfaceShape752.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape805_iog_0_";
+	rename -uid "22E2B9B4-4A0E-D514-8024-14B1996E5A9A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface647|Dionysus_Asset_Rig:polySurfaceShape805.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape710_iog_0__og_0_";
+	rename -uid "AC29B705-4816-B094-F949-DF9FB119F8B6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface605|Dionysus_Asset_Rig:polySurfaceShape710.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape799_iog_0_";
+	rename -uid "1AAFDC47-4F9C-062C-C4E7-0186B00115CF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface605|Dionysus_Asset_Rig:polySurfaceShape799.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape763_iog_0__og_0_";
+	rename -uid "F5C7E3C8-433A-5622-7458-00B0A80BF20B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface658|Dionysus_Asset_Rig:polySurfaceShape763.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape887_iog_0_";
+	rename -uid "3BCDBAD2-46DC-2EFC-3666-BEABFEBD6949";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface658|Dionysus_Asset_Rig:polySurfaceShape887.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape704_iog_0__og_0_";
+	rename -uid "63FB73C5-4E29-4695-D35E-018F7EB31481";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface599|Dionysus_Asset_Rig:polySurfaceShape704.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape824_iog_0_";
+	rename -uid "CA3A6771-4990-80C5-F26A-FCBB910B464A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface599|Dionysus_Asset_Rig:polySurfaceShape824.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape697_iog_0__og_0_";
+	rename -uid "B847C6F6-49B1-12F3-C7D5-8BB573CE1FD0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface592|Dionysus_Asset_Rig:polySurfaceShape697.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape807_iog_0_";
+	rename -uid "92E66164-43BB-0BD5-89E0-BB9FCAAFA381";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface592|Dionysus_Asset_Rig:polySurfaceShape807.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape768_iog_0__og_0_";
+	rename -uid "8129F60E-4404-3070-9979-79AC31148A12";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface663|Dionysus_Asset_Rig:polySurfaceShape768.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape832_iog_0_";
+	rename -uid "46D14D29-4BA5-A843-BC11-51B66E34BB9A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface663|Dionysus_Asset_Rig:polySurfaceShape832.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface697Shape_iog_0__og_0_";
+	rename -uid "857EEEBD-4E89-EEA7-5986-E5B0356832AD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface697|Dionysus_Asset_Rig:polySurface697Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape888_iog_0_";
+	rename -uid "F1EBF41B-439D-CF87-9A86-3391F8521BEE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface697|Dionysus_Asset_Rig:polySurfaceShape888.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface698Shape_iog_0__og_0_";
+	rename -uid "5A7C10A5-4247-EF3D-C7B9-238C0949343D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface698|Dionysus_Asset_Rig:polySurface698Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape843_iog_0_";
+	rename -uid "1ECC0E23-4E68-3046-A1BB-5F9CB7CE3F08";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface698|Dionysus_Asset_Rig:polySurfaceShape843.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface694Shape_iog_0__og_0_";
+	rename -uid "330FC478-475D-BE0E-23FF-E68B731E6FCB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface694|Dionysus_Asset_Rig:polySurface694Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape827_iog_0_";
+	rename -uid "3AB4F3DC-41A5-C9F4-6E4D-87999E7070BE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface694|Dionysus_Asset_Rig:polySurfaceShape827.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Torso_BallShape_iog_0_";
+	rename -uid "61C88898-49CE-D145-CC46-DFAC864ED557";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Ball|Dionysus_Asset_Rig:Torso_BallShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape831_iog_0_";
+	rename -uid "3567BA08-458F-6EA2-41AE-66818034D975";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Ball|Dionysus_Asset_Rig:polySurfaceShape831.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Torso_Top_SocketShape_iog_0_";
+	rename -uid "DD93F078-4370-D150-7900-A1AA1B67F055";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Top_Socket|Dionysus_Asset_Rig:Torso_Top_SocketShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape808_iog_0_";
+	rename -uid "FB1EB37E-4010-1CF4-B37A-23B159295DBB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Top_Socket|Dionysus_Asset_Rig:polySurfaceShape808.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Torse_Bottom_SocketShape_iog_0_";
+	rename -uid "C54BCE22-440A-1A51-0682-7980D484FAEE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torse_Bottom_Socket|Dionysus_Asset_Rig:Torse_Bottom_SocketShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape880_iog_0_";
+	rename -uid "354A3B8D-4C91-8E05-1341-44B96F58293A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torse_Bottom_Socket|Dionysus_Asset_Rig:polySurfaceShape880.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Shoulder_GuardsShape_iog_0_";
+	rename -uid "57F72045-4E4E-00B5-A935-049975B32C27";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Shoulder_Guards|Dionysus_Asset_Rig:Shoulder_GuardsShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape802_iog_0_";
+	rename -uid "72BF2341-4D10-3D3E-3671-FBBEA83CA9AF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Shoulder_Guards|Dionysus_Asset_Rig:polySurfaceShape802.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface715Shape_iog_0__og_0_";
+	rename -uid "092FEBC1-4B1B-0BBE-FF29-1FBDB4FA856A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface715|Dionysus_Asset_Rig:polySurface715Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape860_iog_0_";
+	rename -uid "9B7F108B-48B8-5D09-2CD2-C2895269D100";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface715|Dionysus_Asset_Rig:polySurfaceShape860.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape789_iog_0__og_0_";
+	rename -uid "052D0BA2-4228-354D-8A48-9AB4DBCE7078";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface716|Dionysus_Asset_Rig:polySurfaceShape789.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape804_iog_0_";
+	rename -uid "5D709BB5-4DA9-BF44-BA32-FC817A74BD0C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface716|Dionysus_Asset_Rig:polySurfaceShape804.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape790_iog_0__og_0_";
+	rename -uid "83A8E624-4945-3BF9-E53D-55B14F635379";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface717|Dionysus_Asset_Rig:polySurfaceShape790.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape790Orig1_iog_0_";
+	rename -uid "7000AF2A-4BB5-BAD8-B45D-A397140C34BE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface717|Dionysus_Asset_Rig:polySurfaceShape790Orig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape792_iog_0__og_0_";
+	rename -uid "EC5C8F8E-44D3-C596-3DF2-CA9C118ED741";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface719|Dionysus_Asset_Rig:polySurfaceShape792.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape873_iog_0_";
+	rename -uid "8C4D759A-468E-9611-C17D-51B34151B87B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface719|Dionysus_Asset_Rig:polySurfaceShape873.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape794_iog_0__og_0_";
+	rename -uid "AB37CC35-464F-1A08-58A4-C591B4763193";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface721|Dionysus_Asset_Rig:polySurfaceShape794.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape794Orig1_iog_0_";
+	rename -uid "49DE2C8E-4F5E-0A29-D11C-0AA071A23BC4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface721|Dionysus_Asset_Rig:polySurfaceShape794Orig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape793_iog_0__og_0_";
+	rename -uid "46544516-4750-4F1E-58A6-A990D8029200";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface720|Dionysus_Asset_Rig:polySurfaceShape793.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape857_iog_0_";
+	rename -uid "F7E370DE-45C3-40CF-D066-B3B748A08A2F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface720|Dionysus_Asset_Rig:polySurfaceShape857.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape791_iog_0__og_0_";
+	rename -uid "9B1B48D3-4EA8-608F-51DA-9D9AEA14F206";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface718|Dionysus_Asset_Rig:polySurfaceShape791.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape791Orig1_iog_0_";
+	rename -uid "AEC1454B-431F-55D5-5309-BAAA59D4FF42";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface718|Dionysus_Asset_Rig:polySurfaceShape791Orig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape795_iog_0__og_0_";
+	rename -uid "D053F1CE-41E8-135D-1AB1-4B8BD0DA5680";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface722|Dionysus_Asset_Rig:polySurfaceShape795.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape795Orig1_iog_0_";
+	rename -uid "4BE348D1-468C-8E71-B4F6-A38BFF88F2F9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface722|Dionysus_Asset_Rig:polySurfaceShape795Orig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Propellor_01Shape_iog_0_";
+	rename -uid "15EAE906-4C16-72E2-EFBD-30A41410D787";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_01|Dionysus_Asset_Rig:Propellor_01Shape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape813_iog_0_";
+	rename -uid "FC6B504E-4A9C-3F90-D3B4-BC9EEC006C55";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_01|Dionysus_Asset_Rig:polySurfaceShape813.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Propellor_02Shape_iog_0_";
+	rename -uid "D4EB1DFB-45FF-B290-21B8-2AB1FA2DA98A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_02|Dionysus_Asset_Rig:Propellor_02Shape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape862_iog_0_";
+	rename -uid "300F0E23-4ACE-9F43-6979-A385900DC2F3";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_02|Dionysus_Asset_Rig:polySurfaceShape862.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Propellor_ShaftShape_iog_0_";
+	rename -uid "90595FF6-4511-3FC8-7794-50A24A047F19";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_Shaft|Dionysus_Asset_Rig:Propellor_ShaftShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:set20";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Propellor_ShaftShapeOrig_iog_0_";
+	rename -uid "A5963808-4D95-B595-64FA-5B919EA96EAA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_Shaft|Dionysus_Asset_Rig:Propellor_ShaftShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurface731Shape_iog_0__og_0_";
+	rename -uid "C59EA67F-48E2-F185-4D0E-2397EC8D44E1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:group27|Dionysus_Asset_Rig:polySurface731|Dionysus_Asset_Rig:polySurface731Shape.instObjGroups[0].objectGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_typeMeshShape1_iog_0_";
+	rename -uid "F98EE895-41D3-64BC-0ABD-8CBD4C202D81";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:typeMesh1|Dionysus_Asset_Rig:typeMeshShape1.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:typeBlinn2SG";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape732_iog_0__og_0_";
+	rename -uid "109B5AA3-4932-A7DC-5AEB-BDB803BC9EF2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface732|Dionysus_Asset_Rig:polySurfaceShape732.instObjGroups[0].objectGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Right_EyeShape_iog_0_";
+	rename -uid "114F4620-4EFA-9E23-C9FD-EEA4B5E7398C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Right_Eye_Group|Dionysus_Asset_Rig:Right_Eye|Dionysus_Asset_Rig:Right_EyeShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:surfaceShader2SG";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Right_EyeShapeOrig_iog_0_";
+	rename -uid "52D5343F-47C0-2DE0-D30C-0E9F27AB6DC4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Right_Eye_Group|Dionysus_Asset_Rig:Right_Eye|Dionysus_Asset_Rig:Right_EyeShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_EyeShape_iog_0_";
+	rename -uid "852CF098-411C-39CB-344B-E8B9615A81B4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Left_Eye_Group|Dionysus_Asset_Rig:Left_Eye|Dionysus_Asset_Rig:Left_EyeShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:surfaceShader2SG";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_EyeShapeOrig_iog_0_";
+	rename -uid "A89ABE7D-4072-AEA7-3101-4A9365A1CC82";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Left_Eye_Group|Dionysus_Asset_Rig:Left_Eye|Dionysus_Asset_Rig:Left_EyeShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_EyeShapeOrig2_iog_0_";
+	rename -uid "9928F041-49ED-8EF8-4B67-81A7A0342FC6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Left_Eye_Group|Dionysus_Asset_Rig:Left_Eye|Dionysus_Asset_Rig:Left_EyeShapeOrig2.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_MouthShape_iog_0_";
+	rename -uid "C664D3D7-4BDB-A773-E49D-7092718BB865";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Mouth_Group|Dionysus_Asset_Rig:Mouth|Dionysus_Asset_Rig:MouthShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:surfaceShader2SG";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_MouthShapeOrig_iog_0_";
+	rename -uid "102EAAA9-428D-AE73-DF23-83911E68AD26";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Mouth_Group|Dionysus_Asset_Rig:Mouth|Dionysus_Asset_Rig:MouthShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Booster_CtrlShape_iog_0_";
+	rename -uid "92762963-434D-6D08-0248-0CB90B267945";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Booster_Ctrl_Grp|Dionysus_Asset_Rig:Booster_Ctrl|Dionysus_Asset_Rig:Booster_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_COG_CtrlShape_iog_0_";
+	rename -uid "15241A92-4DA1-031A-8EB5-FCBDDD7F9B91";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:COG_Ctrl_Grp|Dionysus_Asset_Rig:COG_Ctrl|Dionysus_Asset_Rig:COG_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Furnace_CtrlShape_iog_0_";
+	rename -uid "B61103C7-48ED-2FEB-9881-F0A57CF6D305";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Dionysus_Asset_Rig:Furnace_Ctrl|Dionysus_Asset_Rig:Furnace_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Hip_CtrlShape_iog_0_";
+	rename -uid "A1948FF1-4E9B-0E27-5439-0596C09FDB9F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Hip_Ctrl_Grp|Dionysus_Asset_Rig:Hip_Ctrl|Dionysus_Asset_Rig:Hip_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Plate_CtrlShape_iog_0_";
+	rename -uid "6EF17D44-422B-A552-1114-50BCE8883059";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Dionysus_Asset_Rig:L_Plate_Ctrl|Dionysus_Asset_Rig:L_Plate_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Transform_CtrlShape_iog_0_";
+	rename -uid "688201D3-4FC0-9BA6-6563-96B4B054D41E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Transform_Ctrl_Grp|Dionysus_Asset_Rig:Transform_Ctrl|Dionysus_Asset_Rig:Transform_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Light_Rig_CtrlShape_iog_0_";
+	rename -uid "4D3A39C1-4C90-3EC2-6EC6-4899DBEC8940";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Transform_Ctrl_Grp|Dionysus_Asset_Rig:Transform_Ctrl|Dionysus_Asset_Rig:Lights|Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Dionysus_Asset_Rig:Light_Rig_Ctrl|Dionysus_Asset_Rig:Light_Rig_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Key_LightShape_iog_0_";
+	rename -uid "BE8142D3-4750-43E5-66F7-70A288B0372F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Transform_Ctrl_Grp|Dionysus_Asset_Rig:Transform_Ctrl|Dionysus_Asset_Rig:Lights|Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Dionysus_Asset_Rig:Light_Rig_Ctrl|Dionysus_Asset_Rig:Key_Light|Dionysus_Asset_Rig:Key_LightShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Back_LightShape_iog_0_";
+	rename -uid "321A44B4-4B94-B222-8C05-5CB2788CB854";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Transform_Ctrl_Grp|Dionysus_Asset_Rig:Transform_Ctrl|Dionysus_Asset_Rig:Lights|Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Dionysus_Asset_Rig:Light_Rig_Ctrl|Dionysus_Asset_Rig:Back_Light|Dionysus_Asset_Rig:Back_LightShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Fill_LightShape_iog_0_";
+	rename -uid "EE0D919B-46F6-3766-4829-76BCCA589CAC";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Transform_Ctrl_Grp|Dionysus_Asset_Rig:Transform_Ctrl|Dionysus_Asset_Rig:Lights|Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Dionysus_Asset_Rig:Light_Rig_Ctrl|Dionysus_Asset_Rig:Fill_Light|Dionysus_Asset_Rig:Fill_LightShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Face_LightShape_iog_0_";
+	rename -uid "D28C6D24-4602-75A3-D957-519B1277E6C6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Transform_Ctrl_Grp|Dionysus_Asset_Rig:Transform_Ctrl|Dionysus_Asset_Rig:Lights|Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Dionysus_Asset_Rig:Face_Light|Dionysus_Asset_Rig:Face_LightShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Panel_CtrlShape_iog_0_";
+	rename -uid "99EE302D-4FA8-DC77-2910-A3B11744C0CB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Dionysus_Asset_Rig:L_Panel_Ctrl|Dionysus_Asset_Rig:L_Panel_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Panel_CtrlShape_iog_0_";
+	rename -uid "5FEF2D9E-4B56-5751-C890-B4A142591FD3";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Dionysus_Asset_Rig:R_Panel_Ctrl|Dionysus_Asset_Rig:R_Panel_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Cylinder_CtrlShape_iog_0_";
+	rename -uid "CADB1BC7-4FFE-AEDB-4B5D-51A6B3FFA1A2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Cylinder_Ctrl_Grp|Dionysus_Asset_Rig:L_Cylinder_Ctrl|Dionysus_Asset_Rig:L_Cylinder_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Cylinder_CtrlShape_iog_0_";
+	rename -uid "B919AF7F-4BD2-5C57-210C-6EB774462FF8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Cylinder_Ctrl_Grp|Dionysus_Asset_Rig:R_Cylinder_Ctrl|Dionysus_Asset_Rig:R_Cylinder_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Plate_CtrlShape_iog_0_";
+	rename -uid "4E98FFF9-4A85-278A-D78D-6EBE3801162B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Dionysus_Asset_Rig:R_Plate_Ctrl|Dionysus_Asset_Rig:R_Plate_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Bottom_Booster_CtrlShape_iog_0_";
+	rename -uid "B864CBDE-44A0-9EBE-4981-4F97603219C9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Dionysus_Asset_Rig:Bottom_Booster_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Skirt_Driver_CtrlShape_iog_0_";
+	rename -uid "9968AE80-4A6E-692E-0536-CE95AC426E43";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Dionysus_Asset_Rig:Skirt_Driver_Ctrl|Dionysus_Asset_Rig:Skirt_Driver_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Propellor_Shaft_CtrlShape_iog_0_";
+	rename -uid "51B3D866-495B-6E8A-005A-9B93FC185591";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Dionysus_Asset_Rig:Propellor_Shaft_Ctrl|Dionysus_Asset_Rig:Propellor_Shaft_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Arm_Spinner_01_CtrlShape_iog_0_";
+	rename -uid "759844D4-45EB-1BDB-EFB4-BCA0294FBBCB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl|Dionysus_Asset_Rig:R_Arm_Spinner_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Arm_Spinner_02_CtrlShape_iog_0_";
+	rename -uid "018CD3E9-47C5-9036-E644-D0B09DE0D233";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl|Dionysus_Asset_Rig:R_Arm_Spinner_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Mouth_Ctrl_GrpShape_iog_0_";
+	rename -uid "C6C16893-4BED-FB0F-32D4-87A61350AD10";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Mouth_Ctrl_Grp|Dionysus_Asset_Rig:Mouth_Ctrl_Offset_Grp|Dionysus_Asset_Rig:Mouth_Ctrl_Grp|Dionysus_Asset_Rig:Mouth_Ctrl_GrpShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Eyes_Extras_CtrlShape_iog_0_";
+	rename -uid "02F453C9-4B00-E4C9-4184-98910C259B50";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Eyes_Ctrl_Grp|Dionysus_Asset_Rig:Eyes_Extras_Ctrl|Dionysus_Asset_Rig:Eyes_Extras_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Eye_CtrlShape_iog_0_";
+	rename -uid "708AEE12-4124-58D5-648E-4CA47C6398C8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Dionysus_Asset_Rig:L_Eye_Ctrl|Dionysus_Asset_Rig:L_Eye_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Eye_CtrlShape_iog_0_";
+	rename -uid "E29B47F4-49E7-F829-45C9-46BD9C1607B6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Dionysus_Asset_Rig:R_Eye_Ctrl|Dionysus_Asset_Rig:R_Eye_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_topnurbsSquareShape1_iog_0_";
+	rename -uid "C4243122-4143-A228-D1BB-06842DA2329F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Face_Ctrl_Grp|Dionysus_Asset_Rig:nurbsSquare1|Dionysus_Asset_Rig:topnurbsSquare1|Dionysus_Asset_Rig:topnurbsSquareShape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_leftnurbsSquareShape1_iog_0_";
+	rename -uid "F5D5CF51-4139-89D8-1E86-30AB60559E4D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Face_Ctrl_Grp|Dionysus_Asset_Rig:nurbsSquare1|Dionysus_Asset_Rig:leftnurbsSquare1|Dionysus_Asset_Rig:leftnurbsSquareShape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_bottomnurbsSquareShape1_iog_0_";
+	rename -uid "4D344278-4A52-C880-BEB2-90BE2F32AEE1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Face_Ctrl_Grp|Dionysus_Asset_Rig:nurbsSquare1|Dionysus_Asset_Rig:bottomnurbsSquare1|Dionysus_Asset_Rig:bottomnurbsSquareShape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_rightnurbsSquareShape1_iog_0_";
+	rename -uid "E7338110-4FBF-8171-0893-AFBA78904F6C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Face_Ctrl_Grp|Dionysus_Asset_Rig:nurbsSquare1|Dionysus_Asset_Rig:rightnurbsSquare1|Dionysus_Asset_Rig:rightnurbsSquareShape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Arm_01_Jnt_CtrlShape_iog_0_";
+	rename -uid "885917ED-4B6F-F001-81CB-C2BB7F24BA67";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Arm|Dionysus_Asset_Rig:FK_L_Arm_01_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Arm_01_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Arm_01_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Arm_03_Jnt_CtrlShape_iog_0_";
+	rename -uid "58BB1C7F-4130-7E10-FDB5-7B8F56E16678";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Arm|Dionysus_Asset_Rig:FK_L_Arm_03_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Arm_03_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Arm_03_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Arm_02_CtrlShape_iog_0_";
+	rename -uid "C861202B-4CF9-78D0-BFF3-F0B469B9F833";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Arm|Dionysus_Asset_Rig:FK_L_Arm_02_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Arm_02_Ctrl|Dionysus_Asset_Rig:FK_L_Arm_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Arm_01_Jnt_CtrlShape_iog_0_";
+	rename -uid "26C37186-48D4-C6FA-4738-1EBBFA2B33D5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Arm|Dionysus_Asset_Rig:FK_R_Arm_01_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Arm_01_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Arm_01_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Arm_03_Jnt_CtrlShape_iog_0_";
+	rename -uid "0FBCD9BA-4CB9-5A0C-DFC9-3398D2FE60F7";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Arm|Dionysus_Asset_Rig:FK_R_Arm_03_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Arm_03_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Arm_03_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Arm_02_Jnt_CtrlShape_iog_0_";
+	rename -uid "9292D7E6-42BB-F45D-C549-0281CC535CF0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Arm|Dionysus_Asset_Rig:FK_R_Arm_02_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Arm_02_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Arm_02_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger02_Three_Jnt_CtrlShape_iog_0_";
+	rename -uid "35A22165-44C1-A7FE-2790-48AA560AB435";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger02_Two_Jnt_CtrlShape_iog_0_";
+	rename -uid "B03F9AD1-4C3F-13B3-C02F-E2B4D1FA3FB0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger02_One_Jnt_CtrlShape_iog_0_";
+	rename -uid "665B6D36-4FC7-E40B-A17B-E691D1C443C8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger01_Three_Jnt_CtrlShape_iog_0_";
+	rename -uid "A2D3E76F-4186-F306-59F3-B39064DAB1F4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger01_Two_Jnt_CtrlShape_iog_0_";
+	rename -uid "63BE8FB3-408E-8FD6-5982-F58E9D20B513";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger01_One_Jnt_CtrlShape_iog_0_";
+	rename -uid "DCD59786-4668-1BDE-6011-D3B2CB0EB0BB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Thumb_03_Jnt_CtrlShape_iog_0_";
+	rename -uid "0A65C99E-4CE5-4056-DD7D-8B83CD441A11";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Thumb_02_Jnt_CtrlShape_iog_0_";
+	rename -uid "42A99F72-4FA3-FB4D-E8CF-A49A31FDA733";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Thumb_01_Jnt_CtrlShape_iog_0_";
+	rename -uid "F8D54607-4B31-4BED-7338-AEB1CC288941";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Hand_Jnt_CtrlShape_iog_0_";
+	rename -uid "FBFA54C9-4DEE-9006-AF9F-E1902950240F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl|Dionysus_Asset_Rig:FK_L_Hand_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_L_Palm_CtrlShape_iog_0_";
+	rename -uid "B67F4711-4273-A9F5-93DF-E3B30585271F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_L_Hand|Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Dionysus_Asset_Rig:FK_L_Palm_Ctrl|Dionysus_Asset_Rig:FK_L_Palm_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Hand_Jnt_CtrlShape_iog_0_";
+	rename -uid "DC406117-42C3-2805-45E3-4D9F50C8AD5A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Hand_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Thumb_03_Jnt_CtrlShape_iog_0_";
+	rename -uid "DF68A73B-4182-34B8-06C6-3CAD437E72DD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Thumb_01_Jnt_CtrlShape_iog_0_";
+	rename -uid "44C2CFA5-4175-B41B-EE02-0ABA4D137D56";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Thumb_02_Jnt_CtrlShape_iog_0_";
+	rename -uid "E5C9B2B2-4758-5036-B106-D087235D93AD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Palm_CtrlShape_iog_0_";
+	rename -uid "47D76472-4835-4039-744E-C693766D31B5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Palm_Ctrl|Dionysus_Asset_Rig:FK_R_Palm_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger01_One_Jnt_CtrlShape_iog_0_";
+	rename -uid "7EDF2645-4124-85C0-F0DD-8EAEB79E772E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger01_Two_Jnt_CtrlShape_iog_0_";
+	rename -uid "28FA8E46-404D-34F4-01A4-3DBE60BD2E0C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger02_Three_Jnt_CtrlShape_iog_0_";
+	rename -uid "63A0548F-4DCF-E3E1-BCA7-55A3EEF9A93B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger01_Three_Jnt_CtrlShape_iog_0_";
+	rename -uid "593B2DFF-4E52-BF4E-E13F-B9BB27974DAF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger02_Two_Jnt_CtrlShape_iog_0_";
+	rename -uid "64495561-499A-AE56-ECE8-F782E77793B1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger02_One_Jnt_CtrlShape_iog_0_";
+	rename -uid "414372FA-4F2A-532D-3AF3-8A9CC6845310";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:FK_Arms|Dionysus_Asset_Rig:FK_R_Hand|Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl|Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Arm_Spinner_02_CtrlShape_iog_0_";
+	rename -uid "8AA9CC55-4EEC-A2A9-74F8-BC83E3A1C68B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl|Dionysus_Asset_Rig:L_Arm_Spinner_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Arm_Spinner_01_CtrlShape_iog_0_";
+	rename -uid "59FE7A5F-4102-5B1B-AB96-E8B2CF742E47";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl|Dionysus_Asset_Rig:L_Arm_Spinner_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Arm_IK_Base_CtrlShape_iog_0_";
+	rename -uid "1BAE561E-47EC-6593-7785-FCAC82076B8F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:IK_Arms|Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl|Dionysus_Asset_Rig:L_Arm_IK_Base_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Arm_IK_CtrlShape_iog_0_";
+	rename -uid "931B174B-441F-BD7C-604E-0EABAF98F634";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:IK_Arms|Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Dionysus_Asset_Rig:L_Arm_IK_Ctrl|Dionysus_Asset_Rig:L_Arm_IK_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Arm_PV_CtrlShape_iog_0_";
+	rename -uid "67B60DD3-45FA-6369-F092-9DAB0934C5E4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:IK_Arms|Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Dionysus_Asset_Rig:L_Arm_PV_Ctrl|Dionysus_Asset_Rig:L_Arm_PV_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Arm_IK_CtrlShape_iog_0_";
+	rename -uid "C41A9ABA-4ABB-F489-A94B-8081D2F2F21C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:IK_Arms|Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Dionysus_Asset_Rig:R_Arm_IK_Ctrl|Dionysus_Asset_Rig:R_Arm_IK_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Arm_IK_Base_CtrlShape_iog_0_";
+	rename -uid "85722212-4F72-EB8A-663D-849AC1C11341";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:IK_Arms|Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl|Dionysus_Asset_Rig:R_Arm_IK_Base_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Arm_IK_PV_CtrlShape_iog_0_";
+	rename -uid "10AE1B2E-441A-A3C7-1558-C884B4202803";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:IK_Arms|Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl|Dionysus_Asset_Rig:R_Arm_IK_PV_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Neck_05_CtrlShape_iog_0_";
+	rename -uid "BF574CA5-4981-3EB2-CBF3-9C9AEDFFBD93";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Dionysus_Asset_Rig:Neck_05_Ctrl|Dionysus_Asset_Rig:Neck_05_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Neck_04_CtrlShape_iog_0_";
+	rename -uid "9D59A439-4006-CB22-A9F8-559498BD9F62";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Dionysus_Asset_Rig:Neck_04_Ctrl|Dionysus_Asset_Rig:Neck_04_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Neck_03_CtrlShape_iog_0_";
+	rename -uid "E91F8A5B-4FB6-5A15-DC8F-C6B9E9700738";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Dionysus_Asset_Rig:Neck_03_Ctrl|Dionysus_Asset_Rig:Neck_03_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Neck_02_CtrlShape_iog_0_";
+	rename -uid "FACD1E1E-464D-1528-DA1C-D3861506026E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Dionysus_Asset_Rig:Neck_02_Ctrl|Dionysus_Asset_Rig:Neck_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Neck_01_CtrlShape_iog_0_";
+	rename -uid "8C95C09B-4BDA-0C2C-19A8-3B8C7381CB0A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Dionysus_Asset_Rig:Neck_01_Ctrl|Dionysus_Asset_Rig:Neck_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Clav_CtrlShape_iog_0_";
+	rename -uid "8C0E50C0-474B-A162-FA80-C5B4E345DE88";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Dionysus_Asset_Rig:R_Clav_Ctrl|Dionysus_Asset_Rig:R_Clav_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Clav_CtrlShape_iog_0_";
+	rename -uid "C2367E3C-4AD2-F9D2-B06A-A9859024DDA0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Dionysus_Asset_Rig:L_Clav_Ctrl|Dionysus_Asset_Rig:L_Clav_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Hand_Prop_CtrlShape_iog_0_";
+	rename -uid "1776CEA6-4529-9073-9FE7-70B8841CA9E4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:L_Hand_Prop_Ctrl|Dionysus_Asset_Rig:L_Hand_Prop_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Hand_Prop_CtrlShape_iog_0_";
+	rename -uid "8C4DDC96-4E91-C845-26C3-64AEC1A43C62";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl_Grp|Dionysus_Asset_Rig:R_Hand_Prop_Ctrl|Dionysus_Asset_Rig:R_Hand_Prop_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Prop_Shaft_Length_CtrlShape_iog_0_";
+	rename -uid "2BE34D13-4422-638A-D19B-A989ED0F1F19";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_Shaft_Length_Ctrl_Grp|Dionysus_Asset_Rig:Prop_Shaft_Length_Ctrl|Dionysus_Asset_Rig:Prop_Shaft_Length_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Prop_02_CtrlShape_iog_0_";
+	rename -uid "F7935030-4BCE-D97C-D2B4-F68CC7B3586E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Dionysus_Asset_Rig:Prop_02_Ctrl|Dionysus_Asset_Rig:Prop_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Prop_01_CtrlShape_iog_0_";
+	rename -uid "B242D3F8-4A9C-64F5-B4FE-7A93937B6582";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Prop_01_Ctrl_Grp|Dionysus_Asset_Rig:Prop_01_Ctrl|Dionysus_Asset_Rig:Prop_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape11_iog_0_";
+	rename -uid "389545CB-4D50-54BB-85BD-B2AEBD07297E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Hazard_Ctrl_Grp|Dionysus_Asset_Rig:Hazard_Ctrl|Dionysus_Asset_Rig:polyToCurveShape11.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape12_iog_0_";
+	rename -uid "EFDBBAED-4F56-EAA8-F420-F485661EB619";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Hazard_Ctrl_Grp|Dionysus_Asset_Rig:Hazard_Ctrl|Dionysus_Asset_Rig:polyToCurveShape12.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape13_iog_0_";
+	rename -uid "74DF2ADE-42B2-1722-092D-61B410B5097E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Hazard_Ctrl_Grp|Dionysus_Asset_Rig:Hazard_Ctrl|Dionysus_Asset_Rig:polyToCurveShape13.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape10_iog_0_";
+	rename -uid "98F3F1DB-4F4E-6C2E-318B-8182BB58EFDE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Question_Ctrl_Grp|Dionysus_Asset_Rig:Question_Ctrl|Dionysus_Asset_Rig:polyToCurveShape10.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape9_iog_0_";
+	rename -uid "3CEFF48F-46B6-8FC1-F6A2-439B1CAFB887";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Question_Ctrl_Grp|Dionysus_Asset_Rig:Question_Ctrl|Dionysus_Asset_Rig:polyToCurveShape9.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape8_iog_0_";
+	rename -uid "F3B7CBDA-4FB5-4C7A-15F8-679165091F23";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Loading_Ctrl_Grp|Dionysus_Asset_Rig:Loading_Ctrl|Dionysus_Asset_Rig:polyToCurveShape8.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape7_iog_0_";
+	rename -uid "72A724D5-454A-20FC-EA12-77934AD05EC1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Loading_Ctrl_Grp|Dionysus_Asset_Rig:Loading_Ctrl|Dionysus_Asset_Rig:polyToCurveShape7.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape6_iog_0_";
+	rename -uid "D9A7B9EA-41F8-1495-2E91-7FAEAF31A77F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Loading_Ctrl_Grp|Dionysus_Asset_Rig:Loading_Ctrl|Dionysus_Asset_Rig:polyToCurveShape6.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape5_iog_0_";
+	rename -uid "A84BDD04-4616-F0AE-EABC-96A383725329";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Loading_Ctrl_Grp|Dionysus_Asset_Rig:Loading_Ctrl|Dionysus_Asset_Rig:polyToCurveShape5.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape4_iog_0_";
+	rename -uid "39FCC16E-44B6-44F5-492A-8CA6D9262850";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Loading_Ctrl_Grp|Dionysus_Asset_Rig:Loading_Ctrl|Dionysus_Asset_Rig:polyToCurveShape4.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape3_iog_0_";
+	rename -uid "C4263294-4C90-8F12-A417-2DA5CE360074";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Loading_Ctrl_Grp|Dionysus_Asset_Rig:Loading_Ctrl|Dionysus_Asset_Rig:polyToCurveShape3.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape2_iog_0_";
+	rename -uid "EE3C97C6-4925-189A-BECF-04986B17423D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Loading_Ctrl_Grp|Dionysus_Asset_Rig:Loading_Ctrl|Dionysus_Asset_Rig:polyToCurveShape2.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape1_iog_0_";
+	rename -uid "72357881-4E2D-5E64-3570-3C9DCF870876";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Loading_Ctrl_Grp|Dionysus_Asset_Rig:Loading_Ctrl|Dionysus_Asset_Rig:polyToCurveShape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Two_Handed_Prop_CtrlShape_iog_0_";
+	rename -uid "EA32DBAC-4CD2-79B8-B903-198DA662C02E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl|Dionysus_Asset_Rig:Two_Handed_Prop_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Cylinder_BlendShape_iog_0__og_0_";
+	rename -uid "C6B16DBE-4EFC-F652-8E91-FD9B2843B9E2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:R_Cylinder_Blend|Dionysus_Asset_Rig:R_Cylinder_BlendShape.instObjGroups[0].objectGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Cylinder_BlendShape_iog_0__og_0_";
+	rename -uid "744FF641-4B8E-FD25-A740-D898AD31A812";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:L_Cylinder_Blend|Dionysus_Asset_Rig:L_Cylinder_BlendShape.instObjGroups[0].objectGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_ArrowShape_iog_0_";
+	rename -uid "527CF22D-440D-49D1-BC2C-698CEFFA2EB2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Arrow|Dionysus_Asset_Rig:Left_Eye_ArrowShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:pasted__surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_ArrowShapeOrig_iog_0_";
+	rename -uid "BC81D91D-431E-13A8-F3D2-3EAA82045A59";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Arrow|Dionysus_Asset_Rig:Left_Eye_ArrowShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_ArrowShapeOrig1_iog_0_";
+	rename -uid "9BFFEE01-4074-2624-14D9-4D8C6B31F4F9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Arrow|Dionysus_Asset_Rig:Left_Eye_ArrowShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Right_Eye_ArrowShape_iog_0_";
+	rename -uid "6383BF32-423C-60F9-59FC-E28902E39EF6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Arrow|Dionysus_Asset_Rig:Right_Eye_ArrowShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:pasted__surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Right_Eye_ArrowShapeOrig_iog_0_";
+	rename -uid "CD05EFDA-45C8-D3D6-FBF3-3F90432D452A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Arrow|Dionysus_Asset_Rig:Right_Eye_ArrowShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Right_Eye_BoredShape_iog_0_";
+	rename -uid "1A78A417-46FF-7959-4CD2-A18BD717564C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Bored|Dionysus_Asset_Rig:Right_Eye_BoredShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:pasted__surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Right_Eye_BoredShapeOrig_iog_0_";
+	rename -uid "5E6CC1F5-4B60-8AB1-11F7-9794A4C00409";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Bored|Dionysus_Asset_Rig:Right_Eye_BoredShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_BoredShape_iog_0_";
+	rename -uid "C40069F6-4887-8A7B-D109-A1A5D186BDDB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Bored|Dionysus_Asset_Rig:Left_Eye_BoredShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:pasted__surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_BoredShapeOrig_iog_0_";
+	rename -uid "B693600E-4952-E6BC-16A5-1CBFE7491D12";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Bored|Dionysus_Asset_Rig:Left_Eye_BoredShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_BoredShapeOrig1_iog_0_";
+	rename -uid "55554A74-463F-E365-DF7A-AAB06C3A1C29";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Bored|Dionysus_Asset_Rig:Left_Eye_BoredShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Right_Eye_SmirkShape_iog_0_";
+	rename -uid "019E1BB9-4C9D-7686-8DA6-9E8FD1F71C7B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Smirk|Dionysus_Asset_Rig:Right_Eye_SmirkShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:pasted__surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Right_Eye_SmirkShapeOrig_iog_0_";
+	rename -uid "185B12CE-43D1-A6D7-DA89-FB972CF6B51D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Smirk|Dionysus_Asset_Rig:Right_Eye_SmirkShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_SmirkShape_iog_0_";
+	rename -uid "859175BF-43E6-9055-7C90-35B02195B0A1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Smirk|Dionysus_Asset_Rig:Left_Eye_SmirkShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:pasted__surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_SmirkShapeOrig_iog_0_";
+	rename -uid "E7B941D0-4F08-8007-9783-4D9625B4DE10";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Smirk|Dionysus_Asset_Rig:Left_Eye_SmirkShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_SmirkShapeOrig1_iog_0_";
+	rename -uid "66CB8052-43EC-5DB4-D0AA-448CEEF4E5E6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Smirk|Dionysus_Asset_Rig:Left_Eye_SmirkShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Mouth_BoredShape_iog_0_";
+	rename -uid "82ADC05A-4356-17FC-D7A4-D2814DE9A631";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Bored|Dionysus_Asset_Rig:Mouth_BoredShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:pasted__surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Mouth_BoredShapeOrig_iog_0_";
+	rename -uid "C9194182-446B-05A3-09C0-3FB3ACD11271";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Bored|Dionysus_Asset_Rig:Mouth_BoredShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Mouth_SmirkShape_iog_0_";
+	rename -uid "0045E4A6-4A5A-41E6-3F23-D1AD8E215E93";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Smirk|Dionysus_Asset_Rig:Mouth_SmirkShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:pasted__surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Mouth_SmirkShapeOrig_iog_0_";
+	rename -uid "95D8F9EE-4768-229E-D336-A9884009BE5B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Smirk|Dionysus_Asset_Rig:Mouth_SmirkShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_DeterminedShape_iog_0_";
+	rename -uid "15DB6A85-4758-F6B3-5AD8-FA936A132B8A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Determined|Dionysus_Asset_Rig:Left_Eye_DeterminedShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:pasted__surfaceShader3SG";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_DeterminedShapeOrig_iog_0_";
+	rename -uid "FA81D3E7-439D-A420-43B2-9C9A2024A1DD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Determined|Dionysus_Asset_Rig:Left_Eye_DeterminedShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Left_Eye_DeterminedShapeOrig1_iog_0_";
+	rename -uid "E7DF5B57-45AC-EBFA-191A-E790AC6F8495";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Determined|Dionysus_Asset_Rig:Left_Eye_DeterminedShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Right_Eye_DeterminedShape_iog_0_";
+	rename -uid "2C8D605F-4D08-AF1D-582B-6B9D702ACCD3";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Determined|Dionysus_Asset_Rig:Right_Eye_DeterminedShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Dionysus_Asset_Rig:pasted__surfaceShader3SG";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_Right_Eye_DeterminedShapeOrig_iog_0_";
+	rename -uid "2E860F90-422E-AACA-23D1-49A99DC7C8B1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Determined|Dionysus_Asset_Rig:Right_Eye_DeterminedShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Upper_AimShape_iog_0_";
+	rename -uid "8C1853E4-4B89-91CE-EDC6-779F01A07B86";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:L_Locators|Dionysus_Asset_Rig:L_Upper_Aim_Grp|Dionysus_Asset_Rig:L_Upper_Aim|Dionysus_Asset_Rig:L_Upper_AimShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Upper_TargetShape_iog_0_";
+	rename -uid "68DF5163-49EE-062D-0225-E29DFED1CE70";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:L_Locators|Dionysus_Asset_Rig:L_Upper_Aim_Grp|Dionysus_Asset_Rig:L_Upper_Target|Dionysus_Asset_Rig:L_Upper_TargetShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Upper_UpShape_iog_0_";
+	rename -uid "4F95B870-4293-9C49-2E8F-A6BF50F0727E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:L_Locators|Dionysus_Asset_Rig:L_Upper_Aim_Grp|Dionysus_Asset_Rig:L_Upper_Up|Dionysus_Asset_Rig:L_Upper_UpShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Lower_AimShape_iog_0_";
+	rename -uid "AD7A888B-4F6F-40E4-50C9-51B9B493A390";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:L_Locators|Dionysus_Asset_Rig:L_Lower_Aim_Grp|Dionysus_Asset_Rig:L_Lower_Aim|Dionysus_Asset_Rig:L_Lower_AimShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Lower_TargetShape_iog_0_";
+	rename -uid "EF120E8F-4C31-3BDD-3237-518B08D1972A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:L_Locators|Dionysus_Asset_Rig:L_Lower_Aim_Grp|Dionysus_Asset_Rig:L_Lower_Target|Dionysus_Asset_Rig:L_Lower_TargetShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Lower_UpShape_iog_0_";
+	rename -uid "98CEA4B3-4F16-F81B-10E9-709966E46CAF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:L_Locators|Dionysus_Asset_Rig:L_Lower_Aim_Grp|Dionysus_Asset_Rig:L_Lower_Up|Dionysus_Asset_Rig:L_Lower_UpShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_L_Collar_LocatorShape_iog_0_";
+	rename -uid "A5DDD407-45D8-FE07-E3C6-6FB3C8D0B7F6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:L_Locators|Dionysus_Asset_Rig:L_Collar_Locator_Grp|Dionysus_Asset_Rig:L_Collar_Locator|Dionysus_Asset_Rig:L_Collar_LocatorShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Lower_AimShape_iog_0_";
+	rename -uid "CFCC8AC6-424F-594E-66F8-C0B68E318E92";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:R_Locators|Dionysus_Asset_Rig:R_Lower_Aim_Grp|Dionysus_Asset_Rig:R_Lower_Aim|Dionysus_Asset_Rig:R_Lower_AimShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Lower_TargetShape_iog_0_";
+	rename -uid "6E57D404-41BE-961E-D46A-16B4CCD2A2A6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:R_Locators|Dionysus_Asset_Rig:R_Lower_Aim_Grp|Dionysus_Asset_Rig:R_Lower_Target|Dionysus_Asset_Rig:R_Lower_TargetShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Lower_UpShape_iog_0_";
+	rename -uid "A0D0A98C-4D7A-41AA-EA91-8D83D0A2CEC6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:R_Locators|Dionysus_Asset_Rig:R_Lower_Aim_Grp|Dionysus_Asset_Rig:R_Lower_Up|Dionysus_Asset_Rig:R_Lower_UpShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Upper_AimShape_iog_0_";
+	rename -uid "6049AF41-445E-277A-63F3-DB92E98DE6D5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:R_Locators|Dionysus_Asset_Rig:R_Upper_Aim_Grp|Dionysus_Asset_Rig:R_Upper_Aim|Dionysus_Asset_Rig:R_Upper_AimShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Upper_TargetShape_iog_0_";
+	rename -uid "9AF029AF-4EA3-3CF3-56E1-8D9514D34214";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:R_Locators|Dionysus_Asset_Rig:R_Upper_Aim_Grp|Dionysus_Asset_Rig:R_Upper_Target|Dionysus_Asset_Rig:R_Upper_TargetShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Upper_UpShape_iog_0_";
+	rename -uid "B1DCBA45-4CC2-F227-819C-9F988F90B1CD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:R_Locators|Dionysus_Asset_Rig:R_Upper_Aim_Grp|Dionysus_Asset_Rig:R_Upper_Up|Dionysus_Asset_Rig:R_Upper_UpShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Dionysus_Asset_Rig_R_Collar_LocatorShape_iog_0_";
+	rename -uid "2E3B92DF-411C-B461-9488-64B283F7ECA9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Locators|Dionysus_Asset_Rig:R_Locators|Dionysus_Asset_Rig:R_Collar_Locator_Grp|Dionysus_Asset_Rig:R_Collar_Locator|Dionysus_Asset_Rig:R_Collar_LocatorShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_HoseShape_iog_0_";
+	rename -uid "79621C46-40F4-E527-EA3F-45B1AFD4DC06";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:set418";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_HoseShapeOrig1_iog_0_";
+	rename -uid "06370BE3-4EE2-E4EB-5455-2D8D25E29066";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_HoseShape_iog_0_";
+	rename -uid "ED2AC518-485D-8F55-C493-689D817D9869";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:set418";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_HoseShapeOrig1_iog_0_";
+	rename -uid "FD603CD2-4975-E584-C1D5-91891BBD147F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_MainArmGeoShape_ciog_0__cog_1_";
+	rename -uid "ED448DB4-4438-819E-D2BE-7A849BFF21BD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.compInstObjGroups[0].compObjectGroups[1]";
+	setAttr ".sen" -type "string" "Apollo:set417";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_MainArmGeoShape_iog_0__og_45_";
+	rename -uid "395B429D-46DA-6E4C-BA0E-A3A2351F3548";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups[0].objectGroups[45]";
+	setAttr ".sen" -type "string" "Apollo:set418";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_MainArmGeoShape_iog_0__og_46_";
+	rename -uid "289BBF9B-4787-8E78-F1E0-FB9D9F23CC76";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups[0].objectGroups[46]";
+	setAttr ".sen" -type "string" "Apollo:standardSurface10SG";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_MainArmGeoShapeOrig_iog_0_";
+	rename -uid "4D3FBCD5-47D8-81B6-C3DD-B790EEFDAFDE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_TreadsBaseShape_iog_0_";
+	rename -uid "6FD4D7ED-47D3-8E0D-19F6-6CA71E2D4758";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:set418";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_TreadsBaseShapeOrig_iog_0_";
+	rename -uid "69B812D4-4E9A-9CE0-1206-7D9859B049E4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_BlendShapeShape_iog_0_";
+	rename -uid "F1A8D010-45D3-3443-B1A8-74831901C739";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:BlendShape|Apollo:BlendShapeShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Tread_Wire_CurveShape_iog_0_";
+	rename -uid "27A5B1E5-4125-9668-D086-5A944D076769";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Wire_Curve|Apollo:L_Tread_Wire_CurveShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Tread_Wire_CurveShapeOrig1_iog_0_";
+	rename -uid "2834D843-46FE-9EC5-48C5-FC88E3DD6FCE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Wire_Curve|Apollo:L_Tread_Wire_CurveShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Tread_Wire_Base_CurveShape_iog_0_";
+	rename -uid "CCD4A50C-41F2-AC0B-0FE9-0DBCF91D2A82";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Wire_Base_Curve|Apollo:L_Tread_Wire_Base_CurveShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_LeftTreadGeoShape_iog_0_";
+	rename -uid "CA3418C5-490F-5828-895B-1C8FFAF682BE";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:set414";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_LeftTreadGeoShapeOrig1_iog_0_";
+	rename -uid "BDAC15DD-4D36-3D5F-873A-E4A436E18EE1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_BlendShapeShape_iog_0_1";
+	rename -uid "2F644068-4D65-FD06-E03C-E6960760B768";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:BlendShape|Apollo:BlendShapeShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Tread_Wire_CurveShape_iog_0_";
+	rename -uid "DEC40E96-4284-CBC8-DEFD-948DE08F6AFC";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Wire_Curve|Apollo:R_Tread_Wire_CurveShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Tread_Wire_CurveShapeOrig2_iog_0_";
+	rename -uid "F0917142-44B3-B5AA-7223-6EBFB897083D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Wire_Curve|Apollo:R_Tread_Wire_CurveShapeOrig2.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Tread_Wire_Base_CurveShape_iog_0_";
+	rename -uid "A00B9E15-453F-DC45-7575-228DDED619D9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Wire_Base_Curve|Apollo:R_Tread_Wire_Base_CurveShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_RightTreadGeoShape_iog_0_";
+	rename -uid "680A9A3A-435A-58F8-6A25-16958FEF4CF4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:set414";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_RightTreadGeoShapeOrig2_iog_0_";
+	rename -uid "7B6E269B-4ECF-5576-7F17-7D9514C75FC7";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShapeOrig2.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_EyeShape_iog_0_";
+	rename -uid "95D2EF40-459D-66BE-634A-5E9B8DFBF906";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader3SG";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_EyeShapeOrig_iog_0_";
+	rename -uid "36ABBB81-47AD-050F-41EB-4DB0916CA50C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye3ShapeOrig_iog_0_";
+	rename -uid "12AC849B-463F-AE59-7F5E-1BB0CC26996B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye3|Apollo:Right_Eye3ShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye4ShapeOrig_iog_0_";
+	rename -uid "B63CBB1F-46EE-7FBF-5511-B9ADF41CE1A0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye4|Apollo:Right_Eye4ShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_EyeShape_iog_0_";
+	rename -uid "A8370F0E-46DF-FD5F-59DB-CD9D00D5DD08";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader3SG";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_EyeShapeOrig_iog_0_";
+	rename -uid "B0C72C07-4B34-1B8C-BBA6-FCAED4E65DCC";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_EyeShapeOrig1_iog_0_";
+	rename -uid "67798D58-4164-BB20-135F-84B4E82CD2BA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Face_GlassShape1_iog_0_";
+	rename -uid "1116F205-416F-2F0C-EEE7-92BD24A7F6B7";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:standardSurface8SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_areaLightShape1_iog_0_";
+	rename -uid "7967A817-460B-9BCD-A5FF-1D85C78DEFC1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:areaLight1|Apollo:areaLightShape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_MouthShape_iog_0_";
+	rename -uid "6B96ACE7-4914-E08F-3119-1AB47CB35141";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader3SG";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_MouthShapeOrig_iog_0_";
+	rename -uid "D50B1AFB-48BA-2EC1-F9CF-4585FF1FBA4D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Exclamation_PointShape_iog_0__og_0_";
+	rename -uid "1A4F8E9F-4F8B-D0A8-5CB2-608BA69DA85D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:polySurface733SG";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Eye_X_2Shape_iog_0__og_0_";
+	rename -uid "CAB6304C-46F4-F46F-0F96-FD991F815BDF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader3SG";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Eye_X_1Shape_iog_0__og_0_";
+	rename -uid "4926E6D8-4621-FC3F-1688-1D9DA5FF5290";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader3SG";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_Open_ShapeOrig_iog_0_";
+	rename -uid "2FAA9C8F-4527-086F-87B3-6CB997274032";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_ShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_Open_Shape1_iog_0_";
+	rename -uid "369CB0A4-4D63-5A99-D5B4-BE8CF8EA79F6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_Squint_ShapeOrig_iog_0_";
+	rename -uid "A7B9711C-43F9-FF03-93EC-A09F2A052DBD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_ShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_Squint_ShapeOrig1_iog_0_";
+	rename -uid "195EE54F-4674-1F9D-4989-8A924C57483F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_ShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_Squint_Shape1_iog_0_";
+	rename -uid "967136C6-4CDE-F655-642D-269E1E67FACA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_Shape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_Close_ShapeOrig_iog_0_";
+	rename -uid "256E2359-4239-6D38-3A36-D69CD24DBC02";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_ShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_Close_Shape1_iog_0_";
+	rename -uid "F8B5DA5E-4A11-71BA-5A1D-E09BF459A5D7";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_Shape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_Sad_ShapeOrig_iog_0_";
+	rename -uid "E9EDC8C5-46DF-CEBE-5610-05A4218CCD71";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_ShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_Sad_Shape1_iog_0_";
+	rename -uid "9A1176C4-4EE9-E9B4-2032-9DB88B7A87BA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_Shape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_SadShape_iog_0__og_0_";
+	rename -uid "2CE0A9BF-44F5-E09E-599E-A0B3ED2464D4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_CloseShape_iog_0__og_0_";
+	rename -uid "ED51422C-4F88-3AF2-2972-3F874CA71258";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_SquintShape_iog_0__og_0_";
+	rename -uid "8BD7AE99-4E48-17B9-4A7D-6CA9996F8D72";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_OpenShape_iog_0__og_0_";
+	rename -uid "AA1A1E63-42B2-3DCD-22AD-28996BAA1D08";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_ArrowShape_iog_0_";
+	rename -uid "954BADCA-4D8E-1FB6-1080-BAA2BD037972";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_ArrowShapeOrig_iog_0_";
+	rename -uid "3F591419-4852-4C1E-E756-D3BD0A55D1C9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_ArrowShapeOrig1_iog_0_";
+	rename -uid "23C44CC4-4D33-8261-BC33-369F67498FCF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_ArrowShapeOrig2_iog_0_";
+	rename -uid "C7698B1B-4DA6-C2F2-BD9A-AE96B6F2AA97";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShapeOrig2.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_BoredShape_iog_0_";
+	rename -uid "0C8A0D7A-4032-CB62-A175-3E9C953449C4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_BoredShapeOrig_iog_0_";
+	rename -uid "5193E3D6-495D-6FA7-E4A5-658F20BD34AA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_BoredShapeOrig1_iog_0_";
+	rename -uid "6AA01331-4963-A9EF-B665-B9AE9DAC3972";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_BoredShapeOrig2_iog_0_";
+	rename -uid "C35F7110-4664-C591-9058-598941AC7F0C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShapeOrig2.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_DeterminedShape_iog_0_";
+	rename -uid "AAF06742-40A3-4BD5-07FF-1EA2D1226E3F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader3SG";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_DeterminedShapeOrig_iog_0_";
+	rename -uid "C80FF0F2-405A-D3AF-480D-74A967CE3975";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_DeterminedShapeOrig1_iog_0_";
+	rename -uid "73F88DB7-4F9E-F32D-FE0D-B48780751568";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_SmirkShape_iog_0_";
+	rename -uid "737557CD-4728-9A30-208C-BEA4132E8796";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader3SG";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_SmirkShapeOrig_iog_0_";
+	rename -uid "9C65A0C6-4A03-E977-E781-A281FF5B1D17";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Left_Eye_SmirkShapeOrig2_iog_0_";
+	rename -uid "2E3A2B87-490B-2E6E-B638-B19B13D6CBF3";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShapeOrig2.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Eye_OpenShape_iog_0__og_0_";
+	rename -uid "3219ABE5-4CB9-521D-FF71-13848AF6C3CB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Eye_OpenShapeOrig_iog_0_";
+	rename -uid "F1D6BD76-40F9-3660-271E-58A74320A313";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Eye_SadShape_iog_0__og_0_";
+	rename -uid "23AFDA24-48C3-AA8D-475B-338E0DCDB103";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Sad|Apollo:R_Eye_SadShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Eye_SadShapeOrig_iog_0_";
+	rename -uid "A606B5E3-4E71-82EF-6866-77B936EAF7DA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Sad|Apollo:R_Eye_SadShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Eye_CloseShape_iog_0__og_0_";
+	rename -uid "2E188DC8-4B27-6C97-AD19-808A8C36450F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Close|Apollo:R_Eye_CloseShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Eye_CloseShapeOrig_iog_0_";
+	rename -uid "2F022E68-482C-BFCB-ADE8-72A6B02A248D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Close|Apollo:R_Eye_CloseShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Eye_SquintShape_iog_0__og_0_";
+	rename -uid "B21F0F87-4E48-1B0E-FB3D-258F82F88257";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Squint|Apollo:R_Eye_SquintShape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Eye_SquintShapeOrig_iog_0_";
+	rename -uid "51408E93-4050-9E8D-FFA3-AE9529B48D63";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Squint|Apollo:R_Eye_SquintShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Eye_SquintShapeOrig1_iog_0_";
+	rename -uid "284B906D-4FD1-55FF-53F3-E89B6C176D4C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Squint|Apollo:R_Eye_SquintShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_BoredShape_iog_0_";
+	rename -uid "92B97DD2-4619-E791-87AB-5EAEB7675114";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Bored|Apollo:Right_Eye_BoredShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_BoredShapeOrig_iog_0_";
+	rename -uid "074DF2F5-4138-E97C-8CB7-06BDA8EFBABA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Bored|Apollo:Right_Eye_BoredShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_BoredShapeOrig1_iog_0_";
+	rename -uid "F3B7E7A1-41F9-CEFB-A44F-5487332CCC2A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Bored|Apollo:Right_Eye_BoredShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_BoredShapeOrig2_iog_0_";
+	rename -uid "251F7EE8-4CC4-0C8D-D7B2-378904DB8046";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Bored|Apollo:Right_Eye_BoredShapeOrig2.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_SmirkShape_iog_0_";
+	rename -uid "58FAFD72-44F3-1CCA-40B3-80802370056F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Smirk|Apollo:Right_Eye_SmirkShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_SmirkShapeOrig_iog_0_";
+	rename -uid "B25DADD4-4E27-B2CA-220F-02BFBBC38FBD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Smirk|Apollo:Right_Eye_SmirkShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_SmirkShapeOrig1_iog_0_";
+	rename -uid "C4C46EAC-49A0-8E31-BB6D-34B1638A94AB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Smirk|Apollo:Right_Eye_SmirkShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_ArrowShape_iog_0_";
+	rename -uid "9C0D6661-485C-A76A-04BC-8FA70F9904F1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Arrow|Apollo:Right_Eye_ArrowShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_ArrowShapeOrig_iog_0_";
+	rename -uid "752CEDA0-4B44-D49B-34C2-65A3B30CBD75";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Arrow|Apollo:Right_Eye_ArrowShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_ArrowShapeOrig1_iog_0_";
+	rename -uid "8FD7DB39-43FA-B1EA-7A3B-0CAFD410A401";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Arrow|Apollo:Right_Eye_ArrowShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_DeterminedShape_iog_0_";
+	rename -uid "3A18F051-4467-64FD-78A0-B3B7B2C00101";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Determined|Apollo:Right_Eye_DeterminedShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader3SG";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Right_Eye_DeterminedShapeOrig_iog_0_";
+	rename -uid "9A013FBC-491D-A4BA-2801-489431F3D53A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Determined|Apollo:Right_Eye_DeterminedShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_NeutralShape_iog_0_";
+	rename -uid "44CE708E-46E4-FD8D-874A-128DF82B7E72";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_OoohShape_iog_0_";
+	rename -uid "0ECC0981-4486-323E-2512-52841803AB80";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Mouth_SmirkShape_iog_0_";
+	rename -uid "27B2F12E-496D-D6D3-766E-C3A3C91F65B1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Mouth_SmirkShapeOrig_iog_0_";
+	rename -uid "E7002386-4C2B-92FE-F3CB-F084B56A9187";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Mouth_SmirkShapeOrig1_iog_0_";
+	rename -uid "6D441388-4AA1-205C-1E04-FAA257082393";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Mouth_BoredShape_iog_0_";
+	rename -uid "5886E4A3-43B4-74D9-4934-838F00D30F7C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.instObjGroups[0]";
+	setAttr ".sen" -type "string" "Apollo:surfaceShader1SG4";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Mouth_BoredShapeOrig_iog_0_";
+	rename -uid "F186FB20-46E3-B2E2-5534-09A3A7D415D5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Mouth_BoredShapeOrig1_iog_0_";
+	rename -uid "36BCC75F-4BC1-EE09-9923-6E9AB6A9D691";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShapeOrig1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Transform_CtrlShape_iog_0_";
+	rename -uid "94E681E0-4CF0-4EDB-6051-50A19055C9C6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Transform_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Cog_Jnt_CtrlShape_iog_0_";
+	rename -uid "BBDE7EEC-4E8F-EE01-5513-8BB1C67EE442";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Cog_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_13_CtrlShape_iog_0_";
+	rename -uid "25C62420-449B-2229-6D46-1EB758CF0649";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl|Apollo:L_Hose_IK_Jnt_13_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster15HandleShape_iog_0_";
+	rename -uid "6B49B0D4-4213-1CE7-C828-C185075E2BEB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl|Apollo:group13|Apollo:cluster15Handle|Apollo:cluster15HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_13_CtrlShapeOrig_iog_0_";
+	rename -uid "7622D542-47FC-EBC3-59A7-7982877456A1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl|Apollo:L_Hose_IK_Jnt_13_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_12_CtrlShape_iog_0_";
+	rename -uid "AD13FF46-4576-7461-A2F7-1DA339F1C578";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl|Apollo:L_Hose_IK_Jnt_12_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster12HandleShape_iog_0_";
+	rename -uid "908E9088-48BB-BC8E-DEBE-CD963E72E5F9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl|Apollo:group12|Apollo:cluster12Handle|Apollo:cluster12HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_12_CtrlShapeOrig_iog_0_";
+	rename -uid "C6F41FFE-4CF9-620F-52D8-5DA72469622C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl|Apollo:L_Hose_IK_Jnt_12_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_11_CtrlShape_iog_0_";
+	rename -uid "70FD058F-4C51-C0D2-B883-CA8600919EFF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl|Apollo:L_Hose_IK_Jnt_11_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster11HandleShape_iog_0_";
+	rename -uid "855D6378-48FA-0AF6-7F34-5C81566738AA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl|Apollo:group11|Apollo:cluster11Handle|Apollo:cluster11HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_11_CtrlShapeOrig_iog_0_";
+	rename -uid "9DA14C87-450E-49D0-E96A-F4891AA890CA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl|Apollo:L_Hose_IK_Jnt_11_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_10_CtrlShape_iog_0_";
+	rename -uid "9E5362C4-428E-F363-9BC6-7EA9534A8E45";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl|Apollo:L_Hose_IK_Jnt_10_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster10HandleShape_iog_0_";
+	rename -uid "3BA4CC6F-4A9B-64F3-F732-E29B1BD873B8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl|Apollo:group10|Apollo:cluster10Handle|Apollo:cluster10HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_10_CtrlShapeOrig_iog_0_";
+	rename -uid "69495461-442C-E15B-B903-8E9EB5896896";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl|Apollo:L_Hose_IK_Jnt_10_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_09_CtrlShape_iog_0_";
+	rename -uid "B43FB9A4-44E8-0E35-B1DE-2EB648B9500A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl|Apollo:L_Hose_IK_Jnt_09_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster9HandleShape_iog_0_";
+	rename -uid "F99C83BE-48F0-D35D-BEA0-BBA999672E24";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl|Apollo:group9|Apollo:cluster9Handle|Apollo:cluster9HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_09_CtrlShapeOrig_iog_0_";
+	rename -uid "1F7A6708-41B0-90E2-C24C-479854B2C425";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl|Apollo:L_Hose_IK_Jnt_09_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_08_CtrlShape_iog_0_";
+	rename -uid "0FF3119A-4632-D784-76AE-EDB97F5C4C3E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl|Apollo:L_Hose_IK_Jnt_08_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster8HandleShape_iog_0_";
+	rename -uid "EDA3DFB5-427A-0043-7D28-C5ADD9262937";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl|Apollo:group8|Apollo:cluster8Handle|Apollo:cluster8HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_08_CtrlShapeOrig_iog_0_";
+	rename -uid "61D1E6E9-4AF1-24CC-D1C9-58A253A26E90";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl|Apollo:L_Hose_IK_Jnt_08_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_07_CtrlShape_iog_0_";
+	rename -uid "75C3A523-44FB-95B8-17B6-5D8C50BA33B5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl|Apollo:L_Hose_IK_Jnt_07_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster7HandleShape_iog_0_";
+	rename -uid "67EDAE91-4F15-F310-4DA7-728AEEF3A692";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl|Apollo:group7|Apollo:cluster7Handle|Apollo:cluster7HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_07_CtrlShapeOrig_iog_0_";
+	rename -uid "9E724B5E-4DD6-0E25-0898-9888D8ACA0E2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl|Apollo:L_Hose_IK_Jnt_07_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_06_CtrlShape_iog_0_";
+	rename -uid "C0D00DAA-43A9-3FA4-BFD2-4B9FA52B1FC7";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl|Apollo:L_Hose_IK_Jnt_06_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster6HandleShape_iog_0_";
+	rename -uid "EAC5D49A-436C-6DC6-0DD0-0C87C7DE2E2F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl|Apollo:group6|Apollo:cluster6Handle|Apollo:cluster6HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_06_CtrlShapeOrig_iog_0_";
+	rename -uid "1685D73D-4932-2F5D-AD41-6A8D909260FF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl|Apollo:L_Hose_IK_Jnt_06_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_05_CtrlShape_iog_0_";
+	rename -uid "7281D3DC-4A60-C541-48F5-BAB06A417673";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl|Apollo:L_Hose_IK_Jnt_05_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster5HandleShape_iog_0_";
+	rename -uid "12873FDD-4C4E-601B-5A58-75A42D4BEDD5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl|Apollo:group5|Apollo:cluster5Handle|Apollo:cluster5HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_05_CtrlShapeOrig_iog_0_";
+	rename -uid "18465D75-4FCE-B86D-4F66-7CA27CB4015C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl|Apollo:L_Hose_IK_Jnt_05_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_04_CtrlShape_iog_0_";
+	rename -uid "389B2120-4E70-3753-1164-209A72F759A6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl|Apollo:L_Hose_IK_Jnt_04_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster4HandleShape_iog_0_";
+	rename -uid "8D9EFC24-4024-ED01-39D0-378F01403022";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl|Apollo:group4|Apollo:cluster4Handle|Apollo:cluster4HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_04_CtrlShapeOrig_iog_0_";
+	rename -uid "607D856D-443E-DFE7-5E87-48A5D5C0303F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl|Apollo:L_Hose_IK_Jnt_04_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_03_CtrlShape_iog_0_";
+	rename -uid "E9F34E5E-41CE-0000-F6B3-A895964E2481";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl|Apollo:L_Hose_IK_Jnt_03_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster3HandleShape_iog_0_";
+	rename -uid "C08A508C-42BB-7257-0075-CD88E271036D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl|Apollo:group3|Apollo:cluster3Handle|Apollo:cluster3HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_03_CtrlShapeOrig_iog_0_";
+	rename -uid "1E01AFBC-42C7-E976-4CA8-0D98CB9BEB61";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl|Apollo:L_Hose_IK_Jnt_03_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "5A6CB442-4069-1F76-D44F-B189D63C1846";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl|Apollo:L_Hose_IK_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster2HandleShape_iog_0_";
+	rename -uid "431C3C7B-482A-29AD-AB91-838747DB8B28";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl|Apollo:group2|Apollo:cluster2Handle|Apollo:cluster2HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_02_CtrlShapeOrig_iog_0_";
+	rename -uid "B16F2F47-4512-D575-9FD8-60AAB443B8BF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl|Apollo:L_Hose_IK_Jnt_02_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "70EA4D43-4E16-DE4B-4448-72B12D43A6A9";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl|Apollo:L_Hose_IK_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster14HandleShape_iog_0_";
+	rename -uid "139FF5F4-4594-6ADC-9CF4-93A7B27E9B6E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl|Apollo:group1|Apollo:cluster14Handle|Apollo:cluster14HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_Jnt_01_CtrlShapeOrig_iog_0_";
+	rename -uid "7D00AE85-455C-C67B-4B71-379E9F6BDCE1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl|Apollo:L_Hose_IK_Jnt_01_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_Swing_CtrlShape_iog_0_";
+	rename -uid "4E7144E9-449E-C1E3-BEF6-2DA7B092565A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_Swing_Ctrl|Apollo:L_Hose_Swing_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_SwingDeformerShape_iog_0_";
+	rename -uid "E6EF9BF0-407B-B638-F9F2-44B1EE524AC3";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_SwingDeformer|Apollo:L_SwingDeformerShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_13_CtrlShape_iog_0_";
+	rename -uid "63C04F1F-4125-6175-8770-5AB54F9A42E0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl|Apollo:R_Hose_IK_Jnt_13_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster16HandleShape_iog_0_";
+	rename -uid "F28E9D73-402D-DA20-9B0A-0885E7041ACF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl|Apollo:group14|Apollo:cluster16Handle|Apollo:cluster16HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_13_CtrlShapeOrig_iog_0_";
+	rename -uid "323DB3CF-4611-CF0D-9EE6-22B1EF41969F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl|Apollo:R_Hose_IK_Jnt_13_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_12_CtrlShape_iog_0_";
+	rename -uid "69419D0A-40CB-47C9-E49A-78985252699D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl|Apollo:R_Hose_IK_Jnt_12_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster17HandleShape_iog_0_";
+	rename -uid "135A882B-4B8D-7720-7735-06984241925E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl|Apollo:group18|Apollo:cluster17Handle|Apollo:cluster17HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_12_CtrlShapeOrig_iog_0_";
+	rename -uid "0D1703B0-4F4D-218C-FEF1-3893CF3E2F94";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl|Apollo:R_Hose_IK_Jnt_12_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_11_CtrlShape_iog_0_";
+	rename -uid "4CA62ED1-43CE-8A3D-B308-ACBE7AEDE450";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl|Apollo:R_Hose_IK_Jnt_11_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster18HandleShape_iog_0_";
+	rename -uid "E0348AF0-40DD-D502-7F19-DFAAFAB1741F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl|Apollo:group15|Apollo:cluster18Handle|Apollo:cluster18HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_11_CtrlShapeOrig_iog_0_";
+	rename -uid "0477864E-4EFB-15C3-D64A-729CC8FF529A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl|Apollo:R_Hose_IK_Jnt_11_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_10_CtrlShape_iog_0_";
+	rename -uid "AECD07B7-4C46-AFA8-73A8-A2899363E10D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl|Apollo:R_Hose_IK_Jnt_10_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster19HandleShape_iog_0_";
+	rename -uid "0E7B9419-4DEC-8490-C081-9E9B302D39A0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl|Apollo:group16|Apollo:cluster19Handle|Apollo:cluster19HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_10_CtrlShapeOrig_iog_0_";
+	rename -uid "952BE302-486F-DC0A-B722-FF9B735AD41A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl|Apollo:R_Hose_IK_Jnt_10_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_09_CtrlShape_iog_0_";
+	rename -uid "DF6C6D46-484E-4647-8BDB-0A996AE23BAC";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl|Apollo:R_Hose_IK_Jnt_09_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster20HandleShape_iog_0_";
+	rename -uid "4A4A0DE0-4733-C35D-057D-B98011473A3E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl|Apollo:group17|Apollo:cluster20Handle|Apollo:cluster20HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_09_CtrlShapeOrig_iog_0_";
+	rename -uid "B300C9A8-44BB-2202-5401-2885B2202AE2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl|Apollo:R_Hose_IK_Jnt_09_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_08_CtrlShape_iog_0_";
+	rename -uid "1ECB699E-4C9C-0BE1-9E27-0B9B8112F660";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl|Apollo:R_Hose_IK_Jnt_08_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster21HandleShape_iog_0_";
+	rename -uid "163EDD1F-4044-0018-D715-9BA4DD561981";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl|Apollo:group19|Apollo:cluster21Handle|Apollo:cluster21HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_08_CtrlShapeOrig_iog_0_";
+	rename -uid "CACE9E9E-4CEA-AB5C-F8C0-A1A5042C82A0";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl|Apollo:R_Hose_IK_Jnt_08_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_07_CtrlShape_iog_0_";
+	rename -uid "AAF5DAEB-49E7-A1CA-1A41-46A02EAF0317";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl|Apollo:R_Hose_IK_Jnt_07_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster22HandleShape_iog_0_";
+	rename -uid "1E0DBD63-493B-B6D4-6FDF-AF8BF50171ED";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl|Apollo:group20|Apollo:cluster22Handle|Apollo:cluster22HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_07_CtrlShapeOrig_iog_0_";
+	rename -uid "2A226B22-4BD1-E2E3-69E7-368689414FBD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl|Apollo:R_Hose_IK_Jnt_07_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_06_CtrlShape_iog_0_";
+	rename -uid "63367A4C-48E5-BF88-EF4B-93BA66A4A863";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl|Apollo:R_Hose_IK_Jnt_06_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster23HandleShape_iog_0_";
+	rename -uid "89AA22AE-41A8-EF4E-B2BD-D79DC261C779";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl|Apollo:group21|Apollo:cluster23Handle|Apollo:cluster23HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_06_CtrlShapeOrig_iog_0_";
+	rename -uid "748CA117-4E5E-7D41-EE90-07B98AC91878";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl|Apollo:R_Hose_IK_Jnt_06_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_05_CtrlShape_iog_0_";
+	rename -uid "BD3ADC90-4B24-E9D2-5BAC-D4BA570DC185";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl|Apollo:R_Hose_IK_Jnt_05_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster24HandleShape_iog_0_";
+	rename -uid "9F645405-4E7B-9D26-C2C8-F29119820676";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl|Apollo:group22|Apollo:cluster24Handle|Apollo:cluster24HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_05_CtrlShapeOrig_iog_0_";
+	rename -uid "C623C1FB-4558-2113-E27B-BD9EC7E9928B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl|Apollo:R_Hose_IK_Jnt_05_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_04_CtrlShape_iog_0_";
+	rename -uid "46860781-4660-3B7B-D618-A794F3BFABE2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl|Apollo:R_Hose_IK_Jnt_04_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster25HandleShape_iog_0_";
+	rename -uid "35BD4F23-4DB0-09D2-D53D-10B0C6585A03";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl|Apollo:group23|Apollo:cluster25Handle|Apollo:cluster25HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_04_CtrlShapeOrig_iog_0_";
+	rename -uid "DC54C6D5-4517-F9D8-FCFA-8094BC800B1E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl|Apollo:R_Hose_IK_Jnt_04_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_03_CtrlShape_iog_0_";
+	rename -uid "FEB946FD-4554-ED0E-992D-2D9C2C4D0389";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl|Apollo:R_Hose_IK_Jnt_03_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster26HandleShape_iog_0_";
+	rename -uid "4989F6FD-46A5-FB32-F4B9-35A69CEA68AF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl|Apollo:group24|Apollo:cluster26Handle|Apollo:cluster26HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_03_CtrlShapeOrig_iog_0_";
+	rename -uid "1597C39A-4996-9EC2-7F62-2E96CF0D7250";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl|Apollo:R_Hose_IK_Jnt_03_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "E56AB2C5-4F63-E33A-7499-3C99B1DC1D80";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl|Apollo:R_Hose_IK_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster27HandleShape_iog_0_";
+	rename -uid "FF556A9F-4A45-57E1-82E7-1C95A0F13AD4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl|Apollo:group25|Apollo:cluster27Handle|Apollo:cluster27HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_02_CtrlShapeOrig_iog_0_";
+	rename -uid "2FD36829-4231-FD63-9494-6C80EF73AD6A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl|Apollo:R_Hose_IK_Jnt_02_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "713A4F68-40E8-9AE4-7CF7-67969E675A3B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl|Apollo:R_Hose_IK_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_cluster28HandleShape_iog_0_";
+	rename -uid "74BB8D86-4F27-3613-FCC5-C6946DA191DA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl|Apollo:group26|Apollo:cluster28Handle|Apollo:cluster28HandleShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_Jnt_01_CtrlShapeOrig_iog_0_";
+	rename -uid "500987A2-4189-6D77-7B37-7A8804935F2E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl|Apollo:R_Hose_IK_Jnt_01_CtrlShapeOrig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_Swing_CtrlShape_iog_0_";
+	rename -uid "E8094039-4829-9F50-504C-B0931C66D59A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_Swing_Ctrl|Apollo:R_Hose_Swing_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Swing_DeformerShape_iog_0_";
+	rename -uid "59B7649A-43E2-FBD9-6E02-ABAB308B7DD4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Swing_Deformer|Apollo:R_Swing_DeformerShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Arm_FK_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "55D92F14-4C1B-F25A-AF49-7F8F2B584457";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl|Apollo:Arm_FK_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Arm_FK_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "9370E5E4-4294-06D3-F57A-9092839E0C55";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl|Apollo:Arm_FK_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Arm_FK_Jnt_03_CtrlShape_iog_0_";
+	rename -uid "C9EA0A96-48B1-8F94-23B2-C8A7414AEFEF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl|Apollo:Arm_FK_Jnt_03_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Arm_FK_Jnt_04_CtrlShape_iog_0_";
+	rename -uid "F96D76AD-417A-E71F-CE31-94B60A1C32A4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl|Apollo:Arm_FK_Jnt_04_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Arm_FK_Jnt_05_CtrlShape_iog_0_";
+	rename -uid "552DE982-49A0-67AE-F672-BCBB5F528B38";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl|Apollo:Arm_FK_Jnt_05_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_IK_Base_CtrlShape_iog_0_";
+	rename -uid "C201E598-4473-52B5-FB00-168D9EEC9BD5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:IK_Base_Ctrl_Grp|Apollo:IK_Base_Ctrl|Apollo:IK_Base_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Arm_IK_Jnt_05_CtrlShape_iog_0_";
+	rename -uid "54A68458-41C8-6852-4EC6-338134A65D2A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:Arm_IK_Jnt_05_Ctrl_Grp|Apollo:Arm_IK_Jnt_05_Ctrl|Apollo:Arm_IK_Jnt_05_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_PoleVector_CtrlShape_iog_0_";
+	rename -uid "ACB198CF-43E1-65DE-3416-C2BEA043992D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:PoleVector_Ctrl_Grp|Apollo:PoleVector_Ctrl|Apollo:PoleVector_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Arm_Base_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "1CCA5346-44BF-D886-5594-0880C16CF595";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl|Apollo:Arm_Base_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Arm_Base_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "AE4ACEFD-434E-8D3A-0629-CA99DDAF2D02";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl|Apollo:Arm_Base_Jnt_02_Ctrl_Grp|Apollo:Arm_Base_Jnt_02_Ctrl|Apollo:Arm_Base_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Head_FK_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "2E1D7224-4E56-6768-C8A7-F4B3C84DD21B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl|Apollo:Head_FK_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Head_FK_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "B3DB4E26-4F74-6EEE-9803-36A48BF46EBC";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl|Apollo:Head_FK_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Head_FK_Jnt_03_CtrlShape_iog_0_";
+	rename -uid "86CC8DD1-4D79-D494-77CF-7390597F1BA7";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Head_FK_Jnt_03_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Face_CtrlShape_iog_0_";
+	rename -uid "02535E39-4DCC-124C-0DBF-A7B57D3D0F2B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Face_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Mouth_CtrlShape_iog_0_";
+	rename -uid "0AFA0F9C-4FE7-0260-B31D-5B9D6495748B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl|Apollo:Mouth_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Eyes_CtrlShape_iog_0_";
+	rename -uid "29485929-45E0-5F55-86D0-D09DB0F76643";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:Eyes_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Eye_CtrlShape_iog_0_";
+	rename -uid "9F93E301-43C4-E260-6248-22A35F677178";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl|Apollo:L_Eye_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Eye_CtrlShape_iog_0_";
+	rename -uid "3451A147-4229-9D65-F809-0FBA5B940B2D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl|Apollo:R_Eye_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Visor_CtrlShape_iog_0_";
+	rename -uid "3049BD7B-4190-0F7B-AFA9-55AB260F7F0F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Visor_Ctrl_Grp|Apollo:Visor_Ctrl|Apollo:Visor_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Wiper_CtrlShape_iog_0_";
+	rename -uid "5D6CFB61-4648-8E78-2DC6-BEB40D0207BD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Wipers_Ctrl_Grp|Apollo:R_Wiper_Ctrl_Grp|Apollo:R_Wiper_Ctrl|Apollo:R_Wiper_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Wiper_CtrlShape_iog_0_";
+	rename -uid "DB26E71C-4492-EF99-DE3A-8391F34FF842";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Wipers_Ctrl_Grp|Apollo:L_Wiper_Ctrl_Grp|Apollo:L_Wiper_Ctrl|Apollo:L_Wiper_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_polyToCurveShape1_iog_0_";
+	rename -uid "392EA0F3-4EA3-22C2-769A-3AA07D70713F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Exclamation_Point_Ctrl_Grp|Apollo:Exclamation_Point_Ctrl|Apollo:polyToCurveShape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_polyToCurveShape2_iog_0_";
+	rename -uid "7F78AB4C-4903-9512-7DAB-EC82648E7C95";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Exclamation_Point_Ctrl_Grp|Apollo:Exclamation_Point_Ctrl|Apollo:polyToCurveShape2.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Eye_X_1_CtrlShape_iog_0_";
+	rename -uid "4AEA317F-4090-679E-7A47-4089186B55BD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eye_X_1_Ctrl_Grp|Apollo:Eye_X_1_Ctrl|Apollo:Eye_X_1_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Eye_X_2_CtrlShape_iog_0_";
+	rename -uid "A17B3939-4882-091A-4BA7-FA8EB8B264B2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eye_X_2_Ctrl_Grp|Apollo:Eye_X_2_Ctrl|Apollo:Eye_X_2_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Hand_Jnt_CtrlShape_iog_0_";
+	rename -uid "1CE02B27-4AA6-860B-7EE3-CC951D098F06";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Jnt_Ctrl_Grp|Apollo:Hand_Jnt_Ctrl|Apollo:Hand_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Hand_Ring_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "7B24E65D-4136-9DA1-06A7-D891BD1075ED";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl|Apollo:Hand_Ring_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Hand_Ring_Jnt_03_CtrlShape_iog_0_";
+	rename -uid "2775718C-4B71-F97A-2484-85B087BBE4A1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl|Apollo:Hand_Ring_Jnt_03_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Hand_Ring_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "D8296A8C-4BCD-8840-DDBA-AF82090C3793";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl|Apollo:Hand_Ring_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Finger_02_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "5AC5F2F5-409D-A8C1-7024-BEA3F047550F";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl|Apollo:Finger_02_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Finger_01_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "A3242F0D-493C-1A67-AA62-AF948657F590";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl|Apollo:Finger_01_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Finger_01_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "711B332E-443D-0FD9-044F-0885F92C43F4";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl|Apollo:Finger_01_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Finger_02_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "3D7F7F75-4329-E215-2BD1-3EAFF79403F6";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl|Apollo:Finger_02_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Finger_03_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "76BE21CC-49A0-F341-6E39-3BB1BC75DA3E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl|Apollo:Finger_03_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Finger_03_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "2C22B7C5-47D4-F5BF-C092-FB8919EDB60B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl|Apollo:Finger_03_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Palm_Jnt_CtrlShape_iog_0_";
+	rename -uid "2D8F1F8A-4100-EF95-E82B-9099F8B3392B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl|Apollo:Palm_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Piston_01_CtrlShape_iog_0_";
+	rename -uid "FEB54B65-445A-7163-AF49-86AECB6EC204";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_01_Ctrl_Grp|Apollo:Piston_01_Ctrl|Apollo:Piston_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Piston_02_CtrlShape_iog_0_";
+	rename -uid "33631C23-4994-6C10-1BBF-F191E25E9549";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_02_Ctrl_Grp|Apollo:Piston_02_Ctrl|Apollo:Piston_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Piston_03_CtrlShape_iog_0_";
+	rename -uid "57F200A4-4D30-28E9-0145-F5BB11215C49";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_03_Ctrl_Grp|Apollo:Piston_03_Ctrl|Apollo:Piston_03_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Prop_CtrlShape_iog_0_";
+	rename -uid "B1048D41-4DCA-3B23-2D42-CCA3BF32F584";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl|Apollo:Prop_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Treads_Base_FK_Jnt_CtrlShape_iog_0_";
+	rename -uid "D09B6310-4FD5-7FC6-9633-958171269868";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:Treads_Base_FK_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Treads_CtrlShape_iog_0_";
+	rename -uid "7899D783-4502-0C73-A701-7098C2245C4E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Treads_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Back_Main_Wheel_Jnt_CtrlShape_iog_0_";
+	rename -uid "D5E3B228-48CF-9FFF-7E3A-1090C374EA93";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Back_Main_Wheel_Jnt_Ctrl|Apollo:R_Back_Main_Wheel_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Mid_Wheel_Jnt_03_CtrlShape_iog_0_";
+	rename -uid "9377274E-414D-0557-0F39-BEBC06BBF4AC";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_03_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_03_Ctrl|Apollo:R_Mid_Wheel_Jnt_03_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Mid_Wheel_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "9A844FB0-4B38-81D5-54D4-D9BF390CE308";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_02_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_02_Ctrl|Apollo:R_Mid_Wheel_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Mid_Wheel_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "FBF8ABD3-49E7-5B83-249D-CBB136DD5150";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_01_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_01_Ctrl|Apollo:R_Mid_Wheel_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Mid_Main_Wheel_Jnt_CtrlShape_iog_0_";
+	rename -uid "4DE5F58B-4C0B-A689-4B04-51AC102C2C27";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Mid_Main_Wheel_Jnt_Ctrl|Apollo:R_Mid_Main_Wheel_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Front_Main_Wheel_Jnt_CtrlShape_iog_0_";
+	rename -uid "CBE4E2A5-492F-EF59-8BC0-648A8427E0CA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Front_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Front_Main_Wheel_Jnt_Ctrl|Apollo:R_Front_Main_Wheel_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Tread_Orient_LocShape_iog_0_";
+	rename -uid "6C1CEE85-46BC-EAA2-2585-DEBA00D43991";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Tread_Orient_Loc|Apollo:R_Tread_Orient_LocShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Treads_CtrlShape_iog_0_";
+	rename -uid "AAEFEBF0-44BF-7042-76A3-3294F20C393B";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Treads_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Front_Main_Wheel_Jnt_CtrlShape_iog_0_";
+	rename -uid "23FADFB9-49DD-C172-304C-79BB62C41711";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Front_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Front_Main_Wheel_Jnt_Ctrl|Apollo:L_Front_Main_Wheel_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Mid_Main_Wheel_Jnt_CtrlShape_iog_0_";
+	rename -uid "14629E49-49B4-3C5E-DB12-FDAD11471002";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Mid_Main_Wheel_Jnt_Ctrl|Apollo:L_Mid_Main_Wheel_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Mid_Wheel_Jnt_01_CtrlShape_iog_0_";
+	rename -uid "661CDAE4-4677-87F8-8055-FBA66BD8DDEF";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_01_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_01_Ctrl|Apollo:L_Mid_Wheel_Jnt_01_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Mid_Wheel_Jnt_02_CtrlShape_iog_0_";
+	rename -uid "5C47DFED-4D7D-968B-890B-FAB9AE0C46AD";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_02_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_02_Ctrl|Apollo:L_Mid_Wheel_Jnt_02_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Mid_Wheel_Jnt_03_CtrlShape_iog_0_";
+	rename -uid "ABCBB4E6-492B-94E5-5C33-B8A9CFE7047D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_03_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_03_Ctrl|Apollo:L_Mid_Wheel_Jnt_03_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Back_Main_Wheel_Jnt_CtrlShape_iog_0_";
+	rename -uid "8DFF7191-4265-66BE-18A2-37B97AEBAC22";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Back_Main_Wheel_Jnt_Ctrl|Apollo:L_Back_Main_Wheel_Jnt_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Tread_Orient_LocShape_iog_0_";
+	rename -uid "2730ED11-4748-4E15-33AA-55AB701B57C8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Tread_Orient_Loc|Apollo:L_Tread_Orient_LocShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Both_Treads_Orient_LocShape_iog_0_";
+	rename -uid "243788BD-4031-095C-B7C3-7AAE938236DB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:Both_Treads_Orient_Loc|Apollo:Both_Treads_Orient_LocShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Light_Rig_CtrlShape_iog_0_";
+	rename -uid "F7B34281-4162-DF0B-14BF-25955D34864E";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl|Apollo:Light_Rig_CtrlShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Fill_LightShape_iog_0_";
+	rename -uid "C19E5BAC-4E70-3BCB-0979-71A99F07BA49";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Fill_Light|Apollo:Fill_LightShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Back_LightShape_iog_0_";
+	rename -uid "35187E19-46DD-1BA3-5B6F-639F1F47C6EA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Back_Light|Apollo:Back_LightShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Key_LightShape_iog_0_";
+	rename -uid "260C1014-4CF8-8A18-6169-68BF9FEC84F8";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Key_Light|Apollo:Key_LightShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_Face_LightShape_iog_0_";
+	rename -uid "820CA09C-46EE-2597-C305-79812ECB5C5C";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Face_Light|Apollo:Face_LightShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_CurveShape_iog_0_";
+	rename -uid "133C1F96-4F12-3E52-7234-7DB67C43178A";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:L_Hose_IK_Stuff_Dont_Parent|Apollo:L_Hose_IK_Curve|Apollo:L_Hose_IK_CurveShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_L_Hose_IK_CurveShape1Orig_iog_0_";
+	rename -uid "89FDFD65-493D-A2A4-40EA-5592DC4CB8E1";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:L_Hose_IK_Stuff_Dont_Parent|Apollo:L_Hose_IK_Curve|Apollo:L_Hose_IK_CurveShape1Orig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_CurveShape_iog_0_";
+	rename -uid "08322B32-46F5-B0AC-F18F-618E9FBF9C14";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:R_Hose_IK_Stuff_Dont_Parent|Apollo:R_Hose_IK_Curve|Apollo:R_Hose_IK_CurveShape.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Apollo_R_Hose_IK_CurveShape1Orig_iog_0_";
+	rename -uid "C8A6B68A-4A8A-A1F9-8567-69A20376FC9D";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Apollo:Apollo|Apollo:R_Hose_IK_Stuff_Dont_Parent|Apollo:R_Hose_IK_Curve|Apollo:R_Hose_IK_CurveShape1Orig.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Hallway_spotLightShape4_iog_0_";
+	rename -uid "2A1AA774-43D5-6E81-7FF4-08A8DAF7F283";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Hallway:Geo|Hallway:spotLight4|Hallway:spotLightShape4.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Hallway_spotLightShape3_iog_0_";
+	rename -uid "D4C32B2A-4BE6-C580-E686-D3B0986ECE96";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Hallway:Geo|Hallway:spotLight3|Hallway:spotLightShape3.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Hallway_spotLightShape2_iog_0_";
+	rename -uid "C0019F32-42F3-B8C8-E728-A0A767553BD2";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Hallway:Geo|Hallway:spotLight2|Hallway:spotLightShape2.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Hallway_spotLightShape1_iog_0_";
+	rename -uid "5AE61A07-4825-69FF-D796-8BB3BFDA42AA";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Hallway:Geo|Hallway:spotLight1|Hallway:spotLightShape1.instObjGroups[0]";
+createNode applyConnectionOverride -n "materialOverride2_Hallway_polySurface5Shape_iog_0__og_0_";
+	rename -uid "B8F9D9A1-47F3-F8B4-2EB4-5D9F72090EDB";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Hallway:Geo|Hallway:polySurface5|Hallway:polySurface5Shape.instObjGroups[0].objectGroups[0]";
+	setAttr ".sen" -type "string" "Hallway:set2";
+createNode applyConnectionOverride -n "materialOverride2_Hallway_polySurface5Shape_iog_0__og_1_";
+	rename -uid "3785DF3E-464D-1635-60B0-1AB9CF418C02";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Hallway:Geo|Hallway:polySurface5|Hallway:polySurface5Shape.instObjGroups[0].objectGroups[1]";
+	setAttr ".sen" -type "string" "Hallway:set1";
+createNode applyConnectionOverride -n "materialOverride2_Hallway_polySurface5Shape_iog_0__og_2_";
+	rename -uid "577E94CB-4A2B-C7AC-BE39-8BAEBA08C7B5";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	addAttr -ci true -sn "sen" -ln "shadingEngineName" -dt "string";
+	setAttr ".tgn" -type "string" "|Hallway:Geo|Hallway:polySurface5|Hallway:polySurface5Shape.instObjGroups[0].objectGroups[2]";
+	setAttr ".sen" -type "string" "Hallway:standardSurface3SG";
+createNode applyConnectionOverride -n "materialOverride2_Hallway_polySurface5ShapeOrig_iog_0_";
+	rename -uid "78C5E605-44A9-1C03-D2D0-939B59EAED00";
+	addAttr -s false -ci true -sn "org" -ln "original" -at "message";
+	addAttr -ci true -sn "tgn" -ln "targetName" -dt "string";
+	setAttr ".tgn" -type "string" "|Hallway:Geo|Hallway:polySurface5|Hallway:polySurface5ShapeOrig.instObjGroups[0]";
+createNode aovCollection -n "AOVCollection2";
+	rename -uid "D7C391CC-4CBD-53B5-633E-3B8F41CE46B8";
+createNode simpleSelector -n "AOVCollection2Selector";
+	rename -uid "D3581D39-4DF4-A403-1B71-F28C6039C72C";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 8;
+	setAttr ".cfv" -type "string" "aiAOV aiAOVDriver aiAOVFilter";
+createNode aovChildCollection -n "diffuse2";
+	rename -uid "08F7AE60-44B9-C2DB-92E5-98A5D8CF17BB";
+createNode arnoldAOVChildSelector -n "diffuse2Selector";
+	rename -uid "208D7C99-4414-88C0-9883-0DB503299793";
+	setAttr ".ann" -type "string" "aiAOV_diffuse";
+createNode absOverride -n "enabled4";
+	rename -uid "45DE3881-40F1-B45F-860A-C5A49BD03A2D";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode applyAbsBoolOverride -n "enabled4_aiAOV_diffuse_aoven";
+	rename -uid "6673B696-4076-BAE9-98DD-12BFC93BE898";
+	setAttr ".ori" yes;
+createNode aovChildCollection -n "specular2";
+	rename -uid "C2825B05-4E7E-4694-D943-80A640311F41";
+createNode arnoldAOVChildSelector -n "specular2Selector";
+	rename -uid "ACD595C2-4D19-1AE1-9B75-C18AC49B45FD";
+	setAttr ".ann" -type "string" "aiAOV_specular";
+createNode absOverride -n "enabled5";
+	rename -uid "C543F76F-4758-66AD-0ACD-96AD4EA0B784";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode applyAbsBoolOverride -n "enabled5_aiAOV_specular_aoven";
+	rename -uid "435D2980-44DC-0444-9503-DBBC68808F66";
+	setAttr ".ori" yes;
 select -ne :time1;
-	setAttr ".o" 52;
-	setAttr ".unw" 52;
+	setAttr ".o" 32;
+	setAttr ".unw" 32;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
+	setAttr ".dli" 1;
 	setAttr ".fprt" yes;
+	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 229 ".st";
+	setAttr -s 231 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 19 ".s";
+	setAttr -s 22 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
 	setAttr -s 417 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 5 ".r";
+	setAttr -s 11 ".r";
 select -ne :lightList1;
-	setAttr -s 15 ".l";
+	setAttr -s 25 ".l";
 select -ne :defaultTextureList1;
 	setAttr -s 493 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 23 ".dsm";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr -s 12 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 22 ".gn";
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
+	setAttr ".aovs[1].aov_name" -type "string" "specular";
+	setAttr ".aal" -type "attributeAlias" 4 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" ;
 select -ne :initialParticleSE;
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ro" yes;
-select -ne :initialMaterialInfo;
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
+	setAttr ".aovs[1].aov_name" -type "string" "specular";
+	setAttr ".aal" -type "attributeAlias" 4 "ai_aov_diffuse" "aiCustomAOVs[0].aovName" "ai_aov_specular" "aiCustomAOVs[1].aovName" ;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
 	setAttr ".outf" 51;
 	setAttr ".imfkey" -type "string" "exr";
+	setAttr ".an" yes;
+	setAttr ".ef" 65;
+	setAttr ".pff" yes;
+	setAttr ".ifp" -type "string" "<Scene>/<RenderLayer>/<RenderLayer>.<RenderPass>";
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
-	setAttr ".w" 1920;
-	setAttr ".h" 1080;
+	setAttr ".w" 2560;
+	setAttr ".h" 1440;
 	setAttr ".pa" 1;
-	setAttr ".dar" 1.7769999504089355;
+	setAttr ".dar" 1.7777777910232544;
 select -ne :defaultLightSet;
-	setAttr -s 15 ".dsm";
+	setAttr -s 25 ".dsm";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -12988,10 +17754,19 @@ connectAttr "New_Camera_scaleY.o" "MAIN_CAMERA.sy";
 connectAttr "New_Camera_scaleZ.o" "MAIN_CAMERA.sz";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiAmbientOcclusion1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiShadowMatte1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiAmbientOcclusion1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiShadowMatte1SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "aiAtmosphereVolume.msg" ":defaultArnoldRenderOptions.atm";
+connectAttr "aiAOV_diffuse.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_specular.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "AASamples1_defaultArnoldRenderOptions_AA_samples.o" ":defaultArnoldRenderOptions.AA_samples"
+		;
 connectAttr "sharedReferenceNode.sr" "HallwayRN.sr";
 connectAttr "Propellor_02_Ctrl_FollowTranslate.o" "Dionysus_Asset_RigRN.phl[133]"
 		;
@@ -13053,5 +17828,1451 @@ connectAttr "R_Eye_Ctrl_rotateX.o" "Dionysus_Asset_RigRN.phl[227]";
 connectAttr "R_Eye_Ctrl_rotateY.o" "Dionysus_Asset_RigRN.phl[228]";
 connectAttr "R_Eye_Ctrl_rotateZ.o" "Dionysus_Asset_RigRN.phl[229]";
 connectAttr "R_Eye_Ctrl_visibility.o" "Dionysus_Asset_RigRN.phl[230]";
+connectAttr "Dio.msg" "renderSetup.frl";
+connectAttr "Shadow.msg" "renderSetup.lrl";
+connectAttr "rs_Dio.msg" "Dio.lrl";
+connectAttr "renderSetup.lit" "Dio.pls";
+connectAttr "collection3.msg" "Dio.cl";
+connectAttr "collection3.msg" "Dio.ch";
+connectAttr "renderLayerManager.rlmi[1]" "rs_Dio.rlid";
+connectAttr "rs_Apollo1.msg" "Apollo1.lrl";
+connectAttr "Dio.nxt" "Apollo1.prv";
+connectAttr "renderSetup.lit" "Apollo1.pls";
+connectAttr "collection2.msg" "Apollo1.cl";
+connectAttr "collection2.msg" "Apollo1.ch";
+connectAttr "renderLayerManager.rlmi[2]" "rs_Apollo1.rlid";
+connectAttr "rs_Environment.msg" "Environment.lrl";
+connectAttr "Apollo1.nxt" "Environment.prv";
+connectAttr "renderSetup.lit" "Environment.pls";
+connectAttr "collection1.msg" "Environment.cl";
+connectAttr "collection1.msg" "Environment.ch";
+connectAttr "renderLayerManager.rlmi[3]" "rs_Environment.rlid";
+connectAttr "rs_FOG.msg" "FOG.lrl";
+connectAttr "Environment.nxt" "FOG.prv";
+connectAttr "renderSetup.lit" "FOG.pls";
+connectAttr "RenderSettingsCollection2.msg" "FOG.cl";
+connectAttr "aiAtmosphereVolume_col.msg" "FOG.ch";
+connectAttr "renderLayerManager.rlmi[4]" "rs_FOG.rlid";
+connectAttr "collection1Selector.c" "collection1.sel";
+connectAttr "Environment.lit" "collection1.pls";
+connectAttr "Environment.nic" "collection1.pic";
+connectAttr "collection2Selector.c" "collection2.sel";
+connectAttr "Apollo1.lit" "collection2.pls";
+connectAttr "Apollo1.nic" "collection2.pic";
+connectAttr "collection3Selector.c" "collection3.sel";
+connectAttr "Dio.lit" "collection3.pls";
+connectAttr "Dio.nic" "collection3.pic";
+connectAttr "collection4Selector.c" "collection4.sel";
+connectAttr "FOG.lit" "collection4.pls";
+connectAttr "FOG.nic" "collection4.pic";
+connectAttr "collection4_shapes.msg" "collection4.cl";
+connectAttr "collection4_shapes.msg" "collection4.ch";
+connectAttr "AOVCollection.nxt" "collection4.prv";
+connectAttr "aiAtmosphereVolume_colSelector.c" "aiAtmosphereVolume_col.sel";
+connectAttr "collection4.nxt" "aiAtmosphereVolume_col.prv";
+connectAttr "FOG.lit" "aiAtmosphereVolume_col.pls";
+connectAttr "FOG.nic" "aiAtmosphereVolume_col.pic";
+connectAttr "density.msg" "aiAtmosphereVolume_col.cl";
+connectAttr "density.msg" "aiAtmosphereVolume_col.ch";
+connectAttr "aiAtmosphereVolume_col.lit" "density.pls";
+connectAttr "aiAtmosphereVolume_col.en" "density.pen";
+connectAttr "collection4_shapes.lit" "aiMatte.pls";
+connectAttr "collection4_shapes.en" "aiMatte.pen";
+connectAttr "collection4_shapesSelector.c" "collection4_shapes.sel";
+connectAttr "collection4.lit" "collection4_shapes.pls";
+connectAttr "collection4.en" "collection4_shapes.pen";
+connectAttr "FOG.nic" "collection4_shapes.pic";
+connectAttr "aiMatte.msg" "collection4_shapes.cl";
+connectAttr "aiMatte.msg" "collection4_shapes.ch";
+connectAttr "collection4Selector.out" "collection4_shapesSelector.in";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_diffuse.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_diffuse.out[0].ftr";
+connectAttr "enabled4_aiAOV_diffuse_aoven.o" "aiAOV_diffuse.aoven";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_specular.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_specular.out[0].ftr";
+connectAttr "enabled5_aiAOV_specular_aoven.o" "aiAOV_specular.aoven";
+connectAttr "rs_AO.msg" "AO.lrl";
+connectAttr "FOG.nxt" "AO.prv";
+connectAttr "renderSetup.lit" "AO.pls";
+connectAttr "RenderSettingsCollection.msg" "AO.cl";
+connectAttr "collection5.msg" "AO.ch";
+connectAttr "renderLayerManager.rlmi[5]" "rs_AO.rlid";
+connectAttr "collection5Selector.c" "collection5.sel";
+connectAttr "AO.lit" "collection5.pls";
+connectAttr "AO.nic" "collection5.pic";
+connectAttr "materialOverride1.msg" "collection5.cl";
+connectAttr "materialOverride1.msg" "collection5.ch";
+connectAttr "AOVCollection1.nxt" "collection5.prv";
+connectAttr "collection5.lit" "materialOverride1.pls";
+connectAttr "collection5.en" "materialOverride1.pen";
+connectAttr "aiAmbientOcclusion1SG.msg" "materialOverride1.atv";
+connectAttr "aiAmbientOcclusion1.out" "aiAmbientOcclusion1SG.ss";
+connectAttr "aiAmbientOcclusion1SG.msg" "materialInfo1.sg";
+connectAttr "aiAmbientOcclusion1.msg" "materialInfo1.m";
+connectAttr "aiAmbientOcclusion1.msg" "materialInfo1.t" -na;
+connectAttr "RenderSettingsCollectionSelector.c" "RenderSettingsCollection.sel";
+connectAttr "AO.lit" "RenderSettingsCollection.pls";
+connectAttr "AO.nic" "RenderSettingsCollection.pic";
+connectAttr "AASamples.msg" "RenderSettingsCollection.cl";
+connectAttr "AASamples.msg" "RenderSettingsCollection.ch";
+connectAttr "RenderSettingsCollection.lit" "AASamples.pls";
+connectAttr "RenderSettingsCollection.en" "AASamples.pen";
+connectAttr "rs_Shadow.msg" "Shadow.lrl";
+connectAttr "AO.nxt" "Shadow.prv";
+connectAttr "renderSetup.lit" "Shadow.pls";
+connectAttr "collection6.msg" "Shadow.ch";
+connectAttr "RenderSettingsCollection1.msg" "Shadow.cl";
+connectAttr "renderLayerManager.rlmi[6]" "rs_Shadow.rlid";
+connectAttr "RenderSettingsCollection1Selector.c" "RenderSettingsCollection1.sel"
+		;
+connectAttr "Shadow.lit" "RenderSettingsCollection1.pls";
+connectAttr "Shadow.nic" "RenderSettingsCollection1.pic";
+connectAttr "AASamples1.msg" "RenderSettingsCollection1.cl";
+connectAttr "AASamples1.msg" "RenderSettingsCollection1.ch";
+connectAttr "RenderSettingsCollection1.lit" "AASamples1.pls";
+connectAttr "RenderSettingsCollection1.en" "AASamples1.pen";
+connectAttr "collection6Selector.c" "collection6.sel";
+connectAttr "AOVCollection2.nxt" "collection6.prv";
+connectAttr "Shadow.lit" "collection6.pls";
+connectAttr "Shadow.nic" "collection6.pic";
+connectAttr "materialOverride2.msg" "collection6.cl";
+connectAttr "materialOverride2.msg" "collection6.ch";
+connectAttr "collection6.lit" "materialOverride2.pls";
+connectAttr "collection6.en" "materialOverride2.pen";
+connectAttr "aiShadowMatte1SG.msg" "materialOverride2.atv";
+connectAttr "aiShadowMatte1.out" "aiShadowMatte1SG.ss";
+connectAttr "aiShadowMatte1SG.msg" "materialInfo2.sg";
+connectAttr "aiShadowMatte1.msg" "materialInfo2.m";
+connectAttr "aiShadowMatte1.msg" "materialInfo2.t" -na;
+connectAttr "RenderSettingsCollection2Selector.c" "RenderSettingsCollection2.sel"
+		;
+connectAttr "FOG.lit" "RenderSettingsCollection2.pls";
+connectAttr "FOG.nic" "RenderSettingsCollection2.pic";
+connectAttr "AASamples2.msg" "RenderSettingsCollection2.cl";
+connectAttr "AASamples2.msg" "RenderSettingsCollection2.ch";
+connectAttr "RenderSettingsCollection2.lit" "AASamples2.pls";
+connectAttr "RenderSettingsCollection2.en" "AASamples2.pen";
+connectAttr "AOVCollectionSelector.c" "AOVCollection.sel";
+connectAttr "RenderSettingsCollection2.nxt" "AOVCollection.prv";
+connectAttr "FOG.lit" "AOVCollection.pls";
+connectAttr "FOG.nic" "AOVCollection.pic";
+connectAttr "diffuse.msg" "AOVCollection.cl";
+connectAttr "specular.msg" "AOVCollection.ch";
+connectAttr "diffuseSelector.c" "diffuse.sel";
+connectAttr "AOVCollection.lit" "diffuse.pls";
+connectAttr "AOVCollection.en" "diffuse.pen";
+connectAttr "FOG.nic" "diffuse.pic";
+connectAttr "enabled.msg" "diffuse.cl";
+connectAttr "enabled.msg" "diffuse.ch";
+connectAttr "AOVCollectionSelector.out" "diffuseSelector.in";
+connectAttr "diffuse.lit" "enabled.pls";
+connectAttr "diffuse.en" "enabled.pen";
+connectAttr "specularSelector.c" "specular.sel";
+connectAttr "diffuse.nxt" "specular.prv";
+connectAttr "AOVCollection.lit" "specular.pls";
+connectAttr "AOVCollection.en" "specular.pen";
+connectAttr "FOG.nic" "specular.pic";
+connectAttr "enabled1.msg" "specular.cl";
+connectAttr "enabled1.msg" "specular.ch";
+connectAttr "AOVCollectionSelector.out" "specularSelector.in";
+connectAttr "specular.lit" "enabled1.pls";
+connectAttr "specular.en" "enabled1.pen";
+connectAttr "AOVCollection1Selector.c" "AOVCollection1.sel";
+connectAttr "RenderSettingsCollection.nxt" "AOVCollection1.prv";
+connectAttr "AO.lit" "AOVCollection1.pls";
+connectAttr "AO.nic" "AOVCollection1.pic";
+connectAttr "diffuse1.msg" "AOVCollection1.cl";
+connectAttr "specular1.msg" "AOVCollection1.ch";
+connectAttr "diffuse1Selector.c" "diffuse1.sel";
+connectAttr "AOVCollection1.lit" "diffuse1.pls";
+connectAttr "AOVCollection1.en" "diffuse1.pen";
+connectAttr "AO.nic" "diffuse1.pic";
+connectAttr "enabled2.msg" "diffuse1.cl";
+connectAttr "enabled2.msg" "diffuse1.ch";
+connectAttr "AOVCollection1Selector.out" "diffuse1Selector.in";
+connectAttr "diffuse1.lit" "enabled2.pls";
+connectAttr "diffuse1.en" "enabled2.pen";
+connectAttr "specular1Selector.c" "specular1.sel";
+connectAttr "diffuse1.nxt" "specular1.prv";
+connectAttr "AOVCollection1.lit" "specular1.pls";
+connectAttr "AOVCollection1.en" "specular1.pen";
+connectAttr "AO.nic" "specular1.pic";
+connectAttr "enabled3.msg" "specular1.cl";
+connectAttr "enabled3.msg" "specular1.ch";
+connectAttr "AOVCollection1Selector.out" "specular1Selector.in";
+connectAttr "specular1.lit" "enabled3.pls";
+connectAttr "specular1.en" "enabled3.pen";
+connectAttr "AASamples1.en" "AASamples1_defaultArnoldRenderOptions_AA_samples.en"
+		;
+connectAttr "AASamples1.atv" "AASamples1_defaultArnoldRenderOptions_AA_samples.val"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape782_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape864_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape783_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape882_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Furnace_RimShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape816_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Furnace_backShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape838_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Furnace_LidShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape820_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Furnace_Hinge_Bolt_Shape3_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape828_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Furnace_Hinge_Bolt_Shape4_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape850_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Furnace_Hinge_Bolt_Shape2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape877_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Furnace_Hinge_Bolt_Shape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape836_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Furnace_LightShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Electrical_Box_hinge_Shape1_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Electrical_Box_Cover_Shape1_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape890_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Electrical_Box_Cover_Shape2_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape854_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Electrical_Box_hinge_02Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape811_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape878_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Backpack_mainShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Backpack_topperShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape851_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape796_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface666ShapeShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape818_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface665Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape855_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape673_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape870_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape681_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape797_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape588_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape822_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape589_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape865_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape590_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape817_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape591_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape866_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape592_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape879_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape593_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape825_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape594_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape886_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape595_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape868_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape596_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape806_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape597_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape849_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape598_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape803_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape599_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape814_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape600_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape884_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape601_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape826_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape602_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape844_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape603_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape835_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape604_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape875_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape605_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape840_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape606_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape819_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape607_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape837_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape608_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape853_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape648_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape830_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface560Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape856_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape671_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape834_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape674_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape871_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape677_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape842_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape694_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape812_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape678_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape863_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape685_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape809_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape669_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape859_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape683_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape833_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape688_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape876_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape682_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape891_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape667_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape847_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape690_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape858_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape679_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape823_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape684_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape801_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape672_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape810_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape693_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape885_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape668_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape846_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Exhaust_Pipe1ShapeShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape815_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface520Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface520ShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface526Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface526Shape_iog_0__og_1_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape889_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape617_iog_0__og_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape617_iog_0__og_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape618_iog_0__og_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape618_iog_0__og_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape619_iog_0__og_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape619_iog_0__og_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape614_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape872_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape615_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape821_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape637_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape637Orig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface670Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape852_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface671Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape869_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface664Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape867_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape702_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape800_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape747_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape829_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape703_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape861_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape713_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape798_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape705_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape881_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape709_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape845_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape699_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape883_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape744_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape839_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape711_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape874_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape739_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape841_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape766_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape848_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape752_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape805_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape710_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape799_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape763_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape887_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape704_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape824_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape697_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape807_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape768_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape832_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface697Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape888_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface698Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape843_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface694Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape827_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Torso_BallShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape831_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Torso_Top_SocketShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape808_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Torse_Bottom_SocketShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape880_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Shoulder_GuardsShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape802_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface715Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape860_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape789_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape804_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape790_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape790Orig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape792_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape873_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape794_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape794Orig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape793_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape857_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape791_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape791Orig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape795_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape795Orig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Propellor_01Shape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape813_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Propellor_02Shape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape862_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Propellor_ShaftShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Propellor_ShaftShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurface731Shape_iog_0__og_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Dionysus_Asset_Rig_polySurface731Shape_iog_0__og_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_typeMeshShape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape732_iog_0__og_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Dionysus_Asset_Rig_polySurfaceShape732_iog_0__og_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Right_EyeShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Right_EyeShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_EyeShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_EyeShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_EyeShapeOrig2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_MouthShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_MouthShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Booster_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_COG_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Furnace_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Hip_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Plate_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Transform_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Light_Rig_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Key_LightShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Back_LightShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Fill_LightShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Face_LightShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Panel_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Panel_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Cylinder_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Cylinder_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Plate_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Bottom_Booster_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Skirt_Driver_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Propellor_Shaft_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Arm_Spinner_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Arm_Spinner_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Mouth_Ctrl_GrpShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Eyes_Extras_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Eye_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Eye_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_topnurbsSquareShape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_leftnurbsSquareShape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_bottomnurbsSquareShape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_rightnurbsSquareShape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Arm_01_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Arm_03_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Arm_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Arm_01_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Arm_03_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Arm_02_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger02_Three_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger02_Two_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger02_One_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger01_Three_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger01_Two_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Finger01_One_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Thumb_03_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Thumb_02_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Thumb_01_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Hand_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_L_Palm_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Hand_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Thumb_03_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Thumb_01_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Thumb_02_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Palm_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger01_One_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger01_Two_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger02_Three_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger01_Three_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger02_Two_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_FK_R_Finger02_One_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Arm_Spinner_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Arm_Spinner_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Arm_IK_Base_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Arm_IK_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Arm_PV_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Arm_IK_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Arm_IK_Base_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Arm_IK_PV_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Neck_05_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Neck_04_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Neck_03_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Neck_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Neck_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Clav_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Clav_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Hand_Prop_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Hand_Prop_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Prop_Shaft_Length_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Prop_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Prop_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape11_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape12_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape13_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape10_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape9_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape8_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape7_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape6_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape5_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape4_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape3_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_polyToCurveShape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Two_Handed_Prop_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Cylinder_BlendShape_iog_0__og_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Dionysus_Asset_Rig_R_Cylinder_BlendShape_iog_0__og_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Cylinder_BlendShape_iog_0__og_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Dionysus_Asset_Rig_L_Cylinder_BlendShape_iog_0__og_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_ArrowShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_ArrowShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_ArrowShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Right_Eye_ArrowShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Right_Eye_ArrowShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Right_Eye_BoredShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Right_Eye_BoredShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_BoredShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_BoredShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_BoredShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Right_Eye_SmirkShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Right_Eye_SmirkShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_SmirkShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_SmirkShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_SmirkShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Mouth_BoredShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Mouth_BoredShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Mouth_SmirkShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Mouth_SmirkShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_DeterminedShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_DeterminedShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Left_Eye_DeterminedShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Right_Eye_DeterminedShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_Right_Eye_DeterminedShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Upper_AimShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Upper_TargetShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Upper_UpShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Lower_AimShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Lower_TargetShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Lower_UpShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_L_Collar_LocatorShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Lower_AimShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Lower_TargetShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Lower_UpShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Upper_AimShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Upper_TargetShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Upper_UpShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Dionysus_Asset_Rig_R_Collar_LocatorShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_HoseShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_HoseShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_HoseShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_HoseShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_MainArmGeoShape_ciog_0__cog_1_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_MainArmGeoShape_iog_0__og_45_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_MainArmGeoShape_iog_0__og_46_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_MainArmGeoShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_TreadsBaseShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_TreadsBaseShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_BlendShapeShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Tread_Wire_CurveShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Tread_Wire_CurveShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Tread_Wire_Base_CurveShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_LeftTreadGeoShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_LeftTreadGeoShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_BlendShapeShape_iog_0_1.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Tread_Wire_CurveShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Tread_Wire_CurveShapeOrig2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Tread_Wire_Base_CurveShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_RightTreadGeoShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_RightTreadGeoShapeOrig2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_EyeShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_EyeShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye3ShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye4ShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_EyeShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_EyeShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_EyeShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Face_GlassShape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_areaLightShape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_MouthShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_MouthShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Exclamation_PointShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Eye_X_2Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Eye_X_1Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_Open_ShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_Open_Shape1_iog_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Apollo_L_Eye_Open_Shape1_iog_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_Squint_ShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_Squint_ShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_Squint_Shape1_iog_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Apollo_L_Eye_Squint_Shape1_iog_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_Close_ShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_Close_Shape1_iog_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Apollo_L_Eye_Close_Shape1_iog_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_Sad_ShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_Sad_Shape1_iog_0_.en"
+		;
+connectAttr ":initialShadingGroup.msg" "materialOverride2_Apollo_L_Eye_Sad_Shape1_iog_0_.org"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_SadShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_CloseShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_SquintShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_OpenShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_ArrowShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_ArrowShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_ArrowShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_ArrowShapeOrig2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_BoredShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_BoredShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_BoredShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_BoredShapeOrig2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_DeterminedShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_DeterminedShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_DeterminedShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_SmirkShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_SmirkShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Left_Eye_SmirkShapeOrig2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Eye_OpenShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Eye_OpenShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Eye_SadShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Eye_SadShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Eye_CloseShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Eye_CloseShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Eye_SquintShape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Eye_SquintShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Eye_SquintShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_BoredShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_BoredShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_BoredShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_BoredShapeOrig2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_SmirkShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_SmirkShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_SmirkShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_ArrowShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_ArrowShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_ArrowShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_DeterminedShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Right_Eye_DeterminedShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_NeutralShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_OoohShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Mouth_SmirkShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Mouth_SmirkShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Mouth_SmirkShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Mouth_BoredShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Mouth_BoredShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Mouth_BoredShapeOrig1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Transform_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Cog_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_13_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster15HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_13_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_12_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster12HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_12_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_11_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster11HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_11_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_10_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster10HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_10_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_09_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster9HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_09_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_08_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster8HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_08_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_07_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster7HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_07_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_06_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster6HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_06_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_05_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster5HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_05_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_04_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster4HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_04_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_03_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster3HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_03_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster2HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_02_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster14HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_Jnt_01_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_Swing_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_SwingDeformerShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_13_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster16HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_13_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_12_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster17HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_12_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_11_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster18HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_11_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_10_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster19HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_10_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_09_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster20HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_09_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_08_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster21HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_08_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_07_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster22HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_07_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_06_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster23HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_06_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_05_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster24HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_05_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_04_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster25HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_04_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_03_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster26HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_03_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster27HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_02_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_cluster28HandleShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_Jnt_01_CtrlShapeOrig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_Swing_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Swing_DeformerShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Arm_FK_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Arm_FK_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Arm_FK_Jnt_03_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Arm_FK_Jnt_04_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Arm_FK_Jnt_05_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_IK_Base_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Arm_IK_Jnt_05_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_PoleVector_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Arm_Base_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Arm_Base_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Head_FK_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Head_FK_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Head_FK_Jnt_03_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Face_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Mouth_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Eyes_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Eye_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Eye_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Visor_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Wiper_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Wiper_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_polyToCurveShape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_polyToCurveShape2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Eye_X_1_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Eye_X_2_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Hand_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Hand_Ring_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Hand_Ring_Jnt_03_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Hand_Ring_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Finger_02_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Finger_01_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Finger_01_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Finger_02_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Finger_03_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Finger_03_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Palm_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Piston_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Piston_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Piston_03_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Prop_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Treads_Base_FK_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Treads_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Back_Main_Wheel_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Mid_Wheel_Jnt_03_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Mid_Wheel_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Mid_Wheel_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Mid_Main_Wheel_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Front_Main_Wheel_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Tread_Orient_LocShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Treads_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Front_Main_Wheel_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Mid_Main_Wheel_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Mid_Wheel_Jnt_01_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Mid_Wheel_Jnt_02_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Mid_Wheel_Jnt_03_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Back_Main_Wheel_Jnt_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Tread_Orient_LocShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Both_Treads_Orient_LocShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Light_Rig_CtrlShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Fill_LightShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Back_LightShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Key_LightShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_Face_LightShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_CurveShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_L_Hose_IK_CurveShape1Orig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_CurveShape_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Apollo_R_Hose_IK_CurveShape1Orig_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Hallway_spotLightShape4_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Hallway_spotLightShape3_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Hallway_spotLightShape2_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Hallway_spotLightShape1_iog_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Hallway_polySurface5Shape_iog_0__og_0_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Hallway_polySurface5Shape_iog_0__og_1_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Hallway_polySurface5Shape_iog_0__og_2_.en"
+		;
+connectAttr "materialOverride2.en" "materialOverride2_Hallway_polySurface5ShapeOrig_iog_0_.en"
+		;
+connectAttr "AOVCollection2Selector.c" "AOVCollection2.sel";
+connectAttr "RenderSettingsCollection1.nxt" "AOVCollection2.prv";
+connectAttr "Shadow.lit" "AOVCollection2.pls";
+connectAttr "Shadow.nic" "AOVCollection2.pic";
+connectAttr "diffuse2.msg" "AOVCollection2.cl";
+connectAttr "specular2.msg" "AOVCollection2.ch";
+connectAttr "diffuse2Selector.c" "diffuse2.sel";
+connectAttr "AOVCollection2.lit" "diffuse2.pls";
+connectAttr "AOVCollection2.en" "diffuse2.pen";
+connectAttr "Shadow.nic" "diffuse2.pic";
+connectAttr "enabled4.msg" "diffuse2.cl";
+connectAttr "enabled4.msg" "diffuse2.ch";
+connectAttr "AOVCollection2Selector.out" "diffuse2Selector.in";
+connectAttr "diffuse2.lit" "enabled4.pls";
+connectAttr "diffuse2.en" "enabled4.pen";
+connectAttr "enabled4.en" "enabled4_aiAOV_diffuse_aoven.en";
+connectAttr "enabled4.atv" "enabled4_aiAOV_diffuse_aoven.val";
+connectAttr "specular2Selector.c" "specular2.sel";
+connectAttr "diffuse2.nxt" "specular2.prv";
+connectAttr "AOVCollection2.lit" "specular2.pls";
+connectAttr "AOVCollection2.en" "specular2.pen";
+connectAttr "Shadow.nic" "specular2.pic";
+connectAttr "enabled5.msg" "specular2.cl";
+connectAttr "enabled5.msg" "specular2.ch";
+connectAttr "AOVCollection2Selector.out" "specular2Selector.in";
+connectAttr "specular2.lit" "enabled5.pls";
+connectAttr "specular2.en" "enabled5.pen";
+connectAttr "enabled5.en" "enabled5_aiAOV_specular_aoven.en";
+connectAttr "enabled5.atv" "enabled5_aiAOV_specular_aoven.val";
+connectAttr "aiAmbientOcclusion1SG.pa" ":renderPartition.st" -na;
+connectAttr "aiShadowMatte1SG.pa" ":renderPartition.st" -na;
+connectAttr "aiAtmosphereVolume.msg" ":defaultShaderList1.s" -na;
+connectAttr "aiAmbientOcclusion1.msg" ":defaultShaderList1.s" -na;
+connectAttr "aiShadowMatte1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_Dio.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_Apollo1.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_Environment.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_FOG.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_AO.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_Shadow.msg" ":defaultRenderingList1.r" -na;
 // End of Hallway_CC.ma
