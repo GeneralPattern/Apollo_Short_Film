@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Hallway_CC.ma
-//Last modified: Mon, Mar 03, 2025 04:40:14 PM
+//Last modified: Mon, Mar 03, 2025 05:40:28 PM
 //Codeset: 1252
 file -rdi 1 -ns "Hallway" -rfn "HallwayRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 2 _ Cleaning/Hallway.ma";
 file -rdi 1 -ns "Apollo" -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
@@ -27,7 +27,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 22621)";
-fileInfo "UUID" "A3B27B3B-4226-C4EF-E3A3-2999B4740371";
+fileInfo "UUID" "AD04A890-4852-FAFA-DA49-15AE75C5DC28";
 fileInfo "exportedFrom" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/Hallway_CC.ma";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
@@ -112,23 +112,23 @@ createNode camera -n "MAIN_CAMERAShape" -p "MAIN_CAMERA";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dr" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D1E4F9DC-40F8-C021-314F-DC96443FCF57";
+	rename -uid "AB1F137F-4E54-C3E2-F5E9-7C9B0F5EDFB8";
 	setAttr -s 232 ".lnk";
 	setAttr -s 232 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "E054E236-45D8-FC79-1FAE-6189215B0162";
+	rename -uid "825DAC4B-4653-1F7F-2813-1DA08E489167";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 0 1 2 ;
 	setAttr -s 3 ".bspr";
 	setAttr -s 3 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A3A9BBE0-418F-D75C-F1F1-D5B855343C68";
+	rename -uid "80F0D540-4EC1-92CA-62BB-EF8C08D8B261";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "531D3908-4A3A-0452-D0CF-23A0E2293F73";
+	rename -uid "F1C121FE-47F6-39E8-F0F2-C7A183AC8686";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "7384DFD8-4F86-84D3-3642-D68EF86C6DA9";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "EAF50BA5-4B89-1F3C-04E7-65B1D3E17FFA";
+	rename -uid "D5B3DD61-4727-19E1-7CB6-96A7E36E4F92";
 	setAttr ".crl" 4;
 	setAttr -s 7 ".rlmi[1:6]"  1 2 3 4 5 6;
 	setAttr -s 7 ".rlmi";
@@ -142,25 +142,25 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 595\n            -height 333\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 594\n            -height 332\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|MAIN_CAMERA\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
-		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 996\n            -height 710\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
-		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
-		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
-		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
-		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 595\n            -height 332\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|MAIN_CAMERA\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1196\n            -height 710\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
+		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
+		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n"
+		+ "            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n"
+		+ "            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
 		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n"
+		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
 		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
 		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
@@ -179,8 +179,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 996\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 996\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1196\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAMERA\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1196\\n    -height 710\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -1891,8 +1891,7 @@ createNode animCurveTU -n "Treads_Base_FK_Jnt_Ctrl_TreadsRoll";
 	rename -uid "F981239F-4A67-1677-EA4B-36A4520049E5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 7.6545464285714289 0 11.090909353741496 0
-		 16 0 22.642857142857142 0 26.285714455782312 0 29.928571598639454 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 50 10000;
 createNode animCurveTU -n "Treads_Base_FK_Jnt_Ctrl_IndividualRoll";
 	rename -uid "389E90D4-4BE4-9358-9D8A-8C8EDFD4CCAA";
 	setAttr ".tan" 18;
@@ -9681,10 +9680,10 @@ createNode reference -n "HallwayRN";
 		5 0 "HallwayRN" "|Hallway:Geo|Hallway:Side_Hallway|Hallway:Side_HallwayShape.instObjGroups.objectGroups[2]" 
 		"Hallway:standardSurface3SG.dagSetMembers" "HallwayRN.placeHolderList[7]" "HallwayRN.placeHolderList[8]" 
 		""
-		5 0 "HallwayRN" "|Hallway:Geo|Hallway:Side_Hallway|Hallway:Side_HallwayShape.instObjGroups.objectGroups[0]" 
+		5 0 "HallwayRN" "|Hallway:Geo|Hallway:Hallway|Hallway:HallwayShape.instObjGroups.objectGroups[0]" 
 		"Hallway:set2.dagSetMembers" "HallwayRN.placeHolderList[9]" "HallwayRN.placeHolderList[10]" 
 		""
-		5 0 "HallwayRN" "|Hallway:Geo|Hallway:Hallway|Hallway:HallwayShape.instObjGroups.objectGroups[0]" 
+		5 0 "HallwayRN" "|Hallway:Geo|Hallway:Side_Hallway|Hallway:Side_HallwayShape.instObjGroups.objectGroups[0]" 
 		"Hallway:set2.dagSetMembers" "HallwayRN.placeHolderList[11]" "HallwayRN.placeHolderList[12]" 
 		""
 		5 0 "HallwayRN" "|Hallway:Geo|Hallway:Hallway|Hallway:HallwayShape.instObjGroups.objectGroups[3]" 
@@ -9994,7 +9993,7 @@ createNode reference -n "ApolloRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"ApolloRN"
 		"ApolloRN" 0
-		"ApolloRN" 487
+		"ApolloRN" 488
 		2 "|Apollo:Apollo" "visibility" " 1"
 		2 "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
@@ -10044,6 +10043,8 @@ createNode reference -n "ApolloRN";
 		"EyeScale" " -k 1 1"
 		2 "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl" 
 		"Determined" " -k 1 0"
+		2 "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl" 
+		"TreadsRoll" " -k 1"
 		2 "Apollo:set406" "aiCustomAOVs" " -s 2"
 		2 "Apollo:set406" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
 		
@@ -10828,55 +10829,55 @@ createNode reference -n "ApolloRN";
 		"ApolloRN.placeHolderList[225]" ""
 		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[226]" ""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.instObjGroups.objectGroups[0]" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[227]" "ApolloRN.placeHolderList[228]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.instObjGroups.objectGroups[0]" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[229]" "ApolloRN.placeHolderList[230]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.instObjGroups.objectGroups[0]" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[231]" "ApolloRN.placeHolderList[232]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.instObjGroups.objectGroups[0]" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[233]" "ApolloRN.placeHolderList[234]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShape.instObjGroups.objectGroups[0]" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.instObjGroups" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[235]" "ApolloRN.placeHolderList[236]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Sad|Apollo:R_Eye_SadShape.instObjGroups.objectGroups[0]" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.instObjGroups" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[237]" "ApolloRN.placeHolderList[238]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Close|Apollo:R_Eye_CloseShape.instObjGroups.objectGroups[0]" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Sad|Apollo:R_Eye_SadShape.instObjGroups.objectGroups[0]" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[239]" "ApolloRN.placeHolderList[240]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Squint|Apollo:R_Eye_SquintShape.instObjGroups.objectGroups[0]" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShape.instObjGroups.objectGroups[0]" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[241]" "ApolloRN.placeHolderList[242]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Bored|Apollo:Right_Eye_BoredShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Close|Apollo:R_Eye_CloseShape.instObjGroups.objectGroups[0]" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[243]" "ApolloRN.placeHolderList[244]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Smirk|Apollo:Right_Eye_SmirkShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Bored|Apollo:Right_Eye_BoredShape.instObjGroups" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[245]" "ApolloRN.placeHolderList[246]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Arrow|Apollo:Right_Eye_ArrowShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Squint|Apollo:R_Eye_SquintShape.instObjGroups.objectGroups[0]" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[247]" "ApolloRN.placeHolderList[248]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.instObjGroups.objectGroups[0]" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Smirk|Apollo:Right_Eye_SmirkShape.instObjGroups" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[249]" "ApolloRN.placeHolderList[250]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.instObjGroups.objectGroups[0]" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Arrow|Apollo:Right_Eye_ArrowShape.instObjGroups" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[251]" "ApolloRN.placeHolderList[252]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.instObjGroups.objectGroups[0]" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.instObjGroups" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[253]" "ApolloRN.placeHolderList[254]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.instObjGroups.objectGroups[0]" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.instObjGroups" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[255]" "ApolloRN.placeHolderList[256]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.instObjGroups" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[257]" "ApolloRN.placeHolderList[258]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.instObjGroups" 
 		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[259]" "ApolloRN.placeHolderList[260]" 
 		""
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.instObjGroups" 
@@ -10894,43 +10895,43 @@ createNode reference -n "ApolloRN";
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[46]" 
 		"Apollo:standardSurface10SG.dagSetMembers" "ApolloRN.placeHolderList[269]" "ApolloRN.placeHolderList[270]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.instObjGroups" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[271]" "ApolloRN.placeHolderList[272]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Determined|Apollo:Right_Eye_DeterminedShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.instObjGroups" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[273]" "ApolloRN.placeHolderList[274]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.instObjGroups" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[275]" "ApolloRN.placeHolderList[276]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.instObjGroups" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[277]" "ApolloRN.placeHolderList[278]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.instObjGroups.objectGroups[0]" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[279]" "ApolloRN.placeHolderList[280]" 
 		""
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.instObjGroups.objectGroups[0]" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[281]" "ApolloRN.placeHolderList[282]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.instObjGroups.objectGroups[0]" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.instObjGroups" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[283]" "ApolloRN.placeHolderList[284]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Determined|Apollo:Right_Eye_DeterminedShape.instObjGroups" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[285]" "ApolloRN.placeHolderList[286]" 
 		""
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.compInstObjGroups.compObjectGroups[1]" 
 		"Apollo:set417.dagSetMembers" "ApolloRN.placeHolderList[287]" "ApolloRN.placeHolderList[288]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.instObjGroups" 
 		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[289]" "ApolloRN.placeHolderList[290]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[45]" 
 		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[291]" "ApolloRN.placeHolderList[292]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[45]" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.instObjGroups" 
 		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[293]" "ApolloRN.placeHolderList[294]" 
 		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.instObjGroups" 
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.instObjGroups" 
 		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[295]" "ApolloRN.placeHolderList[296]" 
 		"";
 	setAttr ".ptag" -type "string" "";
@@ -13486,340 +13487,340 @@ createNode reference -n "Dionysus_Asset_RigRN";
 		"Dionysus_Asset_RigRN.placeHolderList[856]" ""
 		5 3 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:L_Cylinder_Blend|Dionysus_Asset_Rig:L_Cylinder_BlendShape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_RigRN.placeHolderList[857]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Arrow|Dionysus_Asset_Rig:Left_Eye_ArrowShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Arrow|Dionysus_Asset_Rig:Right_Eye_ArrowShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[858]" 
 		"Dionysus_Asset_RigRN.placeHolderList[859]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Arrow|Dionysus_Asset_Rig:Right_Eye_ArrowShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Arrow|Dionysus_Asset_Rig:Left_Eye_ArrowShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[860]" 
 		"Dionysus_Asset_RigRN.placeHolderList[861]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Bored|Dionysus_Asset_Rig:Right_Eye_BoredShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Smirk|Dionysus_Asset_Rig:Mouth_SmirkShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[862]" 
 		"Dionysus_Asset_RigRN.placeHolderList[863]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Bored|Dionysus_Asset_Rig:Left_Eye_BoredShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Bored|Dionysus_Asset_Rig:Right_Eye_BoredShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[864]" 
 		"Dionysus_Asset_RigRN.placeHolderList[865]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Smirk|Dionysus_Asset_Rig:Right_Eye_SmirkShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Bored|Dionysus_Asset_Rig:Left_Eye_BoredShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[866]" 
 		"Dionysus_Asset_RigRN.placeHolderList[867]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Smirk|Dionysus_Asset_Rig:Left_Eye_SmirkShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Smirk|Dionysus_Asset_Rig:Right_Eye_SmirkShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[868]" 
 		"Dionysus_Asset_RigRN.placeHolderList[869]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Bored|Dionysus_Asset_Rig:Mouth_BoredShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Smirk|Dionysus_Asset_Rig:Left_Eye_SmirkShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[870]" 
 		"Dionysus_Asset_RigRN.placeHolderList[871]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Smirk|Dionysus_Asset_Rig:Mouth_SmirkShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Bored|Dionysus_Asset_Rig:Mouth_BoredShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[872]" 
 		"Dionysus_Asset_RigRN.placeHolderList[873]" ""
 		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:typeMesh1|Dionysus_Asset_Rig:typeMeshShape1.instObjGroups" 
 		"Dionysus_Asset_Rig:typeBlinn2SG.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[874]" 
 		"Dionysus_Asset_RigRN.placeHolderList[875]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Rim|Dionysus_Asset_Rig:Furnace_RimShape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface600|Dionysus_Asset_Rig:polySurfaceShape705.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[876]" 
 		"Dionysus_Asset_RigRN.placeHolderList[877]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_back|Dionysus_Asset_Rig:Furnace_backShape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface502|Dionysus_Asset_Rig:polySurfaceShape614.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[878]" 
 		"Dionysus_Asset_RigRN.placeHolderList[879]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface709|Dionysus_Asset_Rig:polySurfaceShape782.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface503|Dionysus_Asset_Rig:polySurfaceShape615.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[880]" 
 		"Dionysus_Asset_RigRN.placeHolderList[881]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface710|Dionysus_Asset_Rig:polySurfaceShape783.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface530|Dionysus_Asset_Rig:polySurfaceShape637.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[882]" 
 		"Dionysus_Asset_RigRN.placeHolderList[883]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface562|Dionysus_Asset_Rig:polySurfaceShape667.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526|Dionysus_Asset_Rig:polySurface526Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[884]" 
 		"Dionysus_Asset_RigRN.placeHolderList[885]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface585|Dionysus_Asset_Rig:polySurfaceShape690.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface604|Dionysus_Asset_Rig:polySurfaceShape709.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[886]" 
 		"Dionysus_Asset_RigRN.placeHolderList[887]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface574|Dionysus_Asset_Rig:polySurfaceShape679.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface661|Dionysus_Asset_Rig:polySurfaceShape766.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[888]" 
 		"Dionysus_Asset_RigRN.placeHolderList[889]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface567|Dionysus_Asset_Rig:polySurfaceShape672.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface639|Dionysus_Asset_Rig:polySurfaceShape744.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[890]" 
 		"Dionysus_Asset_RigRN.placeHolderList[891]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface579|Dionysus_Asset_Rig:polySurfaceShape684.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface594|Dionysus_Asset_Rig:polySurfaceShape699.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[892]" 
 		"Dionysus_Asset_RigRN.placeHolderList[893]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface588|Dionysus_Asset_Rig:polySurfaceShape693.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface606|Dionysus_Asset_Rig:polySurfaceShape711.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[894]" 
 		"Dionysus_Asset_RigRN.placeHolderList[895]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:L_Exhaust_Pipe1Shape|Dionysus_Asset_Rig:L_Exhaust_Pipe1ShapeShape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface634|Dionysus_Asset_Rig:polySurfaceShape739.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[896]" 
 		"Dionysus_Asset_RigRN.placeHolderList[897]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface668|Dionysus_Asset_Rig:polySurfaceShape668.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_02|Dionysus_Asset_Rig:Electrical_Box_Cover_Shape2.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[898]" 
 		"Dionysus_Asset_RigRN.placeHolderList[899]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface520|Dionysus_Asset_Rig:polySurface520Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_02|Dionysus_Asset_Rig:Electrical_Box_hinge_02Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[900]" 
 		"Dionysus_Asset_RigRN.placeHolderList[901]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526|Dionysus_Asset_Rig:polySurface526Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_mainShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[902]" 
 		"Dionysus_Asset_RigRN.placeHolderList[903]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface502|Dionysus_Asset_Rig:polySurfaceShape614.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_topper|Dionysus_Asset_Rig:Backpack_topperShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[904]" 
 		"Dionysus_Asset_RigRN.placeHolderList[905]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface503|Dionysus_Asset_Rig:polySurfaceShape615.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface666Shape|Dionysus_Asset_Rig:polySurface666ShapeShape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[906]" 
 		"Dionysus_Asset_RigRN.placeHolderList[907]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface530|Dionysus_Asset_Rig:polySurfaceShape637.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface665|Dionysus_Asset_Rig:polySurface665Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[908]" 
 		"Dionysus_Asset_RigRN.placeHolderList[909]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface670|Dionysus_Asset_Rig:polySurface670Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface568|Dionysus_Asset_Rig:polySurfaceShape673.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[910]" 
 		"Dionysus_Asset_RigRN.placeHolderList[911]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface671|Dionysus_Asset_Rig:polySurface671Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface576|Dionysus_Asset_Rig:polySurfaceShape681.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[912]" 
 		"Dionysus_Asset_RigRN.placeHolderList[913]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface542|Dionysus_Asset_Rig:polySurfaceShape648.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface597|Dionysus_Asset_Rig:polySurfaceShape702.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[914]" 
 		"Dionysus_Asset_RigRN.placeHolderList[915]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface560|Dionysus_Asset_Rig:polySurface560Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface709|Dionysus_Asset_Rig:polySurfaceShape782.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[916]" 
 		"Dionysus_Asset_RigRN.placeHolderList[917]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface566|Dionysus_Asset_Rig:polySurfaceShape671.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface710|Dionysus_Asset_Rig:polySurfaceShape783.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[918]" 
 		"Dionysus_Asset_RigRN.placeHolderList[919]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface569|Dionysus_Asset_Rig:polySurfaceShape674.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Rim|Dionysus_Asset_Rig:Furnace_RimShape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[920]" 
 		"Dionysus_Asset_RigRN.placeHolderList[921]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface572|Dionysus_Asset_Rig:polySurfaceShape677.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_back|Dionysus_Asset_Rig:Furnace_backShape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[922]" 
 		"Dionysus_Asset_RigRN.placeHolderList[923]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface589|Dionysus_Asset_Rig:polySurfaceShape694.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Lid|Dionysus_Asset_Rig:Furnace_LidShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[924]" 
 		"Dionysus_Asset_RigRN.placeHolderList[925]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface573|Dionysus_Asset_Rig:polySurfaceShape678.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_03|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape3.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[926]" 
 		"Dionysus_Asset_RigRN.placeHolderList[927]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface580|Dionysus_Asset_Rig:polySurfaceShape685.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_04|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape4.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[928]" 
 		"Dionysus_Asset_RigRN.placeHolderList[929]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface564|Dionysus_Asset_Rig:polySurfaceShape669.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_02|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape2.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[930]" 
 		"Dionysus_Asset_RigRN.placeHolderList[931]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface583|Dionysus_Asset_Rig:polySurfaceShape688.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_01|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape1.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[932]" 
 		"Dionysus_Asset_RigRN.placeHolderList[933]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface578|Dionysus_Asset_Rig:polySurfaceShape683.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_Shape1.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[934]" 
 		"Dionysus_Asset_RigRN.placeHolderList[935]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface577|Dionysus_Asset_Rig:polySurfaceShape682.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_01|Dionysus_Asset_Rig:Electrical_Box_Cover_Shape1.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[936]" 
 		"Dionysus_Asset_RigRN.placeHolderList[937]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface568|Dionysus_Asset_Rig:polySurfaceShape673.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface599|Dionysus_Asset_Rig:polySurfaceShape704.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[938]" 
 		"Dionysus_Asset_RigRN.placeHolderList[939]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface470|Dionysus_Asset_Rig:polySurfaceShape588.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface698|Dionysus_Asset_Rig:polySurface698Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[940]" 
 		"Dionysus_Asset_RigRN.placeHolderList[941]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface576|Dionysus_Asset_Rig:polySurfaceShape681.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface592|Dionysus_Asset_Rig:polySurfaceShape697.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[942]" 
 		"Dionysus_Asset_RigRN.placeHolderList[943]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface471|Dionysus_Asset_Rig:polySurfaceShape589.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface663|Dionysus_Asset_Rig:polySurfaceShape768.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[944]" 
 		"Dionysus_Asset_RigRN.placeHolderList[945]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface473|Dionysus_Asset_Rig:polySurfaceShape591.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface647|Dionysus_Asset_Rig:polySurfaceShape752.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[946]" 
 		"Dionysus_Asset_RigRN.placeHolderList[947]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface472|Dionysus_Asset_Rig:polySurfaceShape590.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface605|Dionysus_Asset_Rig:polySurfaceShape710.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[948]" 
 		"Dionysus_Asset_RigRN.placeHolderList[949]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface474|Dionysus_Asset_Rig:polySurfaceShape592.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface658|Dionysus_Asset_Rig:polySurfaceShape763.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[950]" 
 		"Dionysus_Asset_RigRN.placeHolderList[951]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface476|Dionysus_Asset_Rig:polySurfaceShape594.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface567|Dionysus_Asset_Rig:polySurfaceShape672.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[952]" 
 		"Dionysus_Asset_RigRN.placeHolderList[953]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface475|Dionysus_Asset_Rig:polySurfaceShape593.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface579|Dionysus_Asset_Rig:polySurfaceShape684.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[954]" 
 		"Dionysus_Asset_RigRN.placeHolderList[955]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface477|Dionysus_Asset_Rig:polySurfaceShape595.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface588|Dionysus_Asset_Rig:polySurfaceShape693.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[956]" 
 		"Dionysus_Asset_RigRN.placeHolderList[957]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface478|Dionysus_Asset_Rig:polySurfaceShape596.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface668|Dionysus_Asset_Rig:polySurfaceShape668.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[958]" 
 		"Dionysus_Asset_RigRN.placeHolderList[959]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface479|Dionysus_Asset_Rig:polySurfaceShape597.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:L_Exhaust_Pipe1Shape|Dionysus_Asset_Rig:L_Exhaust_Pipe1ShapeShape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[960]" 
 		"Dionysus_Asset_RigRN.placeHolderList[961]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface480|Dionysus_Asset_Rig:polySurfaceShape598.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface520|Dionysus_Asset_Rig:polySurface520Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[962]" 
 		"Dionysus_Asset_RigRN.placeHolderList[963]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface481|Dionysus_Asset_Rig:polySurfaceShape599.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface608|Dionysus_Asset_Rig:polySurfaceShape713.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[964]" 
 		"Dionysus_Asset_RigRN.placeHolderList[965]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface482|Dionysus_Asset_Rig:polySurfaceShape600.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface598|Dionysus_Asset_Rig:polySurfaceShape703.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[966]" 
 		"Dionysus_Asset_RigRN.placeHolderList[967]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface483|Dionysus_Asset_Rig:polySurfaceShape601.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface566|Dionysus_Asset_Rig:polySurfaceShape671.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[968]" 
 		"Dionysus_Asset_RigRN.placeHolderList[969]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface484|Dionysus_Asset_Rig:polySurfaceShape602.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface569|Dionysus_Asset_Rig:polySurfaceShape674.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[970]" 
 		"Dionysus_Asset_RigRN.placeHolderList[971]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface485|Dionysus_Asset_Rig:polySurfaceShape603.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface572|Dionysus_Asset_Rig:polySurfaceShape677.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[972]" 
 		"Dionysus_Asset_RigRN.placeHolderList[973]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface486|Dionysus_Asset_Rig:polySurfaceShape604.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface589|Dionysus_Asset_Rig:polySurfaceShape694.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[974]" 
 		"Dionysus_Asset_RigRN.placeHolderList[975]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface487|Dionysus_Asset_Rig:polySurfaceShape605.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface573|Dionysus_Asset_Rig:polySurfaceShape678.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[976]" 
 		"Dionysus_Asset_RigRN.placeHolderList[977]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface488|Dionysus_Asset_Rig:polySurfaceShape606.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface580|Dionysus_Asset_Rig:polySurfaceShape685.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[978]" 
 		"Dionysus_Asset_RigRN.placeHolderList[979]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface489|Dionysus_Asset_Rig:polySurfaceShape607.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface697|Dionysus_Asset_Rig:polySurface697Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[980]" 
 		"Dionysus_Asset_RigRN.placeHolderList[981]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface490|Dionysus_Asset_Rig:polySurfaceShape608.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface564|Dionysus_Asset_Rig:polySurfaceShape669.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[982]" 
 		"Dionysus_Asset_RigRN.placeHolderList[983]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_mainShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface578|Dionysus_Asset_Rig:polySurfaceShape683.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[984]" 
 		"Dionysus_Asset_RigRN.placeHolderList[985]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_02|Dionysus_Asset_Rig:Electrical_Box_hinge_02Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface583|Dionysus_Asset_Rig:polySurfaceShape688.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[986]" 
 		"Dionysus_Asset_RigRN.placeHolderList[987]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_topper|Dionysus_Asset_Rig:Backpack_topperShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface577|Dionysus_Asset_Rig:polySurfaceShape682.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[988]" 
 		"Dionysus_Asset_RigRN.placeHolderList[989]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface666Shape|Dionysus_Asset_Rig:polySurface666ShapeShape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface562|Dionysus_Asset_Rig:polySurfaceShape667.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[990]" 
 		"Dionysus_Asset_RigRN.placeHolderList[991]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface665|Dionysus_Asset_Rig:polySurface665Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface574|Dionysus_Asset_Rig:polySurfaceShape679.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[992]" 
 		"Dionysus_Asset_RigRN.placeHolderList[993]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface592|Dionysus_Asset_Rig:polySurfaceShape697.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface585|Dionysus_Asset_Rig:polySurfaceShape690.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[994]" 
 		"Dionysus_Asset_RigRN.placeHolderList[995]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface663|Dionysus_Asset_Rig:polySurfaceShape768.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface476|Dionysus_Asset_Rig:polySurfaceShape594.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[996]" 
 		"Dionysus_Asset_RigRN.placeHolderList[997]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface697|Dionysus_Asset_Rig:polySurface697Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface477|Dionysus_Asset_Rig:polySurfaceShape595.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[998]" 
 		"Dionysus_Asset_RigRN.placeHolderList[999]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface694|Dionysus_Asset_Rig:polySurface694Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface478|Dionysus_Asset_Rig:polySurfaceShape596.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1000]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1001]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface698|Dionysus_Asset_Rig:polySurface698Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface479|Dionysus_Asset_Rig:polySurfaceShape597.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1002]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1003]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Ball|Dionysus_Asset_Rig:Torso_BallShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface480|Dionysus_Asset_Rig:polySurfaceShape598.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1004]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1005]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Top_Socket|Dionysus_Asset_Rig:Torso_Top_SocketShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface481|Dionysus_Asset_Rig:polySurfaceShape599.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1006]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1007]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torse_Bottom_Socket|Dionysus_Asset_Rig:Torse_Bottom_SocketShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface482|Dionysus_Asset_Rig:polySurfaceShape600.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1008]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1009]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Shoulder_Guards|Dionysus_Asset_Rig:Shoulder_GuardsShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface483|Dionysus_Asset_Rig:polySurfaceShape601.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1010]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1011]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface716|Dionysus_Asset_Rig:polySurfaceShape789.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface484|Dionysus_Asset_Rig:polySurfaceShape602.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1012]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1013]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface715|Dionysus_Asset_Rig:polySurface715Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface485|Dionysus_Asset_Rig:polySurfaceShape603.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1014]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1015]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface717|Dionysus_Asset_Rig:polySurfaceShape790.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface486|Dionysus_Asset_Rig:polySurfaceShape604.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1016]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1017]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface664|Dionysus_Asset_Rig:polySurface664Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface487|Dionysus_Asset_Rig:polySurfaceShape605.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1018]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1019]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface597|Dionysus_Asset_Rig:polySurfaceShape702.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface488|Dionysus_Asset_Rig:polySurfaceShape606.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1020]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1021]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface642|Dionysus_Asset_Rig:polySurfaceShape747.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface489|Dionysus_Asset_Rig:polySurfaceShape607.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1022]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1023]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface598|Dionysus_Asset_Rig:polySurfaceShape703.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface490|Dionysus_Asset_Rig:polySurfaceShape608.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1024]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1025]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface608|Dionysus_Asset_Rig:polySurfaceShape713.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface542|Dionysus_Asset_Rig:polySurfaceShape648.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1026]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1027]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface600|Dionysus_Asset_Rig:polySurfaceShape705.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface560|Dionysus_Asset_Rig:polySurface560Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1028]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1029]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface594|Dionysus_Asset_Rig:polySurfaceShape699.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface642|Dionysus_Asset_Rig:polySurfaceShape747.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1030]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1031]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface604|Dionysus_Asset_Rig:polySurfaceShape709.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface671|Dionysus_Asset_Rig:polySurface671Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1032]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1033]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface639|Dionysus_Asset_Rig:polySurfaceShape744.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface470|Dionysus_Asset_Rig:polySurfaceShape588.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1034]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1035]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface606|Dionysus_Asset_Rig:polySurfaceShape711.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface471|Dionysus_Asset_Rig:polySurfaceShape589.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1036]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1037]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface634|Dionysus_Asset_Rig:polySurfaceShape739.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface472|Dionysus_Asset_Rig:polySurfaceShape590.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1038]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1039]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface661|Dionysus_Asset_Rig:polySurfaceShape766.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface473|Dionysus_Asset_Rig:polySurfaceShape591.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1040]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1041]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface605|Dionysus_Asset_Rig:polySurfaceShape710.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface474|Dionysus_Asset_Rig:polySurfaceShape592.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1042]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1043]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface647|Dionysus_Asset_Rig:polySurfaceShape752.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface475|Dionysus_Asset_Rig:polySurfaceShape593.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1044]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1045]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface658|Dionysus_Asset_Rig:polySurfaceShape763.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface720|Dionysus_Asset_Rig:polySurfaceShape793.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1046]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1047]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface599|Dionysus_Asset_Rig:polySurfaceShape704.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_Shaft|Dionysus_Asset_Rig:Propellor_ShaftShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1048]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1049]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_04|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape4.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_01|Dionysus_Asset_Rig:Propellor_01Shape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1050]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1051]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_02|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape2.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_02|Dionysus_Asset_Rig:Propellor_02Shape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1052]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1053]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_01|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape1.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface719|Dionysus_Asset_Rig:polySurfaceShape792.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1054]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1055]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_Shape1.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface721|Dionysus_Asset_Rig:polySurfaceShape794.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1056]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1057]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_01|Dionysus_Asset_Rig:Electrical_Box_Cover_Shape1.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface718|Dionysus_Asset_Rig:polySurfaceShape791.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1058]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1059]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_02|Dionysus_Asset_Rig:Electrical_Box_Cover_Shape2.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface722|Dionysus_Asset_Rig:polySurfaceShape795.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1060]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1061]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Lid|Dionysus_Asset_Rig:Furnace_LidShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface694|Dionysus_Asset_Rig:polySurface694Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1062]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1063]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_03|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape3.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Ball|Dionysus_Asset_Rig:Torso_BallShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1064]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1065]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface719|Dionysus_Asset_Rig:polySurfaceShape792.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Shoulder_Guards|Dionysus_Asset_Rig:Shoulder_GuardsShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1066]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1067]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface721|Dionysus_Asset_Rig:polySurfaceShape794.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface715|Dionysus_Asset_Rig:polySurface715Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1068]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1069]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface718|Dionysus_Asset_Rig:polySurfaceShape791.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface717|Dionysus_Asset_Rig:polySurfaceShape790.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1070]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1071]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface720|Dionysus_Asset_Rig:polySurfaceShape793.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Top_Socket|Dionysus_Asset_Rig:Torso_Top_SocketShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1072]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1073]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface722|Dionysus_Asset_Rig:polySurfaceShape795.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torse_Bottom_Socket|Dionysus_Asset_Rig:Torse_Bottom_SocketShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1074]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1075]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_01|Dionysus_Asset_Rig:Propellor_01Shape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface716|Dionysus_Asset_Rig:polySurfaceShape789.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1076]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1077]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_02|Dionysus_Asset_Rig:Propellor_02Shape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface664|Dionysus_Asset_Rig:polySurface664Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1078]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1079]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_Shaft|Dionysus_Asset_Rig:Propellor_ShaftShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface670|Dionysus_Asset_Rig:polySurface670Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1080]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1081]" ""
 		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526|Dionysus_Asset_Rig:polySurface526Shape.instObjGroups.objectGroups[1]" 
@@ -14168,1639 +14169,1639 @@ createNode absOverride -n "enabled5";
 	setAttr ".atr" -type "string" "enabled";
 	setAttr ".es" yes;
 createNode applyAbsIntOverride -n "AASamples2_defaultArnoldRenderOptions_AA_samples";
-	rename -uid "3B104A76-4552-8970-0C28-40A7FE225109";
+	rename -uid "2D5273BD-46D5-A62B-6F92-19B40405D643";
 	setAttr ".ori" 3;
 createNode applyAbsBoolOverride -n "enabled_aiAOV_diffuse_aoven";
-	rename -uid "F9741A74-48EF-2E95-78E9-ABAD853C5992";
+	rename -uid "4E957CAE-41FB-2F11-0E24-4B928855CA18";
 	setAttr ".ori" yes;
 createNode applyAbsBoolOverride -n "enabled1_aiAOV_specular_aoven";
-	rename -uid "6972A6BC-48C2-6B35-FFDA-0B976595BA42";
+	rename -uid "9CEC5C88-4467-95B2-06BB-3C9B26611869";
 	setAttr ".ori" yes;
 createNode applyAbsBoolOverride -n "FK_L_Thumb_02_Jnt_CtrlShape_ai_matte";
-	rename -uid "7A310B5A-479A-A006-06F6-6ABFCC210ED4";
+	rename -uid "DF2AE35D-4532-677E-7100-6E8656EC9B66";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape599_ai_matte";
-	rename -uid "E41DC4BA-48C6-F8BC-D7E0-C7927AD15BD1";
+	rename -uid "6D551109-4931-E249-BF9B-DC86A5A29569";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_CurveShape1Orig_ai_matte";
-	rename -uid "E3CA7551-45EA-202B-61D4-9094392F19D4";
+	rename -uid "8D287723-43B2-B224-F0C3-96A4ECA7BAF0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape889_ai_matte";
-	rename -uid "BF731BC1-4F5D-213E-C48F-84816FBA279E";
+	rename -uid "F576A009-493D-12AD-C011-1C9E55ADC318";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface698Shape_ai_matte";
-	rename -uid "34C39582-4A2A-D55F-392B-5589CA78BCC8";
+	rename -uid "BC84814C-4CFA-8808-DBAB-49A4FD544E6D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "leftnurbsSquareShape1_ai_matte";
-	rename -uid "ACFD03B0-4279-70FE-89F3-E5B09C361CC0";
+	rename -uid "87053F58-493A-D635-E544-00ACCB2DB353";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte";
-	rename -uid "8D32888D-493B-1BF9-45D6-69859A7FE823";
+	rename -uid "C6AB3FFF-43AC-1BC0-0EB6-228AC2F6C6C3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye4ShapeOrig_ai_matte";
-	rename -uid "DFCC1E58-486A-815C-7F3B-A8BAA5DF9F0B";
+	rename -uid "31CEC27D-4750-159C-3544-D4BBF5765DE5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_EyeShapeOrig2_ai_matte";
-	rename -uid "6812287D-4760-2A48-88A5-FC96B422CFBE";
+	rename -uid "D56F1440-40B2-BDDF-6EBE-2C80EE2FFA72";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_OpenShape_ai_matte";
-	rename -uid "38CCC172-4D23-0029-8D47-9AB2F4FDC772";
+	rename -uid "796606F5-4F02-9C25-5B80-6592DB41E835";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape841_ai_matte";
-	rename -uid "1CC445E1-4CB2-7974-8EAD-28A20565B1C2";
+	rename -uid "B1CC5B8B-4ECC-FCDB-CC80-8CB885BFDD62";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Wiper_CtrlShape_ai_matte";
-	rename -uid "7E3E2ED9-4637-AEFD-D3EB-4A9A24A683EA";
+	rename -uid "ECFB3433-41AE-B259-F947-22A27B1DB040";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_SmirkShapeOrig_ai_matte";
-	rename -uid "3739B784-42AF-125C-013E-83B3B693C395";
+	rename -uid "C401486B-40DE-167C-2837-5093B6523B12";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_SquintShapeOrig_ai_matte";
-	rename -uid "40E45027-4C8C-D2A6-D63B-B78DB12C69D8";
+	rename -uid "7CCE15D7-42D5-1033-2D60-2B8B74D9D6F7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Furnace_Hinge_Bolt_Shape1_ai_matte";
-	rename -uid "1CEA4E80-4827-5888-412B-428FA94394A8";
+	rename -uid "2AC71DB4-4177-0F94-5596-C699E09D7A59";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Backpack_mainShape_ai_matte";
-	rename -uid "31E02934-4E8B-5B06-22E0-8092F08B5F64";
+	rename -uid "22BF836C-49C7-2FCD-B6B9-669F36C79ED2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Arm_02_Jnt_CtrlShape_ai_matte";
-	rename -uid "3D346D21-4684-852B-6245-B6994E665D25";
+	rename -uid "1E445F72-4F0E-51F4-EF23-5F8ED2D584F2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape873_ai_matte";
-	rename -uid "BF0F12E3-4975-A511-A3F3-C49BD51BC259";
+	rename -uid "D8C96AE7-45C2-275C-814E-46AC8BBE06C0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Mid_Wheel_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "E579BB5B-404C-1D46-5D48-44BC7274447A";
+	rename -uid "E4762544-4C3C-D5A0-A1DB-78902F642693";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Eyes_CtrlShape_ai_matte";
-	rename -uid "92C91256-49EE-9D4B-6275-64A6A12122F5";
+	rename -uid "23FBBC80-4AD4-6470-EE5A-AF99864B80A9";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "topnurbsSquareShape1_ai_matte";
-	rename -uid "5E874C46-4508-B42C-38DD-FBB4672C36CB";
+	rename -uid "6FB31133-491F-5104-949C-9E84C7BE20F4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_ArrowShape_ai_matte";
-	rename -uid "5DD4C203-48E5-C360-CA1A-6181374E05DB";
+	rename -uid "B22BC11C-44D6-6889-DD41-7F81CE3D0086";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte";
-	rename -uid "EF8E4892-4726-DB59-74F2-B5A21D3652F3";
+	rename -uid "C24A25B2-4FFA-4162-3802-D79E099418A1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Furnace_Hinge_Bolt_Shape3_ai_matte";
-	rename -uid "A574A178-4E7F-89EC-68E1-B2B76423F86C";
+	rename -uid "A300B301-417E-D95C-F5F7-7BB3086215A7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Piston_01_CtrlShape_ai_matte";
-	rename -uid "3801DACF-4DA9-7E07-1B37-21A8B4F53F25";
+	rename -uid "C8F6E9C3-4291-9DBD-C929-01BEE0175EF2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_ArrowShape_ai_matte";
-	rename -uid "63A6560A-48CE-A912-61D4-2AAEE136C44B";
+	rename -uid "07BA1B22-44E3-FE97-AF63-F38450811D61";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "MouthShape_ai_matte";
-	rename -uid "5AC7196D-454C-B88D-981E-97965DFE5B61";
+	rename -uid "B3F63678-4AB2-9B56-E5EB-1C96851F7EDD";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Propellor_02Shape_ai_matte";
-	rename -uid "8CB8BB8A-44A8-5EC7-3176-D0B050190601";
+	rename -uid "974C0667-4506-9ED3-B7E5-82923F5DBFCF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Booster_CtrlShape_ai_matte";
-	rename -uid "ECFE8496-4A68-BBEF-13C3-E997D7EFFD1F";
+	rename -uid "52C25AAF-4D15-6D94-58AD-90BC5CE09A8A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Hand_Ring_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "84F71FBF-425B-BD12-D336-A7BDFABD316F";
+	rename -uid "E02CF040-41EE-8DBB-CF42-5CB8094A46A0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape694_ai_matte";
-	rename -uid "DDA5DC61-4FAA-3D86-9D77-A898D3422D43";
+	rename -uid "E309981E-49BF-D567-5584-84B0506E7E05";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape674_ai_matte";
-	rename -uid "74D6D147-4F10-7DDF-8E56-398A938E53F3";
+	rename -uid "5398FA52-4FD3-1AC2-E6EC-40B99F27D5F4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Front_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "2DE666C5-4AC4-50C7-6864-3D8F411304C5";
+	rename -uid "7DD2C9E6-408A-CB5C-84B1-4BB55F1CADDB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape697_ai_matte";
-	rename -uid "7FF07447-4EB1-8E3A-376F-64841C49A535";
+	rename -uid "D6177F7D-4AAA-130A-C238-4DAA43874DDB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape678_ai_matte";
-	rename -uid "340A0878-4A5B-81D9-D516-52B702E3374A";
+	rename -uid "85A6AC0D-4EE4-316D-3127-1986C24B960E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape867_ai_matte";
-	rename -uid "E5B746A1-4D66-096D-302A-6AAB7025997D";
+	rename -uid "6095C431-4500-18BF-D0FE-AEB27F09B2BC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape3_ai_matte";
-	rename -uid "9AE9AA9B-4856-7404-E0DF-EBB9191FE1E4";
+	rename -uid "6C94A5F7-4751-B827-7BB1-2A8ED990D549";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Finger01_One_Jnt_CtrlShape_ai_matte";
-	rename -uid "4A73AF15-4667-849C-C316-03810802003C";
+	rename -uid "10ADEB0F-42DB-96FD-8E45-47AB0C61047D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_CloseShape_ai_matte";
-	rename -uid "8CBE9738-4883-0BF3-4D59-A5A796051BC8";
+	rename -uid "FCF3615B-4397-3687-AC55-DA9B7F2862E4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape883_ai_matte";
-	rename -uid "F665ED43-4BDB-216B-3B54-B58AE93B2877";
+	rename -uid "FF558CAC-44B0-8A7F-6147-4DAE6A590028";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape839_ai_matte";
-	rename -uid "B21B74B2-4FBC-27C5-8432-72B44386EE61";
+	rename -uid "36DC9094-4F10-B24B-C289-5AA72103BE3D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Mid_Wheel_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "EF19DE07-405F-00C3-9EFB-07A354D5FF0C";
+	rename -uid "EFF3913B-468B-2E3A-3E78-40AF4F554BD6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Finger_03_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "49F88808-40BE-FF6F-BA43-1A87AEA0AADF";
+	rename -uid "720FB876-45B8-FEF7-7506-E187A1C5EFE2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Neck_05_CtrlShape_ai_matte";
-	rename -uid "6D77368F-4CFE-FCD3-ADB0-5D800DA9E07D";
+	rename -uid "B287706C-48B6-1C31-689F-099274BC3F4C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Front_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "29860FAF-4762-7102-68E3-2AB52EE00820";
+	rename -uid "656AECDD-49ED-3FF1-8071-63AA97CAA11F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape710_ai_matte";
-	rename -uid "0EEA6AE7-480F-21E3-1CC1-E8B24BBB4538";
+	rename -uid "48DB17A4-4A81-BC3C-0B4C-3483C7FBBC45";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Head_FK_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "3724C8EC-44A5-B685-CCC7-89B7235DE382";
+	rename -uid "E3C6FC6A-4943-E286-70BA-C398E284CBFA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Arm_IK_Jnt_05_CtrlShape_ai_matte";
-	rename -uid "5754C8C1-4EAE-CB35-B93C-639760BD03BB";
+	rename -uid "AEF455DB-4BDF-443A-BF21-789E3663D64A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape836_ai_matte";
-	rename -uid "6BC4BA40-4C5D-8E87-01E9-19A7E89D60E8";
+	rename -uid "E4A94DD6-4D65-6E2C-4FC7-56A859DECD59";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_HoseShape_ai_matte";
-	rename -uid "C31FA7F3-4543-CB78-52F9-2AA75F205FF8";
+	rename -uid "D84872C5-49CE-12DF-A55C-8799D9D049A2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Neck_02_CtrlShape_ai_matte";
-	rename -uid "569B6785-495E-C0E3-494B-E68B1D8B19F0";
+	rename -uid "09DA1ADD-44A6-73BB-7F30-1095A7346F61";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape606_ai_matte";
-	rename -uid "A43D4F86-411D-D70D-3481-8BA9590E07B3";
+	rename -uid "DE577DF9-4E3D-A64B-ECB1-7BA4CE82965E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye3ShapeOrig_ai_matte";
-	rename -uid "A64E3FB3-492C-877C-10DB-51AA20F8671F";
+	rename -uid "9E231B0B-433A-B0B5-14DA-1E80D52BB565";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape834_ai_matte";
-	rename -uid "FF760503-4428-156F-0FCF-0699D50452A3";
+	rename -uid "F8ECD844-42BD-08EC-A4F5-66AB3667F73A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_08_CtrlShape_ai_matte";
-	rename -uid "A678EA0E-4152-2BF6-77E5-7E874666757E";
+	rename -uid "AD9811FE-415F-D0D9-877D-7DAFC12AB974";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Prop_CtrlShape_ai_matte";
-	rename -uid "09695845-4C46-245C-A05E-19B34A6FC14D";
+	rename -uid "72B349AB-4A5D-0912-4CF5-3D98FAA4EDD4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Electrical_Box_hinge_Shape1_ai_matte";
-	rename -uid "D8328998-4411-92C9-0ADB-4EAD5A2DD5F6";
+	rename -uid "BDA59745-4EE6-7B88-EDC8-0B995ADAAE6E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_Sad_ShapeOrig_ai_matte";
-	rename -uid "AF9C333D-4915-B8D9-D9C5-2A93012235EA";
+	rename -uid "BBBC2D2A-41E4-7B62-E1FC-84933FCF670E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape882_ai_matte";
-	rename -uid "B6750536-4BC9-33AD-E82E-F99A303DF197";
+	rename -uid "0C915804-490D-ED49-7B66-679C30C303D0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Hand_Ring_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "93972740-446E-C316-9A03-A984A624E4DD";
+	rename -uid "36718699-4017-041A-FBB6-F9AA0AF21493";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "OoohShape_ai_matte";
-	rename -uid "7B8CF9FB-487F-4479-BAA7-ABBE6BA87491";
+	rename -uid "06C38426-40FA-5DD9-6EEE-67A9FFECDF44";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape886_ai_matte";
-	rename -uid "ACD72C84-463E-1B3A-5B20-ABAC76D6CA43";
+	rename -uid "0B2C0790-48C7-166B-ED85-5F9EDA5D80EE";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_CloseShape_ai_matte";
-	rename -uid "CBF117C3-4CE1-AA7F-7820-7DBC5741BDDA";
+	rename -uid "DD80FA1C-4D4F-E50E-5239-9880C1F13606";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte";
-	rename -uid "EF8C96BA-4294-5B0A-E603-829B8E701DB7";
+	rename -uid "142F115C-4BEF-92C6-5D26-B6813EE66B7F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape598_ai_matte";
-	rename -uid "642594F8-470E-4406-A916-31B1919F27CC";
+	rename -uid "EBCA40E4-4B99-D4C5-4A8D-E69EC1B997C1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Finger02_Three_Jnt_CtrlShape_ai_matte";
-	rename -uid "09FE9694-42AB-AAEE-E4F3-4CB7EFCFDDBD";
+	rename -uid "CDBC0052-4C71-D7AB-65DD-D6938D252CCF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_06_CtrlShape_ai_matte";
-	rename -uid "AA1D39AF-45B0-A1C2-DDFF-2788C3BB097D";
+	rename -uid "06DED1CF-48B0-CEAB-43A0-D48B854FBC2C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Furnace_backShape_ai_matte";
-	rename -uid "DCB0D7FC-4E56-BB2B-36D5-48803774E2B7";
+	rename -uid "C53211D0-4316-DF50-69EA-02A4EBD24B62";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape7_ai_matte";
-	rename -uid "F96AA647-4634-1120-2E82-2CB11A173703";
+	rename -uid "CB748AAE-40D4-9C81-9586-BFA59787245E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape881_ai_matte";
-	rename -uid "4120F334-4D8C-8F43-B57C-26A215A843E2";
+	rename -uid "BF271C6F-475E-C4CB-09CE-6E83D2AF3D37";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape782_ai_matte";
-	rename -uid "4DFD2F25-406D-B54E-336C-D9AA3DDDFB28";
+	rename -uid "128653D1-4B50-7E48-C7A8-BBB6B56AF7AC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape732_ai_matte";
-	rename -uid "152D4DD4-470A-313F-9276-5EA5D151EC42";
+	rename -uid "C8EF011C-46BF-72A4-E8C9-2CBBB7149A91";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "LeftTreadGeoShapeOrig1_ai_matte";
-	rename -uid "A0007FA5-44F4-B0D7-CD32-C4A54A230F7C";
+	rename -uid "74AB9E6B-4F02-1E21-0BA9-D5B4C0D9583D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Two_Handed_Prop_CtrlShape_ai_matte";
-	rename -uid "4040988E-4ED4-50A1-5CE3-95ACA76B8A92";
+	rename -uid "877C59C1-4636-EF98-89CF-A4901471BDD4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_05_CtrlShape_ai_matte";
-	rename -uid "462F5C42-4F9C-B63B-04C3-71ABC5785842";
+	rename -uid "D89A1118-4F91-4A6E-8E33-07BA3AAA5D2E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape853_ai_matte";
-	rename -uid "1D528BB2-44AF-AD64-388C-8FB7CBB04278";
+	rename -uid "BFD815B2-4E47-C12A-C690-3AA8E997D485";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape794Orig1_ai_matte";
-	rename -uid "230E1D20-4AD2-5A81-0C52-B7AB31AD9225";
+	rename -uid "90B882F7-45F6-9257-DF45-99AC2BF850B7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape6_ai_matte";
-	rename -uid "E10B4BBF-4779-4E4E-D85C-5F96E3AE746F";
+	rename -uid "986642C4-41FB-7A27-4FC9-149E8208DF9E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Mid_Wheel_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "F145A4F6-4A3D-71F0-3C1F-A997A1A1DA9E";
+	rename -uid "EAF82842-47FE-AE57-A1E4-62BC28BF8617";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte";
-	rename -uid "18BDAB39-44FB-CE18-A445-CE805BC50CF3";
+	rename -uid "5CCDD0A1-4704-8275-8885-D8A89027E729";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte";
-	rename -uid "92118DE8-428B-5608-87CC-F38B959F65B7";
+	rename -uid "E13A9523-459C-EC49-D819-61BFBCDA9574";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "IK_Base_CtrlShape_ai_matte";
-	rename -uid "448B3299-431C-3695-8521-89AFDE8DFD37";
+	rename -uid "DF7F7145-4A01-DEAA-1641-8D9EEE897841";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "F29948F4-4EDC-3CDB-AB45-42AC07603121";
+	rename -uid "B557BEEC-4C72-6E56-7B8B-05B52215F4A5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_SmirkShapeOrig1_ai_matte";
-	rename -uid "5B6C14E8-4DE3-153D-D178-6ABC530831FD";
+	rename -uid "35CC66E5-4826-72F6-AD30-7DB0F61ED661";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape711_ai_matte";
-	rename -uid "DE9B5542-4D12-6FD3-EF8E-02A009D968C3";
+	rename -uid "E4E868A9-4AE5-B677-A961-3DA1C1652A1E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape795Orig1_ai_matte";
-	rename -uid "2C67B0F5-4C3B-EBFD-84EB-B4B2C639F277";
+	rename -uid "FFF30744-4DC7-A6B2-7BFC-24AEE86C99A8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Tread_Wire_Base_CurveShape_ai_matte";
-	rename -uid "F2D9277A-483B-B7BD-78E6-6F808154AAF1";
+	rename -uid "D2BC3456-47BD-1027-9BF2-C8B74D316699";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_HoseShapeOrig1_ai_matte";
-	rename -uid "E05E871A-4347-0303-D49F-B8AD2F0D3635";
+	rename -uid "505A7E97-44F5-DD27-4339-8C972045F11C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface694Shape_ai_matte";
-	rename -uid "D451AC8A-42E2-4D9F-D2E6-84B272AE05AC";
+	rename -uid "29B67975-4372-6576-10F7-189BA5E6F803";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape824_ai_matte";
-	rename -uid "39AF0234-481F-7ABA-82EF-EF819EFF7142";
+	rename -uid "5B9D53C1-4A7B-E98F-A35C-A5A5794C1EB1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Finger01_Three_Jnt_CtrlShape_ai_matte";
-	rename -uid "B237561F-4162-9CDE-721A-4D9772DA0DBA";
+	rename -uid "7DD29960-41C9-DE07-E561-7283438AAC16";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape673_ai_matte";
-	rename -uid "1B5BC2CD-4643-5992-13ED-D0892F7DC9B4";
+	rename -uid "8FDEDC86-4A8F-F3F2-F42B-A8B10952899B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hand_Prop_CtrlShape_ai_matte";
-	rename -uid "7393C9ED-4E96-2A07-D77A-0595EFE5CAA9";
+	rename -uid "45ABA315-4F70-F52F-14A1-E690735E3F49";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Finger02_One_Jnt_CtrlShape_ai_matte";
-	rename -uid "E340059C-4DF3-4DFC-B887-288C36E1B906";
+	rename -uid "C168407B-4317-D862-F391-669364AF3C0C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape813_ai_matte";
-	rename -uid "B0F5FDC6-46C0-C9C1-B230-C2A44D0129C8";
+	rename -uid "1CC85846-45C6-7666-33FA-1288998E9D18";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "bottomnurbsSquareShape1_ai_matte";
-	rename -uid "F840E155-4679-027E-B35A-82B34147970E";
+	rename -uid "6E868025-4691-CF09-DE4A-0B8DFCBFD08D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface670Shape_ai_matte";
-	rename -uid "9EA3176C-4815-8B2F-D78F-F78CDF06B24F";
+	rename -uid "FC4B14DA-4CA8-E367-5A05-689D277B7520";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Exclamation_PointShape_ai_matte";
-	rename -uid "535D15BD-43E5-CE65-A0E4-B58B3F603CE1";
+	rename -uid "F20E70CA-4822-5B5B-C110-F3806AE18F8D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape851_ai_matte";
-	rename -uid "1B7F9601-4B34-BD77-006F-6EAFA5499830";
+	rename -uid "5D51DE4B-4C09-CAB6-1335-E19B8DE0892C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape799_ai_matte";
-	rename -uid "E124EB08-4D27-1E0C-EB99-0F90DF6432D3";
+	rename -uid "CB8B1F3B-4F4E-5D92-6D3C-79852F4B9510";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape795_ai_matte";
-	rename -uid "A03CAC48-49A2-9CF5-2E7A-39B1740C1CC2";
+	rename -uid "BBA12C17-4794-0CA6-9DC8-DBA6281094D8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Panel_CtrlShape_ai_matte";
-	rename -uid "353905BE-4089-3A57-AB3A-C9A3DA144BB5";
+	rename -uid "37CFDA26-49E7-28E1-3FB2-DAA81DBD19FF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Arm_02_CtrlShape_ai_matte";
-	rename -uid "30E976FF-4BF2-5F9C-A5AB-7B8B34B0CD54";
+	rename -uid "3022B447-4554-6F49-FC95-2084C7330F6C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape798_ai_matte";
-	rename -uid "EDD6337C-4200-93A0-5E21-86A85B00CD98";
+	rename -uid "714BA0A9-41F2-DD0B-633C-0F9B6DACECB0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Eye_X_1_CtrlShape_ai_matte";
-	rename -uid "D6F56426-4306-0EAA-77A0-4C9AE720F75B";
+	rename -uid "0259225D-4EAB-367B-C2FB-678E9BABCC20";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape874_ai_matte";
-	rename -uid "11502615-48D9-4A6D-2A41-598363243464";
+	rename -uid "F29341FB-4B2B-DF6A-9DF2-108ABBE237C2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Neck_04_CtrlShape_ai_matte";
-	rename -uid "6133A31C-4F4E-774A-49B5-58883C20303A";
+	rename -uid "ABFCE1C1-43E6-AD07-ADED-D4AF0C6A24F9";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "HallwayShapeOrig_ai_matte";
-	rename -uid "7DD3D067-46C6-20D6-5916-22BC7FC0F45F";
+	rename -uid "4A5FE193-4F66-2560-8B3B-CBA760F91F84";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Propellor_Shaft_CtrlShape_ai_matte";
-	rename -uid "0AA84B32-4217-D2F3-ECF2-D89C226CD28E";
+	rename -uid "11BF15E2-49E3-D3B4-4DA3-75859035E9E1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Eye_X_1Shape_ai_matte";
-	rename -uid "5EC907DC-4D88-803A-52BA-8EA067D2D88D";
+	rename -uid "74C68995-4856-57B3-0747-E1BB5BAF397E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_CurveShape_ai_matte";
-	rename -uid "D53E9B08-4E5A-EEF5-A9E7-0493366278AC";
+	rename -uid "4AFC2E42-4834-8EAC-17E4-70A1DF013CD0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape857_ai_matte";
-	rename -uid "E827EC35-462E-8D9D-0172-C5B420419A6A";
+	rename -uid "901F59C6-4FB3-03E6-CD45-759614A0643E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "LeftTreadGeoShape_ai_matte";
-	rename -uid "CB8FD344-40D0-F963-B59B-BDB4AD538288";
+	rename -uid "28CE8B7A-4C4D-DB9F-8D33-52B5767E8812";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Electrical_Box_Cover_Shape1_ai_matte";
-	rename -uid "D5B227DB-4DE2-09D5-967F-178D4E32383D";
+	rename -uid "336C70B3-4183-DC91-C2F4-4BB0829E2D8F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Transform_CtrlShape_ai_matte";
-	rename -uid "EFE43A5E-48A5-24F2-A852-F7AB2EB27963";
+	rename -uid "286FD1E4-493D-2A6A-DB3E-A5B1D0A11D3E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape806_ai_matte";
-	rename -uid "99D129E9-41CC-FA20-A02D-5D90D0CA11CC";
+	rename -uid "DB0F304B-4BBB-C085-6502-7D85CAA81CFB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Arm_FK_Jnt_05_CtrlShape_ai_matte";
-	rename -uid "A42D3465-4433-88FC-A15A-19A2E4C189FD";
+	rename -uid "430DBDA3-4E0A-B792-88CF-1883E9495145";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Light_Rig_CtrlShape_ai_matte";
-	rename -uid "B407BFC5-4EF0-AEE0-16A4-85B9A9496116";
+	rename -uid "EDF6E0E3-48E1-EBF2-D832-9F99F35C1644";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_BoredShape_ai_matte";
-	rename -uid "088BF415-4D8A-D1BB-7ADB-DCB7BF949906";
+	rename -uid "5FB8DC06-44C8-EBAB-1272-86910713B5AA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte";
-	rename -uid "BBD433B2-40ED-4F3B-317B-DAAC3D410A9A";
+	rename -uid "3826A929-4881-73EB-C869-5E9A9E5000D0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_ArrowShape_ai_matte1";
-	rename -uid "5C83FB19-4432-BE1F-9E1C-36BDB409DF8D";
+	rename -uid "83338979-445F-4168-79C6-A1A638E15DFE";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Arm_01_Jnt_CtrlShape_ai_matte";
-	rename -uid "37E4B4BD-4925-CBEE-CD16-5FA0C900A999";
+	rename -uid "FAFFC7DE-4AFE-0460-721D-B0A358008973";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_SadShapeOrig_ai_matte";
-	rename -uid "558EB056-4CD2-AAD8-17F0-93997766BA7C";
+	rename -uid "27679FDD-4791-9C19-4617-50A765FC65BA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape854_ai_matte";
-	rename -uid "259AD4B6-4BEE-996E-203E-FABC9693BF54";
+	rename -uid "F54CD50D-4345-E68E-D051-3CAB09DCA322";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Furnace_RimShape_ai_matte";
-	rename -uid "59A76AE6-403A-D18A-29D2-FEB430BBD274";
+	rename -uid "99D9D02C-4E82-A159-55EB-769433341FB5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Arm_FK_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "3E6472EF-4E6A-2EE2-C2CA-50B6F1D10B4F";
+	rename -uid "DDA38DEF-4041-9C98-E245-46B11B2BB245";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape864_ai_matte";
-	rename -uid "D66803A7-4813-0A7C-5921-B89825F764FA";
+	rename -uid "4368AD0F-4E17-993B-E1F5-81A2558595BA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte";
-	rename -uid "9D4E125C-4112-0ED3-79E7-A8812B16428C";
+	rename -uid "FCB07F12-476A-D9E1-6F58-D1A5D2DE7BF8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_CurveShape_ai_matte";
-	rename -uid "13624B99-4A6D-ABCB-ED74-2DAA2AA21EFA";
+	rename -uid "CBE44032-442F-ACCD-69E3-FEAA889DB8F1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape589_ai_matte";
-	rename -uid "1725936A-4B70-AFE1-8D5B-5998C6D38EBC";
+	rename -uid "A4BCB976-481F-EC97-7D20-08B76A7A0503";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_DeterminedShapeOrig_ai_matte";
-	rename -uid "981637E3-42A0-398A-4A65-1A99B8A11FFC";
+	rename -uid "BD0845BC-4C56-CFFA-1614-5BA06A0709E6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape804_ai_matte";
-	rename -uid "25F6F66A-4E2E-47D6-0636-CD8370592E42";
+	rename -uid "12BF37A9-4980-999F-0861-ED9B9F907D4E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_BoredShape_ai_matte";
-	rename -uid "C53B7CF4-4DDA-D103-420B-B399BC5ABDFB";
+	rename -uid "159BA227-42DD-6D5D-EEAB-2B8DD349A959";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape812_ai_matte";
-	rename -uid "E71159BE-4E78-B06B-D3BD-5A8BEA256E81";
+	rename -uid "2235480A-465A-8F00-CC49-E1AD6086F138";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape877_ai_matte";
-	rename -uid "58A83A25-46A9-3A81-64C8-2CBED67C00B7";
+	rename -uid "05AE57F4-477C-5547-E4A6-919379DA832C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShape_ai_matte";
-	rename -uid "A62981C9-4407-A7E0-D127-40AC1CB27F5F";
+	rename -uid "B014D103-4971-9408-4281-79A33A9770F1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface671Shape_ai_matte";
-	rename -uid "F43EBAF1-4FD6-355F-F3B9-8B9BB7CD204F";
+	rename -uid "7AC66F56-4EF0-2D29-27DE-59ADD8D787AB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte";
-	rename -uid "36A39600-4451-F01B-4B93-5FB36D643310";
+	rename -uid "CA4679BF-4C85-CAD2-3F8F-9F8ECA3BCDC6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "BlendShapeShape_ai_matte";
-	rename -uid "0FB5986F-4D3A-F420-4147-E6BC26BC63CB";
+	rename -uid "96C56FD3-45CF-1CAD-8DA2-3F881BD7188C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Face_GlassShape1_ai_matte";
-	rename -uid "79284E06-495B-DF93-9228-40A3AB4320A3";
+	rename -uid "D4596BA7-4963-F9CA-27C0-A6818749636C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte";
-	rename -uid "293CBAFA-4578-585B-157E-5C928885B04C";
+	rename -uid "DA34439E-43E5-2EEF-7CAF-34877E8F9047";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape815_ai_matte";
-	rename -uid "A15CB9D4-4D36-7CA1-C11F-45A8FCC9A4C9";
+	rename -uid "59D8B325-4F93-209C-3205-DA86944B46C3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Prop_Shaft_Length_CtrlShape_ai_matte";
-	rename -uid "96C84392-4672-9C44-6799-9AB483949126";
+	rename -uid "8A99D7EC-46BE-E928-8A69-60984E3EDE58";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Arm_Spinner_01_CtrlShape_ai_matte";
-	rename -uid "C00D6DDD-4A23-AB78-3886-C2A01CDCC0A7";
+	rename -uid "A7FF32B5-41FE-7F16-BF1B-3FB63C0EB3AB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "NeutralShape_ai_matte";
-	rename -uid "870A7F97-499D-4315-7B25-D19B48E89914";
+	rename -uid "16FF3321-48F4-2221-C66F-2C8B771ED766";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Plate_CtrlShape_ai_matte";
-	rename -uid "2EC40E47-4C1C-900F-A2FD-CBA6D94E6BA5";
+	rename -uid "059182AE-4154-1AC7-0880-A69347831682";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape871_ai_matte";
-	rename -uid "DF05DA61-440F-2C8B-B4D7-20AC36FC0518";
+	rename -uid "E84D46E2-4AF7-5D68-2C62-43A145025D63";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Arm_IK_CtrlShape_ai_matte";
-	rename -uid "3AF96490-422C-9E7D-B130-7D84746D7337";
+	rename -uid "E3D34A5F-421C-5657-FF1D-829C51B8FF94";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShapeOrig_ai_matte";
-	rename -uid "B5791A3E-4309-C2C7-31EB-7195D85890A8";
+	rename -uid "8B317A30-4963-BA08-3327-0AAF8ABA6D26";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Palm_CtrlShape_ai_matte";
-	rename -uid "590246DD-4943-918B-100C-D3B87B04AD4E";
+	rename -uid "0F42C04B-447F-C0CB-A649-4C9F2FC755EA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape596_ai_matte";
-	rename -uid "C29F5DFC-4E18-9217-719F-81B3314090AB";
+	rename -uid "56FECE1C-45EF-58B2-51C4-DC9CD281A1C6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape683_ai_matte";
-	rename -uid "B8F19823-42A3-216F-5BB9-49AA8FF8C703";
+	rename -uid "8E2B8B5B-470F-8EEA-3CE2-EF9BB859C48B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape704_ai_matte";
-	rename -uid "3C1E83A0-4B10-06FB-C92A-93A96E4075C7";
+	rename -uid "146B96F3-44BE-C37A-0841-F5B742B0F21A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface664Shape_ai_matte";
-	rename -uid "5CEBA47F-4F0D-6900-BA92-839FA855D3CC";
+	rename -uid "74EAE5F4-4E8A-4375-9F2F-58B20523CBF3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape591_ai_matte";
-	rename -uid "02B49D96-429C-ADC9-F1F9-CDB1D9225902";
+	rename -uid "7BCD92D9-421E-D8DC-8440-FAB9706836DA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte";
-	rename -uid "F1A80DD5-4D72-1AAE-0D7A-B0AE5F1E45E2";
+	rename -uid "A34010E6-4243-E15D-5F04-538948D59D33";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_SmirkShape_ai_matte";
-	rename -uid "70D8FFEE-4673-DF3C-2281-DBAF2CA0FFAF";
+	rename -uid "02207230-4B55-0CD7-527D-E497D488F886";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_11_CtrlShape_ai_matte";
-	rename -uid "65DEB409-45BE-25D7-22D2-109F02053B1D";
+	rename -uid "8B75AF01-4132-BAFF-9A5E-D2B8D62557D1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_08_CtrlShape_ai_matte";
-	rename -uid "3D92B082-488D-AA61-7132-3EBFD711B6E6";
+	rename -uid "F45F24CB-44D1-0265-6E62-ACB564A13678";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape602_ai_matte";
-	rename -uid "91EFF10E-47E0-A2B2-9520-57A33E8A3972";
+	rename -uid "387A46C4-411A-D653-F62A-76BD3805EF96";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_BoredShapeOrig_ai_matte";
-	rename -uid "3F546E71-4F51-9624-3BA4-96889C01990A";
+	rename -uid "9A844486-458A-0868-0947-DCAB2513DC2D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape739_ai_matte";
-	rename -uid "694D8B04-49FE-0F44-6D50-04994DF79188";
+	rename -uid "D93F4286-445B-3A38-142A-3BBB7FFE9823";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig1_ai_matte";
-	rename -uid "68B5AFED-45B7-40EA-C144-71B9BA25ECF1";
+	rename -uid "1CF38F4E-4A5D-031E-7044-32850A4D91D5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape684_ai_matte";
-	rename -uid "4D8242AF-4EE2-1E0A-2767-DC9F0317ADFC";
+	rename -uid "5F458443-4AD2-A488-25C3-449373CB9F09";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_DeterminedShapeOrig_ai_matte1";
-	rename -uid "B9969D92-4F39-167D-36E7-6F8959005913";
+	rename -uid "AF727056-419B-6AED-54C8-F286D39C8FA4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Arm_IK_PV_CtrlShape_ai_matte";
-	rename -uid "D78B52FD-4083-23F5-37F9-5CA926E4981C";
+	rename -uid "3B8C317A-4E4D-64D6-C6B8-63A87DC28003";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape838_ai_matte";
-	rename -uid "22325B34-49B4-CB38-2531-B6BBD6F3966A";
+	rename -uid "7879BB1E-446D-C195-8E32-2A8F0CBB296A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte";
-	rename -uid "67DC343A-4416-5A4F-80A8-DD9CB7255D60";
+	rename -uid "5FC3BA22-47F3-5FD7-634B-2CB40C275EA9";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Palm_CtrlShape_ai_matte";
-	rename -uid "46400537-4ED3-F028-8DB5-FC970863D475";
+	rename -uid "CC57E448-4AE2-A8A5-2EB4-3F83C2942FC6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Neck_03_CtrlShape_ai_matte";
-	rename -uid "1FD66A37-4795-5477-EDF0-0FAB83577CD2";
+	rename -uid "B64460EF-4C89-B002-330D-C1B80EC4C303";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_Close_Shape1_ai_matte";
-	rename -uid "AB044700-4B57-A91A-5020-5F8D672B1108";
+	rename -uid "E1C4E9A1-4A55-E51A-C8F7-12A39416676F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape823_ai_matte";
-	rename -uid "DEE524BE-455B-6FCD-2D5B-10B673142C75";
+	rename -uid "BF88364E-43A4-0D06-6F08-1F83FC10ADF3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_SmirkShapeOrig1_ai_matte";
-	rename -uid "D829FB20-46C8-07D3-259B-B1B2681C2B81";
+	rename -uid "E7F311BB-4528-1CE0-9280-509E5974E3A8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape848_ai_matte";
-	rename -uid "F3E519CF-4685-A476-1CE7-469B9A678560";
+	rename -uid "8CAD71A3-4FD0-D768-A84B-BF9F63D39154";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_ArrowShapeOrig1_ai_matte";
-	rename -uid "FAFD5111-46F9-59B5-C080-278694E9E2DC";
+	rename -uid "6DA53BCA-4298-23D7-05BA-DCBE49C32D93";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_SmirkShapeOrig_ai_matte";
-	rename -uid "F6770DD8-481C-322A-A6F7-1582FE2189A1";
+	rename -uid "29808C2A-4E72-A38A-6CD2-F7A635D4678D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape816_ai_matte";
-	rename -uid "78A08510-4278-2713-325E-C2868A991482";
+	rename -uid "62D56875-40B5-EA6F-2D0E-44B979A26D29";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte";
-	rename -uid "0310B721-449C-13F3-8856-5695372A4D65";
+	rename -uid "2988C428-44A1-1E09-D859-2992700E4913";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Furnace_CtrlShape_ai_matte";
-	rename -uid "4CAB5631-456B-1D77-7998-B39C67639F0C";
+	rename -uid "0CEF54F3-4F2F-ECD4-5F95-EC993B1C2C41";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_ArrowShape_ai_matte1";
-	rename -uid "BBBE458A-4A1F-B253-BCFA-CCAEA88C9FA7";
+	rename -uid "551D5D73-4F5C-DD1E-D490-02A4BE786334";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_OpenShape_ai_matte";
-	rename -uid "5D630D3F-4B65-A8BC-43AC-F090835269E2";
+	rename -uid "638FC262-4A52-CC5B-94CF-DAB78681EFEA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_EyeShapeOrig_ai_matte";
-	rename -uid "E721B042-431B-1E95-2F0B-8B8278B4477D";
+	rename -uid "B87DA104-441F-ADC8-8032-5B9401A80D42";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Arm_FK_Jnt_04_CtrlShape_ai_matte";
-	rename -uid "0ADA8713-40A3-B8B9-56E8-CB817FA5B3EA";
+	rename -uid "B2A81B5A-47EF-E73A-3105-9DBAB487C156";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape601_ai_matte";
-	rename -uid "E7536E8B-44D9-F2ED-AC69-0999D99B1EF4";
+	rename -uid "F3395F10-4885-1844-1A3E-C2A3F4AF0A32";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte";
-	rename -uid "3B3F673B-435E-499F-ADB5-728CBE6D32D0";
+	rename -uid "834EDEED-45F2-E993-3E5F-DA88ACC409E6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "B3A1E8DD-4177-900D-C0F6-84B594EA0D97";
+	rename -uid "2A15E25B-4396-5419-3173-E4A8D38D29C5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape833_ai_matte";
-	rename -uid "C51704D9-49C4-1524-06AD-4C8990103006";
+	rename -uid "559B0146-4C9C-D2A7-AF06-FF955184F345";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Arm_03_Jnt_CtrlShape_ai_matte";
-	rename -uid "2EF6523C-4912-5B8F-444F-F9BDBD8CC79F";
+	rename -uid "0421D559-4ED0-6178-8D64-FFA9834D2E6E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Thumb_03_Jnt_CtrlShape_ai_matte";
-	rename -uid "38DB6DC5-49DE-2E67-230E-78AEBB934E88";
+	rename -uid "6BF9B69B-49FB-CE86-FF5D-FCB23A0AE2CB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape801_ai_matte";
-	rename -uid "DC6A726F-46DE-170A-C438-24B733D55A18";
+	rename -uid "0AF8BA6C-4BC6-E32F-1421-819929ACFBB5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape809_ai_matte";
-	rename -uid "78920B5E-42F3-AB5F-808C-2984BB3DBBF9";
+	rename -uid "D3F4D695-40A9-EFDC-BF3D-B0B3184DF83B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape668_ai_matte";
-	rename -uid "1EF65A3D-42EF-AC23-C10A-8497E73D95C5";
+	rename -uid "7330BDF3-4A5D-E1E0-B059-14A65B43E91F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Shoulder_GuardsShape_ai_matte";
-	rename -uid "7EDCB4BD-46DF-CF52-8171-3EA0F4584C5B";
+	rename -uid "84B9DE51-4001-6CC0-2CA0-53BB4DF1D957";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_SmirkShapeOrig_ai_matte1";
-	rename -uid "FBBD472C-47A9-CD81-0905-4FBB37634CE1";
+	rename -uid "0018A464-485A-E274-41CE-24AD8E16FFFB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape884_ai_matte";
-	rename -uid "E0CC5AD5-4B0D-B8C2-3D98-E4AD08D7D235";
+	rename -uid "1448F7F5-43C5-7800-D78D-FD9494B31672";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape766_ai_matte";
-	rename -uid "B2BD3A72-4941-4485-D94A-C28CFE82373D";
+	rename -uid "B53BB850-4B61-0DF2-17A9-42BF663E4116";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Mid_Wheel_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "389FA90B-4DE8-15F3-0F23-CFAF0D2F341D";
+	rename -uid "CAF684CE-472C-040F-F35F-359020B7710B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape855_ai_matte";
-	rename -uid "18904D0A-41E9-EF69-7F8A-1A8D24B26859";
+	rename -uid "BA2C372C-467D-7AD6-7BAF-9B88464001EA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_HoseShapeOrig1_ai_matte";
-	rename -uid "51DBADAB-4007-9BF4-8421-ABA1935EB2EC";
+	rename -uid "B826FB45-42BA-33D7-13FB-0C82DAC9C3E7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte";
-	rename -uid "9A728831-454C-1483-E499-84AC1FCB2C08";
+	rename -uid "BB575950-4209-C60A-CBA7-318F1A404836";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape827_ai_matte";
-	rename -uid "F10816F7-4A7A-893F-E15B-5BBB9304D88B";
+	rename -uid "ABAD4724-4143-B22A-5F17-398989725D9F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_SmirkShapeOrig_ai_matte1";
-	rename -uid "414852CD-4D8E-0D78-40E5-32A5DE259280";
+	rename -uid "A7D0DCBF-4153-853F-E0BC-4B970DD99D1D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape849_ai_matte";
-	rename -uid "FDD5CF12-455A-A471-0F88-E0A43F7DBF8A";
+	rename -uid "EE4955F4-4E18-56A3-1277-C6BD7393A74C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_Swing_CtrlShape_ai_matte";
-	rename -uid "BAAAA524-43FD-8B0C-C734-BEAFC4904C27";
+	rename -uid "C10ACAD3-4EB2-5900-CF41-21B1BC60396C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "B8346812-49C6-2A04-17E0-66B899141517";
+	rename -uid "C3C3B9D9-4083-E214-D34A-3D8D0CB751A2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape822_ai_matte";
-	rename -uid "C28F4FCC-49A1-602D-8B63-0BBCB45167B6";
+	rename -uid "B3201D52-409D-7F70-3AD3-AD83BBF8751B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_04_CtrlShape_ai_matte";
-	rename -uid "D73462C5-47DA-6B88-39A8-BCB73CD9F7CF";
+	rename -uid "977D50EC-4AEB-613E-47D3-2897DD7AF9E0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_SmirkShape_ai_matte";
-	rename -uid "EA937EDF-443C-945A-7130-E9A4499873FC";
+	rename -uid "0F988618-4A25-6410-6812-CE9814CE6EB4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Finger02_Two_Jnt_CtrlShape_ai_matte";
-	rename -uid "F3C59BAC-40DB-A908-61AD-4F9488D98544";
+	rename -uid "AE8F2DC9-465D-A8FE-4711-0C890BB8368B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_SmirkShape_ai_matte";
-	rename -uid "2F2A5CD9-4F42-F6C8-1AAF-FDBE8B157CCC";
+	rename -uid "3CDA7641-4AD2-7152-5BB5-E9AED6607851";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface526Shape_ai_matte";
-	rename -uid "194A3ED1-4F67-1814-63B6-44B954E9FE56";
+	rename -uid "50283DC0-4274-B956-3C72-329D997038E8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_SadShape_ai_matte";
-	rename -uid "15D166C0-47EB-AFD4-1BBD-8B834889A839";
+	rename -uid "1B75C37F-471F-E8A4-8DB3-3EB2CBBB0051";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Prop_02_CtrlShape_ai_matte";
-	rename -uid "6E520FE0-49CB-15D0-B8C2-AC818D5FD8D3";
+	rename -uid "D4BB2EFB-4B5C-F3EF-316C-B7927160214E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape592_ai_matte";
-	rename -uid "7F4C653B-4FC4-6D6D-11C4-DD917720F46A";
+	rename -uid "637EBB7F-4B60-99F0-EFCA-36957B080728";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape866_ai_matte";
-	rename -uid "FF04C360-4E23-7465-6CA5-5484197B3FF9";
+	rename -uid "D8B53208-4C7E-D41D-53DB-67A4C0A00155";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Back_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "12BD708C-4E3E-57A2-CE2F-6A829961FB71";
+	rename -uid "B3A39642-45D9-FC9E-4D4F-FE8EC9FCE905";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape13_ai_matte";
-	rename -uid "59DDB0F2-48E7-18F9-DEF7-41BE564E1465";
+	rename -uid "56755A5C-43A7-35BA-D45A-3FBD3E64FDBB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Back_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "CF474936-4551-5E4B-51BA-DBBA72964841";
+	rename -uid "FA9B9534-439C-9D70-CA17-D79FB18228F8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape862_ai_matte";
-	rename -uid "E6BB624C-4155-71B8-2897-8AAA69700D8A";
+	rename -uid "70A861A8-4DDE-25A3-404C-33A34C82D745";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "MainArmGeoShapeOrig_ai_matte";
-	rename -uid "D19F425E-4C92-C3CA-AF8A-C5A6295C2492";
+	rename -uid "ADD9B4E3-44B4-57B4-3DCB-9DB2922276F5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_Close_ShapeOrig_ai_matte";
-	rename -uid "A427AB52-4094-482E-19D4-5CBFE1680EC8";
+	rename -uid "E5BBC7D9-4B30-90A1-98CC-F99841D1D2DA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig_ai_matte";
-	rename -uid "9FB1E2FA-4170-C97A-6FD3-15AB9CD9BA93";
+	rename -uid "AB937CED-4C60-AD90-F1B5-2083A330FA31";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape865_ai_matte";
-	rename -uid "E1E468E7-42DC-495B-29B2-B1BB99FD3939";
+	rename -uid "2F6A4520-4B49-AD70-D857-21B3239F8C04";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Electrical_Box_Cover_Shape2_ai_matte";
-	rename -uid "DC069D09-4417-646A-45DB-58A79EDB1BD6";
+	rename -uid "E51264E3-4EC6-39ED-F5CB-D5B420816DD1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape789_ai_matte";
-	rename -uid "E0F76ADE-4C4C-A1DB-477A-13BCF311C03C";
+	rename -uid "54794F21-45EA-B1A9-BCB3-C8856A0A88AA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape814_ai_matte";
-	rename -uid "2E8770C9-4C66-0F33-E8BB-D897FCDBC11F";
+	rename -uid "C1FB8A74-460A-5563-71AF-ABAE220C34FF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_Squint_Shape1_ai_matte";
-	rename -uid "ECF927A4-4B62-B12F-5A56-F0B4E30C8A3C";
+	rename -uid "9DC8878E-49D1-FFF1-B563-658BAC6F8CD0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_04_CtrlShape_ai_matte";
-	rename -uid "36608CA2-4704-4CAA-1ABB-85826BEAB273";
+	rename -uid "D6D44366-4E94-0564-B547-11B20A3E598A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Mid_Wheel_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "D0E198BD-4196-381D-F76B-368ADC8936B9";
+	rename -uid "C4D3827C-44B6-7F35-D0E2-008571C9E7AC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape840_ai_matte";
-	rename -uid "EA3015EE-4F91-13F8-D135-8E99B8627289";
+	rename -uid "3278144F-4D46-A78D-CEA4-4E91CC4648DD";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape802_ai_matte";
-	rename -uid "E4207EC3-4430-4890-8BA1-12A1560DEEF9";
+	rename -uid "834BED30-40D5-A554-FAD7-69A52B5AC9C3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Hand_Jnt_CtrlShape_ai_matte";
-	rename -uid "DC86C4E2-44C0-7A05-1C33-3BA48F07E1BA";
+	rename -uid "EA7EAEFD-4770-C94B-6956-99BB03199241";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface520ShapeOrig1_ai_matte";
-	rename -uid "136C5168-4AB5-8D37-5617-E1ACF0B3E079";
+	rename -uid "ED88C61E-4344-EC70-FF29-09AAB220E92C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape887_ai_matte";
-	rename -uid "6D99341A-42B0-4E6B-EE09-2EBC7F59A51D";
+	rename -uid "B6B1D621-456A-985B-52AB-A7AAA1A79F27";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape637_ai_matte";
-	rename -uid "8B05D072-42DE-EB57-5AFA-16AE7BAAEC97";
+	rename -uid "5307E5FE-407E-5582-E56A-1781323BAF27";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_BoredShapeOrig2_ai_matte";
-	rename -uid "41D682F6-4E0E-8057-9E2D-8FBE1A311D53";
+	rename -uid "EEB853B6-41F0-E1E3-5BB6-ED9508C07E2E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_ArrowShapeOrig_ai_matte";
-	rename -uid "B1F724E1-4E5E-571B-7801-E8B721493D10";
+	rename -uid "B9A12398-4068-EA98-AF16-CCA3872ECFD3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape4_ai_matte";
-	rename -uid "77A2B2DA-4CC9-3CCC-146C-9AA1D2AEF2EB";
+	rename -uid "444EA228-4733-AD3C-2CF0-628AE40BA6CE";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape709_ai_matte";
-	rename -uid "EE229A87-4086-DC20-0113-AA8D2927445E";
+	rename -uid "6FD8C774-41CA-626D-D188-A695B42C7449";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Hip_CtrlShape_ai_matte";
-	rename -uid "E2072CF2-4CD3-EAE4-69FC-098FFD5EF523";
+	rename -uid "60E2B9AC-468B-58D7-3847-40B6C4685645";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape860_ai_matte";
-	rename -uid "2ADE9924-47D2-9A02-C732-1B838CB16AF9";
+	rename -uid "C350057B-4DDF-C3C0-BEFE-B79BDB5E1BC8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape685_ai_matte";
-	rename -uid "5C573606-4C5E-ABF1-EF96-0598AC593252";
+	rename -uid "EBB06410-4CB1-4BDD-2E15-4AA670530748";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Piston_02_CtrlShape_ai_matte";
-	rename -uid "2DCA62EB-4B95-40AB-C989-DC9209507750";
+	rename -uid "04C9941D-41AE-3E3C-707C-43A9B11AB25A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_12_CtrlShape_ai_matte";
-	rename -uid "FCCBF532-4637-811E-1B7C-66A873039E6C";
+	rename -uid "DC5CE42E-4778-A8CF-6E72-35910710C349";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_09_CtrlShape_ai_matte";
-	rename -uid "6FA8C9C3-47C1-2F53-518E-7EBD238C3C7C";
+	rename -uid "7CB82268-4D69-F452-82C6-0B8A2CE83417";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Torso_BallShape_ai_matte";
-	rename -uid "93BCD911-43E7-5520-A166-5C934C9BADB6";
+	rename -uid "4756CEB4-47A1-A851-01D3-83AE192749AF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape830_ai_matte";
-	rename -uid "C98EF8D9-4C85-3A64-062F-F1A84E85D27F";
+	rename -uid "B285883D-4270-43C1-46E9-6B9C2480EFEE";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Arm_Spinner_01_CtrlShape_ai_matte";
-	rename -uid "6797CDC5-4F01-9205-F019-CCA619BECE2C";
+	rename -uid "E813AEBA-42F9-B7F5-D754-FFB0FD46C596";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape844_ai_matte";
-	rename -uid "A7D497B8-4B6B-A085-C1B5-E8A483192732";
+	rename -uid "7861CEB6-4847-1965-F60F-F28A2B884C96";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape690_ai_matte";
-	rename -uid "93DB511A-481D-A9DA-7EF1-25946679AAE3";
+	rename -uid "7F5E507E-4C8F-71E6-BBC7-F9863CAC20C9";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape879_ai_matte";
-	rename -uid "A06594E5-466A-7DEE-39A6-FA95C50422DC";
+	rename -uid "D9AC0F0C-4DFC-652A-BC95-14B86CC7E7A6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape891_ai_matte";
-	rename -uid "4E6ED034-450F-A310-775D-E684A4B1AED2";
+	rename -uid "36B21CFE-411B-54F8-D07E-3C8539292522";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "RightTreadGeoShapeOrig2_ai_matte";
-	rename -uid "276544C2-4DA0-DA5F-8927-0381130D1C84";
+	rename -uid "E9BE64BE-4F75-1567-7661-609C6997FF7D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_DeterminedShape_ai_matte";
-	rename -uid "E954E21F-4862-61C6-0144-418FB6722018";
+	rename -uid "CEC0BBDB-4B50-AC70-55CA-59B917BAA341";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape890_ai_matte";
-	rename -uid "EBE5D750-4AD7-C56F-3F2F-1AB296A27F51";
+	rename -uid "EAD7DD09-40A4-FB71-C79B-1D9A074B2D63";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape870_ai_matte";
-	rename -uid "2B07A3DC-4F91-10DE-A4FA-D29124D66D58";
+	rename -uid "D87696C8-43F7-5785-0A96-549D1E502D1E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Eye_X_2_CtrlShape_ai_matte";
-	rename -uid "7F6F5805-4EB0-9446-0E16-36880FCBE26B";
+	rename -uid "70FDD2A5-4803-CA15-89F1-46B7A685DC5C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Tread_Wire_CurveShapeOrig1_ai_matte";
-	rename -uid "0B6C4A2C-4FD7-C194-56A6-7797511BFCFA";
+	rename -uid "C2CE332C-4280-D181-D492-1AAA5E6CCD3E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_EyeShape_ai_matte";
-	rename -uid "9C09EFF6-4A7B-4867-445F-738A42E84792";
+	rename -uid "2F9A7C70-4F2D-3C3C-E660-A388F78B537A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Palm_Jnt_CtrlShape_ai_matte";
-	rename -uid "1FAAC001-449E-E2FB-8169-E586B66AF6C5";
+	rename -uid "84EC2311-43A8-732E-9259-DA9963C30BB8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte";
-	rename -uid "0217658A-43A3-0606-1C72-AA8EAFE4B801";
+	rename -uid "39C952C1-4627-0AA6-FC1E-57A79EEB277B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape679_ai_matte";
-	rename -uid "73EE38FB-48AC-0AE4-F515-15BAC92A92C9";
+	rename -uid "798FB78E-495E-783A-ACBA-03A727AB8984";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape702_ai_matte";
-	rename -uid "A10D0700-44FA-2AE1-DDB8-93A9C9B1A7C6";
+	rename -uid "942A9340-4995-8714-7A64-AD89239B231C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Cylinder_CtrlShape_ai_matte";
-	rename -uid "F67F882C-472E-A1B9-C1E8-7B8E4D6F23B7";
+	rename -uid "3FBD3D21-4BD4-6293-F957-84A787076C3D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_CtrlShape_ai_matte";
-	rename -uid "013C4C13-47B7-51FA-3F5A-CB83D798F00C";
+	rename -uid "02BCF10A-4FE5-A35B-7BFF-A791D63DA9AD";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Finger02_One_Jnt_CtrlShape_ai_matte";
-	rename -uid "6D692F3E-4B5B-BFBD-DED5-178BA0784C7D";
+	rename -uid "46C9C04B-4BAA-8EFB-D294-DC9737FBEEE0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape677_ai_matte";
-	rename -uid "4702B263-4FB2-789C-641D-D2B183BC8FCC";
+	rename -uid "B97DFF63-41B9-4148-B606-B3BF899D17BA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape885_ai_matte";
-	rename -uid "17981D24-4770-1979-A0C7-A5A8DC060488";
+	rename -uid "5942016F-41E6-FB6F-328F-C9A5ACAC4693";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Arm_FK_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "AB689559-42E7-AAC5-A33A-35B78B66A021";
+	rename -uid "5E39E194-44FC-339D-8E16-02BAAE5A4180";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_13_CtrlShape_ai_matte";
-	rename -uid "492DBD7B-4374-55BE-46DE-45A3CA1536CD";
+	rename -uid "AA4EBF64-40D8-4FAD-7163-9A815FAB36F1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape597_ai_matte";
-	rename -uid "EA3428E3-4146-82EC-56A7-C08177B755B1";
+	rename -uid "CF029C32-4C72-35B9-594E-269B408CB8C8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Finger02_Two_Jnt_CtrlShape_ai_matte";
-	rename -uid "B79F4531-41B2-230E-D5D7-2598F09EDC00";
+	rename -uid "6BE851AF-4954-7EB5-46BE-768B3DBE029E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape600_ai_matte";
-	rename -uid "09B6AF1F-4E8E-B89C-D4FF-519C607B49DD";
+	rename -uid "324AF021-45F8-0EAD-4ED2-A48D807FBF1D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_EyeShapeOrig_ai_matte";
-	rename -uid "AE85922F-43D8-EE8C-3B02-0A9672E86764";
+	rename -uid "109F5AC1-4033-CF19-321F-16950AA2D1AC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Furnace_Hinge_Bolt_Shape4_ai_matte";
-	rename -uid "8F359239-4697-7DBC-D3D7-60B52D087898";
+	rename -uid "EFA0DCA9-4B77-1074-F6DD-258D77A77694";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape605_ai_matte";
-	rename -uid "9EAA3D8F-43AC-2432-EA68-70BC73507D2E";
+	rename -uid "B00FE135-42B3-C440-0573-1C894F41646D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape861_ai_matte";
-	rename -uid "CAA096FD-4D22-F231-9D71-21B94CD42CCA";
+	rename -uid "A2ED9636-47A5-824D-20BA-7EA1F8032164";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Finger01_Three_Jnt_CtrlShape_ai_matte";
-	rename -uid "FD8837A5-48EA-B219-727C-29A2D3317082";
+	rename -uid "1F1E9172-44C7-A1E8-55CA-CEAC51FAB126";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape768_ai_matte";
-	rename -uid "FFBE120B-47FB-A471-1FD7-B491DB4FFDF1";
+	rename -uid "FF951CA7-4443-4F99-041B-9396BB785FDE";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig1_ai_matte";
-	rename -uid "A08B071B-41CE-77F2-5109-ECADBEFB4506";
+	rename -uid "994E0213-4DB6-AB12-0B51-628289155DFE";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Prop_01_CtrlShape_ai_matte";
-	rename -uid "6E46AF25-469F-2BE2-808F-7AB2ED01A792";
+	rename -uid "FE560EF7-4FE3-E725-A036-CBAA39771885";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Furnace_Hinge_Bolt_Shape2_ai_matte";
-	rename -uid "A857C06B-44AD-717B-E008-E3A2FFBA6FA4";
+	rename -uid "59D798B8-45AF-E925-BEEB-71BBD64B0974";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "BlendShapeShape_ai_matte1";
-	rename -uid "590AD6C2-4DA4-5C10-39DD-BD8A116E8292";
+	rename -uid "03D5A388-400E-475C-48BA-27B385152473";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Finger01_Two_Jnt_CtrlShape_ai_matte";
-	rename -uid "F5565EB5-408D-1EAE-5190-3C95FF659E8D";
+	rename -uid "1B79F4DA-441E-1715-C3CB-E7931B4E6BD5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Hand_Ring_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "CC4EE51D-46F8-F3CA-1D8F-62B4BF42D970";
+	rename -uid "FE69F456-4124-BE22-74F9-D98A5D9F5156";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_CtrlShape_ai_matte";
-	rename -uid "0ADA5B3E-43FC-8B36-094A-55A018CF1725";
+	rename -uid "1E217EFE-465E-10A7-D959-89BDD2F79249";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Thumb_01_Jnt_CtrlShape_ai_matte";
-	rename -uid "45B9B6E2-4E27-6C61-CC2A-E5B0691C2E93";
+	rename -uid "229815C0-409A-77AF-E0C5-D89D88E7A552";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape672_ai_matte";
-	rename -uid "7D2B15BE-498C-8594-15A1-3991335F621B";
+	rename -uid "0ECEAB33-4B17-6765-9FA7-61A30E5FBBEC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "typeMeshShape1_ai_matte";
-	rename -uid "97A4A269-40EF-F880-7E78-A0B69CC05BAE";
+	rename -uid "15FC3885-4FEB-B51F-DB2B-94BD2498BBA3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape797_ai_matte";
-	rename -uid "99FD625D-42A2-56F9-ED10-A1AC9AA7254F";
+	rename -uid "01066A5D-4D05-0900-08B2-EC8E47C094CF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape705_ai_matte";
-	rename -uid "22716C32-40B7-2D01-5673-8385C3B0F553";
+	rename -uid "437B170A-4DA2-EA4E-88C6-438FD7F00317";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_Squint_ShapeOrig_ai_matte";
-	rename -uid "34C9FD9E-4FAB-7730-8A7F-5DB331B104FA";
+	rename -uid "6438D5A4-4349-3DB1-C756-4D8DF0B8D48B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Finger_02_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "AFEE7967-4F74-A697-89BD-11AE0F08D3C3";
+	rename -uid "A8AD6A46-4EE9-FC1E-00C4-F4A7FEF8D950";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "MainArmGeoShape_ai_matte";
-	rename -uid "3B3A5A76-4C74-4E48-80F9-EEB9EE821E32";
+	rename -uid "B0228484-453B-FE44-8C73-AAACA9BFA846";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape790_ai_matte";
-	rename -uid "933A0FDF-4926-8CBD-02EE-25811F590CB2";
+	rename -uid "9B0695D8-43BD-FD3A-CEC1-E4A731EE8E97";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "RightTreadGeoShape_ai_matte";
-	rename -uid "9A82B151-4020-1832-E3DD-D88E1CD70054";
+	rename -uid "57E157A5-424B-0070-059E-B1B7F9B4F4A7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte";
-	rename -uid "5FB28FE8-473E-58E0-CC59-319CC700F4C6";
+	rename -uid "329D81B7-45AA-599F-4127-0C891C12F742";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "1B154773-4800-7867-1421-E59149AED871";
+	rename -uid "6806AEB7-4745-6470-603E-CA9E777EB0F4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Arm_03_Jnt_CtrlShape_ai_matte";
-	rename -uid "51753C9B-4631-F6C9-67D8-9BABDD10CE78";
+	rename -uid "E82477AA-414B-85FC-BC8A-439332640FAF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_CurveShape1Orig_ai_matte";
-	rename -uid "675DE43F-446A-E794-3520-26AD07B8B298";
+	rename -uid "1AC41435-4A6D-D148-E6AB-EFAC7E4C8CDB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Tread_Wire_CurveShape_ai_matte";
-	rename -uid "FF12A8F7-46B9-CF43-3854-359077D3EBEA";
+	rename -uid "91A9C034-4D01-D3AC-FB92-F1B8835B5D3D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape747_ai_matte";
-	rename -uid "ACC15437-440E-97E0-174D-25AA2172B4C1";
+	rename -uid "722CDE0E-4D50-6712-1EAD-D0946F48520B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape791Orig1_ai_matte";
-	rename -uid "544356C5-4927-9477-2835-ADAA6047AF5A";
+	rename -uid "A76155D2-420B-AE57-C155-2BA352669E6D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape671_ai_matte";
-	rename -uid "6C54E487-4377-BE1B-DD82-538124FAAAED";
+	rename -uid "A27F3592-4267-7355-BAAB-22A23BAA73A6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Cylinder_CtrlShape_ai_matte";
-	rename -uid "662716E0-4A55-41CD-61B2-19984BC697FC";
+	rename -uid "9DABDBD1-4FF1-7CB1-C0B3-D0B351DC1BC7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_CloseShapeOrig_ai_matte";
-	rename -uid "621ED241-4A3C-A4D0-6F9A-DB8AC940F20D";
+	rename -uid "B7FD1C13-493E-3ECA-F250-319988FA776A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Finger_01_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "35D7370A-4B79-BF9F-D73C-7DABE5C3A6B5";
+	rename -uid "3BE8ACED-438F-37F2-961B-2D92AD016142";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape608_ai_matte";
-	rename -uid "AB5BE9CC-4068-0B13-AFF0-44BD975A00C9";
+	rename -uid "AFFCC5C8-4F85-1F36-F920-67BBC252F536";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte";
-	rename -uid "64632964-46BC-68F8-698F-129CF67D6FC9";
+	rename -uid "30BE98B5-482A-C07E-4C0E-FF92B8F91C6A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Cog_Jnt_CtrlShape_ai_matte";
-	rename -uid "1E15B01B-4F29-29C6-610C-59B8AE904033";
+	rename -uid "CEA88174-4E9E-44A2-14F4-87B5A6176E37";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape12_ai_matte";
-	rename -uid "A7861FF3-40A7-2A6F-FB78-52A45F6D4E9A";
+	rename -uid "3F76F183-4C03-67B7-490B-11A991497F62";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte";
-	rename -uid "33B41D22-4A13-F1F7-39BA-968D665A38B8";
+	rename -uid "28F62324-46A7-B452-1DDD-09B33C46F095";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_BoredShape_ai_matte";
-	rename -uid "634F4BDD-41AE-147C-1963-1CB30A588C70";
+	rename -uid "B549F822-4AA8-DE42-4E18-04A7FC3E9984";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "MouthShape_ai_matte1";
-	rename -uid "83CD75E2-4E89-4E52-89BD-118C46C2E508";
+	rename -uid "23F4B563-406D-5011-3D09-6CA0DEABAC8D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape2_ai_matte";
-	rename -uid "79AE267A-4018-6A2F-2F47-E2A8D26D8B58";
+	rename -uid "CF99D1F7-4295-8A8C-F33B-14BFCC0F873B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape791_ai_matte";
-	rename -uid "62161D57-4151-08F9-CAC9-AF8F8F56AE5D";
+	rename -uid "A9412BB9-415D-AE2B-8512-BE8C3A88D678";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_CtrlShape_ai_matte1";
-	rename -uid "B1045E55-45FC-F9A2-F93C-FAA5840F7E2E";
+	rename -uid "A78B163C-43FC-07FB-9664-4AA7B40A98DB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface665Shape_ai_matte";
-	rename -uid "DA22BE0E-4014-743F-CED0-58BB69744FBE";
+	rename -uid "D7A73985-4346-060F-730D-1BAE6BCEBA71";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape617_ai_matte";
-	rename -uid "77855B6A-4637-F4DB-951C-4E9D27419D55";
+	rename -uid "0532BEDB-44CC-FBC4-05CE-EC978C77B6FC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape792_ai_matte";
-	rename -uid "80CB13C6-44C4-BDC4-826D-0CA2B1ADC9AE";
+	rename -uid "22AFBE6A-4B5F-5F73-B10E-CCB4CEF746E4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape618_ai_matte";
-	rename -uid "7E6B87DB-49AE-8D7D-6F85-1EA4C45D5D84";
+	rename -uid "C50F3F26-44E2-3777-726B-E9870578A332";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape607_ai_matte";
-	rename -uid "5FEB51D5-4625-012A-822F-0498F6BADD11";
+	rename -uid "6D5F1DA4-4BB6-3085-E6D5-C4A92DDE2FCF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_EyeShapeOrig1_ai_matte";
-	rename -uid "AF007ACA-4EE5-3C8B-034B-3B9A42A7B217";
+	rename -uid "F2F6DF9B-4C8C-526B-666A-739616C22423";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Torse_Bottom_SocketShape_ai_matte";
-	rename -uid "56ED4802-44ED-C06D-82CC-0F86947696BE";
+	rename -uid "8F0A3874-4AFA-F287-9951-D49D73E7CFC2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte";
-	rename -uid "F50A7406-445D-13C1-8CE8-BFA7622BD2B0";
+	rename -uid "7E4536EC-4AB0-3A9E-7FD7-61A1E76F95F2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Arm_Base_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "13F3521D-4DB1-44BA-39F2-B9992FEF8DFC";
+	rename -uid "FAF2B5AF-4E89-0542-6BD0-31BB366A9898";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape796_ai_matte";
-	rename -uid "E706E2B6-4DB2-60B4-98E1-67844FD08D05";
+	rename -uid "1E09567B-4D33-294F-D567-C4B4D2C533A5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape763_ai_matte";
-	rename -uid "E2298F11-42FB-959C-F17E-5A9FF226B3FC";
+	rename -uid "1BCC3C1C-415F-C8A2-3232-789D13F9EFF2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_Open_ShapeOrig_ai_matte";
-	rename -uid "D29831AA-4368-0F22-FB42-6588EE7569EF";
+	rename -uid "3B7231D9-4168-9235-297D-17928AE5507B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig2_ai_matte";
-	rename -uid "BDDFAA60-46AE-37F2-DD72-5FAAAB6544B9";
+	rename -uid "7CF14696-4BE2-BB8F-8D90-FAA147B17881";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Propellor_ShaftShape_ai_matte";
-	rename -uid "20D97357-4FC0-BA7D-038C-84B138289279";
+	rename -uid "6363EB60-4831-1BFD-9FFE-58967CB73593";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_11_CtrlShape_ai_matte";
-	rename -uid "13D2E8A2-4C6C-985C-4F44-308433FBAC8F";
+	rename -uid "A9DE7466-4294-8EB4-810C-FCA241FA090E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape828_ai_matte";
-	rename -uid "AE418CA0-4538-8B84-DDBA-0A8BE49F9D88";
+	rename -uid "6D048B93-461C-5E96-0CD9-EDB0342EC1E2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape800_ai_matte";
-	rename -uid "F8C0DB8E-4BE2-8A91-5207-01A49D0BF7F4";
+	rename -uid "CB2C8F8E-4A06-71D4-DDC0-379AD2701105";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Hand_Jnt_CtrlShape_ai_matte";
-	rename -uid "4C4D3E68-4FE3-B351-487E-9881BA3E928B";
+	rename -uid "DE632A76-4422-A541-A1BB-2EA5584837EF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape752_ai_matte";
-	rename -uid "64E9B8F2-4F62-ECA7-F107-9392788CCADD";
+	rename -uid "5E9947A3-49A5-51DE-6219-95A2C620781A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape5_ai_matte";
-	rename -uid "FD5309FD-4417-E9D1-E07B-22AA8EF1C759";
+	rename -uid "E1027270-492E-7C3B-F572-A08A3CBE2D7D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte";
-	rename -uid "024AD3EB-486D-9E8A-F740-3EBB3B46E362";
+	rename -uid "0E3A57BC-4309-4521-6386-51A6204DE7FB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "COG_CtrlShape_ai_matte";
-	rename -uid "D33D7E7A-481F-84E4-94A4-A6B9B5855F69";
+	rename -uid "5A97FE04-499F-034B-5A72-2886EC457583";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape807_ai_matte";
-	rename -uid "007FFB47-44F2-64F4-D07A-CD972B47FC8D";
+	rename -uid "3BCF90E9-49C6-A878-1A1F-E6934C9DED19";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Wiper_CtrlShape_ai_matte";
-	rename -uid "A92AF47E-4220-D250-4DDC-89A21BBCC23B";
+	rename -uid "1CEAA94D-40AD-D997-25F5-6CB7BEC1FE4C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Piston_03_CtrlShape_ai_matte";
-	rename -uid "C6325D4D-44FF-F394-6EDC-99A7AA46EFB5";
+	rename -uid "BA6593D3-427B-4EFD-C250-20ABFE37D79C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_L_Thumb_01_Jnt_CtrlShape_ai_matte";
-	rename -uid "41AD5A34-41C9-A757-298F-9A81CF10B9CA";
+	rename -uid "C4A4B368-4467-3DAD-C0D7-43967B2034C7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Propellor_01Shape_ai_matte";
-	rename -uid "651F8E3B-432C-EE6B-DC33-C4AC4C3B78CC";
+	rename -uid "F46274BE-425D-FEBF-56DA-6781BCF4034F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape863_ai_matte";
-	rename -uid "F6A9E422-4A36-8C4E-C9C6-218FF34F2125";
+	rename -uid "0F766770-4C1C-8143-D37A-D682FCF4FE58";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape808_ai_matte";
-	rename -uid "BBCC3E3A-49B5-0813-768E-37B9D69309EF";
+	rename -uid "CF04FA64-4F6D-AEA9-F432-ADA98BA1AA2E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_13_CtrlShape_ai_matte";
-	rename -uid "F627D839-43D4-3F57-10D2-DA982667657A";
+	rename -uid "794B4EAE-4673-5061-C332-0BA531D6D160";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Finger01_Two_Jnt_CtrlShape_ai_matte";
-	rename -uid "F2FD878D-48B6-249E-EF2C-2DAC2616CF18";
+	rename -uid "7798E80B-4DB0-7828-C85D-48A601033A07";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape648_ai_matte";
-	rename -uid "21981E90-4453-1538-E078-3FBB200B717F";
+	rename -uid "2F15B4EE-455C-4554-24C6-29942F0F2E70";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig2_ai_matte";
-	rename -uid "F891BE52-4689-1AD1-1A78-3AB305539518";
+	rename -uid "4C214D26-49A1-970F-6854-F990725F81C7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape821_ai_matte";
-	rename -uid "A50E3FE5-4C1E-9CB2-71B4-139E837E0EC7";
+	rename -uid "C024F7BB-4DA0-B358-0CE4-1EA4A0217993";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte";
-	rename -uid "486F96F6-4EA1-9A03-E9C8-09B5CE4C4040";
+	rename -uid "19EA6E21-49E7-0CA7-531C-23A4F1CD7F12";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape878_ai_matte";
-	rename -uid "B10993A2-4EBB-DD87-7810-58B8693F3C36";
+	rename -uid "84D9A32E-4D36-26A6-D950-0A88522D1279";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape850_ai_matte";
-	rename -uid "53D40922-4F83-A093-A085-EA9BDC8B7D0A";
+	rename -uid "972A1046-4E86-86A2-6FA9-69A8F32C827F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_SadShape_ai_matte";
-	rename -uid "A70CAF79-49FA-5F74-357E-F1A4D4920190";
+	rename -uid "BC7062BF-4D99-CF6D-61D3-F0BE4C2D9037";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface731Shape_ai_matte";
-	rename -uid "5ABA8F62-42BF-0474-7E7A-F1B9110C1141";
+	rename -uid "6A3EAD5D-43B5-51ED-2388-EB92F943BCBC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape699_ai_matte";
-	rename -uid "D89E6EA6-425C-57C4-1BE7-B0BED24BAB4B";
+	rename -uid "D805C6C7-49CB-8124-5B32-978282B246FB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Arm_Spinner_02_CtrlShape_ai_matte";
-	rename -uid "34A7A92C-40A8-951A-4310-C3BDAB4DA29B";
+	rename -uid "C459D164-4DAE-A146-E143-AA92BB3EE12C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape829_ai_matte";
-	rename -uid "B87ADD15-4DEC-1D27-826A-3CAB1C2ED229";
+	rename -uid "F5F099B0-4F82-78F8-F345-D89C1021AD0E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape595_ai_matte";
-	rename -uid "55D18DD2-43B7-0B91-1B3C-F19EA811CE13";
+	rename -uid "E4E1AB62-4A7D-42EB-A335-47A951117039";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Electrical_Box_hinge_02Shape_ai_matte";
-	rename -uid "57317477-4E43-F4FB-3CF4-5C9F38D32EFE";
+	rename -uid "821194D6-45AB-513F-5C53-28ADDDFFA6A8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_ArrowShapeOrig_ai_matte1";
-	rename -uid "1C44F3D1-406D-A705-3DDD-FE8339D86FE0";
+	rename -uid "2F7726C9-4159-8BA2-8369-3DAEE1D794C0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape810_ai_matte";
-	rename -uid "86B96E44-4BD3-5375-9693-13B2979B0F23";
+	rename -uid "1327A119-4466-787D-DA28-C1999AE455F8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape681_ai_matte";
-	rename -uid "72A0CD38-469C-465A-C599-808635AFF99D";
+	rename -uid "A04326E0-4709-3F59-621E-8BB103E816FC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape703_ai_matte";
-	rename -uid "EAB6E35D-498D-3C45-ABAE-279C89F74F05";
+	rename -uid "FACF7480-401D-917D-DD5F-9382CC501B27";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape859_ai_matte";
-	rename -uid "EC0DDE24-4B8C-26C2-0BA0-53B2D8AD3310";
+	rename -uid "25D595D0-4500-11F0-6989-A78B34953303";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape875_ai_matte";
-	rename -uid "7330AFCD-49A2-B2C2-CF65-DEA252195AE8";
+	rename -uid "6375C9A2-4488-BECF-162A-8AAE153F9767";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Finger_03_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "A8BE7796-4848-59BA-3FE1-388955C2AF0B";
+	rename -uid "B6A3BE1E-4486-CBEA-3BA2-5F8BCC3D059E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Skirt_Driver_CtrlShape_ai_matte";
-	rename -uid "C4DF94BD-4188-D805-8115-55819C24EB5B";
+	rename -uid "1AC108EA-4C66-9624-7C76-DB91BCBAAE6F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Finger_02_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "CB95CAC8-43D1-C0C9-22D8-598C3414E4C6";
+	rename -uid "E0AC05AA-45FD-5753-95F8-EAAF7B6575F7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Light_Rig_CtrlShape_ai_matte1";
-	rename -uid "D4D530CD-4CDD-0ADE-E950-FA88B59E8423";
+	rename -uid "0D792335-4F3A-3D6A-BA74-B286D63B4A61";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape817_ai_matte";
-	rename -uid "C55B86B5-4E8F-EC10-8C52-39A44C988901";
+	rename -uid "8FD8D71E-4D89-159E-EB76-76BE474183E1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape793_ai_matte";
-	rename -uid "CC511C89-4C6B-58EC-7DD2-CC8BA1EACBFD";
+	rename -uid "FA6B0840-4B71-37A3-897F-9C86CC6F417F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape637Orig1_ai_matte";
-	rename -uid "297BB904-40F8-3871-1C7C-AFAE845CA9AC";
+	rename -uid "95B164BF-470A-4525-6EED-54BDEB6D7392";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape819_ai_matte";
-	rename -uid "3BA15C69-4C0A-47B6-67CE-DF954AA31331";
+	rename -uid "C9CC5ECF-4DC6-3FC2-44F6-6597E96570F5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape880_ai_matte";
-	rename -uid "EB58145D-4C22-871A-2032-40A17A0FACEA";
+	rename -uid "C7C49460-4E2F-EDAD-0D6A-F0B8FD05F843";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Clav_CtrlShape_ai_matte";
-	rename -uid "B7F5DF4A-4AC6-6C9D-2830-B998BB1315A4";
+	rename -uid "205D5AA0-4D3A-2407-33C6-389A5A68E6AB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape8_ai_matte";
-	rename -uid "E5907D86-4772-1AED-6802-55B9FCC8937B";
+	rename -uid "333B028C-4AB9-162B-0812-C6906E312DB3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape713_ai_matte";
-	rename -uid "5483F60C-4743-3F6C-E24D-8DB4DA8250B2";
+	rename -uid "5633631A-4FF2-285E-717A-BEAC3B9A47A9";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Arm_Base_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "B4BA5B56-4585-6FF8-DBA4-8F8399470383";
+	rename -uid "B6017375-403D-6CFC-C87A-02AFBAF8A073";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Arm_FK_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "CC124DBE-4260-5F61-E526-668E5028C751";
+	rename -uid "9A11ACDA-4357-ED22-D949-DD901D9B7163";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Head_FK_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "00528DF0-42D5-5C68-A6E4-D789243EFB97";
+	rename -uid "99DD87EA-4386-5FF5-11D2-F0956AA9009E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_Squint_ShapeOrig1_ai_matte";
-	rename -uid "C2A82F5C-4C56-7595-B139-BFB631050DBF";
+	rename -uid "1803CAED-46CD-2695-400B-A3BFF863521A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape888_ai_matte";
-	rename -uid "7C367381-4E63-B1A9-7A7F-BE84F2A4E361";
+	rename -uid "4FA85E8E-4C56-00F0-4CB5-0AAAD6028B6B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape820_ai_matte";
-	rename -uid "A715BC90-4700-3415-C5A6-718E91FB9D09";
+	rename -uid "E39A1822-4F85-F6E4-4AA9-F4B34A5E1967";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape837_ai_matte";
-	rename -uid "CE56F98C-48CB-9085-045B-C28E19A9CF62";
+	rename -uid "343868CD-4DB7-0AD4-0672-D4AC8195F847";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Furnace_LidShape_ai_matte";
-	rename -uid "91A1FBBC-412E-654D-7E34-E19E0FAE6ACE";
+	rename -uid "6B1DAE2F-4BF9-74F7-6401-359D538EB3AB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface697Shape_ai_matte";
-	rename -uid "DB2713F5-45CD-7737-006F-24A8B6533747";
+	rename -uid "8D41E2DE-413A-462C-F003-5DA4A256B1BC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_BoredShape_ai_matte1";
-	rename -uid "98B3197D-46D0-026A-DD45-B0BC69166E9C";
+	rename -uid "39FA10BA-4A2C-600F-A219-F2801AFB84DF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_06_CtrlShape_ai_matte";
-	rename -uid "5C06A5F3-464A-C836-B1E2-979F80CFDF9A";
+	rename -uid "02307B63-4043-0712-199F-BBA10673F8A2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Face_CtrlShape_ai_matte";
-	rename -uid "8777E27E-4431-2F09-FDEE-68A3D17700EC";
+	rename -uid "8A1AF476-480C-2A8B-8BFB-D3B5D7F4C683";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape872_ai_matte";
-	rename -uid "D4FE81E2-4024-4730-ED3F-B5AEFBB3CD4A";
+	rename -uid "F42CFAD6-4B53-D04F-30F0-72AA24B8EDD0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape2_ai_matte1";
-	rename -uid "917C8BE1-45C7-6D59-4D1D-68816B2D3AAA";
+	rename -uid "3444C387-4448-F39E-9A04-C0A0C0B3C8A7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape825_ai_matte";
-	rename -uid "3E20FA8A-4C57-46A0-8E68-C2B3759911C7";
+	rename -uid "53E3C27F-43D6-0180-8111-5DAD8D8B20FF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Side_HallwayShape_ai_matte";
-	rename -uid "F2B2311C-42A8-FBD6-5AAC-92B464B4EEBB";
+	rename -uid "25D4271F-465B-DA7F-ADC9-4E99CB75C8A6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig_ai_matte";
-	rename -uid "3CEB2775-4170-D1F2-9A93-459C2C068A98";
+	rename -uid "8483453B-4A2A-0DF4-53D3-8283B33331BC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape847_ai_matte";
-	rename -uid "8E4F337E-43A1-2896-A762-DF96EB400B4A";
+	rename -uid "F30549BC-488F-14D5-A038-DA8ADC40A312";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Clav_CtrlShape_ai_matte";
-	rename -uid "B6501ADA-43D0-6996-073C-FAB329383D42";
+	rename -uid "64BB8781-40A9-0549-DA7D-D6B814C2E29F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_CtrlShape_ai_matte";
-	rename -uid "16D9C074-4F61-FCD5-7AFB-D481F297E18F";
+	rename -uid "36AD8ACA-4A90-698B-3947-7987D98B3709";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShapeOrig_ai_matte1";
-	rename -uid "7EB326DF-40BA-70DF-A871-7F988BF25047";
+	rename -uid "6055E94F-40B3-1539-350D-A9BAAC4758DF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShapeOrig1_ai_matte";
-	rename -uid "EC130E8A-4E09-0D64-2889-2183F1EB27C3";
+	rename -uid "3D817F96-4BB2-F21E-7E5B-AAB92A3D8B7A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Arm_IK_Base_CtrlShape_ai_matte";
-	rename -uid "5C2C3CAC-4958-72F1-48AE-B18FBD0C5FB6";
+	rename -uid "5DA5C5E7-4537-B483-7303-E6BCE2924DEC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape876_ai_matte";
-	rename -uid "EBB9C37C-4019-6D69-CD61-CA92EBD98C9A";
+	rename -uid "B1F29E6D-478A-CDD8-6844-008B10071AC8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape619_ai_matte";
-	rename -uid "AB7FCE4F-4BDF-5B10-3F60-E6A2E466BE72";
+	rename -uid "0D349D35-4D74-BDD4-79D8-D9BF7AB8C0E6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_CtrlShape_ai_matte1";
-	rename -uid "2ED85EF6-431C-87E0-82FC-29B8AA9343D0";
+	rename -uid "FD0FFC0B-4583-9299-0B51-E5937016F26F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Cylinder_BlendShape_ai_matte";
-	rename -uid "700A1C34-442A-AB68-B9C2-7EA7D3F7C2EB";
+	rename -uid "59CCBCD6-4E51-7A61-0656-33B3193A1064";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape803_ai_matte";
-	rename -uid "9C543710-4CBE-E06A-5DCA-F199F63832CD";
+	rename -uid "F59456FA-4EC6-C9D1-8401-9DB2ECB07DC7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "HallwayShape_ai_matte";
-	rename -uid "BF271D9F-48F7-96FC-6415-279BDC2A1556";
+	rename -uid "D55E5509-4923-D068-CFCB-83A57A849E3F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape594_ai_matte";
-	rename -uid "7DEAEAB5-4CCD-A89B-C346-E1954BE8B120";
+	rename -uid "FA7D0444-42BF-ABFF-BA9D-17A0EB9230E5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape843_ai_matte";
-	rename -uid "116CE50C-445E-3E4F-B1EF-25B67EA86E2E";
+	rename -uid "D2EA9AFA-4737-C1FE-1736-42AF630A4559";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface666ShapeShape_ai_matte";
-	rename -uid "C20EF2BD-46C7-4A4C-3E3A-7998C9DCDA8E";
+	rename -uid "EA12CA08-44F6-ABA9-6EA9-B9A80448E96F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Arm_PV_CtrlShape_ai_matte";
-	rename -uid "F07060F6-4C3B-7B1C-79DF-4D9F19749992";
+	rename -uid "CF72638B-49D4-ED8D-AD13-CCB3059D99F9";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape852_ai_matte";
-	rename -uid "D2072C1F-43F6-2B92-BDA3-1AA5ED32ABBA";
+	rename -uid "F1BD24F2-4FA1-91AF-0663-A3A7C44F91CD";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_Swing_CtrlShape_ai_matte";
-	rename -uid "2ED349B7-4642-DCF6-B5EA-3586179275F8";
+	rename -uid "FECC6276-4F26-608C-1234-43B10DB04C7E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape856_ai_matte";
-	rename -uid "EA847822-4111-5381-CE6A-E29B9E3E63CD";
+	rename -uid "80452134-46AA-EDE7-C0C4-F0AD16D638C4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig1_ai_matte1";
-	rename -uid "8E592AC7-47D4-F3C1-95D5-6B8C63F169FC";
+	rename -uid "11D7F217-48DF-C679-C659-C5BF700FABA1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_HoseShape_ai_matte";
-	rename -uid "DCA9C1F5-4089-26C6-2945-7BA4ADB54A32";
+	rename -uid "3FEF6629-498E-EB74-061F-F7B6B9B44BCF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "TreadsBaseShape_ai_matte";
-	rename -uid "DDBA3E97-47F3-F7AF-29D6-CEA7651E8F5A";
+	rename -uid "BFDB34E9-4112-8A25-B2A6-B18CBDEE2E3A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_OpenShapeOrig_ai_matte";
-	rename -uid "D747A2F9-4345-CF76-2DFA-0CBB057504A9";
+	rename -uid "C3B2EF72-4C98-7722-83AD-2B81F2EB65FC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Finger_01_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "9770A1AA-47A4-6F8B-9583-DFBC8D308924";
+	rename -uid "B0F76D95-42FA-1A0B-A829-94AE17D078EF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hand_Prop_CtrlShape_ai_matte";
-	rename -uid "BFBA5E3A-4CFC-09F8-ABB9-9B854406C3CB";
+	rename -uid "EB154000-4B39-B81A-7B95-059D288A82B1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape688_ai_matte";
-	rename -uid "90AB84D7-4CB0-D19C-482D-449352564959";
+	rename -uid "0CD97808-4E28-CEC7-CD35-1481F6C6290F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Tread_Wire_CurveShapeOrig2_ai_matte";
-	rename -uid "0FA993FF-4138-3C1C-B01D-20A39C1D316A";
+	rename -uid "63830F5D-45FA-EF70-4C52-1BAC4A2CA96D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_SmirkShapeOrig2_ai_matte";
-	rename -uid "6CBADE0C-4F7C-D519-F145-62A2DA604E61";
+	rename -uid "D6C9004D-4B5D-6F8E-7BF5-2EBE14E37090";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Backpack_topperShape_ai_matte";
-	rename -uid "BED0743A-48D6-A348-B636-3A8F8191B5FE";
+	rename -uid "7DBD5D3B-41C6-99E0-5426-D7AE647C9E7C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_10_CtrlShape_ai_matte";
-	rename -uid "589BF53C-4B52-C543-A9E2-1DA655D8C48F";
+	rename -uid "B37C309C-42F3-DA02-89C3-6FB8FD62E0BB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_BoredShape_ai_matte1";
-	rename -uid "55C5A643-4727-8874-2FC5-E1A6E6C9344D";
+	rename -uid "74E18DE1-4134-3547-5637-639C72DC929A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Mid_Wheel_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "7B14671E-4967-BE82-8E12-AC8F01E1B598";
+	rename -uid "D7A1012C-4E47-4E2E-598B-23A2DD9D2F80";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShapeOrig1_ai_matte1";
-	rename -uid "9A098B18-474E-DAE6-266F-568ED66DAD4F";
+	rename -uid "06004701-40DB-2BAB-F7DD-36A4FC42FF04";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_SmirkShape_ai_matte1";
-	rename -uid "D4DB042A-4008-E56A-50D8-7D9A6CBF484C";
+	rename -uid "ADA4B30C-4084-39E2-0189-869D3E976A97";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Head_FK_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "DC9E2949-477B-3249-4063-D2B71BA12155";
+	rename -uid "E22FF3B8-42DD-14D8-05EC-DCBE4AB68E57";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape783_ai_matte";
-	rename -uid "43359C9C-4DB7-D776-490F-FDBD8B42778F";
+	rename -uid "3641B2B4-494E-5F59-42DF-63823BB4C287";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_Open_Shape1_ai_matte";
-	rename -uid "FBC0ECC0-4C08-A474-F8F1-D282345703A5";
+	rename -uid "AA34C69F-4317-C272-DBC7-FC9AE3B93F02";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape790Orig1_ai_matte";
-	rename -uid "8C290107-400C-85F6-704D-2295F28E9EDB";
+	rename -uid "71627F2D-4D3E-71B6-6595-E7A371E31380";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_SmirkShape_ai_matte1";
-	rename -uid "1536DBE7-4C9D-BD1E-5636-15A62DEDB18C";
+	rename -uid "09589323-4DA1-F0A7-586D-438E3B95B1A8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface560Shape_ai_matte";
-	rename -uid "27BCB89F-48FB-C8D0-DDDD-43B41FC5DBB1";
+	rename -uid "0D4B09C0-44D2-BE74-8246-67858D24AE9E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape1_ai_matte";
-	rename -uid "0EF4BD93-4277-F9FA-4077-B480DEA5D909";
+	rename -uid "B3F0B049-44AA-7FAB-639B-37AB8A576F1C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Eyes_Extras_CtrlShape_ai_matte";
-	rename -uid "9F2BA4E4-4DA0-1463-B67C-CF8AD6800FF1";
+	rename -uid "F89AA137-4336-F970-34C4-769C80DFF7BA";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Exhaust_Pipe1ShapeShape_ai_matte";
-	rename -uid "CA57554B-4AE6-2086-615A-B685AC05CB58";
+	rename -uid "B942C057-4E00-DF95-B949-4AACA5B131B9";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "MouthShapeOrig_ai_matte";
-	rename -uid "B3B3149A-492C-F3B6-49C7-92B78FA771D9";
+	rename -uid "4C8A1649-4525-EE81-B78C-7BA378D46679";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Bottom_Booster_CtrlShape_ai_matte";
-	rename -uid "747C0CB7-4D7F-9105-76BA-D3B75163EF74";
+	rename -uid "3F35F3D0-465C-AFF6-714C-11B3D9EFC05E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Side_HallwayShapeOrig_ai_matte";
-	rename -uid "E998666C-4907-7AF1-EAA2-BAAA6CCC63F0";
+	rename -uid "ED89C4E1-409E-0FFC-71D2-E4A8AE8CF497";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape868_ai_matte";
-	rename -uid "6405CB60-47FA-BBA2-A619-4ABA63CCE260";
+	rename -uid "CA11C62B-4382-EEC1-6D8D-15AB9F7B66A0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Cylinder_BlendShape_ai_matte";
-	rename -uid "9B539950-4527-76AF-EAD9-2BBCDD7F5B2A";
+	rename -uid "1C603611-4547-F6AF-9681-DD8218A4B976";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape845_ai_matte";
-	rename -uid "5E74B73B-42C8-99D1-04DE-7097FE5A2B73";
+	rename -uid "3ED08F6B-4257-87E2-4CE9-DEA159797A88";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_BoredShapeOrig_ai_matte1";
-	rename -uid "CB656B47-4FA2-7366-41E9-E78C23BF4CEA";
+	rename -uid "3F6A9448-45C5-B93E-1E3E-BB895CEB5E62";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Plate_CtrlShape_ai_matte";
-	rename -uid "676F61CC-451E-576E-C1B8-B9B5EAF229FD";
+	rename -uid "B5469601-49A7-0ACC-5259-B1AA979D8151";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape693_ai_matte";
-	rename -uid "D1938641-482A-9BC7-CD22-8385D26AD20B";
+	rename -uid "031EBE07-40EA-8C53-E755-6EA84915E9F9";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Transform_CtrlShape_ai_matte1";
-	rename -uid "B1B9D6CA-4BC2-2D3A-EE4E-36B585E4BA9A";
+	rename -uid "D31C9AC0-42C5-CE69-F35C-DCBBF1B2DE84";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape842_ai_matte";
-	rename -uid "61F1F5AF-4B0C-A59B-095B-DCAE6B56DC7B";
+	rename -uid "7596107F-4A11-42E8-FD9E-ABAF1B5A0960";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte";
-	rename -uid "F373DB49-42F0-0863-A00D-C7999A542276";
+	rename -uid "ECA2ED24-479A-1E70-0007-1F96F10A5C90";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "PoleVector_CtrlShape_ai_matte";
-	rename -uid "8E46262C-4303-51B7-6AFF-2F83F3BFD912";
+	rename -uid "705CCB18-440C-522B-8FF5-DBB7C001EBB3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "TreadsBaseShapeOrig_ai_matte";
-	rename -uid "01BB8911-475A-474F-258A-778C045D6CCD";
+	rename -uid "126EEFA7-420A-CA72-CDEC-3A909A8F302A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_07_CtrlShape_ai_matte";
-	rename -uid "A89E467B-4418-0F5D-F1B3-F188FD45042F";
+	rename -uid "3A325A5F-42F0-FEC8-6FDC-BAABF5AC445C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_SquintShape_ai_matte";
-	rename -uid "6B2CD94F-45C5-604C-0AE4-8A82ECDABD49";
+	rename -uid "DEBFF444-4EBE-1EC0-FED7-B08B7BBFBF4C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Finger01_One_Jnt_CtrlShape_ai_matte";
-	rename -uid "A2A231D7-4FF6-E567-9A36-92ACF6EEA0A6";
+	rename -uid "4FFBBDD2-4CEF-B8EB-0CC2-DE83C9281775";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape590_ai_matte";
-	rename -uid "1062B586-4012-3B89-90A7-D5AE32F0F3AD";
+	rename -uid "E8A0A8AB-436E-5C1D-EB5B-EC9CEF28BAFF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_BoredShapeOrig_ai_matte";
-	rename -uid "35A55F08-45AE-97B4-97EF-5182A3ACF701";
+	rename -uid "347876E3-4E57-3D1E-6587-0A88B2834925";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Arm_Spinner_02_CtrlShape_ai_matte";
-	rename -uid "85200F52-49E1-363C-150F-88AEE165323F";
+	rename -uid "06DEE2B0-418A-EEAB-3E38-FE8BCD5BB6F1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_09_CtrlShape_ai_matte";
-	rename -uid "D6E71C9C-4AD5-FAF5-AAD1-3197C4A206CB";
+	rename -uid "78C0CEB0-46DE-CC14-2FD7-00B57FEDC297";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShape_ai_matte1";
-	rename -uid "65A60A47-41D2-EEF7-3504-9D8AD68D39DF";
+	rename -uid "D38E6078-42F7-FDDB-DDA3-CC82185E03A8";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_05_CtrlShape_ai_matte";
-	rename -uid "A4D35A03-4E69-89EE-7BBE-29BC2949E756";
+	rename -uid "96D0B767-4CC7-F33E-9F3C-CDBD3CA30D4E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "061CCDB9-433C-0D9B-7688-35844387556C";
+	rename -uid "6D199C07-4C31-7C40-4A4A-35B06DBCF3FD";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Eye_X_2Shape_ai_matte";
-	rename -uid "812E76FC-419E-5298-E0BC-AD813220877D";
+	rename -uid "882D228A-498D-80D6-CF54-54AC2868E3A6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape818_ai_matte";
-	rename -uid "96FC7743-4494-5BDE-E77A-C399712F037A";
+	rename -uid "D068AE76-4C55-1D64-07AE-418B4E4AA555";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape869_ai_matte";
-	rename -uid "5990FAF9-4861-AA26-0874-CDB004DE3772";
+	rename -uid "0FCF26E5-4CC7-859A-39D9-CF986A793D46";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte";
-	rename -uid "CE376062-4102-D578-980F-DEB981B75A65";
+	rename -uid "BEB0192E-4C07-C822-BD38-12AAB43862E1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte";
-	rename -uid "F870E194-4447-0A47-064B-568D9B0F4EB2";
+	rename -uid "01318AC5-48C0-9D5F-B75A-E3B330E67C83";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_Ctrl_GrpShape_ai_matte";
-	rename -uid "01650A19-4449-CC58-71B0-CF89974C3D22";
+	rename -uid "42874AD8-462A-BF85-4A8D-289BC9A1207D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Thumb_03_Jnt_CtrlShape_ai_matte";
-	rename -uid "5A092A58-417E-005D-2141-CAAFA5F776C5";
+	rename -uid "CDA6DB13-4DB7-E9C5-21DD-76AD1C987B26";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape831_ai_matte";
-	rename -uid "8E70C006-4CD4-74A0-3FDA-259436C7A5CC";
+	rename -uid "0FB30380-4417-7052-66E6-339956316539";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig1_ai_matte1";
-	rename -uid "204073A9-4389-0BD0-9CB5-C19BF4B7D90E";
+	rename -uid "620E56E4-49FF-4771-6C80-838BD2E3534B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_12_CtrlShape_ai_matte";
-	rename -uid "2A13F43C-4769-2359-5C60-68810708178F";
+	rename -uid "17F297C8-4D8A-1DAB-36B9-668150936C1B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Eye_SquintShapeOrig1_ai_matte";
-	rename -uid "C5806939-4BF9-5106-4325-74AD9436C7A1";
+	rename -uid "209B1C50-488F-8D33-C46C-299E1076CCE6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "68880435-4F68-7D1E-0541-07B2B4278D3E";
+	rename -uid "ABF4C464-4BE1-3D37-F522-CC8F0CFAE9D3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape832_ai_matte";
-	rename -uid "218395A4-4B4E-8075-3701-D398B9A1C8B3";
+	rename -uid "4AD60E15-4085-6511-6C88-DB845C31551F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Tread_Wire_CurveShape_ai_matte";
-	rename -uid "ADF9639C-496B-038F-1338-3C8052B20446";
+	rename -uid "E2D14061-43D6-751C-F21B-F089FC1CD360";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Tread_Wire_Base_CurveShape_ai_matte";
-	rename -uid "7DCC9772-4F69-B81A-7F49-D78BC8B5E72C";
+	rename -uid "05366E14-45F6-FD58-CA20-CE832CF2C18D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte";
-	rename -uid "2936138D-45DE-D852-F61F-5CB412948AD3";
+	rename -uid "A90396BD-4602-2F57-D401-C98205C95F5A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Hand_Jnt_CtrlShape_ai_matte";
-	rename -uid "41F114AC-47CA-0F6C-62B0-CF8426114CED";
+	rename -uid "A245E43E-4D30-9DD1-92D0-6290B149C067";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_Sad_Shape1_ai_matte";
-	rename -uid "4D1D23E4-40B3-BA6B-8EA4-C6A8B54FD762";
+	rename -uid "1D82A1E2-4A40-114B-A726-41B78E54C985";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Arm_IK_Base_CtrlShape_ai_matte";
-	rename -uid "4DD4B636-455F-56FE-F822-0598073D2290";
+	rename -uid "E3289C79-4111-474F-3650-76B5549C4E91";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_10_CtrlShape_ai_matte";
-	rename -uid "D63665FC-4554-0568-3AF5-B5870552FA64";
+	rename -uid "F9A937EE-4D14-286A-A2B8-3BAFDFD64A28";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_EyeShape_ai_matte1";
-	rename -uid "EF01B648-476B-A480-4DB0-EF8378E1433A";
+	rename -uid "659341B8-4C92-6257-F744-51AFF6E6EBB7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape805_ai_matte";
-	rename -uid "0BA5DE3A-4D5C-474F-0C7A-24AD0EFC7275";
+	rename -uid "876AA086-4A89-66AF-2E5A-E3BC9811A0E3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Thumb_02_Jnt_CtrlShape_ai_matte";
-	rename -uid "4434E37D-47BD-7DB3-CCE9-6DBBF5B3C725";
+	rename -uid "351BF359-4077-0F63-AFD1-318C9CF9B0EE";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Arm_IK_CtrlShape_ai_matte";
-	rename -uid "E8D879C0-4DBD-1028-FA19-D1B3AC5B4BD0";
+	rename -uid "BA4AE41E-4DCB-26E0-7FB7-2FAD4D1467B5";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Neck_01_CtrlShape_ai_matte";
-	rename -uid "814C0CFB-49DA-45A0-FC47-DC8D8E705BDF";
+	rename -uid "7A6C1604-4314-3DBA-AE22-16B552B2913A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_SmirkShapeOrig1_ai_matte";
-	rename -uid "39D37BE8-4670-E2C2-BCB5-A8A9C4B1EA84";
+	rename -uid "362886C6-48A1-9A0B-A36E-998209EA3B53";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape9_ai_matte";
-	rename -uid "FEC0CD9A-4C73-70B5-5C2F-18B786B91FB4";
+	rename -uid "E9E0A4E0-4055-9B2E-D6DC-56BFD8F60B4F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "MouthShapeOrig_ai_matte1";
-	rename -uid "DB34FC29-4AF9-EBAE-2E75-CD83EC634D02";
+	rename -uid "4DFE541E-4B53-AC63-6F2F-6F82F63ED2E7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Treads_CtrlShape_ai_matte";
-	rename -uid "6A5B84F1-4CD7-AFA5-59A5-55A1A1E6F0CC";
+	rename -uid "40D4D84E-4ECB-EDD8-6F05-BF98A004EBE2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "892D8D55-432D-6669-85BC-E4AD8CF14447";
+	rename -uid "E4EC3172-47A0-6A5D-F215-D0BF8185792D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Arm_01_Jnt_CtrlShape_ai_matte";
-	rename -uid "7BE8B829-48F3-D278-4335-EA94EC2C47A6";
+	rename -uid "CCB66448-4567-6BED-3030-B998E799883E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Treads_Base_FK_Jnt_CtrlShape_ai_matte";
-	rename -uid "9BEE6F17-47EB-19FD-ACE9-64BD89C61990";
+	rename -uid "262F1D4A-4B6A-0E01-A2D8-69A2C5FA4134";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape846_ai_matte";
-	rename -uid "DF3F3ED7-4837-7B91-66EB-8485CDA53DD4";
+	rename -uid "E469E22B-4F01-89BF-E64B-95BC26F17E0C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape811_ai_matte";
-	rename -uid "BBF2C977-4BF6-4114-4A52-6398C2194BEA";
+	rename -uid "DC2E7DD6-45FA-5AAA-6326-3C909BACC3DB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Eye_SquintShape_ai_matte";
-	rename -uid "13751545-4CBE-7887-9111-58A024BBC14E";
+	rename -uid "83A39C6E-4AD8-269C-289E-3391B3427EE3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape667_ai_matte";
-	rename -uid "C3367494-475D-8085-2798-F6B345E8C71A";
+	rename -uid "FC5A352A-4158-1E07-036B-4AA3FCB8B130";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape614_ai_matte";
-	rename -uid "83B6080A-43B4-EC1D-9CE3-E0875E84FA17";
+	rename -uid "13108D70-41A3-07A1-EF5F-BABE5635621D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte";
-	rename -uid "B511879B-4A03-5873-F8A5-7284BECF9C9A";
+	rename -uid "24E0A539-4C2B-954A-4F51-8E9B5E90A0AC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Panel_CtrlShape_ai_matte";
-	rename -uid "470D01CB-4586-59C2-B251-249BF56F962F";
+	rename -uid "B0A8F5C4-4AC0-66E9-7729-2D81D3D788D0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape794_ai_matte";
-	rename -uid "A74A4420-489E-F92C-7411-9B830D518962";
+	rename -uid "BD94AE6C-441B-51ED-EB0B-6EA9DA3AC027";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape11_ai_matte";
-	rename -uid "F1995D97-40EB-6890-13A7-3EA7CDEF90E9";
+	rename -uid "FDACA47C-4E90-9572-E86A-E5AB1C6A2C97";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_DeterminedShape_ai_matte1";
-	rename -uid "DBD3D6C4-4B6A-3F6A-B81C-C2BB4D329CB3";
+	rename -uid "F638B7BA-4D94-4CAD-9611-94B4960EB984";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "rightnurbsSquareShape1_ai_matte";
-	rename -uid "5D6146A1-49BA-3CB7-31D8-1F825676C1BB";
+	rename -uid "4C8F334F-472E-3F22-32B8-08A6F1AEA5AF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_BoredShapeOrig_ai_matte1";
-	rename -uid "80B1B6E4-4945-5147-9ED7-D3B98DEB63C4";
+	rename -uid "409A41D3-4E5B-6409-2DCC-1E92561F4638";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig_ai_matte1";
-	rename -uid "0EACBC4C-4F92-3E52-BB86-299FB43D1291";
+	rename -uid "92A3C3D8-4375-B313-C687-38B852F77C7E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape615_ai_matte";
-	rename -uid "C06ABAC6-41BB-96CA-3A27-BF86A78C02AE";
+	rename -uid "00FCDC82-479F-D301-228B-65B260F4B15B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape603_ai_matte";
-	rename -uid "30A47CF4-4BFA-F78A-CEED-9BBF011AA703";
+	rename -uid "5797351E-41FA-F9B5-4F75-57AD81C42B2F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "FK_R_Finger02_Three_Jnt_CtrlShape_ai_matte";
-	rename -uid "1C123E6D-4909-2BC3-7F3C-B285646632C2";
+	rename -uid "07A2FF78-4040-478E-485B-FB838F012B01";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_Eye_BoredShapeOrig1_ai_matte";
-	rename -uid "6D737C09-4738-90F7-AE49-B1A618048C87";
+	rename -uid "38A851FE-46F0-BB71-6B6E-9EA3F81D7810";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Right_EyeShapeOrig_ai_matte1";
-	rename -uid "082B824E-4E90-B102-8605-80969413FF31";
+	rename -uid "E776F088-46F5-8658-8F76-D0B96908689B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Visor_CtrlShape_ai_matte";
-	rename -uid "B7B29AD6-4489-FF78-59D1-249F3290B9A4";
+	rename -uid "BEC81868-4FF1-2E0B-63E6-CA9C0B10F9EF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_EyeShapeOrig_ai_matte1";
-	rename -uid "E176248A-4FEF-E359-C382-38B931C4E853";
+	rename -uid "2ACAD6DB-4590-685B-5295-ACB573611B94";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Treads_CtrlShape_ai_matte";
-	rename -uid "DD8C50F4-4DDA-2A65-0202-7090831C8BC2";
+	rename -uid "3F7A6B61-477D-91A6-A9A1-5CA88FAF36EC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_SmirkShape_ai_matte1";
-	rename -uid "9B405D1D-4E9F-6652-86A6-ACACCC3FDAC4";
+	rename -uid "754DF663-4DF6-6077-2183-00A70B83F031";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Propellor_ShaftShapeOrig_ai_matte";
-	rename -uid "7693999E-49F3-761C-645F-59AB715B9EAF";
+	rename -uid "F80A0016-4EAD-F018-37EF-679262E11DA7";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig_ai_matte1";
-	rename -uid "4E1BC3EB-4BB8-12B4-34B3-3998EFACAFEB";
+	rename -uid "2129B5CB-4F14-91D8-65A8-528B1384B860";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape10_ai_matte";
-	rename -uid "22697A21-4A42-25D9-8A04-EBAA1B8997C6";
+	rename -uid "16F3AE75-4B6D-6ADF-39A8-15A29060718C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface715Shape_ai_matte";
-	rename -uid "9075ED64-475E-486E-5596-F5BCBE015383";
+	rename -uid "13618461-45DB-C547-9B77-64981E61F13C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape826_ai_matte";
-	rename -uid "90FE7799-4592-78F3-6164-4D8FD82792B3";
+	rename -uid "922B9AA2-455C-D090-9285-528FC502567B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_SmirkShapeOrig_ai_matte";
-	rename -uid "97745EA1-4A99-FDE4-66EE-009A7D40BB93";
+	rename -uid "403ABCCF-4B43-07B0-054E-59BA16673D6D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_SmirkShapeOrig_ai_matte1";
-	rename -uid "D9CBEEFB-42A9-C302-1A3E-5BA7F300ADE8";
+	rename -uid "A478DFD5-402C-0E38-B40D-648D9124BA8F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_07_CtrlShape_ai_matte";
-	rename -uid "0B95CD94-4A1A-623E-8175-74927295BD68";
+	rename -uid "F3AD726D-41E5-25F4-70CF-9F95CA293FE0";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polyToCurveShape1_ai_matte1";
-	rename -uid "C40D08D2-471C-DB9F-A015-4D88AB308942";
+	rename -uid "1212FBFF-4335-8CEC-8F3B-31B8E87AED45";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape604_ai_matte";
-	rename -uid "BE8D8B21-4B55-EF5A-C23E-799162AAFFDE";
+	rename -uid "2E52A5CF-44B7-CB2A-65EE-098944EF8BDD";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape835_ai_matte";
-	rename -uid "5456531A-4731-6AD8-ADD0-3B8C876140AF";
+	rename -uid "816F8D4B-4C73-E26E-6D8B-4AAC957B4484";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_BoredShape_ai_matte1";
-	rename -uid "F7847E52-4891-431A-BF9E-2385C2AE57EA";
+	rename -uid "D17F14EB-46B1-8A5F-2802-97B9A70EAB66";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape593_ai_matte";
-	rename -uid "1189E846-4673-4E7E-08EC-B8B3DF0B9931";
+	rename -uid "14160026-48F4-14B0-E556-5AB389CDB28B";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_EyeShape_ai_matte";
-	rename -uid "0B6ED9DC-46A7-4ACC-BAEA-449EC56D3340";
+	rename -uid "A4C9323A-4664-FEF2-88D0-E59D81BF5711";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape588_ai_matte";
-	rename -uid "E4806F98-47BC-B5A0-2EEB-AF93F7B9FAE2";
+	rename -uid "61B54951-41C1-F1A0-1DBD-E299F3D372D6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Torso_Top_SocketShape_ai_matte";
-	rename -uid "24A5285D-4E29-9365-04B6-BFB2766F5283";
+	rename -uid "3194A9C5-40A2-C452-B9F6-9B9049B97B47";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape669_ai_matte";
-	rename -uid "9DC6990C-4F82-DC79-730E-598EFCF28E3F";
+	rename -uid "393152D3-466D-82DE-AEE6-50BBBC5145C9";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "1AF26DE0-47EF-026C-E59A-ECB614F42A0A";
+	rename -uid "B801D9E7-4416-AC5D-D870-0DB3F6F68F82";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape744_ai_matte";
-	rename -uid "E6FFB672-4E24-333C-6638-FDB1B7473A9A";
+	rename -uid "C9DCDF06-4A29-DC81-CE44-68A2E78C8348";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_BoredShapeOrig1_ai_matte";
-	rename -uid "BCA767A2-4313-316C-FA6A-00A4FD7D7BBE";
+	rename -uid "5D7B0222-4667-1742-EB18-D99446099C3C";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape858_ai_matte";
-	rename -uid "AED13AF1-4938-C175-2FF5-8C87FEDC1B56";
+	rename -uid "A993255B-4D13-11F3-E79D-DB938DD67F31";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurface520Shape_ai_matte";
-	rename -uid "EB52910D-403C-7B28-F15C-4EB07528248E";
+	rename -uid "ACBE42A0-477B-689E-A085-4C8030F9144A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Left_EyeShape_ai_matte1";
-	rename -uid "E273DF44-4F42-D140-6CB4-90AE5AAFD13E";
+	rename -uid "4591602F-4101-86DD-836B-F1BDB9849ADE";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "polySurfaceShape682_ai_matte";
-	rename -uid "99F21EA0-4B29-5EF4-3E0A-9096E737CC5E";
+	rename -uid "863895F9-4D7C-0DFC-BA05-62B458D9545D";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsFloatOverride -n "density_aiAtmosphereVolume_density";
-	rename -uid "0402C2AF-4102-80B7-02CF-C9A75AF8550B";
+	rename -uid "009C089A-4378-E7AA-463F-7DA5845F95E7";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -15838,14 +15839,12 @@ select -ne :initialShadingGroup;
 	setAttr -s 2 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
-	setAttr ".aal" -type "attributeAlias" ;
 select -ne :initialParticleSE;
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ro" yes;
 	setAttr -s 2 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
-	setAttr ".aal" -type "attributeAlias" ;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
