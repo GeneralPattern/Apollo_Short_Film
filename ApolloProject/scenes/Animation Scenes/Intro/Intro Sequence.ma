@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Intro Sequence.ma
-//Last modified: Fri, Mar 07, 2025 02:48:15 PM
+//Last modified: Fri, Mar 07, 2025 03:51:33 PM
 //Codeset: 1252
 file -rdi 1 -ns "Intro_Breakroom" -rfn "Intro_Sequence:Intro_Sequence:Intro_BreakroomRN"
 		 -op "v=0;" -typ "mayaAscii" "D:/GitRepo/Apollo_Short_Film/ApolloProject//scenes/Environments/Intro Scene/Intro Breakroom.ma";
@@ -8,32 +8,38 @@ file -r -ns "Intro_Breakroom" -dr 1 -rfn "Intro_Sequence:Intro_Sequence:Intro_Br
 		 -op "v=0;" -typ "mayaAscii" "D:/GitRepo/Apollo_Short_Film/ApolloProject//scenes/Environments/Intro Scene/Intro Breakroom.ma";
 requires maya "2024";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
-		 "mtoa" "5.3.1.1";
-requires "OpenEXRLoader" "2020";
-requires "stereoCamera" "10.0";
+requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
+		 -nodeType "aiAmbientOcclusion" -nodeType "aiStandardSurface" -nodeType "aiAtmosphereVolume"
+		 -nodeType "aiShadowMatte" "mtoa" "5.3.4.1";
+requires -nodeType "mayaUsdLayerManager" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.25.0";
+requires -nodeType "simpleSelector" -nodeType "renderSetupLayer" -nodeType "renderSetup"
+		 -nodeType "collection" -nodeType "renderSettingsCollection" -nodeType "aovCollection"
+		 -nodeType "aovChildCollection" -nodeType "absOverride" -nodeType "absUniqueOverride"
+		 -nodeType "materialOverride" -nodeType "applyAbsIntOverride" -nodeType "applyAbsBoolOverride"
+		 -nodeType "arnoldAOVChildSelector" "renderSetup.py" "1.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
-fileInfo "cutIdentifier" "202304191415-7fa20164c6";
-fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 22621)";
-fileInfo "UUID" "9F199C61-4D70-EFBC-690A-74887AC23E88";
+fileInfo "cutIdentifier" "202310181224-69282f2959";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26120)";
+fileInfo "UUID" "EA7246E1-4701-BA0F-65C7-499E0BE05979";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "E8E423E1-496A-098E-1F09-0785173F4B22";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 10.360778075803264 14.868530543261105 109.13431045722625 ;
-	setAttr ".r" -type "double3" -6.3383527295632076 -3.0000000000036371 1.9905746893448773e-16 ;
+	setAttr ".t" -type "double3" -3.3196255583472229 11.41973598855326 79.568554929350427 ;
+	setAttr ".r" -type "double3" -11.738352729563884 -76.200000000000017 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "15B9176D-4C69-40E9-116D-CC989D8D8533";
 	setAttr -k off ".v" no;
+	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 82.092693154038429;
+	setAttr ".coi" 7.0308925299228227;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 14.630914979127228 5.8055279676273113 27.655244529688535 ;
+	setAttr ".tp" -type "double3" 17.441952705383301 6.1222938299179077 138.60411024093628 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -115,7 +121,7 @@ createNode camera -n "Main_CameraShape" -p "Main_Camera";
 	setAttr ".dgm" no;
 	setAttr ".ai_translator" -type "string" "perspective";
 createNode fosterParent -n "Intro_Sequence:Intro_Sequence:Intro_BreakroomRNfosterParent1";
-	rename -uid "8AAB29F5-43DF-C00C-5B36-8C97AA244AF5";
+	rename -uid "2E3E3275-4BC4-8038-E6D9-9E8CD727AF7F";
 createNode transform -n "PlaquesL_151" -p "Intro_Sequence:Intro_Sequence:Intro_BreakroomRNfosterParent1";
 	rename -uid "437D9E57-4354-7562-B4D1-788EF43918D9";
 	setAttr ".t" -type "double3" 0 0 16 ;
@@ -3117,23 +3123,27 @@ createNode transform -n "PlaquesR_150" -p "Intro_Sequence:Intro_Sequence:Intro_B
 	setAttr ".rp" -type "double3" 17.441952705383301 12.918282508850098 129.60411429405212 ;
 	setAttr ".sp" -type "double3" 17.441952705383301 12.918282508850098 129.60411429405212 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A3E6A6EC-419F-0DFF-DE4F-6589BF33027D";
-	setAttr -s 19 ".lnk";
-	setAttr -s 19 ".slnk";
+	rename -uid "27531C5A-4A63-1D31-0A98-7E8CCD3F8977";
+	setAttr -s 21 ".lnk";
+	setAttr -s 21 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "1C4E9F22-4F0E-3E19-B9E5-D3B4A745A639";
+	rename -uid "470B0023-423A-986C-5272-BDB4135578C0";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "986C6D89-42ED-C624-3A65-45831E7F0B0F";
+	rename -uid "C28D2762-48E6-6256-12F3-16A4EC0E8670";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "DF37CCA1-4EEC-5794-CCCF-CAA1A1DF73A1";
+	rename -uid "BCCE2F23-4F49-010E-7E52-6F8C4994CBE0";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9C50E0CD-47A2-3460-88C2-399D56F83004";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "81D66116-41D8-E577-8633-2A87331AD54D";
+	rename -uid "952FAC91-468A-21C8-4CF8-DBBD349E4D1D";
+	setAttr ".crl" 6;
+	setAttr -s 6 ".rlmi[1:6]"  1 2 3 4 5 6;
+	setAttr -s 7 ".rlmi";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "88D74DBC-443D-6399-ED19-4B962966B79C";
 	setAttr ".g" yes;
+	setAttr ".rndr" no;
 createNode renderLayerManager -n "Intro_Sequence:renderLayerManager";
 	rename -uid "B85314EA-4C1A-088A-16FF-9BA3D532C028";
 createNode renderLayer -n "Intro_Sequence:defaultRenderLayer";
@@ -4308,7 +4318,7 @@ createNode reference -n "Intro_Sequence:Intro_Sequence:Intro_BreakroomRN";
 		"translate" " -type \"double3\" -13.21301846389927448 0 290"
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Bottom|Intro_Breakroom:PlaquesL_8708" 
 		"translate" " -type \"double3\" -13.21301846389927448 0 292"
-		"Intro_BreakroomRN" 3023
+		"Intro_BreakroomRN" 3221
 		0 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Top|Intro_Breakroom:PlaquesR_1|Intro_Breakroom:PlaquesR_1Shape" 
 		"|Intro_BreakroomRNfosterParent1|..:..:PlaquesR_1" "-s -r -add "
 		0 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Top|Intro_Breakroom:PlaquesR_1|Intro_Breakroom:PlaquesR_1Shape" 
@@ -6712,13 +6722,19 @@ createNode reference -n "Intro_Sequence:Intro_Sequence:Intro_BreakroomRN";
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Top|Intro_Breakroom:PlaquesR_1|Intro_Breakroom:PlaquesR_1Shape" 
 		"instObjGroups" " -s 151"
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Top|Intro_Breakroom:PlaquesR_1|Intro_Breakroom:PlaquesR_1Shape" 
-		"instObjGroups.objectGroups" " -s 3"
+		"instObjGroups.objectGroups" " -s 5"
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Top|Intro_Breakroom:PlaquesR_1|Intro_Breakroom:PlaquesR_1Shape" 
 		"instObjGroups.objectGroups[3].objectGrpCompList" " -type \"componentList\" 4 \"f[0:95]\" \"f[97:222]\" \"f[224:348]\" \"f[350:2030]\""
 		
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Top|Intro_Breakroom:PlaquesR_1|Intro_Breakroom:PlaquesR_1Shape" 
 		"instObjGroups.objectGroups[4].objectGrpCompList" " -type \"componentList\" 3 \"f[96]\" \"f[223]\" \"f[349]\""
 		
+		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Top|Intro_Breakroom:PlaquesR_1|Intro_Breakroom:PlaquesR_1Shape" 
+		"instObjGroups.objectGroups[5].objectGrpCompList" " -type \"componentList\" 3 \"f[0:38]\" \"f[165]\" \"f[418:2030]\""
+		
+		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Top|Intro_Breakroom:PlaquesR_1|Intro_Breakroom:PlaquesR_1Shape" 
+		"instObjGroups.objectGroups[6].objectGrpCompList" " -type \"componentList\" 2 \"f[39:164]\" \"f[166:417]\""
+		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_1|Intro_Breakroom:PlaquesR_1Shape" 
 		"instObjGroups.objectGroups" " -s 2"
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_1|Intro_Breakroom:PlaquesR_1Shape" 
@@ -7922,1223 +7938,785 @@ createNode reference -n "Intro_Sequence:Intro_Sequence:Intro_BreakroomRN";
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Bottom|Intro_Breakroom:PlaquesR_2|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups" " -s 151"
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Bottom|Intro_Breakroom:PlaquesR_2|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups" " -s 3"
+		"instObjGroups.objectGroups" " -s 7"
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Bottom|Intro_Breakroom:PlaquesR_2|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
 		
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Bottom|Intro_Breakroom:PlaquesR_2|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
+		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Bottom|Intro_Breakroom:PlaquesR_2|Intro_Breakroom:PlaquesR_2Shape" 
+		"instObjGroups.objectGroups[5].objectGrpCompList" " -type \"componentList\" 5 \"f[0:587]\" \"f[714:1301]\" \"f[1428]\" \"f[1555:2578]\" \"f[2705:2707]\""
+		
+		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Bottom|Intro_Breakroom:PlaquesR_2|Intro_Breakroom:PlaquesR_2Shape" 
+		"instObjGroups.objectGroups[6].objectGrpCompList" " -type \"componentList\" 4 \"f[588:713]\" \"f[1302:1427]\" \"f[1429:1554]\" \"f[2579:2704]\""
+		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_151|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_151|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_151|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_152|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_152|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_152|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_153|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_153|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_153|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_154|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_154|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_154|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_155|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_155|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_155|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_156|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_156|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_156|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_157|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_157|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_157|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_158|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_158|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_158|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_159|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_159|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_159|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_160|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_160|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_160|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_161|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_161|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_161|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_162|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_162|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_162|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_163|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_163|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_163|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_164|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_164|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_164|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_165|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_165|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_165|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_166|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_166|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_166|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_167|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_167|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_167|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_168|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_168|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_168|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_169|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_169|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_169|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_170|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_170|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_170|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_171|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_171|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_171|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_172|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_172|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_172|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_173|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_173|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_173|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_174|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_174|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_174|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_175|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_175|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_175|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_176|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_176|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_176|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_177|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_177|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_177|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_178|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_178|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_178|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_179|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_179|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_179|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_180|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_180|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_180|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_181|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_181|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_181|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_182|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_182|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_182|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_183|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_183|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_183|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_184|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_184|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_184|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_185|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_185|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_185|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_186|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_186|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_186|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_187|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_187|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_187|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_188|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_188|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_188|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_189|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_189|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_189|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_190|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_190|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_190|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_191|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_191|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_191|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_192|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_192|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_192|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_193|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_193|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_193|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_194|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_194|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_194|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_195|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_195|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_195|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_196|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_196|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_196|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_197|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_197|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_197|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_198|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_198|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_198|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_199|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_199|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_199|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_200|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_200|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_200|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_201|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_201|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_201|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_202|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_202|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_202|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_203|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_203|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_203|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_204|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_204|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_204|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_205|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_205|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_205|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_206|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_206|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_206|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_207|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_207|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_207|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_208|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_208|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_208|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_209|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_209|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_209|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_210|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_210|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_210|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_211|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_211|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_211|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_212|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_212|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_212|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_213|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_213|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_213|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_214|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_214|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_214|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_215|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_215|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_215|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_216|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_216|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_216|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_217|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_217|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_217|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_218|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_218|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_218|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_219|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_219|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_219|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_220|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_220|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_220|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_221|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_221|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_221|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_222|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_222|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_222|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_223|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_223|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_223|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_224|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_224|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_224|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_225|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_225|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_225|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_226|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_226|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_226|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_227|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_227|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_227|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_228|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_228|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_228|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_229|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_229|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_229|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_230|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_230|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_230|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_231|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_231|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_231|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_232|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_232|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_232|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_233|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_233|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_233|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_234|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_234|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_234|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_235|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_235|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_235|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_236|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_236|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_236|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_237|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_237|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_237|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_238|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_238|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_238|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_239|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_239|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_239|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_240|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_240|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_240|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_241|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_241|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_241|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_242|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_242|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_242|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_243|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_243|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_243|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_244|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_244|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_244|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_245|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_245|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_245|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_246|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_246|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_246|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_247|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_247|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_247|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_248|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_248|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_248|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_249|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_249|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_249|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_250|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_250|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_250|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_251|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_251|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_251|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_252|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_252|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_252|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_253|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_253|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_253|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_254|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_254|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_254|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_255|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_255|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_255|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_256|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_256|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_256|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_257|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_257|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_257|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_258|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_258|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_258|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_259|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_259|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_259|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_260|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_260|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_260|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_261|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_261|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_261|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_262|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_262|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_262|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_263|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_263|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_263|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_264|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_264|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_264|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_265|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_265|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_265|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_266|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_266|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_266|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_267|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_267|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_267|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_268|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_268|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_268|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_269|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_269|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_269|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_270|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_270|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_270|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_271|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_271|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_271|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_272|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_272|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_272|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_273|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_273|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_273|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_274|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_274|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_274|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_275|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_275|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_275|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_276|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_276|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_276|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_277|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_277|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_277|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_278|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_278|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_278|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_279|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_279|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_279|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_280|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_280|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_280|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_281|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_281|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_281|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_282|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_282|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_282|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_283|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_283|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_283|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_284|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_284|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_284|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_285|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_285|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_285|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_286|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_286|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_286|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_287|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_287|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_287|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_288|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_288|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_288|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_289|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_289|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_289|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_290|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_290|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_290|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_291|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_291|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_291|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_292|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_292|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_292|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_293|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_293|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_293|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_294|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_294|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_294|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_295|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_295|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_295|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_296|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_296|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_296|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_297|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_297|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_297|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_298|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_298|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_298|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_299|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_299|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_299|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_300|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups" " -s 2"
-		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_300|Intro_Breakroom:PlaquesR_2Shape" 
-		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:644]\" \"f[646:1358]\" \"f[1360:1485]\" \"f[1487:2635]\" \"f[2637:2707]\""
-		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesR_300|Intro_Breakroom:PlaquesR_2Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[645]\" \"f[1359]\" \"f[1486]\" \"f[2636]\""
 		
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Top|Intro_Breakroom:PlaquesL_1|Intro_Breakroom:PlaquesL_1Shape" 
 		"instObjGroups" " -s 151"
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Top|Intro_Breakroom:PlaquesL_1|Intro_Breakroom:PlaquesL_1Shape" 
-		"instObjGroups.objectGroups" " -s 3"
+		"instObjGroups.objectGroups" " -s 7"
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Top|Intro_Breakroom:PlaquesL_1|Intro_Breakroom:PlaquesL_1Shape" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[0:606]\" \"f[608:771]\" \"f[773:935]\" \"f[937:2030]\""
 		
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Top|Intro_Breakroom:PlaquesL_1|Intro_Breakroom:PlaquesL_1Shape" 
 		"instObjGroups.objectGroups[2].objectGrpCompList" " -type \"componentList\" 3 \"f[607]\" \"f[772]\" \"f[936]\""
 		
+		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Top|Intro_Breakroom:PlaquesL_1|Intro_Breakroom:PlaquesL_1Shape" 
+		"instObjGroups.objectGroups[5].objectGrpCompList" " -type \"componentList\" 4 \"f[0:549]\" \"f[676:714]\" \"f[841:878]\" \"f[1005:2030]\""
+		
+		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Top|Intro_Breakroom:PlaquesL_1|Intro_Breakroom:PlaquesL_1Shape" 
+		"instObjGroups.objectGroups[6].objectGrpCompList" " -type \"componentList\" 3 \"f[550:675]\" \"f[715:840]\" \"f[879:1004]\""
+		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesL_1|Intro_Breakroom:PlaquesL_1Shape" 
 		"instObjGroups.objectGroups" " -s 2"
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesL_1|Intro_Breakroom:PlaquesL_1Shape" 
@@ -10342,12 +9920,18 @@ createNode reference -n "Intro_Sequence:Intro_Sequence:Intro_BreakroomRN";
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Bottom|Intro_Breakroom:PlaquesL_2|Intro_Breakroom:PlaquesL_8430Shape2" 
 		"instObjGroups" " -s 151"
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Bottom|Intro_Breakroom:PlaquesL_2|Intro_Breakroom:PlaquesL_8430Shape2" 
-		"instObjGroups.objectGroups" " -s 2"
+		"instObjGroups.objectGroups" " -s 6"
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Bottom|Intro_Breakroom:PlaquesL_2|Intro_Breakroom:PlaquesL_8430Shape2" 
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 5 \"f[0:606]\" \"f[608:1323]\" \"f[1325:1449]\" \"f[1451:2126]\" \"f[2128:2707]\""
 		
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Bottom|Intro_Breakroom:PlaquesL_2|Intro_Breakroom:PlaquesL_8430Shape2" 
 		"instObjGroups.objectGroups[1].objectGrpCompList" " -type \"componentList\" 4 \"f[607]\" \"f[1324]\" \"f[1450]\" \"f[2127]\""
+		
+		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Bottom|Intro_Breakroom:PlaquesL_2|Intro_Breakroom:PlaquesL_8430Shape2" 
+		"instObjGroups.objectGroups[4].objectGrpCompList" " -type \"componentList\" 4 \"f[0:549]\" \"f[676:1266]\" \"f[1519:2069]\" \"f[2196:2707]\""
+		
+		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Left_Bottom|Intro_Breakroom:PlaquesL_2|Intro_Breakroom:PlaquesL_8430Shape2" 
+		"instObjGroups.objectGroups[5].objectGrpCompList" " -type \"componentList\" 3 \"f[550:675]\" \"f[1267:1518]\" \"f[2070:2195]\""
 		
 		2 "|Intro_BreakroomRNfosterParent1|:PlaquesL_151|Intro_Breakroom:PlaquesL_8430Shape2" 
 		"instObjGroups.objectGroups" " -s 2"
@@ -11553,11 +11137,678 @@ createNode reference -n "Intro_Sequence:Intro_Sequence:Intro_BreakroomRN";
 		"visibility" " 1"
 		2 "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Scene|Intro_Breakroom:Floorplan1" 
 		"visibility" " 1"
+		2 "|Intro_Breakroom:Final_Camera|Intro_Breakroom:Camera|Intro_Breakroom:CameraShape" 
+		"renderable" " 0"
+		2 "Intro_Breakroom:lambert3SG" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:lambert3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:lambert3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Intro_Breakroom:set1" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Intro_Breakroom:set3" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:set3" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:set3" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Intro_Breakroom:set4" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:set4" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Intro_Breakroom:set5" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:set5" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:set5" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Intro_Breakroom:pasted__standardSurface2SG" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:pasted__standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"specular\""
+		2 "Intro_Breakroom:pasted__standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"diffuse\""
+		2 "Intro_Breakroom:pasted__Dio_SteveJobs1SG" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:pasted__Dio_SteveJobs1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:pasted__Dio_SteveJobs1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Intro_Breakroom:pasted__Dio_ChillSG" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:pasted__Dio_ChillSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:pasted__Dio_ChillSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Intro_Breakroom:pasted__Apollo_Suprised1SG" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:pasted__Apollo_Suprised1SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"specular\""
+		2 "Intro_Breakroom:pasted__Apollo_Suprised1SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"diffuse\""
+		2 "Intro_Breakroom:pasted__Dio_SaluteSG" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:pasted__Dio_SaluteSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:pasted__Dio_SaluteSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Intro_Breakroom:pasted__Apollo_AngledSG" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:pasted__Apollo_AngledSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:pasted__Apollo_AngledSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Intro_Breakroom:pasted__Dio_SupermanSG" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:pasted__Dio_SupermanSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:pasted__Dio_SupermanSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Intro_Breakroom:pasted__Apollo_StraightSG" "aiCustomAOVs" " -s 2"
+		2 "Intro_Breakroom:pasted__Apollo_StraightSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Intro_Breakroom:pasted__Apollo_StraightSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
 		3 "Intro_Breakroom:groupId24205.message" "Intro_Breakroom:lambert3SG.groupNodes" 
 		"-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_300|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_299|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_298|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_297|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_296|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_295|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_294|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_293|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_292|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_291|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_290|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_289|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_288|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_287|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_286|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_285|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_284|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_283|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_282|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_281|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_280|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_279|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_278|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_277|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_276|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_275|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_274|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_273|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_272|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_271|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_270|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_269|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_268|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_267|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_266|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_265|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_264|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_263|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_262|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_261|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_260|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_259|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_258|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_257|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_256|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_255|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_254|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_253|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_252|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_251|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_250|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_249|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_248|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_247|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_246|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_245|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_244|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_243|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_242|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_241|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_240|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_239|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_238|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_237|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_236|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_235|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_234|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_233|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_232|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_231|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_230|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_229|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_228|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_227|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_226|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_225|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_224|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_223|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_222|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_221|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_220|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_219|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_218|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_217|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_216|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_215|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_214|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_213|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_212|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_211|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_210|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_209|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_208|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_207|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_206|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_205|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_204|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_203|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_202|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_201|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_200|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_199|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_198|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_197|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_196|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_195|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_194|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_193|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_192|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_191|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_190|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_189|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_188|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_187|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_186|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_185|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_184|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_183|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_182|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_181|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_180|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_179|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_178|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_177|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_176|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_175|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_174|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_173|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_172|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_171|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_170|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_169|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_168|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_167|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_166|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_165|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_164|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_163|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_162|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_161|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_160|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_159|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_158|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_157|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_156|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_155|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_154|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_153|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_152|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
+		3 "|Intro_BreakroomRNfosterParent1|:PlaquesR_151|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0]" 
+		"Intro_Breakroom:lambert3SG.dagSetMembers" "-na"
 		3 "Intro_Breakroom:groupId24205.groupId" "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Bottom|Intro_Breakroom:PlaquesR_2|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Plaques|Intro_Breakroom:Plaques_Right_Bottom|Intro_Breakroom:PlaquesR_2|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_300|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_299|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_298|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_297|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_296|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_295|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_294|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_293|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_292|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_291|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_290|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_289|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_288|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_287|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_286|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_285|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_284|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_283|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_282|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_281|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_280|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_279|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_278|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_277|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_276|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_275|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_274|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_273|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_272|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_271|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_270|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_269|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_268|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_267|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_266|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_265|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_264|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_263|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_262|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_261|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_260|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_259|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_258|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_257|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_256|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_255|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_254|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_253|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_252|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_251|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_250|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_249|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_248|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_247|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_246|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_245|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_244|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_243|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_242|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_241|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_240|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_239|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_238|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_237|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_236|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_235|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_234|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_233|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_232|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_231|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_230|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_229|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_228|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_227|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_226|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_225|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_224|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_223|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_222|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_221|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_220|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_219|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_218|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_217|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_216|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_215|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_214|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_213|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_212|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_211|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_210|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_209|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_208|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_207|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_206|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_205|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_204|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_203|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_202|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_201|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_200|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_199|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_198|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_197|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_196|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_195|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_194|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_193|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_192|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_191|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_190|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_189|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_188|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_187|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_186|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_185|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_184|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_183|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_182|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_181|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_180|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_179|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_178|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_177|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_176|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_175|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_174|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_173|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_172|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_171|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_170|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_169|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_168|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_167|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_166|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_165|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_164|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_163|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_162|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_161|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_160|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_159|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_158|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_157|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_156|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_155|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_154|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_153|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_152|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "Intro_Breakroom:lambert3SG.memberWireframeColor" "|Intro_BreakroomRNfosterParent1|:PlaquesR_151|Intro_Breakroom:PlaquesR_2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		5 0 "Intro_Sequence:Intro_Sequence:Intro_BreakroomRN" "|Intro_Breakroom:Envionment|Intro_Breakroom:Geo|Intro_Breakroom:Scene|Intro_Breakroom:Floorplan1|Intro_Breakroom:Floorplan1Shape.instObjGroups" 
 		"Intro_Breakroom:set4.dagSetMembers" "Intro_Sequence:Intro_Sequence:Intro_BreakroomRN.placeHolderList[1]" 
@@ -11570,53 +11821,55 @@ lockNode -l 1 ;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "1CD8AD62-44A5-6FDD-646A-9BB35D96CE52";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
+	setAttr -s 2 ".aovs";
 	setAttr ".version" -type "string" "5.2.0";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=RenderCamShape;Snapshots Folder=C:/Users/newsi/GitRepos/Apollo_Short_Film/ApolloProject/images/snapshots/Intro Breakroom;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1    1;Background.Offset=0    0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1    1;Foreground.Offset=0    0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Snapshots Folder=C:/Users/newsi/GitRepos/Apollo_Short_Film/ApolloProject/images/snapshots/Intro Breakroom;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1     1;Background.Offset=0     0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1     1;Foreground.Offset=0     0;Foreground.Apply Color Management=1;";
 createNode script -n "Intro_Sequence:Intro_Sequence:uiConfigurationScriptNode";
 	rename -uid "2298A424-413D-654F-7A81-A1A15092A2F7";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 656\n            -height 425\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n"
-		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
-		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 656\n            -height 323\n            -sceneRenderFilter 0\n"
-		+ "            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Final_Camera|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Camera\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
+		+ "            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1290\n            -height 1006\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n"
 		+ "            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n"
 		+ "            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n"
-		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 656\n            -height 323\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n"
-		+ "            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n"
-		+ "            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n"
-		+ "            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1319\n            -height 691\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
-		+ "            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 0\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
-		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
-		+ "            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
-		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n"
-		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n"
-		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n"
-		+ "                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n"
-		+ "                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n"
-		+ "                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n"
-		+ "                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
-		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
-		+ "                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n"
-		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
-		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
-		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n"
-		+ "\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 691\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 691\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1289\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
+		+ "            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n"
+		+ "            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
+		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1290\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Intro_Sequence:Intro_Sequence:RENDER_CAM|Intro_Sequence:Intro_Sequence:pasted__group|Intro_Sequence:Intro_Sequence:pasted__pasted__Final_Camera|Main_Camera\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n"
+		+ "            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2468\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n"
+		+ "            -showDagOnly 0\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n"
+		+ "            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n"
+		+ "            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n"
+		+ "            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n"
+		+ "                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
+		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n"
+		+ "                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
+		+ "                -autoExpand 0\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n"
+		+ "                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n"
+		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n"
+		+ "            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n"
+		+ "                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n"
+		+ "\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n"
+		+ "                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n"
+		+ "                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
+		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
+		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|Intro_Sequence:Intro_Sequence:RENDER_CAM|Intro_Sequence:Intro_Sequence:pasted__group|Intro_Sequence:Intro_Sequence:pasted__pasted__Final_Camera|Main_Camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2468\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|Intro_Sequence:Intro_Sequence:RENDER_CAM|Intro_Sequence:Intro_Sequence:pasted__group|Intro_Sequence:Intro_Sequence:pasted__pasted__Final_Camera|Main_Camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2468\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "Intro_Sequence:Intro_Sequence:sceneConfigurationScriptNode";
@@ -11739,8 +11992,8 @@ createNode animCurveTA -n "Intro_Sequence:Intro_Sequence:pasted__pasted__persp2_
 	rename -uid "DF624188-456C-BD2A-1E5D-26B919930683";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 41 ".ktv[0:40]"  -85 8.1049093872570843 -45.000000680272109 9.6375838296411587
-		 -14 5.1760862786366602 33 -2.8038473414793468 100 -5 168.99999965986396 0 171 0 198 0
+	setAttr -s 41 ".ktv[0:40]"  -85 8.1049093872570843 -45.000000680272109 9.6375838296411604
+		 -14 5.176086278636661 33 -2.8038473414793468 100 -5 168.99999965986396 0 171 0 198 0
 		 228 0 231 0 259 0 267 0 276 0 279 0 297 0 307 0 315 0 318 0 330 0 336 0 347 0 350 0
 		 355 0 366 0 369 0 374 0 381 0 383 0 386 0 394 -0.1122658022076662 519 0 562 -4.5074029668399946
 		 577 -4.5074029668399946 607 -4.5074029668399946 653 0 666 0 666.00000391156459 0
@@ -11907,93 +12160,101 @@ createNode place2dTexture -n "Intro_Sequence:place2dTexture1";
 	rename -uid "69EB939B-443E-EA14-9D04-DDBBB244201F";
 createNode file -n "Intro_Sequence:file1";
 	rename -uid "A95ADFFB-4E61-EE73-BA38-A590CC120D0E";
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_BaseColor.1001.tx";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_BaseColor.1001.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Intro_Sequence:file2";
 	rename -uid "E4CAC56D-4AA9-8F37-2C4F-12828CB0C7A1";
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Emissive.1001.tx";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Emissive.1001.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Intro_Sequence:file3";
 	rename -uid "EF7851AD-4316-293D-42F6-FCA77D1923CC";
 	setAttr ".ail" yes;
 	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Height.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Height.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Intro_Sequence:file4";
 	rename -uid "8DB934EF-4D9B-2ECA-C1C9-9E9429EF47A6";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Metallic.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Metallic.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Intro_Sequence:file5";
 	rename -uid "0E1F3F26-4B98-36A2-C18B-86B2FAFFF28C";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Normal.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Normal.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Intro_Sequence:file6";
 	rename -uid "059A75F4-472C-16B3-36FA-7FABEB78F885";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Roughness.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Roughness.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode multiplyDivide -n "Intro_Sequence:multiplyDivide1";
 	rename -uid "A366FF0A-4E4B-24F2-8184-F3AD8ACB21B6";
-createNode aiStandardSurface -n "Intro_Sequence:Gold_Plaque";
-	rename -uid "D2061A2D-428C-93E4-0417-8D9C77C1AC52";
-	setAttr ".emission" 1;
 createNode shadingEngine -n "Intro_Sequence:set1";
 	rename -uid "E3AE4C23-494C-39E4-7FE2-8CB30BE2FEBF";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "specular";
+	setAttr ".aovs[1].aov_name" -type "string" "diffuse";
+	setAttr ".aal" -type "attributeAlias" {"ai_aov_specular","aiCustomAOVs[0].aovName"
+		,"ai_aov_diffuse","aiCustomAOVs[1].aovName"} ;
 createNode materialInfo -n "Intro_Sequence:materialInfo1";
 	rename -uid "EEAE1F51-4C7F-596F-2F2B-A0A13CF04326";
 createNode bump2d -n "Intro_Sequence:bump2d1";
 	rename -uid "79DDCDD7-49AA-6E04-2D75-68BE5E09C318";
 	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "Intro_Sequence:place2dTexture2";
 	rename -uid "B46B584F-4683-5CCD-27B5-04945E7F8B62";
 createNode file -n "Intro_Sequence:file7";
 	rename -uid "A3D480B5-48CA-BF61-7BC4-549ED66F073C";
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_BaseColor.1001.tx";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_BaseColor.1001.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Intro_Sequence:file8";
 	rename -uid "59C84612-45C2-13B1-86BF-AE8F7797C170";
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Emissive.1001.tx";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Emissive.1001.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Intro_Sequence:file9";
 	rename -uid "7005F06E-4B0A-BBF9-5462-75B0B17AD235";
 	setAttr ".ail" yes;
 	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Height.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Height.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Intro_Sequence:file10";
 	rename -uid "586B7E58-463B-32E4-E132-15A1A9375622";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Metallic.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Metallic.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Intro_Sequence:file11";
 	rename -uid "288C45F5-4DA5-A251-4A50-EE8913CABB35";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Normal.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Normal.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "Intro_Sequence:file12";
 	rename -uid "EAC7D971-490F-4D36-D0AD-BB883E96D557";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Roughness.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Roughness.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode multiplyDivide -n "Intro_Sequence:multiplyDivide2";
 	rename -uid "886772E2-4AE0-637E-FB99-3C90046E09EC";
-createNode aiStandardSurface -n "Intro_Sequence:Wood_Plaque";
-	rename -uid "677D9F21-4DC4-3749-9B9C-D2AA31F882D5";
-	setAttr ".emission" 1;
 createNode shadingEngine -n "Intro_Sequence:set2";
 	rename -uid "088C1252-4716-CF7B-BC24-7A8B066BA919";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "specular";
+	setAttr ".aovs[1].aov_name" -type "string" "diffuse";
+	setAttr ".aal" -type "attributeAlias" {"ai_aov_specular","aiCustomAOVs[0].aovName"
+		,"ai_aov_diffuse","aiCustomAOVs[1].aovName"} ;
 createNode materialInfo -n "Intro_Sequence:materialInfo2";
 	rename -uid "E5E46069-4762-A2B3-DD25-84815E73B7FD";
 createNode bump2d -n "Intro_Sequence:bump2d2";
 	rename -uid "CF474FB2-4575-3D4B-525E-479FEF505526";
 	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode groupId -n "Intro_Sequence:groupId2";
 	rename -uid "7E5D85D3-434C-ACD7-B0CA-369C8867A55C";
@@ -12075,33 +12336,33 @@ createNode place2dTexture -n "place2dTexture1";
 	rename -uid "37532C29-48D5-56DC-7D31-1085CA412741";
 createNode file -n "file1";
 	rename -uid "92ADCCE4-4053-353A-AE16-A0ABC15A43FC";
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_BaseColor.1001.tx";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_BaseColor.1001.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "file2";
 	rename -uid "5AAFAB6D-4651-01AF-8DD8-89A48F9E7554";
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Emissive.1001.tx";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Emissive.1001.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "file3";
 	rename -uid "17BC83C6-4D84-D18C-B9FE-31AA30627632";
 	setAttr ".ail" yes;
 	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Height.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Height.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "file4";
 	rename -uid "04795FB2-4E7C-481B-819E-99958027588B";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Metallic.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Metallic.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "file5";
 	rename -uid "1F1C0402-488E-642E-B1E4-AFB6FD3DBC23";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Normal.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Normal.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "file6";
 	rename -uid "CD6F257A-4602-AE4C-0AED-4C9A7E8C5BD6";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Roughness.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_GoldPlaque_Roughness.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode multiplyDivide -n "multiplyDivide1";
 	rename -uid "342D6421-4F7C-E721-5DBB-2B83A872A447";
 createNode aiStandardSurface -n "Gold_Plaques";
@@ -12109,47 +12370,54 @@ createNode aiStandardSurface -n "Gold_Plaques";
 	setAttr ".emission" 1;
 createNode shadingEngine -n "set1";
 	rename -uid "426DA2D7-4319-A2F7-870D-9B9590554FCE";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 604 ".gn";
+	setAttr -s 608 ".gn";
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "specular";
+	setAttr ".aovs[1].aov_name" -type "string" "diffuse";
+	setAttr ".aal" -type "attributeAlias" {"ai_aov_specular","aiCustomAOVs[0].aovName"
+		,"ai_aov_diffuse","aiCustomAOVs[1].aovName"} ;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "16FCD397-4E53-E41B-14AC-1EA29F315167";
 createNode bump2d -n "bump2d1";
 	rename -uid "62892C19-4D2A-2D3B-4506-B38B9F5BCA34";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc1" -type "float3" 0 0.00030999997 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture2";
 	rename -uid "E140EEC8-4C96-B5BA-8F6F-7E982CC0103C";
 createNode file -n "file7";
 	rename -uid "E7EFECB2-4973-54A0-C1D1-7CB54655D2FA";
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_BaseColor.1001.tx";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_BaseColor.1001.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "file8";
 	rename -uid "8850575D-4CE6-8BFE-E28F-97A8954AE357";
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Emissive.1001.tx";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Emissive.1001.png";
 	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "file9";
 	rename -uid "4D0B9194-4E56-7DD4-3E7F-F493C9C9FF89";
 	setAttr ".ail" yes;
 	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Height.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Height.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "file10";
 	rename -uid "D193B282-441B-663B-9992-5FAEDDE9C736";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Metallic.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Metallic.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "file11";
 	rename -uid "7FA6B2CE-4732-AF84-3AAE-7983CDEDA532";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Normal.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Normal.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode file -n "file12";
 	rename -uid "217E7D61-4F8B-8E8B-4727-40A1FEEEB45F";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/18014/Documents/Repos/Apollo_Short_Film_KW/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Roughness.1001.tx";
-	setAttr ".cs" -type "string" "Raw";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/EOTM Intro/Plaques/better plaque_WoodPlaque_Roughness.1001.png";
+	setAttr ".cs" -type "string" "sRGB";
 createNode multiplyDivide -n "multiplyDivide2";
 	rename -uid "94562739-4AE8-9B17-B01B-D79C6FDDF257";
 createNode aiStandardSurface -n "Wood_Plaque";
@@ -12157,15 +12425,22 @@ createNode aiStandardSurface -n "Wood_Plaque";
 	setAttr ".emission" 1;
 createNode shadingEngine -n "set2";
 	rename -uid "24622071-42DE-2ED8-A4C2-10817DBE1911";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
+	setAttr -s 608 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 608 ".gn";
+	setAttr -s 616 ".gn";
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "specular";
+	setAttr ".aovs[1].aov_name" -type "string" "diffuse";
+	setAttr ".aal" -type "attributeAlias" {"ai_aov_specular","aiCustomAOVs[0].aovName"
+		,"ai_aov_diffuse","aiCustomAOVs[1].aovName"} ;
 createNode materialInfo -n "materialInfo2";
 	rename -uid "00C25EFC-4240-BD1D-9AB7-D488B0351323";
 createNode bump2d -n "bump2d2";
 	rename -uid "931CF6CE-4284-CDE5-A86C-629E6830581B";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
+	setAttr ".vc1" -type "float3" 0 0.00030999997 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode groupId -n "groupId1";
 	rename -uid "78A1E4D7-41A0-A047-0B3D-E2BA94DF7D69";
@@ -15803,78 +16078,6 @@ createNode groupId -n "groupId1211";
 createNode groupId -n "groupId1212";
 	rename -uid "0865D36B-4C3E-6D05-E80F-23A338D49FA6";
 	setAttr ".ihi" 0;
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "D407DDCF-4EFD-0CC8-DE31-35A4E6C9186E";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -622.61902287839052 -384.52379424420673 ;
-	setAttr ".tgi[0].vh" -type "double2" 592.85711929911758 402.3809363917706 ;
-	setAttr -s 22 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -861.4285888671875;
-	setAttr ".tgi[0].ni[0].y" 180;
-	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" -554.28570556640625;
-	setAttr ".tgi[0].ni[1].y" 37.142856597900391;
-	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[2].y" 344.28570556640625;
-	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 298.57144165039062;
-	setAttr ".tgi[0].ni[3].y" 302.85714721679688;
-	setAttr ".tgi[0].ni[3].nvs" 2387;
-	setAttr ".tgi[0].ni[4].x" -554.28570556640625;
-	setAttr ".tgi[0].ni[4].y" 450;
-	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[5].y" 160;
-	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" 647.14288330078125;
-	setAttr ".tgi[0].ni[6].y" 412.85714721679688;
-	setAttr ".tgi[0].ni[6].nvs" 1923;
-	setAttr ".tgi[0].ni[7].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[7].y" -361.42855834960938;
-	setAttr ".tgi[0].ni[7].nvs" 1923;
-	setAttr ".tgi[0].ni[8].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[8].y" 528.5714111328125;
-	setAttr ".tgi[0].ni[8].nvs" 1923;
-	setAttr ".tgi[0].ni[9].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[9].y" -24.285715103149414;
-	setAttr ".tgi[0].ni[9].nvs" 1923;
-	setAttr ".tgi[0].ni[10].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[10].y" -208.57142639160156;
-	setAttr ".tgi[0].ni[10].nvs" 1923;
-	setAttr ".tgi[0].ni[11].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[11].y" -200;
-	setAttr ".tgi[0].ni[11].nvs" 1923;
-	setAttr ".tgi[0].ni[12].x" -871.4285888671875;
-	setAttr ".tgi[0].ni[12].y" 178.57142639160156;
-	setAttr ".tgi[0].ni[12].nvs" 1923;
-	setAttr ".tgi[0].ni[13].x" 307.14285278320312;
-	setAttr ".tgi[0].ni[13].y" 304.28570556640625;
-	setAttr ".tgi[0].ni[13].nvs" 2387;
-	setAttr ".tgi[0].ni[14].x" 655.71429443359375;
-	setAttr ".tgi[0].ni[14].y" 414.28570556640625;
-	setAttr ".tgi[0].ni[14].nvs" 1923;
-	setAttr ".tgi[0].ni[15].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[15].y" 160;
-	setAttr ".tgi[0].ni[15].nvs" 1923;
-	setAttr ".tgi[0].ni[16].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[16].y" -361.42855834960938;
-	setAttr ".tgi[0].ni[16].nvs" 1923;
-	setAttr ".tgi[0].ni[17].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[17].y" 344.28570556640625;
-	setAttr ".tgi[0].ni[17].nvs" 1923;
-	setAttr ".tgi[0].ni[18].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[18].y" -15.714285850524902;
-	setAttr ".tgi[0].ni[18].nvs" 1923;
-	setAttr ".tgi[0].ni[19].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[19].y" 528.5714111328125;
-	setAttr ".tgi[0].ni[19].nvs" 1923;
-	setAttr ".tgi[0].ni[20].x" -564.28570556640625;
-	setAttr ".tgi[0].ni[20].y" 448.57144165039062;
-	setAttr ".tgi[0].ni[20].nvs" 1923;
-	setAttr ".tgi[0].ni[21].x" -564.28570556640625;
-	setAttr ".tgi[0].ni[21].y" 35.714286804199219;
-	setAttr ".tgi[0].ni[21].nvs" 1923;
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "AC323748-4BF6-D7E7-7206-F2BD3AF2A6C5";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -15883,8 +16086,8 @@ createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	setAttr ".ai_translator" -type "string" "exr";
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "444F2281-4D4A-1273-AF92-4491603B0D03";
-	setAttr ".output_mode" 0;
 	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
 createNode groupId -n "Intro_Sequence:Intro_Sequence:groupId1";
 	rename -uid "FB8EBDF0-4E0A-2F4B-E7DD-298B84499013";
 	setAttr ".ihi" 0;
@@ -16335,9 +16538,397 @@ createNode groupId -n "Intro_Sequence:Intro_Sequence:groupId149";
 createNode groupId -n "Intro_Sequence:Intro_Sequence:groupId150";
 	rename -uid "6E3FAF3D-4A96-CA37-3E33-A9AF8516A8FD";
 	setAttr ".ihi" 0;
+createNode groupId -n "groupId1213";
+	rename -uid "B8787AFD-4D6A-D827-E85E-57B29B733998";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1214";
+	rename -uid "2676DDFC-44C5-AF12-AD83-59826B1E30D8";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1215";
+	rename -uid "587244B5-4FE6-E9B5-C4CD-FE9CC1E88824";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1216";
+	rename -uid "1EBBFC59-4D2F-C999-B17F-B287CBA3F9C9";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1217";
+	rename -uid "CCC81D5A-45B5-27E3-2A93-49BC383BC035";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1218";
+	rename -uid "61F10072-4B43-2DCC-C233-A8BE03116B7E";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1219";
+	rename -uid "C9BBF827-4E62-FA44-6369-F894A2ADAC6C";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1220";
+	rename -uid "FE8F0DD5-4628-A836-7870-F78CA2E537BC";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1221";
+	rename -uid "C21A8E78-4721-18F2-4780-6EAF843517FD";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1222";
+	rename -uid "7F96DA3F-41C4-6B2D-6487-1EAD81D3EF9E";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1223";
+	rename -uid "70204AE1-4D6E-22D2-936B-BFB40F9C0998";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId1224";
+	rename -uid "259AB862-42E9-5B75-8355-EF8C67A2A558";
+	setAttr ".ihi" 0;
+createNode renderSetup -n "renderSetup";
+	rename -uid "7612A53F-4422-4CD6-E54D-9DB549794538";
+createNode renderSetupLayer -n "Background";
+	rename -uid "C17A12DF-469D-A211-6343-C9A91E292A08";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_Background";
+	rename -uid "A37C06DB-483F-CF2C-9615-AEA6D4633132";
+	setAttr ".do" 1;
+createNode renderSetupLayer -n "SetDressing";
+	rename -uid "9B006A03-42D4-1EDC-48AB-12B1D6DBE976";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_SetDressing";
+	rename -uid "35FB0196-4C69-CA07-C77E-36B1D1E0AE74";
+	setAttr ".do" 2;
+createNode renderSetupLayer -n "Plaques";
+	rename -uid "D3AD6440-4AE1-C3A1-617B-DE813ECB421A";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_Plaques";
+	rename -uid "B5075560-4EE1-B7C8-44F8-3CA7CA2EE68D";
+	setAttr ".do" 3;
+createNode renderSetupLayer -n "AO";
+	rename -uid "53908CE1-4962-0FE3-DC2F-F9AF456C4D41";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_AO";
+	rename -uid "D34F5A24-499A-E7BA-37DB-039A18C1216F";
+	setAttr ".do" 4;
+createNode renderSetupLayer -n "Shadow";
+	rename -uid "9D903F9B-4DAC-E0BB-043C-028870E81A0D";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_Shadow";
+	rename -uid "5349625A-498C-46AB-82C2-539B7D4BCF0D";
+	setAttr ".do" 5;
+createNode renderSetupLayer -n "FOG";
+	rename -uid "7B2A54E0-47BF-49F6-4B53-E79821D96E48";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_FOG";
+	rename -uid "581856B6-48F3-E4E8-B728-4B815A7F5E37";
+	setAttr ".do" 6;
+createNode collection -n "collection1";
+	rename -uid "41979424-4027-5BCA-BD52-6A81617BF2A8";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "collection1Selector";
+	rename -uid "9024EB42-47E9-7D8D-EC7C-EE89CC7C3EEC";
+	setAttr ".ssl" -type "string" "|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Envionment|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Geo|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Scene|Intro_Sequence:Intro_Sequence:Intro_Breakroom:SetDressing";
+createNode collection -n "collection2";
+	rename -uid "F2627C36-4527-FA27-C120-3D89529BDF5F";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "collection2Selector";
+	rename -uid "44C78E6D-4E2A-9AB7-B9ED-7DA8C0C25DBF";
+	setAttr ".ssl" -type "string" "|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Envionment|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Geo|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Scene|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Floorplan1";
+createNode collection -n "collection3";
+	rename -uid "06654393-4587-FA97-F14A-ADB4A21B73CD";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "collection3Selector";
+	rename -uid "EFBADB99-4CA7-D19C-D2A7-69B464F76407";
+	setAttr ".ssl" -type "string" "|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Envionment|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Geo|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Plaques";
+createNode collection -n "collection4";
+	rename -uid "70D8CCAA-4684-6E98-77A9-CC81F75607BF";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "collection4Selector";
+	rename -uid "D798ABE7-42AF-D8C3-541F-4FAED4624EDC";
+	setAttr ".ssl" -type "string" "|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Envionment|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Geo";
+createNode collection -n "collection5";
+	rename -uid "117E03CB-4C43-0FAB-6FA7-B3B04DDD975B";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "collection5Selector";
+	rename -uid "BD01CA17-46D4-9E36-7C16-E88E44435B2F";
+	setAttr ".ssl" -type "string" "|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Envionment|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Geo";
+createNode collection -n "collection6";
+	rename -uid "392F759C-4269-3B76-3794-8A87B99BD5EB";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "collection6Selector";
+	rename -uid "C4D6610D-4367-FEAD-A8AA-078E5CCB2AB6";
+	setAttr ".ssl" -type "string" "|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Envionment|Intro_Sequence:Intro_Sequence:Intro_Breakroom:Geo";
+createNode absOverride -n "aiMatte";
+	rename -uid "56913DE9-4494-91C8-DC6A-41BC4413492E";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "aiMatte";
+	setAttr ".atv" yes;
+	setAttr ".es" yes;
+createNode collection -n "collection6_shapes";
+	rename -uid "098F17F1-4A60-B228-A52A-B98B61AAAF4A";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "collection6_shapesSelector";
+	rename -uid "F5F084B8-449F-27E8-7684-78BBAF54ED3B";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 2;
+createNode aiAtmosphereVolume -n "aiAtmosphereVolume";
+	rename -uid "3B4CDE7C-4C2A-E0A0-C9D4-5A80C1BF4F84";
+	setAttr ".density" 0.0020000000949949026;
+createNode absOverride -n "density";
+	rename -uid "EED6430A-4AD9-B0DB-1824-45B4C98E6648";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "float";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "density";
+	setAttr ".atv" 0.0010000000474974513;
+	setAttr ".es" yes;
+createNode collection -n "collection6_shaders";
+	rename -uid "8FB0EB53-4376-87E2-90E1-9D90D342CD5C";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "collection6_shadersSelector";
+	rename -uid "C4C740CF-429B-7DB0-C69A-A7A8337CEB5D";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 3;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "8F5FC68C-424C-D171-FCAB-FC9438B93579";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -321.42855865614814 -654.54092357345598 ;
+	setAttr ".tgi[0].vh" -type "double2" 1041.6666252745538 20.998903134609872 ;
+	setAttr -s 11 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 415.71429443359375;
+	setAttr ".tgi[0].ni[0].y" 762.85711669921875;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" -547.14288330078125;
+	setAttr ".tgi[0].ni[1].y" 534.28570556640625;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 415.71429443359375;
+	setAttr ".tgi[0].ni[2].y" -570;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 415.71429443359375;
+	setAttr ".tgi[0].ni[3].y" 565.71429443359375;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" 108.57142639160156;
+	setAttr ".tgi[0].ni[4].y" -162.85714721679688;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 108.57142639160156;
+	setAttr ".tgi[0].ni[5].y" -388.57144165039062;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" -240;
+	setAttr ".tgi[0].ni[6].y" 490;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" 415.71429443359375;
+	setAttr ".tgi[0].ni[7].y" -365.71429443359375;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" 415.71429443359375;
+	setAttr ".tgi[0].ni[8].y" -140;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+	setAttr ".tgi[0].ni[9].x" 108.57142639160156;
+	setAttr ".tgi[0].ni[9].y" -592.85711669921875;
+	setAttr ".tgi[0].ni[9].nvs" 1923;
+	setAttr ".tgi[0].ni[10].x" -201.42857360839844;
+	setAttr ".tgi[0].ni[10].y" -188.57142639160156;
+	setAttr ".tgi[0].ni[10].nvs" 1923;
+createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
+	rename -uid "B1CE163B-4115-DE08-1BB0-62AB765C8133";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -611.30949951826676 -308.92855915285338 ;
+	setAttr ".tgi[0].vh" -type "double2" 612.4999756614377 306.54760686651156 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -92.857139587402344;
+	setAttr ".tgi[0].ni[0].y" 31.428571701049805;
+	setAttr ".tgi[0].ni[0].nvs" 18304;
+	setAttr ".tgi[0].ni[1].x" -91.428573608398438;
+	setAttr ".tgi[0].ni[1].y" 204.28572082519531;
+	setAttr ".tgi[0].ni[1].nvs" 18304;
+createNode materialOverride -n "materialOverride1";
+	rename -uid "C14D6269-4D33-FDE1-5CE8-1BA0726925DD";
+	addAttr -s false -ci true -sn "atv" -ln "attrValue" -at "message";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode aiShadowMatte -n "aiShadowMatte1";
+	rename -uid "3CF00C94-4CC1-BC2A-2EDE-B18857D31F46";
+createNode shadingEngine -n "aiShadowMatte1SG";
+	rename -uid "C0D7E0F6-45CA-6930-DB5A-E9B95BA38638";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "specular";
+	setAttr ".aovs[1].aov_name" -type "string" "diffuse";
+	setAttr ".aal" -type "attributeAlias" {"ai_aov_specular","aiCustomAOVs[0].aovName"
+		,"ai_aov_diffuse","aiCustomAOVs[1].aovName"} ;
+createNode materialInfo -n "materialInfo3";
+	rename -uid "218855C7-4B22-FBDB-FD6F-8AB2D2846EC8";
+createNode materialOverride -n "materialOverride2";
+	rename -uid "1756EC53-4923-FEF2-4D5F-438B9A414838";
+	addAttr -s false -ci true -sn "atv" -ln "attrValue" -at "message";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode aiAmbientOcclusion -n "aiAmbientOcclusion1";
+	rename -uid "989A4245-4400-ADB9-4D61-E1BA42DAA46B";
+	setAttr ".far_clip" 10;
+createNode shadingEngine -n "aiAmbientOcclusion1SG";
+	rename -uid "B2623E2E-429A-77E2-588D-7AA62EC7DF5E";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "specular";
+	setAttr ".aovs[1].aov_name" -type "string" "diffuse";
+	setAttr ".aal" -type "attributeAlias" {"ai_aov_specular","aiCustomAOVs[0].aovName"
+		,"ai_aov_diffuse","aiCustomAOVs[1].aovName"} ;
+createNode materialInfo -n "materialInfo4";
+	rename -uid "97BA9A4E-4AA3-E1E8-C993-44BFC1EABF49";
+createNode renderSettingsCollection -n "RenderSettingsCollection";
+	rename -uid "BC6470D2-443A-1B6B-F4CD-A08AC9377D35";
+createNode simpleSelector -n "RenderSettingsCollectionSelector";
+	rename -uid "79FD3E3E-4B8E-324B-9F62-DB8EFB4025E4";
+	setAttr ".ssl" -type "string" "defaultResolution\ndefaultArnoldRenderOptions\ndefaultArnoldDriver\ndefaultRenderGlobals\ndefaultArnoldFilter\ndefaultRenderQuality";
+	setAttr ".tf" 0;
+createNode absUniqueOverride -n "AASamples";
+	rename -uid "0FD6BA0A-4E78-1D5E-7CFA-9F832F2D0468";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min -10 -max 100 -smn 1 -smx 10 -at "long";
+	setAttr ".atr" -type "string" "AASamples";
+	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
+	setAttr ".atv" 2;
+createNode renderSettingsCollection -n "RenderSettingsCollection1";
+	rename -uid "2B888F87-4794-BC2D-5F6B-5793805A641D";
+createNode simpleSelector -n "RenderSettingsCollection1Selector";
+	rename -uid "C10FC9BD-4428-E4A9-5F2C-9F8B1C409DC0";
+	setAttr ".ssl" -type "string" "defaultResolution\ndefaultArnoldRenderOptions\ndefaultArnoldDriver\ndefaultRenderGlobals\ndefaultArnoldFilter\ndefaultRenderQuality";
+	setAttr ".tf" 0;
+createNode absUniqueOverride -n "AASamples1";
+	rename -uid "B6B13BA9-4855-FC57-B6DF-14AAEC2B8E1C";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min -10 -max 100 -smn 1 -smx 10 -at "long";
+	setAttr ".atr" -type "string" "AASamples";
+	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
+	setAttr ".atv" 1;
+createNode renderSettingsCollection -n "RenderSettingsCollection2";
+	rename -uid "CBD5A274-4D78-428E-4976-38A87885B880";
+createNode simpleSelector -n "RenderSettingsCollection2Selector";
+	rename -uid "914E975B-406E-2528-9113-12B2AE692592";
+	setAttr ".ssl" -type "string" "defaultResolution\ndefaultArnoldRenderOptions\ndefaultArnoldDriver\ndefaultRenderGlobals\ndefaultArnoldFilter\ndefaultRenderQuality";
+	setAttr ".tf" 0;
+createNode absUniqueOverride -n "AASamples2";
+	rename -uid "2E3D7C0B-405F-3375-8D6D-CF923834E524";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min -10 -max 100 -smn 1 -smx 10 -at "long";
+	setAttr ".atr" -type "string" "AASamples";
+	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
+	setAttr ".atv" 1;
+createNode aiAOV -n "aiAOV_specular";
+	rename -uid "095BA068-4267-1FFB-6005-818A75DD7F31";
+	setAttr ".aovn" -type "string" "specular";
+	setAttr ".aovt" 5;
+createNode aiAOV -n "aiAOV_diffuse";
+	rename -uid "F1252295-42CE-66E3-4053-0EA44C55E19A";
+	setAttr ".aovn" -type "string" "diffuse";
+	setAttr ".aovt" 5;
+createNode aovCollection -n "AOVCollection";
+	rename -uid "DA58CC75-4FFE-5CA8-D4CD-10993B4745F2";
+createNode simpleSelector -n "AOVCollectionSelector";
+	rename -uid "3F3054B6-4A4D-131A-442A-31BB4018818A";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 8;
+	setAttr ".cfv" -type "string" "aiAOV aiAOVDriver aiAOVFilter";
+createNode aovChildCollection -n "diffuse";
+	rename -uid "A877D322-4406-4339-CC63-F09C829F166D";
+createNode arnoldAOVChildSelector -n "diffuseSelector";
+	rename -uid "BC1A076F-40ED-F520-C67A-7B85B6B1A342";
+	setAttr ".ann" -type "string" "aiAOV_diffuse";
+createNode absOverride -n "enabled";
+	rename -uid "90C3EE37-4DBE-F5BA-1DC3-7293EEEA700F";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode aovChildCollection -n "specular";
+	rename -uid "28100357-4017-273F-2A4A-8E8DF71CF544";
+createNode arnoldAOVChildSelector -n "specularSelector";
+	rename -uid "177247A2-4B80-0699-B450-87B5C6380E53";
+	setAttr ".ann" -type "string" "aiAOV_specular";
+createNode absOverride -n "enabled1";
+	rename -uid "A55ACB37-4E01-E605-74B4-19852851F7E9";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode aovCollection -n "AOVCollection1";
+	rename -uid "770287AB-4EDF-A6F0-53EB-1AB95702F055";
+createNode simpleSelector -n "AOVCollection1Selector";
+	rename -uid "F563242C-4904-EBF8-B872-629B79A25D28";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 8;
+	setAttr ".cfv" -type "string" "aiAOV aiAOVDriver aiAOVFilter";
+createNode aovChildCollection -n "diffuse1";
+	rename -uid "07DC88C7-4632-57AA-F881-D58F9689F79B";
+createNode arnoldAOVChildSelector -n "diffuse1Selector";
+	rename -uid "92B7105C-4BE2-DFB8-FD5F-4E830773D347";
+	setAttr ".ann" -type "string" "aiAOV_diffuse";
+createNode absOverride -n "enabled2";
+	rename -uid "2B6002FE-4370-E2D3-7D08-0FBF4B8F3B25";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode aovChildCollection -n "specular1";
+	rename -uid "A48E1747-4F5D-3716-C5AF-6CA585C47BF6";
+createNode arnoldAOVChildSelector -n "specular1Selector";
+	rename -uid "DE2A1273-47E9-186F-386E-26B14822CDD1";
+	setAttr ".ann" -type "string" "aiAOV_specular";
+createNode absOverride -n "enabled3";
+	rename -uid "F50096F1-4A50-C5DC-E0A3-5DB30D1F4F5A";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode applyAbsIntOverride -n "AASamples_defaultArnoldRenderOptions_AA_samples";
+	rename -uid "A98BCB88-42A9-33A4-CA17-0B8B03F58199";
+	setAttr ".ori" 3;
+createNode applyAbsBoolOverride -n "Floorplan1Shape_ai_matte";
+	rename -uid "21BF1DDB-4EAF-A7C6-43FE-4CBB6615BA07";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "PlaquesR_2Shape_ai_matte";
+	rename -uid "A04AB58F-4836-35B7-750A-33A33D094C6E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "PlaquesL_8430Shape2_ai_matte";
+	rename -uid "932251F0-453D-E99F-7D91-9BBA0E8BDAC1";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "SetDressingShape_ai_matte";
+	rename -uid "88F797CD-41C4-2C17-6BC4-3986B5E51BDD";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "PlaquesR_1Shape_ai_matte";
+	rename -uid "0D9AC325-4636-21E8-243A-D4A33A398DC0";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "PlaquesL_1Shape_ai_matte";
+	rename -uid "41430EFF-4F9F-AA66-8E27-E6BE315DA9D0";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode aovCollection -n "AOVCollection2";
+	rename -uid "44C611F4-43E2-AA60-232D-FD84F552BF71";
+createNode simpleSelector -n "AOVCollection2Selector";
+	rename -uid "8CE4B9D4-4A6A-B665-5B47-F99639A25988";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 8;
+	setAttr ".cfv" -type "string" "aiAOV aiAOVDriver aiAOVFilter";
+createNode aovChildCollection -n "diffuse2";
+	rename -uid "9156DA0F-4109-1328-A4F3-CE94E8DC3FB2";
+createNode arnoldAOVChildSelector -n "diffuse2Selector";
+	rename -uid "3A8D1FEB-40ED-7574-4EBD-C58DE92DD67C";
+	setAttr ".ann" -type "string" "aiAOV_diffuse";
+createNode absOverride -n "enabled4";
+	rename -uid "288D2E32-4330-1D80-95B2-A89E50733A94";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode applyAbsBoolOverride -n "enabled4_aiAOV_diffuse_aoven";
+	rename -uid "24978ECE-44BB-BBEB-F49B-4B8D2CFE9F49";
+	setAttr ".ori" yes;
+createNode aovChildCollection -n "specular2";
+	rename -uid "F557AAB4-467B-A43E-878E-6D8551BAA3A5";
+createNode arnoldAOVChildSelector -n "specular2Selector";
+	rename -uid "E5AFD13C-4325-15B3-4CE0-158DBD2663CC";
+	setAttr ".ann" -type "string" "aiAOV_specular";
+createNode absOverride -n "enabled5";
+	rename -uid "2CF344E8-4ED5-D3AF-3618-3EB8F768C81E";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode applyAbsBoolOverride -n "enabled5_aiAOV_specular_aoven";
+	rename -uid "4B0F91A9-4E0C-52E0-CB26-1A8BCF9ED91A";
+	setAttr ".ori" yes;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "1B8400FE-4D3F-B5FB-EB6F-2FBF412FB933";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
-	setAttr ".o" 57;
-	setAttr ".unw" 57;
+	setAttr ".o" 609;
+	setAttr ".unw" 609;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -16347,33 +16938,50 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 19 ".st";
+	setAttr -s 21 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
 	setAttr -s 20 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 32 ".u";
+	setAttr -s 26 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 4 ".r";
+	setAttr -s 10 ".r";
 select -ne :lightList1;
 	setAttr -s 30 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 54 ".tx";
+	setAttr -s 43 ".tx";
 select -ne :standardSurface1;
+	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.40000000596046448;
 select -ne :initialShadingGroup;
-	setAttr -s 2 ".dsm";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ro" yes;
 	setAttr -s 122 ".gn";
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "specular";
+	setAttr ".aovs[1].aov_name" -type "string" "diffuse";
+	setAttr ".aal" -type "attributeAlias" {"ai_aov_specular","aiCustomAOVs[0].aovName"
+		,"ai_aov_diffuse","aiCustomAOVs[1].aovName"} ;
 select -ne :initialParticleSE;
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ro" yes;
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "specular";
+	setAttr ".aovs[1].aov_name" -type "string" "diffuse";
+	setAttr ".aal" -type "attributeAlias" {"ai_aov_specular","aiCustomAOVs[0].aovName"
+		,"ai_aov_diffuse","aiCustomAOVs[1].aovName"} ;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
 	setAttr ".outf" 51;
 	setAttr ".imfkey" -type "string" "exr";
+	setAttr ".an" yes;
+	setAttr ".fs" -85;
+	setAttr ".ef" 800;
+	setAttr ".pff" yes;
+	setAttr ".ifp" -type "string" "<Scene>/<RenderLayer>/<RenderPass>/<RenderLayer>";
 	setAttr ".dss" -type "string" "lambert1";
 select -ne :defaultResolution;
 	setAttr ".w" 2560;
@@ -16426,12 +17034,16 @@ relationship "link" ":lightLinker1" "Intro_Sequence:set1.message" ":defaultLight
 relationship "link" ":lightLinker1" "Intro_Sequence:set2.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "set1.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "set2.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiShadowMatte1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "aiAmbientOcclusion1SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Intro_Sequence:set1.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Intro_Sequence:set2.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "set1.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "set2.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiShadowMatte1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "aiAmbientOcclusion1SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "Intro_Sequence:renderLayerManager.rlmi[0]" "Intro_Sequence:defaultRenderLayer.rlid"
@@ -16440,6 +17052,11 @@ connectAttr "Intro_Sequence:Intro_Sequence:renderLayerManager.rlmi[0]" "Intro_Se
 		;
 connectAttr "Intro_Sequence:Intro_Sequence:Intro_BreakroomRNfosterParent1.msg" "Intro_Sequence:Intro_Sequence:Intro_BreakroomRN.fp"
 		;
+connectAttr "aiAtmosphereVolume.msg" ":defaultArnoldRenderOptions.atm";
+connectAttr "AASamples_defaultArnoldRenderOptions_AA_samples.o" ":defaultArnoldRenderOptions.AA_samples"
+		;
+connectAttr "aiAOV_specular.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_diffuse.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr ":defaultColorMgtGlobals.cme" "Intro_Sequence:file1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "Intro_Sequence:file1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "Intro_Sequence:file1.cmcp";
@@ -16573,19 +17190,7 @@ connectAttr "Intro_Sequence:place2dTexture1.vt2" "Intro_Sequence:file6.vt2";
 connectAttr "Intro_Sequence:place2dTexture1.vt3" "Intro_Sequence:file6.vt3";
 connectAttr "Intro_Sequence:place2dTexture1.vc1" "Intro_Sequence:file6.vc1";
 connectAttr "Intro_Sequence:file1.oc" "Intro_Sequence:multiplyDivide1.i1";
-connectAttr "Intro_Sequence:multiplyDivide1.o" "Intro_Sequence:Gold_Plaque.base_color"
-		;
-connectAttr "Intro_Sequence:file2.oc" "Intro_Sequence:Gold_Plaque.emission_color"
-		;
-connectAttr "Intro_Sequence:file4.oa" "Intro_Sequence:Gold_Plaque.metalness";
-connectAttr "Intro_Sequence:bump2d1.o" "Intro_Sequence:Gold_Plaque.n";
-connectAttr "Intro_Sequence:file6.oa" "Intro_Sequence:Gold_Plaque.specular_roughness"
-		;
-connectAttr "Intro_Sequence:Gold_Plaque.out" "Intro_Sequence:set1.ss";
 connectAttr "Intro_Sequence:set1.msg" "Intro_Sequence:materialInfo1.sg";
-connectAttr "Intro_Sequence:Gold_Plaque.msg" "Intro_Sequence:materialInfo1.m";
-connectAttr "Intro_Sequence:Gold_Plaque.msg" "Intro_Sequence:materialInfo1.t" -na
-		;
 connectAttr "Intro_Sequence:file5.oa" "Intro_Sequence:bump2d1.bv";
 connectAttr ":defaultColorMgtGlobals.cme" "Intro_Sequence:file7.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "Intro_Sequence:file7.cmcf";
@@ -16720,23 +17325,9 @@ connectAttr "Intro_Sequence:place2dTexture2.vt2" "Intro_Sequence:file12.vt2";
 connectAttr "Intro_Sequence:place2dTexture2.vt3" "Intro_Sequence:file12.vt3";
 connectAttr "Intro_Sequence:place2dTexture2.vc1" "Intro_Sequence:file12.vc1";
 connectAttr "Intro_Sequence:file7.oc" "Intro_Sequence:multiplyDivide2.i1";
-connectAttr "Intro_Sequence:multiplyDivide2.o" "Intro_Sequence:Wood_Plaque.base_color"
-		;
-connectAttr "Intro_Sequence:file8.oc" "Intro_Sequence:Wood_Plaque.emission_color"
-		;
-connectAttr "Intro_Sequence:file10.oa" "Intro_Sequence:Wood_Plaque.metalness";
-connectAttr "Intro_Sequence:bump2d2.o" "Intro_Sequence:Wood_Plaque.n";
-connectAttr "Intro_Sequence:file12.oa" "Intro_Sequence:Wood_Plaque.specular_roughness"
-		;
-connectAttr "Intro_Sequence:Wood_Plaque.out" "Intro_Sequence:set2.ss";
 connectAttr "Intro_Sequence:set2.msg" "Intro_Sequence:materialInfo2.sg";
-connectAttr "Intro_Sequence:Wood_Plaque.msg" "Intro_Sequence:materialInfo2.m";
-connectAttr "Intro_Sequence:Wood_Plaque.msg" "Intro_Sequence:materialInfo2.t" -na
-		;
 connectAttr "Intro_Sequence:file11.oa" "Intro_Sequence:bump2d2.bv";
 connectAttr "Intro_Sequence:multiplyDivide2.msg" "Intro_Sequence:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "Intro_Sequence:Wood_Plaque.msg" "Intro_Sequence:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
 connectAttr "Intro_Sequence:file8.msg" "Intro_Sequence:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
@@ -16761,8 +17352,6 @@ connectAttr "Intro_Sequence:multiplyDivide1.msg" "Intro_Sequence:hyperShadePrima
 connectAttr "Intro_Sequence:place2dTexture1.msg" "Intro_Sequence:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
 		;
 connectAttr "Intro_Sequence:file5.msg" "Intro_Sequence:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
-		;
-connectAttr "Intro_Sequence:Gold_Plaque.msg" "Intro_Sequence:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
 		;
 connectAttr "Intro_Sequence:set1.msg" "Intro_Sequence:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
 		;
@@ -17521,6 +18110,10 @@ connectAttr "groupId1206.msg" "set1.gn" -na;
 connectAttr "groupId1208.msg" "set1.gn" -na;
 connectAttr "groupId1210.msg" "set1.gn" -na;
 connectAttr "groupId1212.msg" "set1.gn" -na;
+connectAttr "groupId1215.msg" "set1.gn" -na;
+connectAttr "groupId1218.msg" "set1.gn" -na;
+connectAttr "groupId1221.msg" "set1.gn" -na;
+connectAttr "groupId1224.msg" "set1.gn" -na;
 connectAttr "set1.msg" "materialInfo1.sg";
 connectAttr "Gold_Plaques.msg" "materialInfo1.m";
 connectAttr "Gold_Plaques.msg" "materialInfo1.t" -na;
@@ -18272,62 +18865,273 @@ connectAttr "groupId1205.msg" "set2.gn" -na;
 connectAttr "groupId1207.msg" "set2.gn" -na;
 connectAttr "groupId1209.msg" "set2.gn" -na;
 connectAttr "groupId1211.msg" "set2.gn" -na;
+connectAttr "groupId1213.msg" "set2.gn" -na;
+connectAttr "groupId1214.msg" "set2.gn" -na;
+connectAttr "groupId1216.msg" "set2.gn" -na;
+connectAttr "groupId1217.msg" "set2.gn" -na;
+connectAttr "groupId1219.msg" "set2.gn" -na;
+connectAttr "groupId1220.msg" "set2.gn" -na;
+connectAttr "groupId1222.msg" "set2.gn" -na;
+connectAttr "groupId1223.msg" "set2.gn" -na;
 connectAttr "set2.msg" "materialInfo2.sg";
 connectAttr "Wood_Plaque.msg" "materialInfo2.m";
-connectAttr "Wood_Plaque.msg" "materialInfo2.t" -na;
+connectAttr "file7.msg" "materialInfo2.t" -na;
 connectAttr "file11.oa" "bump2d2.bv";
-connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "Background.msg" "renderSetup.frl";
+connectAttr "FOG.msg" "renderSetup.lrl";
+connectAttr "rs_Background.msg" "Background.lrl";
+connectAttr "renderSetup.lit" "Background.pls";
+connectAttr "collection2.msg" "Background.cl";
+connectAttr "collection2.msg" "Background.ch";
+connectAttr "renderLayerManager.rlmi[1]" "rs_Background.rlid";
+connectAttr "rs_SetDressing.msg" "SetDressing.lrl";
+connectAttr "Background.nxt" "SetDressing.prv";
+connectAttr "renderSetup.lit" "SetDressing.pls";
+connectAttr "collection1.msg" "SetDressing.cl";
+connectAttr "collection1.msg" "SetDressing.ch";
+connectAttr "renderLayerManager.rlmi[2]" "rs_SetDressing.rlid";
+connectAttr "rs_Plaques.msg" "Plaques.lrl";
+connectAttr "SetDressing.nxt" "Plaques.prv";
+connectAttr "renderSetup.lit" "Plaques.pls";
+connectAttr "collection3.msg" "Plaques.cl";
+connectAttr "collection3.msg" "Plaques.ch";
+connectAttr "renderLayerManager.rlmi[3]" "rs_Plaques.rlid";
+connectAttr "rs_AO.msg" "AO.lrl";
+connectAttr "Plaques.nxt" "AO.prv";
+connectAttr "renderSetup.lit" "AO.pls";
+connectAttr "RenderSettingsCollection2.msg" "AO.cl";
+connectAttr "collection4.msg" "AO.ch";
+connectAttr "renderLayerManager.rlmi[4]" "rs_AO.rlid";
+connectAttr "rs_Shadow.msg" "Shadow.lrl";
+connectAttr "AO.nxt" "Shadow.prv";
+connectAttr "renderSetup.lit" "Shadow.pls";
+connectAttr "RenderSettingsCollection1.msg" "Shadow.cl";
+connectAttr "collection5.msg" "Shadow.ch";
+connectAttr "renderLayerManager.rlmi[5]" "rs_Shadow.rlid";
+connectAttr "rs_FOG.msg" "FOG.lrl";
+connectAttr "Shadow.nxt" "FOG.prv";
+connectAttr "renderSetup.lit" "FOG.pls";
+connectAttr "RenderSettingsCollection.msg" "FOG.cl";
+connectAttr "collection6.msg" "FOG.ch";
+connectAttr "renderLayerManager.rlmi[6]" "rs_FOG.rlid";
+connectAttr "collection1Selector.c" "collection1.sel";
+connectAttr "SetDressing.lit" "collection1.pls";
+connectAttr "SetDressing.nic" "collection1.pic";
+connectAttr "collection2Selector.c" "collection2.sel";
+connectAttr "Background.lit" "collection2.pls";
+connectAttr "Background.nic" "collection2.pic";
+connectAttr "collection3Selector.c" "collection3.sel";
+connectAttr "Plaques.lit" "collection3.pls";
+connectAttr "Plaques.nic" "collection3.pic";
+connectAttr "collection4Selector.c" "collection4.sel";
+connectAttr "AO.lit" "collection4.pls";
+connectAttr "AO.nic" "collection4.pic";
+connectAttr "materialOverride2.msg" "collection4.cl";
+connectAttr "materialOverride2.msg" "collection4.ch";
+connectAttr "AOVCollection.nxt" "collection4.prv";
+connectAttr "collection5Selector.c" "collection5.sel";
+connectAttr "Shadow.lit" "collection5.pls";
+connectAttr "Shadow.nic" "collection5.pic";
+connectAttr "materialOverride1.msg" "collection5.cl";
+connectAttr "materialOverride1.msg" "collection5.ch";
+connectAttr "AOVCollection1.nxt" "collection5.prv";
+connectAttr "collection6Selector.c" "collection6.sel";
+connectAttr "FOG.lit" "collection6.pls";
+connectAttr "FOG.nic" "collection6.pic";
+connectAttr "collection6_shapes.msg" "collection6.cl";
+connectAttr "collection6_shaders.msg" "collection6.ch";
+connectAttr "AOVCollection2.nxt" "collection6.prv";
+connectAttr "collection6_shapes.lit" "aiMatte.pls";
+connectAttr "collection6_shapes.en" "aiMatte.pen";
+connectAttr "collection6_shapesSelector.c" "collection6_shapes.sel";
+connectAttr "collection6.lit" "collection6_shapes.pls";
+connectAttr "collection6.en" "collection6_shapes.pen";
+connectAttr "FOG.nic" "collection6_shapes.pic";
+connectAttr "aiMatte.msg" "collection6_shapes.cl";
+connectAttr "aiMatte.msg" "collection6_shapes.ch";
+connectAttr "collection6Selector.out" "collection6_shapesSelector.in";
+connectAttr "collection6_shaders.lit" "density.pls";
+connectAttr "collection6_shaders.en" "density.pen";
+connectAttr "collection6_shadersSelector.c" "collection6_shaders.sel";
+connectAttr "collection6_shapes.nxt" "collection6_shaders.prv";
+connectAttr "collection6.lit" "collection6_shaders.pls";
+connectAttr "collection6.en" "collection6_shaders.pen";
+connectAttr "FOG.nic" "collection6_shaders.pic";
+connectAttr "density.msg" "collection6_shaders.cl";
+connectAttr "density.msg" "collection6_shaders.ch";
+connectAttr "collection6Selector.out" "collection6_shadersSelector.in";
+connectAttr "Intro_Sequence:file9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "file5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "Intro_Sequence:place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "multiplyDivide1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "Gold_Plaques.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "Intro_Sequence:set2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+connectAttr "Intro_Sequence:place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "file2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "set1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "Intro_Sequence:file12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "file6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "file9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
-connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "Intro_Sequence:file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
-connectAttr "file4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "bump2d1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "aiAtmosphereVolume.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "bump2d2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+connectAttr "aiAtmosphereVolume.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "place2dTexture2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+connectAttr "collection5.lit" "materialOverride1.pls";
+connectAttr "collection5.en" "materialOverride1.pen";
+connectAttr "aiShadowMatte1SG.msg" "materialOverride1.atv";
+connectAttr "aiShadowMatte1.out" "aiShadowMatte1SG.ss";
+connectAttr "aiShadowMatte1SG.msg" "materialInfo3.sg";
+connectAttr "aiShadowMatte1.msg" "materialInfo3.m";
+connectAttr "aiShadowMatte1.msg" "materialInfo3.t" -na;
+connectAttr "collection4.lit" "materialOverride2.pls";
+connectAttr "collection4.en" "materialOverride2.pen";
+connectAttr "aiAmbientOcclusion1SG.msg" "materialOverride2.atv";
+connectAttr "aiAmbientOcclusion1.out" "aiAmbientOcclusion1SG.ss";
+connectAttr "aiAmbientOcclusion1SG.msg" "materialInfo4.sg";
+connectAttr "aiAmbientOcclusion1.msg" "materialInfo4.m";
+connectAttr "aiAmbientOcclusion1.msg" "materialInfo4.t" -na;
+connectAttr "RenderSettingsCollectionSelector.c" "RenderSettingsCollection.sel";
+connectAttr "FOG.lit" "RenderSettingsCollection.pls";
+connectAttr "FOG.nic" "RenderSettingsCollection.pic";
+connectAttr "AASamples.msg" "RenderSettingsCollection.cl";
+connectAttr "AASamples.msg" "RenderSettingsCollection.ch";
+connectAttr "RenderSettingsCollection.lit" "AASamples.pls";
+connectAttr "RenderSettingsCollection.en" "AASamples.pen";
+connectAttr "RenderSettingsCollection1Selector.c" "RenderSettingsCollection1.sel"
 		;
-connectAttr "Wood_Plaque.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+connectAttr "Shadow.lit" "RenderSettingsCollection1.pls";
+connectAttr "Shadow.nic" "RenderSettingsCollection1.pic";
+connectAttr "AASamples1.msg" "RenderSettingsCollection1.cl";
+connectAttr "AASamples1.msg" "RenderSettingsCollection1.ch";
+connectAttr "RenderSettingsCollection1.lit" "AASamples1.pls";
+connectAttr "RenderSettingsCollection1.en" "AASamples1.pen";
+connectAttr "RenderSettingsCollection2Selector.c" "RenderSettingsCollection2.sel"
 		;
-connectAttr "set2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+connectAttr "AO.lit" "RenderSettingsCollection2.pls";
+connectAttr "AO.nic" "RenderSettingsCollection2.pic";
+connectAttr "AASamples2.msg" "RenderSettingsCollection2.cl";
+connectAttr "AASamples2.msg" "RenderSettingsCollection2.ch";
+connectAttr "RenderSettingsCollection2.lit" "AASamples2.pls";
+connectAttr "RenderSettingsCollection2.en" "AASamples2.pen";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_specular.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_specular.out[0].ftr";
+connectAttr "enabled5_aiAOV_specular_aoven.o" "aiAOV_specular.aoven";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_diffuse.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_diffuse.out[0].ftr";
+connectAttr "enabled4_aiAOV_diffuse_aoven.o" "aiAOV_diffuse.aoven";
+connectAttr "AOVCollectionSelector.c" "AOVCollection.sel";
+connectAttr "RenderSettingsCollection2.nxt" "AOVCollection.prv";
+connectAttr "AO.lit" "AOVCollection.pls";
+connectAttr "AO.nic" "AOVCollection.pic";
+connectAttr "diffuse.msg" "AOVCollection.cl";
+connectAttr "specular.msg" "AOVCollection.ch";
+connectAttr "diffuseSelector.c" "diffuse.sel";
+connectAttr "AOVCollection.lit" "diffuse.pls";
+connectAttr "AOVCollection.en" "diffuse.pen";
+connectAttr "AO.nic" "diffuse.pic";
+connectAttr "enabled.msg" "diffuse.cl";
+connectAttr "enabled.msg" "diffuse.ch";
+connectAttr "AOVCollectionSelector.out" "diffuseSelector.in";
+connectAttr "diffuse.lit" "enabled.pls";
+connectAttr "diffuse.en" "enabled.pen";
+connectAttr "specularSelector.c" "specular.sel";
+connectAttr "diffuse.nxt" "specular.prv";
+connectAttr "AOVCollection.lit" "specular.pls";
+connectAttr "AOVCollection.en" "specular.pen";
+connectAttr "AO.nic" "specular.pic";
+connectAttr "enabled1.msg" "specular.cl";
+connectAttr "enabled1.msg" "specular.ch";
+connectAttr "AOVCollectionSelector.out" "specularSelector.in";
+connectAttr "specular.lit" "enabled1.pls";
+connectAttr "specular.en" "enabled1.pen";
+connectAttr "AOVCollection1Selector.c" "AOVCollection1.sel";
+connectAttr "RenderSettingsCollection1.nxt" "AOVCollection1.prv";
+connectAttr "Shadow.lit" "AOVCollection1.pls";
+connectAttr "Shadow.nic" "AOVCollection1.pic";
+connectAttr "diffuse1.msg" "AOVCollection1.cl";
+connectAttr "specular1.msg" "AOVCollection1.ch";
+connectAttr "diffuse1Selector.c" "diffuse1.sel";
+connectAttr "AOVCollection1.lit" "diffuse1.pls";
+connectAttr "AOVCollection1.en" "diffuse1.pen";
+connectAttr "Shadow.nic" "diffuse1.pic";
+connectAttr "enabled2.msg" "diffuse1.cl";
+connectAttr "enabled2.msg" "diffuse1.ch";
+connectAttr "AOVCollection1Selector.out" "diffuse1Selector.in";
+connectAttr "diffuse1.lit" "enabled2.pls";
+connectAttr "diffuse1.en" "enabled2.pen";
+connectAttr "specular1Selector.c" "specular1.sel";
+connectAttr "diffuse1.nxt" "specular1.prv";
+connectAttr "AOVCollection1.lit" "specular1.pls";
+connectAttr "AOVCollection1.en" "specular1.pen";
+connectAttr "Shadow.nic" "specular1.pic";
+connectAttr "enabled3.msg" "specular1.cl";
+connectAttr "enabled3.msg" "specular1.ch";
+connectAttr "AOVCollection1Selector.out" "specular1Selector.in";
+connectAttr "specular1.lit" "enabled3.pls";
+connectAttr "specular1.en" "enabled3.pen";
+connectAttr "AASamples.en" "AASamples_defaultArnoldRenderOptions_AA_samples.en";
+connectAttr "AASamples.atv" "AASamples_defaultArnoldRenderOptions_AA_samples.val"
 		;
-connectAttr "file8.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
-		;
-connectAttr "file12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
-		;
-connectAttr "multiplyDivide2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
-		;
-connectAttr "file10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
-		;
-connectAttr "file9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
-		;
-connectAttr "file7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
-		;
-connectAttr "file11.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
-		;
+connectAttr "aiMatte.en" "Floorplan1Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Floorplan1Shape_ai_matte.val";
+connectAttr "aiMatte.en" "PlaquesR_2Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "PlaquesR_2Shape_ai_matte.val";
+connectAttr "aiMatte.en" "PlaquesL_8430Shape2_ai_matte.en";
+connectAttr "aiMatte.atv" "PlaquesL_8430Shape2_ai_matte.val";
+connectAttr "aiMatte.en" "SetDressingShape_ai_matte.en";
+connectAttr "aiMatte.atv" "SetDressingShape_ai_matte.val";
+connectAttr "aiMatte.en" "PlaquesR_1Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "PlaquesR_1Shape_ai_matte.val";
+connectAttr "aiMatte.en" "PlaquesL_1Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "PlaquesL_1Shape_ai_matte.val";
+connectAttr "AOVCollection2Selector.c" "AOVCollection2.sel";
+connectAttr "RenderSettingsCollection.nxt" "AOVCollection2.prv";
+connectAttr "FOG.lit" "AOVCollection2.pls";
+connectAttr "FOG.nic" "AOVCollection2.pic";
+connectAttr "diffuse2.msg" "AOVCollection2.cl";
+connectAttr "specular2.msg" "AOVCollection2.ch";
+connectAttr "diffuse2Selector.c" "diffuse2.sel";
+connectAttr "AOVCollection2.lit" "diffuse2.pls";
+connectAttr "AOVCollection2.en" "diffuse2.pen";
+connectAttr "FOG.nic" "diffuse2.pic";
+connectAttr "enabled4.msg" "diffuse2.cl";
+connectAttr "enabled4.msg" "diffuse2.ch";
+connectAttr "AOVCollection2Selector.out" "diffuse2Selector.in";
+connectAttr "diffuse2.lit" "enabled4.pls";
+connectAttr "diffuse2.en" "enabled4.pen";
+connectAttr "enabled4.en" "enabled4_aiAOV_diffuse_aoven.en";
+connectAttr "enabled4.atv" "enabled4_aiAOV_diffuse_aoven.val";
+connectAttr "specular2Selector.c" "specular2.sel";
+connectAttr "diffuse2.nxt" "specular2.prv";
+connectAttr "AOVCollection2.lit" "specular2.pls";
+connectAttr "AOVCollection2.en" "specular2.pen";
+connectAttr "FOG.nic" "specular2.pic";
+connectAttr "enabled5.msg" "specular2.cl";
+connectAttr "enabled5.msg" "specular2.ch";
+connectAttr "AOVCollection2Selector.out" "specular2Selector.in";
+connectAttr "specular2.lit" "enabled5.pls";
+connectAttr "specular2.en" "enabled5.pen";
+connectAttr "enabled5.en" "enabled5_aiAOV_specular_aoven.en";
+connectAttr "enabled5.atv" "enabled5_aiAOV_specular_aoven.val";
 connectAttr "Intro_Sequence:set1.pa" ":renderPartition.st" -na;
 connectAttr "Intro_Sequence:set2.pa" ":renderPartition.st" -na;
 connectAttr "set1.pa" ":renderPartition.st" -na;
 connectAttr "set2.pa" ":renderPartition.st" -na;
-connectAttr "Intro_Sequence:Gold_Plaque.msg" ":defaultShaderList1.s" -na;
-connectAttr "Intro_Sequence:Wood_Plaque.msg" ":defaultShaderList1.s" -na;
+connectAttr "aiShadowMatte1SG.pa" ":renderPartition.st" -na;
+connectAttr "aiAmbientOcclusion1SG.pa" ":renderPartition.st" -na;
 connectAttr "Gold_Plaques.msg" ":defaultShaderList1.s" -na;
 connectAttr "Wood_Plaque.msg" ":defaultShaderList1.s" -na;
+connectAttr "aiAtmosphereVolume.msg" ":defaultShaderList1.s" -na;
+connectAttr "aiShadowMatte1.msg" ":defaultShaderList1.s" -na;
+connectAttr "aiAmbientOcclusion1.msg" ":defaultShaderList1.s" -na;
 connectAttr "Intro_Sequence:place2dTexture1.msg" ":defaultRenderUtilityList1.u" 
 		-na;
 connectAttr "Intro_Sequence:multiplyDivide1.msg" ":defaultRenderUtilityList1.u" 
@@ -18349,6 +19153,12 @@ connectAttr "Intro_Sequence:defaultRenderLayer.msg" ":defaultRenderingList1.r" -
 		;
 connectAttr "Intro_Sequence:Intro_Sequence:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
+connectAttr "rs_Background.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_SetDressing.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_Plaques.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_AO.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_Shadow.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_FOG.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Intro_Sequence:file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Intro_Sequence:file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "Intro_Sequence:file3.msg" ":defaultTextureList1.tx" -na;
@@ -18373,4 +19183,5 @@ connectAttr "file9.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file10.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file11.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file12.msg" ":defaultTextureList1.tx" -na;
+connectAttr "aiAtmosphereVolume.out" ":internal_standInShader.ic";
 // End of Intro Sequence.ma
