@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: PlaqueDisposal.ma
-//Last modified: Thu, Mar 27, 2025 07:11:01 PM
+//Last modified: Sun, Mar 30, 2025 07:46:09 PM
 //Codeset: 1252
 file -rdi 1 -ns "ConveyorScene" -rfn "ConveyorSceneRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 1 _ Conveyor/ConveyorScene.ma";
@@ -30,29 +30,30 @@ file -r -ns "BrokenPlaque" -dr 1 -rfn "BrokenPlaqueRN" -op "v=0;" -typ "mayaAsci
 		 "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/Intro Scene/BrokenPlaque.ma";
 requires maya "2024";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
+requires "stereoCamera" "10.0";
+requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
+		 -nodeType "aiNoise" -nodeType "aiAmbientOcclusion" -nodeType "aiAtmosphereVolume"
+		 -nodeType "aiMatte" -nodeType "aiShadowMatte" "mtoa" "5.3.4.1";
+requires -nodeType "mayaUsdLayerManager" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.25.0";
 requires -nodeType "simpleSelector" -nodeType "renderSetupLayer" -nodeType "renderSetup"
 		 -nodeType "collection" -nodeType "renderSettingsCollection" -nodeType "aovCollection"
 		 -nodeType "aovChildCollection" -nodeType "absOverride" -nodeType "absUniqueOverride"
 		 -nodeType "materialOverride" -nodeType "lightEditor" -nodeType "arnoldAOVChildSelector"
 		 "renderSetup.py" "1.0";
-requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
-		 -nodeType "aiNoise" -nodeType "aiAmbientOcclusion" -nodeType "aiStandardSurface"
-		 -nodeType "aiMatte" -nodeType "aiShadowMatte" "mtoa" "5.3.1.1";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
-fileInfo "cutIdentifier" "202304191415-7fa20164c6";
-fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 22621)";
-fileInfo "UUID" "6A1A883B-4C2E-2646-DBCE-05952AD2A0A3";
+fileInfo "cutIdentifier" "202310181224-69282f2959";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
+fileInfo "UUID" "40F98ED7-49C9-C640-D0C4-C9853683CE84";
 fileInfo "exportedFrom" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/SpeedAnimation_HW.ma";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "D0EC6E35-4D87-6031-DB06-1E88D6BA6026";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 21.666809068558699 6.9377825780492728 -0.33674441584986259 ;
-	setAttr ".r" -type "double3" 350.06164723393255 -268.99999999996828 359.99999999968804 ;
+	setAttr ".t" -type "double3" 2.7631540567225699 7.7867221979891506 5.1091529812713325 ;
+	setAttr ".r" -type "double3" 299.0616472334487 -629.79999999988183 359.99999999888109 ;
 	setAttr ".rp" -type "double3" -4.8849813083506888e-15 -7.9491968563161208e-14 -1.0125233984581428e-13 ;
 	setAttr ".rpt" -type "double3" -7.7933674481167915e-14 -1.893662429728248e-14 1.0816282415677747e-13 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -60,11 +61,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 25.766480067325787;
+	setAttr ".coi" 7.1786211230866952;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -3.1886717064761587 3.7816990288715071 4.189721329000605 ;
+	setAttr ".tp" -type "double3" -3.4896948933601379 2.5500926375389099 4.6766524314880371 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dgm" no;
 createNode transform -s -n "top";
@@ -111,7 +112,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1143140882346;
-	setAttr ".ow" 47.280060886453107;
+	setAttr ".ow" 48.006798634997345;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -135,7 +136,7 @@ createNode camera -n "MAIN_CAMShape" -p "MAIN_CAM";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dfg" yes;
 createNode fosterParent -n "BrokenPlaqueRNfosterParent1";
-	rename -uid "9EDD8CEF-4E29-5296-0DBD-30B6CB79D93D";
+	rename -uid "3B66323D-49B6-CB62-5FBC-A4B2D8199153";
 createNode parentConstraint -n "Right_Plaque_Ctrl_Grp_parentConstraint1" -p "BrokenPlaqueRNfosterParent1";
 	rename -uid "D7724DEC-4C69-8288-D465-F88F06A6260A";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "COG_CtrlW0" -dv 1 -min 0 -at "double";
@@ -158,7 +159,7 @@ createNode parentConstraint -n "Right_Plaque_Ctrl_Grp_parentConstraint1" -p "Bro
 	setAttr ".erp" yes;
 	setAttr -s 5 ".tg";
 	setAttr ".tg[0].tot" -type "double3" -1.1785295009613037 0.48058326542377472 -2.384185791015625e-07 ;
-	setAttr ".lr" -type "double3" -44.987730859797395 -99.095857602094654 -100.76544397812826 ;
+	setAttr ".lr" -type "double3" -68.719528296060545 -99.932479574108541 -76.094392874729749 ;
 	setAttr ".rst" -type "double3" -1.1785295009613073 0.48058326542377827 -2.384185791015625e-07 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
@@ -187,7 +188,7 @@ createNode parentConstraint -n "Left_Plaque_Ctrl_Grp_parentConstraint1" -p "Brok
 	setAttr ".erp" yes;
 	setAttr -s 5 ".tg";
 	setAttr ".tg[0].tot" -type "double3" 1.2558642625808716 0.48058326542377472 2.384185791015625e-07 ;
-	setAttr ".lr" -type "double3" 30.568700521911726 61.208080393500566 15.853258633196102 ;
+	setAttr ".lr" -type "double3" 25.918304572344951 63.052276912781792 10.498120162408268 ;
 	setAttr ".rst" -type "double3" 1.255864262580868 0.48058326542377827 2.384185791015625e-07 ;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
@@ -195,20 +196,20 @@ createNode parentConstraint -n "Left_Plaque_Ctrl_Grp_parentConstraint1" -p "Brok
 	setAttr -k on ".w3";
 	setAttr -k on ".w4";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "27CADF85-4E7E-E08C-DDA2-8FBB9EFFE40E";
-	setAttr -s 225 ".lnk";
+	rename -uid "D3A18470-4518-A575-97E0-6E8A8E2EEA65";
+	setAttr -s 235 ".lnk";
 	setAttr -s 92 ".ign";
-	setAttr -s 223 ".slnk";
+	setAttr -s 233 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "4906FAFC-4B07-8644-E52B-309BD8F9107D";
+	rename -uid "C75241E4-4F1D-AF52-790F-71B1A9F8F5F7";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 7 1 3 5 6 7
 		 2 0 ;
 	setAttr -s 4 ".bspr";
 	setAttr -s 4 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E1DAF4A6-4162-2DB7-036A-0DB52609E01B";
+	rename -uid "FF990482-4260-7CA3-59A4-51BBEFE05F05";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7357B7D0-45EE-0C4B-ABF6-329565B153D1";
+	rename -uid "60041A8B-47C8-B17E-10A9-B8AAE5689EB0";
 	setAttr ".cdl" 5;
 	setAttr -s 6 ".dli[1:5]"  2 4 5 1 3;
 	setAttr -s 4 ".dli";
@@ -216,10 +217,10 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "A3E78D38-4E3A-525C-0C03-70A9B26C2A6D";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E927DA43-4AE2-7007-63E5-BB9840A856A1";
-	setAttr -s 13 ".rlmi[1:12]"  1 2 3 4 5 6 7 8 
-		9 10 11 12;
-	setAttr -s 8 ".rlmi";
+	rename -uid "A630462B-435F-4B91-B93B-0B817A0A21AC";
+	setAttr -s 18 ".rlmi[1:17]"  1 2 3 4 5 6 7 8 
+		9 10 11 12 13 14 15 16 17;
+	setAttr -s 11 ".rlmi";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E617E4E6-4000-ADF4-936A-819D3F32B6AC";
 	setAttr ".g" yes;
@@ -230,7 +231,6 @@ createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	setAttr ".img" -type "string" "";
 	setAttr -s 2 ".aovs";
 	setAttr ".fltr" -type "string" "";
-	setAttr ".mb_en" yes;
 	setAttr ".mots" 4;
 	setAttr ".motf" 0.30000001192092896;
 	setAttr ".igl" -type "string" "";
@@ -245,6 +245,7 @@ createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	setAttr ".ipr_step_started" -type "string" "";
 	setAttr ".ipr_step_finished" -type "string" "";
 	setAttr ".output_overscan" -type "string" "";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=MAIN_CAMShape;Snapshots Folder=C:/Users/newsi/GitRepos/Apollo_Short_Film/ApolloProject/images/snapshots/DoorBust;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1      1;Background.Offset=0      0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1      1;Foreground.Offset=0      0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "0DB7ED49-4554-EEEC-A914-B9AD15A0CF3D";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -253,8 +254,8 @@ createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	setAttr ".ai_translator" -type "string" "exr";
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "F13FB0BC-4FFA-20B0-2098-A991EE3808FA";
-	setAttr ".output_mode" 0;
 	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
 createNode ikSpringSolver -s -n "ikSpringSolver";
 	rename -uid "8847349B-40FC-240A-6780-C08398D6317E";
 createNode animCurveTU -n "MAIN_CAMERA_visibility";
@@ -5577,51 +5578,52 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|MAIN_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n"
-		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
-		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n"
-		+ "            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n"
-		+ "            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n"
-		+ "            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n"
-		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|MAIN_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n"
-		+ "            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n"
-		+ "            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n"
-		+ "            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1317\n            -height 690\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
-		+ "            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
-		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
-		+ "            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
-		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n"
-		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n"
-		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n"
-		+ "                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n"
-		+ "                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n"
-		+ "                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n"
-		+ "                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n"
-		+ "                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
-		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
-		+ "                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|MAIN_CAM\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n"
-		+ "                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n"
-		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
-		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n"
-		+ "\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 690\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 690\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 1046\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
+		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1307\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
+		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|MAIN_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
+		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
+		+ "            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n"
+		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
+		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n"
+		+ "            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n"
+		+ "                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n"
+		+ "                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n"
+		+ "                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -autoExpandAllAnimatedShapes 1\n"
+		+ "                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
+		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
+		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
+		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
+		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
+		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|MAIN_CAM\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n"
+		+ "                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n"
+		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n"
+		+ "                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n"
+		+ "\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|MAIN_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "3AA65B69-4CAA-859B-3159-3DACF629F2E0";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 230 -ast 0 -aet 230 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 191 -ast 0 -aet 191 ";
 	setAttr ".st" 6;
 createNode animCurveTU -n "Button_visibility";
 	rename -uid "9A80F1EB-4521-A0ED-0EAF-01AF87BCC029";
@@ -5904,8 +5906,6 @@ createNode animCurveTU -n "Hopper_Bin2_scaleZ";
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  40 0.1849156995712459 41 0.1849156995712459
 		 42 0.1849156995712459 43 0.1849156995712459 44 0.1849156995712459 45 0.1849156995712459;
-createNode lambert -n "lambert2";
-	rename -uid "1169E05F-4615-9404-1071-FFA6CDE5E826";
 createNode shadingEngine -n "lambert2SG";
 	rename -uid "79D62E4A-4912-D9A9-43AD-F5A18CDBA0A1";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -5918,9 +5918,6 @@ createNode shadingEngine -n "lambert2SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "materialInfo1";
 	rename -uid "62D97AE0-4678-29F6-98F1-028F50852C15";
-createNode lambert -n "lambert3";
-	rename -uid "0BAC0278-492B-752F-5371-A1AA38CDFD80";
-	setAttr ".c" -type "float3" 1 0 0 ;
 createNode shadingEngine -n "lambert3SG";
 	rename -uid "19E02010-4D5C-66C1-24E5-CBAC1C852798";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -7551,31 +7548,6 @@ createNode renderLayer -n "defaultRenderLayer1";
 	setAttr ".g" yes;
 createNode place2dTexture -n "place2dTexture478";
 	rename -uid "479ADF7F-473F-773C-4757-10878294426E";
-createNode file -n "file2098";
-	rename -uid "C966C4E5-4069-6460-C6F0-6999BFEC589F";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Tread Base/initialShadingGroup_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file2099";
-	rename -uid "DEA4D498-4FF5-E0AA-BFBF-A4961F594660";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Tread Base/initialShadingGroup_Height.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2100";
-	rename -uid "D48BA8E3-4D50-3C16-96B0-CBA66E35BE72";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Tread Base/initialShadingGroup_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2101";
-	rename -uid "CD9649CB-4344-1440-852F-DAA608A9A917";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Tread Base/initialShadingGroup_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2102";
-	rename -uid "A339B665-4EF7-7BB1-34EB-8AA6D70A0047";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Tread Base/initialShadingGroup_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide401";
 	rename -uid "996F1C2A-4800-D9C4-A041-D1B72418D124";
 createNode shadingEngine -n "set406";
@@ -7597,31 +7569,6 @@ createNode bump2d -n "bump2d396";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture479";
 	rename -uid "42828ECA-41E0-38DB-B529-D689B4F9BF5D";
-createNode file -n "file2103";
-	rename -uid "964E460F-4023-0B58-25B6-ADBA85CDE2BB";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Tread/Tread_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file2104";
-	rename -uid "A46440F7-4CC0-B583-75F3-D6B7604B607E";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Tread/Tread_Height.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2105";
-	rename -uid "75DA4F01-4C60-63EC-342D-03A17065310F";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Tread/Tread_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2106";
-	rename -uid "D72C9FC9-48CD-1531-9A02-91A9D8720955";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Tread/Tread_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2107";
-	rename -uid "9EBEA338-413F-9C4B-C0C6-089B46125488";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Tread/Tread_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide402";
 	rename -uid "ACF5E691-4492-AAE3-AC8E-E9B59AB76A43";
 createNode shadingEngine -n "set407";
@@ -7688,25 +7635,6 @@ createNode polyUnite -n "polyUnite3";
 	rename -uid "C0B10BBC-4134-CDC9-2765-71BEEB9510C2";
 createNode place2dTexture -n "place2dTexture4";
 	rename -uid "DBDB3FBE-4926-302C-BA47-87A55D31E5AB";
-createNode file -n "file16";
-	rename -uid "543F8F37-4C14-F058-328D-EDAA7E684026";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/GoldLining_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file18";
-	rename -uid "40055CAB-4D2F-AB2E-FF37-7F8274429BA6";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/GoldLining_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file19";
-	rename -uid "21970A90-4C2A-E1DB-391E-90A4C0055241";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/GoldLining_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file20";
-	rename -uid "B149EB8B-476E-D81B-93CB-B5846A438DDA";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/GoldLining_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide4";
 	rename -uid "3B930EBA-4DDB-2B40-E0BA-74BE4828841F";
 createNode shadingEngine -n "set4";
@@ -7727,25 +7655,6 @@ createNode bump2d -n "bump2d4";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture5";
 	rename -uid "F612D60B-414F-CF4D-88CB-96884741473E";
-createNode file -n "file21";
-	rename -uid "C80F22F5-4CCC-9D36-3655-56A07BFDE51F";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/Rump_main_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file23";
-	rename -uid "128A327C-4F12-F9A5-06D5-A2829BA55888";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/Rump_main_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file24";
-	rename -uid "D9A4B5DB-4A55-1433-EFA9-729EB304BB2D";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/Rump_main_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file25";
-	rename -uid "C06A3913-44CC-26BF-F7BA-BEBD4DE8D047";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/Rump_main_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide5";
 	rename -uid "BF711854-4A88-C797-FCFA-40BD3563BDCD";
 createNode shadingEngine -n "set5";
@@ -7766,25 +7675,6 @@ createNode bump2d -n "bump2d5";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture6";
 	rename -uid "850116F0-4B80-FCFC-8E5F-DB96FE6BEE2D";
-createNode file -n "file26";
-	rename -uid "7A823838-482F-1318-2E25-5995D84EDAF3";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/LatherCap_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file28";
-	rename -uid "7B2A75DE-42C3-D7E4-BD92-209CBBF00B96";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/LatherCap_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file29";
-	rename -uid "E26BEF94-444A-D1F2-7B20-16B962E2ECC3";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/LatherCap_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file30";
-	rename -uid "D278416E-4F0F-676F-96BF-7EAC118A4128";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/LatherCap_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide6";
 	rename -uid "02131DF8-414B-B40E-F47C-4CA7EC6ABE86";
 createNode shadingEngine -n "set6";
@@ -7805,25 +7695,6 @@ createNode bump2d -n "bump2d6";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture7";
 	rename -uid "23E5E928-475D-87F4-86A3-9B877C9C227B";
-createNode file -n "file31";
-	rename -uid "85472145-42AD-C713-FD55-6B9439716646";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/RumpRim_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file33";
-	rename -uid "552781F4-4CC5-1BC1-EBF6-FEA575BE96C5";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/RumpRim_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file34";
-	rename -uid "B7DA9B4F-4523-00B3-7AC9-A590BB20D0F4";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/RumpRim_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file35";
-	rename -uid "8239B694-4BD6-A745-02AF-DB9250ABF5C5";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm//substance/RumpRim_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide7";
 	rename -uid "719A5A84-4E92-0AF5-8E72-72AA6E6F248A";
 createNode shadingEngine -n "set7";
@@ -7844,25 +7715,6 @@ createNode bump2d -n "bump2d7";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture8";
 	rename -uid "411C0E24-404B-0C40-717B-AF92C7FAF48A";
-createNode file -n "file36";
-	rename -uid "1867EDB7-4A95-2FD9-A8C5-5D8B88DBF3D1";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh_Main_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file38";
-	rename -uid "5FB53FE8-4349-951E-FBC8-E2A0924975BB";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh_Main_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file39";
-	rename -uid "D6D4A9E5-4703-35A3-DB33-809D598CCCE2";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh_Main_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file40";
-	rename -uid "5971367D-40DA-0030-4B6B-3A953A7F6C6F";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh_Main_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide8";
 	rename -uid "B9E8965B-45C7-8714-AD68-64B017AAA94A";
 createNode shadingEngine -n "set8";
@@ -7884,25 +7736,6 @@ createNode bump2d -n "bump2d8";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture9";
 	rename -uid "068CDCD5-493A-1FD3-6E6A-A0829CCFAADA";
-createNode file -n "file41";
-	rename -uid "68D0A306-4852-B0A6-024D-6E9B58EF2F1D";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh_Handle_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file43";
-	rename -uid "7DA7E0B7-4DF0-A228-F686-B1A28F0AF2A4";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh_Handle_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file44";
-	rename -uid "2AC0F786-4A64-F517-8BDD-269121A82CA5";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh_Handle_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file45";
-	rename -uid "62078249-40F1-924D-0C6D-76803778DECB";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh_Handle_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide9";
 	rename -uid "75EC701D-4365-CE74-89F3-8591C29F0E16";
 createNode shadingEngine -n "set9";
@@ -7924,25 +7757,6 @@ createNode bump2d -n "bump2d9";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture10";
 	rename -uid "8B373A4E-4899-3C2E-1894-828F6EC64CE5";
-createNode file -n "file46";
-	rename -uid "22CFF8C2-4DC0-C3C8-7042-AC88AE93A564";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh Guard_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file48";
-	rename -uid "34CACE36-4E8F-17F9-3A45-729387EBFA15";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh Guard_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file49";
-	rename -uid "0E4BAB1F-4EE2-7F6C-E1C4-8A9B38BC4328";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh Guard_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file50";
-	rename -uid "EB8B79FB-4437-2633-1A28-4AA9238ADDD4";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Thigh Guard_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide10";
 	rename -uid "41BEF998-442A-3B81-B6FC-BFA366A98914";
 createNode shadingEngine -n "set10";
@@ -7964,25 +7778,6 @@ createNode bump2d -n "bump2d10";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture11";
 	rename -uid "E925E10E-4041-94DD-C8A4-2BA461C7EAD0";
-createNode file -n "file51";
-	rename -uid "AC046B37-4BE7-33FB-8D80-2EAC724879EA";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hip Main_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file52";
-	rename -uid "5D7FB392-42FE-A6AF-4F76-0EB69ED2073E";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hip Main_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file53";
-	rename -uid "3D1EEAB9-44BE-4AE0-A668-CDB1413DA477";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hip Main_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file55";
-	rename -uid "90C15380-4403-2706-CD96-3F8EC9F25AA1";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hip Main_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
 createNode shadingEngine -n "set11";
 	rename -uid "AF572213-4A8F-25A7-C4BA-4EB6F8BE0EAD";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -8004,25 +7799,6 @@ createNode multiplyDivide -n "multiplyDivide11";
 	rename -uid "95B78EDB-4868-A710-26A6-3CAB47006FEA";
 createNode place2dTexture -n "place2dTexture12";
 	rename -uid "728C7C2F-42B6-1CF8-2F29-6BBBA3948258";
-createNode file -n "file56";
-	rename -uid "5E332AE8-4589-69B3-F271-B58CD3A6784A";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hip Bar_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file57";
-	rename -uid "ED3C395D-4A5D-10B2-9CCC-378BDA947E6A";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hip Bar_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file58";
-	rename -uid "462044A3-4A2F-2F07-B186-6D939700AA19";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hip Bar_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file60";
-	rename -uid "F86D6CC8-4E15-3765-70AA-29813C76C222";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hip Bar_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
 createNode shadingEngine -n "set12";
 	rename -uid "89116A19-42FC-DAE1-CC86-13B4922608CC";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -8044,25 +7820,6 @@ createNode multiplyDivide -n "multiplyDivide12";
 	rename -uid "CFE51A61-49AA-D900-126A-CCBF0FC7107E";
 createNode place2dTexture -n "place2dTexture13";
 	rename -uid "EA0A144E-494C-37B0-7CDD-FEA1E7D22942";
-createNode file -n "file61";
-	rename -uid "1B3EB7B6-4925-9813-B11E-5BBD17F20B12";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Body Brace_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file62";
-	rename -uid "D6B63822-4AE3-254E-FD7E-67B5ED8BACFB";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Body Brace_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file64";
-	rename -uid "0C7912F9-44E0-0663-63B5-73B886F13D78";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Body Brace_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file65";
-	rename -uid "B1013AD6-4828-122F-2F1A-E7BB020F602E";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Body Brace_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide13";
 	rename -uid "70269445-4B33-84CF-845A-64A068D77C0B";
 createNode shadingEngine -n "set13";
@@ -8084,25 +7841,6 @@ createNode bump2d -n "bump2d13";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture14";
 	rename -uid "D969B66B-478C-3F5A-F817-54AEA3610E3E";
-createNode file -n "file66";
-	rename -uid "6704DD8C-42DB-49D0-575C-C69F75751991";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Body_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file67";
-	rename -uid "34F94F30-45DD-E677-27F8-4EAEDE9ADAF1";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Body_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file68";
-	rename -uid "61CD9964-4693-B2E9-0F2B-FCB3749C5EF5";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Body_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file69";
-	rename -uid "4116912D-45B8-D0B2-91EA-96A135F5D77F";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Body_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode bump2d -n "bump2d14";
 	rename -uid "AC36036C-4F8B-5836-52B3-E0BCBF0174CA";
 	setAttr ".bi" 1;
@@ -8124,25 +7862,6 @@ createNode multiplyDivide -n "multiplyDivide14";
 	rename -uid "4F76355D-47B0-5E11-CE12-1F9F9B864B46";
 createNode place2dTexture -n "place2dTexture16";
 	rename -uid "DF5C93E7-4964-062F-B508-1DA39F210A29";
-createNode file -n "file76";
-	rename -uid "0F9D5469-47C5-A4C6-462D-9D9DC18B5857";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/PipeEnd_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file78";
-	rename -uid "6FD59BAC-4BB0-B835-4D3C-B7A501665EEA";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/PipeEnd_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file79";
-	rename -uid "EFD7012C-4876-F49B-38A4-E78CFE845CF3";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/PipeEnd_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file80";
-	rename -uid "F148AD51-44F7-79D1-CA85-DF9211D0F102";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/PipeEnd_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide16";
 	rename -uid "2685FEBA-44F6-4ADC-2BE3-A381C4757B7C";
 createNode shadingEngine -n "set16";
@@ -8164,25 +7883,6 @@ createNode bump2d -n "bump2d16";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture17";
 	rename -uid "C9DECA17-444B-39DA-D8CC-3784C4E641F9";
-createNode file -n "file81";
-	rename -uid "EB6238E3-49E0-B6D0-3FAD-06BC8E990B9B";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/PipeCap_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file83";
-	rename -uid "BF746275-4CD6-633D-4595-EFADECD99D36";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/PipeCap_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file84";
-	rename -uid "5FEDDD91-4428-EFD5-5859-5ABA8C9E0755";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/PipeCap_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file85";
-	rename -uid "C629C2F0-4896-B0F4-13B1-61AC2E2EA0F5";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/PipeCap_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide17";
 	rename -uid "BA83D8D1-4CF6-D385-29B0-4C83F5B066B1";
 createNode shadingEngine -n "set17";
@@ -8204,25 +7904,6 @@ createNode bump2d -n "bump2d17";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture18";
 	rename -uid "41B1B72E-478A-70F2-7538-3DA3B8562543";
-createNode file -n "file86";
-	rename -uid "510BF199-46D5-30B0-8E27-FDBD6B525FBE";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Pipe_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file88";
-	rename -uid "1E884B55-489E-582E-9A3C-6392DDEA0166";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Pipe_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file89";
-	rename -uid "1429B4E9-44B0-AC22-125E-D4BD5EDC50BB";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Pipe_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file90";
-	rename -uid "3DE3FF5E-42D2-1D58-F599-BC992B7F1552";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Pipe_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide18";
 	rename -uid "5AB718EF-4CC2-941C-E134-ADA011270BC9";
 createNode shadingEngine -n "set18";
@@ -8244,25 +7925,6 @@ createNode bump2d -n "bump2d18";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture19";
 	rename -uid "B313145D-47BF-07C0-2833-6BA905DB329D";
-createNode file -n "file91";
-	rename -uid "5BBC399D-4A26-259C-0238-82824E6A9BBA";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wrist_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file92";
-	rename -uid "416DEB64-4B06-1F02-4CA1-0C9AA60D43FF";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wrist_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file93";
-	rename -uid "29D37513-4459-A12C-3EE5-72B8BE5AAB6E";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wrist_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file95";
-	rename -uid "24FBCA45-4ADA-E500-BE17-E7BAF9FD73B9";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wrist_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode bump2d -n "bump2d19";
 	rename -uid "E1283924-466B-5CC5-ADBD-BCBD9C1497AF";
 	setAttr ".bi" 1;
@@ -8284,25 +7946,6 @@ createNode multiplyDivide -n "multiplyDivide19";
 	rename -uid "71476B6B-432E-927F-0CB1-05A173DA93BC";
 createNode place2dTexture -n "place2dTexture20";
 	rename -uid "069950C9-4911-6B6F-6976-8383D7D0C9A1";
-createNode file -n "file96";
-	rename -uid "771AB155-458B-0225-9A3C-B28D937EC8BE";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/WristGuard_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file97";
-	rename -uid "0C400E7F-4176-1A54-BDCF-C38B5CAF3F42";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/WristGuard_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file99";
-	rename -uid "0CD0EC16-4232-43E1-EF59-3C9BAD940187";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/WristGuard_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file100";
-	rename -uid "A5DC08F8-4242-94FA-43F1-1D82CC708718";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/WristGuard_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode bump2d -n "bump2d20";
 	rename -uid "78EEEB37-4980-88E2-3A97-CFAB2F88D051";
 	setAttr ".bi" 1;
@@ -8324,25 +7967,6 @@ createNode multiplyDivide -n "multiplyDivide20";
 	rename -uid "FB82FA0F-478D-5CE5-1704-F7BF078F3371";
 createNode place2dTexture -n "place2dTexture26";
 	rename -uid "746E3732-4E82-7D4D-1F10-F4BDFB12C304";
-createNode file -n "file127";
-	rename -uid "0FAA1006-4FA0-C1D4-5C2B-F8818B2266D3";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/initialShadingGroup_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file128";
-	rename -uid "51B5A573-46C4-54C5-6A2B-FCAA9003E6EF";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/initialShadingGroup_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file129";
-	rename -uid "9BAB18B4-4AD7-F4D1-1CEE-96982BDDD527";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/initialShadingGroup_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file130";
-	rename -uid "2F05972A-42E4-6360-D61F-AAA1A2FC8CAC";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/initialShadingGroup_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode bump2d -n "bump2d25";
 	rename -uid "49973BEF-47DA-EA4A-1A73-6EBC4EF7FEE1";
 	setAttr ".bi" 1;
@@ -8364,25 +7988,6 @@ createNode multiplyDivide -n "multiplyDivide26";
 	rename -uid "77328B95-4FBF-F64C-D401-ECB68A37CBD7";
 createNode place2dTexture -n "place2dTexture36";
 	rename -uid "F24221DB-4912-9DA2-7891-E293F3F63516";
-createNode file -n "file177";
-	rename -uid "02489D59-4EFF-386D-9BD1-5E97A18A3351";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Shaft Plate_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file179";
-	rename -uid "A9FE69F4-42EE-DAC4-757A-18931278104C";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Shaft Plate_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file180";
-	rename -uid "F5642BDD-40C6-E3E5-E419-02ACDEEB17E3";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Shaft Plate_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file181";
-	rename -uid "BB9F7267-4B4F-CDD1-38CF-74A71DDEE628";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Shaft Plate_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide36";
 	rename -uid "BDAFBD0D-42E1-694A-4B77-9BBDC5EA562E";
 createNode shadingEngine -n "set36";
@@ -8404,25 +8009,6 @@ createNode bump2d -n "bump2d35";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture37";
 	rename -uid "D07F1707-49BA-AA3D-16D6-D5931EA3FED4";
-createNode file -n "file182";
-	rename -uid "1BDF328D-4A54-6D46-6B71-9D98DD718F76";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Shaft_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file184";
-	rename -uid "97B1DF5A-490E-F0DE-9A5D-BDBFDB9A9823";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Shaft_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file185";
-	rename -uid "6D50F371-4B35-7E0C-F707-7F805E38EF59";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Shaft_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file186";
-	rename -uid "4ACA0DDB-4BB1-F9F5-482A-4384A42E04C3";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Shaft_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide37";
 	rename -uid "E7F7DE00-4A4B-497A-AA9F-C29C2C0B8FA1";
 createNode shadingEngine -n "set37";
@@ -8444,25 +8030,6 @@ createNode bump2d -n "bump2d36";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture38";
 	rename -uid "E1132C3A-48F9-49C1-9176-689AA95BD69E";
-createNode file -n "file187";
-	rename -uid "58206423-4411-F6F2-1D81-95BEC4040805";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Tip Plate_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file189";
-	rename -uid "0A7819A0-486C-81B7-0509-26A0BA2886C0";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Tip Plate_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file190";
-	rename -uid "F5ED3745-432C-8ABD-FF6E-E0B30662008D";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Tip Plate_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file191";
-	rename -uid "5E1250DE-4DF7-AC85-8B00-0E9726254661";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Tip Plate_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide38";
 	rename -uid "A9893DFB-4F70-60A5-EDAB-C1AF0B5ED2A4";
 createNode shadingEngine -n "set38";
@@ -8484,25 +8051,6 @@ createNode bump2d -n "bump2d37";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture39";
 	rename -uid "C53F73D5-4BFC-8354-C861-4F9DCA1BB3B4";
-createNode file -n "file192";
-	rename -uid "7171ACD9-466D-E3C9-DBCC-65B785155E31";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Tip_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file193";
-	rename -uid "2DE51793-499B-0A5E-6469-46977C772386";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Tip_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file194";
-	rename -uid "08DDB52E-4B9F-60EB-299D-338B24320FDD";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Tip_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file196";
-	rename -uid "0E1808DC-447C-CFF1-F011-A2B1E0FED3D6";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Finger Tip_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode bump2d -n "bump2d38";
 	rename -uid "2D4314A9-421C-926E-B17A-7D8FB6BA6CF1";
 	setAttr ".bi" 1;
@@ -8524,25 +8072,6 @@ createNode multiplyDivide -n "multiplyDivide39";
 	rename -uid "EF3F0D61-4996-B57A-68B5-2CA6DA80AC67";
 createNode place2dTexture -n "place2dTexture40";
 	rename -uid "66AF73AB-4D60-397C-8694-CF99CF154CF0";
-createNode file -n "file197";
-	rename -uid "5409994F-4C2E-B92E-8EF4-BCBD3001A8A7";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Main_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file199";
-	rename -uid "025C7DA2-44CB-2597-A3F7-268F267527A2";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Main_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file200";
-	rename -uid "0D05464D-4BA9-0F8F-5EB8-2E8649E002D5";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Main_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file201";
-	rename -uid "0B7AB75B-4270-B407-AA9B-3D87722BFD4F";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Main_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide40";
 	rename -uid "C1156C07-40AA-665D-990A-38A3F5DC8DA7";
 createNode shadingEngine -n "set40";
@@ -8564,25 +8093,6 @@ createNode bump2d -n "bump2d39";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture41";
 	rename -uid "93D197A4-4843-27F3-4D98-53A9E6FFEA60";
-createNode file -n "file202";
-	rename -uid "BC5876BD-4B67-B535-9690-EA96DB418EFE";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Plate_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file204";
-	rename -uid "9DFB5EBB-40B4-778C-803E-4988375FEC11";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Plate_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file205";
-	rename -uid "3BD76B80-4486-7BF1-0806-9BA2ED2D8FCD";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Plate_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file206";
-	rename -uid "3F15F91A-4732-C073-3218-2B8E436D3A8A";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Plate_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide41";
 	rename -uid "5F45FFC0-44FA-B24C-A5AC-52925E9B793C";
 createNode shadingEngine -n "set41";
@@ -8604,25 +8114,6 @@ createNode bump2d -n "bump2d40";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture42";
 	rename -uid "6A5D033B-426E-4405-3E03-B09B3D6BA4A7";
-createNode file -n "file207";
-	rename -uid "06870922-416E-7AAB-DD12-739D456A9595";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Tip_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file209";
-	rename -uid "E9B4BD82-4C88-A5F2-2920-519D806A1E1B";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Tip_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file210";
-	rename -uid "16D0DBCD-480D-7AC9-E134-AB8C4983D56A";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Tip_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file211";
-	rename -uid "956BC1BC-44E2-C9F7-B08E-CD819B12CB67";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Palm Tip_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide42";
 	rename -uid "18446B4F-4259-8F0E-FCE3-0CB1648C7AE3";
 createNode shadingEngine -n "set42";
@@ -8644,25 +8135,6 @@ createNode bump2d -n "bump2d41";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture83";
 	rename -uid "FBBB7071-46AB-94A2-E4D1-08A1A0A7B4BF";
-createNode file -n "file372";
-	rename -uid "88905177-47EF-CBFE-F264-55A8FD9200AF";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Ball_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file374";
-	rename -uid "815B98EB-458C-A9DF-05B8-0092A23BC605";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Ball_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file375";
-	rename -uid "FA919C07-4E35-9A5C-24AE-DAA3E97A5726";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Ball_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file376";
-	rename -uid "595C6F6D-4535-EFB7-3DB0-77A0AF4BD1B6";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Ball_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide73";
 	rename -uid "E87C3B06-4E56-6F3D-38D8-C59EDCCB1D1B";
 createNode shadingEngine -n "set73";
@@ -8684,25 +8156,6 @@ createNode bump2d -n "bump2d72";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture84";
 	rename -uid "A27134E7-47D5-3D73-120B-27AF8E753884";
-createNode file -n "file377";
-	rename -uid "0BBAAC79-4E54-CD6E-67D7-BAA7C52BE2CC";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Fabric Liner_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file379";
-	rename -uid "A91946CD-49A1-5535-E39D-49B45248B79B";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Fabric Liner_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file380";
-	rename -uid "6221A0B5-4DC6-70C3-B86D-E4984ED1826A";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Fabric Liner_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file381";
-	rename -uid "727E7F1A-4257-8618-88F2-ED85169ACBFA";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Fabric Liner_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide74";
 	rename -uid "3C88179C-4FF8-11F3-5978-C4B5533E3596";
 createNode shadingEngine -n "set74";
@@ -8724,25 +8177,6 @@ createNode bump2d -n "bump2d73";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture85";
 	rename -uid "D8E62823-4844-00EA-0A30-4A8940AB1481";
-createNode file -n "file382";
-	rename -uid "36E7AFBB-44A6-CE37-8E9F-999D6FBAD758";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Socket_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file384";
-	rename -uid "B76C7280-46D1-03DD-7861-F38F11296F7C";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Socket_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file385";
-	rename -uid "A05FFFE8-4109-E016-7185-279C2B1D7439";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Socket_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file386";
-	rename -uid "5B11D474-49A5-75ED-28E5-69AD3AA287EB";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Socket_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide75";
 	rename -uid "DCE1FC95-4722-4408-EED0-8784122EA886";
 createNode shadingEngine -n "set75";
@@ -8764,25 +8198,6 @@ createNode bump2d -n "bump2d74";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture86";
 	rename -uid "C1321F03-43B1-3C2F-FA34-9BBA32F21722";
-createNode file -n "file387";
-	rename -uid "9F0B4D36-4277-6BA3-A5DD-8896E5584A97";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Trip_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file389";
-	rename -uid "4EBF8312-4975-2B04-9A9D-1EB88ED82258";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Trip_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file390";
-	rename -uid "9B734BC6-4C61-E09D-CF52-48A06E580D88";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Trip_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file391";
-	rename -uid "217DB1BD-4A90-032B-EDAB-2388F278A576";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Ball Socket/Trip_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide76";
 	rename -uid "0703269E-4CEC-9262-9F28-CF9B6FD09CCE";
 createNode shadingEngine -n "set76";
@@ -8804,25 +8219,6 @@ createNode bump2d -n "Socket_Trim";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture91";
 	rename -uid "9CBF678A-4A84-64BA-2361-68B47DBD54B6";
-createNode file -n "file399";
-	rename -uid "FACB6B4A-4601-7FFF-E270-ADAFFDA157FA";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hand Texture/Hand_Main Texture_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file400";
-	rename -uid "FF3E076B-414A-F07E-83E1-71A1BE6BD2A9";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hand Texture/Hand_Main Texture_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file402";
-	rename -uid "70CC29A9-463A-9CBB-7452-1A9C0CA85A00";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hand Texture/Hand_Main Texture_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file403";
-	rename -uid "6425EA38-4570-6E03-DF71-3D979D553074";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Hand Texture/Hand_Main Texture_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
 createNode shadingEngine -n "set78";
 	rename -uid "DEF299B0-4DC2-2931-1AE3-3AA791ECB152";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -8844,25 +8240,6 @@ createNode multiplyDivide -n "multiplyDivide77";
 	rename -uid "418A8867-4C69-1D0E-0E27-AC94E1C6A11A";
 createNode place2dTexture -n "place2dTexture92";
 	rename -uid "80CDEA2F-477A-4426-A6EC-7D96B4E81E9B";
-createNode file -n "file404";
-	rename -uid "D26F65D5-4F8B-45A4-4D5F-8F98853485F6";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wrist/Wrist Pipes_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file406";
-	rename -uid "675034AC-4F80-021A-74CF-C5BAC5A2AF92";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wrist/Wrist Pipes_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file407";
-	rename -uid "92AF648D-40D2-8878-9977-F2B0D358A160";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wrist/Wrist Pipes_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file408";
-	rename -uid "E7E838F1-45D0-0D41-A11C-0A9D877B8B79";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wrist/Wrist Pipes_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
 createNode shadingEngine -n "set79";
 	rename -uid "09809D00-48E0-B1A3-85F1-6B8EFF20D07A";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -10998,25 +10375,6 @@ createNode groupId -n "groupId225";
 	setAttr ".ihi" 0;
 createNode place2dTexture -n "place2dTexture405";
 	rename -uid "2F010745-42CC-7836-5B24-A7A119DF6E05";
-createNode file -n "file1794";
-	rename -uid "873BF973-4640-2868-BF35-4584E70BEB8B";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Brace_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file1796";
-	rename -uid "B9463BE8-4AAB-32EA-C3E0-D98F8BB7B193";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Brace_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file1797";
-	rename -uid "32A14F8C-4310-FE88-4321-3B8DA51A2701";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Brace_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file1798";
-	rename -uid "713571E3-4CBC-366A-B6D2-FD9609D91588";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Brace_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide344";
 	rename -uid "CB07ECFD-4BA8-0CB3-892A-E893D00A7E91";
 createNode shadingEngine -n "set348";
@@ -11038,25 +10396,6 @@ createNode bump2d -n "bump2d339";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture407";
 	rename -uid "D5D85AAB-4FCC-9A21-4121-CFA342DD07A3";
-createNode file -n "file1804";
-	rename -uid "9E28392D-48BF-BF3C-EE8E-8482D2DC1AD2";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent Rim_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file1806";
-	rename -uid "6572CCD4-4C6A-0776-6C2A-629D4AAEF6F2";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent Rim_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file1807";
-	rename -uid "CE5E3ABF-4E4A-8E90-E486-21BE8F8190B6";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent Rim_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file1808";
-	rename -uid "25E2A127-4124-55C4-8E61-91996C590E55";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent Rim_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide346";
 	rename -uid "D9271DED-43C7-348E-A46A-25829D51D873";
 createNode shadingEngine -n "set350";
@@ -11078,25 +10417,6 @@ createNode bump2d -n "bump2d341";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture408";
 	rename -uid "FB0BFBC0-4703-A5B8-1B45-6A89E350DBDF";
-createNode file -n "file1809";
-	rename -uid "19A42A6B-4DDA-E130-2EF4-B8A350312FDC";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file1811";
-	rename -uid "3F0BD313-41E9-ACD6-8F68-6093EFBA4CDB";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file1812";
-	rename -uid "7CC98764-462D-382F-68CB-59ACCAAB83F8";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file1813";
-	rename -uid "59325EA7-4B0A-A22F-D18F-99BD96905904";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide347";
 	rename -uid "E841ADAB-41C9-E382-12DA-8BAC236E4267";
 createNode shadingEngine -n "set351";
@@ -11118,25 +10438,6 @@ createNode bump2d -n "bump2d342";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture409";
 	rename -uid "3C5363C3-43E9-7D9F-AD88-52AE89E03743";
-createNode file -n "file1814";
-	rename -uid "331C11D6-4CF8-6663-59DD-BBB1D484D6BB";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Main_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file1816";
-	rename -uid "9DADF862-4BF1-AA3B-BE68-AD9866A64789";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Main_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file1817";
-	rename -uid "CF77141A-40EC-0A25-B3BC-4BA587FB1D08";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Main_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file1818";
-	rename -uid "66CB5890-4160-B3D5-4365-FB8A7DDE7DB3";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Main_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide348";
 	rename -uid "F1133964-42C6-5A41-E3DF-CBB0DC2E7906";
 createNode shadingEngine -n "set352";
@@ -11158,25 +10459,6 @@ createNode bump2d -n "bump2d343";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture410";
 	rename -uid "D7A7BE7F-410F-612F-3795-2E881EE3A15A";
-createNode file -n "file1819";
-	rename -uid "08691FCC-4171-83EF-9211-31B6AB876686";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file1820";
-	rename -uid "0034B6B4-4A6D-8E34-8E4C-39948356C881";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file1821";
-	rename -uid "E335F7F9-41B9-4DA6-D44A-1CACDFEB969E";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file1822";
-	rename -uid "16D627D9-42F3-B1B1-3F8E-5380D73C0E71";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Dome Vent_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode bump2d -n "bump2d344";
 	rename -uid "C150EAEC-4E99-4A58-5CA6-6A87875286C8";
 	setAttr ".bi" 1;
@@ -11213,10 +10495,6 @@ createNode projection -n "projection14";
 	setAttr ".vt1" -type "float2" 0.5 0.5 ;
 	setAttr ".vt2" -type "float2" 0.5 0.5 ;
 	setAttr ".vt3" -type "float2" 0.5 0.5 ;
-createNode file -n "file1893";
-	rename -uid "E4F1B863-4831-82FA-E471-0EB1EE8FF159";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Source/faceBackker.png";
-	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture428";
 	rename -uid "A8E0E1A4-480E-BD63-AA74-5788FBB9AE8C";
 createNode shadingEngine -n "lambert8SG4";
@@ -11231,16 +10509,8 @@ createNode shadingEngine -n "lambert8SG4";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "materialInfo526";
 	rename -uid "A3506BB8-4853-6671-A4B3-09B57458521F";
-createNode file -n "file1896";
-	rename -uid "BAD26A50-4B8C-D1BA-388D-1E8FE7433C14";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Downloads/led-tv-screen-monitor-vector.jpg";
-	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture431";
 	rename -uid "0121C1DC-4F0A-0DBF-8DCC-FB9D366F4DBF";
-createNode file -n "file1897";
-	rename -uid "EF927CDC-4E02-5728-BA0C-05BE1A128712";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Source/faceBackker.png";
-	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture432";
 	rename -uid "C0B27A7E-4F1F-DDEA-13BB-3B9D1A65F313";
 createNode standardSurface -n "Face_Glass4";
@@ -11273,59 +10543,16 @@ createNode shadingEngine -n "pasted__set276";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
 	setAttr ".aal" -type "attributeAlias" {"ai_aov_diffuse","aiCustomAOVs[0]","ai_aov_specular"
 		,"aiCustomAOVs[1]"} ;
-createNode aiStandardSurface -n "pasted__aiStandardSurface5";
-	rename -uid "79A74240-46E1-BD86-7F92-CCA8DC3CB047";
-	setAttr ".emission" 1;
-	setAttr ".emission_color" -type "float3" 0 0 0 ;
-createNode file -n "pasted__file1208";
-	rename -uid "41C7FA8F-471E-C9F0-F54E-E1B4E67389EA";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wiper/Wiper_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode place2dTexture -n "pasted__place2dTexture300";
 	rename -uid "7DF0E9CD-4140-23DD-C7A6-74A3C022643D";
-createNode file -n "pasted__file1209";
-	rename -uid "69CEA9AC-429E-5303-26B9-1498B40190D0";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wiper/Wiper_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode bump2d -n "pasted__bump2d271";
 	rename -uid "22C3306E-4D96-7DC4-10ED-8BB273AADA0B";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
-createNode file -n "pasted__file1211";
-	rename -uid "0F0B5738-4277-39A5-CF24-5F94AD73987A";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wiper/Wiper_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "pasted__multiplyDivide275";
 	rename -uid "E05C4B05-4990-491F-4D48-B58AA60FA260";
-createNode file -n "pasted__file1212";
-	rename -uid "F183076B-4141-A564-F309-71BBF5D6B558";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Wiper/Wiper_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture472";
 	rename -uid "D5539A22-48BA-40FF-3EC0-5599E8BBCA95";
-createNode file -n "file2072";
-	rename -uid "7758C360-4E34-0720-1A39-C3B8F4C0D6D1";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Lower Neck/Lower Neck_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2073";
-	rename -uid "318311A9-4828-9BFA-6D2D-29947861DC45";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Lower Neck/Lower Neck_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file2075";
-	rename -uid "4B5D50BA-41D5-DB93-41AA-AF8FC8F810CC";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Lower Neck/Lower Neck_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2076";
-	rename -uid "AB2C699A-4ABA-9152-D2D9-149BD27DE33E";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Lower Neck/Lower Neck_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode bump2d -n "bump2d391";
 	rename -uid "07CB05D4-48BA-0105-2341-7CA207E12F38";
 	setAttr ".bi" 1;
@@ -11347,25 +10574,6 @@ createNode multiplyDivide -n "multiplyDivide396";
 	rename -uid "76ED5CFB-4849-5A09-81CA-5F930AB3B82F";
 createNode place2dTexture -n "place2dTexture473";
 	rename -uid "A89DD105-4A43-04B6-F8CE-14AAF85032DE";
-createNode file -n "file2077";
-	rename -uid "73C11E8E-4900-1853-B425-9096BB5F4177";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Upper Neck/initialShadingGroup_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file2078";
-	rename -uid "DA6761C0-4420-7428-00C7-738E7C26C9AF";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Upper Neck/initialShadingGroup_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2079";
-	rename -uid "338881F7-4B17-4EEE-665B-DEACC5A9253E";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Upper Neck/initialShadingGroup_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2081";
-	rename -uid "E10C0647-47BA-B658-2D13-7982C0E43096";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Upper Neck/initialShadingGroup_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide397";
 	rename -uid "D44EC6A0-4B41-66EC-58BA-B8B8BC594CC4";
 createNode shadingEngine -n "set402";
@@ -11387,31 +10595,6 @@ createNode bump2d -n "bump2d392";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture474";
 	rename -uid "2BA1C57F-4EE0-E3E0-CA44-14A617573E0E";
-createNode file -n "file2082";
-	rename -uid "A522738E-4FFB-C413-B501-5490F41B3864";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/BackHead/initialShadingGroup_Base_color.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file2083";
-	rename -uid "0A8F978D-4BB4-8BAC-40BE-798B885616DC";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/BackHead/initialShadingGroup_Normal_DirectX.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2084";
-	rename -uid "8612A4C3-4FAF-C11F-F944-73B7F0B8FABC";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/BackHead/initialShadingGroup_Height.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2085";
-	rename -uid "CF7B21BE-4859-B80E-5F54-4DA446945992";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/BackHead/initialShadingGroup_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2086";
-	rename -uid "CE24FDE5-462F-6AA1-40FD-26963CBD0577";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/BackHead/initialShadingGroup_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide398";
 	rename -uid "A8345951-4EDF-332C-A890-C9BFEA05612D";
 createNode shadingEngine -n "set403";
@@ -13637,31 +12820,6 @@ createNode groupId -n "groupId759";
 	setAttr ".ihi" 0;
 createNode place2dTexture -n "place2dTexture480";
 	rename -uid "E05F5DE2-49AF-ED9B-FBB1-A8A0672DDFA3";
-createNode file -n "file2108";
-	rename -uid "0ED77579-4EBD-1CFB-ADF4-A0A034004CF4";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/Export/Apollo Retexture/2.0/Apollo_Apollo_Normal.1002.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2109";
-	rename -uid "F65E3D8F-40B8-0EFE-E45C-A7B47BFF3024";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/Export/Apollo Retexture/2.0/Apollo_Apollo_Roughness.1002.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2110";
-	rename -uid "FC05762D-41FF-4AFC-200E-F284EBA80A1D";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/Export/Apollo Retexture/2.0/Apollo_Apollo_Metallic.1002.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2111";
-	rename -uid "1DF07A97-45A9-4339-9BCC-86936885DCD6";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/Export/Apollo Retexture/2.0/Apollo_Apollo_Height.1002.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2112";
-	rename -uid "489F3851-48AF-26EA-BD59-C29B1211B38C";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/Export/Apollo Retexture/2.0/Apollo_Apollo_BaseColor.1002.png";
-	setAttr ".cs" -type "string" "sRGB";
 createNode bump2d -n "bump2d398";
 	rename -uid "90D72E03-4CAD-2394-18FC-3986FA2E00B2";
 	setAttr ".bi" 1;
@@ -13683,31 +12841,6 @@ createNode multiplyDivide -n "multiplyDivide405";
 	rename -uid "8E4F0974-4EF4-4419-F17A-3AAD974FFF4E";
 createNode place2dTexture -n "place2dTexture481";
 	rename -uid "1C0E1DDA-4F70-EAC5-28E7-95BFD085DA78";
-createNode file -n "file2113";
-	rename -uid "E724D8D1-4329-7417-1311-C9AD0A35E4D0";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/Export/Apollo Retexture/2.0/Apollo_Apollo_BaseColor.1011.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file2114";
-	rename -uid "B1526B3F-466F-9358-D454-1D89CE35C873";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/Export/Apollo Retexture/2.0/Apollo_Apollo_Height.1011.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2115";
-	rename -uid "FDC077DA-4290-1EDD-5E9C-91A782D52D62";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/Export/Apollo Retexture/2.0/Apollo_Apollo_Metallic.1011.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2116";
-	rename -uid "BA10A102-4D5F-90F9-27D8-FAA1EC7759B1";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/Export/Apollo Retexture/2.0/Apollo_Apollo_Normal.1011.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2117";
-	rename -uid "1CB76F3D-4030-CC41-CCF7-6F8745F0FE14";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/Export/Apollo Retexture/2.0/Apollo_Apollo_Roughness.1011.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide406";
 	rename -uid "5F93E144-46CA-6F0E-B638-11AE2F04D7AF";
 createNode shadingEngine -n "set409";
@@ -13729,35 +12862,6 @@ createNode bump2d -n "bump2d399";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture482";
 	rename -uid "8904ED14-4BB7-45D8-5BC5-F8A29EB9CF6E";
-createNode file -n "file2118";
-	rename -uid "1487599E-42AF-941F-61DD-25AFA8823B02";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Roughness.1001.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2119";
-	rename -uid "BFECC231-4420-61E6-B83E-38B261553DC3";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Normal.1001.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2120";
-	rename -uid "36B601FC-407B-C686-D94C-079B6239D17E";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Metallic.1001.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2121";
-	rename -uid "3EFE76A8-477C-257E-7412-40BCAA582892";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Height.1001.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2122";
-	rename -uid "35A44661-4B2E-8D19-D840-07B743BA584F";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_BaseColor.1001.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode aiStandardSurface -n "Apollo_Head";
-	rename -uid "5364D47A-4D4E-F178-727C-55BF4E110662";
-	setAttr ".emission" 1;
-	setAttr ".emission_color" -type "float3" 0 0 0 ;
 createNode shadingEngine -n "set410";
 	rename -uid "852D950A-4DF3-647A-1613-119AA4709A5D";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -13779,45 +12883,8 @@ createNode multiplyDivide -n "multiplyDivide407";
 	rename -uid "5C766B38-40F3-018C-9DB0-52A0A3A59769";
 createNode place2dTexture -n "place2dTexture483";
 	rename -uid "0DB7B66B-45E3-0D77-819B-499C819FAF91";
-createNode file -n "file2123";
-	rename -uid "548DC5B3-4797-025A-317A-F8AEFAB7C0C6";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_BaseColor.1002.png";
-	setAttr ".uvt" 3;
-	setAttr ".utpq" 1;
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file2124";
-	rename -uid "1770E53B-4B23-212E-0DAA-E98447D8BC21";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Height.1002.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2125";
-	rename -uid "18DB7530-4E4B-CAE4-7802-F2A6862195DF";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Metallic.1002.png";
-	setAttr ".uvt" 3;
-	setAttr ".utpq" 1;
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2126";
-	rename -uid "96C30311-4B05-1667-4787-63A355A289F5";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Normal.1002.png";
-	setAttr ".uvt" 3;
-	setAttr ".utpq" 1;
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2127";
-	rename -uid "32978876-418F-35CD-C298-E0AA875078D8";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Roughness.1002.png";
-	setAttr ".uvt" 3;
-	setAttr ".utpq" 1;
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide408";
 	rename -uid "BCE409A6-4DE6-C4B1-DC81-F6AEA88BB3D7";
-createNode aiStandardSurface -n "Apollo_Lower_Half";
-	rename -uid "880E8FDE-4DA5-E8E0-6387-C595F24BD679";
-	setAttr ".emission" 1;
-	setAttr ".emission_color" -type "float3" 0 0 0 ;
 createNode shadingEngine -n "set411";
 	rename -uid "04F28B73-44C1-E648-89B6-24A4679C47C0";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -13836,35 +12903,6 @@ createNode bump2d -n "bump2d401";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture484";
 	rename -uid "C5EFFCC2-463C-B5D2-0D41-C78AD901C384";
-createNode file -n "file2128";
-	rename -uid "D520D71E-4D81-8931-9581-F58186DC6439";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Roughness.1011.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2129";
-	rename -uid "616A2A21-4620-D671-B234-D8B109746BC1";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Normal.1011.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2130";
-	rename -uid "F2FC5309-4414-344B-933D-CF88738AEE03";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Metallic.1011.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2131";
-	rename -uid "F6F6F4A4-45C3-83BC-878D-AB987D4BA4C1";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_Height.1011.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2132";
-	rename -uid "C7A90BEB-40DE-D12A-8A0B-23B0D08D1F55";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Documents/UV Exports/Apollo/New Apollo/Apollo_02_Apollo_BaseColor.1011.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode aiStandardSurface -n "Apollo_Arm_Main";
-	rename -uid "6A1329DE-4FA8-1D35-B1B2-F999A794AE7A";
-	setAttr ".emission" 1;
-	setAttr ".emission_color" -type "float3" 0 0 0 ;
 createNode shadingEngine -n "set412";
 	rename -uid "5B7F75C9-47A4-CA7B-672F-9FA5F2A31A5E";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -13880,7 +12918,6 @@ createNode materialInfo -n "materialInfo598";
 createNode bump2d -n "bump2d402";
 	rename -uid "CB3C3FC7-4D09-B7A8-A353-829C12A50846";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode multiplyDivide -n "multiplyDivide409";
 	rename -uid "8B42EBD1-43D1-E64A-DCB9-CE9C27DDF6C0";
@@ -13901,37 +12938,8 @@ createNode groupId -n "groupId766";
 	setAttr ".ihi" 0;
 createNode place2dTexture -n "place2dTexture485";
 	rename -uid "FBC8B96C-477C-4156-9E30-7EA5346C96F8";
-createNode file -n "file2133";
-	rename -uid "1B08F4C7-4DCE-3534-AEED-4BBE40010E26";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Tread base/Apollo Treads_Tread Base_BaseColor.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file2134";
-	rename -uid "8869E169-4C14-C4F3-A746-3498C887B205";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Tread base/Apollo Treads_Tread Base_Height.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2135";
-	rename -uid "FF1FD5C6-4BA5-4DD2-6537-64A47A0E0348";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Tread base/Apollo Treads_Tread Base_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2136";
-	rename -uid "17190AD2-43C7-B1E1-6C8F-B9A70283C848";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Tread base/Apollo Treads_Tread Base_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2137";
-	rename -uid "87E7320C-4150-3AAF-88A6-CFB2A3F0E954";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Tread base/Apollo Treads_Tread Base_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide410";
 	rename -uid "E0D4AB66-4096-9EA2-CAD5-69A0E1457368";
-createNode aiStandardSurface -n "Tread_Base";
-	rename -uid "00674629-4D88-8EB7-C5DF-758EBAD88238";
-	setAttr ".emission" 1;
-	setAttr ".emission_color" -type "float3" 0 0 0 ;
 createNode shadingEngine -n "set413";
 	rename -uid "FEF3AC31-482A-9C85-E18E-639AA6090888";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -13951,37 +12959,8 @@ createNode bump2d -n "bump2d403";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture486";
 	rename -uid "E5946EF5-46ED-483C-04F7-FFA1BD4B13C4";
-createNode file -n "file2138";
-	rename -uid "0450C2EA-428B-770F-E51B-F19128F12F0C";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Treads/Treads_Treads_BaseColor.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file2139";
-	rename -uid "BCDBB41B-4725-C308-35A0-4CA233D18B0C";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Treads/Treads_Treads_Height.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2140";
-	rename -uid "9C5BF04D-41C5-0FA7-8BBA-808A8E0ED635";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Treads/Treads_Treads_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2141";
-	rename -uid "4DEB7E6C-4E06-BAF0-FCBF-ED89C3A78CF7";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Treads/Treads_Treads_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2142";
-	rename -uid "3D859532-4EA0-EB8E-4D35-ED989EE224DE";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Treads/Treads_Treads_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide411";
 	rename -uid "6DA879F9-4FD1-9D41-4ED7-1DA3337CE213";
-createNode aiStandardSurface -n "Treads";
-	rename -uid "FB39AB9A-4323-8F1E-7C8C-00845B5C2E9A";
-	setAttr ".emission" 1;
-	setAttr ".emission_color" -type "float3" 0 0 0 ;
 createNode shadingEngine -n "set414";
 	rename -uid "FDE45E20-4F9C-5EC3-969E-579307D67A8C";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -14001,37 +12980,8 @@ createNode bump2d -n "bump2d404";
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode place2dTexture -n "place2dTexture487";
 	rename -uid "F6AA7F4F-4C46-CBF8-C625-F6B71BF40406";
-createNode file -n "file2143";
-	rename -uid "62BAE256-44ED-A7CE-2582-3FA2E72F437E";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Arm Tubes/Swingy Pipes_Arm Tubes_BaseColor.png";
-	setAttr ".cs" -type "string" "sRGB";
-createNode file -n "file2144";
-	rename -uid "BB26A864-4140-49D7-04DE-748E208DA83A";
-	setAttr ".ail" yes;
-	setAttr ".ao" -0.5;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Arm Tubes/Swingy Pipes_Arm Tubes_Height.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2145";
-	rename -uid "4130B91B-40AA-0652-A26D-3C9BA8A7FA44";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Arm Tubes/Swingy Pipes_Arm Tubes_Metallic.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2146";
-	rename -uid "09B4CE58-48D0-3E19-5335-1082C35A0E21";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Arm Tubes/Swingy Pipes_Arm Tubes_Normal.png";
-	setAttr ".cs" -type "string" "Raw";
-createNode file -n "file2147";
-	rename -uid "8AD5A31C-4989-DF43-09B6-77A9D27ACAD8";
-	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Desktop/Export/Arm Tubes/Swingy Pipes_Arm Tubes_Roughness.png";
-	setAttr ".cs" -type "string" "Raw";
 createNode multiplyDivide -n "multiplyDivide412";
 	rename -uid "1F5F79CF-44EF-054F-787C-83BF509A80AA";
-createNode aiStandardSurface -n "Arm_Tubes";
-	rename -uid "FF684BE5-450E-E320-56CF-EB83AFEA9298";
-	setAttr ".emission" 1;
-	setAttr ".emission_color" -type "float3" 0 0 0 ;
 createNode shadingEngine -n "set415";
 	rename -uid "B751A069-4CD9-10BC-1638-4E831B591B21";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -14044,33 +12994,20 @@ createNode shadingEngine -n "set415";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "materialInfo601";
 	rename -uid "20DE2A51-4871-419F-318D-02866DDB888F";
-createNode displacementShader -n "displacementShader1";
-	rename -uid "1B349514-4123-6CBF-6487-25B480D95AFA";
 createNode bump2d -n "bump2d405";
 	rename -uid "D4C0AEED-47D1-577B-6274-04B7052B5F26";
 	setAttr ".bi" 1;
-	setAttr ".vc1" -type "float3" 0 1.9999999e-05 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode groupId -n "groupId767";
 	rename -uid "41075F39-41EF-70E3-A8FC-3393A6B29C29";
 	setAttr ".ihi" 0;
-createNode surfaceShader -n "Face_Backer_Projection";
-	rename -uid "07A41030-46F4-05CF-05D1-6A8476B5490D";
 createNode projection -n "pasted__projection14";
 	rename -uid "58EEC07C-4F6D-7B16-17F7-0EB5B41287CE";
 	setAttr ".vt1" -type "float2" 0.5 0.5 ;
 	setAttr ".vt2" -type "float2" 0.5 0.5 ;
 	setAttr ".vt3" -type "float2" 0.5 0.5 ;
-createNode file -n "pasted__file1893";
-	rename -uid "11BB4F0C-4560-946D-40CC-229107721424";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/Downloads/360_F_402851219_2HmQ46oviEzLj9eQYN0rn23hrsba9tS1.jpg";
-	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "pasted__place2dTexture428";
 	rename -uid "BC1910CC-4E1B-04A6-BED7-128235BDB4B1";
-createNode file -n "pasted__file1897";
-	rename -uid "627C5815-482E-9B49-5C4B-C3800EEEF5E6";
-	setAttr ".ftn" -type "string" "C:/Users/Canne/OneDrive/Documents/maya/projects/Robot Arm/substance/Source/faceBackker.png";
-	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "pasted__place2dTexture432";
 	rename -uid "9EA84DFD-4CCD-9D6A-06AA-408AC00C4E21";
 createNode shadingEngine -n "Face_Backer_ProjectionSG";
@@ -14163,9 +13100,6 @@ createNode animCurveTL -n "PoleVector_Ctrl_translateY";
 		18;
 	setAttr -s 9 ".kix[4:8]"  1 1 1 1 1;
 	setAttr -s 9 ".kiy[4:8]"  0 0 0 0 0;
-createNode lambert -n "lambert9";
-	rename -uid "4D078710-4A1C-116C-BDA1-319D69D9EF5E";
-	setAttr ".c" -type "float3" 1 0 0 ;
 createNode shadingEngine -n "lambert9SG";
 	rename -uid "1CFC4A3C-4177-62A8-FF2C-B5B2996A1A7B";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -14178,8 +13112,6 @@ createNode shadingEngine -n "lambert9SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "materialInfo603";
 	rename -uid "0A673E55-40AC-B6AB-FBF1-F988EFAB24B2";
-createNode lambert -n "lambert10";
-	rename -uid "653620B8-461F-5F1C-2445-3FB1C7622819";
 createNode shadingEngine -n "lambert10SG";
 	rename -uid "9D431F5E-48EC-452D-7EC1-C7898E9800F6";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -14192,8 +13124,6 @@ createNode shadingEngine -n "lambert10SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "materialInfo604";
 	rename -uid "D14F4788-4586-90AA-562D-8CA8D86872C1";
-createNode lambert -n "lambert11";
-	rename -uid "DB37E163-4198-7F61-1D98-F892F9613839";
 createNode shadingEngine -n "lambert11SG";
 	rename -uid "CDF7F8EF-457E-D85A-D086-C7B7A194B077";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -14206,8 +13136,6 @@ createNode shadingEngine -n "lambert11SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "materialInfo605";
 	rename -uid "899603FD-47F6-56E6-772A-29848DB87916";
-createNode lambert -n "lambert12";
-	rename -uid "2F1A2E08-48DD-0930-35AF-0889EA3BC9ED";
 createNode shadingEngine -n "lambert12SG";
 	rename -uid "705D267C-4610-F1A1-28F9-EB90900FE58D";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -15305,9 +14233,6 @@ createNode animCurveTU -n "pasted__Propellor_Driver_Ctrl_visibility";
 	setAttr -s 34 ".kot[0:33]"  5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
 		5 5 5 5 5 5 5 5 5;
-createNode lambert -n "lambert13";
-	rename -uid "3F386DE3-482B-05B5-2E61-26A1A50D48B0";
-	setAttr ".c" -type "float3" 1 0 0 ;
 createNode shadingEngine -n "lambert13SG";
 	rename -uid "6D6DCAAD-4F06-28D5-43F2-84B565491720";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -15320,9 +14245,6 @@ createNode shadingEngine -n "lambert13SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "materialInfo607";
 	rename -uid "71671FFA-4F85-0152-928F-4D8C4ACFE37C";
-createNode lambert -n "lambert14";
-	rename -uid "DA5A4D33-4EB4-629E-82A8-839D0FF56D25";
-	setAttr ".c" -type "float3" 1 0 0 ;
 createNode shadingEngine -n "lambert14SG";
 	rename -uid "E13BCF9A-4D29-6846-5871-28B041B3EA28";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -15335,14 +14257,10 @@ createNode shadingEngine -n "lambert14SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "materialInfo608";
 	rename -uid "3D73D990-4717-8767-8CA3-CC9F50259A3E";
-createNode lambert -n "lambert15";
-	rename -uid "3B4BF8C4-4BD1-B3AE-DFCC-F3B4A30859F8";
-	setAttr ".c" -type "float3" 1 0 0 ;
 createNode shadingEngine -n "lambert15SG";
 	rename -uid "C1FBC673-4736-64BC-5C28-15BB5AF852C0";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
-	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 2 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
@@ -15351,9 +14269,6 @@ createNode shadingEngine -n "lambert15SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "materialInfo609";
 	rename -uid "9E0B4D68-44C6-28CE-C1BC-4C8BFD7D4E17";
-createNode lambert -n "ToyRobot:LightBlue";
-	rename -uid "7BC1791B-4EAA-7512-03EF-CD8B46909966";
-	setAttr ".c" -type "float3" 0.20640299 0.55904245 0.64300001 ;
 createNode shadingEngine -n "ToyRobot:lambert2SG";
 	rename -uid "A6F6AD8F-432D-B764-C01C-9D94E71CE1F9";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -15366,9 +14281,6 @@ createNode shadingEngine -n "ToyRobot:lambert2SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "ToyRobot:materialInfo1";
 	rename -uid "E993CF46-4EB1-DB5E-FC9C-A793635C7A78";
-createNode lambert -n "ToyRobot:lambert3";
-	rename -uid "D24CE637-4438-649A-FBE1-27B262EE6D1C";
-	setAttr ".c" -type "float3" 0.551 0.070528008 0.070528008 ;
 createNode shadingEngine -n "ToyRobot:lambert3SG";
 	rename -uid "CCFC439B-4D4D-2F80-27A8-46B799D85497";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -15381,9 +14293,6 @@ createNode shadingEngine -n "ToyRobot:lambert3SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "ToyRobot:materialInfo2";
 	rename -uid "6FBA6C04-4F6F-A8DB-11DA-ED86DE4750A4";
-createNode lambert -n "ToyRobot:lambert4";
-	rename -uid "E048A073-4BF6-F548-0C2F-EA99C2A32FA1";
-	setAttr ".c" -type "float3" 0.324 0.041472007 0.041472007 ;
 createNode shadingEngine -n "ToyRobot:lambert4SG";
 	rename -uid "B1EB9751-4D8C-7838-ABA8-30B733022BC9";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -15396,9 +14305,6 @@ createNode shadingEngine -n "ToyRobot:lambert4SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "ToyRobot:materialInfo3";
 	rename -uid "0F0E413D-4877-EA1B-CDC1-88A9848D2446";
-createNode lambert -n "ToyRobot:lambert5";
-	rename -uid "7264D52B-465C-1AD5-8F51-BA90796F8C0A";
-	setAttr ".c" -type "float3" 1 1 1 ;
 createNode shadingEngine -n "ToyRobot:lambert5SG";
 	rename -uid "607DFF5A-44B8-12D9-0E28-9696853F7DEE";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -15423,9 +14329,6 @@ createNode shadingEngine -n "ToyRobot:lambert1SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "ToyRobot:materialInfo5";
 	rename -uid "EC1AF9BA-4A35-5ED0-8EE6-2BAE58F23BB1";
-createNode lambert -n "ToyRobot:Black";
-	rename -uid "F794F0D4-4244-7027-C115-DB99F97D7586";
-	setAttr ".c" -type "float3" 0.035999998 0.035999998 0.035999998 ;
 createNode shadingEngine -n "ToyRobot:lambert6SG";
 	rename -uid "D6348981-45B1-172E-A55E-4DBA04FFAF5D";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -15444,8 +14347,6 @@ createNode groupId -n "ToyRobot:groupId32";
 createNode groupId -n "ToyRobot:groupId38";
 	rename -uid "ECF7892B-4C02-A506-BF6D-C9AD998FB5EE";
 	setAttr ".ihi" 0;
-createNode lambert -n "ToyRobot:lambert7";
-	rename -uid "0E7B2642-46DB-63FC-927C-008CFD188056";
 createNode shadingEngine -n "ToyRobot:lambert7SG";
 	rename -uid "E70CF54C-48D2-7E9A-81B3-9A8BA3364F08";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
@@ -15479,8 +14380,8 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].vh" -type "double2" 1133.3332882987147 547.61902585862265 ;
 createNode reference -n "ConveyorSceneRN";
 	rename -uid "A6E2DE92-457E-91C3-239D-EF895BDCDCA0";
-	setAttr ".fn[0]" -type "string" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 1 _ Conveyor/ConveyorScene.ma";
-	setAttr -s 184 ".phl";
+	setAttr ".fn[0]" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 1 _ Conveyor/ConveyorScene.ma";
+	setAttr -s 241 ".phl";
 	setAttr ".phl[186]" 0;
 	setAttr ".phl[197]" 0;
 	setAttr ".phl[217]" 0;
@@ -15631,6 +14532,63 @@ createNode reference -n "ConveyorSceneRN";
 	setAttr ".phl[495]" 0;
 	setAttr ".phl[496]" 0;
 	setAttr ".phl[497]" 0;
+	setAttr ".phl[498]" 0;
+	setAttr ".phl[499]" 0;
+	setAttr ".phl[500]" 0;
+	setAttr ".phl[501]" 0;
+	setAttr ".phl[502]" 0;
+	setAttr ".phl[503]" 0;
+	setAttr ".phl[504]" 0;
+	setAttr ".phl[505]" 0;
+	setAttr ".phl[506]" 0;
+	setAttr ".phl[507]" 0;
+	setAttr ".phl[508]" 0;
+	setAttr ".phl[509]" 0;
+	setAttr ".phl[510]" 0;
+	setAttr ".phl[511]" 0;
+	setAttr ".phl[512]" 0;
+	setAttr ".phl[513]" 0;
+	setAttr ".phl[514]" 0;
+	setAttr ".phl[515]" 0;
+	setAttr ".phl[516]" 0;
+	setAttr ".phl[517]" 0;
+	setAttr ".phl[518]" 0;
+	setAttr ".phl[519]" 0;
+	setAttr ".phl[520]" 0;
+	setAttr ".phl[521]" 0;
+	setAttr ".phl[522]" 0;
+	setAttr ".phl[523]" 0;
+	setAttr ".phl[524]" 0;
+	setAttr ".phl[525]" 0;
+	setAttr ".phl[526]" 0;
+	setAttr ".phl[527]" 0;
+	setAttr ".phl[528]" 0;
+	setAttr ".phl[529]" 0;
+	setAttr ".phl[530]" 0;
+	setAttr ".phl[531]" 0;
+	setAttr ".phl[532]" 0;
+	setAttr ".phl[533]" 0;
+	setAttr ".phl[534]" 0;
+	setAttr ".phl[535]" 0;
+	setAttr ".phl[536]" 0;
+	setAttr ".phl[537]" 0;
+	setAttr ".phl[538]" 0;
+	setAttr ".phl[539]" 0;
+	setAttr ".phl[540]" 0;
+	setAttr ".phl[541]" 0;
+	setAttr ".phl[542]" 0;
+	setAttr ".phl[543]" 0;
+	setAttr ".phl[544]" 0;
+	setAttr ".phl[545]" 0;
+	setAttr ".phl[546]" 0;
+	setAttr ".phl[547]" 0;
+	setAttr ".phl[548]" 0;
+	setAttr ".phl[549]" 0;
+	setAttr ".phl[550]" 0;
+	setAttr ".phl[551]" 0;
+	setAttr ".phl[552]" 0;
+	setAttr ".phl[553]" 0;
+	setAttr ".phl[554]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"ConveyorSceneRN"
 		"ConveyorScene:TeddyBear_HankWRN" 2
@@ -15789,7 +14747,7 @@ createNode reference -n "ConveyorSceneRN";
 		" -type \"string\" \"diffuse\""
 		2 "ConveyorScene:TeddyBear_HankW:aiStandardHair1SG" "aiCustomAOVs[1].aovName" 
 		" -type \"string\" \"specular\""
-		"ConveyorSceneRN" 113
+		"ConveyorSceneRN" 146
 		2 "|ConveyorScene:Conveyor_Environment" "visibility" " 1"
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins" 
 		"visibility" " 1"
@@ -15808,12 +14766,16 @@ createNode reference -n "ConveyorSceneRN";
 		"uvPivot" " -type \"double2\" 0.20102255791425705 0.56549316644668579"
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Conveyor_Main_Geo|ConveyorScene:Conveyor_Main_GeoShape" 
 		"instObjGroups.objectGroups" " -s 6"
+		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Conveyor_Main_Geo|ConveyorScene:Conveyor_Main_GeoShape" 
+		"aiMatte" " 0"
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors" 
 		"visibility" " 1"
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart_grp" 
 		"visibility" " 1"
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights" 
 		"visibility" " 1"
+		2 "|ConveyorScene:ConveyorRigRNfosterParent1|ConveyorScene:CentralConveyorGeo|ConveyorScene:CentralConveyorGeoShape" 
+		"aiMatte" " 0"
 		2 "ConveyorScene:aiStandardSurface1SG" "aiCustomAOVs" " -s 2"
 		2 "ConveyorScene:aiStandardSurface1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
 		
@@ -15913,99 +14875,180 @@ createNode reference -n "ConveyorSceneRN";
 		""
 		3 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Conveyor_Main_Geo|ConveyorScene:Conveyor_Main_GeoShape.instObjGroups.objectGroups[0]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
+		3 "ConveyorScene:file120.outColor" ":internal_standInShader.incandescence" 
+		""
 		3 "ConveyorScene:groupId1395.message" ":defaultLastHiddenSet.groupNodes" 
 		"-na"
 		3 "ConveyorScene:aiAtmosphereVolume.message" ":defaultArnoldRenderOptions.atmosphere" 
 		""
 		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1.drawOverride" 
-		"ConveyorSceneRN.placeHolderList[450]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.translateY" 
-		"ConveyorSceneRN.placeHolderList[451]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.translateZ" 
-		"ConveyorSceneRN.placeHolderList[452]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.translateX" 
-		"ConveyorSceneRN.placeHolderList[453]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.rotateX" 
-		"ConveyorSceneRN.placeHolderList[454]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.rotateY" 
-		"ConveyorSceneRN.placeHolderList[455]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.rotateZ" 
-		"ConveyorSceneRN.placeHolderList[456]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.visibility" 
-		"ConveyorSceneRN.placeHolderList[457]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.scaleX" 
 		"ConveyorSceneRN.placeHolderList[458]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.scaleY" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.translateY" 
 		"ConveyorSceneRN.placeHolderList[459]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.scaleZ" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.translateZ" 
 		"ConveyorSceneRN.placeHolderList[460]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.translateX" 
 		"ConveyorSceneRN.placeHolderList[461]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.translateY" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.rotateX" 
 		"ConveyorSceneRN.placeHolderList[462]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.translateZ" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.rotateY" 
 		"ConveyorSceneRN.placeHolderList[463]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.translateX" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.rotateZ" 
 		"ConveyorSceneRN.placeHolderList[464]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.rotateX" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.visibility" 
 		"ConveyorSceneRN.placeHolderList[465]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.rotateY" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.scaleX" 
 		"ConveyorSceneRN.placeHolderList[466]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.rotateZ" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.scaleY" 
 		"ConveyorSceneRN.placeHolderList[467]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.visibility" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.scaleZ" 
 		"ConveyorSceneRN.placeHolderList[468]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.scaleX" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2.drawOverride" 
 		"ConveyorSceneRN.placeHolderList[469]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.scaleY" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.translateY" 
 		"ConveyorSceneRN.placeHolderList[470]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.scaleZ" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.translateZ" 
 		"ConveyorSceneRN.placeHolderList[471]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.translateX" 
 		"ConveyorSceneRN.placeHolderList[472]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.rotateX" 
 		"ConveyorSceneRN.placeHolderList[473]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.rotateY" 
 		"ConveyorSceneRN.placeHolderList[474]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.rotateZ" 
 		"ConveyorSceneRN.placeHolderList[475]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.visibility" 
 		"ConveyorSceneRN.placeHolderList[476]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.scaleX" 
 		"ConveyorSceneRN.placeHolderList[477]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.scaleY" 
 		"ConveyorSceneRN.placeHolderList[478]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.scaleZ" 
 		"ConveyorSceneRN.placeHolderList[479]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3.drawOverride" 
 		"ConveyorSceneRN.placeHolderList[480]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart_grp|ConveyorScene:Cart.drawOverride" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4.drawOverride" 
 		"ConveyorSceneRN.placeHolderList[481]" ""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1|ConveyorScene:polySurface107|ConveyorScene:polySurfaceShape108.instObjGroups.objectGroups[0]" 
-		"ConveyorScene:aiStandardSurface1SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[482]" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5.drawOverride" 
+		"ConveyorSceneRN.placeHolderList[482]" ""
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6.drawOverride" 
 		"ConveyorSceneRN.placeHolderList[483]" ""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall|ConveyorScene:HallShape.compInstObjGroups.compObjectGroups[0]" 
-		"ConveyorScene:set12.dagSetMembers" "ConveyorSceneRN.placeHolderList[484]" "ConveyorSceneRN.placeHolderList[485]" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf.drawOverride" 
+		"ConveyorSceneRN.placeHolderList[484]" ""
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall.drawOverride" 
+		"ConveyorSceneRN.placeHolderList[485]" ""
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1.drawOverride" 
+		"ConveyorSceneRN.placeHolderList[486]" ""
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers.drawOverride" 
+		"ConveyorSceneRN.placeHolderList[487]" ""
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans.drawOverride" 
+		"ConveyorSceneRN.placeHolderList[488]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Roof|ConveyorScene:RoofShape.instObjGroups.objectGroups[0]" 
+		"ConveyorSceneRN.placeHolderList[489]" ""
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart_grp|ConveyorScene:Cart.drawOverride" 
+		"ConveyorSceneRN.placeHolderList[490]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_08|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[1]" 
+		"ConveyorSceneRN.placeHolderList[491]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_09|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[1]" 
+		"ConveyorSceneRN.placeHolderList[492]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_07|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[1]" 
+		"ConveyorSceneRN.placeHolderList[493]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_06|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[1]" 
+		"ConveyorSceneRN.placeHolderList[494]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_10|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[1]" 
+		"ConveyorSceneRN.placeHolderList[495]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_05|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[1]" 
+		"ConveyorSceneRN.placeHolderList[496]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_01|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[1]" 
+		"ConveyorSceneRN.placeHolderList[497]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_02|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[1]" 
+		"ConveyorSceneRN.placeHolderList[498]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_03|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[1]" 
+		"ConveyorSceneRN.placeHolderList[499]" ""
+		5 3 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_04|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[1]" 
+		"ConveyorSceneRN.placeHolderList[500]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1|ConveyorScene:polySurface107|ConveyorScene:polySurfaceShape108.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:aiStandardSurface1SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[501]" 
+		"ConveyorSceneRN.placeHolderList[502]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Conveyor_Main_Geo|ConveyorScene:Conveyor_Main_GeoShape.instObjGroups.objectGroups[2]" 
+		"ConveyorScene:set10.dagSetMembers" "ConveyorSceneRN.placeHolderList[503]" "ConveyorSceneRN.placeHolderList[504]" 
+		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Wall_light_grp|ConveyorScene:Wall_Lights|ConveyorScene:Wall_LightsShape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:set10.dagSetMembers" "ConveyorSceneRN.placeHolderList[505]" "ConveyorSceneRN.placeHolderList[506]" 
+		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Conveyor_Main_Geo|ConveyorScene:Conveyor_Main_GeoShape.instObjGroups.objectGroups[1]" 
+		"ConveyorScene:set11.dagSetMembers" "ConveyorSceneRN.placeHolderList[507]" "ConveyorSceneRN.placeHolderList[508]" 
 		""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall|ConveyorScene:HallShape.instObjGroups.objectGroups[0]" 
-		"ConveyorScene:set12.dagSetMembers" "ConveyorSceneRN.placeHolderList[486]" "ConveyorSceneRN.placeHolderList[487]" 
+		"ConveyorScene:set12.dagSetMembers" "ConveyorSceneRN.placeHolderList[509]" "ConveyorSceneRN.placeHolderList[510]" 
+		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall|ConveyorScene:HallShape.compInstObjGroups.compObjectGroups[0]" 
+		"ConveyorScene:set12.dagSetMembers" "ConveyorSceneRN.placeHolderList[511]" "ConveyorSceneRN.placeHolderList[512]" 
 		""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers|ConveyorScene:WallPapersShape.instObjGroups" 
-		"ConveyorScene:set13.dagSetMembers" "ConveyorSceneRN.placeHolderList[488]" "ConveyorSceneRN.placeHolderList[489]" 
+		"ConveyorScene:set13.dagSetMembers" "ConveyorSceneRN.placeHolderList[513]" "ConveyorSceneRN.placeHolderList[514]" 
+		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Conveyor_Main_Geo|ConveyorScene:Conveyor_Main_GeoShape.instObjGroups.objectGroups[5]" 
+		"ConveyorScene:set14.dagSetMembers" "ConveyorSceneRN.placeHolderList[515]" "ConveyorSceneRN.placeHolderList[516]" 
 		""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf|ConveyorScene:TeddyShelfShape.instObjGroups" 
-		"ConveyorScene:set15.dagSetMembers" "ConveyorSceneRN.placeHolderList[490]" "ConveyorSceneRN.placeHolderList[491]" 
+		"ConveyorScene:set15.dagSetMembers" "ConveyorSceneRN.placeHolderList[517]" "ConveyorSceneRN.placeHolderList[518]" 
+		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Conveyor_Main_Geo|ConveyorScene:Conveyor_Main_GeoShape.instObjGroups.objectGroups[3]" 
+		"ConveyorScene:set16.dagSetMembers" "ConveyorSceneRN.placeHolderList[519]" "ConveyorSceneRN.placeHolderList[520]" 
+		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart_grp|ConveyorScene:Cart|ConveyorScene:CartShape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:set17.dagSetMembers" "ConveyorSceneRN.placeHolderList[521]" "ConveyorSceneRN.placeHolderList[522]" 
+		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart_grp|ConveyorScene:Cart|ConveyorScene:CartShape.compInstObjGroups.compObjectGroups[0]" 
+		"ConveyorScene:set17.dagSetMembers" "ConveyorSceneRN.placeHolderList[523]" "ConveyorSceneRN.placeHolderList[524]" 
 		""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans|ConveyorScene:TrashCansShape.instObjGroups" 
-		"ConveyorScene:set18.dagSetMembers" "ConveyorSceneRN.placeHolderList[492]" "ConveyorSceneRN.placeHolderList[493]" 
+		"ConveyorScene:set18.dagSetMembers" "ConveyorSceneRN.placeHolderList[525]" "ConveyorSceneRN.placeHolderList[526]" 
+		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Conveyor_Main_Geo|ConveyorScene:Conveyor_Main_GeoShape.instObjGroups.objectGroups[4]" 
+		"ConveyorScene:set21.dagSetMembers" "ConveyorSceneRN.placeHolderList[527]" "ConveyorSceneRN.placeHolderList[528]" 
 		""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:ConveyorRigRNfosterParent1|ConveyorScene:CentralConveyorGeo|ConveyorScene:CentralConveyorGeoShape.instObjGroups" 
-		"ConveyorScene:set22.dagSetMembers" "ConveyorSceneRN.placeHolderList[494]" "ConveyorSceneRN.placeHolderList[495]" 
+		"ConveyorScene:set22.dagSetMembers" "ConveyorSceneRN.placeHolderList[529]" "ConveyorSceneRN.placeHolderList[530]" 
 		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart_grp|ConveyorScene:Cart|ConveyorScene:CartShape.instObjGroups.objectGroups[1]" 
+		"ConveyorScene:standardSurface2SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[531]" 
+		"ConveyorSceneRN.placeHolderList[532]" ""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall|ConveyorScene:HallShape.instObjGroups.objectGroups[1]" 
-		"ConveyorScene:standardSurface2SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[496]" 
-		"ConveyorSceneRN.placeHolderList[497]" ""
-		"ConveyorScene:LeverRN" 11
+		"ConveyorScene:standardSurface2SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[533]" 
+		"ConveyorSceneRN.placeHolderList[534]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_08|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:standardSurface4SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[535]" 
+		"ConveyorSceneRN.placeHolderList[536]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_09|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:standardSurface4SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[537]" 
+		"ConveyorSceneRN.placeHolderList[538]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_07|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:standardSurface4SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[539]" 
+		"ConveyorSceneRN.placeHolderList[540]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_06|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:standardSurface4SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[541]" 
+		"ConveyorSceneRN.placeHolderList[542]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_05|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:standardSurface4SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[543]" 
+		"ConveyorSceneRN.placeHolderList[544]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_10|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:standardSurface4SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[545]" 
+		"ConveyorSceneRN.placeHolderList[546]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_01|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:standardSurface4SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[547]" 
+		"ConveyorSceneRN.placeHolderList[548]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_02|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:standardSurface4SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[549]" 
+		"ConveyorSceneRN.placeHolderList[550]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_03|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:standardSurface4SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[551]" 
+		"ConveyorSceneRN.placeHolderList[552]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights|ConveyorScene:Rail_Light_Grp_04|ConveyorScene:Rail_Light_Casing|ConveyorScene:Rail_Light_Casing_Shape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:standardSurface4SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[553]" 
+		"ConveyorSceneRN.placeHolderList[554]" ""
+		"ConveyorScene:LeverRN" 14
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:Lever:Lever|ConveyorScene:Lever:Ctrls|ConveyorScene:Lever:Cog_Jnt_Ctrl_Grp|ConveyorScene:Lever:Cog_Jnt_Ctrl" 
 		"translate" " -type \"double3\" 1.4218962894974152 2.60686422053420008 7.66387223044532995"
 		
@@ -16024,165 +15067,158 @@ createNode reference -n "ConveyorSceneRN";
 		3 "ConveyorScene:Lever:polyTweakUV1.output" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:Lever:Lever|ConveyorScene:Lever:Geo|ConveyorScene:Lever:LeverHandle|ConveyorScene:Lever:LeverHandleShape.inMesh" 
 		""
 		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:Lever:Lever|ConveyorScene:Lever:Ctrls|ConveyorScene:Lever:Cog_Jnt_Ctrl_Grp|ConveyorScene:Lever:Cog_Jnt_Ctrl|ConveyorScene:Lever:Handle_Jnt_Ctrl_Grp|ConveyorScene:Lever:Handle_Jnt_Ctrl.rotateZ" 
-		"ConveyorSceneRN.placeHolderList[447]" ""
+		"ConveyorSceneRN.placeHolderList[449]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:Lever:Lever|ConveyorScene:Lever:Geo|ConveyorScene:Lever:Lever|ConveyorScene:Lever:LeverShape.instObjGroups" 
+		"ConveyorScene:set25.dagSetMembers" "ConveyorSceneRN.placeHolderList[450]" "ConveyorSceneRN.placeHolderList[451]" 
+		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:Lever:Lever|ConveyorScene:Lever:Geo|ConveyorScene:Lever:LeverHandle|ConveyorScene:Lever:LeverHandleShape.instObjGroups" 
+		"ConveyorScene:set25.dagSetMembers" "ConveyorSceneRN.placeHolderList[452]" "ConveyorSceneRN.placeHolderList[453]" 
+		""
 		5 0 "ConveyorSceneRN" "ConveyorScene:Lever:polyTweakUV1.output" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:Lever:Lever|ConveyorScene:Lever:Geo|ConveyorScene:Lever:LeverHandle|ConveyorScene:Lever:LeverHandleShape.inMesh" 
-		"ConveyorSceneRN.placeHolderList[448]" "ConveyorSceneRN.placeHolderList[449]" "ConveyorScene:Lever:LeverHandleShape.i"
+		"ConveyorSceneRN.placeHolderList[454]" "ConveyorSceneRN.placeHolderList[455]" "ConveyorScene:Lever:LeverHandleShape.i"
 		
-		"ConveyorScene:ConveyorRigRN" 67
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:Lever:Lever|ConveyorScene:Lever:Geo|ConveyorScene:Lever:LeverHandleBroke|ConveyorScene:Lever:LeverHandleBrokeShape.instObjGroups" 
+		"ConveyorScene:set25.dagSetMembers" "ConveyorSceneRN.placeHolderList[456]" "ConveyorSceneRN.placeHolderList[457]" 
+		""
+		"ConveyorScene:ConveyorRigRN" 59
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo|ConveyorScene:ConveyorRig:ConveyorGeoShape" 
 		"aiMatte" " 0"
-		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl" 
-		"Rotation" " -k 1"
-		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Central_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Central_Conveyor_Ctrl" 
-		"Rotation" " -k 1"
-		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Central_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Central_Conveyor_Ctrl" 
-		"Speed" " -k 1"
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo|ConveyorScene:ConveyorRig:SideConveyorGeoShape" 
 		"aiMatte" " 0"
-		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl" 
-		"Rotation" " -k 1"
-		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl" 
-		"Speed" " -k 1"
-		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl" 
-		"WaveAmplitude" " -k 1"
-		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl" 
-		"WavePosition" " -k 1"
-		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl" 
-		"WaveWavelength" " -k 1"
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve" 
 		"visibility" " 0"
 		2 "ConveyorScene:ConveyorRig:Geo_Layer" "displayType" " 0"
 		2 "ConveyorScene:ConveyorRig:Geo_Layer" "visibility" " 1"
 		2 "ConveyorScene:ConveyorRig:Geo_Layer" "displayOrder" " 4"
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8|ConveyorScene:ConveyorRig:FlapShape8.instObjGroups" 
-		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[372]" "ConveyorSceneRN.placeHolderList[373]" 
-		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7|ConveyorScene:ConveyorRig:FlapShape7.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[374]" "ConveyorSceneRN.placeHolderList[375]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6|ConveyorScene:ConveyorRig:FlapShape6.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7|ConveyorScene:ConveyorRig:FlapShape7.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[376]" "ConveyorSceneRN.placeHolderList[377]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5|ConveyorScene:ConveyorRig:FlapShape5.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6|ConveyorScene:ConveyorRig:FlapShape6.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[378]" "ConveyorSceneRN.placeHolderList[379]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4|ConveyorScene:ConveyorRig:FlapShape4.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5|ConveyorScene:ConveyorRig:FlapShape5.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[380]" "ConveyorSceneRN.placeHolderList[381]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3|ConveyorScene:ConveyorRig:FlapShape3.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4|ConveyorScene:ConveyorRig:FlapShape4.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[382]" "ConveyorSceneRN.placeHolderList[383]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2|ConveyorScene:ConveyorRig:FlapShape2.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3|ConveyorScene:ConveyorRig:FlapShape3.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[384]" "ConveyorSceneRN.placeHolderList[385]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1|ConveyorScene:ConveyorRig:FlapShape1.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2|ConveyorScene:ConveyorRig:FlapShape2.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[386]" "ConveyorSceneRN.placeHolderList[387]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo|ConveyorScene:ConveyorRig:ConveyorGeoShape.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1|ConveyorScene:ConveyorRig:FlapShape1.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[388]" "ConveyorSceneRN.placeHolderList[389]" 
 		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo|ConveyorScene:ConveyorRig:ConveyorGeoShape.instObjGroups" 
+		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[390]" "ConveyorSceneRN.placeHolderList[391]" 
+		""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo|ConveyorScene:ConveyorRig:SideConveyorGeoShape.instObjGroups" 
-		"ConveyorScene:set23.dagSetMembers" "ConveyorSceneRN.placeHolderList[390]" "ConveyorSceneRN.placeHolderList[391]" 
+		"ConveyorScene:set23.dagSetMembers" "ConveyorSceneRN.placeHolderList[392]" "ConveyorSceneRN.placeHolderList[393]" 
 		""
 		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.Rotation" 
-		"ConveyorSceneRN.placeHolderList[392]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.Speed" 
-		"ConveyorSceneRN.placeHolderList[393]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WaveAmplitude" 
 		"ConveyorSceneRN.placeHolderList[394]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WavePosition" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.Speed" 
 		"ConveyorSceneRN.placeHolderList[395]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WaveWavelength" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WaveAmplitude" 
 		"ConveyorSceneRN.placeHolderList[396]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.rotateX" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WavePosition" 
 		"ConveyorSceneRN.placeHolderList[397]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.rotateY" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WaveWavelength" 
 		"ConveyorSceneRN.placeHolderList[398]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.rotateZ" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.rotateX" 
 		"ConveyorSceneRN.placeHolderList[399]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.visibility" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.rotateY" 
 		"ConveyorSceneRN.placeHolderList[400]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.translateX" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.rotateZ" 
 		"ConveyorSceneRN.placeHolderList[401]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.translateY" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.visibility" 
 		"ConveyorSceneRN.placeHolderList[402]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.translateZ" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.translateX" 
 		"ConveyorSceneRN.placeHolderList[403]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.scaleX" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.translateY" 
 		"ConveyorSceneRN.placeHolderList[404]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.scaleY" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.translateZ" 
 		"ConveyorSceneRN.placeHolderList[405]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.scaleZ" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.scaleX" 
 		"ConveyorSceneRN.placeHolderList[406]" ""
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.scaleY" 
+		"ConveyorSceneRN.placeHolderList[407]" ""
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:ConveyorCurves|ConveyorScene:ConveyorRig:WireDeformerCurve.scaleZ" 
+		"ConveyorSceneRN.placeHolderList[408]" ""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:CentralConveyorGeo|ConveyorScene:ConveyorRig:CentralConveyorGeoShape.instObjGroups" 
-		"ConveyorScene:set22.dagSetMembers" "ConveyorSceneRN.placeHolderList[407]" "ConveyorSceneRN.placeHolderList[408]" 
+		"ConveyorScene:set22.dagSetMembers" "ConveyorSceneRN.placeHolderList[409]" "ConveyorSceneRN.placeHolderList[410]" 
 		""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:CentralConveyorGeoGrp|ConveyorScene:ConveyorRig:CentralConveyorGeo|ConveyorScene:ConveyorRig:CentralConveyorGeoShape.instObjGroups" 
-		"ConveyorScene:set23.dagSetMembers" "ConveyorSceneRN.placeHolderList[409]" "ConveyorSceneRN.placeHolderList[410]" 
+		"ConveyorScene:set23.dagSetMembers" "ConveyorSceneRN.placeHolderList[411]" "ConveyorSceneRN.placeHolderList[412]" 
 		""
 		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Central_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Central_Conveyor_Ctrl.Rotation" 
-		"ConveyorSceneRN.placeHolderList[411]" ""
+		"ConveyorSceneRN.placeHolderList[413]" ""
 		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Central_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Central_Conveyor_Ctrl.Speed" 
-		"ConveyorSceneRN.placeHolderList[412]" ""
+		"ConveyorSceneRN.placeHolderList[414]" ""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8|ConveyorScene:ConveyorRig:FlapShape8.instObjGroups" 
-		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[413]" "ConveyorSceneRN.placeHolderList[414]" 
-		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7|ConveyorScene:ConveyorRig:FlapShape7.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[415]" "ConveyorSceneRN.placeHolderList[416]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6|ConveyorScene:ConveyorRig:FlapShape6.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7|ConveyorScene:ConveyorRig:FlapShape7.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[417]" "ConveyorSceneRN.placeHolderList[418]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5|ConveyorScene:ConveyorRig:FlapShape5.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6|ConveyorScene:ConveyorRig:FlapShape6.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[419]" "ConveyorSceneRN.placeHolderList[420]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4|ConveyorScene:ConveyorRig:FlapShape4.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5|ConveyorScene:ConveyorRig:FlapShape5.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[421]" "ConveyorSceneRN.placeHolderList[422]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3|ConveyorScene:ConveyorRig:FlapShape3.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4|ConveyorScene:ConveyorRig:FlapShape4.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[423]" "ConveyorSceneRN.placeHolderList[424]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2|ConveyorScene:ConveyorRig:FlapShape2.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3|ConveyorScene:ConveyorRig:FlapShape3.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[425]" "ConveyorSceneRN.placeHolderList[426]" 
 		""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1|ConveyorScene:ConveyorRig:FlapShape1.instObjGroups" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2|ConveyorScene:ConveyorRig:FlapShape2.instObjGroups" 
 		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[427]" "ConveyorSceneRN.placeHolderList[428]" 
 		""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1|ConveyorScene:ConveyorRig:FlapShape1.instObjGroups" 
+		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[429]" "ConveyorSceneRN.placeHolderList[430]" 
+		""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo|ConveyorScene:ConveyorRig:SideConveyorGeoShape.instObjGroups" 
-		"ConveyorScene:set23.dagSetMembers" "ConveyorSceneRN.placeHolderList[429]" "ConveyorSceneRN.placeHolderList[430]" 
+		"ConveyorScene:set23.dagSetMembers" "ConveyorSceneRN.placeHolderList[431]" "ConveyorSceneRN.placeHolderList[432]" 
 		""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo|ConveyorScene:ConveyorRig:ConveyorGeoShape.instObjGroups" 
-		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[431]" "ConveyorSceneRN.placeHolderList[432]" 
+		"ConveyorScene:set19.dagSetMembers" "ConveyorSceneRN.placeHolderList[433]" "ConveyorSceneRN.placeHolderList[434]" 
 		""
 		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.Rotation" 
-		"ConveyorSceneRN.placeHolderList[433]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.Speed" 
-		"ConveyorSceneRN.placeHolderList[434]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WaveAmplitude" 
 		"ConveyorSceneRN.placeHolderList[435]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WavePosition" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.Speed" 
 		"ConveyorSceneRN.placeHolderList[436]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WaveWavelength" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WaveAmplitude" 
 		"ConveyorSceneRN.placeHolderList[437]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.rotateX" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WavePosition" 
 		"ConveyorSceneRN.placeHolderList[438]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.rotateY" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.WaveWavelength" 
 		"ConveyorSceneRN.placeHolderList[439]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.rotateZ" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.rotateX" 
 		"ConveyorSceneRN.placeHolderList[440]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.translateX" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.rotateY" 
 		"ConveyorSceneRN.placeHolderList[441]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.translateY" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.rotateZ" 
 		"ConveyorSceneRN.placeHolderList[442]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.translateZ" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.translateX" 
 		"ConveyorSceneRN.placeHolderList[443]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.scaleX" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.translateY" 
 		"ConveyorSceneRN.placeHolderList[444]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.scaleY" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.translateZ" 
 		"ConveyorSceneRN.placeHolderList[445]" ""
-		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.scaleZ" 
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.scaleX" 
 		"ConveyorSceneRN.placeHolderList[446]" ""
-		"ConveyorScene:Hopper_BinRN" 34
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.scaleY" 
+		"ConveyorSceneRN.placeHolderList[447]" ""
+		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Ctrls|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl_Grp|ConveyorScene:ConveyorRig:Side_Conveyor_Ctrl.scaleZ" 
+		"ConveyorSceneRN.placeHolderList[448]" ""
+		"ConveyorScene:Hopper_BinRN" 35
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin" 
 		"visibility" " 1"
 		2 "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin" 
@@ -16230,38 +15266,41 @@ createNode reference -n "ConveyorSceneRN";
 		"ConveyorSceneRN.placeHolderList[354]" ""
 		5 4 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin.drawOverride" 
 		"ConveyorSceneRN.placeHolderList[355]" ""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5|ConveyorScene:Hopper_Bin5Shape.instObjGroups.objectGroups[0]" 
-		"ConveyorScene:Hopper_Bin:set3.dagSetMembers" "ConveyorSceneRN.placeHolderList[356]" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Boxes|ConveyorScene:BoxesShape.instObjGroups" 
+		"ConveyorScene:Hopper_Bin:standardSurface1SG.dagSetMembers" "ConveyorSceneRN.placeHolderList[356]" 
 		"ConveyorSceneRN.placeHolderList[357]" ""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2|ConveyorScene:Hopper_Bin2Shape.instObjGroups.objectGroups[0]" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1|ConveyorScene:Hopper_Bin1Shape.instObjGroups.objectGroups[0]" 
 		"ConveyorScene:Hopper_Bin:set3.dagSetMembers" "ConveyorSceneRN.placeHolderList[358]" 
 		"ConveyorSceneRN.placeHolderList[359]" ""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1|ConveyorScene:Hopper_Bin1Shape.instObjGroups.objectGroups[0]" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2|ConveyorScene:Hopper_Bin2Shape.instObjGroups.objectGroups[0]" 
 		"ConveyorScene:Hopper_Bin:set3.dagSetMembers" "ConveyorSceneRN.placeHolderList[360]" 
 		"ConveyorSceneRN.placeHolderList[361]" ""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin|ConveyorScene:Hopper_Bin:Hopper_BinShape.instObjGroups.objectGroups[0]" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5|ConveyorScene:Hopper_Bin5Shape.instObjGroups.objectGroups[0]" 
 		"ConveyorScene:Hopper_Bin:set3.dagSetMembers" "ConveyorSceneRN.placeHolderList[362]" 
 		"ConveyorSceneRN.placeHolderList[363]" ""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6|ConveyorScene:Hopper_Bin6Shape.instObjGroups.objectGroups[0]" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3|ConveyorScene:Hopper_Bin3Shape.instObjGroups.objectGroups[0]" 
 		"ConveyorScene:Hopper_Bin:set3.dagSetMembers" "ConveyorSceneRN.placeHolderList[364]" 
 		"ConveyorSceneRN.placeHolderList[365]" ""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4|ConveyorScene:Hopper_Bin4Shape.instObjGroups.objectGroups[0]" 
 		"ConveyorScene:Hopper_Bin:set3.dagSetMembers" "ConveyorSceneRN.placeHolderList[366]" 
 		"ConveyorSceneRN.placeHolderList[367]" ""
-		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3|ConveyorScene:Hopper_Bin3Shape.instObjGroups.objectGroups[0]" 
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6|ConveyorScene:Hopper_Bin6Shape.instObjGroups.objectGroups[0]" 
 		"ConveyorScene:Hopper_Bin:set3.dagSetMembers" "ConveyorSceneRN.placeHolderList[368]" 
 		"ConveyorSceneRN.placeHolderList[369]" ""
+		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin|ConveyorScene:Hopper_Bin:Hopper_BinShape.instObjGroups.objectGroups[0]" 
+		"ConveyorScene:Hopper_Bin:set3.dagSetMembers" "ConveyorSceneRN.placeHolderList[370]" 
+		"ConveyorSceneRN.placeHolderList[371]" ""
 		5 0 "ConveyorSceneRN" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin|ConveyorScene:Hopper_Bin:Trash_BinShape.instObjGroups" 
-		"ConveyorScene:Hopper_Bin:set4.dagSetMembers" "ConveyorSceneRN.placeHolderList[370]" 
-		"ConveyorSceneRN.placeHolderList[371]" "";
+		"ConveyorScene:Hopper_Bin:set4.dagSetMembers" "ConveyorSceneRN.placeHolderList[372]" 
+		"ConveyorSceneRN.placeHolderList[373]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Dionysus_Asset_RigRN";
 	rename -uid "E55A888D-4990-9D73-D910-8B8A24C05591";
 	setAttr -s 2 ".fn";
-	setAttr ".fn[0]" -type "string" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject//scenes/Characters/Dionysus_Asset_Rig.ma";
+	setAttr ".fn[0]" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Characters/Dionysus_Asset_Rig.ma";
 	setAttr ".fn[1]" -type "string" "C:/Users/Colby/Downloads/Dionysus_Asset_Rig.ma";
-	setAttr -s 1055 ".phl";
+	setAttr -s 1059 ".phl";
 	setAttr ".phl[763]" 3.3306690738754696e-15;
 	setAttr ".phl[764]" -2.4147350785597155e-15;
 	setAttr ".phl[765]" 2.3314683517128287e-15;
@@ -17252,6 +16291,10 @@ createNode reference -n "Dionysus_Asset_RigRN";
 	setAttr ".phl[2112]" 0;
 	setAttr ".phl[2113]" 0;
 	setAttr ".phl[2114]" 0;
+	setAttr ".phl[2115]" 0;
+	setAttr ".phl[2116]" 0;
+	setAttr ".phl[2117]" 0;
+	setAttr ".phl[2118]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Dionysus_Asset_RigRN"
 		"Dionysus_Asset_RigRN" 84
@@ -17433,12 +16476,12 @@ createNode reference -n "Dionysus_Asset_RigRN";
 		"Dionysus_Asset_RigRN.placeHolderList[1129]" ""
 		5 4 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Dionysus_Asset_Rig:R_Eye_Ctrl.visibility" 
 		"Dionysus_Asset_RigRN.placeHolderList[1130]" ""
-		"Dionysus_Asset_RigRN" 1027
-		1 |Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl 
+		"Dionysus_Asset_RigRN" 1029
+		1 "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl" 
 		"blendDionysusAssetRigRN" "blendDionysusAssetRigRN" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
 		
 		2 "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Light|Dionysus_Asset_Rig:Furnace_LightShape" 
-		"renderLayerInfo[3]" " 10 0 0"
+		"renderLayerInfo" " -s 3"
 		2 "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:Booster_Ctrl_Grp|Dionysus_Asset_Rig:Booster_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:CTRLS|Dionysus_Asset_Rig:COG_Ctrl_Grp|Dionysus_Asset_Rig:COG_Ctrl" 
@@ -19229,340 +18272,340 @@ createNode reference -n "Dionysus_Asset_RigRN";
 		"Dionysus_Asset_RigRN.placeHolderList[1877]" ""
 		5 3 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:L_Cylinder_Blend|Dionysus_Asset_Rig:L_Cylinder_BlendShape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1878]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Smirk|Dionysus_Asset_Rig:Right_Eye_SmirkShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Arrow|Dionysus_Asset_Rig:Left_Eye_ArrowShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1879]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1880]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Smirk|Dionysus_Asset_Rig:Mouth_SmirkShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Arrow|Dionysus_Asset_Rig:Right_Eye_ArrowShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1881]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1882]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Smirk|Dionysus_Asset_Rig:Left_Eye_SmirkShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Bored|Dionysus_Asset_Rig:Right_Eye_BoredShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1883]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1884]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Arrow|Dionysus_Asset_Rig:Right_Eye_ArrowShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Bored|Dionysus_Asset_Rig:Left_Eye_BoredShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1885]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1886]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Arrow|Dionysus_Asset_Rig:Left_Eye_ArrowShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Smirk|Dionysus_Asset_Rig:Right_Eye_SmirkShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1887]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1888]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Bored|Dionysus_Asset_Rig:Mouth_BoredShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Smirk|Dionysus_Asset_Rig:Left_Eye_SmirkShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1889]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1890]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Bored|Dionysus_Asset_Rig:Left_Eye_BoredShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Bored|Dionysus_Asset_Rig:Mouth_BoredShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1891]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1892]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Bored|Dionysus_Asset_Rig:Right_Eye_BoredShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Mouth_Smirk|Dionysus_Asset_Rig:Mouth_SmirkShape.instObjGroups" 
 		"Dionysus_Asset_Rig:pasted__surfaceShader1SG4.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1893]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1894]" ""
 		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:typeMesh1|Dionysus_Asset_Rig:typeMeshShape1.instObjGroups" 
 		"Dionysus_Asset_Rig:typeBlinn2SG.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1895]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1896]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface566|Dionysus_Asset_Rig:polySurfaceShape671.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface478|Dionysus_Asset_Rig:polySurfaceShape596.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1897]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1898]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface572|Dionysus_Asset_Rig:polySurfaceShape677.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface476|Dionysus_Asset_Rig:polySurfaceShape594.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1899]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1900]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface569|Dionysus_Asset_Rig:polySurfaceShape674.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface477|Dionysus_Asset_Rig:polySurfaceShape595.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1901]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1902]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface589|Dionysus_Asset_Rig:polySurfaceShape694.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_01|Dionysus_Asset_Rig:Electrical_Box_Cover_Shape1.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1903]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1904]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface573|Dionysus_Asset_Rig:polySurfaceShape678.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface720|Dionysus_Asset_Rig:polySurfaceShape793.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1905]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1906]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface503|Dionysus_Asset_Rig:polySurfaceShape615.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface718|Dionysus_Asset_Rig:polySurfaceShape791.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1907]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1908]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface580|Dionysus_Asset_Rig:polySurfaceShape685.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface661|Dionysus_Asset_Rig:polySurfaceShape766.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1909]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1910]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface585|Dionysus_Asset_Rig:polySurfaceShape690.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface647|Dionysus_Asset_Rig:polySurfaceShape752.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1911]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1912]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface562|Dionysus_Asset_Rig:polySurfaceShape667.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface605|Dionysus_Asset_Rig:polySurfaceShape710.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1913]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1914]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface564|Dionysus_Asset_Rig:polySurfaceShape669.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface658|Dionysus_Asset_Rig:polySurfaceShape763.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1915]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1916]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface578|Dionysus_Asset_Rig:polySurfaceShape683.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface592|Dionysus_Asset_Rig:polySurfaceShape697.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1917]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1918]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface577|Dionysus_Asset_Rig:polySurfaceShape682.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface599|Dionysus_Asset_Rig:polySurfaceShape704.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1919]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1920]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface583|Dionysus_Asset_Rig:polySurfaceShape688.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface663|Dionysus_Asset_Rig:polySurfaceShape768.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1921]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1922]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526|Dionysus_Asset_Rig:polySurface526Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface697|Dionysus_Asset_Rig:polySurface697Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1923]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1924]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface502|Dionysus_Asset_Rig:polySurfaceShape614.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface698|Dionysus_Asset_Rig:polySurface698Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1925]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1926]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface588|Dionysus_Asset_Rig:polySurfaceShape693.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Ball|Dionysus_Asset_Rig:Torso_BallShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1927]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1928]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface668|Dionysus_Asset_Rig:polySurfaceShape668.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface694|Dionysus_Asset_Rig:polySurface694Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1929]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1930]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface520|Dionysus_Asset_Rig:polySurface520Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Top_Socket|Dionysus_Asset_Rig:Torso_Top_SocketShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1931]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1932]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:L_Exhaust_Pipe1Shape|Dionysus_Asset_Rig:L_Exhaust_Pipe1ShapeShape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torse_Bottom_Socket|Dionysus_Asset_Rig:Torse_Bottom_SocketShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1933]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1934]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface710|Dionysus_Asset_Rig:polySurfaceShape783.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Shoulder_Guards|Dionysus_Asset_Rig:Shoulder_GuardsShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1935]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1936]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Rim|Dionysus_Asset_Rig:Furnace_RimShape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface715|Dionysus_Asset_Rig:polySurface715Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1937]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1938]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_01|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape1.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface716|Dionysus_Asset_Rig:polySurfaceShape789.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1939]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1940]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_back|Dionysus_Asset_Rig:Furnace_backShape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface717|Dionysus_Asset_Rig:polySurfaceShape790.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1941]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1942]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_03|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape3.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface719|Dionysus_Asset_Rig:polySurfaceShape792.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1943]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1944]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Lid|Dionysus_Asset_Rig:Furnace_LidShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface721|Dionysus_Asset_Rig:polySurfaceShape794.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1945]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1946]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_mainShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface488|Dionysus_Asset_Rig:polySurfaceShape606.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1947]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1948]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_02|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape2.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface489|Dionysus_Asset_Rig:polySurfaceShape607.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1949]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1950]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_04|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape4.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface490|Dionysus_Asset_Rig:polySurfaceShape608.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1951]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1952]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface483|Dionysus_Asset_Rig:polySurfaceShape601.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface542|Dionysus_Asset_Rig:polySurfaceShape648.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1953]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1954]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface666Shape|Dionysus_Asset_Rig:polySurface666ShapeShape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface560|Dionysus_Asset_Rig:polySurface560Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1955]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1956]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Top_Socket|Dionysus_Asset_Rig:Torso_Top_SocketShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface566|Dionysus_Asset_Rig:polySurfaceShape671.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1957]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1958]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torse_Bottom_Socket|Dionysus_Asset_Rig:Torse_Bottom_SocketShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface569|Dionysus_Asset_Rig:polySurfaceShape674.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1959]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1960]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Shoulder_Guards|Dionysus_Asset_Rig:Shoulder_GuardsShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface572|Dionysus_Asset_Rig:polySurfaceShape677.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1961]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1962]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface698|Dionysus_Asset_Rig:polySurface698Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface589|Dionysus_Asset_Rig:polySurfaceShape694.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1963]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1964]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface694|Dionysus_Asset_Rig:polySurface694Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface573|Dionysus_Asset_Rig:polySurfaceShape678.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1965]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1966]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Ball|Dionysus_Asset_Rig:Torso_BallShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface580|Dionysus_Asset_Rig:polySurfaceShape685.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1967]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1968]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface485|Dionysus_Asset_Rig:polySurfaceShape603.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface564|Dionysus_Asset_Rig:polySurfaceShape669.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1969]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1970]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface574|Dionysus_Asset_Rig:polySurfaceShape679.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface578|Dionysus_Asset_Rig:polySurfaceShape683.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1971]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1972]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface486|Dionysus_Asset_Rig:polySurfaceShape604.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface583|Dionysus_Asset_Rig:polySurfaceShape688.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1973]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1974]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface489|Dionysus_Asset_Rig:polySurfaceShape607.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface577|Dionysus_Asset_Rig:polySurfaceShape682.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1975]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1976]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface567|Dionysus_Asset_Rig:polySurfaceShape672.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface562|Dionysus_Asset_Rig:polySurfaceShape667.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1977]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1978]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface487|Dionysus_Asset_Rig:polySurfaceShape605.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface585|Dionysus_Asset_Rig:polySurfaceShape690.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1979]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1980]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface488|Dionysus_Asset_Rig:polySurfaceShape606.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface574|Dionysus_Asset_Rig:polySurfaceShape679.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1981]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1982]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface530|Dionysus_Asset_Rig:polySurfaceShape637.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface588|Dionysus_Asset_Rig:polySurfaceShape693.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1983]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1984]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface560|Dionysus_Asset_Rig:polySurface560Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface634|Dionysus_Asset_Rig:polySurfaceShape739.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1985]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1986]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface490|Dionysus_Asset_Rig:polySurfaceShape608.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface481|Dionysus_Asset_Rig:polySurfaceShape599.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1987]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1988]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface542|Dionysus_Asset_Rig:polySurfaceShape648.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface482|Dionysus_Asset_Rig:polySurfaceShape600.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1989]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1990]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface709|Dionysus_Asset_Rig:polySurfaceShape782.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface483|Dionysus_Asset_Rig:polySurfaceShape601.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1991]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1992]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface568|Dionysus_Asset_Rig:polySurfaceShape673.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface484|Dionysus_Asset_Rig:polySurfaceShape602.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1993]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1994]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface665|Dionysus_Asset_Rig:polySurface665Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface485|Dionysus_Asset_Rig:polySurfaceShape603.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1995]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1996]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface480|Dionysus_Asset_Rig:polySurfaceShape598.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface486|Dionysus_Asset_Rig:polySurfaceShape604.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1997]" 
 		"Dionysus_Asset_RigRN.placeHolderList[1998]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface481|Dionysus_Asset_Rig:polySurfaceShape599.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface480|Dionysus_Asset_Rig:polySurfaceShape598.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[1999]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2000]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface482|Dionysus_Asset_Rig:polySurfaceShape600.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface479|Dionysus_Asset_Rig:polySurfaceShape597.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2001]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2002]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface599|Dionysus_Asset_Rig:polySurfaceShape704.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface487|Dionysus_Asset_Rig:polySurfaceShape605.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2003]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2004]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface608|Dionysus_Asset_Rig:polySurfaceShape713.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_01|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape1.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2005]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2006]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface592|Dionysus_Asset_Rig:polySurfaceShape697.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface710|Dionysus_Asset_Rig:polySurfaceShape783.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2007]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2008]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface600|Dionysus_Asset_Rig:polySurfaceShape705.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Rim|Dionysus_Asset_Rig:Furnace_RimShape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2009]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2010]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface604|Dionysus_Asset_Rig:polySurfaceShape709.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Lid|Dionysus_Asset_Rig:Furnace_LidShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2011]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2012]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface594|Dionysus_Asset_Rig:polySurfaceShape699.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_back|Dionysus_Asset_Rig:Furnace_backShape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2013]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2014]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface639|Dionysus_Asset_Rig:polySurfaceShape744.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_03|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape3.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2015]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2016]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface670|Dionysus_Asset_Rig:polySurface670Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_04|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape4.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2017]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2018]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface606|Dionysus_Asset_Rig:polySurfaceShape711.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main|Dionysus_Asset_Rig:Furnace_Hinges|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_02|Dionysus_Asset_Rig:Furnace_Hinge_Bolt_Shape2.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2019]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2020]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface671|Dionysus_Asset_Rig:polySurface671Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface722|Dionysus_Asset_Rig:polySurfaceShape795.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2021]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2022]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface642|Dionysus_Asset_Rig:polySurfaceShape747.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface606|Dionysus_Asset_Rig:polySurfaceShape711.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2023]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2024]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface664|Dionysus_Asset_Rig:polySurface664Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators|Dionysus_Asset_Rig:Rump_Jet|Dionysus_Asset_Rig:polySurface437|Dionysus_Asset_Rig:polySurface709|Dionysus_Asset_Rig:polySurfaceShape782.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2025]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2026]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface597|Dionysus_Asset_Rig:polySurfaceShape702.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_Shape1.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2027]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2028]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface598|Dionysus_Asset_Rig:polySurfaceShape703.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_02|Dionysus_Asset_Rig:Electrical_Box_Cover_Shape2.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2029]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2030]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface658|Dionysus_Asset_Rig:polySurfaceShape763.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface567|Dionysus_Asset_Rig:polySurfaceShape672.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2031]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2032]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface717|Dionysus_Asset_Rig:polySurfaceShape790.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface579|Dionysus_Asset_Rig:polySurfaceShape684.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2033]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2034]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface716|Dionysus_Asset_Rig:polySurfaceShape789.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface668|Dionysus_Asset_Rig:polySurfaceShape668.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2035]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2036]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface720|Dionysus_Asset_Rig:polySurfaceShape793.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:L_Exhaust_Pipe1Shape|Dionysus_Asset_Rig:L_Exhaust_Pipe1ShapeShape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2037]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2038]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface721|Dionysus_Asset_Rig:polySurfaceShape794.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface520|Dionysus_Asset_Rig:polySurface520Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2039]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2040]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface719|Dionysus_Asset_Rig:polySurfaceShape792.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526|Dionysus_Asset_Rig:polySurface526Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2041]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2042]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface718|Dionysus_Asset_Rig:polySurfaceShape791.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface502|Dionysus_Asset_Rig:polySurfaceShape614.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2043]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2044]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface722|Dionysus_Asset_Rig:polySurfaceShape795.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface503|Dionysus_Asset_Rig:polySurfaceShape615.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2045]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2046]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_01|Dionysus_Asset_Rig:Propellor_01Shape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface530|Dionysus_Asset_Rig:polySurfaceShape637.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2047]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2048]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_02|Dionysus_Asset_Rig:Propellor_02Shape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface670|Dionysus_Asset_Rig:polySurface670Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2049]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2050]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_Shaft|Dionysus_Asset_Rig:Propellor_ShaftShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface671|Dionysus_Asset_Rig:polySurface671Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2051]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2052]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface715|Dionysus_Asset_Rig:polySurface715Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface664|Dionysus_Asset_Rig:polySurface664Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2053]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2054]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface484|Dionysus_Asset_Rig:polySurfaceShape602.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface597|Dionysus_Asset_Rig:polySurfaceShape702.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2055]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2056]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_02|Dionysus_Asset_Rig:Electrical_Box_hinge_02Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface642|Dionysus_Asset_Rig:polySurfaceShape747.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2057]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2058]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_Shape1.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface598|Dionysus_Asset_Rig:polySurfaceShape703.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2059]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2060]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_02|Dionysus_Asset_Rig:Electrical_Box_Cover_Shape2.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface608|Dionysus_Asset_Rig:polySurfaceShape713.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2061]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2062]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_Cover_01|Dionysus_Asset_Rig:Electrical_Box_Cover_Shape1.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface600|Dionysus_Asset_Rig:polySurfaceShape705.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2063]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2064]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface634|Dionysus_Asset_Rig:polySurfaceShape739.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface604|Dionysus_Asset_Rig:polySurfaceShape709.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2065]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2066]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface647|Dionysus_Asset_Rig:polySurfaceShape752.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface594|Dionysus_Asset_Rig:polySurfaceShape699.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2067]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2068]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface661|Dionysus_Asset_Rig:polySurfaceShape766.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface639|Dionysus_Asset_Rig:polySurfaceShape744.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2069]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2070]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface663|Dionysus_Asset_Rig:polySurfaceShape768.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_01|Dionysus_Asset_Rig:Propellor_01Shape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2071]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2072]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface605|Dionysus_Asset_Rig:polySurfaceShape710.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_02|Dionysus_Asset_Rig:Propellor_02Shape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2073]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2074]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface697|Dionysus_Asset_Rig:polySurface697Shape.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_Shaft|Dionysus_Asset_Rig:Propellor_ShaftShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2075]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2076]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_topper|Dionysus_Asset_Rig:Backpack_topperShape.instObjGroups" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01|Dionysus_Asset_Rig:Electrical_Box_hinge_02|Dionysus_Asset_Rig:Electrical_Box_hinge_02Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2077]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2078]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface478|Dionysus_Asset_Rig:polySurfaceShape596.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface475|Dionysus_Asset_Rig:polySurfaceShape593.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2079]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2080]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface479|Dionysus_Asset_Rig:polySurfaceShape597.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_mainShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2081]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2082]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface579|Dionysus_Asset_Rig:polySurfaceShape684.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main|Dionysus_Asset_Rig:Backpack_topper|Dionysus_Asset_Rig:Backpack_topperShape.instObjGroups" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2083]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2084]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface470|Dionysus_Asset_Rig:polySurfaceShape588.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface666Shape|Dionysus_Asset_Rig:polySurface666ShapeShape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2085]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2086]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface576|Dionysus_Asset_Rig:polySurfaceShape681.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface665|Dionysus_Asset_Rig:polySurface665Shape.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2087]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2088]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface471|Dionysus_Asset_Rig:polySurfaceShape589.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface568|Dionysus_Asset_Rig:polySurfaceShape673.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2089]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2090]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface472|Dionysus_Asset_Rig:polySurfaceShape590.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface576|Dionysus_Asset_Rig:polySurfaceShape681.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2091]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2092]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface473|Dionysus_Asset_Rig:polySurfaceShape591.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface470|Dionysus_Asset_Rig:polySurfaceShape588.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2093]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2094]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface474|Dionysus_Asset_Rig:polySurfaceShape592.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface471|Dionysus_Asset_Rig:polySurfaceShape589.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2095]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2096]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface475|Dionysus_Asset_Rig:polySurfaceShape593.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface472|Dionysus_Asset_Rig:polySurfaceShape590.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2097]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2098]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface477|Dionysus_Asset_Rig:polySurfaceShape595.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface473|Dionysus_Asset_Rig:polySurfaceShape591.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2099]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2100]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface476|Dionysus_Asset_Rig:polySurfaceShape594.instObjGroups.objectGroups[0]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface474|Dionysus_Asset_Rig:polySurfaceShape592.instObjGroups.objectGroups[0]" 
 		"Dionysus_Asset_Rig:set20.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2101]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2102]" ""
 		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526|Dionysus_Asset_Rig:polySurface526Shape.instObjGroups.objectGroups[1]" 
@@ -19577,17 +18620,23 @@ createNode reference -n "Dionysus_Asset_RigRN";
 		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Mouth_Group|Dionysus_Asset_Rig:Mouth|Dionysus_Asset_Rig:MouthShape.instObjGroups" 
 		"Dionysus_Asset_Rig:surfaceShader2SG.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2109]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2110]" ""
-		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Determined|Dionysus_Asset_Rig:Right_Eye_DeterminedShape.instObjGroups" 
-		"Dionysus_Asset_Rig:pasted__surfaceShader3SG.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2111]" 
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Determined_actually|Dionysus_Asset_Rig:Left_Eye_Determined_actuallyShape.instObjGroups" 
+		"Dionysus_Asset_Rig:surfaceShader2SG.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2111]" 
 		"Dionysus_Asset_RigRN.placeHolderList[2112]" ""
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Determined_Actually|Dionysus_Asset_Rig:Right_Eye_Determined_ActuallyShape.instObjGroups" 
+		"Dionysus_Asset_Rig:surfaceShader2SG.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2113]" 
+		"Dionysus_Asset_RigRN.placeHolderList[2114]" ""
 		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Left_Eye_Determined|Dionysus_Asset_Rig:Left_Eye_DeterminedShape.instObjGroups" 
-		"Dionysus_Asset_Rig:pasted__surfaceShader3SG.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2113]" 
-		"Dionysus_Asset_RigRN.placeHolderList[2114]" "";
+		"Dionysus_Asset_Rig:pasted__surfaceShader3SG.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2115]" 
+		"Dionysus_Asset_RigRN.placeHolderList[2116]" ""
+		5 0 "Dionysus_Asset_RigRN" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:BS_GEO|Dionysus_Asset_Rig:Right_Eye_Determined|Dionysus_Asset_Rig:Right_Eye_DeterminedShape.instObjGroups" 
+		"Dionysus_Asset_Rig:pasted__surfaceShader3SG.dagSetMembers" "Dionysus_Asset_RigRN.placeHolderList[2117]" 
+		"Dionysus_Asset_RigRN.placeHolderList[2118]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "ApolloRN";
 	rename -uid "89033A07-4DEA-71F0-F3E5-F6A92B297C93";
-	setAttr -s 299 ".phl";
+	setAttr -s 359 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -19887,10 +18936,70 @@ createNode reference -n "ApolloRN";
 	setAttr ".phl[297]" 0;
 	setAttr ".phl[298]" 0;
 	setAttr ".phl[299]" 0;
+	setAttr ".phl[300]" 0;
+	setAttr ".phl[301]" 0;
+	setAttr ".phl[302]" 0;
+	setAttr ".phl[303]" 0;
+	setAttr ".phl[304]" 0;
+	setAttr ".phl[305]" 0;
+	setAttr ".phl[306]" 0;
+	setAttr ".phl[307]" 0;
+	setAttr ".phl[308]" 0;
+	setAttr ".phl[309]" 0;
+	setAttr ".phl[310]" 0;
+	setAttr ".phl[311]" 0;
+	setAttr ".phl[312]" 0;
+	setAttr ".phl[313]" 0;
+	setAttr ".phl[314]" 0;
+	setAttr ".phl[315]" 0;
+	setAttr ".phl[316]" 0;
+	setAttr ".phl[317]" 0;
+	setAttr ".phl[318]" 0;
+	setAttr ".phl[319]" 0;
+	setAttr ".phl[320]" 0;
+	setAttr ".phl[321]" 0;
+	setAttr ".phl[322]" 0;
+	setAttr ".phl[323]" 0;
+	setAttr ".phl[324]" 0;
+	setAttr ".phl[325]" 0;
+	setAttr ".phl[326]" 0;
+	setAttr ".phl[327]" 0;
+	setAttr ".phl[328]" 0;
+	setAttr ".phl[329]" 0;
+	setAttr ".phl[330]" 0;
+	setAttr ".phl[331]" 0;
+	setAttr ".phl[332]" 0;
+	setAttr ".phl[333]" 0;
+	setAttr ".phl[334]" 0;
+	setAttr ".phl[335]" 0;
+	setAttr ".phl[336]" 0;
+	setAttr ".phl[337]" 0;
+	setAttr ".phl[338]" 0;
+	setAttr ".phl[339]" 0;
+	setAttr ".phl[340]" 0;
+	setAttr ".phl[341]" 0;
+	setAttr ".phl[342]" 0;
+	setAttr ".phl[343]" 0;
+	setAttr ".phl[344]" 0;
+	setAttr ".phl[345]" 0;
+	setAttr ".phl[346]" 0;
+	setAttr ".phl[347]" 0;
+	setAttr ".phl[348]" 0;
+	setAttr ".phl[349]" 0;
+	setAttr ".phl[350]" 0;
+	setAttr ".phl[351]" 0;
+	setAttr ".phl[352]" 0;
+	setAttr ".phl[353]" 0;
+	setAttr ".phl[354]" 0;
+	setAttr ".phl[355]" 0;
+	setAttr ".phl[356]" 0;
+	setAttr ".phl[357]" 0;
+	setAttr ".phl[358]" 0;
+	setAttr ".phl[359]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"ApolloRN"
 		"ApolloRN" 0
-		"ApolloRN" 518
+		"ApolloRN" 550
 		2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo" "renderLayerInfo[0]" 
 		" 10 0 0"
 		2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape" 
@@ -20263,617 +19372,721 @@ createNode reference -n "ApolloRN";
 		
 		2 "Apollo:surfaceShader3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
+		3 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.instObjGroups" 
+		"Apollo:standardSurface8SG4.dagSetMembers" "-na"
+		3 "Apollo:polySurface733SG.memberWireframeColor" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
 		3 "Apollo:groupId766.groupId" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[42].objectGroupId" 
 		""
 		3 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[42]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
-		3 "Apollo:groupId766.message" ":defaultLastHiddenSet.groupNodes" "-na"
-		3 "Apollo:groupId766.groupId" "Apollo:groupParts100.groupId" ""
+		3 "Apollo:groupId767.message" "Apollo:polySurface733SG.groupNodes" "-na"
 		3 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.instObjGroups" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "-na"
 		3 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.instObjGroups" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "-na"
 		3 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.instObjGroups" 
 		"Apollo:surfaceShader3SG.dagSetMembers" "-na"
-		3 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.instObjGroups" 
-		"Apollo:standardSurface8SG4.dagSetMembers" "-na"
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.instObjGroups" 
-		"ApolloRN.placeHolderList[1]" "Apollo:surfaceShader3SG.dsm"
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.instObjGroups" 
-		"ApolloRN.placeHolderList[2]" "Apollo:surfaceShader3SG.dsm"
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.instObjGroups" 
-		"ApolloRN.placeHolderList[3]" "Apollo:standardSurface8SG4.dsm"
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.instObjGroups" 
-		"ApolloRN.placeHolderList[4]" "Apollo:surfaceShader3SG.dsm"
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.ArmIKFK" 
+		3 "Apollo:groupId766.groupId" "Apollo:groupParts100.groupId" ""
+		3 "Apollo:groupId766.message" ":defaultLastHiddenSet.groupNodes" "-na"
+		5 0 "ApolloRN" "Apollo:surfaceShader3SG.memberWireframeColor" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		"ApolloRN.placeHolderList[1]" "ApolloRN.placeHolderList[2]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.instObjGroups" 
+		"ApolloRN.placeHolderList[3]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_Shape1.instObjGroups" 
+		"ApolloRN.placeHolderList[4]" ""
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_Shape1.instObjGroups" 
 		"ApolloRN.placeHolderList[5]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.MasterScale" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_Shape1.instObjGroups" 
 		"ApolloRN.placeHolderList[6]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.ArmIKFK" 
 		"ApolloRN.placeHolderList[7]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.MasterScale" 
 		"ApolloRN.placeHolderList[8]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[9]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[10]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[11]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[12]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateY" 
 		"ApolloRN.placeHolderList[13]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[14]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[15]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[16]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[17]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[18]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[19]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[20]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateY" 
 		"ApolloRN.placeHolderList[21]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[22]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[23]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[24]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_13_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[25]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[26]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[27]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_12_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[28]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[29]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[30]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_11_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[31]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[32]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[33]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_10_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[34]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[35]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[36]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_09_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[37]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[38]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[39]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_08_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[40]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[41]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[42]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_07_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[43]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[44]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[45]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_06_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[46]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[47]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[48]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_05_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[49]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[50]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[51]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_04_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[52]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[53]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[54]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_03_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[55]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[56]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[57]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_02_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[58]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[59]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_Swing_Ctrl.Swing" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[60]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:L_Hose_IK_Jnt_01_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[61]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:L_Hose_Ctrls|Apollo:L_Hose_Swing_Ctrl.Swing" 
 		"ApolloRN.placeHolderList[62]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[63]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[64]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_13_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[65]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[66]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[67]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_12_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[68]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[69]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[70]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_11_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[71]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[72]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[73]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_10_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[74]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[75]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[76]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_09_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[77]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[78]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[79]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_08_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[80]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[81]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[82]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_07_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[83]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[84]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[85]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_06_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[86]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[87]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[88]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_05_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[89]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[90]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[91]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_04_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[92]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[93]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[94]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_03_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[95]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[96]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[97]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_02_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[98]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[99]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_Swing_Ctrl.Swing" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[100]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Apollo:R_Hose_IK_Jnt_01_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[101]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:R_Hose_Ctrls|Apollo:R_Hose_Swing_Ctrl.Swing" 
 		"ApolloRN.placeHolderList[102]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[103]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[104]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Apollo:Arm_FK_Jnt_01_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[105]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[106]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[107]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[108]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateY" 
 		"ApolloRN.placeHolderList[109]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Apollo:Arm_FK_Jnt_02_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[110]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[111]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[112]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Apollo:Arm_FK_Jnt_03_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[113]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[114]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[115]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Apollo:Arm_FK_Jnt_04_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[116]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[117]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:IK_Base_Ctrl_Grp|Apollo:IK_Base_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[118]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:IK_Base_Ctrl_Grp|Apollo:IK_Base_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:FK_Ctrls_Grp|Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Apollo:Arm_FK_Jnt_05_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[119]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:Arm_IK_Jnt_05_Ctrl_Grp|Apollo:Arm_IK_Jnt_05_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:IK_Base_Ctrl_Grp|Apollo:IK_Base_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[120]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:Arm_IK_Jnt_05_Ctrl_Grp|Apollo:Arm_IK_Jnt_05_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:IK_Base_Ctrl_Grp|Apollo:IK_Base_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[121]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:Arm_IK_Jnt_05_Ctrl_Grp|Apollo:Arm_IK_Jnt_05_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:Arm_IK_Jnt_05_Ctrl_Grp|Apollo:Arm_IK_Jnt_05_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[122]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:Arm_IK_Jnt_05_Ctrl_Grp|Apollo:Arm_IK_Jnt_05_Ctrl.Follow" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:Arm_IK_Jnt_05_Ctrl_Grp|Apollo:Arm_IK_Jnt_05_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[123]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:PoleVector_Ctrl_Grp|Apollo:PoleVector_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:Arm_IK_Jnt_05_Ctrl_Grp|Apollo:Arm_IK_Jnt_05_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[124]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:PoleVector_Ctrl_Grp|Apollo:PoleVector_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:Arm_IK_Jnt_05_Ctrl_Grp|Apollo:Arm_IK_Jnt_05_Ctrl.Follow" 
 		"ApolloRN.placeHolderList[125]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.rotateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:PoleVector_Ctrl_Grp|Apollo:PoleVector_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[126]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:IK_Ctrls_Grp|Apollo:PoleVector_Ctrl_Grp|Apollo:PoleVector_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[127]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.rotateY" 
 		"ApolloRN.placeHolderList[128]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl|Apollo:Arm_Base_Jnt_02_Ctrl_Grp|Apollo:Arm_Base_Jnt_02_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[129]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[130]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Apollo:Arm_Base_Jnt_01_Ctrl|Apollo:Arm_Base_Jnt_02_Ctrl_Grp|Apollo:Arm_Base_Jnt_02_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[131]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[132]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[133]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_01_Ctrl_Grp|Apollo:Head_FK_Jnt_01_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[134]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[135]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[136]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[137]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[138]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateY" 
 		"ApolloRN.placeHolderList[139]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_02_Ctrl_Grp|Apollo:Head_FK_Jnt_02_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[140]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[141]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[142]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[143]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Neutral" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[144]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Oooh" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[145]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Bored" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Neutral" 
 		"ApolloRN.placeHolderList[146]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Smirk" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Oooh" 
 		"ApolloRN.placeHolderList[147]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.MouthScale" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Bored" 
 		"ApolloRN.placeHolderList[148]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.Smirk" 
 		"ApolloRN.placeHolderList[149]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Mouth_Ctrl_Grp|Apollo:Mouth_Ctrl.MouthScale" 
 		"ApolloRN.placeHolderList[150]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.ExclamationPoint" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[151]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.REye" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[152]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.LEye" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.ExclamationPoint" 
 		"ApolloRN.placeHolderList[153]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.Mouth" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.REye" 
 		"ApolloRN.placeHolderList[154]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.X1" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.LEye" 
 		"ApolloRN.placeHolderList[155]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.X2" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.Mouth" 
 		"ApolloRN.placeHolderList[156]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.X1" 
 		"ApolloRN.placeHolderList[157]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl.X2" 
 		"ApolloRN.placeHolderList[158]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Open" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[159]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Squint" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[160]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Close" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Open" 
 		"ApolloRN.placeHolderList[161]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Sad" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Squint" 
 		"ApolloRN.placeHolderList[162]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Wink" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Close" 
 		"ApolloRN.placeHolderList[163]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Bored" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Sad" 
 		"ApolloRN.placeHolderList[164]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Smirk" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Wink" 
 		"ApolloRN.placeHolderList[165]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.EyeScale" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Bored" 
 		"ApolloRN.placeHolderList[166]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Determined" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Smirk" 
 		"ApolloRN.placeHolderList[167]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.EyeScale" 
 		"ApolloRN.placeHolderList[168]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:L_Eye_Ctrl_Grp|Apollo:L_Eye_Ctrl.Determined" 
 		"ApolloRN.placeHolderList[169]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Open" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[170]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Squint" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[171]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Close" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Open" 
 		"ApolloRN.placeHolderList[172]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Sad" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Squint" 
 		"ApolloRN.placeHolderList[173]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Wink" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Close" 
 		"ApolloRN.placeHolderList[174]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Bored" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Sad" 
 		"ApolloRN.placeHolderList[175]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Smirk" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Wink" 
 		"ApolloRN.placeHolderList[176]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.EyeScale" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Bored" 
 		"ApolloRN.placeHolderList[177]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Determined" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Smirk" 
 		"ApolloRN.placeHolderList[178]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Visor_Ctrl_Grp|Apollo:Visor_Ctrl.L_Visor" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.EyeScale" 
 		"ApolloRN.placeHolderList[179]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Visor_Ctrl_Grp|Apollo:Visor_Ctrl.RVisor" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Eyes_Ctrl_Grp|Apollo:Eyes_Ctrl|Apollo:R_Eye_Ctrl_Grp|Apollo:R_Eye_Ctrl.Determined" 
 		"ApolloRN.placeHolderList[180]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Wipers_Ctrl_Grp|Apollo:R_Wiper_Ctrl_Grp|Apollo:R_Wiper_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Visor_Ctrl_Grp|Apollo:Visor_Ctrl.L_Visor" 
 		"ApolloRN.placeHolderList[181]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Wipers_Ctrl_Grp|Apollo:L_Wiper_Ctrl_Grp|Apollo:L_Wiper_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Visor_Ctrl_Grp|Apollo:Visor_Ctrl.RVisor" 
 		"ApolloRN.placeHolderList[182]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Jnt_Ctrl_Grp|Apollo:Hand_Jnt_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Wipers_Ctrl_Grp|Apollo:R_Wiper_Ctrl_Grp|Apollo:R_Wiper_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[183]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Head_Ctrls|Apollo:Head_FK_Jnt_03_Ctrl_Grp|Apollo:Head_FK_Jnt_03_Ctrl|Apollo:Face_Ctrl_Grp|Apollo:Face_Ctrl|Apollo:Wipers_Ctrl_Grp|Apollo:L_Wiper_Ctrl_Grp|Apollo:L_Wiper_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[184]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Jnt_Ctrl_Grp|Apollo:Hand_Jnt_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[185]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[186]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[187]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Apollo:Hand_Ring_Jnt_02_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[188]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[189]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[190]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Apollo:Hand_Ring_Jnt_03_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[191]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[192]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[193]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Apollo:Hand_Ring_Jnt_01_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[194]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[195]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[196]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_02_Ctrl_Grp|Apollo:Finger_02_Jnt_02_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[197]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[198]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[199]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_02_Ctrl_Grp|Apollo:Finger_01_Jnt_02_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[200]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[201]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[202]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_01_Jnt_01_Ctrl_Grp|Apollo:Finger_01_Jnt_01_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[203]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[204]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[205]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_02_Jnt_01_Ctrl_Grp|Apollo:Finger_02_Jnt_01_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[206]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[207]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[208]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_01_Ctrl_Grp|Apollo:Finger_03_Jnt_01_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[209]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[210]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[211]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Finger_03_Jnt_02_Ctrl_Grp|Apollo:Finger_03_Jnt_02_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[212]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[213]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_01_Ctrl_Grp|Apollo:Piston_01_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[214]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_02_Ctrl_Grp|Apollo:Piston_02_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Hand_Ctrls|Apollo:Palm_Jnt_Ctrl_Grp|Apollo:Palm_Jnt_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[215]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_03_Ctrl_Grp|Apollo:Piston_03_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_01_Ctrl_Grp|Apollo:Piston_01_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[216]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.Follow" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_02_Ctrl_Grp|Apollo:Piston_02_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[217]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Arm_Piston_Ctrls|Apollo:Piston_03_Ctrl_Grp|Apollo:Piston_03_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[218]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.Follow" 
 		"ApolloRN.placeHolderList[219]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
 		"ApolloRN.placeHolderList[220]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivotTranslate" 
 		"ApolloRN.placeHolderList[221]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateX" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
 		"ApolloRN.placeHolderList[222]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateY" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translate" 
 		"ApolloRN.placeHolderList[223]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[224]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[225]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[226]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateX" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
 		"ApolloRN.placeHolderList[227]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateY" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotate" 
 		"ApolloRN.placeHolderList[228]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[229]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateY" 
 		"ApolloRN.placeHolderList[230]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[231]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleX" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
 		"ApolloRN.placeHolderList[232]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleY" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scale" 
 		"ApolloRN.placeHolderList[233]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleX" 
 		"ApolloRN.placeHolderList[234]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleY" 
 		"ApolloRN.placeHolderList[235]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.scaleZ" 
 		"ApolloRN.placeHolderList[236]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
 		"ApolloRN.placeHolderList[237]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.parentMatrix" 
 		"ApolloRN.placeHolderList[238]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
 		"ApolloRN.placeHolderList[239]" ""
-		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotatePivot" 
 		"ApolloRN.placeHolderList[240]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.FollowTranslate" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
 		"ApolloRN.placeHolderList[241]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.FollowRotate" 
+		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Cog_Jnt_Ctrl|Apollo:Prop_Ctrl_Grp|Apollo:Prop_Ctrl.rotateOrder" 
 		"ApolloRN.placeHolderList[242]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.TreadsRoll" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[243]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.IndividualRoll" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[244]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.TreadsRoll" 
 		"ApolloRN.placeHolderList[245]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.IndividualRoll" 
 		"ApolloRN.placeHolderList[246]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[247]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateY" 
 		"ApolloRN.placeHolderList[248]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[249]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[250]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.Roll" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[251]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[252]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_03_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_03_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl.Roll" 
 		"ApolloRN.placeHolderList[253]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_02_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_02_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[254]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_01_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_01_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_03_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_03_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[255]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Mid_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_02_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_02_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[256]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Front_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Front_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Wheel_Jnt_01_Ctrl_Grp|Apollo:R_Mid_Wheel_Jnt_01_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[257]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Mid_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Mid_Main_Wheel_Jnt_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[258]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.FollowTranslate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:R_Treads_Ctrl_Grp|Apollo:R_Treads_Ctrl|Apollo:R_Front_Main_Wheel_Jnt_Ctrl_Grp|Apollo:R_Front_Main_Wheel_Jnt_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[259]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.FollowRotate" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[260]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.Roll" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.FollowTranslate" 
 		"ApolloRN.placeHolderList[261]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Front_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Front_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.FollowRotate" 
 		"ApolloRN.placeHolderList[262]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Mid_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl.Roll" 
 		"ApolloRN.placeHolderList[263]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_01_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_01_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Front_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Front_Main_Wheel_Jnt_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[264]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_02_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_02_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Mid_Main_Wheel_Jnt_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[265]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_03_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_03_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_01_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_01_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[266]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_02_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_02_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[267]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Mid_Wheel_Jnt_03_Ctrl_Grp|Apollo:L_Mid_Wheel_Jnt_03_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[268]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Cog_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Apollo:Treads_Base_FK_Jnt_Ctrl|Apollo:L_Treads_Ctrl_Grp|Apollo:L_Treads_Ctrl|Apollo:L_Back_Main_Wheel_Jnt_Ctrl_Grp|Apollo:L_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[269]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateX" 
 		"ApolloRN.placeHolderList[270]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.visibility" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateY" 
 		"ApolloRN.placeHolderList[271]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.rotateZ" 
 		"ApolloRN.placeHolderList[272]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.visibility" 
 		"ApolloRN.placeHolderList[273]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateX" 
 		"ApolloRN.placeHolderList[274]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleX" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateY" 
 		"ApolloRN.placeHolderList[275]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleY" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.translateZ" 
 		"ApolloRN.placeHolderList[276]" ""
-		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleZ" 
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleX" 
 		"ApolloRN.placeHolderList[277]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleY" 
+		"ApolloRN.placeHolderList[278]" ""
+		5 4 "ApolloRN" "|Apollo:Apollo|Apollo:Ctrls|Apollo:Transform_Ctrl_Grp|Apollo:Transform_Ctrl|Apollo:Lights|Apollo:Light_Rig_Ctrl_Grp|Apollo:Light_Rig_Ctrl.scaleZ" 
+		"ApolloRN.placeHolderList[279]" ""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[280]" "ApolloRN.placeHolderList[281]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[282]" "ApolloRN.placeHolderList[283]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[284]" "ApolloRN.placeHolderList[285]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[286]" "ApolloRN.placeHolderList[287]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.instObjGroups" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[288]" "ApolloRN.placeHolderList[289]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.instObjGroups" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[290]" "ApolloRN.placeHolderList[291]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[292]" "ApolloRN.placeHolderList[293]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Sad|Apollo:R_Eye_SadShape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[294]" "ApolloRN.placeHolderList[295]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Close|Apollo:R_Eye_CloseShape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[296]" "ApolloRN.placeHolderList[297]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Bored|Apollo:Right_Eye_BoredShape.instObjGroups" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[298]" "ApolloRN.placeHolderList[299]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Squint|Apollo:R_Eye_SquintShape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[300]" "ApolloRN.placeHolderList[301]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Smirk|Apollo:Right_Eye_SmirkShape.instObjGroups" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[302]" "ApolloRN.placeHolderList[303]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Arrow|Apollo:Right_Eye_ArrowShape.instObjGroups" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[304]" "ApolloRN.placeHolderList[305]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.instObjGroups" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[306]" "ApolloRN.placeHolderList[307]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.instObjGroups" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[308]" "ApolloRN.placeHolderList[309]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.instObjGroups" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[310]" "ApolloRN.placeHolderList[311]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.instObjGroups" 
+		"Apollo:surfaceShader1SG4.dagSetMembers" "ApolloRN.placeHolderList[312]" "ApolloRN.placeHolderList[313]" 
+		""
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShape.instObjGroups" 
-		"Apollo:set414.dagSetMembers" "ApolloRN.placeHolderList[278]" "ApolloRN.placeHolderList[279]" 
+		"Apollo:set414.dagSetMembers" "ApolloRN.placeHolderList[314]" "ApolloRN.placeHolderList[315]" 
 		""
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShape.instObjGroups" 
-		"Apollo:set414.dagSetMembers" "ApolloRN.placeHolderList[280]" "ApolloRN.placeHolderList[281]" 
-		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.instObjGroups" 
-		"Apollo:set416.dagSetMembers" "ApolloRN.placeHolderList[282]" "ApolloRN.placeHolderList[283]" 
-		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.instObjGroups" 
-		"Apollo:set416.dagSetMembers" "ApolloRN.placeHolderList[284]" "ApolloRN.placeHolderList[285]" 
-		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.instObjGroups" 
-		"Apollo:set416.dagSetMembers" "ApolloRN.placeHolderList[286]" "ApolloRN.placeHolderList[287]" 
+		"Apollo:set414.dagSetMembers" "ApolloRN.placeHolderList[316]" "ApolloRN.placeHolderList[317]" 
 		""
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.compInstObjGroups.compObjectGroups[0]" 
-		"Apollo:set416.dagSetMembers" "ApolloRN.placeHolderList[288]" "ApolloRN.placeHolderList[289]" 
+		"Apollo:set416.dagSetMembers" "ApolloRN.placeHolderList[318]" "ApolloRN.placeHolderList[319]" 
 		""
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[43]" 
-		"Apollo:set416.dagSetMembers" "ApolloRN.placeHolderList[290]" "ApolloRN.placeHolderList[291]" 
-		""
-		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[44]" 
-		"Apollo:standardSurface10SG.dagSetMembers" "ApolloRN.placeHolderList[292]" "ApolloRN.placeHolderList[293]" 
+		"Apollo:set416.dagSetMembers" "ApolloRN.placeHolderList[320]" "ApolloRN.placeHolderList[321]" 
 		""
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[46]" 
-		"Apollo:standardSurface10SG.dagSetMembers" "ApolloRN.placeHolderList[294]" "ApolloRN.placeHolderList[295]" 
+		"Apollo:standardSurface10SG.dagSetMembers" "ApolloRN.placeHolderList[322]" "ApolloRN.placeHolderList[323]" 
 		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[44]" 
+		"Apollo:standardSurface10SG.dagSetMembers" "ApolloRN.placeHolderList[324]" "ApolloRN.placeHolderList[325]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[326]" "ApolloRN.placeHolderList[327]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[328]" "ApolloRN.placeHolderList[329]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.instObjGroups" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[330]" "ApolloRN.placeHolderList[331]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.instObjGroups" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[332]" "ApolloRN.placeHolderList[333]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Determined|Apollo:Right_Eye_DeterminedShape.instObjGroups" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[334]" "ApolloRN.placeHolderList[335]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Actually_Bored|Apollo:Right_Eye_Actually_BoredShape.instObjGroups" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[336]" "ApolloRN.placeHolderList[337]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.instObjGroups" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[338]" "ApolloRN.placeHolderList[339]" 
+		"Apollo:surfaceShader3SG.dsm"
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.instObjGroups" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[340]" "ApolloRN.placeHolderList[341]" 
+		"Apollo:surfaceShader3SG.dsm"
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.instObjGroups.objectGroups[0]" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[342]" "ApolloRN.placeHolderList[343]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.instObjGroups" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[344]" "ApolloRN.placeHolderList[345]" 
+		"Apollo:surfaceShader3SG.dsm"
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.instObjGroups" 
+		"Apollo:surfaceShader3SG.dagSetMembers" "ApolloRN.placeHolderList[346]" "ApolloRN.placeHolderList[347]" 
+		"Apollo:standardSurface8SG4.dsm"
+		5 0 "ApolloRN" "Apollo:groupId767.message" "Apollo:surfaceShader3SG.groupNodes" 
+		"ApolloRN.placeHolderList[348]" "ApolloRN.placeHolderList[349]" "Apollo:polySurface733SG.gn"
+		
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.compInstObjGroups.compObjectGroups[1]" 
-		"Apollo:set417.dagSetMembers" "ApolloRN.placeHolderList[296]" "ApolloRN.placeHolderList[297]" 
+		"Apollo:set417.dagSetMembers" "ApolloRN.placeHolderList[350]" "ApolloRN.placeHolderList[351]" 
 		""
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[45]" 
-		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[298]" "ApolloRN.placeHolderList[299]" 
+		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[352]" "ApolloRN.placeHolderList[353]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.instObjGroups" 
+		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[354]" "ApolloRN.placeHolderList[355]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.instObjGroups" 
+		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[356]" "ApolloRN.placeHolderList[357]" 
+		""
+		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.instObjGroups" 
+		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[358]" "ApolloRN.placeHolderList[359]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Analog_SignRN";
 	rename -uid "833B5341-4EEC-7E07-6A1F-4D9027810902";
-	setAttr -s 5 ".phl";
+	setAttr -s 17 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
 	setAttr ".phl[4]" 0;
 	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Analog_SignRN"
 		"Analog_SignRN" 3
@@ -20883,12 +20096,12 @@ createNode reference -n "Analog_SignRN";
 		
 		2 "|Analog_Sign:Sign_Geo" "scale" " -type \"double3\" 0.04857606383929778 0.04857606383929778 0.04857606383929778"
 		
-		"Analog_SignRN" 29
-		2 "|Analog_Sign:Analog_Sign_Asset" "visibility" " 0"
+		"Analog_SignRN" 35
+		2 "|Analog_Sign:Analog_Sign_Asset" "visibility" " 1"
 		2 "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign" "visibility" " 1"
 		
 		2 "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape" 
-		"instObjGroups.objectGroups" " -s 6"
+		"instObjGroups.objectGroups" " -s 13"
 		2 "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Ctrl|Analog_Sign:Transform_Ctrl_Grp|Analog_Sign:Transform_Ctrl" 
 		"translate" " -type \"double3\" -19.51859658344566029 6.44818999875866616 4.72594086517697232"
 		
@@ -20916,25 +20129,43 @@ createNode reference -n "Analog_SignRN";
 		
 		2 "Analog_Sign:standardSurface3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
+		2 "Analog_Sign:AnalogSignGeo" "visibility" " 1"
+		2 "Analog_Sign:AnalogSignCtrls" "visibility" " 1"
 		2 "Analog_Sign:groupParts12" "inputRemoveComponent" " -type \"componentList\" 1 \"f[5290:6251]\""
 		
 		2 "Analog_Sign:groupParts12" "groupId" " 1623"
-		2 "Analog_Sign:AnalogSignGeo" "visibility" " 1"
-		2 "Analog_Sign:AnalogSignCtrls" "visibility" " 1"
 		3 "Analog_Sign:groupId9.groupId" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[19].objectGroupId" 
 		""
 		3 "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[19]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
+		3 "Analog_Sign:groupId9.groupId" "Analog_Sign:groupParts12.groupId" ""
 		3 "Analog_Sign:groupId9.message" ":defaultLastHiddenSet.groupNodes" "-na"
 		
-		3 "Analog_Sign:groupId9.groupId" "Analog_Sign:groupParts12.groupId" ""
 		5 3 "Analog_SignRN" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[0]" 
 		"Analog_SignRN.placeHolderList[1]" ""
 		5 0 "Analog_SignRN" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[2]" 
 		"Analog_Sign:standardSurface2SG.dagSetMembers" "Analog_SignRN.placeHolderList[2]" 
 		"Analog_SignRN.placeHolderList[3]" ""
+		5 0 "Analog_SignRN" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[31]" 
+		"Analog_Sign:standardSurface2SG.dagSetMembers" "Analog_SignRN.placeHolderList[4]" 
+		"Analog_SignRN.placeHolderList[5]" ""
 		5 0 "Analog_SignRN" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[1]" 
-		"Analog_Sign:set2.dagSetMembers" "Analog_SignRN.placeHolderList[4]" "Analog_SignRN.placeHolderList[5]" 
+		"Analog_Sign:set2.dagSetMembers" "Analog_SignRN.placeHolderList[6]" "Analog_SignRN.placeHolderList[7]" 
+		""
+		5 0 "Analog_SignRN" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[30]" 
+		"Analog_Sign:set9.dagSetMembers" "Analog_SignRN.placeHolderList[8]" "Analog_SignRN.placeHolderList[9]" 
+		""
+		5 0 "Analog_SignRN" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[29]" 
+		"Analog_Sign:set10.dagSetMembers" "Analog_SignRN.placeHolderList[10]" "Analog_SignRN.placeHolderList[11]" 
+		""
+		5 0 "Analog_SignRN" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.compInstObjGroups.compObjectGroups[2]" 
+		"Analog_Sign:set11.dagSetMembers" "Analog_SignRN.placeHolderList[12]" "Analog_SignRN.placeHolderList[13]" 
+		""
+		5 0 "Analog_SignRN" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[27]" 
+		"Analog_Sign:set11.dagSetMembers" "Analog_SignRN.placeHolderList[14]" "Analog_SignRN.placeHolderList[15]" 
+		""
+		5 0 "Analog_SignRN" "|Analog_Sign:Analog_Sign_Asset|Analog_Sign:Analog_Sign|Analog_Sign:Analog_SignShape.instObjGroups.objectGroups[28]" 
+		"Analog_Sign:set12.dagSetMembers" "Analog_SignRN.placeHolderList[16]" "Analog_SignRN.placeHolderList[17]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -21185,15 +20416,14 @@ createNode aiAOV -n "aiAOV_specular";
 	setAttr ".aovt" 5;
 createNode lightEditor -n "lightEditor";
 	rename -uid "BA9DCF2F-436A-2E54-2D45-24A42192CE97";
-createNode renderSetupLayer -n "StaticBackground";
+createNode renderSetupLayer -n "Background";
 	rename -uid "078E63F6-4426-FD78-1538-9EB09C9E1169";
 	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
 	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
-createNode renderLayer -n "rs_StaticBackground";
+createNode renderLayer -n "rs_Background";
 	rename -uid "41E556DD-46BC-F462-6FA2-2F8FEFFBD00A";
-	setAttr ".rndr" no;
 	setAttr ".do" 2;
 createNode renderSettingsCollection -n "RenderSettingsCollection";
 	rename -uid "361C1DB0-4095-BFF5-62DA-C6A25AF644A9";
@@ -21215,18 +20445,7 @@ createNode absUniqueOverride -n "startFrame";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "startFrame";
 	setAttr ".tgName" -type "string" "defaultRenderGlobals";
-	setAttr ".atv" 1;
-	setAttr ".es" yes;
-createNode absUniqueOverride -n "endFrame";
-	rename -uid "AE8BCE83-421E-410F-622D-C4851118E961";
-	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
-	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
-	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "atv" -ln "attrValue" -at "time";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "endFrame";
-	setAttr ".tgName" -type "string" "defaultRenderGlobals";
-	setAttr ".atv" 85;
+	setAttr ".atv" 120;
 	setAttr ".es" yes;
 createNode collection -n "collection2";
 	rename -uid "2A207A75-452D-FD6F-BD19-26B374E9DD22";
@@ -21238,61 +20457,8 @@ createNode collection -n "collection2";
 createNode simpleSelector -n "collection2Selector";
 	rename -uid "90D7630C-466A-1382-B8AE-96B0A42D4193";
 	setAttr ".ssl" -type "string" (
-		"|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n"
-		+ "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n"
-		+ "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Scene_Geo\n|Analog_Sign:Analog_Sign_Asset\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n"
-		+ "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n"
-		+ "|ConveyorScene:Lever:Lever");
-createNode renderSetupLayer -n "ApolloFace";
-	rename -uid "88CC1823-4691-BC81-0CAB-59978C3BC918";
-	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
-	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
-createNode renderLayer -n "rs_ApolloFace";
-	rename -uid "12E4CD03-4D0D-55CE-B8CD-E18E645EBC29";
-	setAttr ".rndr" no;
-	setAttr ".do" 3;
-createNode collection -n "Face";
-	rename -uid "4687C1A1-49BD-F395-3E29-2FB72606F773";
-	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
-	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
-	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "FaceSelector";
-	rename -uid "60B9A342-4461-D8F5-B9AF-0D931C18A600";
-	setAttr ".ssl" -type "string" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Eyes|Apollo1:Left_Eye_Grp|Apollo1:Left_Eye\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Mouth_Grp|Apollo1:Mouth\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:Face_Shapes|Apollo1:FaceGeo|Apollo1:Eyes|Apollo1:Right_Eye_Grp|Apollo1:Right_Eye";
-createNode collection -n "Negative3";
-	rename -uid "400F0971-43DB-1E6A-A2B7-9A8C721BE9F1";
-	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
-	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
-	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-createNode simpleSelector -n "Negative3Selector";
-	rename -uid "097625F7-4F2B-1834-3740-9A9FDE3E49DC";
-	setAttr ".ssl" -type "string" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo";
-createNode collection -n "Negative3_shapes";
-	rename -uid "DD543A9C-49B4-8B4A-8B69-EF8590F819F0";
-	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
-	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
-	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "Negative3_shapesSelector";
-	rename -uid "9ED6D103-4062-E8EC-DBAE-B29B658A5A0B";
-	setAttr ".pat" -type "string" "*";
-	setAttr ".tf" 2;
-createNode absOverride -n "aiMatte3";
-	rename -uid "2683D8BD-43F4-2AC1-E6C2-47812E01301D";
-	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
-	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
-	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "aiMatte";
-	setAttr ".atv" yes;
-	setAttr ".es" yes;
+		"|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Conveyor_Main_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Roof\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Track_Lights\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Wall_light_grp\n|Analog_Sign:Analog_Sign_Asset\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n"
+		+ "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2");
 createNode renderSetupLayer -n "AO";
 	rename -uid "AB2DD42A-43AD-6167-4628-CCAAD1AE7E77";
 	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
@@ -21301,7 +20467,6 @@ createNode renderSetupLayer -n "AO";
 	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
 createNode renderLayer -n "rs_AO";
 	rename -uid "A41A077C-4725-5156-AE9E-C08CBF9EA4AC";
-	setAttr ".rndr" no;
 	setAttr ".do" 4;
 createNode collection -n "Everything";
 	rename -uid "6BBEA9A4-4502-9170-146C-7BA5D6EB5ADA";
@@ -21312,12 +20477,7 @@ createNode collection -n "Everything";
 	setAttr ".es" yes;
 createNode simpleSelector -n "EverythingSelector";
 	rename -uid "4D11B2B6-40DD-92D0-6056-63BCB4405B84";
-	setAttr ".ssl" -type "string" (
-		"|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Scene_Geo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n"
-		+ "|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n"
-		+ "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|Analog_Sign:Analog_Sign_Asset\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n"
-		+ "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n"
-		+ "|ConveyorScene:Lever:Lever");
+	setAttr ".ssl" -type "string" "|ConveyorScene:Conveyor_Environment\n|Apollo:Apollo\n|Analog_Sign:Analog_Sign_Asset\n|Dionysus_Asset_Rig:Dionysus\n|BrokenPlaque:Sign";
 createNode materialOverride -n "materialOverride1";
 	rename -uid "09DF8B7C-4A41-FBC5-23F0-6BB2DAA052C9";
 	addAttr -s false -ci true -sn "atv" -ln "attrValue" -at "message";
@@ -21334,7 +20494,6 @@ createNode renderSetupLayer -n "Shadow";
 	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
 createNode renderLayer -n "rs_Shadow";
 	rename -uid "C423E647-4F5F-906F-549C-579CC512584E";
-	setAttr ".rndr" no;
 	setAttr ".do" 5;
 createNode collection -n "Everything1";
 	rename -uid "EDA112D1-4CAD-8F48-EE31-8891F77C3A48";
@@ -21342,15 +20501,9 @@ createNode collection -n "Everything1";
 	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
 	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
 createNode simpleSelector -n "Everything1Selector";
 	rename -uid "4617E911-4D35-79FD-AFBD-A6887B6DE06F";
-	setAttr ".ssl" -type "string" (
-		"|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TeddyShelf\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n"
-		+ "|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Cart|ConveyorScene:Cart\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:WallPapers\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrackAndPlatform1\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n"
-		+ "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:TrashCans\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Scene_Geo\n|Analog_Sign:Analog_Sign_Asset\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Hall\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap8\n"
-		+ "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap5\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap1\n"
-		+ "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:Flap7\n|ConveyorScene:Lever:Lever");
+	setAttr ".ssl" -type "string" "|Analog_Sign:Analog_Sign_Asset\n|Apollo:Apollo\n|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:Conveyor_Environment\n|BrokenPlaque:Sign";
 createNode materialOverride -n "materialOverride2";
 	rename -uid "37FD8DB9-4E33-C4E6-B1DB-7B9B21F611E2";
 	addAttr -s false -ci true -sn "atv" -ln "attrValue" -at "message";
@@ -21392,53 +20545,20 @@ createNode renderSetupLayer -n "Apollo_Layer";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 createNode renderLayer -n "rs_Apollo_Layer";
 	rename -uid "38785911-455B-B021-06F5-8D9968E545BF";
-	setAttr ".rndr" no;
 	setAttr ".do" 6;
 createNode renderSetupLayer -n "Dio";
 	rename -uid "AA2D836D-4AA4-C587-EF53-B580B8EFDBCF";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 createNode renderLayer -n "rs_Dio";
 	rename -uid "446E00C4-4EF8-F0A4-7654-1392AC13C419";
-	setAttr ".rndr" no;
 	setAttr ".do" 7;
-createNode renderSetupLayer -n "DioFace";
-	rename -uid "2068D0BB-4E3B-55A6-5297-A495C4F641F1";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-createNode renderLayer -n "rs_DioFace";
-	rename -uid "5D2338B0-4500-D977-DBBC-C78A6A153521";
-	setAttr ".rndr" no;
-	setAttr ".do" 8;
 createNode collection -n "Apollo2";
 	rename -uid "221BD6B5-43DD-7C25-2F2C-6E8620F17387";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".es" yes;
 createNode simpleSelector -n "collection3Selector";
 	rename -uid "C7BA00B3-4870-A774-E504-ACA0FADC221E";
-	setAttr ".ssl" -type "string" "|Apollo1:Apollo|Apollo1:Geo|Apollo1:ArmGeo\n|Apollo1:Apollo|Apollo1:Geo|Apollo1:NewTreads";
-createNode renderSettingsCollection -n "RenderSettingsCollection1";
-	rename -uid "DAA35632-4375-39B0-DA1A-4CB40E6BF20A";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "RenderSettingsCollection1Selector";
-	rename -uid "A2596CF8-44B3-77DD-B6EF-3B9E24F05279";
-	setAttr ".ssl" -type "string" "defaultRenderGlobals\ndefaultRenderQuality\ndefaultArnoldFilter\ndefaultResolution\ndefaultArnoldDriver\ndefaultArnoldRenderOptions";
-	setAttr ".tf" 0;
-createNode absUniqueOverride -n "startFrame1";
-	rename -uid "CEB4E953-42DB-5FA8-6AFE-4E8815D102BA";
-	addAttr -ci true -sn "atv" -ln "attrValue" -at "time";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "startFrame";
-	setAttr ".tgName" -type "string" "defaultRenderGlobals";
-	setAttr ".atv" 85;
-	setAttr ".es" yes;
-createNode absUniqueOverride -n "endFrame1";
-	rename -uid "3A1FDA93-4004-07E7-7499-9BAA00A0F331";
-	addAttr -ci true -sn "atv" -ln "attrValue" -at "time";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "endFrame";
-	setAttr ".tgName" -type "string" "defaultRenderGlobals";
-	setAttr ".atv" 177;
-	setAttr ".es" yes;
+	setAttr ".ssl" -type "string" "|Apollo:Apollo";
 createNode aiMatte -n "aiMatte4";
 	rename -uid "6CD05828-438E-F1CF-E4FE-C592AF78A31A";
 createNode shadingEngine -n "aiMatte4SG";
@@ -21453,108 +20573,13 @@ createNode shadingEngine -n "aiMatte4SG";
 		,"aiCustomAOVs[1]"} ;
 createNode materialInfo -n "materialInfo612";
 	rename -uid "D2DE1C80-4BEA-710B-97F8-95B40A31D4F9";
-createNode collection -n "Negative";
-	rename -uid "B7B52C13-46A8-EF7B-E0E7-8AB6CAEFD9D9";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "collection4Selector";
-	rename -uid "3FCB0D0D-4DB4-D3AA-646F-C0B6E27DE84F";
-	setAttr ".ssl" -type "string" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin1";
-createNode absOverride -n "aiMatte";
-	rename -uid "1B6905F9-4025-D82E-A9AD-58B2A55B7F3B";
-	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "aiMatte";
-	setAttr ".atv" yes;
-	setAttr ".es" yes;
-createNode collection -n "Negative_shapes";
-	rename -uid "B93235D5-4FAF-2DF4-E5EC-6DA8B3B52918";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "Negative_shapesSelector";
-	rename -uid "5CB35C98-40EB-D3C2-6CEE-189117EAC4D5";
-	setAttr ".pat" -type "string" "*";
-	setAttr ".tf" 2;
 createNode collection -n "collection7";
 	rename -uid "F8F6C85B-4B9E-46A1-4EA7-8EBA94780BEF";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".es" yes;
 createNode simpleSelector -n "collection7Selector";
 	rename -uid "E8208C07-4FD7-7991-5FA8-BB81449B3359";
-	setAttr ".ssl" -type "string" (
-		"|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface666Shape\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface665\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface568\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface576\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface470\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface471\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface472\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface473\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface474\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface475\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface476\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface477\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface478\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface479\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface480\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface481\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface482\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface483\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface484\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface485\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface486\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface487\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface488\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface489\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface490\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface542\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface560\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface566\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface569\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface572\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface589\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface573\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface580\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface564\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface578\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface583\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface577\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface562\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface585\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface574\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface579\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface567\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface588\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface668\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:L_Exhaust_Pipe1Shape\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface520\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface505\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface506\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface507\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface502\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface503\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface530\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface670\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface671\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface664\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface597\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface642\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface598\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface608\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface600\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface604\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface594\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface639\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface606\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface634\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface661\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface647\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface605\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface658\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface599\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface592\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface663\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface697\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface698\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface694\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Ball\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Top_Socket\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torse_Bottom_Socket\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Shoulder_Guards\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface715\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface716\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface717\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface719\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface721\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface720\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface718\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface722\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_01\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_02\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_Shaft\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:group27");
-createNode collection -n "Negative5";
-	rename -uid "112693FE-4C38-5085-3474-8D9B1309DE8A";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "collection8Selector";
-	rename -uid "4AA10CB7-4DF0-22EA-DE48-14A86E9CB864";
-	setAttr ".ssl" -type "string" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin2\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Lever:polySurface213\n|ConveyorScene:Lever:Lever";
-createNode collection -n "collection9";
-	rename -uid "22FC574D-4695-E7BA-A29D-DFBE549C842C";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "collection9Selector";
-	rename -uid "20DA5466-44A5-E980-AF2A-BF874E22B068";
-	setAttr ".ssl" -type "string" "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Right_Eye_Group\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Left_Eye_Group\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Mouth_Group";
-createNode collection -n "Negative6";
-	rename -uid "DAFA1CAE-40ED-30FD-4E89-BB974753A25A";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "collection10Selector";
-	rename -uid "2C4FB263-47F0-3EE3-A680-6F9FF281B539";
-	setAttr ".ssl" -type "string" (
-		"|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_Shaft\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_02\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Propellor_01\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface722\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface718\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface720\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface721\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface719\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface717\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface716\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface715\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Shoulder_Guards\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torse_Bottom_Socket\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Top_Socket\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Torso_Ball\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface694\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface698\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface697\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface663\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface592\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface599\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface658\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface605\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface647\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface661\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface634\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface606\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface639\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface594\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface604\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface600\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface608\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface598\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface642\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface597\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface664\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface671\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface670\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface530\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface503\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface502\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface507\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface506\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface505\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface526\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface520\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:L_Exhaust_Pipe1Shape\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface668\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface588\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface567\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface579\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface574\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface585\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface562\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface577\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface583\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface578\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface564\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface580\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface573\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface589\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface572\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface569\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface566\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface560\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface542\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface490\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface489\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface488\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface487\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface486\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface485\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface484\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface483\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface482\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface481\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface480\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface479\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface478\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface477\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface476\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface475\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface474\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface473\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface472\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface471\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface470\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface576\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface568\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface665\n"
-		+ "|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:polySurface666Shape\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Backpack_main\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Electrical_Box_hinge_01\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Furnace_Main\n|Dionysus_Asset_Rig:Dionysus|Dionysus_Asset_Rig:Geo|Dionysus_Asset_Rig:Body_Main|Dionysus_Asset_Rig:Waist_Rotators\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo");
-createNode absOverride -n "aiMatte6";
-	rename -uid "196F86A6-4476-64F9-F40A-B3B934676692";
-	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "aiMatte";
-	setAttr ".atv" yes;
-	setAttr ".es" yes;
-createNode collection -n "Negative6_shapes";
-	rename -uid "99F302AA-433B-30B9-F97D-9B938CE12E36";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "Negative6_shapesSelector";
-	rename -uid "E57A4E1F-4050-1C92-E02C-6197076ADEC1";
-	setAttr ".pat" -type "string" "*";
-	setAttr ".tf" 2;
-createNode absOverride -n "aiMatte7";
-	rename -uid "22EE8A95-4694-AC55-E304-84B0C570F13D";
-	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "aiMatte";
-	setAttr ".atv" yes;
-	setAttr ".es" yes;
-createNode collection -n "Negative5_shapes";
-	rename -uid "E0A9DC02-4083-0F86-8242-DD95A5217EA6";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "Negative5_shapesSelector";
-	rename -uid "D25F3A01-4334-5149-22F3-4CA234EB818B";
-	setAttr ".pat" -type "string" "*";
-	setAttr ".tf" 2;
+	setAttr ".ssl" -type "string" "|Dionysus_Asset_Rig:Dionysus";
 createNode renderSettingsCollection -n "RenderSettingsCollection2";
 	rename -uid "C4EBDD7B-439F-7131-0708-F3848796519B";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
@@ -21569,7 +20594,7 @@ createNode absUniqueOverride -n "AASamples";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "AASamples";
 	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
-	setAttr ".atv" 1;
+	setAttr ".atv" 2;
 	setAttr ".es" yes;
 createNode renderSettingsCollection -n "RenderSettingsCollection3";
 	rename -uid "DFCA28A7-4FD0-D048-5FA5-E08A633814B8";
@@ -21585,12 +20610,11 @@ createNode absUniqueOverride -n "AASamples1";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "AASamples";
 	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
-	setAttr ".atv" 1;
+	setAttr ".atv" 2;
 	setAttr ".es" yes;
 createNode aovCollection -n "AOVCollection";
 	rename -uid "AF1C17D3-4C6F-8CBF-33A8-19B67676C662";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
 createNode simpleSelector -n "AOVCollectionSelector";
 	rename -uid "5A4EB97B-45E7-4F96-43F2-2A860E0B22FD";
 	setAttr ".pat" -type "string" "*";
@@ -21625,7 +20649,6 @@ createNode absOverride -n "enabled1";
 createNode aovCollection -n "AOVCollection1";
 	rename -uid "D9D2B446-4FD2-E439-6F8F-BC838636146F";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
 createNode simpleSelector -n "AOVCollection1Selector";
 	rename -uid "F08599E9-4B4C-7D8C-4619-7CA7CEC56D5A";
 	setAttr ".pat" -type "string" "*";
@@ -36040,7 +35063,7 @@ createNode animCurveTL -n "MAIN_CAM_translateZ";
 	setAttr -s 2 ".ktv[0:1]"  0 0 120 0;
 createNode reference -n "BrokenPlaqueRN";
 	rename -uid "BC75F595-4BAD-CA03-59D7-C9ACA4CDA881";
-	setAttr -s 64 ".phl";
+	setAttr -s 79 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -36105,19 +35128,34 @@ createNode reference -n "BrokenPlaqueRN";
 	setAttr ".phl[62]" 0;
 	setAttr ".phl[63]" 0;
 	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BrokenPlaqueRN"
 		"BrokenPlaqueRN" 0
-		"BrokenPlaqueRN" 80
+		"BrokenPlaqueRN" 90
 		0 "|BrokenPlaqueRNfosterParent1|Left_Plaque_Ctrl_Grp_parentConstraint1" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp" 
 		"-s -r "
 		0 "|BrokenPlaqueRNfosterParent1|Right_Plaque_Ctrl_Grp_parentConstraint1" 
 		"|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp" 
 		"-s -r "
-		1 |BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl 
+		1 "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl" 
 		"Follow" "Follow" " -ci 1 -k 1 -min 0 -max 4 -en \"COG:Dio Two Hand:Dio Right Hand:Dio Left Hand:Apollo Hand\" -at \"enum\""
 		
-		1 |BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl 
+		1 "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl" 
 		"Follow" "Follow" " -ci 1 -k 1 -min 0 -max 4 -en \"COG:Dio Two Hand:Dio Right Hand:Dio Left Hand:Apollo Hand\" -at \"enum\""
 		
 		2 "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl" 
@@ -36138,6 +35176,8 @@ createNode reference -n "BrokenPlaqueRN";
 		"Follow" " -k 1"
 		2 "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl|BrokenPlaque:LeftPlaque" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl|BrokenPlaque:LeftPlaque|BrokenPlaque:LeftPlaqueShape" 
+		"aiMatte" " 0"
 		2 "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl" 
 		"Follow" " -k 1"
 		2 "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl|BrokenPlaque:RightPlaque" 
@@ -36145,21 +35185,23 @@ createNode reference -n "BrokenPlaqueRN";
 		
 		2 "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl|BrokenPlaque:RightPlaque" 
 		"rotate" " -type \"double3\" 0 0 0"
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.translate" 
+		2 "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl|BrokenPlaque:RightPlaque|BrokenPlaque:RightPlaqueShape" 
+		"aiMatte" " 0"
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotate" 
 		"BrokenPlaqueRN.placeHolderList[1]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.translate" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotate" 
 		"BrokenPlaqueRN.placeHolderList[2]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotatePivot" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.translate" 
 		"BrokenPlaqueRN.placeHolderList[3]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotatePivot" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.translate" 
 		"BrokenPlaqueRN.placeHolderList[4]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotatePivotTranslate" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotatePivot" 
 		"BrokenPlaqueRN.placeHolderList[5]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotatePivotTranslate" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotatePivot" 
 		"BrokenPlaqueRN.placeHolderList[6]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotate" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotatePivotTranslate" 
 		"BrokenPlaqueRN.placeHolderList[7]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotate" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotatePivotTranslate" 
 		"BrokenPlaqueRN.placeHolderList[8]" ""
 		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.rotateOrder" 
 		"BrokenPlaqueRN.placeHolderList[9]" ""
@@ -36173,27 +35215,27 @@ createNode reference -n "BrokenPlaqueRN";
 		"BrokenPlaqueRN.placeHolderList[13]" ""
 		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl.parentMatrix" 
 		"BrokenPlaqueRN.placeHolderList[14]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.translateX" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Sign_geo|BrokenPlaque:Sign_geoShape.instObjGroups.objectGroups[0]" 
 		"BrokenPlaqueRN.placeHolderList[15]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.translateY" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.translateX" 
 		"BrokenPlaqueRN.placeHolderList[16]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.translateZ" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.translateY" 
 		"BrokenPlaqueRN.placeHolderList[17]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotateX" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.translateZ" 
 		"BrokenPlaqueRN.placeHolderList[18]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotateY" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotateX" 
 		"BrokenPlaqueRN.placeHolderList[19]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotateZ" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotateY" 
 		"BrokenPlaqueRN.placeHolderList[20]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotateOrder" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotateZ" 
 		"BrokenPlaqueRN.placeHolderList[21]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.parentInverseMatrix" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotateOrder" 
 		"BrokenPlaqueRN.placeHolderList[22]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotatePivot" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.parentInverseMatrix" 
 		"BrokenPlaqueRN.placeHolderList[23]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotatePivotTranslate" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotatePivot" 
 		"BrokenPlaqueRN.placeHolderList[24]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.Follow" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp.rotatePivotTranslate" 
 		"BrokenPlaqueRN.placeHolderList[25]" ""
 		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.Follow" 
 		"BrokenPlaqueRN.placeHolderList[26]" ""
@@ -36203,47 +35245,47 @@ createNode reference -n "BrokenPlaqueRN";
 		"BrokenPlaqueRN.placeHolderList[28]" ""
 		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.Follow" 
 		"BrokenPlaqueRN.placeHolderList[29]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.Follow" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.Follow" 
 		"BrokenPlaqueRN.placeHolderList[30]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.rotateX" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.Follow" 
 		"BrokenPlaqueRN.placeHolderList[31]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.rotateY" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.rotateX" 
 		"BrokenPlaqueRN.placeHolderList[32]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.rotateZ" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.rotateY" 
 		"BrokenPlaqueRN.placeHolderList[33]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.translateX" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.rotateZ" 
 		"BrokenPlaqueRN.placeHolderList[34]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.translateY" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.translateX" 
 		"BrokenPlaqueRN.placeHolderList[35]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.translateZ" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.translateY" 
 		"BrokenPlaqueRN.placeHolderList[36]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.scaleX" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.translateZ" 
 		"BrokenPlaqueRN.placeHolderList[37]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.scaleY" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.scaleX" 
 		"BrokenPlaqueRN.placeHolderList[38]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.scaleZ" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.scaleY" 
 		"BrokenPlaqueRN.placeHolderList[39]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.translateX" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl.scaleZ" 
 		"BrokenPlaqueRN.placeHolderList[40]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.translateY" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.translateX" 
 		"BrokenPlaqueRN.placeHolderList[41]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.translateZ" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.translateY" 
 		"BrokenPlaqueRN.placeHolderList[42]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotateX" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.translateZ" 
 		"BrokenPlaqueRN.placeHolderList[43]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotateY" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotateX" 
 		"BrokenPlaqueRN.placeHolderList[44]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotateZ" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotateY" 
 		"BrokenPlaqueRN.placeHolderList[45]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotateOrder" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotateZ" 
 		"BrokenPlaqueRN.placeHolderList[46]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.parentInverseMatrix" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotateOrder" 
 		"BrokenPlaqueRN.placeHolderList[47]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotatePivot" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.parentInverseMatrix" 
 		"BrokenPlaqueRN.placeHolderList[48]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotatePivotTranslate" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotatePivot" 
 		"BrokenPlaqueRN.placeHolderList[49]" ""
-		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.Follow" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp.rotatePivotTranslate" 
 		"BrokenPlaqueRN.placeHolderList[50]" ""
 		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.Follow" 
 		"BrokenPlaqueRN.placeHolderList[51]" ""
@@ -36253,26 +35295,49 @@ createNode reference -n "BrokenPlaqueRN";
 		"BrokenPlaqueRN.placeHolderList[53]" ""
 		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.Follow" 
 		"BrokenPlaqueRN.placeHolderList[54]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.Follow" 
+		5 3 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.Follow" 
 		"BrokenPlaqueRN.placeHolderList[55]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.translateX" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.Follow" 
 		"BrokenPlaqueRN.placeHolderList[56]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.translateZ" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.translateX" 
 		"BrokenPlaqueRN.placeHolderList[57]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.translateY" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.translateZ" 
 		"BrokenPlaqueRN.placeHolderList[58]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.rotateX" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.translateY" 
 		"BrokenPlaqueRN.placeHolderList[59]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.rotateY" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.rotateX" 
 		"BrokenPlaqueRN.placeHolderList[60]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.rotateZ" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.rotateY" 
 		"BrokenPlaqueRN.placeHolderList[61]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.scaleX" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.rotateZ" 
 		"BrokenPlaqueRN.placeHolderList[62]" ""
-		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.scaleY" 
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.scaleX" 
 		"BrokenPlaqueRN.placeHolderList[63]" ""
+		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.scaleY" 
+		"BrokenPlaqueRN.placeHolderList[64]" ""
 		5 4 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl.scaleZ" 
-		"BrokenPlaqueRN.placeHolderList[64]" "";
+		"BrokenPlaqueRN.placeHolderList[65]" ""
+		5 0 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Sign_geo|BrokenPlaque:Sign_geoShape.instObjGroups.objectGroups[1]" 
+		"BrokenPlaque:lambert1SG.dagSetMembers" "BrokenPlaqueRN.placeHolderList[66]" "BrokenPlaqueRN.placeHolderList[67]" 
+		""
+		5 0 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl|BrokenPlaque:LeftPlaque|BrokenPlaque:LeftPlaqueShape.compInstObjGroups.compObjectGroups[0]" 
+		"BrokenPlaque:set1.dagSetMembers" "BrokenPlaqueRN.placeHolderList[68]" "BrokenPlaqueRN.placeHolderList[69]" 
+		""
+		5 0 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl|BrokenPlaque:LeftPlaque|BrokenPlaque:LeftPlaqueShape.instObjGroups.objectGroups[0]" 
+		"BrokenPlaque:set1.dagSetMembers" "BrokenPlaqueRN.placeHolderList[70]" "BrokenPlaqueRN.placeHolderList[71]" 
+		""
+		5 0 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl|BrokenPlaque:RightPlaque|BrokenPlaque:RightPlaqueShape.compInstObjGroups.compObjectGroups[0]" 
+		"BrokenPlaque:set1.dagSetMembers" "BrokenPlaqueRN.placeHolderList[72]" "BrokenPlaqueRN.placeHolderList[73]" 
+		""
+		5 0 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl|BrokenPlaque:RightPlaque|BrokenPlaque:RightPlaqueShape.instObjGroups.objectGroups[0]" 
+		"BrokenPlaque:set1.dagSetMembers" "BrokenPlaqueRN.placeHolderList[74]" "BrokenPlaqueRN.placeHolderList[75]" 
+		""
+		5 0 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl|BrokenPlaque:LeftPlaque|BrokenPlaque:LeftPlaqueShape.instObjGroups.objectGroups[1]" 
+		"BrokenPlaque:standardSurface4SG.dagSetMembers" "BrokenPlaqueRN.placeHolderList[76]" 
+		"BrokenPlaqueRN.placeHolderList[77]" ""
+		5 0 "BrokenPlaqueRN" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl|BrokenPlaque:RightPlaque|BrokenPlaque:RightPlaqueShape.instObjGroups.objectGroups[1]" 
+		"BrokenPlaque:standardSurface4SG.dagSetMembers" "BrokenPlaqueRN.placeHolderList[78]" 
+		"BrokenPlaqueRN.placeHolderList[79]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveUU -n "Left_Plaque_Ctrl_Grp_parentConstraint1_COG_CtrlW0";
@@ -36471,7 +35536,7 @@ createNode animCurveTA -n "Right_Plaque_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  0 217.50063603616988 52 217.50063603616988
 		 53 217.50063603616988 54 184.18519223705863 68 184.18519223705863 100 184.18519223705863
-		 105 180.75538952646917 110 176.45771259042098 116 179.41515488544647 128 182.41495135318627
+		 105 180.75538952646917 110 176.45771259042101 116 179.41515488544647 128 182.4149513531863
 		 176 179.97994421262152 183 174.53621509082504 189 122.44469799452634 191 116.05326742043542;
 	setAttr -s 14 ".kit[4:13]"  2 18 18 18 18 18 2 2 
 		18 18;
@@ -36495,7 +35560,7 @@ createNode animCurveTA -n "Right_Plaque_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 14 ".ktv[0:13]"  0 -40.884691357368254 52 -40.884691357368254
 		 53 -40.884691357368254 54 185.1284151850538 68 185.1284151850538 100 185.1284151850538
-		 105 169.74029922749085 110 150.66039339187446 116 172.80579459487257 128 178.1144091086401
+		 105 169.74029922749088 110 150.66039339187446 116 172.80579459487257 128 178.1144091086401
 		 176 177.03495107461183 183 177.03495107461183 189 181.78661216551674 191 177.03495107461183;
 	setAttr -s 14 ".kit[4:13]"  2 18 18 18 18 18 2 18 
 		18 18;
@@ -36646,9 +35711,277 @@ createNode animCurveTU -n "Side_Conveyor_Ctrl_WaveWavelength3";
 	setAttr -s 5 ".kit[3:4]"  2 10;
 	setAttr -s 5 ".kot[3:4]"  2 10;
 	setAttr ".pst" 1;
+createNode aiAtmosphereVolume -n "aiAtmosphereVolume";
+	rename -uid "B8BA8049-4D50-3CE9-AC82-D5B39FAE948E";
+createNode collection -n "Negative";
+	rename -uid "7148AFA3-48FF-C481-415D-A5999CC01636";
+createNode simpleSelector -n "collection11Selector";
+	rename -uid "68EB132B-416F-A1DF-B6EC-B38CCF069E6C";
+	setAttr ".ssl" -type "string" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Right_Plaque_Ctrl_Grp|BrokenPlaque:Right_Plaque_Ctrl|BrokenPlaque:RightPlaque\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin:Hopper_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin";
+createNode absOverride -n "aiMatte";
+	rename -uid "34AE7CB0-4D24-18D1-47EA-C1BF431FDDA8";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "aiMatte";
+	setAttr ".atv" yes;
+createNode collection -n "Negative_shapes";
+	rename -uid "86664D37-462B-46F3-AE47-D49CA8F8B26D";
+createNode simpleSelector -n "Negative_shapesSelector";
+	rename -uid "EA9B8CCF-46CC-F2BA-3023-2499FB1B980F";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 2;
+createNode renderSetupLayer -n "Foreground";
+	rename -uid "B50F9C3E-4FE4-E334-FD39-9789F9850481";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_Foreground";
+	rename -uid "8D977AA4-4715-B0F3-1560-5CA0EFFAB20D";
+	setAttr ".do" 9;
+createNode collection -n "collection12";
+	rename -uid "FFCE2B65-48BF-B74D-DE8A-AC9FE96C3F3D";
+createNode simpleSelector -n "collection12Selector";
+	rename -uid "FFF3A634-4AB1-7E0B-2C96-B98FA8B2C213";
+	setAttr ".ssl" -type "string" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:BackgroundGeo|ConveyorScene:Boxes\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin6\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin4\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bin:Trash_Bin\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin5";
+createNode collection -n "Negative5";
+	rename -uid "112693FE-4C38-5085-3474-8D9B1309DE8A";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode simpleSelector -n "collection8Selector";
+	rename -uid "4AA10CB7-4DF0-22EA-DE48-14A86E9CB864";
+	setAttr ".ssl" -type "string" "|BrokenPlaque:Sign|BrokenPlaque:Transform_Ctrl_Grp|BrokenPlaque:Transform_Ctrl|BrokenPlaque:COG_Ctrl_Grp|BrokenPlaque:COG_Ctrl|BrokenPlaque:Left_Plaque_Ctrl_Grp|BrokenPlaque:Left_Plaque_Ctrl|BrokenPlaque:LeftPlaque\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Hopper_Bins|ConveyorScene:Hopper_Bin3\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors";
+createNode collection -n "Negative5_shapes";
+	rename -uid "E0A9DC02-4083-0F86-8242-DD95A5217EA6";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "Negative5_shapesSelector";
+	rename -uid "D25F3A01-4334-5149-22F3-4CA234EB818B";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 2;
+createNode absOverride -n "aiMatte7";
+	rename -uid "22EE8A95-4694-AC55-E304-84B0C570F13D";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "aiMatte";
+	setAttr ".atv" yes;
+	setAttr ".es" yes;
+createNode renderSettingsCollection -n "RenderSettingsCollection4";
+	rename -uid "A4A875C4-41ED-BBCE-6389-CF9371D0B8B8";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode simpleSelector -n "RenderSettingsCollection4Selector";
+	rename -uid "1CBDEB06-41C4-2CBC-45B1-009CFB449BF7";
+	setAttr ".ssl" -type "string" "defaultArnoldRenderOptions\ndefaultResolution\ndefaultArnoldFilter\ndefaultRenderQuality\ndefaultArnoldDriver\ndefaultRenderGlobals";
+	setAttr ".tf" 0;
+createNode absUniqueOverride -n "startFrame1";
+	rename -uid "01FB547B-4302-2B4E-7A16-B4BF547C4760";
+	addAttr -ci true -sn "atv" -ln "attrValue" -at "time";
+	setAttr ".atr" -type "string" "startFrame";
+	setAttr ".tgName" -type "string" "defaultRenderGlobals";
+	setAttr ".atv" 120;
+createNode collection -n "Negative6";
+	rename -uid "664D31F2-498E-EF55-BC78-6EA6FF0CD755";
+createNode simpleSelector -n "collection13Selector";
+	rename -uid "C3E3C0D2-490D-5D78-8BB6-72BA8A293A5B";
+	setAttr ".ssl" -type "string" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors";
+createNode renderSetupLayer -n "FOG";
+	rename -uid "EBA24BF2-4642-0B3C-DDF3-99A8449759C6";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode renderLayer -n "rs_FOG";
+	rename -uid "429453A7-44EF-D399-E3C7-1183A2D6F191";
+	setAttr ".rndr" no;
+	setAttr ".do" 10;
+createNode renderSettingsCollection -n "RenderSettingsCollection5";
+	rename -uid "B562C1C3-460A-1C4F-CCE4-1883155372F0";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+createNode simpleSelector -n "RenderSettingsCollection5Selector";
+	rename -uid "97988402-4ABF-A6D4-423B-98BAC22A2367";
+	setAttr ".ssl" -type "string" "defaultArnoldFilter\ndefaultArnoldDriver\ndefaultArnoldRenderOptions\ndefaultRenderQuality\ndefaultResolution\ndefaultRenderGlobals";
+	setAttr ".tf" 0;
+createNode absUniqueOverride -n "AASamples2";
+	rename -uid "65B7662B-41EA-26F8-ACA3-85966D54BC6E";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min -10 -max 100 -smn 1 -smx 10 -at "long";
+	setAttr ".atr" -type "string" "AASamples";
+	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
+	setAttr ".atv" 2;
+createNode aovCollection -n "AOVCollection2";
+	rename -uid "13CBF51A-423E-8D97-5F94-6C81F30AF2A4";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode simpleSelector -n "AOVCollection2Selector";
+	rename -uid "CD705E2F-433E-E807-D30E-BE961C0F2579";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 8;
+	setAttr ".cfv" -type "string" "aiAOV aiAOVDriver aiAOVFilter";
+createNode aovChildCollection -n "diffuse2";
+	rename -uid "E4D6C9A6-41C5-7AB4-F17E-0A9453CAC259";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+createNode arnoldAOVChildSelector -n "diffuse2Selector";
+	rename -uid "A36379AE-4DD6-37F3-AF8C-C7934DCBD0A8";
+	setAttr ".ann" -type "string" "aiAOV_diffuse";
+createNode absOverride -n "enabled4";
+	rename -uid "2405FBD1-4005-60F6-203E-5B8BB780349A";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode aovChildCollection -n "specular2";
+	rename -uid "73FDEC12-449E-57D9-B082-5CBBAA598157";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+createNode arnoldAOVChildSelector -n "specular2Selector";
+	rename -uid "61EBE289-4280-C26D-3D1F-D9BA83A31D25";
+	setAttr ".ann" -type "string" "aiAOV_specular";
+createNode absOverride -n "enabled5";
+	rename -uid "F30F069C-42EB-E991-D7EA-599AEF1DC62D";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "enabled";
+createNode collection -n "Everything2";
+	rename -uid "48105C37-4E43-BA57-9FB8-A384D6541D02";
+	addAttr -ci true -sn "nts" -ln "notes" -dt "string";
+	addAttr -ci true -sn "lc" -ln "labelColor" -dt "string";
+	addAttr -ci true -sn "imp" -ln "imported" -dv 1 -min 0 -max 1 -at "bool";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
+createNode simpleSelector -n "Everything2Selector";
+	rename -uid "B9A33B56-44AB-6799-8C45-EDB4287A1A8E";
+	setAttr ".ssl" -type "string" "|Analog_Sign:Analog_Sign_Asset\n|Apollo:Apollo\n|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:Conveyor_Environment\n|BrokenPlaque:Sign";
+createNode absOverride -n "aiMatte8";
+	rename -uid "4730C578-442F-D613-FEC6-B7844830DF69";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "aiMatte";
+	setAttr ".atv" yes;
+createNode collection -n "Everything2_shapes";
+	rename -uid "288A8DC5-4C95-4601-DFE7-A697F5DE5B96";
+createNode simpleSelector -n "Everything2_shapesSelector";
+	rename -uid "62354D1C-4E35-CB34-DE4C-31904C027EB7";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 2;
+createNode collection -n "aiAtmosphereVolume_col";
+	rename -uid "FB84F958-45A9-1442-05B8-04A4EA62C068";
+createNode simpleSelector -n "aiAtmosphereVolume_colSelector";
+	rename -uid "12052B51-4EBA-0C9A-236D-E985B13B2025";
+	setAttr ".ssl" -type "string" "aiAtmosphereVolume";
+	setAttr ".tf" 3;
+createNode absOverride -n "density";
+	rename -uid "14B8FCF7-48D8-4D44-89AA-09899E7B59A2";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "float";
+	setAttr ".atr" -type "string" "density";
+	setAttr ".atv" 0.004999999888241291;
+createNode renderSetupLayer -n "ConveyorMain";
+	rename -uid "76A26681-472E-C050-0359-C18AF667D557";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_ConveyorMain";
+	rename -uid "C8579EBC-48AA-98D8-B1F9-CD9FEB2BBA90";
+	setAttr ".do" 11;
+createNode renderSetupLayer -n "ConveyorBelt";
+	rename -uid "F256679D-46E5-4944-5197-3B857527B918";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_ConveyorBelt";
+	rename -uid "AB562699-4897-D940-DDCD-4DB8AF6C15E6";
+	setAttr ".do" 12;
+createNode collection -n "collection14";
+	rename -uid "C6BEDC05-467D-3916-5104-FBBB90054058";
+createNode simpleSelector -n "collection14Selector";
+	rename -uid "A1F801AD-4F47-E793-F130-1DB29283FD14";
+	setAttr ".ssl" -type "string" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:CentralConveyorGeo";
+createNode collection -n "collection15";
+	rename -uid "8A22EE95-4874-81B9-FA39-95940F72AD3E";
+createNode simpleSelector -n "collection15Selector";
+	rename -uid "1370D1B5-474C-8633-BF87-A89EEFE558A7";
+	setAttr ".ssl" -type "string" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:CentralConveyorGeoGrp|ConveyorScene:ConveyorRig:CentralConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo";
+createNode collection -n "Negative7";
+	rename -uid "A609FE16-4381-F9B3-8AAD-E4B0398C0B24";
+createNode simpleSelector -n "collection16Selector";
+	rename -uid "D26A6473-47A4-418E-80DA-95875A4071DF";
+	setAttr ".ssl" -type "string" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:CentralConveyorGeoGrp|ConveyorScene:ConveyorRig:CentralConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyorGeoGrp|ConveyorScene:ConveyorRig:SideConveyorGeo\n|Dionysus_Asset_Rig:Dionysus\n|Apollo:Apollo\n|BrokenPlaque:Sign";
+createNode absOverride -n "aiMatte9";
+	rename -uid "BD50C365-40D6-1F9A-8A34-B2AE13518120";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "aiMatte";
+	setAttr ".atv" yes;
+createNode collection -n "Negative7_shapes";
+	rename -uid "BC4E4F86-4A90-F13B-F983-7187DF9D0EE9";
+createNode simpleSelector -n "Negative7_shapesSelector";
+	rename -uid "6E92FA0F-48B8-412C-501D-218DE644E6D0";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 2;
+createNode collection -n "Negative8";
+	rename -uid "68C178AB-4908-BC88-8C83-6E9B3EEBAC14";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode simpleSelector -n "collection17Selector";
+	rename -uid "704C9FB7-43BB-5E7F-5998-3690D44B217F";
+	setAttr ".ssl" -type "string" "|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:CentralConveyorGeo";
+createNode renderSetupLayer -n "ActiveProps";
+	rename -uid "BDC849B6-4B5F-0079-420F-E9965FFA70B8";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+createNode renderLayer -n "rs_ActiveProps";
+	rename -uid "945C530A-4DFC-5FB0-F59E-DEAE47E4B83B";
+	setAttr ".do" 13;
+createNode collection -n "collection18";
+	rename -uid "488BC127-4BFF-EB39-862E-3AA4E52E24E7";
+createNode simpleSelector -n "collection18Selector";
+	rename -uid "6BD793C7-4BDE-CA9C-4882-15AA0BCB90A2";
+	setAttr ".ssl" -type "string" "|BrokenPlaque:Sign";
+createNode collection -n "Negative9";
+	rename -uid "603C315A-4EC2-B9B3-D212-50BC5D47852A";
+createNode simpleSelector -n "collection19Selector";
+	rename -uid "FCA00F60-461E-BD5B-BDF9-BAB2F1C3ADE0";
+	setAttr ".ssl" -type "string" "|Apollo:Apollo\n|Dionysus_Asset_Rig:Dionysus\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:CentralConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:CentralConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:LeftSideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo\n|ConveyorScene:Conveyor_Environment|ConveyorScene:Geo|ConveyorScene:Conveyors|ConveyorScene:ConveyorRig:RightSideConveyor|ConveyorScene:ConveyorRig:Geo|ConveyorScene:ConveyorRig:SideConveyor|ConveyorScene:ConveyorRig:ConveyorGeo";
+createNode absOverride -n "aiMatte10";
+	rename -uid "7B8638FE-4703-80C5-3082-8BBF06F2148F";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "aiMatte";
+	setAttr ".atv" yes;
+createNode collection -n "Negative9_shapes";
+	rename -uid "0113C826-446C-1607-35D8-C4871A1950F8";
+createNode simpleSelector -n "Negative9_shapesSelector";
+	rename -uid "740F6832-44D6-26D9-7B50-2787E252C676";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 2;
+createNode absOverride -n "aiMatte11";
+	rename -uid "EC09E4C2-4ED4-867F-C664-ED9FBA6C17CE";
+	addAttr -ci true -sn "atv" -ln "attrValue" -min 0 -max 1 -at "bool";
+	setAttr ".atr" -type "string" "aiMatte";
+	setAttr ".atv" yes;
+createNode collection -n "Negative8_shapes";
+	rename -uid "F6FADCB2-438A-06B9-424F-C3A190EBBBA2";
+createNode simpleSelector -n "Negative8_shapesSelector";
+	rename -uid "BE3945F4-414B-6065-E821-FB81A2F60E94";
+	setAttr ".pat" -type "string" "*";
+	setAttr ".tf" 2;
+createNode surfaceShader -n "Face_Backer_Projection";
+	rename -uid "07A41030-46F4-05CF-05D1-6A8476B5490D";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo7";
+	rename -uid "3FDB9735-48A6-5751-D3C7-D282A2010204";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -440.47617297323995 175.55675343629568 ;
+	setAttr ".tgi[0].vh" -type "double2" 419.04760239616348 475.25358402543151 ;
+	setAttr -s 2 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -104.28571319580078;
+	setAttr ".tgi[0].ni[0].y" 268.57144165039062;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 45.714286804199219;
+	setAttr ".tgi[0].ni[1].y" 282.85714721679688;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "CCF9F1B5-4470-112D-D312-238A3674DD2E";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
-	setAttr ".o" 8;
-	setAttr ".unw" 8;
+	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -36657,28 +35990,28 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 223 ".st";
+	setAttr -s 233 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 80 ".s";
+	setAttr -s 57 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 313 ".u";
+	setAttr -s 336 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 19 ".r";
+	setAttr -s 22 ".r";
 select -ne :lightList1;
 	setAttr -s 54 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 336 ".tx";
+	setAttr -s 163 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr -s 26 ".dsm";
+	setAttr -s 24 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 50 ".gn";
+	setAttr -s 49 ".gn";
 	setAttr -s 2 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "diffuse";
 	setAttr ".aovs[1].aov_name" -type "string" "specular";
@@ -36695,7 +36028,7 @@ select -ne :defaultRenderGlobals;
 	setAttr ".outf" 51;
 	setAttr ".imfkey" -type "string" "exr";
 	setAttr ".an" yes;
-	setAttr ".ef" 177;
+	setAttr ".ef" 191;
 	setAttr ".ofe" -type "string" "";
 	setAttr ".efe" -type "string" "";
 	setAttr ".oft" -type "string" "";
@@ -36733,49 +36066,81 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 3 ".sol";
-connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[450]";
-connectAttr "Hopper_Bin2_translateY.o" "ConveyorSceneRN.phl[451]";
-connectAttr "Hopper_Bin2_translateZ.o" "ConveyorSceneRN.phl[452]";
-connectAttr "Hopper_Bin2_translateX.o" "ConveyorSceneRN.phl[453]";
-connectAttr "Hopper_Bin2_rotateX.o" "ConveyorSceneRN.phl[454]";
-connectAttr "Hopper_Bin2_rotateY.o" "ConveyorSceneRN.phl[455]";
-connectAttr "Hopper_Bin2_rotateZ.o" "ConveyorSceneRN.phl[456]";
-connectAttr "Hopper_Bin2_visibility.o" "ConveyorSceneRN.phl[457]";
-connectAttr "Hopper_Bin2_scaleX.o" "ConveyorSceneRN.phl[458]";
-connectAttr "Hopper_Bin2_scaleY.o" "ConveyorSceneRN.phl[459]";
-connectAttr "Hopper_Bin2_scaleZ.o" "ConveyorSceneRN.phl[460]";
-connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[461]";
-connectAttr "Hopper_Bin3_translateY.o" "ConveyorSceneRN.phl[462]";
-connectAttr "Hopper_Bin3_translateZ.o" "ConveyorSceneRN.phl[463]";
-connectAttr "Hopper_Bin3_translateX.o" "ConveyorSceneRN.phl[464]";
-connectAttr "Hopper_Bin3_rotateX.o" "ConveyorSceneRN.phl[465]";
-connectAttr "Hopper_Bin3_rotateY.o" "ConveyorSceneRN.phl[466]";
-connectAttr "Hopper_Bin3_rotateZ.o" "ConveyorSceneRN.phl[467]";
-connectAttr "Hopper_Bin3_visibility.o" "ConveyorSceneRN.phl[468]";
-connectAttr "Hopper_Bin3_scaleX.o" "ConveyorSceneRN.phl[469]";
-connectAttr "Hopper_Bin3_scaleY.o" "ConveyorSceneRN.phl[470]";
-connectAttr "Hopper_Bin3_scaleZ.o" "ConveyorSceneRN.phl[471]";
-connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[472]";
-connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[473]";
-connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[474]";
-connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[475]";
-connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[476]";
-connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[477]";
-connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[478]";
-connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[479]";
+connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[458]";
+connectAttr "Hopper_Bin2_translateY.o" "ConveyorSceneRN.phl[459]";
+connectAttr "Hopper_Bin2_translateZ.o" "ConveyorSceneRN.phl[460]";
+connectAttr "Hopper_Bin2_translateX.o" "ConveyorSceneRN.phl[461]";
+connectAttr "Hopper_Bin2_rotateX.o" "ConveyorSceneRN.phl[462]";
+connectAttr "Hopper_Bin2_rotateY.o" "ConveyorSceneRN.phl[463]";
+connectAttr "Hopper_Bin2_rotateZ.o" "ConveyorSceneRN.phl[464]";
+connectAttr "Hopper_Bin2_visibility.o" "ConveyorSceneRN.phl[465]";
+connectAttr "Hopper_Bin2_scaleX.o" "ConveyorSceneRN.phl[466]";
+connectAttr "Hopper_Bin2_scaleY.o" "ConveyorSceneRN.phl[467]";
+connectAttr "Hopper_Bin2_scaleZ.o" "ConveyorSceneRN.phl[468]";
+connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[469]";
+connectAttr "Hopper_Bin3_translateY.o" "ConveyorSceneRN.phl[470]";
+connectAttr "Hopper_Bin3_translateZ.o" "ConveyorSceneRN.phl[471]";
+connectAttr "Hopper_Bin3_translateX.o" "ConveyorSceneRN.phl[472]";
+connectAttr "Hopper_Bin3_rotateX.o" "ConveyorSceneRN.phl[473]";
+connectAttr "Hopper_Bin3_rotateY.o" "ConveyorSceneRN.phl[474]";
+connectAttr "Hopper_Bin3_rotateZ.o" "ConveyorSceneRN.phl[475]";
+connectAttr "Hopper_Bin3_visibility.o" "ConveyorSceneRN.phl[476]";
+connectAttr "Hopper_Bin3_scaleX.o" "ConveyorSceneRN.phl[477]";
+connectAttr "Hopper_Bin3_scaleY.o" "ConveyorSceneRN.phl[478]";
+connectAttr "Hopper_Bin3_scaleZ.o" "ConveyorSceneRN.phl[479]";
 connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[480]";
 connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[481]";
-connectAttr "ConveyorSceneRN.phl[482]" "ConveyorSceneRN.phl[483]";
-connectAttr "ConveyorSceneRN.phl[484]" "ConveyorSceneRN.phl[485]";
-connectAttr "ConveyorSceneRN.phl[486]" "ConveyorSceneRN.phl[487]";
-connectAttr "ConveyorSceneRN.phl[488]" "ConveyorSceneRN.phl[489]";
-connectAttr "ConveyorSceneRN.phl[490]" "ConveyorSceneRN.phl[491]";
-connectAttr "ConveyorSceneRN.phl[492]" "ConveyorSceneRN.phl[493]";
-connectAttr "ConveyorSceneRN.phl[494]" "ConveyorSceneRN.phl[495]";
-connectAttr "ConveyorSceneRN.phl[496]" "ConveyorSceneRN.phl[497]";
-connectAttr "Handle_Jnt_Ctrl_rotateZ1.o" "ConveyorSceneRN.phl[447]";
-connectAttr "ConveyorSceneRN.phl[448]" "ConveyorSceneRN.phl[449]";
-connectAttr "ConveyorSceneRN.phl[372]" "ConveyorSceneRN.phl[373]";
+connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[482]";
+connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[483]";
+connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[484]";
+connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[485]";
+connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[486]";
+connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[487]";
+connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[488]";
+connectAttr "ConveyorSceneRN.phl[489]" ":initialShadingGroup.dsm" -na;
+connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[490]";
+connectAttr "ConveyorSceneRN.phl[491]" ":initialShadingGroup.dsm" -na;
+connectAttr "ConveyorSceneRN.phl[492]" ":initialShadingGroup.dsm" -na;
+connectAttr "ConveyorSceneRN.phl[493]" ":initialShadingGroup.dsm" -na;
+connectAttr "ConveyorSceneRN.phl[494]" ":initialShadingGroup.dsm" -na;
+connectAttr "ConveyorSceneRN.phl[495]" ":initialShadingGroup.dsm" -na;
+connectAttr "ConveyorSceneRN.phl[496]" ":initialShadingGroup.dsm" -na;
+connectAttr "ConveyorSceneRN.phl[497]" ":initialShadingGroup.dsm" -na;
+connectAttr "ConveyorSceneRN.phl[498]" ":initialShadingGroup.dsm" -na;
+connectAttr "ConveyorSceneRN.phl[499]" ":initialShadingGroup.dsm" -na;
+connectAttr "ConveyorSceneRN.phl[500]" ":initialShadingGroup.dsm" -na;
+connectAttr "ConveyorSceneRN.phl[501]" "ConveyorSceneRN.phl[502]";
+connectAttr "ConveyorSceneRN.phl[503]" "ConveyorSceneRN.phl[504]";
+connectAttr "ConveyorSceneRN.phl[505]" "ConveyorSceneRN.phl[506]";
+connectAttr "ConveyorSceneRN.phl[507]" "ConveyorSceneRN.phl[508]";
+connectAttr "ConveyorSceneRN.phl[509]" "ConveyorSceneRN.phl[510]";
+connectAttr "ConveyorSceneRN.phl[511]" "ConveyorSceneRN.phl[512]";
+connectAttr "ConveyorSceneRN.phl[513]" "ConveyorSceneRN.phl[514]";
+connectAttr "ConveyorSceneRN.phl[515]" "ConveyorSceneRN.phl[516]";
+connectAttr "ConveyorSceneRN.phl[517]" "ConveyorSceneRN.phl[518]";
+connectAttr "ConveyorSceneRN.phl[519]" "ConveyorSceneRN.phl[520]";
+connectAttr "ConveyorSceneRN.phl[521]" "ConveyorSceneRN.phl[522]";
+connectAttr "ConveyorSceneRN.phl[523]" "ConveyorSceneRN.phl[524]";
+connectAttr "ConveyorSceneRN.phl[525]" "ConveyorSceneRN.phl[526]";
+connectAttr "ConveyorSceneRN.phl[527]" "ConveyorSceneRN.phl[528]";
+connectAttr "ConveyorSceneRN.phl[529]" "ConveyorSceneRN.phl[530]";
+connectAttr "ConveyorSceneRN.phl[531]" "ConveyorSceneRN.phl[532]";
+connectAttr "ConveyorSceneRN.phl[533]" "ConveyorSceneRN.phl[534]";
+connectAttr "ConveyorSceneRN.phl[535]" "ConveyorSceneRN.phl[536]";
+connectAttr "ConveyorSceneRN.phl[537]" "ConveyorSceneRN.phl[538]";
+connectAttr "ConveyorSceneRN.phl[539]" "ConveyorSceneRN.phl[540]";
+connectAttr "ConveyorSceneRN.phl[541]" "ConveyorSceneRN.phl[542]";
+connectAttr "ConveyorSceneRN.phl[543]" "ConveyorSceneRN.phl[544]";
+connectAttr "ConveyorSceneRN.phl[545]" "ConveyorSceneRN.phl[546]";
+connectAttr "ConveyorSceneRN.phl[547]" "ConveyorSceneRN.phl[548]";
+connectAttr "ConveyorSceneRN.phl[549]" "ConveyorSceneRN.phl[550]";
+connectAttr "ConveyorSceneRN.phl[551]" "ConveyorSceneRN.phl[552]";
+connectAttr "ConveyorSceneRN.phl[553]" "ConveyorSceneRN.phl[554]";
+connectAttr "Handle_Jnt_Ctrl_rotateZ1.o" "ConveyorSceneRN.phl[449]";
+connectAttr "ConveyorSceneRN.phl[450]" "ConveyorSceneRN.phl[451]";
+connectAttr "ConveyorSceneRN.phl[452]" "ConveyorSceneRN.phl[453]";
+connectAttr "ConveyorSceneRN.phl[454]" "ConveyorSceneRN.phl[455]";
+connectAttr "ConveyorSceneRN.phl[456]" "ConveyorSceneRN.phl[457]";
 connectAttr "ConveyorSceneRN.phl[374]" "ConveyorSceneRN.phl[375]";
 connectAttr "ConveyorSceneRN.phl[376]" "ConveyorSceneRN.phl[377]";
 connectAttr "ConveyorSceneRN.phl[378]" "ConveyorSceneRN.phl[379]";
@@ -36785,26 +36150,26 @@ connectAttr "ConveyorSceneRN.phl[384]" "ConveyorSceneRN.phl[385]";
 connectAttr "ConveyorSceneRN.phl[386]" "ConveyorSceneRN.phl[387]";
 connectAttr "ConveyorSceneRN.phl[388]" "ConveyorSceneRN.phl[389]";
 connectAttr "ConveyorSceneRN.phl[390]" "ConveyorSceneRN.phl[391]";
-connectAttr "Side_Conveyor_Ctrl_Rotation2.o" "ConveyorSceneRN.phl[392]";
-connectAttr "Side_Conveyor_Ctrl_Speed2.o" "ConveyorSceneRN.phl[393]";
-connectAttr "Side_Conveyor_Ctrl_WaveAmplitude2.o" "ConveyorSceneRN.phl[394]";
-connectAttr "Side_Conveyor_Ctrl_WavePosition2.o" "ConveyorSceneRN.phl[395]";
-connectAttr "Side_Conveyor_Ctrl_WaveWavelength2.o" "ConveyorSceneRN.phl[396]";
-connectAttr "WireDeformerCurve_rotateX2.o" "ConveyorSceneRN.phl[397]";
-connectAttr "WireDeformerCurve_rotateY2.o" "ConveyorSceneRN.phl[398]";
-connectAttr "WireDeformerCurve_rotateZ2.o" "ConveyorSceneRN.phl[399]";
-connectAttr "WireDeformerCurve_visibility2.o" "ConveyorSceneRN.phl[400]";
-connectAttr "WireDeformerCurve_translateX2.o" "ConveyorSceneRN.phl[401]";
-connectAttr "WireDeformerCurve_translateY2.o" "ConveyorSceneRN.phl[402]";
-connectAttr "WireDeformerCurve_translateZ2.o" "ConveyorSceneRN.phl[403]";
-connectAttr "WireDeformerCurve_scaleX2.o" "ConveyorSceneRN.phl[404]";
-connectAttr "WireDeformerCurve_scaleY2.o" "ConveyorSceneRN.phl[405]";
-connectAttr "WireDeformerCurve_scaleZ2.o" "ConveyorSceneRN.phl[406]";
-connectAttr "ConveyorSceneRN.phl[407]" "ConveyorSceneRN.phl[408]";
+connectAttr "ConveyorSceneRN.phl[392]" "ConveyorSceneRN.phl[393]";
+connectAttr "Side_Conveyor_Ctrl_Rotation2.o" "ConveyorSceneRN.phl[394]";
+connectAttr "Side_Conveyor_Ctrl_Speed2.o" "ConveyorSceneRN.phl[395]";
+connectAttr "Side_Conveyor_Ctrl_WaveAmplitude2.o" "ConveyorSceneRN.phl[396]";
+connectAttr "Side_Conveyor_Ctrl_WavePosition2.o" "ConveyorSceneRN.phl[397]";
+connectAttr "Side_Conveyor_Ctrl_WaveWavelength2.o" "ConveyorSceneRN.phl[398]";
+connectAttr "WireDeformerCurve_rotateX2.o" "ConveyorSceneRN.phl[399]";
+connectAttr "WireDeformerCurve_rotateY2.o" "ConveyorSceneRN.phl[400]";
+connectAttr "WireDeformerCurve_rotateZ2.o" "ConveyorSceneRN.phl[401]";
+connectAttr "WireDeformerCurve_visibility2.o" "ConveyorSceneRN.phl[402]";
+connectAttr "WireDeformerCurve_translateX2.o" "ConveyorSceneRN.phl[403]";
+connectAttr "WireDeformerCurve_translateY2.o" "ConveyorSceneRN.phl[404]";
+connectAttr "WireDeformerCurve_translateZ2.o" "ConveyorSceneRN.phl[405]";
+connectAttr "WireDeformerCurve_scaleX2.o" "ConveyorSceneRN.phl[406]";
+connectAttr "WireDeformerCurve_scaleY2.o" "ConveyorSceneRN.phl[407]";
+connectAttr "WireDeformerCurve_scaleZ2.o" "ConveyorSceneRN.phl[408]";
 connectAttr "ConveyorSceneRN.phl[409]" "ConveyorSceneRN.phl[410]";
-connectAttr "Central_Conveyor_Ctrl_Rotation1.o" "ConveyorSceneRN.phl[411]";
-connectAttr "Central_Conveyor_Ctrl_Speed1.o" "ConveyorSceneRN.phl[412]";
-connectAttr "ConveyorSceneRN.phl[413]" "ConveyorSceneRN.phl[414]";
+connectAttr "ConveyorSceneRN.phl[411]" "ConveyorSceneRN.phl[412]";
+connectAttr "Central_Conveyor_Ctrl_Rotation1.o" "ConveyorSceneRN.phl[413]";
+connectAttr "Central_Conveyor_Ctrl_Speed1.o" "ConveyorSceneRN.phl[414]";
 connectAttr "ConveyorSceneRN.phl[415]" "ConveyorSceneRN.phl[416]";
 connectAttr "ConveyorSceneRN.phl[417]" "ConveyorSceneRN.phl[418]";
 connectAttr "ConveyorSceneRN.phl[419]" "ConveyorSceneRN.phl[420]";
@@ -36814,20 +36179,21 @@ connectAttr "ConveyorSceneRN.phl[425]" "ConveyorSceneRN.phl[426]";
 connectAttr "ConveyorSceneRN.phl[427]" "ConveyorSceneRN.phl[428]";
 connectAttr "ConveyorSceneRN.phl[429]" "ConveyorSceneRN.phl[430]";
 connectAttr "ConveyorSceneRN.phl[431]" "ConveyorSceneRN.phl[432]";
-connectAttr "Side_Conveyor_Ctrl_Rotation3.o" "ConveyorSceneRN.phl[433]";
-connectAttr "Side_Conveyor_Ctrl_Speed3.o" "ConveyorSceneRN.phl[434]";
-connectAttr "Side_Conveyor_Ctrl_WaveAmplitude3.o" "ConveyorSceneRN.phl[435]";
-connectAttr "Side_Conveyor_Ctrl_WavePosition3.o" "ConveyorSceneRN.phl[436]";
-connectAttr "Side_Conveyor_Ctrl_WaveWavelength3.o" "ConveyorSceneRN.phl[437]";
-connectAttr "Side_Conveyor_Ctrl_rotateX.o" "ConveyorSceneRN.phl[438]";
-connectAttr "Side_Conveyor_Ctrl_rotateY.o" "ConveyorSceneRN.phl[439]";
-connectAttr "Side_Conveyor_Ctrl_rotateZ.o" "ConveyorSceneRN.phl[440]";
-connectAttr "Side_Conveyor_Ctrl_translateX.o" "ConveyorSceneRN.phl[441]";
-connectAttr "Side_Conveyor_Ctrl_translateY.o" "ConveyorSceneRN.phl[442]";
-connectAttr "Side_Conveyor_Ctrl_translateZ.o" "ConveyorSceneRN.phl[443]";
-connectAttr "Side_Conveyor_Ctrl_scaleX.o" "ConveyorSceneRN.phl[444]";
-connectAttr "Side_Conveyor_Ctrl_scaleY.o" "ConveyorSceneRN.phl[445]";
-connectAttr "Side_Conveyor_Ctrl_scaleZ.o" "ConveyorSceneRN.phl[446]";
+connectAttr "ConveyorSceneRN.phl[433]" "ConveyorSceneRN.phl[434]";
+connectAttr "Side_Conveyor_Ctrl_Rotation3.o" "ConveyorSceneRN.phl[435]";
+connectAttr "Side_Conveyor_Ctrl_Speed3.o" "ConveyorSceneRN.phl[436]";
+connectAttr "Side_Conveyor_Ctrl_WaveAmplitude3.o" "ConveyorSceneRN.phl[437]";
+connectAttr "Side_Conveyor_Ctrl_WavePosition3.o" "ConveyorSceneRN.phl[438]";
+connectAttr "Side_Conveyor_Ctrl_WaveWavelength3.o" "ConveyorSceneRN.phl[439]";
+connectAttr "Side_Conveyor_Ctrl_rotateX.o" "ConveyorSceneRN.phl[440]";
+connectAttr "Side_Conveyor_Ctrl_rotateY.o" "ConveyorSceneRN.phl[441]";
+connectAttr "Side_Conveyor_Ctrl_rotateZ.o" "ConveyorSceneRN.phl[442]";
+connectAttr "Side_Conveyor_Ctrl_translateX.o" "ConveyorSceneRN.phl[443]";
+connectAttr "Side_Conveyor_Ctrl_translateY.o" "ConveyorSceneRN.phl[444]";
+connectAttr "Side_Conveyor_Ctrl_translateZ.o" "ConveyorSceneRN.phl[445]";
+connectAttr "Side_Conveyor_Ctrl_scaleX.o" "ConveyorSceneRN.phl[446]";
+connectAttr "Side_Conveyor_Ctrl_scaleY.o" "ConveyorSceneRN.phl[447]";
+connectAttr "Side_Conveyor_Ctrl_scaleZ.o" "ConveyorSceneRN.phl[448]";
 connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[354]";
 connectAttr "BackgroundGeoLayer.di" "ConveyorSceneRN.phl[355]";
 connectAttr "ConveyorSceneRN.phl[356]" "ConveyorSceneRN.phl[357]";
@@ -36838,6 +36204,7 @@ connectAttr "ConveyorSceneRN.phl[364]" "ConveyorSceneRN.phl[365]";
 connectAttr "ConveyorSceneRN.phl[366]" "ConveyorSceneRN.phl[367]";
 connectAttr "ConveyorSceneRN.phl[368]" "ConveyorSceneRN.phl[369]";
 connectAttr "ConveyorSceneRN.phl[370]" "ConveyorSceneRN.phl[371]";
+connectAttr "ConveyorSceneRN.phl[372]" "ConveyorSceneRN.phl[373]";
 connectAttr "Dionysus_Asset_RigRN.phl[1131]" ":initialShadingGroup.dsm" -na;
 connectAttr "Dionysus_Asset_RigRN.phl[1132]" ":initialShadingGroup.dsm" -na;
 connectAttr "Dionysus_Asset_RigRN.phl[1133]" ":initialShadingGroup.dsm" -na;
@@ -37746,80 +37113,80 @@ connectAttr "L_Clav_Ctrl_scaleY.o" "Dionysus_Asset_RigRN.phl[1797]";
 connectAttr "L_Clav_Ctrl_scaleZ.o" "Dionysus_Asset_RigRN.phl[1798]";
 connectAttr "L_Clav_Ctrl_visibility.o" "Dionysus_Asset_RigRN.phl[1799]";
 connectAttr "L_Hand_Prop_Ctrl_Follow.o" "Dionysus_Asset_RigRN.phl[1800]";
-connectAttr "Dionysus_Asset_RigRN.phl[1801]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[1801]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1802]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[1802]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1803]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[1803]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1804]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[1804]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tt"
 		;
 connectAttr "L_Hand_Prop_Ctrl_translateX.o" "Dionysus_Asset_RigRN.phl[1805]";
 connectAttr "L_Hand_Prop_Ctrl_translateY.o" "Dionysus_Asset_RigRN.phl[1806]";
 connectAttr "L_Hand_Prop_Ctrl_translateZ.o" "Dionysus_Asset_RigRN.phl[1807]";
-connectAttr "Dionysus_Asset_RigRN.phl[1808]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[1808]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tr"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1809]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[1809]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tr"
 		;
 connectAttr "L_Hand_Prop_Ctrl_rotateX.o" "Dionysus_Asset_RigRN.phl[1810]";
 connectAttr "L_Hand_Prop_Ctrl_rotateY.o" "Dionysus_Asset_RigRN.phl[1811]";
 connectAttr "L_Hand_Prop_Ctrl_rotateZ.o" "Dionysus_Asset_RigRN.phl[1812]";
-connectAttr "Dionysus_Asset_RigRN.phl[1813]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[1813]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].ts"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1814]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[1814]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].ts"
 		;
 connectAttr "L_Hand_Prop_Ctrl_scaleX.o" "Dionysus_Asset_RigRN.phl[1815]";
 connectAttr "L_Hand_Prop_Ctrl_scaleY.o" "Dionysus_Asset_RigRN.phl[1816]";
 connectAttr "L_Hand_Prop_Ctrl_scaleZ.o" "Dionysus_Asset_RigRN.phl[1817]";
-connectAttr "Dionysus_Asset_RigRN.phl[1818]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[1818]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tpm"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1819]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[1819]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tpm"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1820]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[1820]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1821]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[1821]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1822]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[1822]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tro"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1823]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[1823]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[3].tro"
 		;
 connectAttr "R_Hand_Prop_Ctrl_Follow.o" "Dionysus_Asset_RigRN.phl[1824]";
-connectAttr "Dionysus_Asset_RigRN.phl[1825]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[1825]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1826]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[1826]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].trt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1827]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[1827]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tt"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1828]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tt"
+connectAttr "Dionysus_Asset_RigRN.phl[1828]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tt"
 		;
 connectAttr "R_Hand_Prop_Ctrl_translateX.o" "Dionysus_Asset_RigRN.phl[1829]";
 connectAttr "R_Hand_Prop_Ctrl_translateY.o" "Dionysus_Asset_RigRN.phl[1830]";
 connectAttr "R_Hand_Prop_Ctrl_translateZ.o" "Dionysus_Asset_RigRN.phl[1831]";
-connectAttr "Dionysus_Asset_RigRN.phl[1832]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[1832]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tr"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1833]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tr"
+connectAttr "Dionysus_Asset_RigRN.phl[1833]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tr"
 		;
 connectAttr "R_Hand_Prop_Ctrl_rotateX.o" "Dionysus_Asset_RigRN.phl[1834]";
 connectAttr "R_Hand_Prop_Ctrl_rotateY.o" "Dionysus_Asset_RigRN.phl[1835]";
 connectAttr "R_Hand_Prop_Ctrl_rotateZ.o" "Dionysus_Asset_RigRN.phl[1836]";
-connectAttr "Dionysus_Asset_RigRN.phl[1837]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[1837]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].ts"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1838]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].ts"
+connectAttr "Dionysus_Asset_RigRN.phl[1838]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].ts"
 		;
 connectAttr "R_Hand_Prop_Ctrl_scaleX.o" "Dionysus_Asset_RigRN.phl[1839]";
 connectAttr "R_Hand_Prop_Ctrl_scaleY.o" "Dionysus_Asset_RigRN.phl[1840]";
 connectAttr "R_Hand_Prop_Ctrl_scaleZ.o" "Dionysus_Asset_RigRN.phl[1841]";
-connectAttr "Dionysus_Asset_RigRN.phl[1842]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[1842]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tpm"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1843]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tpm"
+connectAttr "Dionysus_Asset_RigRN.phl[1843]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tpm"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1844]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[1844]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1845]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].trp"
+connectAttr "Dionysus_Asset_RigRN.phl[1845]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].trp"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1846]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[1846]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tro"
 		;
-connectAttr "Dionysus_Asset_RigRN.phl[1847]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tro"
+connectAttr "Dionysus_Asset_RigRN.phl[1847]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[2].tro"
 		;
 connectAttr "Prop_Shaft_Length_Ctrl_translateY.o" "Dionysus_Asset_RigRN.phl[1848]"
 		;
@@ -37987,298 +37354,300 @@ connectAttr "Dionysus_Asset_RigRN.phl[2107]" "Dionysus_Asset_RigRN.phl[2108]";
 connectAttr "Dionysus_Asset_RigRN.phl[2109]" "Dionysus_Asset_RigRN.phl[2110]";
 connectAttr "Dionysus_Asset_RigRN.phl[2111]" "Dionysus_Asset_RigRN.phl[2112]";
 connectAttr "Dionysus_Asset_RigRN.phl[2113]" "Dionysus_Asset_RigRN.phl[2114]";
-connectAttr "ApolloRN.phl[1]" "lambert15SG.dsm" -na;
-connectAttr "ApolloRN.phl[2]" "lambert15SG.dsm" -na;
-connectAttr "ApolloRN.phl[3]" "lambert13SG.dsm" -na;
-connectAttr "ApolloRN.phl[4]" "lambert15SG.dsm" -na;
-connectAttr "Transform_Ctrl_ArmIKFK.o" "ApolloRN.phl[5]";
-connectAttr "Transform_Ctrl_MasterScale4.o" "ApolloRN.phl[6]";
-connectAttr "Transform_Ctrl_translateX4.o" "ApolloRN.phl[7]";
-connectAttr "Transform_Ctrl_translateY4.o" "ApolloRN.phl[8]";
-connectAttr "Transform_Ctrl_translateZ4.o" "ApolloRN.phl[9]";
-connectAttr "Transform_Ctrl_rotateX4.o" "ApolloRN.phl[10]";
-connectAttr "Transform_Ctrl_rotateY4.o" "ApolloRN.phl[11]";
-connectAttr "Transform_Ctrl_rotateZ4.o" "ApolloRN.phl[12]";
-connectAttr "Cog_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[13]";
-connectAttr "Cog_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[14]";
-connectAttr "Cog_Jnt_Ctrl_translateX.o" "ApolloRN.phl[15]";
-connectAttr "Cog_Jnt_Ctrl_translateY.o" "ApolloRN.phl[16]";
-connectAttr "Cog_Jnt_Ctrl_translateZ.o" "ApolloRN.phl[17]";
-connectAttr "Cog_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[18]";
-connectAttr "Cog_Jnt_Ctrl_rotateY.o" "ApolloRN.phl[19]";
-connectAttr "Cog_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[20]";
-connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateX.o" "ApolloRN.phl[21]";
-connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateY.o" "ApolloRN.phl[22]";
-connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateZ.o" "ApolloRN.phl[23]";
-connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateX.o" "ApolloRN.phl[24]";
-connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateY.o" "ApolloRN.phl[25]";
-connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateZ.o" "ApolloRN.phl[26]";
-connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateX.o" "ApolloRN.phl[27]";
-connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateY.o" "ApolloRN.phl[28]";
-connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateZ.o" "ApolloRN.phl[29]";
-connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateX.o" "ApolloRN.phl[30]";
-connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateY.o" "ApolloRN.phl[31]";
-connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateZ.o" "ApolloRN.phl[32]";
-connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateX.o" "ApolloRN.phl[33]";
-connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateY.o" "ApolloRN.phl[34]";
-connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateZ.o" "ApolloRN.phl[35]";
-connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateX.o" "ApolloRN.phl[36]";
-connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateY.o" "ApolloRN.phl[37]";
-connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateZ.o" "ApolloRN.phl[38]";
-connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateX.o" "ApolloRN.phl[39]";
-connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateY.o" "ApolloRN.phl[40]";
-connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateZ.o" "ApolloRN.phl[41]";
-connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateX.o" "ApolloRN.phl[42]";
-connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateY.o" "ApolloRN.phl[43]";
-connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateZ.o" "ApolloRN.phl[44]";
-connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateX.o" "ApolloRN.phl[45]";
-connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateY.o" "ApolloRN.phl[46]";
-connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateZ.o" "ApolloRN.phl[47]";
-connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateX.o" "ApolloRN.phl[48]";
-connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateY.o" "ApolloRN.phl[49]";
-connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateZ.o" "ApolloRN.phl[50]";
-connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateX.o" "ApolloRN.phl[51]";
-connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateY.o" "ApolloRN.phl[52]";
-connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateZ.o" "ApolloRN.phl[53]";
-connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[54]";
-connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateY.o" "ApolloRN.phl[55]";
-connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateZ.o" "ApolloRN.phl[56]";
-connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateX.o" "ApolloRN.phl[57]";
-connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateY.o" "ApolloRN.phl[58]";
-connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateZ.o" "ApolloRN.phl[59]";
-connectAttr "L_Hose_Swing_Ctrl_Swing.o" "ApolloRN.phl[60]";
-connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateX.o" "ApolloRN.phl[61]";
-connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateY.o" "ApolloRN.phl[62]";
-connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateZ.o" "ApolloRN.phl[63]";
-connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateX.o" "ApolloRN.phl[64]";
-connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateY.o" "ApolloRN.phl[65]";
-connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateZ.o" "ApolloRN.phl[66]";
-connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateX.o" "ApolloRN.phl[67]";
-connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateY.o" "ApolloRN.phl[68]";
-connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateZ.o" "ApolloRN.phl[69]";
-connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateX.o" "ApolloRN.phl[70]";
-connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateY.o" "ApolloRN.phl[71]";
-connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateZ.o" "ApolloRN.phl[72]";
-connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateX.o" "ApolloRN.phl[73]";
-connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateY.o" "ApolloRN.phl[74]";
-connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateZ.o" "ApolloRN.phl[75]";
-connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateX.o" "ApolloRN.phl[76]";
-connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateY.o" "ApolloRN.phl[77]";
-connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateZ.o" "ApolloRN.phl[78]";
-connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateX.o" "ApolloRN.phl[79]";
-connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateY.o" "ApolloRN.phl[80]";
-connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateZ.o" "ApolloRN.phl[81]";
-connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateX.o" "ApolloRN.phl[82]";
-connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateY.o" "ApolloRN.phl[83]";
-connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateZ.o" "ApolloRN.phl[84]";
-connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateX.o" "ApolloRN.phl[85]";
-connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateY.o" "ApolloRN.phl[86]";
-connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateZ.o" "ApolloRN.phl[87]";
-connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateX.o" "ApolloRN.phl[88]";
-connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateY.o" "ApolloRN.phl[89]";
-connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateZ.o" "ApolloRN.phl[90]";
-connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateX.o" "ApolloRN.phl[91]";
-connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateY.o" "ApolloRN.phl[92]";
-connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateZ.o" "ApolloRN.phl[93]";
-connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[94]";
-connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateY.o" "ApolloRN.phl[95]";
-connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateZ.o" "ApolloRN.phl[96]";
-connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateX.o" "ApolloRN.phl[97]";
-connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateY.o" "ApolloRN.phl[98]";
-connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateZ.o" "ApolloRN.phl[99]";
-connectAttr "R_Hose_Swing_Ctrl_Swing.o" "ApolloRN.phl[100]";
-connectAttr "Arm_FK_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[101]";
-connectAttr "Arm_FK_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[102]";
-connectAttr "Arm_FK_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[103]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[104]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[105]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[106]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_rotateY.o" "ApolloRN.phl[107]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[108]";
-connectAttr "Arm_FK_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[109]";
-connectAttr "Arm_FK_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[110]";
-connectAttr "Arm_FK_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[111]";
-connectAttr "Arm_FK_Jnt_04_Ctrl_rotateZ.o" "ApolloRN.phl[112]";
-connectAttr "Arm_FK_Jnt_04_Ctrl_FollowTranslate.o" "ApolloRN.phl[113]";
-connectAttr "Arm_FK_Jnt_04_Ctrl_FollowRotate.o" "ApolloRN.phl[114]";
-connectAttr "Arm_FK_Jnt_05_Ctrl_rotateZ.o" "ApolloRN.phl[115]";
-connectAttr "Arm_FK_Jnt_05_Ctrl_FollowTranslate.o" "ApolloRN.phl[116]";
-connectAttr "Arm_FK_Jnt_05_Ctrl_FollowRotate.o" "ApolloRN.phl[117]";
-connectAttr "IK_Base_Ctrl_translateX.o" "ApolloRN.phl[118]";
-connectAttr "IK_Base_Ctrl_translateY.o" "ApolloRN.phl[119]";
-connectAttr "Arm_IK_Jnt_05_Ctrl_translateX.o" "ApolloRN.phl[120]";
-connectAttr "Arm_IK_Jnt_05_Ctrl_translateY.o" "ApolloRN.phl[121]";
-connectAttr "Arm_IK_Jnt_05_Ctrl_rotateZ.o" "ApolloRN.phl[122]";
-connectAttr "Arm_IK_Jnt_05_Ctrl_Follow.o" "ApolloRN.phl[123]";
-connectAttr "PoleVector_Ctrl_translateX.o" "ApolloRN.phl[124]";
-connectAttr "PoleVector_Ctrl_translateY.o" "ApolloRN.phl[125]";
-connectAttr "Arm_Base_Jnt_01_Ctrl_rotateY.o" "ApolloRN.phl[126]";
-connectAttr "Arm_Base_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[127]";
-connectAttr "Arm_Base_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[128]";
-connectAttr "Arm_Base_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[129]";
-connectAttr "Head_FK_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[130]";
-connectAttr "Head_FK_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[131]";
-connectAttr "Head_FK_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[132]";
-connectAttr "Head_FK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[133]";
-connectAttr "Head_FK_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[134]";
-connectAttr "Head_FK_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[135]";
-connectAttr "Head_FK_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[136]";
-connectAttr "Head_FK_Jnt_02_Ctrl_rotateY.o" "ApolloRN.phl[137]";
-connectAttr "Head_FK_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[138]";
-connectAttr "Head_FK_Jnt_03_Ctrl_rotateX.o" "ApolloRN.phl[139]";
-connectAttr "Head_FK_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[140]";
-connectAttr "Head_FK_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[141]";
-connectAttr "Mouth_Ctrl_translateX.o" "ApolloRN.phl[142]";
-connectAttr "Mouth_Ctrl_translateY.o" "ApolloRN.phl[143]";
-connectAttr "Mouth_Ctrl_Neutral.o" "ApolloRN.phl[144]";
-connectAttr "Mouth_Ctrl_Oooh.o" "ApolloRN.phl[145]";
-connectAttr "Mouth_Ctrl_Bored.o" "ApolloRN.phl[146]";
-connectAttr "Mouth_Ctrl_Smirk.o" "ApolloRN.phl[147]";
-connectAttr "Mouth_Ctrl_MouthScale.o" "ApolloRN.phl[148]";
-connectAttr "Eyes_Ctrl_translateX.o" "ApolloRN.phl[149]";
-connectAttr "Eyes_Ctrl_translateY.o" "ApolloRN.phl[150]";
-connectAttr "Eyes_Ctrl_ExclamationPoint.o" "ApolloRN.phl[151]";
-connectAttr "Eyes_Ctrl_REye.o" "ApolloRN.phl[152]";
-connectAttr "Eyes_Ctrl_LEye.o" "ApolloRN.phl[153]";
-connectAttr "Eyes_Ctrl_Mouth.o" "ApolloRN.phl[154]";
-connectAttr "Eyes_Ctrl_X1.o" "ApolloRN.phl[155]";
-connectAttr "Eyes_Ctrl_X2.o" "ApolloRN.phl[156]";
-connectAttr "L_Eye_Ctrl_translateX1.o" "ApolloRN.phl[157]";
-connectAttr "L_Eye_Ctrl_translateY.o" "ApolloRN.phl[158]";
-connectAttr "L_Eye_Ctrl_Open.o" "ApolloRN.phl[159]";
-connectAttr "L_Eye_Ctrl_Squint.o" "ApolloRN.phl[160]";
-connectAttr "L_Eye_Ctrl_Close.o" "ApolloRN.phl[161]";
-connectAttr "L_Eye_Ctrl_Sad.o" "ApolloRN.phl[162]";
-connectAttr "L_Eye_Ctrl_Wink.o" "ApolloRN.phl[163]";
-connectAttr "L_Eye_Ctrl_Bored.o" "ApolloRN.phl[164]";
-connectAttr "L_Eye_Ctrl_Smirk.o" "ApolloRN.phl[165]";
-connectAttr "L_Eye_Ctrl_EyeScale1.o" "ApolloRN.phl[166]";
-connectAttr "L_Eye_Ctrl_Determined.o" "ApolloRN.phl[167]";
-connectAttr "R_Eye_Ctrl_translateX1.o" "ApolloRN.phl[168]";
-connectAttr "R_Eye_Ctrl_translateY.o" "ApolloRN.phl[169]";
-connectAttr "R_Eye_Ctrl_Open.o" "ApolloRN.phl[170]";
-connectAttr "R_Eye_Ctrl_Squint.o" "ApolloRN.phl[171]";
-connectAttr "R_Eye_Ctrl_Close.o" "ApolloRN.phl[172]";
-connectAttr "R_Eye_Ctrl_Sad.o" "ApolloRN.phl[173]";
-connectAttr "R_Eye_Ctrl_Wink.o" "ApolloRN.phl[174]";
-connectAttr "R_Eye_Ctrl_Bored.o" "ApolloRN.phl[175]";
-connectAttr "R_Eye_Ctrl_Smirk.o" "ApolloRN.phl[176]";
-connectAttr "R_Eye_Ctrl_EyeScale1.o" "ApolloRN.phl[177]";
-connectAttr "R_Eye_Ctrl_Determined.o" "ApolloRN.phl[178]";
-connectAttr "Visor_Ctrl_L_Visor.o" "ApolloRN.phl[179]";
-connectAttr "Visor_Ctrl_RVisor.o" "ApolloRN.phl[180]";
-connectAttr "R_Wiper_Ctrl_rotateZ.o" "ApolloRN.phl[181]";
-connectAttr "L_Wiper_Ctrl_rotateZ.o" "ApolloRN.phl[182]";
-connectAttr "Hand_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[183]";
-connectAttr "Hand_Ring_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[184]";
-connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[185]";
-connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[186]";
-connectAttr "Hand_Ring_Jnt_03_Ctrl_rotateX.o" "ApolloRN.phl[187]";
-connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[188]";
-connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[189]";
-connectAttr "Hand_Ring_Jnt_01_Ctrl_rotateX.o" "ApolloRN.phl[190]";
-connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[191]";
-connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[192]";
-connectAttr "Finger_02_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[193]";
-connectAttr "Finger_02_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[194]";
-connectAttr "Finger_02_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[195]";
-connectAttr "Finger_01_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[196]";
-connectAttr "Finger_01_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[197]";
-connectAttr "Finger_01_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[198]";
-connectAttr "Finger_01_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[199]";
-connectAttr "Finger_01_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[200]";
-connectAttr "Finger_01_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[201]";
-connectAttr "Finger_02_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[202]";
-connectAttr "Finger_02_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[203]";
-connectAttr "Finger_02_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[204]";
-connectAttr "Finger_03_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[205]";
-connectAttr "Finger_03_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[206]";
-connectAttr "Finger_03_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[207]";
-connectAttr "Finger_03_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[208]";
-connectAttr "Finger_03_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[209]";
-connectAttr "Finger_03_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[210]";
-connectAttr "Palm_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[211]";
-connectAttr "Palm_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[212]";
-connectAttr "Palm_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[213]";
-connectAttr "Piston_01_Ctrl_translateX.o" "ApolloRN.phl[214]";
-connectAttr "Piston_02_Ctrl_translateX.o" "ApolloRN.phl[215]";
-connectAttr "Piston_03_Ctrl_translateX.o" "ApolloRN.phl[216]";
-connectAttr "Prop_Ctrl_Follow.o" "ApolloRN.phl[217]";
-connectAttr "ApolloRN.phl[218]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].trt"
+connectAttr "Dionysus_Asset_RigRN.phl[2115]" "Dionysus_Asset_RigRN.phl[2116]";
+connectAttr "Dionysus_Asset_RigRN.phl[2117]" "Dionysus_Asset_RigRN.phl[2118]";
+connectAttr "ApolloRN.phl[1]" "ApolloRN.phl[2]";
+connectAttr "ApolloRN.phl[3]" ":initialShadingGroup.dsm" -na;
+connectAttr "ApolloRN.phl[4]" ":initialShadingGroup.dsm" -na;
+connectAttr "ApolloRN.phl[5]" ":initialShadingGroup.dsm" -na;
+connectAttr "ApolloRN.phl[6]" ":initialShadingGroup.dsm" -na;
+connectAttr "Transform_Ctrl_ArmIKFK.o" "ApolloRN.phl[7]";
+connectAttr "Transform_Ctrl_MasterScale4.o" "ApolloRN.phl[8]";
+connectAttr "Transform_Ctrl_translateX4.o" "ApolloRN.phl[9]";
+connectAttr "Transform_Ctrl_translateY4.o" "ApolloRN.phl[10]";
+connectAttr "Transform_Ctrl_translateZ4.o" "ApolloRN.phl[11]";
+connectAttr "Transform_Ctrl_rotateX4.o" "ApolloRN.phl[12]";
+connectAttr "Transform_Ctrl_rotateY4.o" "ApolloRN.phl[13]";
+connectAttr "Transform_Ctrl_rotateZ4.o" "ApolloRN.phl[14]";
+connectAttr "Cog_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[15]";
+connectAttr "Cog_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[16]";
+connectAttr "Cog_Jnt_Ctrl_translateX.o" "ApolloRN.phl[17]";
+connectAttr "Cog_Jnt_Ctrl_translateY.o" "ApolloRN.phl[18]";
+connectAttr "Cog_Jnt_Ctrl_translateZ.o" "ApolloRN.phl[19]";
+connectAttr "Cog_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[20]";
+connectAttr "Cog_Jnt_Ctrl_rotateY.o" "ApolloRN.phl[21]";
+connectAttr "Cog_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[22]";
+connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateX.o" "ApolloRN.phl[23]";
+connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateY.o" "ApolloRN.phl[24]";
+connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateZ.o" "ApolloRN.phl[25]";
+connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateX.o" "ApolloRN.phl[26]";
+connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateY.o" "ApolloRN.phl[27]";
+connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateZ.o" "ApolloRN.phl[28]";
+connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateX.o" "ApolloRN.phl[29]";
+connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateY.o" "ApolloRN.phl[30]";
+connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateZ.o" "ApolloRN.phl[31]";
+connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateX.o" "ApolloRN.phl[32]";
+connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateY.o" "ApolloRN.phl[33]";
+connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateZ.o" "ApolloRN.phl[34]";
+connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateX.o" "ApolloRN.phl[35]";
+connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateY.o" "ApolloRN.phl[36]";
+connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateZ.o" "ApolloRN.phl[37]";
+connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateX.o" "ApolloRN.phl[38]";
+connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateY.o" "ApolloRN.phl[39]";
+connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateZ.o" "ApolloRN.phl[40]";
+connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateX.o" "ApolloRN.phl[41]";
+connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateY.o" "ApolloRN.phl[42]";
+connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateZ.o" "ApolloRN.phl[43]";
+connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateX.o" "ApolloRN.phl[44]";
+connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateY.o" "ApolloRN.phl[45]";
+connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateZ.o" "ApolloRN.phl[46]";
+connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateX.o" "ApolloRN.phl[47]";
+connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateY.o" "ApolloRN.phl[48]";
+connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateZ.o" "ApolloRN.phl[49]";
+connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateX.o" "ApolloRN.phl[50]";
+connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateY.o" "ApolloRN.phl[51]";
+connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateZ.o" "ApolloRN.phl[52]";
+connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateX.o" "ApolloRN.phl[53]";
+connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateY.o" "ApolloRN.phl[54]";
+connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateZ.o" "ApolloRN.phl[55]";
+connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[56]";
+connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateY.o" "ApolloRN.phl[57]";
+connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateZ.o" "ApolloRN.phl[58]";
+connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateX.o" "ApolloRN.phl[59]";
+connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateY.o" "ApolloRN.phl[60]";
+connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateZ.o" "ApolloRN.phl[61]";
+connectAttr "L_Hose_Swing_Ctrl_Swing.o" "ApolloRN.phl[62]";
+connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateX.o" "ApolloRN.phl[63]";
+connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateY.o" "ApolloRN.phl[64]";
+connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateZ.o" "ApolloRN.phl[65]";
+connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateX.o" "ApolloRN.phl[66]";
+connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateY.o" "ApolloRN.phl[67]";
+connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateZ.o" "ApolloRN.phl[68]";
+connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateX.o" "ApolloRN.phl[69]";
+connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateY.o" "ApolloRN.phl[70]";
+connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateZ.o" "ApolloRN.phl[71]";
+connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateX.o" "ApolloRN.phl[72]";
+connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateY.o" "ApolloRN.phl[73]";
+connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateZ.o" "ApolloRN.phl[74]";
+connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateX.o" "ApolloRN.phl[75]";
+connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateY.o" "ApolloRN.phl[76]";
+connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateZ.o" "ApolloRN.phl[77]";
+connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateX.o" "ApolloRN.phl[78]";
+connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateY.o" "ApolloRN.phl[79]";
+connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateZ.o" "ApolloRN.phl[80]";
+connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateX.o" "ApolloRN.phl[81]";
+connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateY.o" "ApolloRN.phl[82]";
+connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateZ.o" "ApolloRN.phl[83]";
+connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateX.o" "ApolloRN.phl[84]";
+connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateY.o" "ApolloRN.phl[85]";
+connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateZ.o" "ApolloRN.phl[86]";
+connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateX.o" "ApolloRN.phl[87]";
+connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateY.o" "ApolloRN.phl[88]";
+connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateZ.o" "ApolloRN.phl[89]";
+connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateX.o" "ApolloRN.phl[90]";
+connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateY.o" "ApolloRN.phl[91]";
+connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateZ.o" "ApolloRN.phl[92]";
+connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateX.o" "ApolloRN.phl[93]";
+connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateY.o" "ApolloRN.phl[94]";
+connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateZ.o" "ApolloRN.phl[95]";
+connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[96]";
+connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateY.o" "ApolloRN.phl[97]";
+connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateZ.o" "ApolloRN.phl[98]";
+connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateX.o" "ApolloRN.phl[99]";
+connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateY.o" "ApolloRN.phl[100]";
+connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateZ.o" "ApolloRN.phl[101]";
+connectAttr "R_Hose_Swing_Ctrl_Swing.o" "ApolloRN.phl[102]";
+connectAttr "Arm_FK_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[103]";
+connectAttr "Arm_FK_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[104]";
+connectAttr "Arm_FK_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[105]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[106]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[107]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[108]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_rotateY.o" "ApolloRN.phl[109]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[110]";
+connectAttr "Arm_FK_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[111]";
+connectAttr "Arm_FK_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[112]";
+connectAttr "Arm_FK_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[113]";
+connectAttr "Arm_FK_Jnt_04_Ctrl_rotateZ.o" "ApolloRN.phl[114]";
+connectAttr "Arm_FK_Jnt_04_Ctrl_FollowTranslate.o" "ApolloRN.phl[115]";
+connectAttr "Arm_FK_Jnt_04_Ctrl_FollowRotate.o" "ApolloRN.phl[116]";
+connectAttr "Arm_FK_Jnt_05_Ctrl_rotateZ.o" "ApolloRN.phl[117]";
+connectAttr "Arm_FK_Jnt_05_Ctrl_FollowTranslate.o" "ApolloRN.phl[118]";
+connectAttr "Arm_FK_Jnt_05_Ctrl_FollowRotate.o" "ApolloRN.phl[119]";
+connectAttr "IK_Base_Ctrl_translateX.o" "ApolloRN.phl[120]";
+connectAttr "IK_Base_Ctrl_translateY.o" "ApolloRN.phl[121]";
+connectAttr "Arm_IK_Jnt_05_Ctrl_translateX.o" "ApolloRN.phl[122]";
+connectAttr "Arm_IK_Jnt_05_Ctrl_translateY.o" "ApolloRN.phl[123]";
+connectAttr "Arm_IK_Jnt_05_Ctrl_rotateZ.o" "ApolloRN.phl[124]";
+connectAttr "Arm_IK_Jnt_05_Ctrl_Follow.o" "ApolloRN.phl[125]";
+connectAttr "PoleVector_Ctrl_translateX.o" "ApolloRN.phl[126]";
+connectAttr "PoleVector_Ctrl_translateY.o" "ApolloRN.phl[127]";
+connectAttr "Arm_Base_Jnt_01_Ctrl_rotateY.o" "ApolloRN.phl[128]";
+connectAttr "Arm_Base_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[129]";
+connectAttr "Arm_Base_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[130]";
+connectAttr "Arm_Base_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[131]";
+connectAttr "Head_FK_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[132]";
+connectAttr "Head_FK_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[133]";
+connectAttr "Head_FK_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[134]";
+connectAttr "Head_FK_Jnt_02_Ctrl_translateX.o" "ApolloRN.phl[135]";
+connectAttr "Head_FK_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[136]";
+connectAttr "Head_FK_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[137]";
+connectAttr "Head_FK_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[138]";
+connectAttr "Head_FK_Jnt_02_Ctrl_rotateY.o" "ApolloRN.phl[139]";
+connectAttr "Head_FK_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[140]";
+connectAttr "Head_FK_Jnt_03_Ctrl_rotateX.o" "ApolloRN.phl[141]";
+connectAttr "Head_FK_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[142]";
+connectAttr "Head_FK_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[143]";
+connectAttr "Mouth_Ctrl_translateX.o" "ApolloRN.phl[144]";
+connectAttr "Mouth_Ctrl_translateY.o" "ApolloRN.phl[145]";
+connectAttr "Mouth_Ctrl_Neutral.o" "ApolloRN.phl[146]";
+connectAttr "Mouth_Ctrl_Oooh.o" "ApolloRN.phl[147]";
+connectAttr "Mouth_Ctrl_Bored.o" "ApolloRN.phl[148]";
+connectAttr "Mouth_Ctrl_Smirk.o" "ApolloRN.phl[149]";
+connectAttr "Mouth_Ctrl_MouthScale.o" "ApolloRN.phl[150]";
+connectAttr "Eyes_Ctrl_translateX.o" "ApolloRN.phl[151]";
+connectAttr "Eyes_Ctrl_translateY.o" "ApolloRN.phl[152]";
+connectAttr "Eyes_Ctrl_ExclamationPoint.o" "ApolloRN.phl[153]";
+connectAttr "Eyes_Ctrl_REye.o" "ApolloRN.phl[154]";
+connectAttr "Eyes_Ctrl_LEye.o" "ApolloRN.phl[155]";
+connectAttr "Eyes_Ctrl_Mouth.o" "ApolloRN.phl[156]";
+connectAttr "Eyes_Ctrl_X1.o" "ApolloRN.phl[157]";
+connectAttr "Eyes_Ctrl_X2.o" "ApolloRN.phl[158]";
+connectAttr "L_Eye_Ctrl_translateX1.o" "ApolloRN.phl[159]";
+connectAttr "L_Eye_Ctrl_translateY.o" "ApolloRN.phl[160]";
+connectAttr "L_Eye_Ctrl_Open.o" "ApolloRN.phl[161]";
+connectAttr "L_Eye_Ctrl_Squint.o" "ApolloRN.phl[162]";
+connectAttr "L_Eye_Ctrl_Close.o" "ApolloRN.phl[163]";
+connectAttr "L_Eye_Ctrl_Sad.o" "ApolloRN.phl[164]";
+connectAttr "L_Eye_Ctrl_Wink.o" "ApolloRN.phl[165]";
+connectAttr "L_Eye_Ctrl_Bored.o" "ApolloRN.phl[166]";
+connectAttr "L_Eye_Ctrl_Smirk.o" "ApolloRN.phl[167]";
+connectAttr "L_Eye_Ctrl_EyeScale1.o" "ApolloRN.phl[168]";
+connectAttr "L_Eye_Ctrl_Determined.o" "ApolloRN.phl[169]";
+connectAttr "R_Eye_Ctrl_translateX1.o" "ApolloRN.phl[170]";
+connectAttr "R_Eye_Ctrl_translateY.o" "ApolloRN.phl[171]";
+connectAttr "R_Eye_Ctrl_Open.o" "ApolloRN.phl[172]";
+connectAttr "R_Eye_Ctrl_Squint.o" "ApolloRN.phl[173]";
+connectAttr "R_Eye_Ctrl_Close.o" "ApolloRN.phl[174]";
+connectAttr "R_Eye_Ctrl_Sad.o" "ApolloRN.phl[175]";
+connectAttr "R_Eye_Ctrl_Wink.o" "ApolloRN.phl[176]";
+connectAttr "R_Eye_Ctrl_Bored.o" "ApolloRN.phl[177]";
+connectAttr "R_Eye_Ctrl_Smirk.o" "ApolloRN.phl[178]";
+connectAttr "R_Eye_Ctrl_EyeScale1.o" "ApolloRN.phl[179]";
+connectAttr "R_Eye_Ctrl_Determined.o" "ApolloRN.phl[180]";
+connectAttr "Visor_Ctrl_L_Visor.o" "ApolloRN.phl[181]";
+connectAttr "Visor_Ctrl_RVisor.o" "ApolloRN.phl[182]";
+connectAttr "R_Wiper_Ctrl_rotateZ.o" "ApolloRN.phl[183]";
+connectAttr "L_Wiper_Ctrl_rotateZ.o" "ApolloRN.phl[184]";
+connectAttr "Hand_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[185]";
+connectAttr "Hand_Ring_Jnt_02_Ctrl_rotateX.o" "ApolloRN.phl[186]";
+connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[187]";
+connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[188]";
+connectAttr "Hand_Ring_Jnt_03_Ctrl_rotateX.o" "ApolloRN.phl[189]";
+connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowTranslate.o" "ApolloRN.phl[190]";
+connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowRotate.o" "ApolloRN.phl[191]";
+connectAttr "Hand_Ring_Jnt_01_Ctrl_rotateX.o" "ApolloRN.phl[192]";
+connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[193]";
+connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[194]";
+connectAttr "Finger_02_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[195]";
+connectAttr "Finger_02_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[196]";
+connectAttr "Finger_02_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[197]";
+connectAttr "Finger_01_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[198]";
+connectAttr "Finger_01_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[199]";
+connectAttr "Finger_01_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[200]";
+connectAttr "Finger_01_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[201]";
+connectAttr "Finger_01_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[202]";
+connectAttr "Finger_01_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[203]";
+connectAttr "Finger_02_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[204]";
+connectAttr "Finger_02_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[205]";
+connectAttr "Finger_02_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[206]";
+connectAttr "Finger_03_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[207]";
+connectAttr "Finger_03_Jnt_01_Ctrl_FollowTranslate.o" "ApolloRN.phl[208]";
+connectAttr "Finger_03_Jnt_01_Ctrl_FollowRotate.o" "ApolloRN.phl[209]";
+connectAttr "Finger_03_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[210]";
+connectAttr "Finger_03_Jnt_02_Ctrl_FollowTranslate.o" "ApolloRN.phl[211]";
+connectAttr "Finger_03_Jnt_02_Ctrl_FollowRotate.o" "ApolloRN.phl[212]";
+connectAttr "Palm_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[213]";
+connectAttr "Palm_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[214]";
+connectAttr "Palm_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[215]";
+connectAttr "Piston_01_Ctrl_translateX.o" "ApolloRN.phl[216]";
+connectAttr "Piston_02_Ctrl_translateX.o" "ApolloRN.phl[217]";
+connectAttr "Piston_03_Ctrl_translateX.o" "ApolloRN.phl[218]";
+connectAttr "Prop_Ctrl_Follow.o" "ApolloRN.phl[219]";
+connectAttr "ApolloRN.phl[220]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].trt"
 		;
-connectAttr "ApolloRN.phl[219]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].trt"
+connectAttr "ApolloRN.phl[221]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].trt"
 		;
-connectAttr "ApolloRN.phl[220]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tt"
+connectAttr "ApolloRN.phl[222]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tt"
 		;
-connectAttr "ApolloRN.phl[221]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tt"
+connectAttr "ApolloRN.phl[223]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tt"
 		;
-connectAttr "Prop_Ctrl_translateX.o" "ApolloRN.phl[222]";
-connectAttr "Prop_Ctrl_translateY.o" "ApolloRN.phl[223]";
-connectAttr "Prop_Ctrl_translateZ.o" "ApolloRN.phl[224]";
-connectAttr "ApolloRN.phl[225]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tr"
+connectAttr "Prop_Ctrl_translateX.o" "ApolloRN.phl[224]";
+connectAttr "Prop_Ctrl_translateY.o" "ApolloRN.phl[225]";
+connectAttr "Prop_Ctrl_translateZ.o" "ApolloRN.phl[226]";
+connectAttr "ApolloRN.phl[227]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tr"
 		;
-connectAttr "ApolloRN.phl[226]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tr"
+connectAttr "ApolloRN.phl[228]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tr"
 		;
-connectAttr "Prop_Ctrl_rotateX.o" "ApolloRN.phl[227]";
-connectAttr "Prop_Ctrl_rotateY.o" "ApolloRN.phl[228]";
-connectAttr "Prop_Ctrl_rotateZ.o" "ApolloRN.phl[229]";
-connectAttr "ApolloRN.phl[230]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].ts"
+connectAttr "Prop_Ctrl_rotateX.o" "ApolloRN.phl[229]";
+connectAttr "Prop_Ctrl_rotateY.o" "ApolloRN.phl[230]";
+connectAttr "Prop_Ctrl_rotateZ.o" "ApolloRN.phl[231]";
+connectAttr "ApolloRN.phl[232]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].ts"
 		;
-connectAttr "ApolloRN.phl[231]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].ts"
+connectAttr "ApolloRN.phl[233]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].ts"
 		;
-connectAttr "Prop_Ctrl_scaleX.o" "ApolloRN.phl[232]";
-connectAttr "Prop_Ctrl_scaleY.o" "ApolloRN.phl[233]";
-connectAttr "Prop_Ctrl_scaleZ.o" "ApolloRN.phl[234]";
-connectAttr "ApolloRN.phl[235]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tpm"
+connectAttr "Prop_Ctrl_scaleX.o" "ApolloRN.phl[234]";
+connectAttr "Prop_Ctrl_scaleY.o" "ApolloRN.phl[235]";
+connectAttr "Prop_Ctrl_scaleZ.o" "ApolloRN.phl[236]";
+connectAttr "ApolloRN.phl[237]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tpm"
 		;
-connectAttr "ApolloRN.phl[236]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tpm"
+connectAttr "ApolloRN.phl[238]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tpm"
 		;
-connectAttr "ApolloRN.phl[237]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].trp"
+connectAttr "ApolloRN.phl[239]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].trp"
 		;
-connectAttr "ApolloRN.phl[238]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].trp"
+connectAttr "ApolloRN.phl[240]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].trp"
 		;
-connectAttr "ApolloRN.phl[239]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tro"
+connectAttr "ApolloRN.phl[241]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tro"
 		;
-connectAttr "ApolloRN.phl[240]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tro"
+connectAttr "ApolloRN.phl[242]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[4].tro"
 		;
-connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[241]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[242]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_TreadsRoll.o" "ApolloRN.phl[243]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_IndividualRoll.o" "ApolloRN.phl[244]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[245]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateY.o" "ApolloRN.phl[246]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[247]";
-connectAttr "R_Treads_Ctrl_rotateZ.o" "ApolloRN.phl[248]";
-connectAttr "R_Treads_Ctrl_FollowTranslate.o" "ApolloRN.phl[249]";
-connectAttr "R_Treads_Ctrl_FollowRotate.o" "ApolloRN.phl[250]";
-connectAttr "R_Treads_Ctrl_Roll.o" "ApolloRN.phl[251]";
-connectAttr "R_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[252]";
-connectAttr "R_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[253]";
-connectAttr "R_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[254]";
-connectAttr "R_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[255]";
-connectAttr "R_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[256]";
-connectAttr "R_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[257]";
-connectAttr "L_Treads_Ctrl_rotateZ.o" "ApolloRN.phl[258]";
-connectAttr "L_Treads_Ctrl_FollowTranslate.o" "ApolloRN.phl[259]";
-connectAttr "L_Treads_Ctrl_FollowRotate.o" "ApolloRN.phl[260]";
-connectAttr "L_Treads_Ctrl_Roll.o" "ApolloRN.phl[261]";
-connectAttr "L_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[262]";
-connectAttr "L_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[263]";
-connectAttr "L_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[264]";
-connectAttr "L_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[265]";
-connectAttr "L_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[266]";
-connectAttr "L_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[267]";
-connectAttr "Light_Rig_Ctrl_rotateX1.o" "ApolloRN.phl[268]";
-connectAttr "Light_Rig_Ctrl_rotateY1.o" "ApolloRN.phl[269]";
-connectAttr "Light_Rig_Ctrl_rotateZ1.o" "ApolloRN.phl[270]";
-connectAttr "Light_Rig_Ctrl_visibility1.o" "ApolloRN.phl[271]";
-connectAttr "Light_Rig_Ctrl_translateX1.o" "ApolloRN.phl[272]";
-connectAttr "Light_Rig_Ctrl_translateY1.o" "ApolloRN.phl[273]";
-connectAttr "Light_Rig_Ctrl_translateZ1.o" "ApolloRN.phl[274]";
-connectAttr "Light_Rig_Ctrl_scaleX1.o" "ApolloRN.phl[275]";
-connectAttr "Light_Rig_Ctrl_scaleY1.o" "ApolloRN.phl[276]";
-connectAttr "Light_Rig_Ctrl_scaleZ1.o" "ApolloRN.phl[277]";
-connectAttr "ApolloRN.phl[278]" "ApolloRN.phl[279]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[243]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[244]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_TreadsRoll.o" "ApolloRN.phl[245]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_IndividualRoll.o" "ApolloRN.phl[246]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateX.o" "ApolloRN.phl[247]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateY.o" "ApolloRN.phl[248]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[249]";
+connectAttr "R_Treads_Ctrl_rotateZ.o" "ApolloRN.phl[250]";
+connectAttr "R_Treads_Ctrl_FollowTranslate.o" "ApolloRN.phl[251]";
+connectAttr "R_Treads_Ctrl_FollowRotate.o" "ApolloRN.phl[252]";
+connectAttr "R_Treads_Ctrl_Roll.o" "ApolloRN.phl[253]";
+connectAttr "R_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[254]";
+connectAttr "R_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[255]";
+connectAttr "R_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[256]";
+connectAttr "R_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[257]";
+connectAttr "R_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[258]";
+connectAttr "R_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[259]";
+connectAttr "L_Treads_Ctrl_rotateZ.o" "ApolloRN.phl[260]";
+connectAttr "L_Treads_Ctrl_FollowTranslate.o" "ApolloRN.phl[261]";
+connectAttr "L_Treads_Ctrl_FollowRotate.o" "ApolloRN.phl[262]";
+connectAttr "L_Treads_Ctrl_Roll.o" "ApolloRN.phl[263]";
+connectAttr "L_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[264]";
+connectAttr "L_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[265]";
+connectAttr "L_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "ApolloRN.phl[266]";
+connectAttr "L_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "ApolloRN.phl[267]";
+connectAttr "L_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "ApolloRN.phl[268]";
+connectAttr "L_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "ApolloRN.phl[269]";
+connectAttr "Light_Rig_Ctrl_rotateX1.o" "ApolloRN.phl[270]";
+connectAttr "Light_Rig_Ctrl_rotateY1.o" "ApolloRN.phl[271]";
+connectAttr "Light_Rig_Ctrl_rotateZ1.o" "ApolloRN.phl[272]";
+connectAttr "Light_Rig_Ctrl_visibility1.o" "ApolloRN.phl[273]";
+connectAttr "Light_Rig_Ctrl_translateX1.o" "ApolloRN.phl[274]";
+connectAttr "Light_Rig_Ctrl_translateY1.o" "ApolloRN.phl[275]";
+connectAttr "Light_Rig_Ctrl_translateZ1.o" "ApolloRN.phl[276]";
+connectAttr "Light_Rig_Ctrl_scaleX1.o" "ApolloRN.phl[277]";
+connectAttr "Light_Rig_Ctrl_scaleY1.o" "ApolloRN.phl[278]";
+connectAttr "Light_Rig_Ctrl_scaleZ1.o" "ApolloRN.phl[279]";
 connectAttr "ApolloRN.phl[280]" "ApolloRN.phl[281]";
 connectAttr "ApolloRN.phl[282]" "ApolloRN.phl[283]";
 connectAttr "ApolloRN.phl[284]" "ApolloRN.phl[285]";
@@ -38289,117 +37658,161 @@ connectAttr "ApolloRN.phl[292]" "ApolloRN.phl[293]";
 connectAttr "ApolloRN.phl[294]" "ApolloRN.phl[295]";
 connectAttr "ApolloRN.phl[296]" "ApolloRN.phl[297]";
 connectAttr "ApolloRN.phl[298]" "ApolloRN.phl[299]";
+connectAttr "ApolloRN.phl[300]" "ApolloRN.phl[301]";
+connectAttr "ApolloRN.phl[302]" "ApolloRN.phl[303]";
+connectAttr "ApolloRN.phl[304]" "ApolloRN.phl[305]";
+connectAttr "ApolloRN.phl[306]" "ApolloRN.phl[307]";
+connectAttr "ApolloRN.phl[308]" "ApolloRN.phl[309]";
+connectAttr "ApolloRN.phl[310]" "ApolloRN.phl[311]";
+connectAttr "ApolloRN.phl[312]" "ApolloRN.phl[313]";
+connectAttr "ApolloRN.phl[314]" "ApolloRN.phl[315]";
+connectAttr "ApolloRN.phl[316]" "ApolloRN.phl[317]";
+connectAttr "ApolloRN.phl[318]" "ApolloRN.phl[319]";
+connectAttr "ApolloRN.phl[320]" "ApolloRN.phl[321]";
+connectAttr "ApolloRN.phl[322]" "ApolloRN.phl[323]";
+connectAttr "ApolloRN.phl[324]" "ApolloRN.phl[325]";
+connectAttr "ApolloRN.phl[326]" "ApolloRN.phl[327]";
+connectAttr "ApolloRN.phl[328]" "ApolloRN.phl[329]";
+connectAttr "ApolloRN.phl[330]" "ApolloRN.phl[331]";
+connectAttr "ApolloRN.phl[332]" "ApolloRN.phl[333]";
+connectAttr "ApolloRN.phl[334]" "ApolloRN.phl[335]";
+connectAttr "ApolloRN.phl[336]" "ApolloRN.phl[337]";
+connectAttr "ApolloRN.phl[338]" "ApolloRN.phl[339]";
+connectAttr "ApolloRN.phl[340]" "ApolloRN.phl[341]";
+connectAttr "ApolloRN.phl[342]" "ApolloRN.phl[343]";
+connectAttr "ApolloRN.phl[344]" "ApolloRN.phl[345]";
+connectAttr "ApolloRN.phl[346]" "ApolloRN.phl[347]";
+connectAttr "ApolloRN.phl[348]" "ApolloRN.phl[349]";
+connectAttr "ApolloRN.phl[350]" "ApolloRN.phl[351]";
+connectAttr "ApolloRN.phl[352]" "ApolloRN.phl[353]";
+connectAttr "ApolloRN.phl[354]" "ApolloRN.phl[355]";
+connectAttr "ApolloRN.phl[356]" "ApolloRN.phl[357]";
+connectAttr "ApolloRN.phl[358]" "ApolloRN.phl[359]";
 connectAttr "Analog_SignRN.phl[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "Analog_SignRN.phl[2]" "Analog_SignRN.phl[3]";
 connectAttr "Analog_SignRN.phl[4]" "Analog_SignRN.phl[5]";
-connectAttr "BrokenPlaqueRN.phl[1]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tt"
+connectAttr "Analog_SignRN.phl[6]" "Analog_SignRN.phl[7]";
+connectAttr "Analog_SignRN.phl[8]" "Analog_SignRN.phl[9]";
+connectAttr "Analog_SignRN.phl[10]" "Analog_SignRN.phl[11]";
+connectAttr "Analog_SignRN.phl[12]" "Analog_SignRN.phl[13]";
+connectAttr "Analog_SignRN.phl[14]" "Analog_SignRN.phl[15]";
+connectAttr "Analog_SignRN.phl[16]" "Analog_SignRN.phl[17]";
+connectAttr "BrokenPlaqueRN.phl[1]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tr"
 		;
-connectAttr "BrokenPlaqueRN.phl[2]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tt"
+connectAttr "BrokenPlaqueRN.phl[2]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tr"
 		;
-connectAttr "BrokenPlaqueRN.phl[3]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].trp"
+connectAttr "BrokenPlaqueRN.phl[3]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tt"
 		;
-connectAttr "BrokenPlaqueRN.phl[4]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].trp"
+connectAttr "BrokenPlaqueRN.phl[4]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tt"
 		;
-connectAttr "BrokenPlaqueRN.phl[5]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].trt"
+connectAttr "BrokenPlaqueRN.phl[5]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].trp"
 		;
-connectAttr "BrokenPlaqueRN.phl[6]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].trt"
+connectAttr "BrokenPlaqueRN.phl[6]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].trp"
 		;
-connectAttr "BrokenPlaqueRN.phl[7]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tr"
+connectAttr "BrokenPlaqueRN.phl[7]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].trt"
 		;
-connectAttr "BrokenPlaqueRN.phl[8]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tr"
+connectAttr "BrokenPlaqueRN.phl[8]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].trt"
 		;
-connectAttr "BrokenPlaqueRN.phl[9]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tro"
+connectAttr "BrokenPlaqueRN.phl[9]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tro"
 		;
-connectAttr "BrokenPlaqueRN.phl[10]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tro"
+connectAttr "BrokenPlaqueRN.phl[10]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tro"
 		;
-connectAttr "BrokenPlaqueRN.phl[11]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].ts"
+connectAttr "BrokenPlaqueRN.phl[11]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].ts"
 		;
-connectAttr "BrokenPlaqueRN.phl[12]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].ts"
+connectAttr "BrokenPlaqueRN.phl[12]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].ts"
 		;
-connectAttr "BrokenPlaqueRN.phl[13]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tpm"
+connectAttr "BrokenPlaqueRN.phl[13]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "BrokenPlaqueRN.phl[14]" "Right_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tpm"
+connectAttr "BrokenPlaqueRN.phl[14]" "Left_Plaque_Ctrl_Grp_parentConstraint1.tg[0].tpm"
 		;
-connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.ctx" "BrokenPlaqueRN.phl[15]"
+connectAttr "BrokenPlaqueRN.phl[15]" ":initialShadingGroup.dsm" -na;
+connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.ctx" "BrokenPlaqueRN.phl[16]"
 		;
-connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.cty" "BrokenPlaqueRN.phl[16]"
+connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.cty" "BrokenPlaqueRN.phl[17]"
 		;
-connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.ctz" "BrokenPlaqueRN.phl[17]"
+connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.ctz" "BrokenPlaqueRN.phl[18]"
 		;
-connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.crx" "BrokenPlaqueRN.phl[18]"
+connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.crx" "BrokenPlaqueRN.phl[19]"
 		;
-connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.cry" "BrokenPlaqueRN.phl[19]"
+connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.cry" "BrokenPlaqueRN.phl[20]"
 		;
-connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.crz" "BrokenPlaqueRN.phl[20]"
+connectAttr "Left_Plaque_Ctrl_Grp_parentConstraint1.crz" "BrokenPlaqueRN.phl[21]"
 		;
-connectAttr "BrokenPlaqueRN.phl[21]" "Left_Plaque_Ctrl_Grp_parentConstraint1.cro"
+connectAttr "BrokenPlaqueRN.phl[22]" "Left_Plaque_Ctrl_Grp_parentConstraint1.cro"
 		;
-connectAttr "BrokenPlaqueRN.phl[22]" "Left_Plaque_Ctrl_Grp_parentConstraint1.cpim"
+connectAttr "BrokenPlaqueRN.phl[23]" "Left_Plaque_Ctrl_Grp_parentConstraint1.cpim"
 		;
-connectAttr "BrokenPlaqueRN.phl[23]" "Left_Plaque_Ctrl_Grp_parentConstraint1.crp"
+connectAttr "BrokenPlaqueRN.phl[24]" "Left_Plaque_Ctrl_Grp_parentConstraint1.crp"
 		;
-connectAttr "BrokenPlaqueRN.phl[24]" "Left_Plaque_Ctrl_Grp_parentConstraint1.crt"
-		;
-connectAttr "BrokenPlaqueRN.phl[25]" "Left_Plaque_Ctrl_Grp_parentConstraint1_COG_CtrlW0.i"
+connectAttr "BrokenPlaqueRN.phl[25]" "Left_Plaque_Ctrl_Grp_parentConstraint1.crt"
 		;
 connectAttr "BrokenPlaqueRN.phl[26]" "Left_Plaque_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.i"
 		;
-connectAttr "BrokenPlaqueRN.phl[27]" "Left_Plaque_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.i"
+connectAttr "BrokenPlaqueRN.phl[27]" "Left_Plaque_Ctrl_Grp_parentConstraint1_COG_CtrlW0.i"
 		;
-connectAttr "BrokenPlaqueRN.phl[28]" "Left_Plaque_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.i"
+connectAttr "BrokenPlaqueRN.phl[28]" "Left_Plaque_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.i"
 		;
-connectAttr "BrokenPlaqueRN.phl[29]" "Left_Plaque_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.i"
+connectAttr "BrokenPlaqueRN.phl[29]" "Left_Plaque_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.i"
 		;
-connectAttr "Left_Plaque_Ctrl_Follow.o" "BrokenPlaqueRN.phl[30]";
-connectAttr "Left_Plaque_Ctrl_rotateX.o" "BrokenPlaqueRN.phl[31]";
-connectAttr "Left_Plaque_Ctrl_rotateY.o" "BrokenPlaqueRN.phl[32]";
-connectAttr "Left_Plaque_Ctrl_rotateZ.o" "BrokenPlaqueRN.phl[33]";
-connectAttr "Left_Plaque_Ctrl_translateX.o" "BrokenPlaqueRN.phl[34]";
-connectAttr "Left_Plaque_Ctrl_translateY.o" "BrokenPlaqueRN.phl[35]";
-connectAttr "Left_Plaque_Ctrl_translateZ.o" "BrokenPlaqueRN.phl[36]";
-connectAttr "Left_Plaque_Ctrl_scaleX.o" "BrokenPlaqueRN.phl[37]";
-connectAttr "Left_Plaque_Ctrl_scaleY.o" "BrokenPlaqueRN.phl[38]";
-connectAttr "Left_Plaque_Ctrl_scaleZ.o" "BrokenPlaqueRN.phl[39]";
-connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.ctx" "BrokenPlaqueRN.phl[40]"
+connectAttr "BrokenPlaqueRN.phl[30]" "Left_Plaque_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.i"
 		;
-connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.cty" "BrokenPlaqueRN.phl[41]"
+connectAttr "Left_Plaque_Ctrl_Follow.o" "BrokenPlaqueRN.phl[31]";
+connectAttr "Left_Plaque_Ctrl_rotateX.o" "BrokenPlaqueRN.phl[32]";
+connectAttr "Left_Plaque_Ctrl_rotateY.o" "BrokenPlaqueRN.phl[33]";
+connectAttr "Left_Plaque_Ctrl_rotateZ.o" "BrokenPlaqueRN.phl[34]";
+connectAttr "Left_Plaque_Ctrl_translateX.o" "BrokenPlaqueRN.phl[35]";
+connectAttr "Left_Plaque_Ctrl_translateY.o" "BrokenPlaqueRN.phl[36]";
+connectAttr "Left_Plaque_Ctrl_translateZ.o" "BrokenPlaqueRN.phl[37]";
+connectAttr "Left_Plaque_Ctrl_scaleX.o" "BrokenPlaqueRN.phl[38]";
+connectAttr "Left_Plaque_Ctrl_scaleY.o" "BrokenPlaqueRN.phl[39]";
+connectAttr "Left_Plaque_Ctrl_scaleZ.o" "BrokenPlaqueRN.phl[40]";
+connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.ctx" "BrokenPlaqueRN.phl[41]"
 		;
-connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.ctz" "BrokenPlaqueRN.phl[42]"
+connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.cty" "BrokenPlaqueRN.phl[42]"
 		;
-connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.crx" "BrokenPlaqueRN.phl[43]"
+connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.ctz" "BrokenPlaqueRN.phl[43]"
 		;
-connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.cry" "BrokenPlaqueRN.phl[44]"
+connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.crx" "BrokenPlaqueRN.phl[44]"
 		;
-connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.crz" "BrokenPlaqueRN.phl[45]"
+connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.cry" "BrokenPlaqueRN.phl[45]"
 		;
-connectAttr "BrokenPlaqueRN.phl[46]" "Right_Plaque_Ctrl_Grp_parentConstraint1.cro"
+connectAttr "Right_Plaque_Ctrl_Grp_parentConstraint1.crz" "BrokenPlaqueRN.phl[46]"
 		;
-connectAttr "BrokenPlaqueRN.phl[47]" "Right_Plaque_Ctrl_Grp_parentConstraint1.cpim"
+connectAttr "BrokenPlaqueRN.phl[47]" "Right_Plaque_Ctrl_Grp_parentConstraint1.cro"
 		;
-connectAttr "BrokenPlaqueRN.phl[48]" "Right_Plaque_Ctrl_Grp_parentConstraint1.crp"
+connectAttr "BrokenPlaqueRN.phl[48]" "Right_Plaque_Ctrl_Grp_parentConstraint1.cpim"
 		;
-connectAttr "BrokenPlaqueRN.phl[49]" "Right_Plaque_Ctrl_Grp_parentConstraint1.crt"
+connectAttr "BrokenPlaqueRN.phl[49]" "Right_Plaque_Ctrl_Grp_parentConstraint1.crp"
 		;
-connectAttr "BrokenPlaqueRN.phl[50]" "Right_Plaque_Ctrl_Grp_parentConstraint1_COG_CtrlW0.i"
+connectAttr "BrokenPlaqueRN.phl[50]" "Right_Plaque_Ctrl_Grp_parentConstraint1.crt"
 		;
 connectAttr "BrokenPlaqueRN.phl[51]" "Right_Plaque_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW1.i"
 		;
-connectAttr "BrokenPlaqueRN.phl[52]" "Right_Plaque_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.i"
+connectAttr "BrokenPlaqueRN.phl[52]" "Right_Plaque_Ctrl_Grp_parentConstraint1_COG_CtrlW0.i"
 		;
-connectAttr "BrokenPlaqueRN.phl[53]" "Right_Plaque_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.i"
+connectAttr "BrokenPlaqueRN.phl[53]" "Right_Plaque_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW2.i"
 		;
-connectAttr "BrokenPlaqueRN.phl[54]" "Right_Plaque_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.i"
+connectAttr "BrokenPlaqueRN.phl[54]" "Right_Plaque_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW3.i"
 		;
-connectAttr "Right_Plaque_Ctrl_Follow.o" "BrokenPlaqueRN.phl[55]";
-connectAttr "Right_Plaque_Ctrl_translateX.o" "BrokenPlaqueRN.phl[56]";
-connectAttr "Right_Plaque_Ctrl_translateZ.o" "BrokenPlaqueRN.phl[57]";
-connectAttr "Right_Plaque_Ctrl_translateY.o" "BrokenPlaqueRN.phl[58]";
-connectAttr "Right_Plaque_Ctrl_rotateX.o" "BrokenPlaqueRN.phl[59]";
-connectAttr "Right_Plaque_Ctrl_rotateY.o" "BrokenPlaqueRN.phl[60]";
-connectAttr "Right_Plaque_Ctrl_rotateZ.o" "BrokenPlaqueRN.phl[61]";
-connectAttr "Right_Plaque_Ctrl_scaleX.o" "BrokenPlaqueRN.phl[62]";
-connectAttr "Right_Plaque_Ctrl_scaleY.o" "BrokenPlaqueRN.phl[63]";
-connectAttr "Right_Plaque_Ctrl_scaleZ.o" "BrokenPlaqueRN.phl[64]";
+connectAttr "BrokenPlaqueRN.phl[55]" "Right_Plaque_Ctrl_Grp_parentConstraint1_Prop_CtrlW4.i"
+		;
+connectAttr "Right_Plaque_Ctrl_Follow.o" "BrokenPlaqueRN.phl[56]";
+connectAttr "Right_Plaque_Ctrl_translateX.o" "BrokenPlaqueRN.phl[57]";
+connectAttr "Right_Plaque_Ctrl_translateZ.o" "BrokenPlaqueRN.phl[58]";
+connectAttr "Right_Plaque_Ctrl_translateY.o" "BrokenPlaqueRN.phl[59]";
+connectAttr "Right_Plaque_Ctrl_rotateX.o" "BrokenPlaqueRN.phl[60]";
+connectAttr "Right_Plaque_Ctrl_rotateY.o" "BrokenPlaqueRN.phl[61]";
+connectAttr "Right_Plaque_Ctrl_rotateZ.o" "BrokenPlaqueRN.phl[62]";
+connectAttr "Right_Plaque_Ctrl_scaleX.o" "BrokenPlaqueRN.phl[63]";
+connectAttr "Right_Plaque_Ctrl_scaleY.o" "BrokenPlaqueRN.phl[64]";
+connectAttr "Right_Plaque_Ctrl_scaleZ.o" "BrokenPlaqueRN.phl[65]";
+connectAttr "BrokenPlaqueRN.phl[66]" "BrokenPlaqueRN.phl[67]";
+connectAttr "BrokenPlaqueRN.phl[68]" "BrokenPlaqueRN.phl[69]";
+connectAttr "BrokenPlaqueRN.phl[70]" "BrokenPlaqueRN.phl[71]";
+connectAttr "BrokenPlaqueRN.phl[72]" "BrokenPlaqueRN.phl[73]";
+connectAttr "BrokenPlaqueRN.phl[74]" "BrokenPlaqueRN.phl[75]";
+connectAttr "BrokenPlaqueRN.phl[76]" "BrokenPlaqueRN.phl[77]";
+connectAttr "BrokenPlaqueRN.phl[78]" "BrokenPlaqueRN.phl[79]";
 connectAttr "MAIN_CAM_translateX.o" "MAIN_CAM.tx" -l on;
 connectAttr "MAIN_CAM_translateY.o" "MAIN_CAM.ty" -l on;
 connectAttr "MAIN_CAM_translateZ.o" "MAIN_CAM.tz" -l on;
@@ -38605,3030 +38018,69 @@ connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "aiAOV_diffuse.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "aiAOV_specular.msg" ":defaultArnoldRenderOptions.aovs" -na;
-connectAttr "lambert2.oc" "lambert2SG.ss";
+connectAttr "aiAtmosphereVolume.msg" ":defaultArnoldRenderOptions.atm";
 connectAttr "lambert2SG.msg" "materialInfo1.sg";
-connectAttr "lambert2.msg" "materialInfo1.m";
-connectAttr "lambert3.oc" "lambert3SG.ss";
 connectAttr "lambert3SG.msg" "materialInfo2.sg";
-connectAttr "lambert3.msg" "materialInfo2.m";
 connectAttr "renderLayerManager1.rlmi[0]" "defaultRenderLayer1.rlid";
-connectAttr ":defaultColorMgtGlobals.cme" "file2098.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2098.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2098.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2098.ws";
-connectAttr "place2dTexture478.o" "file2098.uv";
-connectAttr "place2dTexture478.ofs" "file2098.fs";
-connectAttr "place2dTexture478.c" "file2098.c";
-connectAttr "place2dTexture478.tf" "file2098.tf";
-connectAttr "place2dTexture478.rf" "file2098.rf";
-connectAttr "place2dTexture478.mu" "file2098.mu";
-connectAttr "place2dTexture478.mv" "file2098.mv";
-connectAttr "place2dTexture478.s" "file2098.s";
-connectAttr "place2dTexture478.wu" "file2098.wu";
-connectAttr "place2dTexture478.wv" "file2098.wv";
-connectAttr "place2dTexture478.re" "file2098.re";
-connectAttr "place2dTexture478.of" "file2098.of";
-connectAttr "place2dTexture478.r" "file2098.ro";
-connectAttr "place2dTexture478.n" "file2098.n";
-connectAttr "place2dTexture478.vt1" "file2098.vt1";
-connectAttr "place2dTexture478.vt2" "file2098.vt2";
-connectAttr "place2dTexture478.vt3" "file2098.vt3";
-connectAttr "place2dTexture478.vc1" "file2098.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2099.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2099.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2099.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2099.ws";
-connectAttr "place2dTexture478.o" "file2099.uv";
-connectAttr "place2dTexture478.ofs" "file2099.fs";
-connectAttr "place2dTexture478.c" "file2099.c";
-connectAttr "place2dTexture478.tf" "file2099.tf";
-connectAttr "place2dTexture478.rf" "file2099.rf";
-connectAttr "place2dTexture478.mu" "file2099.mu";
-connectAttr "place2dTexture478.mv" "file2099.mv";
-connectAttr "place2dTexture478.s" "file2099.s";
-connectAttr "place2dTexture478.wu" "file2099.wu";
-connectAttr "place2dTexture478.wv" "file2099.wv";
-connectAttr "place2dTexture478.re" "file2099.re";
-connectAttr "place2dTexture478.of" "file2099.of";
-connectAttr "place2dTexture478.r" "file2099.ro";
-connectAttr "place2dTexture478.n" "file2099.n";
-connectAttr "place2dTexture478.vt1" "file2099.vt1";
-connectAttr "place2dTexture478.vt2" "file2099.vt2";
-connectAttr "place2dTexture478.vt3" "file2099.vt3";
-connectAttr "place2dTexture478.vc1" "file2099.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2100.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2100.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2100.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2100.ws";
-connectAttr "place2dTexture478.o" "file2100.uv";
-connectAttr "place2dTexture478.ofs" "file2100.fs";
-connectAttr "place2dTexture478.c" "file2100.c";
-connectAttr "place2dTexture478.tf" "file2100.tf";
-connectAttr "place2dTexture478.rf" "file2100.rf";
-connectAttr "place2dTexture478.mu" "file2100.mu";
-connectAttr "place2dTexture478.mv" "file2100.mv";
-connectAttr "place2dTexture478.s" "file2100.s";
-connectAttr "place2dTexture478.wu" "file2100.wu";
-connectAttr "place2dTexture478.wv" "file2100.wv";
-connectAttr "place2dTexture478.re" "file2100.re";
-connectAttr "place2dTexture478.of" "file2100.of";
-connectAttr "place2dTexture478.r" "file2100.ro";
-connectAttr "place2dTexture478.n" "file2100.n";
-connectAttr "place2dTexture478.vt1" "file2100.vt1";
-connectAttr "place2dTexture478.vt2" "file2100.vt2";
-connectAttr "place2dTexture478.vt3" "file2100.vt3";
-connectAttr "place2dTexture478.vc1" "file2100.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2101.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2101.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2101.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2101.ws";
-connectAttr "place2dTexture478.o" "file2101.uv";
-connectAttr "place2dTexture478.ofs" "file2101.fs";
-connectAttr "place2dTexture478.c" "file2101.c";
-connectAttr "place2dTexture478.tf" "file2101.tf";
-connectAttr "place2dTexture478.rf" "file2101.rf";
-connectAttr "place2dTexture478.mu" "file2101.mu";
-connectAttr "place2dTexture478.mv" "file2101.mv";
-connectAttr "place2dTexture478.s" "file2101.s";
-connectAttr "place2dTexture478.wu" "file2101.wu";
-connectAttr "place2dTexture478.wv" "file2101.wv";
-connectAttr "place2dTexture478.re" "file2101.re";
-connectAttr "place2dTexture478.of" "file2101.of";
-connectAttr "place2dTexture478.r" "file2101.ro";
-connectAttr "place2dTexture478.n" "file2101.n";
-connectAttr "place2dTexture478.vt1" "file2101.vt1";
-connectAttr "place2dTexture478.vt2" "file2101.vt2";
-connectAttr "place2dTexture478.vt3" "file2101.vt3";
-connectAttr "place2dTexture478.vc1" "file2101.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2102.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2102.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2102.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2102.ws";
-connectAttr "place2dTexture478.o" "file2102.uv";
-connectAttr "place2dTexture478.ofs" "file2102.fs";
-connectAttr "place2dTexture478.c" "file2102.c";
-connectAttr "place2dTexture478.tf" "file2102.tf";
-connectAttr "place2dTexture478.rf" "file2102.rf";
-connectAttr "place2dTexture478.mu" "file2102.mu";
-connectAttr "place2dTexture478.mv" "file2102.mv";
-connectAttr "place2dTexture478.s" "file2102.s";
-connectAttr "place2dTexture478.wu" "file2102.wu";
-connectAttr "place2dTexture478.wv" "file2102.wv";
-connectAttr "place2dTexture478.re" "file2102.re";
-connectAttr "place2dTexture478.of" "file2102.of";
-connectAttr "place2dTexture478.r" "file2102.ro";
-connectAttr "place2dTexture478.n" "file2102.n";
-connectAttr "place2dTexture478.vt1" "file2102.vt1";
-connectAttr "place2dTexture478.vt2" "file2102.vt2";
-connectAttr "place2dTexture478.vt3" "file2102.vt3";
-connectAttr "place2dTexture478.vc1" "file2102.vc1";
-connectAttr "file2098.oc" "multiplyDivide401.i1";
 connectAttr "set406.msg" "materialInfo592.sg";
-connectAttr "file2101.oa" "bump2d396.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file2103.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2103.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2103.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2103.ws";
-connectAttr "place2dTexture479.o" "file2103.uv";
-connectAttr "place2dTexture479.ofs" "file2103.fs";
-connectAttr "place2dTexture479.c" "file2103.c";
-connectAttr "place2dTexture479.tf" "file2103.tf";
-connectAttr "place2dTexture479.rf" "file2103.rf";
-connectAttr "place2dTexture479.mu" "file2103.mu";
-connectAttr "place2dTexture479.mv" "file2103.mv";
-connectAttr "place2dTexture479.s" "file2103.s";
-connectAttr "place2dTexture479.wu" "file2103.wu";
-connectAttr "place2dTexture479.wv" "file2103.wv";
-connectAttr "place2dTexture479.re" "file2103.re";
-connectAttr "place2dTexture479.of" "file2103.of";
-connectAttr "place2dTexture479.r" "file2103.ro";
-connectAttr "place2dTexture479.n" "file2103.n";
-connectAttr "place2dTexture479.vt1" "file2103.vt1";
-connectAttr "place2dTexture479.vt2" "file2103.vt2";
-connectAttr "place2dTexture479.vt3" "file2103.vt3";
-connectAttr "place2dTexture479.vc1" "file2103.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2104.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2104.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2104.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2104.ws";
-connectAttr "place2dTexture479.o" "file2104.uv";
-connectAttr "place2dTexture479.ofs" "file2104.fs";
-connectAttr "place2dTexture479.c" "file2104.c";
-connectAttr "place2dTexture479.tf" "file2104.tf";
-connectAttr "place2dTexture479.rf" "file2104.rf";
-connectAttr "place2dTexture479.mu" "file2104.mu";
-connectAttr "place2dTexture479.mv" "file2104.mv";
-connectAttr "place2dTexture479.s" "file2104.s";
-connectAttr "place2dTexture479.wu" "file2104.wu";
-connectAttr "place2dTexture479.wv" "file2104.wv";
-connectAttr "place2dTexture479.re" "file2104.re";
-connectAttr "place2dTexture479.of" "file2104.of";
-connectAttr "place2dTexture479.r" "file2104.ro";
-connectAttr "place2dTexture479.n" "file2104.n";
-connectAttr "place2dTexture479.vt1" "file2104.vt1";
-connectAttr "place2dTexture479.vt2" "file2104.vt2";
-connectAttr "place2dTexture479.vt3" "file2104.vt3";
-connectAttr "place2dTexture479.vc1" "file2104.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2105.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2105.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2105.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2105.ws";
-connectAttr "place2dTexture479.o" "file2105.uv";
-connectAttr "place2dTexture479.ofs" "file2105.fs";
-connectAttr "place2dTexture479.c" "file2105.c";
-connectAttr "place2dTexture479.tf" "file2105.tf";
-connectAttr "place2dTexture479.rf" "file2105.rf";
-connectAttr "place2dTexture479.mu" "file2105.mu";
-connectAttr "place2dTexture479.mv" "file2105.mv";
-connectAttr "place2dTexture479.s" "file2105.s";
-connectAttr "place2dTexture479.wu" "file2105.wu";
-connectAttr "place2dTexture479.wv" "file2105.wv";
-connectAttr "place2dTexture479.re" "file2105.re";
-connectAttr "place2dTexture479.of" "file2105.of";
-connectAttr "place2dTexture479.r" "file2105.ro";
-connectAttr "place2dTexture479.n" "file2105.n";
-connectAttr "place2dTexture479.vt1" "file2105.vt1";
-connectAttr "place2dTexture479.vt2" "file2105.vt2";
-connectAttr "place2dTexture479.vt3" "file2105.vt3";
-connectAttr "place2dTexture479.vc1" "file2105.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2106.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2106.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2106.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2106.ws";
-connectAttr "place2dTexture479.o" "file2106.uv";
-connectAttr "place2dTexture479.ofs" "file2106.fs";
-connectAttr "place2dTexture479.c" "file2106.c";
-connectAttr "place2dTexture479.tf" "file2106.tf";
-connectAttr "place2dTexture479.rf" "file2106.rf";
-connectAttr "place2dTexture479.mu" "file2106.mu";
-connectAttr "place2dTexture479.mv" "file2106.mv";
-connectAttr "place2dTexture479.s" "file2106.s";
-connectAttr "place2dTexture479.wu" "file2106.wu";
-connectAttr "place2dTexture479.wv" "file2106.wv";
-connectAttr "place2dTexture479.re" "file2106.re";
-connectAttr "place2dTexture479.of" "file2106.of";
-connectAttr "place2dTexture479.r" "file2106.ro";
-connectAttr "place2dTexture479.n" "file2106.n";
-connectAttr "place2dTexture479.vt1" "file2106.vt1";
-connectAttr "place2dTexture479.vt2" "file2106.vt2";
-connectAttr "place2dTexture479.vt3" "file2106.vt3";
-connectAttr "place2dTexture479.vc1" "file2106.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2107.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2107.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2107.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2107.ws";
-connectAttr "place2dTexture479.o" "file2107.uv";
-connectAttr "place2dTexture479.ofs" "file2107.fs";
-connectAttr "place2dTexture479.c" "file2107.c";
-connectAttr "place2dTexture479.tf" "file2107.tf";
-connectAttr "place2dTexture479.rf" "file2107.rf";
-connectAttr "place2dTexture479.mu" "file2107.mu";
-connectAttr "place2dTexture479.mv" "file2107.mv";
-connectAttr "place2dTexture479.s" "file2107.s";
-connectAttr "place2dTexture479.wu" "file2107.wu";
-connectAttr "place2dTexture479.wv" "file2107.wv";
-connectAttr "place2dTexture479.re" "file2107.re";
-connectAttr "place2dTexture479.of" "file2107.of";
-connectAttr "place2dTexture479.r" "file2107.ro";
-connectAttr "place2dTexture479.n" "file2107.n";
-connectAttr "place2dTexture479.vt1" "file2107.vt1";
-connectAttr "place2dTexture479.vt2" "file2107.vt2";
-connectAttr "place2dTexture479.vt3" "file2107.vt3";
-connectAttr "place2dTexture479.vc1" "file2107.vc1";
-connectAttr "file2103.oc" "multiplyDivide402.i1";
 connectAttr "set407.msg" "materialInfo593.sg";
-connectAttr "file2106.oa" "bump2d397.bv";
 connectAttr "multiplyDivide402.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo5.tgi[0].ni[0].dn"
 		;
 connectAttr "set407.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo5.tgi[0].ni[1].dn"
 		;
-connectAttr "file2106.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo5.tgi[0].ni[2].dn"
-		;
 connectAttr "place2dTexture479.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo5.tgi[0].ni[3].dn"
-		;
-connectAttr "file2103.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo5.tgi[0].ni[4].dn"
-		;
-connectAttr "file2104.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo5.tgi[0].ni[5].dn"
-		;
-connectAttr "file2105.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo5.tgi[0].ni[6].dn"
-		;
-connectAttr "file2107.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo5.tgi[0].ni[7].dn"
 		;
 connectAttr "bump2d397.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo5.tgi[0].ni[10].dn"
 		;
-connectAttr ":defaultColorMgtGlobals.cme" "file16.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file16.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file16.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file16.ws";
-connectAttr "place2dTexture4.o" "file16.uv";
-connectAttr "place2dTexture4.ofs" "file16.fs";
-connectAttr "place2dTexture4.c" "file16.c";
-connectAttr "place2dTexture4.tf" "file16.tf";
-connectAttr "place2dTexture4.rf" "file16.rf";
-connectAttr "place2dTexture4.mu" "file16.mu";
-connectAttr "place2dTexture4.mv" "file16.mv";
-connectAttr "place2dTexture4.s" "file16.s";
-connectAttr "place2dTexture4.wu" "file16.wu";
-connectAttr "place2dTexture4.wv" "file16.wv";
-connectAttr "place2dTexture4.re" "file16.re";
-connectAttr "place2dTexture4.of" "file16.of";
-connectAttr "place2dTexture4.r" "file16.ro";
-connectAttr "place2dTexture4.n" "file16.n";
-connectAttr "place2dTexture4.vt1" "file16.vt1";
-connectAttr "place2dTexture4.vt2" "file16.vt2";
-connectAttr "place2dTexture4.vt3" "file16.vt3";
-connectAttr "place2dTexture4.vc1" "file16.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file18.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file18.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file18.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file18.ws";
-connectAttr "place2dTexture4.o" "file18.uv";
-connectAttr "place2dTexture4.ofs" "file18.fs";
-connectAttr "place2dTexture4.c" "file18.c";
-connectAttr "place2dTexture4.tf" "file18.tf";
-connectAttr "place2dTexture4.rf" "file18.rf";
-connectAttr "place2dTexture4.mu" "file18.mu";
-connectAttr "place2dTexture4.mv" "file18.mv";
-connectAttr "place2dTexture4.s" "file18.s";
-connectAttr "place2dTexture4.wu" "file18.wu";
-connectAttr "place2dTexture4.wv" "file18.wv";
-connectAttr "place2dTexture4.re" "file18.re";
-connectAttr "place2dTexture4.of" "file18.of";
-connectAttr "place2dTexture4.r" "file18.ro";
-connectAttr "place2dTexture4.n" "file18.n";
-connectAttr "place2dTexture4.vt1" "file18.vt1";
-connectAttr "place2dTexture4.vt2" "file18.vt2";
-connectAttr "place2dTexture4.vt3" "file18.vt3";
-connectAttr "place2dTexture4.vc1" "file18.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file19.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file19.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file19.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file19.ws";
-connectAttr "place2dTexture4.o" "file19.uv";
-connectAttr "place2dTexture4.ofs" "file19.fs";
-connectAttr "place2dTexture4.c" "file19.c";
-connectAttr "place2dTexture4.tf" "file19.tf";
-connectAttr "place2dTexture4.rf" "file19.rf";
-connectAttr "place2dTexture4.mu" "file19.mu";
-connectAttr "place2dTexture4.mv" "file19.mv";
-connectAttr "place2dTexture4.s" "file19.s";
-connectAttr "place2dTexture4.wu" "file19.wu";
-connectAttr "place2dTexture4.wv" "file19.wv";
-connectAttr "place2dTexture4.re" "file19.re";
-connectAttr "place2dTexture4.of" "file19.of";
-connectAttr "place2dTexture4.r" "file19.ro";
-connectAttr "place2dTexture4.n" "file19.n";
-connectAttr "place2dTexture4.vt1" "file19.vt1";
-connectAttr "place2dTexture4.vt2" "file19.vt2";
-connectAttr "place2dTexture4.vt3" "file19.vt3";
-connectAttr "place2dTexture4.vc1" "file19.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file20.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file20.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file20.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file20.ws";
-connectAttr "place2dTexture4.o" "file20.uv";
-connectAttr "place2dTexture4.ofs" "file20.fs";
-connectAttr "place2dTexture4.c" "file20.c";
-connectAttr "place2dTexture4.tf" "file20.tf";
-connectAttr "place2dTexture4.rf" "file20.rf";
-connectAttr "place2dTexture4.mu" "file20.mu";
-connectAttr "place2dTexture4.mv" "file20.mv";
-connectAttr "place2dTexture4.s" "file20.s";
-connectAttr "place2dTexture4.wu" "file20.wu";
-connectAttr "place2dTexture4.wv" "file20.wv";
-connectAttr "place2dTexture4.re" "file20.re";
-connectAttr "place2dTexture4.of" "file20.of";
-connectAttr "place2dTexture4.r" "file20.ro";
-connectAttr "place2dTexture4.n" "file20.n";
-connectAttr "place2dTexture4.vt1" "file20.vt1";
-connectAttr "place2dTexture4.vt2" "file20.vt2";
-connectAttr "place2dTexture4.vt3" "file20.vt3";
-connectAttr "place2dTexture4.vc1" "file20.vc1";
-connectAttr "file16.oc" "multiplyDivide4.i1";
 connectAttr "set4.msg" "materialInfo8.sg";
-connectAttr "file19.oa" "bump2d4.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file21.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file21.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file21.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file21.ws";
-connectAttr "place2dTexture5.o" "file21.uv";
-connectAttr "place2dTexture5.ofs" "file21.fs";
-connectAttr "place2dTexture5.c" "file21.c";
-connectAttr "place2dTexture5.tf" "file21.tf";
-connectAttr "place2dTexture5.rf" "file21.rf";
-connectAttr "place2dTexture5.mu" "file21.mu";
-connectAttr "place2dTexture5.mv" "file21.mv";
-connectAttr "place2dTexture5.s" "file21.s";
-connectAttr "place2dTexture5.wu" "file21.wu";
-connectAttr "place2dTexture5.wv" "file21.wv";
-connectAttr "place2dTexture5.re" "file21.re";
-connectAttr "place2dTexture5.of" "file21.of";
-connectAttr "place2dTexture5.r" "file21.ro";
-connectAttr "place2dTexture5.n" "file21.n";
-connectAttr "place2dTexture5.vt1" "file21.vt1";
-connectAttr "place2dTexture5.vt2" "file21.vt2";
-connectAttr "place2dTexture5.vt3" "file21.vt3";
-connectAttr "place2dTexture5.vc1" "file21.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file23.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file23.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file23.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file23.ws";
-connectAttr "place2dTexture5.o" "file23.uv";
-connectAttr "place2dTexture5.ofs" "file23.fs";
-connectAttr "place2dTexture5.c" "file23.c";
-connectAttr "place2dTexture5.tf" "file23.tf";
-connectAttr "place2dTexture5.rf" "file23.rf";
-connectAttr "place2dTexture5.mu" "file23.mu";
-connectAttr "place2dTexture5.mv" "file23.mv";
-connectAttr "place2dTexture5.s" "file23.s";
-connectAttr "place2dTexture5.wu" "file23.wu";
-connectAttr "place2dTexture5.wv" "file23.wv";
-connectAttr "place2dTexture5.re" "file23.re";
-connectAttr "place2dTexture5.of" "file23.of";
-connectAttr "place2dTexture5.r" "file23.ro";
-connectAttr "place2dTexture5.n" "file23.n";
-connectAttr "place2dTexture5.vt1" "file23.vt1";
-connectAttr "place2dTexture5.vt2" "file23.vt2";
-connectAttr "place2dTexture5.vt3" "file23.vt3";
-connectAttr "place2dTexture5.vc1" "file23.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file24.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file24.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file24.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file24.ws";
-connectAttr "place2dTexture5.o" "file24.uv";
-connectAttr "place2dTexture5.ofs" "file24.fs";
-connectAttr "place2dTexture5.c" "file24.c";
-connectAttr "place2dTexture5.tf" "file24.tf";
-connectAttr "place2dTexture5.rf" "file24.rf";
-connectAttr "place2dTexture5.mu" "file24.mu";
-connectAttr "place2dTexture5.mv" "file24.mv";
-connectAttr "place2dTexture5.s" "file24.s";
-connectAttr "place2dTexture5.wu" "file24.wu";
-connectAttr "place2dTexture5.wv" "file24.wv";
-connectAttr "place2dTexture5.re" "file24.re";
-connectAttr "place2dTexture5.of" "file24.of";
-connectAttr "place2dTexture5.r" "file24.ro";
-connectAttr "place2dTexture5.n" "file24.n";
-connectAttr "place2dTexture5.vt1" "file24.vt1";
-connectAttr "place2dTexture5.vt2" "file24.vt2";
-connectAttr "place2dTexture5.vt3" "file24.vt3";
-connectAttr "place2dTexture5.vc1" "file24.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file25.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file25.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file25.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file25.ws";
-connectAttr "place2dTexture5.o" "file25.uv";
-connectAttr "place2dTexture5.ofs" "file25.fs";
-connectAttr "place2dTexture5.c" "file25.c";
-connectAttr "place2dTexture5.tf" "file25.tf";
-connectAttr "place2dTexture5.rf" "file25.rf";
-connectAttr "place2dTexture5.mu" "file25.mu";
-connectAttr "place2dTexture5.mv" "file25.mv";
-connectAttr "place2dTexture5.s" "file25.s";
-connectAttr "place2dTexture5.wu" "file25.wu";
-connectAttr "place2dTexture5.wv" "file25.wv";
-connectAttr "place2dTexture5.re" "file25.re";
-connectAttr "place2dTexture5.of" "file25.of";
-connectAttr "place2dTexture5.r" "file25.ro";
-connectAttr "place2dTexture5.n" "file25.n";
-connectAttr "place2dTexture5.vt1" "file25.vt1";
-connectAttr "place2dTexture5.vt2" "file25.vt2";
-connectAttr "place2dTexture5.vt3" "file25.vt3";
-connectAttr "place2dTexture5.vc1" "file25.vc1";
-connectAttr "file21.oc" "multiplyDivide5.i1";
 connectAttr "set5.msg" "materialInfo9.sg";
-connectAttr "file24.oa" "bump2d5.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file26.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file26.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file26.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file26.ws";
-connectAttr "place2dTexture6.o" "file26.uv";
-connectAttr "place2dTexture6.ofs" "file26.fs";
-connectAttr "place2dTexture6.c" "file26.c";
-connectAttr "place2dTexture6.tf" "file26.tf";
-connectAttr "place2dTexture6.rf" "file26.rf";
-connectAttr "place2dTexture6.mu" "file26.mu";
-connectAttr "place2dTexture6.mv" "file26.mv";
-connectAttr "place2dTexture6.s" "file26.s";
-connectAttr "place2dTexture6.wu" "file26.wu";
-connectAttr "place2dTexture6.wv" "file26.wv";
-connectAttr "place2dTexture6.re" "file26.re";
-connectAttr "place2dTexture6.of" "file26.of";
-connectAttr "place2dTexture6.r" "file26.ro";
-connectAttr "place2dTexture6.n" "file26.n";
-connectAttr "place2dTexture6.vt1" "file26.vt1";
-connectAttr "place2dTexture6.vt2" "file26.vt2";
-connectAttr "place2dTexture6.vt3" "file26.vt3";
-connectAttr "place2dTexture6.vc1" "file26.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file28.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file28.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file28.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file28.ws";
-connectAttr "place2dTexture6.o" "file28.uv";
-connectAttr "place2dTexture6.ofs" "file28.fs";
-connectAttr "place2dTexture6.c" "file28.c";
-connectAttr "place2dTexture6.tf" "file28.tf";
-connectAttr "place2dTexture6.rf" "file28.rf";
-connectAttr "place2dTexture6.mu" "file28.mu";
-connectAttr "place2dTexture6.mv" "file28.mv";
-connectAttr "place2dTexture6.s" "file28.s";
-connectAttr "place2dTexture6.wu" "file28.wu";
-connectAttr "place2dTexture6.wv" "file28.wv";
-connectAttr "place2dTexture6.re" "file28.re";
-connectAttr "place2dTexture6.of" "file28.of";
-connectAttr "place2dTexture6.r" "file28.ro";
-connectAttr "place2dTexture6.n" "file28.n";
-connectAttr "place2dTexture6.vt1" "file28.vt1";
-connectAttr "place2dTexture6.vt2" "file28.vt2";
-connectAttr "place2dTexture6.vt3" "file28.vt3";
-connectAttr "place2dTexture6.vc1" "file28.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file29.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file29.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file29.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file29.ws";
-connectAttr "place2dTexture6.o" "file29.uv";
-connectAttr "place2dTexture6.ofs" "file29.fs";
-connectAttr "place2dTexture6.c" "file29.c";
-connectAttr "place2dTexture6.tf" "file29.tf";
-connectAttr "place2dTexture6.rf" "file29.rf";
-connectAttr "place2dTexture6.mu" "file29.mu";
-connectAttr "place2dTexture6.mv" "file29.mv";
-connectAttr "place2dTexture6.s" "file29.s";
-connectAttr "place2dTexture6.wu" "file29.wu";
-connectAttr "place2dTexture6.wv" "file29.wv";
-connectAttr "place2dTexture6.re" "file29.re";
-connectAttr "place2dTexture6.of" "file29.of";
-connectAttr "place2dTexture6.r" "file29.ro";
-connectAttr "place2dTexture6.n" "file29.n";
-connectAttr "place2dTexture6.vt1" "file29.vt1";
-connectAttr "place2dTexture6.vt2" "file29.vt2";
-connectAttr "place2dTexture6.vt3" "file29.vt3";
-connectAttr "place2dTexture6.vc1" "file29.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file30.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file30.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file30.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file30.ws";
-connectAttr "place2dTexture6.o" "file30.uv";
-connectAttr "place2dTexture6.ofs" "file30.fs";
-connectAttr "place2dTexture6.c" "file30.c";
-connectAttr "place2dTexture6.tf" "file30.tf";
-connectAttr "place2dTexture6.rf" "file30.rf";
-connectAttr "place2dTexture6.mu" "file30.mu";
-connectAttr "place2dTexture6.mv" "file30.mv";
-connectAttr "place2dTexture6.s" "file30.s";
-connectAttr "place2dTexture6.wu" "file30.wu";
-connectAttr "place2dTexture6.wv" "file30.wv";
-connectAttr "place2dTexture6.re" "file30.re";
-connectAttr "place2dTexture6.of" "file30.of";
-connectAttr "place2dTexture6.r" "file30.ro";
-connectAttr "place2dTexture6.n" "file30.n";
-connectAttr "place2dTexture6.vt1" "file30.vt1";
-connectAttr "place2dTexture6.vt2" "file30.vt2";
-connectAttr "place2dTexture6.vt3" "file30.vt3";
-connectAttr "place2dTexture6.vc1" "file30.vc1";
-connectAttr "file26.oc" "multiplyDivide6.i1";
 connectAttr "set6.msg" "materialInfo10.sg";
-connectAttr "file29.oa" "bump2d6.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file31.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file31.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file31.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file31.ws";
-connectAttr "place2dTexture7.o" "file31.uv";
-connectAttr "place2dTexture7.ofs" "file31.fs";
-connectAttr "place2dTexture7.c" "file31.c";
-connectAttr "place2dTexture7.tf" "file31.tf";
-connectAttr "place2dTexture7.rf" "file31.rf";
-connectAttr "place2dTexture7.mu" "file31.mu";
-connectAttr "place2dTexture7.mv" "file31.mv";
-connectAttr "place2dTexture7.s" "file31.s";
-connectAttr "place2dTexture7.wu" "file31.wu";
-connectAttr "place2dTexture7.wv" "file31.wv";
-connectAttr "place2dTexture7.re" "file31.re";
-connectAttr "place2dTexture7.of" "file31.of";
-connectAttr "place2dTexture7.r" "file31.ro";
-connectAttr "place2dTexture7.n" "file31.n";
-connectAttr "place2dTexture7.vt1" "file31.vt1";
-connectAttr "place2dTexture7.vt2" "file31.vt2";
-connectAttr "place2dTexture7.vt3" "file31.vt3";
-connectAttr "place2dTexture7.vc1" "file31.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file33.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file33.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file33.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file33.ws";
-connectAttr "place2dTexture7.o" "file33.uv";
-connectAttr "place2dTexture7.ofs" "file33.fs";
-connectAttr "place2dTexture7.c" "file33.c";
-connectAttr "place2dTexture7.tf" "file33.tf";
-connectAttr "place2dTexture7.rf" "file33.rf";
-connectAttr "place2dTexture7.mu" "file33.mu";
-connectAttr "place2dTexture7.mv" "file33.mv";
-connectAttr "place2dTexture7.s" "file33.s";
-connectAttr "place2dTexture7.wu" "file33.wu";
-connectAttr "place2dTexture7.wv" "file33.wv";
-connectAttr "place2dTexture7.re" "file33.re";
-connectAttr "place2dTexture7.of" "file33.of";
-connectAttr "place2dTexture7.r" "file33.ro";
-connectAttr "place2dTexture7.n" "file33.n";
-connectAttr "place2dTexture7.vt1" "file33.vt1";
-connectAttr "place2dTexture7.vt2" "file33.vt2";
-connectAttr "place2dTexture7.vt3" "file33.vt3";
-connectAttr "place2dTexture7.vc1" "file33.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file34.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file34.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file34.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file34.ws";
-connectAttr "place2dTexture7.o" "file34.uv";
-connectAttr "place2dTexture7.ofs" "file34.fs";
-connectAttr "place2dTexture7.c" "file34.c";
-connectAttr "place2dTexture7.tf" "file34.tf";
-connectAttr "place2dTexture7.rf" "file34.rf";
-connectAttr "place2dTexture7.mu" "file34.mu";
-connectAttr "place2dTexture7.mv" "file34.mv";
-connectAttr "place2dTexture7.s" "file34.s";
-connectAttr "place2dTexture7.wu" "file34.wu";
-connectAttr "place2dTexture7.wv" "file34.wv";
-connectAttr "place2dTexture7.re" "file34.re";
-connectAttr "place2dTexture7.of" "file34.of";
-connectAttr "place2dTexture7.r" "file34.ro";
-connectAttr "place2dTexture7.n" "file34.n";
-connectAttr "place2dTexture7.vt1" "file34.vt1";
-connectAttr "place2dTexture7.vt2" "file34.vt2";
-connectAttr "place2dTexture7.vt3" "file34.vt3";
-connectAttr "place2dTexture7.vc1" "file34.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file35.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file35.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file35.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file35.ws";
-connectAttr "place2dTexture7.o" "file35.uv";
-connectAttr "place2dTexture7.ofs" "file35.fs";
-connectAttr "place2dTexture7.c" "file35.c";
-connectAttr "place2dTexture7.tf" "file35.tf";
-connectAttr "place2dTexture7.rf" "file35.rf";
-connectAttr "place2dTexture7.mu" "file35.mu";
-connectAttr "place2dTexture7.mv" "file35.mv";
-connectAttr "place2dTexture7.s" "file35.s";
-connectAttr "place2dTexture7.wu" "file35.wu";
-connectAttr "place2dTexture7.wv" "file35.wv";
-connectAttr "place2dTexture7.re" "file35.re";
-connectAttr "place2dTexture7.of" "file35.of";
-connectAttr "place2dTexture7.r" "file35.ro";
-connectAttr "place2dTexture7.n" "file35.n";
-connectAttr "place2dTexture7.vt1" "file35.vt1";
-connectAttr "place2dTexture7.vt2" "file35.vt2";
-connectAttr "place2dTexture7.vt3" "file35.vt3";
-connectAttr "place2dTexture7.vc1" "file35.vc1";
-connectAttr "file31.oc" "multiplyDivide7.i1";
 connectAttr "set7.msg" "materialInfo11.sg";
-connectAttr "file34.oa" "bump2d7.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file36.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file36.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file36.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file36.ws";
-connectAttr "place2dTexture8.o" "file36.uv";
-connectAttr "place2dTexture8.ofs" "file36.fs";
-connectAttr "place2dTexture8.c" "file36.c";
-connectAttr "place2dTexture8.tf" "file36.tf";
-connectAttr "place2dTexture8.rf" "file36.rf";
-connectAttr "place2dTexture8.mu" "file36.mu";
-connectAttr "place2dTexture8.mv" "file36.mv";
-connectAttr "place2dTexture8.s" "file36.s";
-connectAttr "place2dTexture8.wu" "file36.wu";
-connectAttr "place2dTexture8.wv" "file36.wv";
-connectAttr "place2dTexture8.re" "file36.re";
-connectAttr "place2dTexture8.of" "file36.of";
-connectAttr "place2dTexture8.r" "file36.ro";
-connectAttr "place2dTexture8.n" "file36.n";
-connectAttr "place2dTexture8.vt1" "file36.vt1";
-connectAttr "place2dTexture8.vt2" "file36.vt2";
-connectAttr "place2dTexture8.vt3" "file36.vt3";
-connectAttr "place2dTexture8.vc1" "file36.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file38.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file38.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file38.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file38.ws";
-connectAttr "place2dTexture8.o" "file38.uv";
-connectAttr "place2dTexture8.ofs" "file38.fs";
-connectAttr "place2dTexture8.c" "file38.c";
-connectAttr "place2dTexture8.tf" "file38.tf";
-connectAttr "place2dTexture8.rf" "file38.rf";
-connectAttr "place2dTexture8.mu" "file38.mu";
-connectAttr "place2dTexture8.mv" "file38.mv";
-connectAttr "place2dTexture8.s" "file38.s";
-connectAttr "place2dTexture8.wu" "file38.wu";
-connectAttr "place2dTexture8.wv" "file38.wv";
-connectAttr "place2dTexture8.re" "file38.re";
-connectAttr "place2dTexture8.of" "file38.of";
-connectAttr "place2dTexture8.r" "file38.ro";
-connectAttr "place2dTexture8.n" "file38.n";
-connectAttr "place2dTexture8.vt1" "file38.vt1";
-connectAttr "place2dTexture8.vt2" "file38.vt2";
-connectAttr "place2dTexture8.vt3" "file38.vt3";
-connectAttr "place2dTexture8.vc1" "file38.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file39.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file39.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file39.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file39.ws";
-connectAttr "place2dTexture8.o" "file39.uv";
-connectAttr "place2dTexture8.ofs" "file39.fs";
-connectAttr "place2dTexture8.c" "file39.c";
-connectAttr "place2dTexture8.tf" "file39.tf";
-connectAttr "place2dTexture8.rf" "file39.rf";
-connectAttr "place2dTexture8.mu" "file39.mu";
-connectAttr "place2dTexture8.mv" "file39.mv";
-connectAttr "place2dTexture8.s" "file39.s";
-connectAttr "place2dTexture8.wu" "file39.wu";
-connectAttr "place2dTexture8.wv" "file39.wv";
-connectAttr "place2dTexture8.re" "file39.re";
-connectAttr "place2dTexture8.of" "file39.of";
-connectAttr "place2dTexture8.r" "file39.ro";
-connectAttr "place2dTexture8.n" "file39.n";
-connectAttr "place2dTexture8.vt1" "file39.vt1";
-connectAttr "place2dTexture8.vt2" "file39.vt2";
-connectAttr "place2dTexture8.vt3" "file39.vt3";
-connectAttr "place2dTexture8.vc1" "file39.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file40.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file40.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file40.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file40.ws";
-connectAttr "place2dTexture8.o" "file40.uv";
-connectAttr "place2dTexture8.ofs" "file40.fs";
-connectAttr "place2dTexture8.c" "file40.c";
-connectAttr "place2dTexture8.tf" "file40.tf";
-connectAttr "place2dTexture8.rf" "file40.rf";
-connectAttr "place2dTexture8.mu" "file40.mu";
-connectAttr "place2dTexture8.mv" "file40.mv";
-connectAttr "place2dTexture8.s" "file40.s";
-connectAttr "place2dTexture8.wu" "file40.wu";
-connectAttr "place2dTexture8.wv" "file40.wv";
-connectAttr "place2dTexture8.re" "file40.re";
-connectAttr "place2dTexture8.of" "file40.of";
-connectAttr "place2dTexture8.r" "file40.ro";
-connectAttr "place2dTexture8.n" "file40.n";
-connectAttr "place2dTexture8.vt1" "file40.vt1";
-connectAttr "place2dTexture8.vt2" "file40.vt2";
-connectAttr "place2dTexture8.vt3" "file40.vt3";
-connectAttr "place2dTexture8.vc1" "file40.vc1";
-connectAttr "file36.oc" "multiplyDivide8.i1";
 connectAttr "set8.msg" "materialInfo12.sg";
-connectAttr "file39.oa" "bump2d8.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file41.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file41.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file41.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file41.ws";
-connectAttr "place2dTexture9.o" "file41.uv";
-connectAttr "place2dTexture9.ofs" "file41.fs";
-connectAttr "place2dTexture9.c" "file41.c";
-connectAttr "place2dTexture9.tf" "file41.tf";
-connectAttr "place2dTexture9.rf" "file41.rf";
-connectAttr "place2dTexture9.mu" "file41.mu";
-connectAttr "place2dTexture9.mv" "file41.mv";
-connectAttr "place2dTexture9.s" "file41.s";
-connectAttr "place2dTexture9.wu" "file41.wu";
-connectAttr "place2dTexture9.wv" "file41.wv";
-connectAttr "place2dTexture9.re" "file41.re";
-connectAttr "place2dTexture9.of" "file41.of";
-connectAttr "place2dTexture9.r" "file41.ro";
-connectAttr "place2dTexture9.n" "file41.n";
-connectAttr "place2dTexture9.vt1" "file41.vt1";
-connectAttr "place2dTexture9.vt2" "file41.vt2";
-connectAttr "place2dTexture9.vt3" "file41.vt3";
-connectAttr "place2dTexture9.vc1" "file41.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file43.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file43.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file43.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file43.ws";
-connectAttr "place2dTexture9.o" "file43.uv";
-connectAttr "place2dTexture9.ofs" "file43.fs";
-connectAttr "place2dTexture9.c" "file43.c";
-connectAttr "place2dTexture9.tf" "file43.tf";
-connectAttr "place2dTexture9.rf" "file43.rf";
-connectAttr "place2dTexture9.mu" "file43.mu";
-connectAttr "place2dTexture9.mv" "file43.mv";
-connectAttr "place2dTexture9.s" "file43.s";
-connectAttr "place2dTexture9.wu" "file43.wu";
-connectAttr "place2dTexture9.wv" "file43.wv";
-connectAttr "place2dTexture9.re" "file43.re";
-connectAttr "place2dTexture9.of" "file43.of";
-connectAttr "place2dTexture9.r" "file43.ro";
-connectAttr "place2dTexture9.n" "file43.n";
-connectAttr "place2dTexture9.vt1" "file43.vt1";
-connectAttr "place2dTexture9.vt2" "file43.vt2";
-connectAttr "place2dTexture9.vt3" "file43.vt3";
-connectAttr "place2dTexture9.vc1" "file43.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file44.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file44.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file44.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file44.ws";
-connectAttr "place2dTexture9.o" "file44.uv";
-connectAttr "place2dTexture9.ofs" "file44.fs";
-connectAttr "place2dTexture9.c" "file44.c";
-connectAttr "place2dTexture9.tf" "file44.tf";
-connectAttr "place2dTexture9.rf" "file44.rf";
-connectAttr "place2dTexture9.mu" "file44.mu";
-connectAttr "place2dTexture9.mv" "file44.mv";
-connectAttr "place2dTexture9.s" "file44.s";
-connectAttr "place2dTexture9.wu" "file44.wu";
-connectAttr "place2dTexture9.wv" "file44.wv";
-connectAttr "place2dTexture9.re" "file44.re";
-connectAttr "place2dTexture9.of" "file44.of";
-connectAttr "place2dTexture9.r" "file44.ro";
-connectAttr "place2dTexture9.n" "file44.n";
-connectAttr "place2dTexture9.vt1" "file44.vt1";
-connectAttr "place2dTexture9.vt2" "file44.vt2";
-connectAttr "place2dTexture9.vt3" "file44.vt3";
-connectAttr "place2dTexture9.vc1" "file44.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file45.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file45.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file45.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file45.ws";
-connectAttr "place2dTexture9.o" "file45.uv";
-connectAttr "place2dTexture9.ofs" "file45.fs";
-connectAttr "place2dTexture9.c" "file45.c";
-connectAttr "place2dTexture9.tf" "file45.tf";
-connectAttr "place2dTexture9.rf" "file45.rf";
-connectAttr "place2dTexture9.mu" "file45.mu";
-connectAttr "place2dTexture9.mv" "file45.mv";
-connectAttr "place2dTexture9.s" "file45.s";
-connectAttr "place2dTexture9.wu" "file45.wu";
-connectAttr "place2dTexture9.wv" "file45.wv";
-connectAttr "place2dTexture9.re" "file45.re";
-connectAttr "place2dTexture9.of" "file45.of";
-connectAttr "place2dTexture9.r" "file45.ro";
-connectAttr "place2dTexture9.n" "file45.n";
-connectAttr "place2dTexture9.vt1" "file45.vt1";
-connectAttr "place2dTexture9.vt2" "file45.vt2";
-connectAttr "place2dTexture9.vt3" "file45.vt3";
-connectAttr "place2dTexture9.vc1" "file45.vc1";
-connectAttr "file41.oc" "multiplyDivide9.i1";
 connectAttr "set9.msg" "materialInfo13.sg";
-connectAttr "file44.oa" "bump2d9.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file46.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file46.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file46.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file46.ws";
-connectAttr "place2dTexture10.o" "file46.uv";
-connectAttr "place2dTexture10.ofs" "file46.fs";
-connectAttr "place2dTexture10.c" "file46.c";
-connectAttr "place2dTexture10.tf" "file46.tf";
-connectAttr "place2dTexture10.rf" "file46.rf";
-connectAttr "place2dTexture10.mu" "file46.mu";
-connectAttr "place2dTexture10.mv" "file46.mv";
-connectAttr "place2dTexture10.s" "file46.s";
-connectAttr "place2dTexture10.wu" "file46.wu";
-connectAttr "place2dTexture10.wv" "file46.wv";
-connectAttr "place2dTexture10.re" "file46.re";
-connectAttr "place2dTexture10.of" "file46.of";
-connectAttr "place2dTexture10.r" "file46.ro";
-connectAttr "place2dTexture10.n" "file46.n";
-connectAttr "place2dTexture10.vt1" "file46.vt1";
-connectAttr "place2dTexture10.vt2" "file46.vt2";
-connectAttr "place2dTexture10.vt3" "file46.vt3";
-connectAttr "place2dTexture10.vc1" "file46.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file48.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file48.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file48.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file48.ws";
-connectAttr "place2dTexture10.o" "file48.uv";
-connectAttr "place2dTexture10.ofs" "file48.fs";
-connectAttr "place2dTexture10.c" "file48.c";
-connectAttr "place2dTexture10.tf" "file48.tf";
-connectAttr "place2dTexture10.rf" "file48.rf";
-connectAttr "place2dTexture10.mu" "file48.mu";
-connectAttr "place2dTexture10.mv" "file48.mv";
-connectAttr "place2dTexture10.s" "file48.s";
-connectAttr "place2dTexture10.wu" "file48.wu";
-connectAttr "place2dTexture10.wv" "file48.wv";
-connectAttr "place2dTexture10.re" "file48.re";
-connectAttr "place2dTexture10.of" "file48.of";
-connectAttr "place2dTexture10.r" "file48.ro";
-connectAttr "place2dTexture10.n" "file48.n";
-connectAttr "place2dTexture10.vt1" "file48.vt1";
-connectAttr "place2dTexture10.vt2" "file48.vt2";
-connectAttr "place2dTexture10.vt3" "file48.vt3";
-connectAttr "place2dTexture10.vc1" "file48.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file49.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file49.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file49.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file49.ws";
-connectAttr "place2dTexture10.o" "file49.uv";
-connectAttr "place2dTexture10.ofs" "file49.fs";
-connectAttr "place2dTexture10.c" "file49.c";
-connectAttr "place2dTexture10.tf" "file49.tf";
-connectAttr "place2dTexture10.rf" "file49.rf";
-connectAttr "place2dTexture10.mu" "file49.mu";
-connectAttr "place2dTexture10.mv" "file49.mv";
-connectAttr "place2dTexture10.s" "file49.s";
-connectAttr "place2dTexture10.wu" "file49.wu";
-connectAttr "place2dTexture10.wv" "file49.wv";
-connectAttr "place2dTexture10.re" "file49.re";
-connectAttr "place2dTexture10.of" "file49.of";
-connectAttr "place2dTexture10.r" "file49.ro";
-connectAttr "place2dTexture10.n" "file49.n";
-connectAttr "place2dTexture10.vt1" "file49.vt1";
-connectAttr "place2dTexture10.vt2" "file49.vt2";
-connectAttr "place2dTexture10.vt3" "file49.vt3";
-connectAttr "place2dTexture10.vc1" "file49.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file50.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file50.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file50.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file50.ws";
-connectAttr "place2dTexture10.o" "file50.uv";
-connectAttr "place2dTexture10.ofs" "file50.fs";
-connectAttr "place2dTexture10.c" "file50.c";
-connectAttr "place2dTexture10.tf" "file50.tf";
-connectAttr "place2dTexture10.rf" "file50.rf";
-connectAttr "place2dTexture10.mu" "file50.mu";
-connectAttr "place2dTexture10.mv" "file50.mv";
-connectAttr "place2dTexture10.s" "file50.s";
-connectAttr "place2dTexture10.wu" "file50.wu";
-connectAttr "place2dTexture10.wv" "file50.wv";
-connectAttr "place2dTexture10.re" "file50.re";
-connectAttr "place2dTexture10.of" "file50.of";
-connectAttr "place2dTexture10.r" "file50.ro";
-connectAttr "place2dTexture10.n" "file50.n";
-connectAttr "place2dTexture10.vt1" "file50.vt1";
-connectAttr "place2dTexture10.vt2" "file50.vt2";
-connectAttr "place2dTexture10.vt3" "file50.vt3";
-connectAttr "place2dTexture10.vc1" "file50.vc1";
-connectAttr "file46.oc" "multiplyDivide10.i1";
 connectAttr "set10.msg" "materialInfo14.sg";
-connectAttr "file49.oa" "bump2d10.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file51.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file51.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file51.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file51.ws";
-connectAttr "place2dTexture11.o" "file51.uv";
-connectAttr "place2dTexture11.ofs" "file51.fs";
-connectAttr "place2dTexture11.c" "file51.c";
-connectAttr "place2dTexture11.tf" "file51.tf";
-connectAttr "place2dTexture11.rf" "file51.rf";
-connectAttr "place2dTexture11.mu" "file51.mu";
-connectAttr "place2dTexture11.mv" "file51.mv";
-connectAttr "place2dTexture11.s" "file51.s";
-connectAttr "place2dTexture11.wu" "file51.wu";
-connectAttr "place2dTexture11.wv" "file51.wv";
-connectAttr "place2dTexture11.re" "file51.re";
-connectAttr "place2dTexture11.of" "file51.of";
-connectAttr "place2dTexture11.r" "file51.ro";
-connectAttr "place2dTexture11.n" "file51.n";
-connectAttr "place2dTexture11.vt1" "file51.vt1";
-connectAttr "place2dTexture11.vt2" "file51.vt2";
-connectAttr "place2dTexture11.vt3" "file51.vt3";
-connectAttr "place2dTexture11.vc1" "file51.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file52.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file52.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file52.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file52.ws";
-connectAttr "place2dTexture11.o" "file52.uv";
-connectAttr "place2dTexture11.ofs" "file52.fs";
-connectAttr "place2dTexture11.c" "file52.c";
-connectAttr "place2dTexture11.tf" "file52.tf";
-connectAttr "place2dTexture11.rf" "file52.rf";
-connectAttr "place2dTexture11.mu" "file52.mu";
-connectAttr "place2dTexture11.mv" "file52.mv";
-connectAttr "place2dTexture11.s" "file52.s";
-connectAttr "place2dTexture11.wu" "file52.wu";
-connectAttr "place2dTexture11.wv" "file52.wv";
-connectAttr "place2dTexture11.re" "file52.re";
-connectAttr "place2dTexture11.of" "file52.of";
-connectAttr "place2dTexture11.r" "file52.ro";
-connectAttr "place2dTexture11.n" "file52.n";
-connectAttr "place2dTexture11.vt1" "file52.vt1";
-connectAttr "place2dTexture11.vt2" "file52.vt2";
-connectAttr "place2dTexture11.vt3" "file52.vt3";
-connectAttr "place2dTexture11.vc1" "file52.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file53.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file53.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file53.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file53.ws";
-connectAttr "place2dTexture11.o" "file53.uv";
-connectAttr "place2dTexture11.ofs" "file53.fs";
-connectAttr "place2dTexture11.c" "file53.c";
-connectAttr "place2dTexture11.tf" "file53.tf";
-connectAttr "place2dTexture11.rf" "file53.rf";
-connectAttr "place2dTexture11.mu" "file53.mu";
-connectAttr "place2dTexture11.mv" "file53.mv";
-connectAttr "place2dTexture11.s" "file53.s";
-connectAttr "place2dTexture11.wu" "file53.wu";
-connectAttr "place2dTexture11.wv" "file53.wv";
-connectAttr "place2dTexture11.re" "file53.re";
-connectAttr "place2dTexture11.of" "file53.of";
-connectAttr "place2dTexture11.r" "file53.ro";
-connectAttr "place2dTexture11.n" "file53.n";
-connectAttr "place2dTexture11.vt1" "file53.vt1";
-connectAttr "place2dTexture11.vt2" "file53.vt2";
-connectAttr "place2dTexture11.vt3" "file53.vt3";
-connectAttr "place2dTexture11.vc1" "file53.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file55.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file55.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file55.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file55.ws";
-connectAttr "place2dTexture11.o" "file55.uv";
-connectAttr "place2dTexture11.ofs" "file55.fs";
-connectAttr "place2dTexture11.c" "file55.c";
-connectAttr "place2dTexture11.tf" "file55.tf";
-connectAttr "place2dTexture11.rf" "file55.rf";
-connectAttr "place2dTexture11.mu" "file55.mu";
-connectAttr "place2dTexture11.mv" "file55.mv";
-connectAttr "place2dTexture11.s" "file55.s";
-connectAttr "place2dTexture11.wu" "file55.wu";
-connectAttr "place2dTexture11.wv" "file55.wv";
-connectAttr "place2dTexture11.re" "file55.re";
-connectAttr "place2dTexture11.of" "file55.of";
-connectAttr "place2dTexture11.r" "file55.ro";
-connectAttr "place2dTexture11.n" "file55.n";
-connectAttr "place2dTexture11.vt1" "file55.vt1";
-connectAttr "place2dTexture11.vt2" "file55.vt2";
-connectAttr "place2dTexture11.vt3" "file55.vt3";
-connectAttr "place2dTexture11.vc1" "file55.vc1";
 connectAttr "set11.msg" "materialInfo15.sg";
-connectAttr "file52.oa" "bump2d11.bv";
-connectAttr "file55.oc" "multiplyDivide11.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file56.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file56.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file56.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file56.ws";
-connectAttr "place2dTexture12.o" "file56.uv";
-connectAttr "place2dTexture12.ofs" "file56.fs";
-connectAttr "place2dTexture12.c" "file56.c";
-connectAttr "place2dTexture12.tf" "file56.tf";
-connectAttr "place2dTexture12.rf" "file56.rf";
-connectAttr "place2dTexture12.mu" "file56.mu";
-connectAttr "place2dTexture12.mv" "file56.mv";
-connectAttr "place2dTexture12.s" "file56.s";
-connectAttr "place2dTexture12.wu" "file56.wu";
-connectAttr "place2dTexture12.wv" "file56.wv";
-connectAttr "place2dTexture12.re" "file56.re";
-connectAttr "place2dTexture12.of" "file56.of";
-connectAttr "place2dTexture12.r" "file56.ro";
-connectAttr "place2dTexture12.n" "file56.n";
-connectAttr "place2dTexture12.vt1" "file56.vt1";
-connectAttr "place2dTexture12.vt2" "file56.vt2";
-connectAttr "place2dTexture12.vt3" "file56.vt3";
-connectAttr "place2dTexture12.vc1" "file56.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file57.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file57.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file57.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file57.ws";
-connectAttr "place2dTexture12.o" "file57.uv";
-connectAttr "place2dTexture12.ofs" "file57.fs";
-connectAttr "place2dTexture12.c" "file57.c";
-connectAttr "place2dTexture12.tf" "file57.tf";
-connectAttr "place2dTexture12.rf" "file57.rf";
-connectAttr "place2dTexture12.mu" "file57.mu";
-connectAttr "place2dTexture12.mv" "file57.mv";
-connectAttr "place2dTexture12.s" "file57.s";
-connectAttr "place2dTexture12.wu" "file57.wu";
-connectAttr "place2dTexture12.wv" "file57.wv";
-connectAttr "place2dTexture12.re" "file57.re";
-connectAttr "place2dTexture12.of" "file57.of";
-connectAttr "place2dTexture12.r" "file57.ro";
-connectAttr "place2dTexture12.n" "file57.n";
-connectAttr "place2dTexture12.vt1" "file57.vt1";
-connectAttr "place2dTexture12.vt2" "file57.vt2";
-connectAttr "place2dTexture12.vt3" "file57.vt3";
-connectAttr "place2dTexture12.vc1" "file57.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file58.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file58.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file58.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file58.ws";
-connectAttr "place2dTexture12.o" "file58.uv";
-connectAttr "place2dTexture12.ofs" "file58.fs";
-connectAttr "place2dTexture12.c" "file58.c";
-connectAttr "place2dTexture12.tf" "file58.tf";
-connectAttr "place2dTexture12.rf" "file58.rf";
-connectAttr "place2dTexture12.mu" "file58.mu";
-connectAttr "place2dTexture12.mv" "file58.mv";
-connectAttr "place2dTexture12.s" "file58.s";
-connectAttr "place2dTexture12.wu" "file58.wu";
-connectAttr "place2dTexture12.wv" "file58.wv";
-connectAttr "place2dTexture12.re" "file58.re";
-connectAttr "place2dTexture12.of" "file58.of";
-connectAttr "place2dTexture12.r" "file58.ro";
-connectAttr "place2dTexture12.n" "file58.n";
-connectAttr "place2dTexture12.vt1" "file58.vt1";
-connectAttr "place2dTexture12.vt2" "file58.vt2";
-connectAttr "place2dTexture12.vt3" "file58.vt3";
-connectAttr "place2dTexture12.vc1" "file58.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file60.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file60.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file60.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file60.ws";
-connectAttr "place2dTexture12.o" "file60.uv";
-connectAttr "place2dTexture12.ofs" "file60.fs";
-connectAttr "place2dTexture12.c" "file60.c";
-connectAttr "place2dTexture12.tf" "file60.tf";
-connectAttr "place2dTexture12.rf" "file60.rf";
-connectAttr "place2dTexture12.mu" "file60.mu";
-connectAttr "place2dTexture12.mv" "file60.mv";
-connectAttr "place2dTexture12.s" "file60.s";
-connectAttr "place2dTexture12.wu" "file60.wu";
-connectAttr "place2dTexture12.wv" "file60.wv";
-connectAttr "place2dTexture12.re" "file60.re";
-connectAttr "place2dTexture12.of" "file60.of";
-connectAttr "place2dTexture12.r" "file60.ro";
-connectAttr "place2dTexture12.n" "file60.n";
-connectAttr "place2dTexture12.vt1" "file60.vt1";
-connectAttr "place2dTexture12.vt2" "file60.vt2";
-connectAttr "place2dTexture12.vt3" "file60.vt3";
-connectAttr "place2dTexture12.vc1" "file60.vc1";
 connectAttr "set12.msg" "materialInfo16.sg";
-connectAttr "file57.oa" "bump2d12.bv";
-connectAttr "file60.oc" "multiplyDivide12.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file61.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file61.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file61.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file61.ws";
-connectAttr "place2dTexture13.o" "file61.uv";
-connectAttr "place2dTexture13.ofs" "file61.fs";
-connectAttr "place2dTexture13.c" "file61.c";
-connectAttr "place2dTexture13.tf" "file61.tf";
-connectAttr "place2dTexture13.rf" "file61.rf";
-connectAttr "place2dTexture13.mu" "file61.mu";
-connectAttr "place2dTexture13.mv" "file61.mv";
-connectAttr "place2dTexture13.s" "file61.s";
-connectAttr "place2dTexture13.wu" "file61.wu";
-connectAttr "place2dTexture13.wv" "file61.wv";
-connectAttr "place2dTexture13.re" "file61.re";
-connectAttr "place2dTexture13.of" "file61.of";
-connectAttr "place2dTexture13.r" "file61.ro";
-connectAttr "place2dTexture13.n" "file61.n";
-connectAttr "place2dTexture13.vt1" "file61.vt1";
-connectAttr "place2dTexture13.vt2" "file61.vt2";
-connectAttr "place2dTexture13.vt3" "file61.vt3";
-connectAttr "place2dTexture13.vc1" "file61.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file62.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file62.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file62.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file62.ws";
-connectAttr "place2dTexture13.o" "file62.uv";
-connectAttr "place2dTexture13.ofs" "file62.fs";
-connectAttr "place2dTexture13.c" "file62.c";
-connectAttr "place2dTexture13.tf" "file62.tf";
-connectAttr "place2dTexture13.rf" "file62.rf";
-connectAttr "place2dTexture13.mu" "file62.mu";
-connectAttr "place2dTexture13.mv" "file62.mv";
-connectAttr "place2dTexture13.s" "file62.s";
-connectAttr "place2dTexture13.wu" "file62.wu";
-connectAttr "place2dTexture13.wv" "file62.wv";
-connectAttr "place2dTexture13.re" "file62.re";
-connectAttr "place2dTexture13.of" "file62.of";
-connectAttr "place2dTexture13.r" "file62.ro";
-connectAttr "place2dTexture13.n" "file62.n";
-connectAttr "place2dTexture13.vt1" "file62.vt1";
-connectAttr "place2dTexture13.vt2" "file62.vt2";
-connectAttr "place2dTexture13.vt3" "file62.vt3";
-connectAttr "place2dTexture13.vc1" "file62.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file64.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file64.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file64.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file64.ws";
-connectAttr "place2dTexture13.o" "file64.uv";
-connectAttr "place2dTexture13.ofs" "file64.fs";
-connectAttr "place2dTexture13.c" "file64.c";
-connectAttr "place2dTexture13.tf" "file64.tf";
-connectAttr "place2dTexture13.rf" "file64.rf";
-connectAttr "place2dTexture13.mu" "file64.mu";
-connectAttr "place2dTexture13.mv" "file64.mv";
-connectAttr "place2dTexture13.s" "file64.s";
-connectAttr "place2dTexture13.wu" "file64.wu";
-connectAttr "place2dTexture13.wv" "file64.wv";
-connectAttr "place2dTexture13.re" "file64.re";
-connectAttr "place2dTexture13.of" "file64.of";
-connectAttr "place2dTexture13.r" "file64.ro";
-connectAttr "place2dTexture13.n" "file64.n";
-connectAttr "place2dTexture13.vt1" "file64.vt1";
-connectAttr "place2dTexture13.vt2" "file64.vt2";
-connectAttr "place2dTexture13.vt3" "file64.vt3";
-connectAttr "place2dTexture13.vc1" "file64.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file65.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file65.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file65.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file65.ws";
-connectAttr "place2dTexture13.o" "file65.uv";
-connectAttr "place2dTexture13.ofs" "file65.fs";
-connectAttr "place2dTexture13.c" "file65.c";
-connectAttr "place2dTexture13.tf" "file65.tf";
-connectAttr "place2dTexture13.rf" "file65.rf";
-connectAttr "place2dTexture13.mu" "file65.mu";
-connectAttr "place2dTexture13.mv" "file65.mv";
-connectAttr "place2dTexture13.s" "file65.s";
-connectAttr "place2dTexture13.wu" "file65.wu";
-connectAttr "place2dTexture13.wv" "file65.wv";
-connectAttr "place2dTexture13.re" "file65.re";
-connectAttr "place2dTexture13.of" "file65.of";
-connectAttr "place2dTexture13.r" "file65.ro";
-connectAttr "place2dTexture13.n" "file65.n";
-connectAttr "place2dTexture13.vt1" "file65.vt1";
-connectAttr "place2dTexture13.vt2" "file65.vt2";
-connectAttr "place2dTexture13.vt3" "file65.vt3";
-connectAttr "place2dTexture13.vc1" "file65.vc1";
-connectAttr "file61.oc" "multiplyDivide13.i1";
 connectAttr "set13.msg" "materialInfo17.sg";
-connectAttr "file62.oa" "bump2d13.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file66.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file66.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file66.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file66.ws";
-connectAttr "place2dTexture14.o" "file66.uv";
-connectAttr "place2dTexture14.ofs" "file66.fs";
-connectAttr "place2dTexture14.c" "file66.c";
-connectAttr "place2dTexture14.tf" "file66.tf";
-connectAttr "place2dTexture14.rf" "file66.rf";
-connectAttr "place2dTexture14.mu" "file66.mu";
-connectAttr "place2dTexture14.mv" "file66.mv";
-connectAttr "place2dTexture14.s" "file66.s";
-connectAttr "place2dTexture14.wu" "file66.wu";
-connectAttr "place2dTexture14.wv" "file66.wv";
-connectAttr "place2dTexture14.re" "file66.re";
-connectAttr "place2dTexture14.of" "file66.of";
-connectAttr "place2dTexture14.r" "file66.ro";
-connectAttr "place2dTexture14.n" "file66.n";
-connectAttr "place2dTexture14.vt1" "file66.vt1";
-connectAttr "place2dTexture14.vt2" "file66.vt2";
-connectAttr "place2dTexture14.vt3" "file66.vt3";
-connectAttr "place2dTexture14.vc1" "file66.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file67.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file67.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file67.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file67.ws";
-connectAttr "place2dTexture14.o" "file67.uv";
-connectAttr "place2dTexture14.ofs" "file67.fs";
-connectAttr "place2dTexture14.c" "file67.c";
-connectAttr "place2dTexture14.tf" "file67.tf";
-connectAttr "place2dTexture14.rf" "file67.rf";
-connectAttr "place2dTexture14.mu" "file67.mu";
-connectAttr "place2dTexture14.mv" "file67.mv";
-connectAttr "place2dTexture14.s" "file67.s";
-connectAttr "place2dTexture14.wu" "file67.wu";
-connectAttr "place2dTexture14.wv" "file67.wv";
-connectAttr "place2dTexture14.re" "file67.re";
-connectAttr "place2dTexture14.of" "file67.of";
-connectAttr "place2dTexture14.r" "file67.ro";
-connectAttr "place2dTexture14.n" "file67.n";
-connectAttr "place2dTexture14.vt1" "file67.vt1";
-connectAttr "place2dTexture14.vt2" "file67.vt2";
-connectAttr "place2dTexture14.vt3" "file67.vt3";
-connectAttr "place2dTexture14.vc1" "file67.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file68.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file68.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file68.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file68.ws";
-connectAttr "place2dTexture14.o" "file68.uv";
-connectAttr "place2dTexture14.ofs" "file68.fs";
-connectAttr "place2dTexture14.c" "file68.c";
-connectAttr "place2dTexture14.tf" "file68.tf";
-connectAttr "place2dTexture14.rf" "file68.rf";
-connectAttr "place2dTexture14.mu" "file68.mu";
-connectAttr "place2dTexture14.mv" "file68.mv";
-connectAttr "place2dTexture14.s" "file68.s";
-connectAttr "place2dTexture14.wu" "file68.wu";
-connectAttr "place2dTexture14.wv" "file68.wv";
-connectAttr "place2dTexture14.re" "file68.re";
-connectAttr "place2dTexture14.of" "file68.of";
-connectAttr "place2dTexture14.r" "file68.ro";
-connectAttr "place2dTexture14.n" "file68.n";
-connectAttr "place2dTexture14.vt1" "file68.vt1";
-connectAttr "place2dTexture14.vt2" "file68.vt2";
-connectAttr "place2dTexture14.vt3" "file68.vt3";
-connectAttr "place2dTexture14.vc1" "file68.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file69.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file69.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file69.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file69.ws";
-connectAttr "place2dTexture14.o" "file69.uv";
-connectAttr "place2dTexture14.ofs" "file69.fs";
-connectAttr "place2dTexture14.c" "file69.c";
-connectAttr "place2dTexture14.tf" "file69.tf";
-connectAttr "place2dTexture14.rf" "file69.rf";
-connectAttr "place2dTexture14.mu" "file69.mu";
-connectAttr "place2dTexture14.mv" "file69.mv";
-connectAttr "place2dTexture14.s" "file69.s";
-connectAttr "place2dTexture14.wu" "file69.wu";
-connectAttr "place2dTexture14.wv" "file69.wv";
-connectAttr "place2dTexture14.re" "file69.re";
-connectAttr "place2dTexture14.of" "file69.of";
-connectAttr "place2dTexture14.r" "file69.ro";
-connectAttr "place2dTexture14.n" "file69.n";
-connectAttr "place2dTexture14.vt1" "file69.vt1";
-connectAttr "place2dTexture14.vt2" "file69.vt2";
-connectAttr "place2dTexture14.vt3" "file69.vt3";
-connectAttr "place2dTexture14.vc1" "file69.vc1";
-connectAttr "file66.oa" "bump2d14.bv";
 connectAttr "set14.msg" "materialInfo18.sg";
-connectAttr "file67.oc" "multiplyDivide14.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file76.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file76.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file76.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file76.ws";
-connectAttr "place2dTexture16.o" "file76.uv";
-connectAttr "place2dTexture16.ofs" "file76.fs";
-connectAttr "place2dTexture16.c" "file76.c";
-connectAttr "place2dTexture16.tf" "file76.tf";
-connectAttr "place2dTexture16.rf" "file76.rf";
-connectAttr "place2dTexture16.mu" "file76.mu";
-connectAttr "place2dTexture16.mv" "file76.mv";
-connectAttr "place2dTexture16.s" "file76.s";
-connectAttr "place2dTexture16.wu" "file76.wu";
-connectAttr "place2dTexture16.wv" "file76.wv";
-connectAttr "place2dTexture16.re" "file76.re";
-connectAttr "place2dTexture16.of" "file76.of";
-connectAttr "place2dTexture16.r" "file76.ro";
-connectAttr "place2dTexture16.n" "file76.n";
-connectAttr "place2dTexture16.vt1" "file76.vt1";
-connectAttr "place2dTexture16.vt2" "file76.vt2";
-connectAttr "place2dTexture16.vt3" "file76.vt3";
-connectAttr "place2dTexture16.vc1" "file76.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file78.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file78.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file78.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file78.ws";
-connectAttr "place2dTexture16.o" "file78.uv";
-connectAttr "place2dTexture16.ofs" "file78.fs";
-connectAttr "place2dTexture16.c" "file78.c";
-connectAttr "place2dTexture16.tf" "file78.tf";
-connectAttr "place2dTexture16.rf" "file78.rf";
-connectAttr "place2dTexture16.mu" "file78.mu";
-connectAttr "place2dTexture16.mv" "file78.mv";
-connectAttr "place2dTexture16.s" "file78.s";
-connectAttr "place2dTexture16.wu" "file78.wu";
-connectAttr "place2dTexture16.wv" "file78.wv";
-connectAttr "place2dTexture16.re" "file78.re";
-connectAttr "place2dTexture16.of" "file78.of";
-connectAttr "place2dTexture16.r" "file78.ro";
-connectAttr "place2dTexture16.n" "file78.n";
-connectAttr "place2dTexture16.vt1" "file78.vt1";
-connectAttr "place2dTexture16.vt2" "file78.vt2";
-connectAttr "place2dTexture16.vt3" "file78.vt3";
-connectAttr "place2dTexture16.vc1" "file78.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file79.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file79.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file79.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file79.ws";
-connectAttr "place2dTexture16.o" "file79.uv";
-connectAttr "place2dTexture16.ofs" "file79.fs";
-connectAttr "place2dTexture16.c" "file79.c";
-connectAttr "place2dTexture16.tf" "file79.tf";
-connectAttr "place2dTexture16.rf" "file79.rf";
-connectAttr "place2dTexture16.mu" "file79.mu";
-connectAttr "place2dTexture16.mv" "file79.mv";
-connectAttr "place2dTexture16.s" "file79.s";
-connectAttr "place2dTexture16.wu" "file79.wu";
-connectAttr "place2dTexture16.wv" "file79.wv";
-connectAttr "place2dTexture16.re" "file79.re";
-connectAttr "place2dTexture16.of" "file79.of";
-connectAttr "place2dTexture16.r" "file79.ro";
-connectAttr "place2dTexture16.n" "file79.n";
-connectAttr "place2dTexture16.vt1" "file79.vt1";
-connectAttr "place2dTexture16.vt2" "file79.vt2";
-connectAttr "place2dTexture16.vt3" "file79.vt3";
-connectAttr "place2dTexture16.vc1" "file79.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file80.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file80.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file80.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file80.ws";
-connectAttr "place2dTexture16.o" "file80.uv";
-connectAttr "place2dTexture16.ofs" "file80.fs";
-connectAttr "place2dTexture16.c" "file80.c";
-connectAttr "place2dTexture16.tf" "file80.tf";
-connectAttr "place2dTexture16.rf" "file80.rf";
-connectAttr "place2dTexture16.mu" "file80.mu";
-connectAttr "place2dTexture16.mv" "file80.mv";
-connectAttr "place2dTexture16.s" "file80.s";
-connectAttr "place2dTexture16.wu" "file80.wu";
-connectAttr "place2dTexture16.wv" "file80.wv";
-connectAttr "place2dTexture16.re" "file80.re";
-connectAttr "place2dTexture16.of" "file80.of";
-connectAttr "place2dTexture16.r" "file80.ro";
-connectAttr "place2dTexture16.n" "file80.n";
-connectAttr "place2dTexture16.vt1" "file80.vt1";
-connectAttr "place2dTexture16.vt2" "file80.vt2";
-connectAttr "place2dTexture16.vt3" "file80.vt3";
-connectAttr "place2dTexture16.vc1" "file80.vc1";
-connectAttr "file76.oc" "multiplyDivide16.i1";
 connectAttr "set16.msg" "materialInfo20.sg";
-connectAttr "file79.oa" "bump2d16.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file81.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file81.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file81.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file81.ws";
-connectAttr "place2dTexture17.o" "file81.uv";
-connectAttr "place2dTexture17.ofs" "file81.fs";
-connectAttr "place2dTexture17.c" "file81.c";
-connectAttr "place2dTexture17.tf" "file81.tf";
-connectAttr "place2dTexture17.rf" "file81.rf";
-connectAttr "place2dTexture17.mu" "file81.mu";
-connectAttr "place2dTexture17.mv" "file81.mv";
-connectAttr "place2dTexture17.s" "file81.s";
-connectAttr "place2dTexture17.wu" "file81.wu";
-connectAttr "place2dTexture17.wv" "file81.wv";
-connectAttr "place2dTexture17.re" "file81.re";
-connectAttr "place2dTexture17.of" "file81.of";
-connectAttr "place2dTexture17.r" "file81.ro";
-connectAttr "place2dTexture17.n" "file81.n";
-connectAttr "place2dTexture17.vt1" "file81.vt1";
-connectAttr "place2dTexture17.vt2" "file81.vt2";
-connectAttr "place2dTexture17.vt3" "file81.vt3";
-connectAttr "place2dTexture17.vc1" "file81.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file83.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file83.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file83.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file83.ws";
-connectAttr "place2dTexture17.o" "file83.uv";
-connectAttr "place2dTexture17.ofs" "file83.fs";
-connectAttr "place2dTexture17.c" "file83.c";
-connectAttr "place2dTexture17.tf" "file83.tf";
-connectAttr "place2dTexture17.rf" "file83.rf";
-connectAttr "place2dTexture17.mu" "file83.mu";
-connectAttr "place2dTexture17.mv" "file83.mv";
-connectAttr "place2dTexture17.s" "file83.s";
-connectAttr "place2dTexture17.wu" "file83.wu";
-connectAttr "place2dTexture17.wv" "file83.wv";
-connectAttr "place2dTexture17.re" "file83.re";
-connectAttr "place2dTexture17.of" "file83.of";
-connectAttr "place2dTexture17.r" "file83.ro";
-connectAttr "place2dTexture17.n" "file83.n";
-connectAttr "place2dTexture17.vt1" "file83.vt1";
-connectAttr "place2dTexture17.vt2" "file83.vt2";
-connectAttr "place2dTexture17.vt3" "file83.vt3";
-connectAttr "place2dTexture17.vc1" "file83.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file84.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file84.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file84.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file84.ws";
-connectAttr "place2dTexture17.o" "file84.uv";
-connectAttr "place2dTexture17.ofs" "file84.fs";
-connectAttr "place2dTexture17.c" "file84.c";
-connectAttr "place2dTexture17.tf" "file84.tf";
-connectAttr "place2dTexture17.rf" "file84.rf";
-connectAttr "place2dTexture17.mu" "file84.mu";
-connectAttr "place2dTexture17.mv" "file84.mv";
-connectAttr "place2dTexture17.s" "file84.s";
-connectAttr "place2dTexture17.wu" "file84.wu";
-connectAttr "place2dTexture17.wv" "file84.wv";
-connectAttr "place2dTexture17.re" "file84.re";
-connectAttr "place2dTexture17.of" "file84.of";
-connectAttr "place2dTexture17.r" "file84.ro";
-connectAttr "place2dTexture17.n" "file84.n";
-connectAttr "place2dTexture17.vt1" "file84.vt1";
-connectAttr "place2dTexture17.vt2" "file84.vt2";
-connectAttr "place2dTexture17.vt3" "file84.vt3";
-connectAttr "place2dTexture17.vc1" "file84.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file85.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file85.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file85.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file85.ws";
-connectAttr "place2dTexture17.o" "file85.uv";
-connectAttr "place2dTexture17.ofs" "file85.fs";
-connectAttr "place2dTexture17.c" "file85.c";
-connectAttr "place2dTexture17.tf" "file85.tf";
-connectAttr "place2dTexture17.rf" "file85.rf";
-connectAttr "place2dTexture17.mu" "file85.mu";
-connectAttr "place2dTexture17.mv" "file85.mv";
-connectAttr "place2dTexture17.s" "file85.s";
-connectAttr "place2dTexture17.wu" "file85.wu";
-connectAttr "place2dTexture17.wv" "file85.wv";
-connectAttr "place2dTexture17.re" "file85.re";
-connectAttr "place2dTexture17.of" "file85.of";
-connectAttr "place2dTexture17.r" "file85.ro";
-connectAttr "place2dTexture17.n" "file85.n";
-connectAttr "place2dTexture17.vt1" "file85.vt1";
-connectAttr "place2dTexture17.vt2" "file85.vt2";
-connectAttr "place2dTexture17.vt3" "file85.vt3";
-connectAttr "place2dTexture17.vc1" "file85.vc1";
-connectAttr "file81.oc" "multiplyDivide17.i1";
 connectAttr "set17.msg" "materialInfo21.sg";
-connectAttr "file84.oa" "bump2d17.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file86.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file86.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file86.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file86.ws";
-connectAttr "place2dTexture18.o" "file86.uv";
-connectAttr "place2dTexture18.ofs" "file86.fs";
-connectAttr "place2dTexture18.c" "file86.c";
-connectAttr "place2dTexture18.tf" "file86.tf";
-connectAttr "place2dTexture18.rf" "file86.rf";
-connectAttr "place2dTexture18.mu" "file86.mu";
-connectAttr "place2dTexture18.mv" "file86.mv";
-connectAttr "place2dTexture18.s" "file86.s";
-connectAttr "place2dTexture18.wu" "file86.wu";
-connectAttr "place2dTexture18.wv" "file86.wv";
-connectAttr "place2dTexture18.re" "file86.re";
-connectAttr "place2dTexture18.of" "file86.of";
-connectAttr "place2dTexture18.r" "file86.ro";
-connectAttr "place2dTexture18.n" "file86.n";
-connectAttr "place2dTexture18.vt1" "file86.vt1";
-connectAttr "place2dTexture18.vt2" "file86.vt2";
-connectAttr "place2dTexture18.vt3" "file86.vt3";
-connectAttr "place2dTexture18.vc1" "file86.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file88.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file88.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file88.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file88.ws";
-connectAttr "place2dTexture18.o" "file88.uv";
-connectAttr "place2dTexture18.ofs" "file88.fs";
-connectAttr "place2dTexture18.c" "file88.c";
-connectAttr "place2dTexture18.tf" "file88.tf";
-connectAttr "place2dTexture18.rf" "file88.rf";
-connectAttr "place2dTexture18.mu" "file88.mu";
-connectAttr "place2dTexture18.mv" "file88.mv";
-connectAttr "place2dTexture18.s" "file88.s";
-connectAttr "place2dTexture18.wu" "file88.wu";
-connectAttr "place2dTexture18.wv" "file88.wv";
-connectAttr "place2dTexture18.re" "file88.re";
-connectAttr "place2dTexture18.of" "file88.of";
-connectAttr "place2dTexture18.r" "file88.ro";
-connectAttr "place2dTexture18.n" "file88.n";
-connectAttr "place2dTexture18.vt1" "file88.vt1";
-connectAttr "place2dTexture18.vt2" "file88.vt2";
-connectAttr "place2dTexture18.vt3" "file88.vt3";
-connectAttr "place2dTexture18.vc1" "file88.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file89.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file89.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file89.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file89.ws";
-connectAttr "place2dTexture18.o" "file89.uv";
-connectAttr "place2dTexture18.ofs" "file89.fs";
-connectAttr "place2dTexture18.c" "file89.c";
-connectAttr "place2dTexture18.tf" "file89.tf";
-connectAttr "place2dTexture18.rf" "file89.rf";
-connectAttr "place2dTexture18.mu" "file89.mu";
-connectAttr "place2dTexture18.mv" "file89.mv";
-connectAttr "place2dTexture18.s" "file89.s";
-connectAttr "place2dTexture18.wu" "file89.wu";
-connectAttr "place2dTexture18.wv" "file89.wv";
-connectAttr "place2dTexture18.re" "file89.re";
-connectAttr "place2dTexture18.of" "file89.of";
-connectAttr "place2dTexture18.r" "file89.ro";
-connectAttr "place2dTexture18.n" "file89.n";
-connectAttr "place2dTexture18.vt1" "file89.vt1";
-connectAttr "place2dTexture18.vt2" "file89.vt2";
-connectAttr "place2dTexture18.vt3" "file89.vt3";
-connectAttr "place2dTexture18.vc1" "file89.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file90.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file90.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file90.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file90.ws";
-connectAttr "place2dTexture18.o" "file90.uv";
-connectAttr "place2dTexture18.ofs" "file90.fs";
-connectAttr "place2dTexture18.c" "file90.c";
-connectAttr "place2dTexture18.tf" "file90.tf";
-connectAttr "place2dTexture18.rf" "file90.rf";
-connectAttr "place2dTexture18.mu" "file90.mu";
-connectAttr "place2dTexture18.mv" "file90.mv";
-connectAttr "place2dTexture18.s" "file90.s";
-connectAttr "place2dTexture18.wu" "file90.wu";
-connectAttr "place2dTexture18.wv" "file90.wv";
-connectAttr "place2dTexture18.re" "file90.re";
-connectAttr "place2dTexture18.of" "file90.of";
-connectAttr "place2dTexture18.r" "file90.ro";
-connectAttr "place2dTexture18.n" "file90.n";
-connectAttr "place2dTexture18.vt1" "file90.vt1";
-connectAttr "place2dTexture18.vt2" "file90.vt2";
-connectAttr "place2dTexture18.vt3" "file90.vt3";
-connectAttr "place2dTexture18.vc1" "file90.vc1";
-connectAttr "file86.oc" "multiplyDivide18.i1";
 connectAttr "set18.msg" "materialInfo22.sg";
-connectAttr "file89.oa" "bump2d18.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file91.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file91.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file91.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file91.ws";
-connectAttr "place2dTexture19.o" "file91.uv";
-connectAttr "place2dTexture19.ofs" "file91.fs";
-connectAttr "place2dTexture19.c" "file91.c";
-connectAttr "place2dTexture19.tf" "file91.tf";
-connectAttr "place2dTexture19.rf" "file91.rf";
-connectAttr "place2dTexture19.mu" "file91.mu";
-connectAttr "place2dTexture19.mv" "file91.mv";
-connectAttr "place2dTexture19.s" "file91.s";
-connectAttr "place2dTexture19.wu" "file91.wu";
-connectAttr "place2dTexture19.wv" "file91.wv";
-connectAttr "place2dTexture19.re" "file91.re";
-connectAttr "place2dTexture19.of" "file91.of";
-connectAttr "place2dTexture19.r" "file91.ro";
-connectAttr "place2dTexture19.n" "file91.n";
-connectAttr "place2dTexture19.vt1" "file91.vt1";
-connectAttr "place2dTexture19.vt2" "file91.vt2";
-connectAttr "place2dTexture19.vt3" "file91.vt3";
-connectAttr "place2dTexture19.vc1" "file91.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file92.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file92.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file92.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file92.ws";
-connectAttr "place2dTexture19.o" "file92.uv";
-connectAttr "place2dTexture19.ofs" "file92.fs";
-connectAttr "place2dTexture19.c" "file92.c";
-connectAttr "place2dTexture19.tf" "file92.tf";
-connectAttr "place2dTexture19.rf" "file92.rf";
-connectAttr "place2dTexture19.mu" "file92.mu";
-connectAttr "place2dTexture19.mv" "file92.mv";
-connectAttr "place2dTexture19.s" "file92.s";
-connectAttr "place2dTexture19.wu" "file92.wu";
-connectAttr "place2dTexture19.wv" "file92.wv";
-connectAttr "place2dTexture19.re" "file92.re";
-connectAttr "place2dTexture19.of" "file92.of";
-connectAttr "place2dTexture19.r" "file92.ro";
-connectAttr "place2dTexture19.n" "file92.n";
-connectAttr "place2dTexture19.vt1" "file92.vt1";
-connectAttr "place2dTexture19.vt2" "file92.vt2";
-connectAttr "place2dTexture19.vt3" "file92.vt3";
-connectAttr "place2dTexture19.vc1" "file92.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file93.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file93.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file93.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file93.ws";
-connectAttr "place2dTexture19.o" "file93.uv";
-connectAttr "place2dTexture19.ofs" "file93.fs";
-connectAttr "place2dTexture19.c" "file93.c";
-connectAttr "place2dTexture19.tf" "file93.tf";
-connectAttr "place2dTexture19.rf" "file93.rf";
-connectAttr "place2dTexture19.mu" "file93.mu";
-connectAttr "place2dTexture19.mv" "file93.mv";
-connectAttr "place2dTexture19.s" "file93.s";
-connectAttr "place2dTexture19.wu" "file93.wu";
-connectAttr "place2dTexture19.wv" "file93.wv";
-connectAttr "place2dTexture19.re" "file93.re";
-connectAttr "place2dTexture19.of" "file93.of";
-connectAttr "place2dTexture19.r" "file93.ro";
-connectAttr "place2dTexture19.n" "file93.n";
-connectAttr "place2dTexture19.vt1" "file93.vt1";
-connectAttr "place2dTexture19.vt2" "file93.vt2";
-connectAttr "place2dTexture19.vt3" "file93.vt3";
-connectAttr "place2dTexture19.vc1" "file93.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file95.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file95.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file95.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file95.ws";
-connectAttr "place2dTexture19.o" "file95.uv";
-connectAttr "place2dTexture19.ofs" "file95.fs";
-connectAttr "place2dTexture19.c" "file95.c";
-connectAttr "place2dTexture19.tf" "file95.tf";
-connectAttr "place2dTexture19.rf" "file95.rf";
-connectAttr "place2dTexture19.mu" "file95.mu";
-connectAttr "place2dTexture19.mv" "file95.mv";
-connectAttr "place2dTexture19.s" "file95.s";
-connectAttr "place2dTexture19.wu" "file95.wu";
-connectAttr "place2dTexture19.wv" "file95.wv";
-connectAttr "place2dTexture19.re" "file95.re";
-connectAttr "place2dTexture19.of" "file95.of";
-connectAttr "place2dTexture19.r" "file95.ro";
-connectAttr "place2dTexture19.n" "file95.n";
-connectAttr "place2dTexture19.vt1" "file95.vt1";
-connectAttr "place2dTexture19.vt2" "file95.vt2";
-connectAttr "place2dTexture19.vt3" "file95.vt3";
-connectAttr "place2dTexture19.vc1" "file95.vc1";
-connectAttr "file91.oa" "bump2d19.bv";
 connectAttr "set19.msg" "materialInfo23.sg";
-connectAttr "file92.oc" "multiplyDivide19.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file96.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file96.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file96.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file96.ws";
-connectAttr "place2dTexture20.o" "file96.uv";
-connectAttr "place2dTexture20.ofs" "file96.fs";
-connectAttr "place2dTexture20.c" "file96.c";
-connectAttr "place2dTexture20.tf" "file96.tf";
-connectAttr "place2dTexture20.rf" "file96.rf";
-connectAttr "place2dTexture20.mu" "file96.mu";
-connectAttr "place2dTexture20.mv" "file96.mv";
-connectAttr "place2dTexture20.s" "file96.s";
-connectAttr "place2dTexture20.wu" "file96.wu";
-connectAttr "place2dTexture20.wv" "file96.wv";
-connectAttr "place2dTexture20.re" "file96.re";
-connectAttr "place2dTexture20.of" "file96.of";
-connectAttr "place2dTexture20.r" "file96.ro";
-connectAttr "place2dTexture20.n" "file96.n";
-connectAttr "place2dTexture20.vt1" "file96.vt1";
-connectAttr "place2dTexture20.vt2" "file96.vt2";
-connectAttr "place2dTexture20.vt3" "file96.vt3";
-connectAttr "place2dTexture20.vc1" "file96.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file97.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file97.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file97.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file97.ws";
-connectAttr "place2dTexture20.o" "file97.uv";
-connectAttr "place2dTexture20.ofs" "file97.fs";
-connectAttr "place2dTexture20.c" "file97.c";
-connectAttr "place2dTexture20.tf" "file97.tf";
-connectAttr "place2dTexture20.rf" "file97.rf";
-connectAttr "place2dTexture20.mu" "file97.mu";
-connectAttr "place2dTexture20.mv" "file97.mv";
-connectAttr "place2dTexture20.s" "file97.s";
-connectAttr "place2dTexture20.wu" "file97.wu";
-connectAttr "place2dTexture20.wv" "file97.wv";
-connectAttr "place2dTexture20.re" "file97.re";
-connectAttr "place2dTexture20.of" "file97.of";
-connectAttr "place2dTexture20.r" "file97.ro";
-connectAttr "place2dTexture20.n" "file97.n";
-connectAttr "place2dTexture20.vt1" "file97.vt1";
-connectAttr "place2dTexture20.vt2" "file97.vt2";
-connectAttr "place2dTexture20.vt3" "file97.vt3";
-connectAttr "place2dTexture20.vc1" "file97.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file99.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file99.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file99.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file99.ws";
-connectAttr "place2dTexture20.o" "file99.uv";
-connectAttr "place2dTexture20.ofs" "file99.fs";
-connectAttr "place2dTexture20.c" "file99.c";
-connectAttr "place2dTexture20.tf" "file99.tf";
-connectAttr "place2dTexture20.rf" "file99.rf";
-connectAttr "place2dTexture20.mu" "file99.mu";
-connectAttr "place2dTexture20.mv" "file99.mv";
-connectAttr "place2dTexture20.s" "file99.s";
-connectAttr "place2dTexture20.wu" "file99.wu";
-connectAttr "place2dTexture20.wv" "file99.wv";
-connectAttr "place2dTexture20.re" "file99.re";
-connectAttr "place2dTexture20.of" "file99.of";
-connectAttr "place2dTexture20.r" "file99.ro";
-connectAttr "place2dTexture20.n" "file99.n";
-connectAttr "place2dTexture20.vt1" "file99.vt1";
-connectAttr "place2dTexture20.vt2" "file99.vt2";
-connectAttr "place2dTexture20.vt3" "file99.vt3";
-connectAttr "place2dTexture20.vc1" "file99.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file100.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file100.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file100.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file100.ws";
-connectAttr "place2dTexture20.o" "file100.uv";
-connectAttr "place2dTexture20.ofs" "file100.fs";
-connectAttr "place2dTexture20.c" "file100.c";
-connectAttr "place2dTexture20.tf" "file100.tf";
-connectAttr "place2dTexture20.rf" "file100.rf";
-connectAttr "place2dTexture20.mu" "file100.mu";
-connectAttr "place2dTexture20.mv" "file100.mv";
-connectAttr "place2dTexture20.s" "file100.s";
-connectAttr "place2dTexture20.wu" "file100.wu";
-connectAttr "place2dTexture20.wv" "file100.wv";
-connectAttr "place2dTexture20.re" "file100.re";
-connectAttr "place2dTexture20.of" "file100.of";
-connectAttr "place2dTexture20.r" "file100.ro";
-connectAttr "place2dTexture20.n" "file100.n";
-connectAttr "place2dTexture20.vt1" "file100.vt1";
-connectAttr "place2dTexture20.vt2" "file100.vt2";
-connectAttr "place2dTexture20.vt3" "file100.vt3";
-connectAttr "place2dTexture20.vc1" "file100.vc1";
-connectAttr "file96.oa" "bump2d20.bv";
 connectAttr "set20.msg" "materialInfo24.sg";
-connectAttr "file97.oc" "multiplyDivide20.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file127.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file127.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file127.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file127.ws";
-connectAttr "place2dTexture26.o" "file127.uv";
-connectAttr "place2dTexture26.ofs" "file127.fs";
-connectAttr "place2dTexture26.c" "file127.c";
-connectAttr "place2dTexture26.tf" "file127.tf";
-connectAttr "place2dTexture26.rf" "file127.rf";
-connectAttr "place2dTexture26.mu" "file127.mu";
-connectAttr "place2dTexture26.mv" "file127.mv";
-connectAttr "place2dTexture26.s" "file127.s";
-connectAttr "place2dTexture26.wu" "file127.wu";
-connectAttr "place2dTexture26.wv" "file127.wv";
-connectAttr "place2dTexture26.re" "file127.re";
-connectAttr "place2dTexture26.of" "file127.of";
-connectAttr "place2dTexture26.r" "file127.ro";
-connectAttr "place2dTexture26.n" "file127.n";
-connectAttr "place2dTexture26.vt1" "file127.vt1";
-connectAttr "place2dTexture26.vt2" "file127.vt2";
-connectAttr "place2dTexture26.vt3" "file127.vt3";
-connectAttr "place2dTexture26.vc1" "file127.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file128.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file128.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file128.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file128.ws";
-connectAttr "place2dTexture26.o" "file128.uv";
-connectAttr "place2dTexture26.ofs" "file128.fs";
-connectAttr "place2dTexture26.c" "file128.c";
-connectAttr "place2dTexture26.tf" "file128.tf";
-connectAttr "place2dTexture26.rf" "file128.rf";
-connectAttr "place2dTexture26.mu" "file128.mu";
-connectAttr "place2dTexture26.mv" "file128.mv";
-connectAttr "place2dTexture26.s" "file128.s";
-connectAttr "place2dTexture26.wu" "file128.wu";
-connectAttr "place2dTexture26.wv" "file128.wv";
-connectAttr "place2dTexture26.re" "file128.re";
-connectAttr "place2dTexture26.of" "file128.of";
-connectAttr "place2dTexture26.r" "file128.ro";
-connectAttr "place2dTexture26.n" "file128.n";
-connectAttr "place2dTexture26.vt1" "file128.vt1";
-connectAttr "place2dTexture26.vt2" "file128.vt2";
-connectAttr "place2dTexture26.vt3" "file128.vt3";
-connectAttr "place2dTexture26.vc1" "file128.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file129.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file129.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file129.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file129.ws";
-connectAttr "place2dTexture26.o" "file129.uv";
-connectAttr "place2dTexture26.ofs" "file129.fs";
-connectAttr "place2dTexture26.c" "file129.c";
-connectAttr "place2dTexture26.tf" "file129.tf";
-connectAttr "place2dTexture26.rf" "file129.rf";
-connectAttr "place2dTexture26.mu" "file129.mu";
-connectAttr "place2dTexture26.mv" "file129.mv";
-connectAttr "place2dTexture26.s" "file129.s";
-connectAttr "place2dTexture26.wu" "file129.wu";
-connectAttr "place2dTexture26.wv" "file129.wv";
-connectAttr "place2dTexture26.re" "file129.re";
-connectAttr "place2dTexture26.of" "file129.of";
-connectAttr "place2dTexture26.r" "file129.ro";
-connectAttr "place2dTexture26.n" "file129.n";
-connectAttr "place2dTexture26.vt1" "file129.vt1";
-connectAttr "place2dTexture26.vt2" "file129.vt2";
-connectAttr "place2dTexture26.vt3" "file129.vt3";
-connectAttr "place2dTexture26.vc1" "file129.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file130.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file130.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file130.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file130.ws";
-connectAttr "place2dTexture26.o" "file130.uv";
-connectAttr "place2dTexture26.ofs" "file130.fs";
-connectAttr "place2dTexture26.c" "file130.c";
-connectAttr "place2dTexture26.tf" "file130.tf";
-connectAttr "place2dTexture26.rf" "file130.rf";
-connectAttr "place2dTexture26.mu" "file130.mu";
-connectAttr "place2dTexture26.mv" "file130.mv";
-connectAttr "place2dTexture26.s" "file130.s";
-connectAttr "place2dTexture26.wu" "file130.wu";
-connectAttr "place2dTexture26.wv" "file130.wv";
-connectAttr "place2dTexture26.re" "file130.re";
-connectAttr "place2dTexture26.of" "file130.of";
-connectAttr "place2dTexture26.r" "file130.ro";
-connectAttr "place2dTexture26.n" "file130.n";
-connectAttr "place2dTexture26.vt1" "file130.vt1";
-connectAttr "place2dTexture26.vt2" "file130.vt2";
-connectAttr "place2dTexture26.vt3" "file130.vt3";
-connectAttr "place2dTexture26.vc1" "file130.vc1";
-connectAttr "file127.oa" "bump2d25.bv";
 connectAttr "set26.msg" "materialInfo31.sg";
-connectAttr "file128.oc" "multiplyDivide26.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file177.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file177.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file177.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file177.ws";
-connectAttr "place2dTexture36.o" "file177.uv";
-connectAttr "place2dTexture36.ofs" "file177.fs";
-connectAttr "place2dTexture36.c" "file177.c";
-connectAttr "place2dTexture36.tf" "file177.tf";
-connectAttr "place2dTexture36.rf" "file177.rf";
-connectAttr "place2dTexture36.mu" "file177.mu";
-connectAttr "place2dTexture36.mv" "file177.mv";
-connectAttr "place2dTexture36.s" "file177.s";
-connectAttr "place2dTexture36.wu" "file177.wu";
-connectAttr "place2dTexture36.wv" "file177.wv";
-connectAttr "place2dTexture36.re" "file177.re";
-connectAttr "place2dTexture36.of" "file177.of";
-connectAttr "place2dTexture36.r" "file177.ro";
-connectAttr "place2dTexture36.n" "file177.n";
-connectAttr "place2dTexture36.vt1" "file177.vt1";
-connectAttr "place2dTexture36.vt2" "file177.vt2";
-connectAttr "place2dTexture36.vt3" "file177.vt3";
-connectAttr "place2dTexture36.vc1" "file177.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file179.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file179.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file179.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file179.ws";
-connectAttr "place2dTexture36.o" "file179.uv";
-connectAttr "place2dTexture36.ofs" "file179.fs";
-connectAttr "place2dTexture36.c" "file179.c";
-connectAttr "place2dTexture36.tf" "file179.tf";
-connectAttr "place2dTexture36.rf" "file179.rf";
-connectAttr "place2dTexture36.mu" "file179.mu";
-connectAttr "place2dTexture36.mv" "file179.mv";
-connectAttr "place2dTexture36.s" "file179.s";
-connectAttr "place2dTexture36.wu" "file179.wu";
-connectAttr "place2dTexture36.wv" "file179.wv";
-connectAttr "place2dTexture36.re" "file179.re";
-connectAttr "place2dTexture36.of" "file179.of";
-connectAttr "place2dTexture36.r" "file179.ro";
-connectAttr "place2dTexture36.n" "file179.n";
-connectAttr "place2dTexture36.vt1" "file179.vt1";
-connectAttr "place2dTexture36.vt2" "file179.vt2";
-connectAttr "place2dTexture36.vt3" "file179.vt3";
-connectAttr "place2dTexture36.vc1" "file179.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file180.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file180.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file180.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file180.ws";
-connectAttr "place2dTexture36.o" "file180.uv";
-connectAttr "place2dTexture36.ofs" "file180.fs";
-connectAttr "place2dTexture36.c" "file180.c";
-connectAttr "place2dTexture36.tf" "file180.tf";
-connectAttr "place2dTexture36.rf" "file180.rf";
-connectAttr "place2dTexture36.mu" "file180.mu";
-connectAttr "place2dTexture36.mv" "file180.mv";
-connectAttr "place2dTexture36.s" "file180.s";
-connectAttr "place2dTexture36.wu" "file180.wu";
-connectAttr "place2dTexture36.wv" "file180.wv";
-connectAttr "place2dTexture36.re" "file180.re";
-connectAttr "place2dTexture36.of" "file180.of";
-connectAttr "place2dTexture36.r" "file180.ro";
-connectAttr "place2dTexture36.n" "file180.n";
-connectAttr "place2dTexture36.vt1" "file180.vt1";
-connectAttr "place2dTexture36.vt2" "file180.vt2";
-connectAttr "place2dTexture36.vt3" "file180.vt3";
-connectAttr "place2dTexture36.vc1" "file180.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file181.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file181.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file181.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file181.ws";
-connectAttr "place2dTexture36.o" "file181.uv";
-connectAttr "place2dTexture36.ofs" "file181.fs";
-connectAttr "place2dTexture36.c" "file181.c";
-connectAttr "place2dTexture36.tf" "file181.tf";
-connectAttr "place2dTexture36.rf" "file181.rf";
-connectAttr "place2dTexture36.mu" "file181.mu";
-connectAttr "place2dTexture36.mv" "file181.mv";
-connectAttr "place2dTexture36.s" "file181.s";
-connectAttr "place2dTexture36.wu" "file181.wu";
-connectAttr "place2dTexture36.wv" "file181.wv";
-connectAttr "place2dTexture36.re" "file181.re";
-connectAttr "place2dTexture36.of" "file181.of";
-connectAttr "place2dTexture36.r" "file181.ro";
-connectAttr "place2dTexture36.n" "file181.n";
-connectAttr "place2dTexture36.vt1" "file181.vt1";
-connectAttr "place2dTexture36.vt2" "file181.vt2";
-connectAttr "place2dTexture36.vt3" "file181.vt3";
-connectAttr "place2dTexture36.vc1" "file181.vc1";
-connectAttr "file177.oc" "multiplyDivide36.i1";
 connectAttr "set36.msg" "materialInfo41.sg";
-connectAttr "file180.oa" "bump2d35.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file182.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file182.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file182.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file182.ws";
-connectAttr "place2dTexture37.o" "file182.uv";
-connectAttr "place2dTexture37.ofs" "file182.fs";
-connectAttr "place2dTexture37.c" "file182.c";
-connectAttr "place2dTexture37.tf" "file182.tf";
-connectAttr "place2dTexture37.rf" "file182.rf";
-connectAttr "place2dTexture37.mu" "file182.mu";
-connectAttr "place2dTexture37.mv" "file182.mv";
-connectAttr "place2dTexture37.s" "file182.s";
-connectAttr "place2dTexture37.wu" "file182.wu";
-connectAttr "place2dTexture37.wv" "file182.wv";
-connectAttr "place2dTexture37.re" "file182.re";
-connectAttr "place2dTexture37.of" "file182.of";
-connectAttr "place2dTexture37.r" "file182.ro";
-connectAttr "place2dTexture37.n" "file182.n";
-connectAttr "place2dTexture37.vt1" "file182.vt1";
-connectAttr "place2dTexture37.vt2" "file182.vt2";
-connectAttr "place2dTexture37.vt3" "file182.vt3";
-connectAttr "place2dTexture37.vc1" "file182.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file184.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file184.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file184.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file184.ws";
-connectAttr "place2dTexture37.o" "file184.uv";
-connectAttr "place2dTexture37.ofs" "file184.fs";
-connectAttr "place2dTexture37.c" "file184.c";
-connectAttr "place2dTexture37.tf" "file184.tf";
-connectAttr "place2dTexture37.rf" "file184.rf";
-connectAttr "place2dTexture37.mu" "file184.mu";
-connectAttr "place2dTexture37.mv" "file184.mv";
-connectAttr "place2dTexture37.s" "file184.s";
-connectAttr "place2dTexture37.wu" "file184.wu";
-connectAttr "place2dTexture37.wv" "file184.wv";
-connectAttr "place2dTexture37.re" "file184.re";
-connectAttr "place2dTexture37.of" "file184.of";
-connectAttr "place2dTexture37.r" "file184.ro";
-connectAttr "place2dTexture37.n" "file184.n";
-connectAttr "place2dTexture37.vt1" "file184.vt1";
-connectAttr "place2dTexture37.vt2" "file184.vt2";
-connectAttr "place2dTexture37.vt3" "file184.vt3";
-connectAttr "place2dTexture37.vc1" "file184.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file185.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file185.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file185.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file185.ws";
-connectAttr "place2dTexture37.o" "file185.uv";
-connectAttr "place2dTexture37.ofs" "file185.fs";
-connectAttr "place2dTexture37.c" "file185.c";
-connectAttr "place2dTexture37.tf" "file185.tf";
-connectAttr "place2dTexture37.rf" "file185.rf";
-connectAttr "place2dTexture37.mu" "file185.mu";
-connectAttr "place2dTexture37.mv" "file185.mv";
-connectAttr "place2dTexture37.s" "file185.s";
-connectAttr "place2dTexture37.wu" "file185.wu";
-connectAttr "place2dTexture37.wv" "file185.wv";
-connectAttr "place2dTexture37.re" "file185.re";
-connectAttr "place2dTexture37.of" "file185.of";
-connectAttr "place2dTexture37.r" "file185.ro";
-connectAttr "place2dTexture37.n" "file185.n";
-connectAttr "place2dTexture37.vt1" "file185.vt1";
-connectAttr "place2dTexture37.vt2" "file185.vt2";
-connectAttr "place2dTexture37.vt3" "file185.vt3";
-connectAttr "place2dTexture37.vc1" "file185.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file186.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file186.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file186.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file186.ws";
-connectAttr "place2dTexture37.o" "file186.uv";
-connectAttr "place2dTexture37.ofs" "file186.fs";
-connectAttr "place2dTexture37.c" "file186.c";
-connectAttr "place2dTexture37.tf" "file186.tf";
-connectAttr "place2dTexture37.rf" "file186.rf";
-connectAttr "place2dTexture37.mu" "file186.mu";
-connectAttr "place2dTexture37.mv" "file186.mv";
-connectAttr "place2dTexture37.s" "file186.s";
-connectAttr "place2dTexture37.wu" "file186.wu";
-connectAttr "place2dTexture37.wv" "file186.wv";
-connectAttr "place2dTexture37.re" "file186.re";
-connectAttr "place2dTexture37.of" "file186.of";
-connectAttr "place2dTexture37.r" "file186.ro";
-connectAttr "place2dTexture37.n" "file186.n";
-connectAttr "place2dTexture37.vt1" "file186.vt1";
-connectAttr "place2dTexture37.vt2" "file186.vt2";
-connectAttr "place2dTexture37.vt3" "file186.vt3";
-connectAttr "place2dTexture37.vc1" "file186.vc1";
-connectAttr "file182.oc" "multiplyDivide37.i1";
 connectAttr "set37.msg" "materialInfo42.sg";
-connectAttr "file185.oa" "bump2d36.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file187.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file187.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file187.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file187.ws";
-connectAttr "place2dTexture38.o" "file187.uv";
-connectAttr "place2dTexture38.ofs" "file187.fs";
-connectAttr "place2dTexture38.c" "file187.c";
-connectAttr "place2dTexture38.tf" "file187.tf";
-connectAttr "place2dTexture38.rf" "file187.rf";
-connectAttr "place2dTexture38.mu" "file187.mu";
-connectAttr "place2dTexture38.mv" "file187.mv";
-connectAttr "place2dTexture38.s" "file187.s";
-connectAttr "place2dTexture38.wu" "file187.wu";
-connectAttr "place2dTexture38.wv" "file187.wv";
-connectAttr "place2dTexture38.re" "file187.re";
-connectAttr "place2dTexture38.of" "file187.of";
-connectAttr "place2dTexture38.r" "file187.ro";
-connectAttr "place2dTexture38.n" "file187.n";
-connectAttr "place2dTexture38.vt1" "file187.vt1";
-connectAttr "place2dTexture38.vt2" "file187.vt2";
-connectAttr "place2dTexture38.vt3" "file187.vt3";
-connectAttr "place2dTexture38.vc1" "file187.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file189.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file189.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file189.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file189.ws";
-connectAttr "place2dTexture38.o" "file189.uv";
-connectAttr "place2dTexture38.ofs" "file189.fs";
-connectAttr "place2dTexture38.c" "file189.c";
-connectAttr "place2dTexture38.tf" "file189.tf";
-connectAttr "place2dTexture38.rf" "file189.rf";
-connectAttr "place2dTexture38.mu" "file189.mu";
-connectAttr "place2dTexture38.mv" "file189.mv";
-connectAttr "place2dTexture38.s" "file189.s";
-connectAttr "place2dTexture38.wu" "file189.wu";
-connectAttr "place2dTexture38.wv" "file189.wv";
-connectAttr "place2dTexture38.re" "file189.re";
-connectAttr "place2dTexture38.of" "file189.of";
-connectAttr "place2dTexture38.r" "file189.ro";
-connectAttr "place2dTexture38.n" "file189.n";
-connectAttr "place2dTexture38.vt1" "file189.vt1";
-connectAttr "place2dTexture38.vt2" "file189.vt2";
-connectAttr "place2dTexture38.vt3" "file189.vt3";
-connectAttr "place2dTexture38.vc1" "file189.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file190.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file190.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file190.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file190.ws";
-connectAttr "place2dTexture38.o" "file190.uv";
-connectAttr "place2dTexture38.ofs" "file190.fs";
-connectAttr "place2dTexture38.c" "file190.c";
-connectAttr "place2dTexture38.tf" "file190.tf";
-connectAttr "place2dTexture38.rf" "file190.rf";
-connectAttr "place2dTexture38.mu" "file190.mu";
-connectAttr "place2dTexture38.mv" "file190.mv";
-connectAttr "place2dTexture38.s" "file190.s";
-connectAttr "place2dTexture38.wu" "file190.wu";
-connectAttr "place2dTexture38.wv" "file190.wv";
-connectAttr "place2dTexture38.re" "file190.re";
-connectAttr "place2dTexture38.of" "file190.of";
-connectAttr "place2dTexture38.r" "file190.ro";
-connectAttr "place2dTexture38.n" "file190.n";
-connectAttr "place2dTexture38.vt1" "file190.vt1";
-connectAttr "place2dTexture38.vt2" "file190.vt2";
-connectAttr "place2dTexture38.vt3" "file190.vt3";
-connectAttr "place2dTexture38.vc1" "file190.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file191.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file191.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file191.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file191.ws";
-connectAttr "place2dTexture38.o" "file191.uv";
-connectAttr "place2dTexture38.ofs" "file191.fs";
-connectAttr "place2dTexture38.c" "file191.c";
-connectAttr "place2dTexture38.tf" "file191.tf";
-connectAttr "place2dTexture38.rf" "file191.rf";
-connectAttr "place2dTexture38.mu" "file191.mu";
-connectAttr "place2dTexture38.mv" "file191.mv";
-connectAttr "place2dTexture38.s" "file191.s";
-connectAttr "place2dTexture38.wu" "file191.wu";
-connectAttr "place2dTexture38.wv" "file191.wv";
-connectAttr "place2dTexture38.re" "file191.re";
-connectAttr "place2dTexture38.of" "file191.of";
-connectAttr "place2dTexture38.r" "file191.ro";
-connectAttr "place2dTexture38.n" "file191.n";
-connectAttr "place2dTexture38.vt1" "file191.vt1";
-connectAttr "place2dTexture38.vt2" "file191.vt2";
-connectAttr "place2dTexture38.vt3" "file191.vt3";
-connectAttr "place2dTexture38.vc1" "file191.vc1";
-connectAttr "file187.oc" "multiplyDivide38.i1";
 connectAttr "set38.msg" "materialInfo43.sg";
-connectAttr "file190.oa" "bump2d37.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file192.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file192.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file192.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file192.ws";
-connectAttr "place2dTexture39.o" "file192.uv";
-connectAttr "place2dTexture39.ofs" "file192.fs";
-connectAttr "place2dTexture39.c" "file192.c";
-connectAttr "place2dTexture39.tf" "file192.tf";
-connectAttr "place2dTexture39.rf" "file192.rf";
-connectAttr "place2dTexture39.mu" "file192.mu";
-connectAttr "place2dTexture39.mv" "file192.mv";
-connectAttr "place2dTexture39.s" "file192.s";
-connectAttr "place2dTexture39.wu" "file192.wu";
-connectAttr "place2dTexture39.wv" "file192.wv";
-connectAttr "place2dTexture39.re" "file192.re";
-connectAttr "place2dTexture39.of" "file192.of";
-connectAttr "place2dTexture39.r" "file192.ro";
-connectAttr "place2dTexture39.n" "file192.n";
-connectAttr "place2dTexture39.vt1" "file192.vt1";
-connectAttr "place2dTexture39.vt2" "file192.vt2";
-connectAttr "place2dTexture39.vt3" "file192.vt3";
-connectAttr "place2dTexture39.vc1" "file192.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file193.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file193.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file193.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file193.ws";
-connectAttr "place2dTexture39.o" "file193.uv";
-connectAttr "place2dTexture39.ofs" "file193.fs";
-connectAttr "place2dTexture39.c" "file193.c";
-connectAttr "place2dTexture39.tf" "file193.tf";
-connectAttr "place2dTexture39.rf" "file193.rf";
-connectAttr "place2dTexture39.mu" "file193.mu";
-connectAttr "place2dTexture39.mv" "file193.mv";
-connectAttr "place2dTexture39.s" "file193.s";
-connectAttr "place2dTexture39.wu" "file193.wu";
-connectAttr "place2dTexture39.wv" "file193.wv";
-connectAttr "place2dTexture39.re" "file193.re";
-connectAttr "place2dTexture39.of" "file193.of";
-connectAttr "place2dTexture39.r" "file193.ro";
-connectAttr "place2dTexture39.n" "file193.n";
-connectAttr "place2dTexture39.vt1" "file193.vt1";
-connectAttr "place2dTexture39.vt2" "file193.vt2";
-connectAttr "place2dTexture39.vt3" "file193.vt3";
-connectAttr "place2dTexture39.vc1" "file193.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file194.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file194.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file194.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file194.ws";
-connectAttr "place2dTexture39.o" "file194.uv";
-connectAttr "place2dTexture39.ofs" "file194.fs";
-connectAttr "place2dTexture39.c" "file194.c";
-connectAttr "place2dTexture39.tf" "file194.tf";
-connectAttr "place2dTexture39.rf" "file194.rf";
-connectAttr "place2dTexture39.mu" "file194.mu";
-connectAttr "place2dTexture39.mv" "file194.mv";
-connectAttr "place2dTexture39.s" "file194.s";
-connectAttr "place2dTexture39.wu" "file194.wu";
-connectAttr "place2dTexture39.wv" "file194.wv";
-connectAttr "place2dTexture39.re" "file194.re";
-connectAttr "place2dTexture39.of" "file194.of";
-connectAttr "place2dTexture39.r" "file194.ro";
-connectAttr "place2dTexture39.n" "file194.n";
-connectAttr "place2dTexture39.vt1" "file194.vt1";
-connectAttr "place2dTexture39.vt2" "file194.vt2";
-connectAttr "place2dTexture39.vt3" "file194.vt3";
-connectAttr "place2dTexture39.vc1" "file194.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file196.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file196.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file196.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file196.ws";
-connectAttr "place2dTexture39.o" "file196.uv";
-connectAttr "place2dTexture39.ofs" "file196.fs";
-connectAttr "place2dTexture39.c" "file196.c";
-connectAttr "place2dTexture39.tf" "file196.tf";
-connectAttr "place2dTexture39.rf" "file196.rf";
-connectAttr "place2dTexture39.mu" "file196.mu";
-connectAttr "place2dTexture39.mv" "file196.mv";
-connectAttr "place2dTexture39.s" "file196.s";
-connectAttr "place2dTexture39.wu" "file196.wu";
-connectAttr "place2dTexture39.wv" "file196.wv";
-connectAttr "place2dTexture39.re" "file196.re";
-connectAttr "place2dTexture39.of" "file196.of";
-connectAttr "place2dTexture39.r" "file196.ro";
-connectAttr "place2dTexture39.n" "file196.n";
-connectAttr "place2dTexture39.vt1" "file196.vt1";
-connectAttr "place2dTexture39.vt2" "file196.vt2";
-connectAttr "place2dTexture39.vt3" "file196.vt3";
-connectAttr "place2dTexture39.vc1" "file196.vc1";
-connectAttr "file192.oa" "bump2d38.bv";
 connectAttr "set39.msg" "materialInfo44.sg";
-connectAttr "file194.oc" "multiplyDivide39.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file197.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file197.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file197.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file197.ws";
-connectAttr "place2dTexture40.o" "file197.uv";
-connectAttr "place2dTexture40.ofs" "file197.fs";
-connectAttr "place2dTexture40.c" "file197.c";
-connectAttr "place2dTexture40.tf" "file197.tf";
-connectAttr "place2dTexture40.rf" "file197.rf";
-connectAttr "place2dTexture40.mu" "file197.mu";
-connectAttr "place2dTexture40.mv" "file197.mv";
-connectAttr "place2dTexture40.s" "file197.s";
-connectAttr "place2dTexture40.wu" "file197.wu";
-connectAttr "place2dTexture40.wv" "file197.wv";
-connectAttr "place2dTexture40.re" "file197.re";
-connectAttr "place2dTexture40.of" "file197.of";
-connectAttr "place2dTexture40.r" "file197.ro";
-connectAttr "place2dTexture40.n" "file197.n";
-connectAttr "place2dTexture40.vt1" "file197.vt1";
-connectAttr "place2dTexture40.vt2" "file197.vt2";
-connectAttr "place2dTexture40.vt3" "file197.vt3";
-connectAttr "place2dTexture40.vc1" "file197.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file199.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file199.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file199.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file199.ws";
-connectAttr "place2dTexture40.o" "file199.uv";
-connectAttr "place2dTexture40.ofs" "file199.fs";
-connectAttr "place2dTexture40.c" "file199.c";
-connectAttr "place2dTexture40.tf" "file199.tf";
-connectAttr "place2dTexture40.rf" "file199.rf";
-connectAttr "place2dTexture40.mu" "file199.mu";
-connectAttr "place2dTexture40.mv" "file199.mv";
-connectAttr "place2dTexture40.s" "file199.s";
-connectAttr "place2dTexture40.wu" "file199.wu";
-connectAttr "place2dTexture40.wv" "file199.wv";
-connectAttr "place2dTexture40.re" "file199.re";
-connectAttr "place2dTexture40.of" "file199.of";
-connectAttr "place2dTexture40.r" "file199.ro";
-connectAttr "place2dTexture40.n" "file199.n";
-connectAttr "place2dTexture40.vt1" "file199.vt1";
-connectAttr "place2dTexture40.vt2" "file199.vt2";
-connectAttr "place2dTexture40.vt3" "file199.vt3";
-connectAttr "place2dTexture40.vc1" "file199.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file200.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file200.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file200.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file200.ws";
-connectAttr "place2dTexture40.o" "file200.uv";
-connectAttr "place2dTexture40.ofs" "file200.fs";
-connectAttr "place2dTexture40.c" "file200.c";
-connectAttr "place2dTexture40.tf" "file200.tf";
-connectAttr "place2dTexture40.rf" "file200.rf";
-connectAttr "place2dTexture40.mu" "file200.mu";
-connectAttr "place2dTexture40.mv" "file200.mv";
-connectAttr "place2dTexture40.s" "file200.s";
-connectAttr "place2dTexture40.wu" "file200.wu";
-connectAttr "place2dTexture40.wv" "file200.wv";
-connectAttr "place2dTexture40.re" "file200.re";
-connectAttr "place2dTexture40.of" "file200.of";
-connectAttr "place2dTexture40.r" "file200.ro";
-connectAttr "place2dTexture40.n" "file200.n";
-connectAttr "place2dTexture40.vt1" "file200.vt1";
-connectAttr "place2dTexture40.vt2" "file200.vt2";
-connectAttr "place2dTexture40.vt3" "file200.vt3";
-connectAttr "place2dTexture40.vc1" "file200.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file201.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file201.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file201.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file201.ws";
-connectAttr "place2dTexture40.o" "file201.uv";
-connectAttr "place2dTexture40.ofs" "file201.fs";
-connectAttr "place2dTexture40.c" "file201.c";
-connectAttr "place2dTexture40.tf" "file201.tf";
-connectAttr "place2dTexture40.rf" "file201.rf";
-connectAttr "place2dTexture40.mu" "file201.mu";
-connectAttr "place2dTexture40.mv" "file201.mv";
-connectAttr "place2dTexture40.s" "file201.s";
-connectAttr "place2dTexture40.wu" "file201.wu";
-connectAttr "place2dTexture40.wv" "file201.wv";
-connectAttr "place2dTexture40.re" "file201.re";
-connectAttr "place2dTexture40.of" "file201.of";
-connectAttr "place2dTexture40.r" "file201.ro";
-connectAttr "place2dTexture40.n" "file201.n";
-connectAttr "place2dTexture40.vt1" "file201.vt1";
-connectAttr "place2dTexture40.vt2" "file201.vt2";
-connectAttr "place2dTexture40.vt3" "file201.vt3";
-connectAttr "place2dTexture40.vc1" "file201.vc1";
-connectAttr "file197.oc" "multiplyDivide40.i1";
 connectAttr "set40.msg" "materialInfo45.sg";
-connectAttr "file200.oa" "bump2d39.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file202.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file202.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file202.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file202.ws";
-connectAttr "place2dTexture41.o" "file202.uv";
-connectAttr "place2dTexture41.ofs" "file202.fs";
-connectAttr "place2dTexture41.c" "file202.c";
-connectAttr "place2dTexture41.tf" "file202.tf";
-connectAttr "place2dTexture41.rf" "file202.rf";
-connectAttr "place2dTexture41.mu" "file202.mu";
-connectAttr "place2dTexture41.mv" "file202.mv";
-connectAttr "place2dTexture41.s" "file202.s";
-connectAttr "place2dTexture41.wu" "file202.wu";
-connectAttr "place2dTexture41.wv" "file202.wv";
-connectAttr "place2dTexture41.re" "file202.re";
-connectAttr "place2dTexture41.of" "file202.of";
-connectAttr "place2dTexture41.r" "file202.ro";
-connectAttr "place2dTexture41.n" "file202.n";
-connectAttr "place2dTexture41.vt1" "file202.vt1";
-connectAttr "place2dTexture41.vt2" "file202.vt2";
-connectAttr "place2dTexture41.vt3" "file202.vt3";
-connectAttr "place2dTexture41.vc1" "file202.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file204.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file204.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file204.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file204.ws";
-connectAttr "place2dTexture41.o" "file204.uv";
-connectAttr "place2dTexture41.ofs" "file204.fs";
-connectAttr "place2dTexture41.c" "file204.c";
-connectAttr "place2dTexture41.tf" "file204.tf";
-connectAttr "place2dTexture41.rf" "file204.rf";
-connectAttr "place2dTexture41.mu" "file204.mu";
-connectAttr "place2dTexture41.mv" "file204.mv";
-connectAttr "place2dTexture41.s" "file204.s";
-connectAttr "place2dTexture41.wu" "file204.wu";
-connectAttr "place2dTexture41.wv" "file204.wv";
-connectAttr "place2dTexture41.re" "file204.re";
-connectAttr "place2dTexture41.of" "file204.of";
-connectAttr "place2dTexture41.r" "file204.ro";
-connectAttr "place2dTexture41.n" "file204.n";
-connectAttr "place2dTexture41.vt1" "file204.vt1";
-connectAttr "place2dTexture41.vt2" "file204.vt2";
-connectAttr "place2dTexture41.vt3" "file204.vt3";
-connectAttr "place2dTexture41.vc1" "file204.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file205.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file205.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file205.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file205.ws";
-connectAttr "place2dTexture41.o" "file205.uv";
-connectAttr "place2dTexture41.ofs" "file205.fs";
-connectAttr "place2dTexture41.c" "file205.c";
-connectAttr "place2dTexture41.tf" "file205.tf";
-connectAttr "place2dTexture41.rf" "file205.rf";
-connectAttr "place2dTexture41.mu" "file205.mu";
-connectAttr "place2dTexture41.mv" "file205.mv";
-connectAttr "place2dTexture41.s" "file205.s";
-connectAttr "place2dTexture41.wu" "file205.wu";
-connectAttr "place2dTexture41.wv" "file205.wv";
-connectAttr "place2dTexture41.re" "file205.re";
-connectAttr "place2dTexture41.of" "file205.of";
-connectAttr "place2dTexture41.r" "file205.ro";
-connectAttr "place2dTexture41.n" "file205.n";
-connectAttr "place2dTexture41.vt1" "file205.vt1";
-connectAttr "place2dTexture41.vt2" "file205.vt2";
-connectAttr "place2dTexture41.vt3" "file205.vt3";
-connectAttr "place2dTexture41.vc1" "file205.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file206.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file206.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file206.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file206.ws";
-connectAttr "place2dTexture41.o" "file206.uv";
-connectAttr "place2dTexture41.ofs" "file206.fs";
-connectAttr "place2dTexture41.c" "file206.c";
-connectAttr "place2dTexture41.tf" "file206.tf";
-connectAttr "place2dTexture41.rf" "file206.rf";
-connectAttr "place2dTexture41.mu" "file206.mu";
-connectAttr "place2dTexture41.mv" "file206.mv";
-connectAttr "place2dTexture41.s" "file206.s";
-connectAttr "place2dTexture41.wu" "file206.wu";
-connectAttr "place2dTexture41.wv" "file206.wv";
-connectAttr "place2dTexture41.re" "file206.re";
-connectAttr "place2dTexture41.of" "file206.of";
-connectAttr "place2dTexture41.r" "file206.ro";
-connectAttr "place2dTexture41.n" "file206.n";
-connectAttr "place2dTexture41.vt1" "file206.vt1";
-connectAttr "place2dTexture41.vt2" "file206.vt2";
-connectAttr "place2dTexture41.vt3" "file206.vt3";
-connectAttr "place2dTexture41.vc1" "file206.vc1";
-connectAttr "file202.oc" "multiplyDivide41.i1";
 connectAttr "set41.msg" "materialInfo46.sg";
-connectAttr "file205.oa" "bump2d40.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file207.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file207.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file207.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file207.ws";
-connectAttr "place2dTexture42.o" "file207.uv";
-connectAttr "place2dTexture42.ofs" "file207.fs";
-connectAttr "place2dTexture42.c" "file207.c";
-connectAttr "place2dTexture42.tf" "file207.tf";
-connectAttr "place2dTexture42.rf" "file207.rf";
-connectAttr "place2dTexture42.mu" "file207.mu";
-connectAttr "place2dTexture42.mv" "file207.mv";
-connectAttr "place2dTexture42.s" "file207.s";
-connectAttr "place2dTexture42.wu" "file207.wu";
-connectAttr "place2dTexture42.wv" "file207.wv";
-connectAttr "place2dTexture42.re" "file207.re";
-connectAttr "place2dTexture42.of" "file207.of";
-connectAttr "place2dTexture42.r" "file207.ro";
-connectAttr "place2dTexture42.n" "file207.n";
-connectAttr "place2dTexture42.vt1" "file207.vt1";
-connectAttr "place2dTexture42.vt2" "file207.vt2";
-connectAttr "place2dTexture42.vt3" "file207.vt3";
-connectAttr "place2dTexture42.vc1" "file207.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file209.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file209.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file209.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file209.ws";
-connectAttr "place2dTexture42.o" "file209.uv";
-connectAttr "place2dTexture42.ofs" "file209.fs";
-connectAttr "place2dTexture42.c" "file209.c";
-connectAttr "place2dTexture42.tf" "file209.tf";
-connectAttr "place2dTexture42.rf" "file209.rf";
-connectAttr "place2dTexture42.mu" "file209.mu";
-connectAttr "place2dTexture42.mv" "file209.mv";
-connectAttr "place2dTexture42.s" "file209.s";
-connectAttr "place2dTexture42.wu" "file209.wu";
-connectAttr "place2dTexture42.wv" "file209.wv";
-connectAttr "place2dTexture42.re" "file209.re";
-connectAttr "place2dTexture42.of" "file209.of";
-connectAttr "place2dTexture42.r" "file209.ro";
-connectAttr "place2dTexture42.n" "file209.n";
-connectAttr "place2dTexture42.vt1" "file209.vt1";
-connectAttr "place2dTexture42.vt2" "file209.vt2";
-connectAttr "place2dTexture42.vt3" "file209.vt3";
-connectAttr "place2dTexture42.vc1" "file209.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file210.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file210.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file210.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file210.ws";
-connectAttr "place2dTexture42.o" "file210.uv";
-connectAttr "place2dTexture42.ofs" "file210.fs";
-connectAttr "place2dTexture42.c" "file210.c";
-connectAttr "place2dTexture42.tf" "file210.tf";
-connectAttr "place2dTexture42.rf" "file210.rf";
-connectAttr "place2dTexture42.mu" "file210.mu";
-connectAttr "place2dTexture42.mv" "file210.mv";
-connectAttr "place2dTexture42.s" "file210.s";
-connectAttr "place2dTexture42.wu" "file210.wu";
-connectAttr "place2dTexture42.wv" "file210.wv";
-connectAttr "place2dTexture42.re" "file210.re";
-connectAttr "place2dTexture42.of" "file210.of";
-connectAttr "place2dTexture42.r" "file210.ro";
-connectAttr "place2dTexture42.n" "file210.n";
-connectAttr "place2dTexture42.vt1" "file210.vt1";
-connectAttr "place2dTexture42.vt2" "file210.vt2";
-connectAttr "place2dTexture42.vt3" "file210.vt3";
-connectAttr "place2dTexture42.vc1" "file210.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file211.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file211.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file211.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file211.ws";
-connectAttr "place2dTexture42.o" "file211.uv";
-connectAttr "place2dTexture42.ofs" "file211.fs";
-connectAttr "place2dTexture42.c" "file211.c";
-connectAttr "place2dTexture42.tf" "file211.tf";
-connectAttr "place2dTexture42.rf" "file211.rf";
-connectAttr "place2dTexture42.mu" "file211.mu";
-connectAttr "place2dTexture42.mv" "file211.mv";
-connectAttr "place2dTexture42.s" "file211.s";
-connectAttr "place2dTexture42.wu" "file211.wu";
-connectAttr "place2dTexture42.wv" "file211.wv";
-connectAttr "place2dTexture42.re" "file211.re";
-connectAttr "place2dTexture42.of" "file211.of";
-connectAttr "place2dTexture42.r" "file211.ro";
-connectAttr "place2dTexture42.n" "file211.n";
-connectAttr "place2dTexture42.vt1" "file211.vt1";
-connectAttr "place2dTexture42.vt2" "file211.vt2";
-connectAttr "place2dTexture42.vt3" "file211.vt3";
-connectAttr "place2dTexture42.vc1" "file211.vc1";
-connectAttr "file207.oc" "multiplyDivide42.i1";
 connectAttr "set42.msg" "materialInfo47.sg";
-connectAttr "file210.oa" "bump2d41.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file372.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file372.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file372.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file372.ws";
-connectAttr "place2dTexture83.o" "file372.uv";
-connectAttr "place2dTexture83.ofs" "file372.fs";
-connectAttr "place2dTexture83.c" "file372.c";
-connectAttr "place2dTexture83.tf" "file372.tf";
-connectAttr "place2dTexture83.rf" "file372.rf";
-connectAttr "place2dTexture83.mu" "file372.mu";
-connectAttr "place2dTexture83.mv" "file372.mv";
-connectAttr "place2dTexture83.s" "file372.s";
-connectAttr "place2dTexture83.wu" "file372.wu";
-connectAttr "place2dTexture83.wv" "file372.wv";
-connectAttr "place2dTexture83.re" "file372.re";
-connectAttr "place2dTexture83.of" "file372.of";
-connectAttr "place2dTexture83.r" "file372.ro";
-connectAttr "place2dTexture83.n" "file372.n";
-connectAttr "place2dTexture83.vt1" "file372.vt1";
-connectAttr "place2dTexture83.vt2" "file372.vt2";
-connectAttr "place2dTexture83.vt3" "file372.vt3";
-connectAttr "place2dTexture83.vc1" "file372.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file374.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file374.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file374.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file374.ws";
-connectAttr "place2dTexture83.o" "file374.uv";
-connectAttr "place2dTexture83.ofs" "file374.fs";
-connectAttr "place2dTexture83.c" "file374.c";
-connectAttr "place2dTexture83.tf" "file374.tf";
-connectAttr "place2dTexture83.rf" "file374.rf";
-connectAttr "place2dTexture83.mu" "file374.mu";
-connectAttr "place2dTexture83.mv" "file374.mv";
-connectAttr "place2dTexture83.s" "file374.s";
-connectAttr "place2dTexture83.wu" "file374.wu";
-connectAttr "place2dTexture83.wv" "file374.wv";
-connectAttr "place2dTexture83.re" "file374.re";
-connectAttr "place2dTexture83.of" "file374.of";
-connectAttr "place2dTexture83.r" "file374.ro";
-connectAttr "place2dTexture83.n" "file374.n";
-connectAttr "place2dTexture83.vt1" "file374.vt1";
-connectAttr "place2dTexture83.vt2" "file374.vt2";
-connectAttr "place2dTexture83.vt3" "file374.vt3";
-connectAttr "place2dTexture83.vc1" "file374.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file375.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file375.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file375.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file375.ws";
-connectAttr "place2dTexture83.o" "file375.uv";
-connectAttr "place2dTexture83.ofs" "file375.fs";
-connectAttr "place2dTexture83.c" "file375.c";
-connectAttr "place2dTexture83.tf" "file375.tf";
-connectAttr "place2dTexture83.rf" "file375.rf";
-connectAttr "place2dTexture83.mu" "file375.mu";
-connectAttr "place2dTexture83.mv" "file375.mv";
-connectAttr "place2dTexture83.s" "file375.s";
-connectAttr "place2dTexture83.wu" "file375.wu";
-connectAttr "place2dTexture83.wv" "file375.wv";
-connectAttr "place2dTexture83.re" "file375.re";
-connectAttr "place2dTexture83.of" "file375.of";
-connectAttr "place2dTexture83.r" "file375.ro";
-connectAttr "place2dTexture83.n" "file375.n";
-connectAttr "place2dTexture83.vt1" "file375.vt1";
-connectAttr "place2dTexture83.vt2" "file375.vt2";
-connectAttr "place2dTexture83.vt3" "file375.vt3";
-connectAttr "place2dTexture83.vc1" "file375.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file376.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file376.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file376.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file376.ws";
-connectAttr "place2dTexture83.o" "file376.uv";
-connectAttr "place2dTexture83.ofs" "file376.fs";
-connectAttr "place2dTexture83.c" "file376.c";
-connectAttr "place2dTexture83.tf" "file376.tf";
-connectAttr "place2dTexture83.rf" "file376.rf";
-connectAttr "place2dTexture83.mu" "file376.mu";
-connectAttr "place2dTexture83.mv" "file376.mv";
-connectAttr "place2dTexture83.s" "file376.s";
-connectAttr "place2dTexture83.wu" "file376.wu";
-connectAttr "place2dTexture83.wv" "file376.wv";
-connectAttr "place2dTexture83.re" "file376.re";
-connectAttr "place2dTexture83.of" "file376.of";
-connectAttr "place2dTexture83.r" "file376.ro";
-connectAttr "place2dTexture83.n" "file376.n";
-connectAttr "place2dTexture83.vt1" "file376.vt1";
-connectAttr "place2dTexture83.vt2" "file376.vt2";
-connectAttr "place2dTexture83.vt3" "file376.vt3";
-connectAttr "place2dTexture83.vc1" "file376.vc1";
-connectAttr "file372.oc" "multiplyDivide73.i1";
 connectAttr "set73.msg" "materialInfo94.sg";
-connectAttr "file375.oa" "bump2d72.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file377.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file377.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file377.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file377.ws";
-connectAttr "place2dTexture84.o" "file377.uv";
-connectAttr "place2dTexture84.ofs" "file377.fs";
-connectAttr "place2dTexture84.c" "file377.c";
-connectAttr "place2dTexture84.tf" "file377.tf";
-connectAttr "place2dTexture84.rf" "file377.rf";
-connectAttr "place2dTexture84.mu" "file377.mu";
-connectAttr "place2dTexture84.mv" "file377.mv";
-connectAttr "place2dTexture84.s" "file377.s";
-connectAttr "place2dTexture84.wu" "file377.wu";
-connectAttr "place2dTexture84.wv" "file377.wv";
-connectAttr "place2dTexture84.re" "file377.re";
-connectAttr "place2dTexture84.of" "file377.of";
-connectAttr "place2dTexture84.r" "file377.ro";
-connectAttr "place2dTexture84.n" "file377.n";
-connectAttr "place2dTexture84.vt1" "file377.vt1";
-connectAttr "place2dTexture84.vt2" "file377.vt2";
-connectAttr "place2dTexture84.vt3" "file377.vt3";
-connectAttr "place2dTexture84.vc1" "file377.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file379.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file379.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file379.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file379.ws";
-connectAttr "place2dTexture84.o" "file379.uv";
-connectAttr "place2dTexture84.ofs" "file379.fs";
-connectAttr "place2dTexture84.c" "file379.c";
-connectAttr "place2dTexture84.tf" "file379.tf";
-connectAttr "place2dTexture84.rf" "file379.rf";
-connectAttr "place2dTexture84.mu" "file379.mu";
-connectAttr "place2dTexture84.mv" "file379.mv";
-connectAttr "place2dTexture84.s" "file379.s";
-connectAttr "place2dTexture84.wu" "file379.wu";
-connectAttr "place2dTexture84.wv" "file379.wv";
-connectAttr "place2dTexture84.re" "file379.re";
-connectAttr "place2dTexture84.of" "file379.of";
-connectAttr "place2dTexture84.r" "file379.ro";
-connectAttr "place2dTexture84.n" "file379.n";
-connectAttr "place2dTexture84.vt1" "file379.vt1";
-connectAttr "place2dTexture84.vt2" "file379.vt2";
-connectAttr "place2dTexture84.vt3" "file379.vt3";
-connectAttr "place2dTexture84.vc1" "file379.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file380.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file380.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file380.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file380.ws";
-connectAttr "place2dTexture84.o" "file380.uv";
-connectAttr "place2dTexture84.ofs" "file380.fs";
-connectAttr "place2dTexture84.c" "file380.c";
-connectAttr "place2dTexture84.tf" "file380.tf";
-connectAttr "place2dTexture84.rf" "file380.rf";
-connectAttr "place2dTexture84.mu" "file380.mu";
-connectAttr "place2dTexture84.mv" "file380.mv";
-connectAttr "place2dTexture84.s" "file380.s";
-connectAttr "place2dTexture84.wu" "file380.wu";
-connectAttr "place2dTexture84.wv" "file380.wv";
-connectAttr "place2dTexture84.re" "file380.re";
-connectAttr "place2dTexture84.of" "file380.of";
-connectAttr "place2dTexture84.r" "file380.ro";
-connectAttr "place2dTexture84.n" "file380.n";
-connectAttr "place2dTexture84.vt1" "file380.vt1";
-connectAttr "place2dTexture84.vt2" "file380.vt2";
-connectAttr "place2dTexture84.vt3" "file380.vt3";
-connectAttr "place2dTexture84.vc1" "file380.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file381.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file381.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file381.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file381.ws";
-connectAttr "place2dTexture84.o" "file381.uv";
-connectAttr "place2dTexture84.ofs" "file381.fs";
-connectAttr "place2dTexture84.c" "file381.c";
-connectAttr "place2dTexture84.tf" "file381.tf";
-connectAttr "place2dTexture84.rf" "file381.rf";
-connectAttr "place2dTexture84.mu" "file381.mu";
-connectAttr "place2dTexture84.mv" "file381.mv";
-connectAttr "place2dTexture84.s" "file381.s";
-connectAttr "place2dTexture84.wu" "file381.wu";
-connectAttr "place2dTexture84.wv" "file381.wv";
-connectAttr "place2dTexture84.re" "file381.re";
-connectAttr "place2dTexture84.of" "file381.of";
-connectAttr "place2dTexture84.r" "file381.ro";
-connectAttr "place2dTexture84.n" "file381.n";
-connectAttr "place2dTexture84.vt1" "file381.vt1";
-connectAttr "place2dTexture84.vt2" "file381.vt2";
-connectAttr "place2dTexture84.vt3" "file381.vt3";
-connectAttr "place2dTexture84.vc1" "file381.vc1";
-connectAttr "file377.oc" "multiplyDivide74.i1";
 connectAttr "set74.msg" "materialInfo95.sg";
-connectAttr "file380.oa" "bump2d73.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file382.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file382.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file382.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file382.ws";
-connectAttr "place2dTexture85.o" "file382.uv";
-connectAttr "place2dTexture85.ofs" "file382.fs";
-connectAttr "place2dTexture85.c" "file382.c";
-connectAttr "place2dTexture85.tf" "file382.tf";
-connectAttr "place2dTexture85.rf" "file382.rf";
-connectAttr "place2dTexture85.mu" "file382.mu";
-connectAttr "place2dTexture85.mv" "file382.mv";
-connectAttr "place2dTexture85.s" "file382.s";
-connectAttr "place2dTexture85.wu" "file382.wu";
-connectAttr "place2dTexture85.wv" "file382.wv";
-connectAttr "place2dTexture85.re" "file382.re";
-connectAttr "place2dTexture85.of" "file382.of";
-connectAttr "place2dTexture85.r" "file382.ro";
-connectAttr "place2dTexture85.n" "file382.n";
-connectAttr "place2dTexture85.vt1" "file382.vt1";
-connectAttr "place2dTexture85.vt2" "file382.vt2";
-connectAttr "place2dTexture85.vt3" "file382.vt3";
-connectAttr "place2dTexture85.vc1" "file382.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file384.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file384.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file384.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file384.ws";
-connectAttr "place2dTexture85.o" "file384.uv";
-connectAttr "place2dTexture85.ofs" "file384.fs";
-connectAttr "place2dTexture85.c" "file384.c";
-connectAttr "place2dTexture85.tf" "file384.tf";
-connectAttr "place2dTexture85.rf" "file384.rf";
-connectAttr "place2dTexture85.mu" "file384.mu";
-connectAttr "place2dTexture85.mv" "file384.mv";
-connectAttr "place2dTexture85.s" "file384.s";
-connectAttr "place2dTexture85.wu" "file384.wu";
-connectAttr "place2dTexture85.wv" "file384.wv";
-connectAttr "place2dTexture85.re" "file384.re";
-connectAttr "place2dTexture85.of" "file384.of";
-connectAttr "place2dTexture85.r" "file384.ro";
-connectAttr "place2dTexture85.n" "file384.n";
-connectAttr "place2dTexture85.vt1" "file384.vt1";
-connectAttr "place2dTexture85.vt2" "file384.vt2";
-connectAttr "place2dTexture85.vt3" "file384.vt3";
-connectAttr "place2dTexture85.vc1" "file384.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file385.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file385.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file385.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file385.ws";
-connectAttr "place2dTexture85.o" "file385.uv";
-connectAttr "place2dTexture85.ofs" "file385.fs";
-connectAttr "place2dTexture85.c" "file385.c";
-connectAttr "place2dTexture85.tf" "file385.tf";
-connectAttr "place2dTexture85.rf" "file385.rf";
-connectAttr "place2dTexture85.mu" "file385.mu";
-connectAttr "place2dTexture85.mv" "file385.mv";
-connectAttr "place2dTexture85.s" "file385.s";
-connectAttr "place2dTexture85.wu" "file385.wu";
-connectAttr "place2dTexture85.wv" "file385.wv";
-connectAttr "place2dTexture85.re" "file385.re";
-connectAttr "place2dTexture85.of" "file385.of";
-connectAttr "place2dTexture85.r" "file385.ro";
-connectAttr "place2dTexture85.n" "file385.n";
-connectAttr "place2dTexture85.vt1" "file385.vt1";
-connectAttr "place2dTexture85.vt2" "file385.vt2";
-connectAttr "place2dTexture85.vt3" "file385.vt3";
-connectAttr "place2dTexture85.vc1" "file385.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file386.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file386.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file386.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file386.ws";
-connectAttr "place2dTexture85.o" "file386.uv";
-connectAttr "place2dTexture85.ofs" "file386.fs";
-connectAttr "place2dTexture85.c" "file386.c";
-connectAttr "place2dTexture85.tf" "file386.tf";
-connectAttr "place2dTexture85.rf" "file386.rf";
-connectAttr "place2dTexture85.mu" "file386.mu";
-connectAttr "place2dTexture85.mv" "file386.mv";
-connectAttr "place2dTexture85.s" "file386.s";
-connectAttr "place2dTexture85.wu" "file386.wu";
-connectAttr "place2dTexture85.wv" "file386.wv";
-connectAttr "place2dTexture85.re" "file386.re";
-connectAttr "place2dTexture85.of" "file386.of";
-connectAttr "place2dTexture85.r" "file386.ro";
-connectAttr "place2dTexture85.n" "file386.n";
-connectAttr "place2dTexture85.vt1" "file386.vt1";
-connectAttr "place2dTexture85.vt2" "file386.vt2";
-connectAttr "place2dTexture85.vt3" "file386.vt3";
-connectAttr "place2dTexture85.vc1" "file386.vc1";
-connectAttr "file382.oc" "multiplyDivide75.i1";
 connectAttr "set75.msg" "materialInfo96.sg";
-connectAttr "file385.oa" "bump2d74.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file387.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file387.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file387.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file387.ws";
-connectAttr "place2dTexture86.o" "file387.uv";
-connectAttr "place2dTexture86.ofs" "file387.fs";
-connectAttr "place2dTexture86.c" "file387.c";
-connectAttr "place2dTexture86.tf" "file387.tf";
-connectAttr "place2dTexture86.rf" "file387.rf";
-connectAttr "place2dTexture86.mu" "file387.mu";
-connectAttr "place2dTexture86.mv" "file387.mv";
-connectAttr "place2dTexture86.s" "file387.s";
-connectAttr "place2dTexture86.wu" "file387.wu";
-connectAttr "place2dTexture86.wv" "file387.wv";
-connectAttr "place2dTexture86.re" "file387.re";
-connectAttr "place2dTexture86.of" "file387.of";
-connectAttr "place2dTexture86.r" "file387.ro";
-connectAttr "place2dTexture86.n" "file387.n";
-connectAttr "place2dTexture86.vt1" "file387.vt1";
-connectAttr "place2dTexture86.vt2" "file387.vt2";
-connectAttr "place2dTexture86.vt3" "file387.vt3";
-connectAttr "place2dTexture86.vc1" "file387.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file389.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file389.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file389.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file389.ws";
-connectAttr "place2dTexture86.o" "file389.uv";
-connectAttr "place2dTexture86.ofs" "file389.fs";
-connectAttr "place2dTexture86.c" "file389.c";
-connectAttr "place2dTexture86.tf" "file389.tf";
-connectAttr "place2dTexture86.rf" "file389.rf";
-connectAttr "place2dTexture86.mu" "file389.mu";
-connectAttr "place2dTexture86.mv" "file389.mv";
-connectAttr "place2dTexture86.s" "file389.s";
-connectAttr "place2dTexture86.wu" "file389.wu";
-connectAttr "place2dTexture86.wv" "file389.wv";
-connectAttr "place2dTexture86.re" "file389.re";
-connectAttr "place2dTexture86.of" "file389.of";
-connectAttr "place2dTexture86.r" "file389.ro";
-connectAttr "place2dTexture86.n" "file389.n";
-connectAttr "place2dTexture86.vt1" "file389.vt1";
-connectAttr "place2dTexture86.vt2" "file389.vt2";
-connectAttr "place2dTexture86.vt3" "file389.vt3";
-connectAttr "place2dTexture86.vc1" "file389.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file390.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file390.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file390.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file390.ws";
-connectAttr "place2dTexture86.o" "file390.uv";
-connectAttr "place2dTexture86.ofs" "file390.fs";
-connectAttr "place2dTexture86.c" "file390.c";
-connectAttr "place2dTexture86.tf" "file390.tf";
-connectAttr "place2dTexture86.rf" "file390.rf";
-connectAttr "place2dTexture86.mu" "file390.mu";
-connectAttr "place2dTexture86.mv" "file390.mv";
-connectAttr "place2dTexture86.s" "file390.s";
-connectAttr "place2dTexture86.wu" "file390.wu";
-connectAttr "place2dTexture86.wv" "file390.wv";
-connectAttr "place2dTexture86.re" "file390.re";
-connectAttr "place2dTexture86.of" "file390.of";
-connectAttr "place2dTexture86.r" "file390.ro";
-connectAttr "place2dTexture86.n" "file390.n";
-connectAttr "place2dTexture86.vt1" "file390.vt1";
-connectAttr "place2dTexture86.vt2" "file390.vt2";
-connectAttr "place2dTexture86.vt3" "file390.vt3";
-connectAttr "place2dTexture86.vc1" "file390.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file391.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file391.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file391.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file391.ws";
-connectAttr "place2dTexture86.o" "file391.uv";
-connectAttr "place2dTexture86.ofs" "file391.fs";
-connectAttr "place2dTexture86.c" "file391.c";
-connectAttr "place2dTexture86.tf" "file391.tf";
-connectAttr "place2dTexture86.rf" "file391.rf";
-connectAttr "place2dTexture86.mu" "file391.mu";
-connectAttr "place2dTexture86.mv" "file391.mv";
-connectAttr "place2dTexture86.s" "file391.s";
-connectAttr "place2dTexture86.wu" "file391.wu";
-connectAttr "place2dTexture86.wv" "file391.wv";
-connectAttr "place2dTexture86.re" "file391.re";
-connectAttr "place2dTexture86.of" "file391.of";
-connectAttr "place2dTexture86.r" "file391.ro";
-connectAttr "place2dTexture86.n" "file391.n";
-connectAttr "place2dTexture86.vt1" "file391.vt1";
-connectAttr "place2dTexture86.vt2" "file391.vt2";
-connectAttr "place2dTexture86.vt3" "file391.vt3";
-connectAttr "place2dTexture86.vc1" "file391.vc1";
-connectAttr "file387.oc" "multiplyDivide76.i1";
 connectAttr "set76.msg" "materialInfo97.sg";
-connectAttr "file390.oa" "Socket_Trim.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file399.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file399.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file399.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file399.ws";
-connectAttr "place2dTexture91.o" "file399.uv";
-connectAttr "place2dTexture91.ofs" "file399.fs";
-connectAttr "place2dTexture91.c" "file399.c";
-connectAttr "place2dTexture91.tf" "file399.tf";
-connectAttr "place2dTexture91.rf" "file399.rf";
-connectAttr "place2dTexture91.mu" "file399.mu";
-connectAttr "place2dTexture91.mv" "file399.mv";
-connectAttr "place2dTexture91.s" "file399.s";
-connectAttr "place2dTexture91.wu" "file399.wu";
-connectAttr "place2dTexture91.wv" "file399.wv";
-connectAttr "place2dTexture91.re" "file399.re";
-connectAttr "place2dTexture91.of" "file399.of";
-connectAttr "place2dTexture91.r" "file399.ro";
-connectAttr "place2dTexture91.n" "file399.n";
-connectAttr "place2dTexture91.vt1" "file399.vt1";
-connectAttr "place2dTexture91.vt2" "file399.vt2";
-connectAttr "place2dTexture91.vt3" "file399.vt3";
-connectAttr "place2dTexture91.vc1" "file399.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file400.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file400.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file400.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file400.ws";
-connectAttr "place2dTexture91.o" "file400.uv";
-connectAttr "place2dTexture91.ofs" "file400.fs";
-connectAttr "place2dTexture91.c" "file400.c";
-connectAttr "place2dTexture91.tf" "file400.tf";
-connectAttr "place2dTexture91.rf" "file400.rf";
-connectAttr "place2dTexture91.mu" "file400.mu";
-connectAttr "place2dTexture91.mv" "file400.mv";
-connectAttr "place2dTexture91.s" "file400.s";
-connectAttr "place2dTexture91.wu" "file400.wu";
-connectAttr "place2dTexture91.wv" "file400.wv";
-connectAttr "place2dTexture91.re" "file400.re";
-connectAttr "place2dTexture91.of" "file400.of";
-connectAttr "place2dTexture91.r" "file400.ro";
-connectAttr "place2dTexture91.n" "file400.n";
-connectAttr "place2dTexture91.vt1" "file400.vt1";
-connectAttr "place2dTexture91.vt2" "file400.vt2";
-connectAttr "place2dTexture91.vt3" "file400.vt3";
-connectAttr "place2dTexture91.vc1" "file400.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file402.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file402.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file402.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file402.ws";
-connectAttr "place2dTexture91.o" "file402.uv";
-connectAttr "place2dTexture91.ofs" "file402.fs";
-connectAttr "place2dTexture91.c" "file402.c";
-connectAttr "place2dTexture91.tf" "file402.tf";
-connectAttr "place2dTexture91.rf" "file402.rf";
-connectAttr "place2dTexture91.mu" "file402.mu";
-connectAttr "place2dTexture91.mv" "file402.mv";
-connectAttr "place2dTexture91.s" "file402.s";
-connectAttr "place2dTexture91.wu" "file402.wu";
-connectAttr "place2dTexture91.wv" "file402.wv";
-connectAttr "place2dTexture91.re" "file402.re";
-connectAttr "place2dTexture91.of" "file402.of";
-connectAttr "place2dTexture91.r" "file402.ro";
-connectAttr "place2dTexture91.n" "file402.n";
-connectAttr "place2dTexture91.vt1" "file402.vt1";
-connectAttr "place2dTexture91.vt2" "file402.vt2";
-connectAttr "place2dTexture91.vt3" "file402.vt3";
-connectAttr "place2dTexture91.vc1" "file402.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file403.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file403.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file403.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file403.ws";
-connectAttr "place2dTexture91.o" "file403.uv";
-connectAttr "place2dTexture91.ofs" "file403.fs";
-connectAttr "place2dTexture91.c" "file403.c";
-connectAttr "place2dTexture91.tf" "file403.tf";
-connectAttr "place2dTexture91.rf" "file403.rf";
-connectAttr "place2dTexture91.mu" "file403.mu";
-connectAttr "place2dTexture91.mv" "file403.mv";
-connectAttr "place2dTexture91.s" "file403.s";
-connectAttr "place2dTexture91.wu" "file403.wu";
-connectAttr "place2dTexture91.wv" "file403.wv";
-connectAttr "place2dTexture91.re" "file403.re";
-connectAttr "place2dTexture91.of" "file403.of";
-connectAttr "place2dTexture91.r" "file403.ro";
-connectAttr "place2dTexture91.n" "file403.n";
-connectAttr "place2dTexture91.vt1" "file403.vt1";
-connectAttr "place2dTexture91.vt2" "file403.vt2";
-connectAttr "place2dTexture91.vt3" "file403.vt3";
-connectAttr "place2dTexture91.vc1" "file403.vc1";
 connectAttr "set78.msg" "materialInfo107.sg";
-connectAttr "file400.oa" "bump2d76.bv";
-connectAttr "file403.oc" "multiplyDivide77.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file404.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file404.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file404.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file404.ws";
-connectAttr "place2dTexture92.o" "file404.uv";
-connectAttr "place2dTexture92.ofs" "file404.fs";
-connectAttr "place2dTexture92.c" "file404.c";
-connectAttr "place2dTexture92.tf" "file404.tf";
-connectAttr "place2dTexture92.rf" "file404.rf";
-connectAttr "place2dTexture92.mu" "file404.mu";
-connectAttr "place2dTexture92.mv" "file404.mv";
-connectAttr "place2dTexture92.s" "file404.s";
-connectAttr "place2dTexture92.wu" "file404.wu";
-connectAttr "place2dTexture92.wv" "file404.wv";
-connectAttr "place2dTexture92.re" "file404.re";
-connectAttr "place2dTexture92.of" "file404.of";
-connectAttr "place2dTexture92.r" "file404.ro";
-connectAttr "place2dTexture92.n" "file404.n";
-connectAttr "place2dTexture92.vt1" "file404.vt1";
-connectAttr "place2dTexture92.vt2" "file404.vt2";
-connectAttr "place2dTexture92.vt3" "file404.vt3";
-connectAttr "place2dTexture92.vc1" "file404.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file406.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file406.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file406.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file406.ws";
-connectAttr "place2dTexture92.o" "file406.uv";
-connectAttr "place2dTexture92.ofs" "file406.fs";
-connectAttr "place2dTexture92.c" "file406.c";
-connectAttr "place2dTexture92.tf" "file406.tf";
-connectAttr "place2dTexture92.rf" "file406.rf";
-connectAttr "place2dTexture92.mu" "file406.mu";
-connectAttr "place2dTexture92.mv" "file406.mv";
-connectAttr "place2dTexture92.s" "file406.s";
-connectAttr "place2dTexture92.wu" "file406.wu";
-connectAttr "place2dTexture92.wv" "file406.wv";
-connectAttr "place2dTexture92.re" "file406.re";
-connectAttr "place2dTexture92.of" "file406.of";
-connectAttr "place2dTexture92.r" "file406.ro";
-connectAttr "place2dTexture92.n" "file406.n";
-connectAttr "place2dTexture92.vt1" "file406.vt1";
-connectAttr "place2dTexture92.vt2" "file406.vt2";
-connectAttr "place2dTexture92.vt3" "file406.vt3";
-connectAttr "place2dTexture92.vc1" "file406.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file407.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file407.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file407.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file407.ws";
-connectAttr "place2dTexture92.o" "file407.uv";
-connectAttr "place2dTexture92.ofs" "file407.fs";
-connectAttr "place2dTexture92.c" "file407.c";
-connectAttr "place2dTexture92.tf" "file407.tf";
-connectAttr "place2dTexture92.rf" "file407.rf";
-connectAttr "place2dTexture92.mu" "file407.mu";
-connectAttr "place2dTexture92.mv" "file407.mv";
-connectAttr "place2dTexture92.s" "file407.s";
-connectAttr "place2dTexture92.wu" "file407.wu";
-connectAttr "place2dTexture92.wv" "file407.wv";
-connectAttr "place2dTexture92.re" "file407.re";
-connectAttr "place2dTexture92.of" "file407.of";
-connectAttr "place2dTexture92.r" "file407.ro";
-connectAttr "place2dTexture92.n" "file407.n";
-connectAttr "place2dTexture92.vt1" "file407.vt1";
-connectAttr "place2dTexture92.vt2" "file407.vt2";
-connectAttr "place2dTexture92.vt3" "file407.vt3";
-connectAttr "place2dTexture92.vc1" "file407.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file408.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file408.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file408.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file408.ws";
-connectAttr "place2dTexture92.o" "file408.uv";
-connectAttr "place2dTexture92.ofs" "file408.fs";
-connectAttr "place2dTexture92.c" "file408.c";
-connectAttr "place2dTexture92.tf" "file408.tf";
-connectAttr "place2dTexture92.rf" "file408.rf";
-connectAttr "place2dTexture92.mu" "file408.mu";
-connectAttr "place2dTexture92.mv" "file408.mv";
-connectAttr "place2dTexture92.s" "file408.s";
-connectAttr "place2dTexture92.wu" "file408.wu";
-connectAttr "place2dTexture92.wv" "file408.wv";
-connectAttr "place2dTexture92.re" "file408.re";
-connectAttr "place2dTexture92.of" "file408.of";
-connectAttr "place2dTexture92.r" "file408.ro";
-connectAttr "place2dTexture92.n" "file408.n";
-connectAttr "place2dTexture92.vt1" "file408.vt1";
-connectAttr "place2dTexture92.vt2" "file408.vt2";
-connectAttr "place2dTexture92.vt3" "file408.vt3";
-connectAttr "place2dTexture92.vc1" "file408.vc1";
 connectAttr "set79.msg" "materialInfo110.sg";
-connectAttr "file407.oa" "bump2d77.bv";
-connectAttr "file408.oc" "multiplyDivide78.i1";
 connectAttr "multiplyDivide6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
 connectAttr "place2dTexture5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
 connectAttr "multiplyDivide5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "file29.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
-connectAttr "file31.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
-		;
-connectAttr "file33.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
-		;
-connectAttr "file34.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
-		;
 connectAttr "bump2d7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[15].dn"
-		;
-connectAttr "file23.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
 		;
 connectAttr "set6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
 		;
-connectAttr "file25.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
-		;
-connectAttr "file26.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
-		;
-connectAttr "file35.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[29].dn"
-		;
 connectAttr "bump2d6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[31].dn"
 		;
-connectAttr "file24.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[32].dn"
-		;
 connectAttr "place2dTexture6.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[36].dn"
-		;
-connectAttr "file30.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[39].dn"
 		;
 connectAttr "bump2d5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[40].dn"
 		;
 connectAttr "set7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[41].dn"
 		;
-connectAttr "file28.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[46].dn"
-		;
 connectAttr "set5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[47].dn"
-		;
-connectAttr "file21.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[49].dn"
 		;
 connectAttr "place2dTexture7.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[50].dn"
 		;
@@ -41642,25 +38094,11 @@ connectAttr "place2dTexture16.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi
 		;
 connectAttr "bump2d14.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[5].dn"
 		;
-connectAttr "file44.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[6].dn"
-		;
-connectAttr "file96.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[7].dn"
-		;
 connectAttr "place2dTexture12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[8].dn"
-		;
-connectAttr "file88.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[10].dn"
 		;
 connectAttr "place2dTexture20.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[11].dn"
 		;
 connectAttr "bump2d17.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[14].dn"
-		;
-connectAttr "file99.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[16].dn"
-		;
-connectAttr "file90.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[19].dn"
-		;
-connectAttr "file68.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[22].dn"
-		;
-connectAttr "file46.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[23].dn"
 		;
 connectAttr "place2dTexture17.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[24].dn"
 		;
@@ -41668,13 +38106,7 @@ connectAttr "set16.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[26].
 		;
 connectAttr "set18.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[28].dn"
 		;
-connectAttr "file69.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[31].dn"
-		;
-connectAttr "file57.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[32].dn"
-		;
 connectAttr "multiplyDivide9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[35].dn"
-		;
-connectAttr "file56.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[37].dn"
 		;
 connectAttr "bump2d16.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[38].dn"
 		;
@@ -41684,41 +38116,15 @@ connectAttr "place2dTexture9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[
 		;
 connectAttr "set9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[46].dn"
 		;
-connectAttr "file67.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[47].dn"
-		;
-connectAttr "file78.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[52].dn"
-		;
 connectAttr "set20.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[53].dn"
 		;
 connectAttr "set12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[54].dn"
 		;
-connectAttr "file84.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[57].dn"
-		;
 connectAttr "multiplyDivide14.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[58].dn"
-		;
-connectAttr "file100.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[60].dn"
-		;
-connectAttr "file43.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[62].dn"
-		;
-connectAttr "file76.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[64].dn"
-		;
-connectAttr "file50.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[65].dn"
 		;
 connectAttr "bump2d9.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[68].dn"
 		;
-connectAttr "file60.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[70].dn"
-		;
-connectAttr "file83.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[75].dn"
-		;
-connectAttr "file48.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[78].dn"
-		;
-connectAttr "file85.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[79].dn"
-		;
-connectAttr "file58.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[80].dn"
-		;
 connectAttr "multiplyDivide10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[86].dn"
-		;
-connectAttr "file79.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[89].dn"
 		;
 connectAttr "bump2d12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[91].dn"
 		;
@@ -41726,11 +38132,7 @@ connectAttr "multiplyDivide12.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi
 		;
 connectAttr "multiplyDivide17.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[94].dn"
 		;
-connectAttr "file81.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[95].dn"
-		;
 connectAttr "set17.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[96].dn"
-		;
-connectAttr "file97.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[100].dn"
 		;
 connectAttr "place2dTexture18.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[101].dn"
 		;
@@ -41738,25 +38140,11 @@ connectAttr "bump2d20.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[1
 		;
 connectAttr "place2dTexture14.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[105].dn"
 		;
-connectAttr "file41.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[110].dn"
-		;
-connectAttr "file86.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[113].dn"
-		;
-connectAttr "file45.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[118].dn"
-		;
 connectAttr "bump2d10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[122].dn"
-		;
-connectAttr "file80.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[124].dn"
-		;
-connectAttr "file66.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[125].dn"
 		;
 connectAttr "set10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[126].dn"
 		;
 connectAttr "place2dTexture10.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[127].dn"
-		;
-connectAttr "file89.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[128].dn"
-		;
-connectAttr "file49.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[133].dn"
 		;
 connectAttr "multiplyDivide18.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[135].dn"
 		;
@@ -41764,23 +38152,11 @@ connectAttr "bump2d18.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[1].ni[1
 		;
 connectAttr "place2dTexture40.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[0].dn"
 		;
-connectAttr "file200.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[1].dn"
-		;
-connectAttr "file180.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[3].dn"
-		;
 connectAttr "place2dTexture38.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[4].dn"
 		;
 connectAttr "set38.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[7].dn"
 		;
 connectAttr "bump2d38.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[12].dn"
-		;
-connectAttr "file196.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[13].dn"
-		;
-connectAttr "file204.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[17].dn"
-		;
-connectAttr "file202.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[19].dn"
-		;
-connectAttr "file184.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[27].dn"
 		;
 connectAttr "bump2d35.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[32].dn"
 		;
@@ -41790,41 +38166,15 @@ connectAttr "multiplyDivide41.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi
 		;
 connectAttr "set41.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[42].dn"
 		;
-connectAttr "file192.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[43].dn"
-		;
-connectAttr "file190.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[44].dn"
-		;
-connectAttr "file179.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[49].dn"
-		;
-connectAttr "file181.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[50].dn"
-		;
-connectAttr "file199.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[51].dn"
-		;
-connectAttr "file197.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[52].dn"
-		;
 connectAttr "multiplyDivide38.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[54].dn"
-		;
-connectAttr "file207.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[57].dn"
 		;
 connectAttr "set40.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[63].dn"
 		;
-connectAttr "file194.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[65].dn"
-		;
 connectAttr "bump2d40.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[66].dn"
-		;
-connectAttr "file205.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[74].dn"
 		;
 connectAttr "bump2d37.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[75].dn"
 		;
-connectAttr "file177.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[77].dn"
-		;
 connectAttr "place2dTexture42.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[78].dn"
-		;
-connectAttr "file209.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[79].dn"
-		;
-connectAttr "file186.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[80].dn"
-		;
-connectAttr "file211.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[87].dn"
 		;
 connectAttr "multiplyDivide42.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[90].dn"
 		;
@@ -41840,29 +38190,13 @@ connectAttr "place2dTexture39.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi
 		;
 connectAttr "set42.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[114].dn"
 		;
-connectAttr "file210.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[117].dn"
-		;
 connectAttr "place2dTexture37.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[124].dn"
-		;
-connectAttr "file193.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[125].dn"
-		;
-connectAttr "file185.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[129].dn"
 		;
 connectAttr "bump2d41.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[136].dn"
 		;
-connectAttr "file206.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[139].dn"
-		;
-connectAttr "file201.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[143].dn"
-		;
 connectAttr "bump2d36.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[144].dn"
 		;
-connectAttr "file191.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[146].dn"
-		;
-connectAttr "file182.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[148].dn"
-		;
 connectAttr "set37.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[157].dn"
-		;
-connectAttr "file187.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[158].dn"
 		;
 connectAttr "multiplyDivide40.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[160].dn"
 		;
@@ -41870,13 +38204,9 @@ connectAttr "set36.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[162]
 		;
 connectAttr "multiplyDivide39.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[163].dn"
 		;
-connectAttr "file189.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[165].dn"
-		;
 connectAttr "set39.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[2].ni[166].dn"
 		;
 connectAttr "place2dTexture83.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[0].dn"
-		;
-connectAttr "file382.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[1].dn"
 		;
 connectAttr "multiplyDivide76.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[2].dn"
 		;
@@ -41884,43 +38214,19 @@ connectAttr "set74.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[4].d
 		;
 connectAttr "place2dTexture84.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[5].dn"
 		;
-connectAttr "file387.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[6].dn"
-		;
 connectAttr "set76.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[7].dn"
-		;
-connectAttr "file377.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[9].dn"
-		;
-connectAttr "file372.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[10].dn"
-		;
-connectAttr "file384.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[12].dn"
 		;
 connectAttr "place2dTexture91.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[13].dn"
 		;
-connectAttr "file402.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[14].dn"
-		;
-connectAttr "file385.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[17].dn"
-		;
 connectAttr "multiplyDivide77.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[19].dn"
 		;
-connectAttr "file390.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[22].dn"
-		;
-connectAttr "file391.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[25].dn"
-		;
 connectAttr "bump2d74.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[26].dn"
-		;
-connectAttr "file380.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[30].dn"
 		;
 connectAttr "multiplyDivide75.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[33].dn"
 		;
 connectAttr "bump2d72.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[34].dn"
 		;
-connectAttr "file374.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[39].dn"
-		;
-connectAttr "file399.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[40].dn"
-		;
 connectAttr "Socket_Trim.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[41].dn"
-		;
-connectAttr "file379.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[43].dn"
 		;
 connectAttr "bump2d73.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[44].dn"
 		;
@@ -41930,17 +38236,7 @@ connectAttr "set75.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[50].
 		;
 connectAttr "set78.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[51].dn"
 		;
-connectAttr "file375.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[52].dn"
-		;
 connectAttr "place2dTexture86.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[53].dn"
-		;
-connectAttr "file400.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[54].dn"
-		;
-connectAttr "file386.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[55].dn"
-		;
-connectAttr "file403.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[59].dn"
-		;
-connectAttr "file376.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[60].dn"
 		;
 connectAttr "set73.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[61].dn"
 		;
@@ -41948,970 +38244,36 @@ connectAttr "multiplyDivide74.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi
 		;
 connectAttr "place2dTexture85.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[64].dn"
 		;
-connectAttr "file381.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[65].dn"
-		;
 connectAttr "bump2d76.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[66].dn"
-		;
-connectAttr "file389.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[8].ni[67].dn"
 		;
 connectAttr "place2dTexture92.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[9].ni[0].dn"
 		;
-connectAttr "file407.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[9].ni[2].dn"
-		;
 connectAttr "multiplyDivide78.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[9].ni[3].dn"
-		;
-connectAttr "file406.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[9].ni[5].dn"
-		;
-connectAttr "file404.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[9].ni[6].dn"
 		;
 connectAttr "set79.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[9].ni[7].dn"
 		;
 connectAttr "bump2d77.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[9].ni[9].dn"
 		;
-connectAttr "file408.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[9].ni[10].dn"
-		;
-connectAttr ":defaultColorMgtGlobals.cme" "file1794.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1794.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1794.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1794.ws";
-connectAttr "place2dTexture405.o" "file1794.uv";
-connectAttr "place2dTexture405.ofs" "file1794.fs";
-connectAttr "place2dTexture405.c" "file1794.c";
-connectAttr "place2dTexture405.tf" "file1794.tf";
-connectAttr "place2dTexture405.rf" "file1794.rf";
-connectAttr "place2dTexture405.mu" "file1794.mu";
-connectAttr "place2dTexture405.mv" "file1794.mv";
-connectAttr "place2dTexture405.s" "file1794.s";
-connectAttr "place2dTexture405.wu" "file1794.wu";
-connectAttr "place2dTexture405.wv" "file1794.wv";
-connectAttr "place2dTexture405.re" "file1794.re";
-connectAttr "place2dTexture405.of" "file1794.of";
-connectAttr "place2dTexture405.r" "file1794.ro";
-connectAttr "place2dTexture405.n" "file1794.n";
-connectAttr "place2dTexture405.vt1" "file1794.vt1";
-connectAttr "place2dTexture405.vt2" "file1794.vt2";
-connectAttr "place2dTexture405.vt3" "file1794.vt3";
-connectAttr "place2dTexture405.vc1" "file1794.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1796.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1796.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1796.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1796.ws";
-connectAttr "place2dTexture405.o" "file1796.uv";
-connectAttr "place2dTexture405.ofs" "file1796.fs";
-connectAttr "place2dTexture405.c" "file1796.c";
-connectAttr "place2dTexture405.tf" "file1796.tf";
-connectAttr "place2dTexture405.rf" "file1796.rf";
-connectAttr "place2dTexture405.mu" "file1796.mu";
-connectAttr "place2dTexture405.mv" "file1796.mv";
-connectAttr "place2dTexture405.s" "file1796.s";
-connectAttr "place2dTexture405.wu" "file1796.wu";
-connectAttr "place2dTexture405.wv" "file1796.wv";
-connectAttr "place2dTexture405.re" "file1796.re";
-connectAttr "place2dTexture405.of" "file1796.of";
-connectAttr "place2dTexture405.r" "file1796.ro";
-connectAttr "place2dTexture405.n" "file1796.n";
-connectAttr "place2dTexture405.vt1" "file1796.vt1";
-connectAttr "place2dTexture405.vt2" "file1796.vt2";
-connectAttr "place2dTexture405.vt3" "file1796.vt3";
-connectAttr "place2dTexture405.vc1" "file1796.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1797.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1797.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1797.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1797.ws";
-connectAttr "place2dTexture405.o" "file1797.uv";
-connectAttr "place2dTexture405.ofs" "file1797.fs";
-connectAttr "place2dTexture405.c" "file1797.c";
-connectAttr "place2dTexture405.tf" "file1797.tf";
-connectAttr "place2dTexture405.rf" "file1797.rf";
-connectAttr "place2dTexture405.mu" "file1797.mu";
-connectAttr "place2dTexture405.mv" "file1797.mv";
-connectAttr "place2dTexture405.s" "file1797.s";
-connectAttr "place2dTexture405.wu" "file1797.wu";
-connectAttr "place2dTexture405.wv" "file1797.wv";
-connectAttr "place2dTexture405.re" "file1797.re";
-connectAttr "place2dTexture405.of" "file1797.of";
-connectAttr "place2dTexture405.r" "file1797.ro";
-connectAttr "place2dTexture405.n" "file1797.n";
-connectAttr "place2dTexture405.vt1" "file1797.vt1";
-connectAttr "place2dTexture405.vt2" "file1797.vt2";
-connectAttr "place2dTexture405.vt3" "file1797.vt3";
-connectAttr "place2dTexture405.vc1" "file1797.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1798.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1798.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1798.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1798.ws";
-connectAttr "place2dTexture405.o" "file1798.uv";
-connectAttr "place2dTexture405.ofs" "file1798.fs";
-connectAttr "place2dTexture405.c" "file1798.c";
-connectAttr "place2dTexture405.tf" "file1798.tf";
-connectAttr "place2dTexture405.rf" "file1798.rf";
-connectAttr "place2dTexture405.mu" "file1798.mu";
-connectAttr "place2dTexture405.mv" "file1798.mv";
-connectAttr "place2dTexture405.s" "file1798.s";
-connectAttr "place2dTexture405.wu" "file1798.wu";
-connectAttr "place2dTexture405.wv" "file1798.wv";
-connectAttr "place2dTexture405.re" "file1798.re";
-connectAttr "place2dTexture405.of" "file1798.of";
-connectAttr "place2dTexture405.r" "file1798.ro";
-connectAttr "place2dTexture405.n" "file1798.n";
-connectAttr "place2dTexture405.vt1" "file1798.vt1";
-connectAttr "place2dTexture405.vt2" "file1798.vt2";
-connectAttr "place2dTexture405.vt3" "file1798.vt3";
-connectAttr "place2dTexture405.vc1" "file1798.vc1";
-connectAttr "file1794.oc" "multiplyDivide344.i1";
 connectAttr "set348.msg" "materialInfo500.sg";
-connectAttr "file1797.oa" "bump2d339.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file1804.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1804.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1804.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1804.ws";
-connectAttr "place2dTexture407.o" "file1804.uv";
-connectAttr "place2dTexture407.ofs" "file1804.fs";
-connectAttr "place2dTexture407.c" "file1804.c";
-connectAttr "place2dTexture407.tf" "file1804.tf";
-connectAttr "place2dTexture407.rf" "file1804.rf";
-connectAttr "place2dTexture407.mu" "file1804.mu";
-connectAttr "place2dTexture407.mv" "file1804.mv";
-connectAttr "place2dTexture407.s" "file1804.s";
-connectAttr "place2dTexture407.wu" "file1804.wu";
-connectAttr "place2dTexture407.wv" "file1804.wv";
-connectAttr "place2dTexture407.re" "file1804.re";
-connectAttr "place2dTexture407.of" "file1804.of";
-connectAttr "place2dTexture407.r" "file1804.ro";
-connectAttr "place2dTexture407.n" "file1804.n";
-connectAttr "place2dTexture407.vt1" "file1804.vt1";
-connectAttr "place2dTexture407.vt2" "file1804.vt2";
-connectAttr "place2dTexture407.vt3" "file1804.vt3";
-connectAttr "place2dTexture407.vc1" "file1804.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1806.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1806.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1806.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1806.ws";
-connectAttr "place2dTexture407.o" "file1806.uv";
-connectAttr "place2dTexture407.ofs" "file1806.fs";
-connectAttr "place2dTexture407.c" "file1806.c";
-connectAttr "place2dTexture407.tf" "file1806.tf";
-connectAttr "place2dTexture407.rf" "file1806.rf";
-connectAttr "place2dTexture407.mu" "file1806.mu";
-connectAttr "place2dTexture407.mv" "file1806.mv";
-connectAttr "place2dTexture407.s" "file1806.s";
-connectAttr "place2dTexture407.wu" "file1806.wu";
-connectAttr "place2dTexture407.wv" "file1806.wv";
-connectAttr "place2dTexture407.re" "file1806.re";
-connectAttr "place2dTexture407.of" "file1806.of";
-connectAttr "place2dTexture407.r" "file1806.ro";
-connectAttr "place2dTexture407.n" "file1806.n";
-connectAttr "place2dTexture407.vt1" "file1806.vt1";
-connectAttr "place2dTexture407.vt2" "file1806.vt2";
-connectAttr "place2dTexture407.vt3" "file1806.vt3";
-connectAttr "place2dTexture407.vc1" "file1806.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1807.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1807.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1807.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1807.ws";
-connectAttr "place2dTexture407.o" "file1807.uv";
-connectAttr "place2dTexture407.ofs" "file1807.fs";
-connectAttr "place2dTexture407.c" "file1807.c";
-connectAttr "place2dTexture407.tf" "file1807.tf";
-connectAttr "place2dTexture407.rf" "file1807.rf";
-connectAttr "place2dTexture407.mu" "file1807.mu";
-connectAttr "place2dTexture407.mv" "file1807.mv";
-connectAttr "place2dTexture407.s" "file1807.s";
-connectAttr "place2dTexture407.wu" "file1807.wu";
-connectAttr "place2dTexture407.wv" "file1807.wv";
-connectAttr "place2dTexture407.re" "file1807.re";
-connectAttr "place2dTexture407.of" "file1807.of";
-connectAttr "place2dTexture407.r" "file1807.ro";
-connectAttr "place2dTexture407.n" "file1807.n";
-connectAttr "place2dTexture407.vt1" "file1807.vt1";
-connectAttr "place2dTexture407.vt2" "file1807.vt2";
-connectAttr "place2dTexture407.vt3" "file1807.vt3";
-connectAttr "place2dTexture407.vc1" "file1807.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1808.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1808.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1808.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1808.ws";
-connectAttr "place2dTexture407.o" "file1808.uv";
-connectAttr "place2dTexture407.ofs" "file1808.fs";
-connectAttr "place2dTexture407.c" "file1808.c";
-connectAttr "place2dTexture407.tf" "file1808.tf";
-connectAttr "place2dTexture407.rf" "file1808.rf";
-connectAttr "place2dTexture407.mu" "file1808.mu";
-connectAttr "place2dTexture407.mv" "file1808.mv";
-connectAttr "place2dTexture407.s" "file1808.s";
-connectAttr "place2dTexture407.wu" "file1808.wu";
-connectAttr "place2dTexture407.wv" "file1808.wv";
-connectAttr "place2dTexture407.re" "file1808.re";
-connectAttr "place2dTexture407.of" "file1808.of";
-connectAttr "place2dTexture407.r" "file1808.ro";
-connectAttr "place2dTexture407.n" "file1808.n";
-connectAttr "place2dTexture407.vt1" "file1808.vt1";
-connectAttr "place2dTexture407.vt2" "file1808.vt2";
-connectAttr "place2dTexture407.vt3" "file1808.vt3";
-connectAttr "place2dTexture407.vc1" "file1808.vc1";
-connectAttr "file1804.oc" "multiplyDivide346.i1";
 connectAttr "set350.msg" "materialInfo502.sg";
-connectAttr "file1807.oa" "bump2d341.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file1809.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1809.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1809.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1809.ws";
-connectAttr "place2dTexture408.o" "file1809.uv";
-connectAttr "place2dTexture408.ofs" "file1809.fs";
-connectAttr "place2dTexture408.c" "file1809.c";
-connectAttr "place2dTexture408.tf" "file1809.tf";
-connectAttr "place2dTexture408.rf" "file1809.rf";
-connectAttr "place2dTexture408.mu" "file1809.mu";
-connectAttr "place2dTexture408.mv" "file1809.mv";
-connectAttr "place2dTexture408.s" "file1809.s";
-connectAttr "place2dTexture408.wu" "file1809.wu";
-connectAttr "place2dTexture408.wv" "file1809.wv";
-connectAttr "place2dTexture408.re" "file1809.re";
-connectAttr "place2dTexture408.of" "file1809.of";
-connectAttr "place2dTexture408.r" "file1809.ro";
-connectAttr "place2dTexture408.n" "file1809.n";
-connectAttr "place2dTexture408.vt1" "file1809.vt1";
-connectAttr "place2dTexture408.vt2" "file1809.vt2";
-connectAttr "place2dTexture408.vt3" "file1809.vt3";
-connectAttr "place2dTexture408.vc1" "file1809.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1811.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1811.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1811.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1811.ws";
-connectAttr "place2dTexture408.o" "file1811.uv";
-connectAttr "place2dTexture408.ofs" "file1811.fs";
-connectAttr "place2dTexture408.c" "file1811.c";
-connectAttr "place2dTexture408.tf" "file1811.tf";
-connectAttr "place2dTexture408.rf" "file1811.rf";
-connectAttr "place2dTexture408.mu" "file1811.mu";
-connectAttr "place2dTexture408.mv" "file1811.mv";
-connectAttr "place2dTexture408.s" "file1811.s";
-connectAttr "place2dTexture408.wu" "file1811.wu";
-connectAttr "place2dTexture408.wv" "file1811.wv";
-connectAttr "place2dTexture408.re" "file1811.re";
-connectAttr "place2dTexture408.of" "file1811.of";
-connectAttr "place2dTexture408.r" "file1811.ro";
-connectAttr "place2dTexture408.n" "file1811.n";
-connectAttr "place2dTexture408.vt1" "file1811.vt1";
-connectAttr "place2dTexture408.vt2" "file1811.vt2";
-connectAttr "place2dTexture408.vt3" "file1811.vt3";
-connectAttr "place2dTexture408.vc1" "file1811.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1812.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1812.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1812.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1812.ws";
-connectAttr "place2dTexture408.o" "file1812.uv";
-connectAttr "place2dTexture408.ofs" "file1812.fs";
-connectAttr "place2dTexture408.c" "file1812.c";
-connectAttr "place2dTexture408.tf" "file1812.tf";
-connectAttr "place2dTexture408.rf" "file1812.rf";
-connectAttr "place2dTexture408.mu" "file1812.mu";
-connectAttr "place2dTexture408.mv" "file1812.mv";
-connectAttr "place2dTexture408.s" "file1812.s";
-connectAttr "place2dTexture408.wu" "file1812.wu";
-connectAttr "place2dTexture408.wv" "file1812.wv";
-connectAttr "place2dTexture408.re" "file1812.re";
-connectAttr "place2dTexture408.of" "file1812.of";
-connectAttr "place2dTexture408.r" "file1812.ro";
-connectAttr "place2dTexture408.n" "file1812.n";
-connectAttr "place2dTexture408.vt1" "file1812.vt1";
-connectAttr "place2dTexture408.vt2" "file1812.vt2";
-connectAttr "place2dTexture408.vt3" "file1812.vt3";
-connectAttr "place2dTexture408.vc1" "file1812.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1813.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1813.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1813.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1813.ws";
-connectAttr "place2dTexture408.o" "file1813.uv";
-connectAttr "place2dTexture408.ofs" "file1813.fs";
-connectAttr "place2dTexture408.c" "file1813.c";
-connectAttr "place2dTexture408.tf" "file1813.tf";
-connectAttr "place2dTexture408.rf" "file1813.rf";
-connectAttr "place2dTexture408.mu" "file1813.mu";
-connectAttr "place2dTexture408.mv" "file1813.mv";
-connectAttr "place2dTexture408.s" "file1813.s";
-connectAttr "place2dTexture408.wu" "file1813.wu";
-connectAttr "place2dTexture408.wv" "file1813.wv";
-connectAttr "place2dTexture408.re" "file1813.re";
-connectAttr "place2dTexture408.of" "file1813.of";
-connectAttr "place2dTexture408.r" "file1813.ro";
-connectAttr "place2dTexture408.n" "file1813.n";
-connectAttr "place2dTexture408.vt1" "file1813.vt1";
-connectAttr "place2dTexture408.vt2" "file1813.vt2";
-connectAttr "place2dTexture408.vt3" "file1813.vt3";
-connectAttr "place2dTexture408.vc1" "file1813.vc1";
-connectAttr "file1809.oc" "multiplyDivide347.i1";
 connectAttr "set351.msg" "materialInfo503.sg";
-connectAttr "file1812.oa" "bump2d342.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file1814.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1814.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1814.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1814.ws";
-connectAttr "place2dTexture409.o" "file1814.uv";
-connectAttr "place2dTexture409.ofs" "file1814.fs";
-connectAttr "place2dTexture409.c" "file1814.c";
-connectAttr "place2dTexture409.tf" "file1814.tf";
-connectAttr "place2dTexture409.rf" "file1814.rf";
-connectAttr "place2dTexture409.mu" "file1814.mu";
-connectAttr "place2dTexture409.mv" "file1814.mv";
-connectAttr "place2dTexture409.s" "file1814.s";
-connectAttr "place2dTexture409.wu" "file1814.wu";
-connectAttr "place2dTexture409.wv" "file1814.wv";
-connectAttr "place2dTexture409.re" "file1814.re";
-connectAttr "place2dTexture409.of" "file1814.of";
-connectAttr "place2dTexture409.r" "file1814.ro";
-connectAttr "place2dTexture409.n" "file1814.n";
-connectAttr "place2dTexture409.vt1" "file1814.vt1";
-connectAttr "place2dTexture409.vt2" "file1814.vt2";
-connectAttr "place2dTexture409.vt3" "file1814.vt3";
-connectAttr "place2dTexture409.vc1" "file1814.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1816.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1816.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1816.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1816.ws";
-connectAttr "place2dTexture409.o" "file1816.uv";
-connectAttr "place2dTexture409.ofs" "file1816.fs";
-connectAttr "place2dTexture409.c" "file1816.c";
-connectAttr "place2dTexture409.tf" "file1816.tf";
-connectAttr "place2dTexture409.rf" "file1816.rf";
-connectAttr "place2dTexture409.mu" "file1816.mu";
-connectAttr "place2dTexture409.mv" "file1816.mv";
-connectAttr "place2dTexture409.s" "file1816.s";
-connectAttr "place2dTexture409.wu" "file1816.wu";
-connectAttr "place2dTexture409.wv" "file1816.wv";
-connectAttr "place2dTexture409.re" "file1816.re";
-connectAttr "place2dTexture409.of" "file1816.of";
-connectAttr "place2dTexture409.r" "file1816.ro";
-connectAttr "place2dTexture409.n" "file1816.n";
-connectAttr "place2dTexture409.vt1" "file1816.vt1";
-connectAttr "place2dTexture409.vt2" "file1816.vt2";
-connectAttr "place2dTexture409.vt3" "file1816.vt3";
-connectAttr "place2dTexture409.vc1" "file1816.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1817.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1817.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1817.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1817.ws";
-connectAttr "place2dTexture409.o" "file1817.uv";
-connectAttr "place2dTexture409.ofs" "file1817.fs";
-connectAttr "place2dTexture409.c" "file1817.c";
-connectAttr "place2dTexture409.tf" "file1817.tf";
-connectAttr "place2dTexture409.rf" "file1817.rf";
-connectAttr "place2dTexture409.mu" "file1817.mu";
-connectAttr "place2dTexture409.mv" "file1817.mv";
-connectAttr "place2dTexture409.s" "file1817.s";
-connectAttr "place2dTexture409.wu" "file1817.wu";
-connectAttr "place2dTexture409.wv" "file1817.wv";
-connectAttr "place2dTexture409.re" "file1817.re";
-connectAttr "place2dTexture409.of" "file1817.of";
-connectAttr "place2dTexture409.r" "file1817.ro";
-connectAttr "place2dTexture409.n" "file1817.n";
-connectAttr "place2dTexture409.vt1" "file1817.vt1";
-connectAttr "place2dTexture409.vt2" "file1817.vt2";
-connectAttr "place2dTexture409.vt3" "file1817.vt3";
-connectAttr "place2dTexture409.vc1" "file1817.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1818.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1818.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1818.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1818.ws";
-connectAttr "place2dTexture409.o" "file1818.uv";
-connectAttr "place2dTexture409.ofs" "file1818.fs";
-connectAttr "place2dTexture409.c" "file1818.c";
-connectAttr "place2dTexture409.tf" "file1818.tf";
-connectAttr "place2dTexture409.rf" "file1818.rf";
-connectAttr "place2dTexture409.mu" "file1818.mu";
-connectAttr "place2dTexture409.mv" "file1818.mv";
-connectAttr "place2dTexture409.s" "file1818.s";
-connectAttr "place2dTexture409.wu" "file1818.wu";
-connectAttr "place2dTexture409.wv" "file1818.wv";
-connectAttr "place2dTexture409.re" "file1818.re";
-connectAttr "place2dTexture409.of" "file1818.of";
-connectAttr "place2dTexture409.r" "file1818.ro";
-connectAttr "place2dTexture409.n" "file1818.n";
-connectAttr "place2dTexture409.vt1" "file1818.vt1";
-connectAttr "place2dTexture409.vt2" "file1818.vt2";
-connectAttr "place2dTexture409.vt3" "file1818.vt3";
-connectAttr "place2dTexture409.vc1" "file1818.vc1";
-connectAttr "file1814.oc" "multiplyDivide348.i1";
 connectAttr "set352.msg" "materialInfo504.sg";
-connectAttr "file1817.oa" "bump2d343.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file1819.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1819.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1819.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1819.ws";
-connectAttr "place2dTexture410.o" "file1819.uv";
-connectAttr "place2dTexture410.ofs" "file1819.fs";
-connectAttr "place2dTexture410.c" "file1819.c";
-connectAttr "place2dTexture410.tf" "file1819.tf";
-connectAttr "place2dTexture410.rf" "file1819.rf";
-connectAttr "place2dTexture410.mu" "file1819.mu";
-connectAttr "place2dTexture410.mv" "file1819.mv";
-connectAttr "place2dTexture410.s" "file1819.s";
-connectAttr "place2dTexture410.wu" "file1819.wu";
-connectAttr "place2dTexture410.wv" "file1819.wv";
-connectAttr "place2dTexture410.re" "file1819.re";
-connectAttr "place2dTexture410.of" "file1819.of";
-connectAttr "place2dTexture410.r" "file1819.ro";
-connectAttr "place2dTexture410.n" "file1819.n";
-connectAttr "place2dTexture410.vt1" "file1819.vt1";
-connectAttr "place2dTexture410.vt2" "file1819.vt2";
-connectAttr "place2dTexture410.vt3" "file1819.vt3";
-connectAttr "place2dTexture410.vc1" "file1819.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1820.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1820.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1820.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1820.ws";
-connectAttr "place2dTexture410.o" "file1820.uv";
-connectAttr "place2dTexture410.ofs" "file1820.fs";
-connectAttr "place2dTexture410.c" "file1820.c";
-connectAttr "place2dTexture410.tf" "file1820.tf";
-connectAttr "place2dTexture410.rf" "file1820.rf";
-connectAttr "place2dTexture410.mu" "file1820.mu";
-connectAttr "place2dTexture410.mv" "file1820.mv";
-connectAttr "place2dTexture410.s" "file1820.s";
-connectAttr "place2dTexture410.wu" "file1820.wu";
-connectAttr "place2dTexture410.wv" "file1820.wv";
-connectAttr "place2dTexture410.re" "file1820.re";
-connectAttr "place2dTexture410.of" "file1820.of";
-connectAttr "place2dTexture410.r" "file1820.ro";
-connectAttr "place2dTexture410.n" "file1820.n";
-connectAttr "place2dTexture410.vt1" "file1820.vt1";
-connectAttr "place2dTexture410.vt2" "file1820.vt2";
-connectAttr "place2dTexture410.vt3" "file1820.vt3";
-connectAttr "place2dTexture410.vc1" "file1820.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1821.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1821.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1821.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1821.ws";
-connectAttr "place2dTexture410.o" "file1821.uv";
-connectAttr "place2dTexture410.ofs" "file1821.fs";
-connectAttr "place2dTexture410.c" "file1821.c";
-connectAttr "place2dTexture410.tf" "file1821.tf";
-connectAttr "place2dTexture410.rf" "file1821.rf";
-connectAttr "place2dTexture410.mu" "file1821.mu";
-connectAttr "place2dTexture410.mv" "file1821.mv";
-connectAttr "place2dTexture410.s" "file1821.s";
-connectAttr "place2dTexture410.wu" "file1821.wu";
-connectAttr "place2dTexture410.wv" "file1821.wv";
-connectAttr "place2dTexture410.re" "file1821.re";
-connectAttr "place2dTexture410.of" "file1821.of";
-connectAttr "place2dTexture410.r" "file1821.ro";
-connectAttr "place2dTexture410.n" "file1821.n";
-connectAttr "place2dTexture410.vt1" "file1821.vt1";
-connectAttr "place2dTexture410.vt2" "file1821.vt2";
-connectAttr "place2dTexture410.vt3" "file1821.vt3";
-connectAttr "place2dTexture410.vc1" "file1821.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file1822.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1822.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1822.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1822.ws";
-connectAttr "place2dTexture410.o" "file1822.uv";
-connectAttr "place2dTexture410.ofs" "file1822.fs";
-connectAttr "place2dTexture410.c" "file1822.c";
-connectAttr "place2dTexture410.tf" "file1822.tf";
-connectAttr "place2dTexture410.rf" "file1822.rf";
-connectAttr "place2dTexture410.mu" "file1822.mu";
-connectAttr "place2dTexture410.mv" "file1822.mv";
-connectAttr "place2dTexture410.s" "file1822.s";
-connectAttr "place2dTexture410.wu" "file1822.wu";
-connectAttr "place2dTexture410.wv" "file1822.wv";
-connectAttr "place2dTexture410.re" "file1822.re";
-connectAttr "place2dTexture410.of" "file1822.of";
-connectAttr "place2dTexture410.r" "file1822.ro";
-connectAttr "place2dTexture410.n" "file1822.n";
-connectAttr "place2dTexture410.vt1" "file1822.vt1";
-connectAttr "place2dTexture410.vt2" "file1822.vt2";
-connectAttr "place2dTexture410.vt3" "file1822.vt3";
-connectAttr "place2dTexture410.vc1" "file1822.vc1";
-connectAttr "file1819.oa" "bump2d344.bv";
 connectAttr "set353.msg" "materialInfo505.sg";
-connectAttr "file1820.oc" "multiplyDivide349.i1";
 connectAttr "Face_Projection_Map4.oc" "surfaceShader1SG4.ss";
 connectAttr "surfaceShader1SG4.msg" "materialInfo523.sg";
 connectAttr "Face_Projection_Map4.msg" "materialInfo523.m";
-connectAttr "file1897.msg" "materialInfo523.t" -na;
-connectAttr "file1893.oc" "projection14.im";
-connectAttr ":defaultColorMgtGlobals.cme" "file1893.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1893.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1893.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1893.ws";
-connectAttr "place2dTexture428.c" "file1893.c";
-connectAttr "place2dTexture428.tf" "file1893.tf";
-connectAttr "place2dTexture428.rf" "file1893.rf";
-connectAttr "place2dTexture428.mu" "file1893.mu";
-connectAttr "place2dTexture428.mv" "file1893.mv";
-connectAttr "place2dTexture428.s" "file1893.s";
-connectAttr "place2dTexture428.wu" "file1893.wu";
-connectAttr "place2dTexture428.wv" "file1893.wv";
-connectAttr "place2dTexture428.re" "file1893.re";
-connectAttr "place2dTexture428.of" "file1893.of";
-connectAttr "place2dTexture428.r" "file1893.ro";
-connectAttr "place2dTexture428.n" "file1893.n";
-connectAttr "place2dTexture428.vt1" "file1893.vt1";
-connectAttr "place2dTexture428.vt2" "file1893.vt2";
-connectAttr "place2dTexture428.vt3" "file1893.vt3";
-connectAttr "place2dTexture428.vc1" "file1893.vc1";
-connectAttr "place2dTexture428.o" "file1893.uv";
-connectAttr "place2dTexture428.ofs" "file1893.fs";
 connectAttr "lambert8SG4.msg" "materialInfo526.sg";
-connectAttr ":defaultColorMgtGlobals.cme" "file1896.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1896.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1896.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1896.ws";
-connectAttr "place2dTexture431.c" "file1896.c";
-connectAttr "place2dTexture431.tf" "file1896.tf";
-connectAttr "place2dTexture431.rf" "file1896.rf";
-connectAttr "place2dTexture431.mu" "file1896.mu";
-connectAttr "place2dTexture431.mv" "file1896.mv";
-connectAttr "place2dTexture431.s" "file1896.s";
-connectAttr "place2dTexture431.wu" "file1896.wu";
-connectAttr "place2dTexture431.wv" "file1896.wv";
-connectAttr "place2dTexture431.re" "file1896.re";
-connectAttr "place2dTexture431.of" "file1896.of";
-connectAttr "place2dTexture431.r" "file1896.ro";
-connectAttr "place2dTexture431.n" "file1896.n";
-connectAttr "place2dTexture431.vt1" "file1896.vt1";
-connectAttr "place2dTexture431.vt2" "file1896.vt2";
-connectAttr "place2dTexture431.vt3" "file1896.vt3";
-connectAttr "place2dTexture431.vc1" "file1896.vc1";
-connectAttr "place2dTexture431.o" "file1896.uv";
-connectAttr "place2dTexture431.ofs" "file1896.fs";
-connectAttr ":defaultColorMgtGlobals.cme" "file1897.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file1897.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file1897.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file1897.ws";
-connectAttr "place2dTexture432.c" "file1897.c";
-connectAttr "place2dTexture432.tf" "file1897.tf";
-connectAttr "place2dTexture432.rf" "file1897.rf";
-connectAttr "place2dTexture432.mu" "file1897.mu";
-connectAttr "place2dTexture432.mv" "file1897.mv";
-connectAttr "place2dTexture432.s" "file1897.s";
-connectAttr "place2dTexture432.wu" "file1897.wu";
-connectAttr "place2dTexture432.wv" "file1897.wv";
-connectAttr "place2dTexture432.re" "file1897.re";
-connectAttr "place2dTexture432.of" "file1897.of";
-connectAttr "place2dTexture432.r" "file1897.ro";
-connectAttr "place2dTexture432.n" "file1897.n";
-connectAttr "place2dTexture432.vt1" "file1897.vt1";
-connectAttr "place2dTexture432.vt2" "file1897.vt2";
-connectAttr "place2dTexture432.vt3" "file1897.vt3";
-connectAttr "place2dTexture432.vc1" "file1897.vc1";
-connectAttr "place2dTexture432.o" "file1897.uv";
-connectAttr "place2dTexture432.ofs" "file1897.fs";
 connectAttr "Face_Glass4.oc" "standardSurface8SG4.ss";
 connectAttr "standardSurface8SG4.msg" "materialInfo567.sg";
 connectAttr "Face_Glass4.msg" "materialInfo567.m";
 connectAttr "Face_Glass4.msg" "materialInfo567.t" -na;
 connectAttr "projection14.oc" "Face_Projection_Map4.oc";
-connectAttr "file1897.oc" "Face_Projection_Map4.og";
 connectAttr "pasted__set276.msg" "pasted__materialInfo320.sg";
-connectAttr "pasted__aiStandardSurface5.msg" "pasted__materialInfo320.m";
-connectAttr "pasted__file1208.msg" "pasted__materialInfo320.t" -na;
-connectAttr "pasted__aiStandardSurface5.out" "pasted__set276.ss";
-connectAttr "pasted__file1208.oa" "pasted__aiStandardSurface5.metalness";
-connectAttr "pasted__file1209.oa" "pasted__aiStandardSurface5.specular_roughness"
-		;
-connectAttr "pasted__bump2d271.o" "pasted__aiStandardSurface5.n";
-connectAttr "pasted__multiplyDivide275.o" "pasted__aiStandardSurface5.base_color"
-		;
-connectAttr ":defaultColorMgtGlobals.cme" "pasted__file1208.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file1208.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file1208.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "pasted__file1208.ws";
-connectAttr "pasted__place2dTexture300.o" "pasted__file1208.uv";
-connectAttr "pasted__place2dTexture300.ofs" "pasted__file1208.fs";
-connectAttr "pasted__place2dTexture300.c" "pasted__file1208.c";
-connectAttr "pasted__place2dTexture300.tf" "pasted__file1208.tf";
-connectAttr "pasted__place2dTexture300.rf" "pasted__file1208.rf";
-connectAttr "pasted__place2dTexture300.mu" "pasted__file1208.mu";
-connectAttr "pasted__place2dTexture300.mv" "pasted__file1208.mv";
-connectAttr "pasted__place2dTexture300.s" "pasted__file1208.s";
-connectAttr "pasted__place2dTexture300.wu" "pasted__file1208.wu";
-connectAttr "pasted__place2dTexture300.wv" "pasted__file1208.wv";
-connectAttr "pasted__place2dTexture300.re" "pasted__file1208.re";
-connectAttr "pasted__place2dTexture300.of" "pasted__file1208.of";
-connectAttr "pasted__place2dTexture300.r" "pasted__file1208.ro";
-connectAttr "pasted__place2dTexture300.n" "pasted__file1208.n";
-connectAttr "pasted__place2dTexture300.vt1" "pasted__file1208.vt1";
-connectAttr "pasted__place2dTexture300.vt2" "pasted__file1208.vt2";
-connectAttr "pasted__place2dTexture300.vt3" "pasted__file1208.vt3";
-connectAttr "pasted__place2dTexture300.vc1" "pasted__file1208.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "pasted__file1209.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file1209.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file1209.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "pasted__file1209.ws";
-connectAttr "pasted__place2dTexture300.o" "pasted__file1209.uv";
-connectAttr "pasted__place2dTexture300.ofs" "pasted__file1209.fs";
-connectAttr "pasted__place2dTexture300.c" "pasted__file1209.c";
-connectAttr "pasted__place2dTexture300.tf" "pasted__file1209.tf";
-connectAttr "pasted__place2dTexture300.rf" "pasted__file1209.rf";
-connectAttr "pasted__place2dTexture300.mu" "pasted__file1209.mu";
-connectAttr "pasted__place2dTexture300.mv" "pasted__file1209.mv";
-connectAttr "pasted__place2dTexture300.s" "pasted__file1209.s";
-connectAttr "pasted__place2dTexture300.wu" "pasted__file1209.wu";
-connectAttr "pasted__place2dTexture300.wv" "pasted__file1209.wv";
-connectAttr "pasted__place2dTexture300.re" "pasted__file1209.re";
-connectAttr "pasted__place2dTexture300.of" "pasted__file1209.of";
-connectAttr "pasted__place2dTexture300.r" "pasted__file1209.ro";
-connectAttr "pasted__place2dTexture300.n" "pasted__file1209.n";
-connectAttr "pasted__place2dTexture300.vt1" "pasted__file1209.vt1";
-connectAttr "pasted__place2dTexture300.vt2" "pasted__file1209.vt2";
-connectAttr "pasted__place2dTexture300.vt3" "pasted__file1209.vt3";
-connectAttr "pasted__place2dTexture300.vc1" "pasted__file1209.vc1";
-connectAttr "pasted__file1211.oa" "pasted__bump2d271.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "pasted__file1211.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file1211.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file1211.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "pasted__file1211.ws";
-connectAttr "pasted__place2dTexture300.o" "pasted__file1211.uv";
-connectAttr "pasted__place2dTexture300.ofs" "pasted__file1211.fs";
-connectAttr "pasted__place2dTexture300.c" "pasted__file1211.c";
-connectAttr "pasted__place2dTexture300.tf" "pasted__file1211.tf";
-connectAttr "pasted__place2dTexture300.rf" "pasted__file1211.rf";
-connectAttr "pasted__place2dTexture300.mu" "pasted__file1211.mu";
-connectAttr "pasted__place2dTexture300.mv" "pasted__file1211.mv";
-connectAttr "pasted__place2dTexture300.s" "pasted__file1211.s";
-connectAttr "pasted__place2dTexture300.wu" "pasted__file1211.wu";
-connectAttr "pasted__place2dTexture300.wv" "pasted__file1211.wv";
-connectAttr "pasted__place2dTexture300.re" "pasted__file1211.re";
-connectAttr "pasted__place2dTexture300.of" "pasted__file1211.of";
-connectAttr "pasted__place2dTexture300.r" "pasted__file1211.ro";
-connectAttr "pasted__place2dTexture300.n" "pasted__file1211.n";
-connectAttr "pasted__place2dTexture300.vt1" "pasted__file1211.vt1";
-connectAttr "pasted__place2dTexture300.vt2" "pasted__file1211.vt2";
-connectAttr "pasted__place2dTexture300.vt3" "pasted__file1211.vt3";
-connectAttr "pasted__place2dTexture300.vc1" "pasted__file1211.vc1";
-connectAttr "pasted__file1212.oc" "pasted__multiplyDivide275.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "pasted__file1212.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file1212.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file1212.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "pasted__file1212.ws";
-connectAttr "pasted__place2dTexture300.o" "pasted__file1212.uv";
-connectAttr "pasted__place2dTexture300.ofs" "pasted__file1212.fs";
-connectAttr "pasted__place2dTexture300.c" "pasted__file1212.c";
-connectAttr "pasted__place2dTexture300.tf" "pasted__file1212.tf";
-connectAttr "pasted__place2dTexture300.rf" "pasted__file1212.rf";
-connectAttr "pasted__place2dTexture300.mu" "pasted__file1212.mu";
-connectAttr "pasted__place2dTexture300.mv" "pasted__file1212.mv";
-connectAttr "pasted__place2dTexture300.s" "pasted__file1212.s";
-connectAttr "pasted__place2dTexture300.wu" "pasted__file1212.wu";
-connectAttr "pasted__place2dTexture300.wv" "pasted__file1212.wv";
-connectAttr "pasted__place2dTexture300.re" "pasted__file1212.re";
-connectAttr "pasted__place2dTexture300.of" "pasted__file1212.of";
-connectAttr "pasted__place2dTexture300.r" "pasted__file1212.ro";
-connectAttr "pasted__place2dTexture300.n" "pasted__file1212.n";
-connectAttr "pasted__place2dTexture300.vt1" "pasted__file1212.vt1";
-connectAttr "pasted__place2dTexture300.vt2" "pasted__file1212.vt2";
-connectAttr "pasted__place2dTexture300.vt3" "pasted__file1212.vt3";
-connectAttr "pasted__place2dTexture300.vc1" "pasted__file1212.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2072.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2072.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2072.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2072.ws";
-connectAttr "place2dTexture472.o" "file2072.uv";
-connectAttr "place2dTexture472.ofs" "file2072.fs";
-connectAttr "place2dTexture472.c" "file2072.c";
-connectAttr "place2dTexture472.tf" "file2072.tf";
-connectAttr "place2dTexture472.rf" "file2072.rf";
-connectAttr "place2dTexture472.mu" "file2072.mu";
-connectAttr "place2dTexture472.mv" "file2072.mv";
-connectAttr "place2dTexture472.s" "file2072.s";
-connectAttr "place2dTexture472.wu" "file2072.wu";
-connectAttr "place2dTexture472.wv" "file2072.wv";
-connectAttr "place2dTexture472.re" "file2072.re";
-connectAttr "place2dTexture472.of" "file2072.of";
-connectAttr "place2dTexture472.r" "file2072.ro";
-connectAttr "place2dTexture472.n" "file2072.n";
-connectAttr "place2dTexture472.vt1" "file2072.vt1";
-connectAttr "place2dTexture472.vt2" "file2072.vt2";
-connectAttr "place2dTexture472.vt3" "file2072.vt3";
-connectAttr "place2dTexture472.vc1" "file2072.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2073.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2073.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2073.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2073.ws";
-connectAttr "place2dTexture472.o" "file2073.uv";
-connectAttr "place2dTexture472.ofs" "file2073.fs";
-connectAttr "place2dTexture472.c" "file2073.c";
-connectAttr "place2dTexture472.tf" "file2073.tf";
-connectAttr "place2dTexture472.rf" "file2073.rf";
-connectAttr "place2dTexture472.mu" "file2073.mu";
-connectAttr "place2dTexture472.mv" "file2073.mv";
-connectAttr "place2dTexture472.s" "file2073.s";
-connectAttr "place2dTexture472.wu" "file2073.wu";
-connectAttr "place2dTexture472.wv" "file2073.wv";
-connectAttr "place2dTexture472.re" "file2073.re";
-connectAttr "place2dTexture472.of" "file2073.of";
-connectAttr "place2dTexture472.r" "file2073.ro";
-connectAttr "place2dTexture472.n" "file2073.n";
-connectAttr "place2dTexture472.vt1" "file2073.vt1";
-connectAttr "place2dTexture472.vt2" "file2073.vt2";
-connectAttr "place2dTexture472.vt3" "file2073.vt3";
-connectAttr "place2dTexture472.vc1" "file2073.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2075.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2075.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2075.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2075.ws";
-connectAttr "place2dTexture472.o" "file2075.uv";
-connectAttr "place2dTexture472.ofs" "file2075.fs";
-connectAttr "place2dTexture472.c" "file2075.c";
-connectAttr "place2dTexture472.tf" "file2075.tf";
-connectAttr "place2dTexture472.rf" "file2075.rf";
-connectAttr "place2dTexture472.mu" "file2075.mu";
-connectAttr "place2dTexture472.mv" "file2075.mv";
-connectAttr "place2dTexture472.s" "file2075.s";
-connectAttr "place2dTexture472.wu" "file2075.wu";
-connectAttr "place2dTexture472.wv" "file2075.wv";
-connectAttr "place2dTexture472.re" "file2075.re";
-connectAttr "place2dTexture472.of" "file2075.of";
-connectAttr "place2dTexture472.r" "file2075.ro";
-connectAttr "place2dTexture472.n" "file2075.n";
-connectAttr "place2dTexture472.vt1" "file2075.vt1";
-connectAttr "place2dTexture472.vt2" "file2075.vt2";
-connectAttr "place2dTexture472.vt3" "file2075.vt3";
-connectAttr "place2dTexture472.vc1" "file2075.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2076.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2076.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2076.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2076.ws";
-connectAttr "place2dTexture472.o" "file2076.uv";
-connectAttr "place2dTexture472.ofs" "file2076.fs";
-connectAttr "place2dTexture472.c" "file2076.c";
-connectAttr "place2dTexture472.tf" "file2076.tf";
-connectAttr "place2dTexture472.rf" "file2076.rf";
-connectAttr "place2dTexture472.mu" "file2076.mu";
-connectAttr "place2dTexture472.mv" "file2076.mv";
-connectAttr "place2dTexture472.s" "file2076.s";
-connectAttr "place2dTexture472.wu" "file2076.wu";
-connectAttr "place2dTexture472.wv" "file2076.wv";
-connectAttr "place2dTexture472.re" "file2076.re";
-connectAttr "place2dTexture472.of" "file2076.of";
-connectAttr "place2dTexture472.r" "file2076.ro";
-connectAttr "place2dTexture472.n" "file2076.n";
-connectAttr "place2dTexture472.vt1" "file2076.vt1";
-connectAttr "place2dTexture472.vt2" "file2076.vt2";
-connectAttr "place2dTexture472.vt3" "file2076.vt3";
-connectAttr "place2dTexture472.vc1" "file2076.vc1";
-connectAttr "file2072.oa" "bump2d391.bv";
 connectAttr "set401.msg" "materialInfo584.sg";
-connectAttr "file2073.oc" "multiplyDivide396.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2077.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2077.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2077.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2077.ws";
-connectAttr "place2dTexture473.o" "file2077.uv";
-connectAttr "place2dTexture473.ofs" "file2077.fs";
-connectAttr "place2dTexture473.c" "file2077.c";
-connectAttr "place2dTexture473.tf" "file2077.tf";
-connectAttr "place2dTexture473.rf" "file2077.rf";
-connectAttr "place2dTexture473.mu" "file2077.mu";
-connectAttr "place2dTexture473.mv" "file2077.mv";
-connectAttr "place2dTexture473.s" "file2077.s";
-connectAttr "place2dTexture473.wu" "file2077.wu";
-connectAttr "place2dTexture473.wv" "file2077.wv";
-connectAttr "place2dTexture473.re" "file2077.re";
-connectAttr "place2dTexture473.of" "file2077.of";
-connectAttr "place2dTexture473.r" "file2077.ro";
-connectAttr "place2dTexture473.n" "file2077.n";
-connectAttr "place2dTexture473.vt1" "file2077.vt1";
-connectAttr "place2dTexture473.vt2" "file2077.vt2";
-connectAttr "place2dTexture473.vt3" "file2077.vt3";
-connectAttr "place2dTexture473.vc1" "file2077.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2078.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2078.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2078.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2078.ws";
-connectAttr "place2dTexture473.o" "file2078.uv";
-connectAttr "place2dTexture473.ofs" "file2078.fs";
-connectAttr "place2dTexture473.c" "file2078.c";
-connectAttr "place2dTexture473.tf" "file2078.tf";
-connectAttr "place2dTexture473.rf" "file2078.rf";
-connectAttr "place2dTexture473.mu" "file2078.mu";
-connectAttr "place2dTexture473.mv" "file2078.mv";
-connectAttr "place2dTexture473.s" "file2078.s";
-connectAttr "place2dTexture473.wu" "file2078.wu";
-connectAttr "place2dTexture473.wv" "file2078.wv";
-connectAttr "place2dTexture473.re" "file2078.re";
-connectAttr "place2dTexture473.of" "file2078.of";
-connectAttr "place2dTexture473.r" "file2078.ro";
-connectAttr "place2dTexture473.n" "file2078.n";
-connectAttr "place2dTexture473.vt1" "file2078.vt1";
-connectAttr "place2dTexture473.vt2" "file2078.vt2";
-connectAttr "place2dTexture473.vt3" "file2078.vt3";
-connectAttr "place2dTexture473.vc1" "file2078.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2079.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2079.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2079.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2079.ws";
-connectAttr "place2dTexture473.o" "file2079.uv";
-connectAttr "place2dTexture473.ofs" "file2079.fs";
-connectAttr "place2dTexture473.c" "file2079.c";
-connectAttr "place2dTexture473.tf" "file2079.tf";
-connectAttr "place2dTexture473.rf" "file2079.rf";
-connectAttr "place2dTexture473.mu" "file2079.mu";
-connectAttr "place2dTexture473.mv" "file2079.mv";
-connectAttr "place2dTexture473.s" "file2079.s";
-connectAttr "place2dTexture473.wu" "file2079.wu";
-connectAttr "place2dTexture473.wv" "file2079.wv";
-connectAttr "place2dTexture473.re" "file2079.re";
-connectAttr "place2dTexture473.of" "file2079.of";
-connectAttr "place2dTexture473.r" "file2079.ro";
-connectAttr "place2dTexture473.n" "file2079.n";
-connectAttr "place2dTexture473.vt1" "file2079.vt1";
-connectAttr "place2dTexture473.vt2" "file2079.vt2";
-connectAttr "place2dTexture473.vt3" "file2079.vt3";
-connectAttr "place2dTexture473.vc1" "file2079.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2081.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2081.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2081.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2081.ws";
-connectAttr "place2dTexture473.o" "file2081.uv";
-connectAttr "place2dTexture473.ofs" "file2081.fs";
-connectAttr "place2dTexture473.c" "file2081.c";
-connectAttr "place2dTexture473.tf" "file2081.tf";
-connectAttr "place2dTexture473.rf" "file2081.rf";
-connectAttr "place2dTexture473.mu" "file2081.mu";
-connectAttr "place2dTexture473.mv" "file2081.mv";
-connectAttr "place2dTexture473.s" "file2081.s";
-connectAttr "place2dTexture473.wu" "file2081.wu";
-connectAttr "place2dTexture473.wv" "file2081.wv";
-connectAttr "place2dTexture473.re" "file2081.re";
-connectAttr "place2dTexture473.of" "file2081.of";
-connectAttr "place2dTexture473.r" "file2081.ro";
-connectAttr "place2dTexture473.n" "file2081.n";
-connectAttr "place2dTexture473.vt1" "file2081.vt1";
-connectAttr "place2dTexture473.vt2" "file2081.vt2";
-connectAttr "place2dTexture473.vt3" "file2081.vt3";
-connectAttr "place2dTexture473.vc1" "file2081.vc1";
-connectAttr "file2077.oc" "multiplyDivide397.i1";
 connectAttr "set402.msg" "materialInfo585.sg";
-connectAttr "file2078.oa" "bump2d392.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file2082.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2082.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2082.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2082.ws";
-connectAttr "place2dTexture474.o" "file2082.uv";
-connectAttr "place2dTexture474.ofs" "file2082.fs";
-connectAttr "place2dTexture474.c" "file2082.c";
-connectAttr "place2dTexture474.tf" "file2082.tf";
-connectAttr "place2dTexture474.rf" "file2082.rf";
-connectAttr "place2dTexture474.mu" "file2082.mu";
-connectAttr "place2dTexture474.mv" "file2082.mv";
-connectAttr "place2dTexture474.s" "file2082.s";
-connectAttr "place2dTexture474.wu" "file2082.wu";
-connectAttr "place2dTexture474.wv" "file2082.wv";
-connectAttr "place2dTexture474.re" "file2082.re";
-connectAttr "place2dTexture474.of" "file2082.of";
-connectAttr "place2dTexture474.r" "file2082.ro";
-connectAttr "place2dTexture474.n" "file2082.n";
-connectAttr "place2dTexture474.vt1" "file2082.vt1";
-connectAttr "place2dTexture474.vt2" "file2082.vt2";
-connectAttr "place2dTexture474.vt3" "file2082.vt3";
-connectAttr "place2dTexture474.vc1" "file2082.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2083.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2083.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2083.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2083.ws";
-connectAttr "place2dTexture474.o" "file2083.uv";
-connectAttr "place2dTexture474.ofs" "file2083.fs";
-connectAttr "place2dTexture474.c" "file2083.c";
-connectAttr "place2dTexture474.tf" "file2083.tf";
-connectAttr "place2dTexture474.rf" "file2083.rf";
-connectAttr "place2dTexture474.mu" "file2083.mu";
-connectAttr "place2dTexture474.mv" "file2083.mv";
-connectAttr "place2dTexture474.s" "file2083.s";
-connectAttr "place2dTexture474.wu" "file2083.wu";
-connectAttr "place2dTexture474.wv" "file2083.wv";
-connectAttr "place2dTexture474.re" "file2083.re";
-connectAttr "place2dTexture474.of" "file2083.of";
-connectAttr "place2dTexture474.r" "file2083.ro";
-connectAttr "place2dTexture474.n" "file2083.n";
-connectAttr "place2dTexture474.vt1" "file2083.vt1";
-connectAttr "place2dTexture474.vt2" "file2083.vt2";
-connectAttr "place2dTexture474.vt3" "file2083.vt3";
-connectAttr "place2dTexture474.vc1" "file2083.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2084.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2084.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2084.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2084.ws";
-connectAttr "place2dTexture474.o" "file2084.uv";
-connectAttr "place2dTexture474.ofs" "file2084.fs";
-connectAttr "place2dTexture474.c" "file2084.c";
-connectAttr "place2dTexture474.tf" "file2084.tf";
-connectAttr "place2dTexture474.rf" "file2084.rf";
-connectAttr "place2dTexture474.mu" "file2084.mu";
-connectAttr "place2dTexture474.mv" "file2084.mv";
-connectAttr "place2dTexture474.s" "file2084.s";
-connectAttr "place2dTexture474.wu" "file2084.wu";
-connectAttr "place2dTexture474.wv" "file2084.wv";
-connectAttr "place2dTexture474.re" "file2084.re";
-connectAttr "place2dTexture474.of" "file2084.of";
-connectAttr "place2dTexture474.r" "file2084.ro";
-connectAttr "place2dTexture474.n" "file2084.n";
-connectAttr "place2dTexture474.vt1" "file2084.vt1";
-connectAttr "place2dTexture474.vt2" "file2084.vt2";
-connectAttr "place2dTexture474.vt3" "file2084.vt3";
-connectAttr "place2dTexture474.vc1" "file2084.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2085.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2085.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2085.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2085.ws";
-connectAttr "place2dTexture474.o" "file2085.uv";
-connectAttr "place2dTexture474.ofs" "file2085.fs";
-connectAttr "place2dTexture474.c" "file2085.c";
-connectAttr "place2dTexture474.tf" "file2085.tf";
-connectAttr "place2dTexture474.rf" "file2085.rf";
-connectAttr "place2dTexture474.mu" "file2085.mu";
-connectAttr "place2dTexture474.mv" "file2085.mv";
-connectAttr "place2dTexture474.s" "file2085.s";
-connectAttr "place2dTexture474.wu" "file2085.wu";
-connectAttr "place2dTexture474.wv" "file2085.wv";
-connectAttr "place2dTexture474.re" "file2085.re";
-connectAttr "place2dTexture474.of" "file2085.of";
-connectAttr "place2dTexture474.r" "file2085.ro";
-connectAttr "place2dTexture474.n" "file2085.n";
-connectAttr "place2dTexture474.vt1" "file2085.vt1";
-connectAttr "place2dTexture474.vt2" "file2085.vt2";
-connectAttr "place2dTexture474.vt3" "file2085.vt3";
-connectAttr "place2dTexture474.vc1" "file2085.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2086.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2086.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2086.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2086.ws";
-connectAttr "place2dTexture474.o" "file2086.uv";
-connectAttr "place2dTexture474.ofs" "file2086.fs";
-connectAttr "place2dTexture474.c" "file2086.c";
-connectAttr "place2dTexture474.tf" "file2086.tf";
-connectAttr "place2dTexture474.rf" "file2086.rf";
-connectAttr "place2dTexture474.mu" "file2086.mu";
-connectAttr "place2dTexture474.mv" "file2086.mv";
-connectAttr "place2dTexture474.s" "file2086.s";
-connectAttr "place2dTexture474.wu" "file2086.wu";
-connectAttr "place2dTexture474.wv" "file2086.wv";
-connectAttr "place2dTexture474.re" "file2086.re";
-connectAttr "place2dTexture474.of" "file2086.of";
-connectAttr "place2dTexture474.r" "file2086.ro";
-connectAttr "place2dTexture474.n" "file2086.n";
-connectAttr "place2dTexture474.vt1" "file2086.vt1";
-connectAttr "place2dTexture474.vt2" "file2086.vt2";
-connectAttr "place2dTexture474.vt3" "file2086.vt3";
-connectAttr "place2dTexture474.vc1" "file2086.vc1";
-connectAttr "file2082.oc" "multiplyDivide398.i1";
 connectAttr "set403.msg" "materialInfo586.sg";
-connectAttr "file2083.oa" "bump2d393.bv";
 connectAttr "aiStandardSurface6SG1.msg" "materialInfo587.sg";
-connectAttr "file1819.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[7].dn"
-		;
-connectAttr "file1822.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[9].dn"
-		;
 connectAttr "multiplyDivide344.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[18].dn"
-		;
-connectAttr "file1817.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[21].dn"
-		;
-connectAttr "file1816.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[27].dn"
-		;
-connectAttr "file1804.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[28].dn"
-		;
-connectAttr "file1812.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[30].dn"
 		;
 connectAttr "place2dTexture407.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[32].dn"
 		;
@@ -42919,13 +38281,9 @@ connectAttr "multiplyDivide349.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.t
 		;
 connectAttr "bump2d339.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[38].dn"
 		;
-connectAttr "file1796.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[41].dn"
-		;
 connectAttr "bump2d341.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[43].dn"
 		;
 connectAttr "set350.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[45].dn"
-		;
-connectAttr "file1794.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[47].dn"
 		;
 connectAttr "multiplyDivide347.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[49].dn"
 		;
@@ -42933,15 +38291,9 @@ connectAttr "multiplyDivide346.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.t
 		;
 connectAttr "place2dTexture408.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[53].dn"
 		;
-connectAttr "file1821.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[63].dn"
-		;
 connectAttr "place2dTexture410.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[65].dn"
 		;
 connectAttr "place2dTexture405.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[70].dn"
-		;
-connectAttr "file1809.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[81].dn"
-		;
-connectAttr "file1806.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[87].dn"
 		;
 connectAttr "bump2d343.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[88].dn"
 		;
@@ -42949,1056 +38301,47 @@ connectAttr "place2dTexture409.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.t
 		;
 connectAttr "set352.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[99].dn"
 		;
-connectAttr "file1813.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[103].dn"
-		;
 connectAttr "set348.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[122].dn"
-		;
-connectAttr "file1818.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[123].dn"
 		;
 connectAttr "set353.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[128].dn"
 		;
-connectAttr "file1798.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[129].dn"
-		;
 connectAttr "bump2d344.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[140].dn"
-		;
-connectAttr "file1820.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[142].dn"
-		;
-connectAttr "file1814.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[143].dn"
 		;
 connectAttr "multiplyDivide348.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[144].dn"
 		;
 connectAttr "bump2d342.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[146].dn"
 		;
-connectAttr "file1808.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[147].dn"
-		;
-connectAttr "file1797.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[151].dn"
-		;
-connectAttr "file1807.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[152].dn"
-		;
 connectAttr "set351.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[155].dn"
 		;
-connectAttr "file1811.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[2].ni[158].dn"
-		;
 connectAttr "place2dTexture432.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[4].ni[4].dn"
-		;
-connectAttr "file1897.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[4].ni[14].dn"
 		;
 connectAttr "aiStandardSurface6SG1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[9].ni[1].dn"
 		;
 connectAttr "Face_Projection_Map4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo4.tgi[9].ni[5].dn"
 		;
-connectAttr ":defaultColorMgtGlobals.cme" "file2108.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2108.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2108.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2108.ws";
-connectAttr "place2dTexture480.o" "file2108.uv";
-connectAttr "place2dTexture480.ofs" "file2108.fs";
-connectAttr "place2dTexture480.c" "file2108.c";
-connectAttr "place2dTexture480.tf" "file2108.tf";
-connectAttr "place2dTexture480.rf" "file2108.rf";
-connectAttr "place2dTexture480.mu" "file2108.mu";
-connectAttr "place2dTexture480.mv" "file2108.mv";
-connectAttr "place2dTexture480.s" "file2108.s";
-connectAttr "place2dTexture480.wu" "file2108.wu";
-connectAttr "place2dTexture480.wv" "file2108.wv";
-connectAttr "place2dTexture480.re" "file2108.re";
-connectAttr "place2dTexture480.of" "file2108.of";
-connectAttr "place2dTexture480.r" "file2108.ro";
-connectAttr "place2dTexture480.n" "file2108.n";
-connectAttr "place2dTexture480.vt1" "file2108.vt1";
-connectAttr "place2dTexture480.vt2" "file2108.vt2";
-connectAttr "place2dTexture480.vt3" "file2108.vt3";
-connectAttr "place2dTexture480.vc1" "file2108.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2109.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2109.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2109.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2109.ws";
-connectAttr "place2dTexture480.o" "file2109.uv";
-connectAttr "place2dTexture480.ofs" "file2109.fs";
-connectAttr "place2dTexture480.c" "file2109.c";
-connectAttr "place2dTexture480.tf" "file2109.tf";
-connectAttr "place2dTexture480.rf" "file2109.rf";
-connectAttr "place2dTexture480.mu" "file2109.mu";
-connectAttr "place2dTexture480.mv" "file2109.mv";
-connectAttr "place2dTexture480.s" "file2109.s";
-connectAttr "place2dTexture480.wu" "file2109.wu";
-connectAttr "place2dTexture480.wv" "file2109.wv";
-connectAttr "place2dTexture480.re" "file2109.re";
-connectAttr "place2dTexture480.of" "file2109.of";
-connectAttr "place2dTexture480.r" "file2109.ro";
-connectAttr "place2dTexture480.n" "file2109.n";
-connectAttr "place2dTexture480.vt1" "file2109.vt1";
-connectAttr "place2dTexture480.vt2" "file2109.vt2";
-connectAttr "place2dTexture480.vt3" "file2109.vt3";
-connectAttr "place2dTexture480.vc1" "file2109.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2110.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2110.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2110.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2110.ws";
-connectAttr "place2dTexture480.o" "file2110.uv";
-connectAttr "place2dTexture480.ofs" "file2110.fs";
-connectAttr "place2dTexture480.c" "file2110.c";
-connectAttr "place2dTexture480.tf" "file2110.tf";
-connectAttr "place2dTexture480.rf" "file2110.rf";
-connectAttr "place2dTexture480.mu" "file2110.mu";
-connectAttr "place2dTexture480.mv" "file2110.mv";
-connectAttr "place2dTexture480.s" "file2110.s";
-connectAttr "place2dTexture480.wu" "file2110.wu";
-connectAttr "place2dTexture480.wv" "file2110.wv";
-connectAttr "place2dTexture480.re" "file2110.re";
-connectAttr "place2dTexture480.of" "file2110.of";
-connectAttr "place2dTexture480.r" "file2110.ro";
-connectAttr "place2dTexture480.n" "file2110.n";
-connectAttr "place2dTexture480.vt1" "file2110.vt1";
-connectAttr "place2dTexture480.vt2" "file2110.vt2";
-connectAttr "place2dTexture480.vt3" "file2110.vt3";
-connectAttr "place2dTexture480.vc1" "file2110.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2111.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2111.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2111.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2111.ws";
-connectAttr "place2dTexture480.o" "file2111.uv";
-connectAttr "place2dTexture480.ofs" "file2111.fs";
-connectAttr "place2dTexture480.c" "file2111.c";
-connectAttr "place2dTexture480.tf" "file2111.tf";
-connectAttr "place2dTexture480.rf" "file2111.rf";
-connectAttr "place2dTexture480.mu" "file2111.mu";
-connectAttr "place2dTexture480.mv" "file2111.mv";
-connectAttr "place2dTexture480.s" "file2111.s";
-connectAttr "place2dTexture480.wu" "file2111.wu";
-connectAttr "place2dTexture480.wv" "file2111.wv";
-connectAttr "place2dTexture480.re" "file2111.re";
-connectAttr "place2dTexture480.of" "file2111.of";
-connectAttr "place2dTexture480.r" "file2111.ro";
-connectAttr "place2dTexture480.n" "file2111.n";
-connectAttr "place2dTexture480.vt1" "file2111.vt1";
-connectAttr "place2dTexture480.vt2" "file2111.vt2";
-connectAttr "place2dTexture480.vt3" "file2111.vt3";
-connectAttr "place2dTexture480.vc1" "file2111.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2112.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2112.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2112.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2112.ws";
-connectAttr "place2dTexture480.o" "file2112.uv";
-connectAttr "place2dTexture480.ofs" "file2112.fs";
-connectAttr "place2dTexture480.c" "file2112.c";
-connectAttr "place2dTexture480.tf" "file2112.tf";
-connectAttr "place2dTexture480.rf" "file2112.rf";
-connectAttr "place2dTexture480.mu" "file2112.mu";
-connectAttr "place2dTexture480.mv" "file2112.mv";
-connectAttr "place2dTexture480.s" "file2112.s";
-connectAttr "place2dTexture480.wu" "file2112.wu";
-connectAttr "place2dTexture480.wv" "file2112.wv";
-connectAttr "place2dTexture480.re" "file2112.re";
-connectAttr "place2dTexture480.of" "file2112.of";
-connectAttr "place2dTexture480.r" "file2112.ro";
-connectAttr "place2dTexture480.n" "file2112.n";
-connectAttr "place2dTexture480.vt1" "file2112.vt1";
-connectAttr "place2dTexture480.vt2" "file2112.vt2";
-connectAttr "place2dTexture480.vt3" "file2112.vt3";
-connectAttr "place2dTexture480.vc1" "file2112.vc1";
-connectAttr "file2108.oa" "bump2d398.bv";
 connectAttr "set408.msg" "materialInfo594.sg";
-connectAttr "file2112.oc" "multiplyDivide405.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2113.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2113.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2113.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2113.ws";
-connectAttr "place2dTexture481.o" "file2113.uv";
-connectAttr "place2dTexture481.ofs" "file2113.fs";
-connectAttr "place2dTexture481.c" "file2113.c";
-connectAttr "place2dTexture481.tf" "file2113.tf";
-connectAttr "place2dTexture481.rf" "file2113.rf";
-connectAttr "place2dTexture481.mu" "file2113.mu";
-connectAttr "place2dTexture481.mv" "file2113.mv";
-connectAttr "place2dTexture481.s" "file2113.s";
-connectAttr "place2dTexture481.wu" "file2113.wu";
-connectAttr "place2dTexture481.wv" "file2113.wv";
-connectAttr "place2dTexture481.re" "file2113.re";
-connectAttr "place2dTexture481.of" "file2113.of";
-connectAttr "place2dTexture481.r" "file2113.ro";
-connectAttr "place2dTexture481.n" "file2113.n";
-connectAttr "place2dTexture481.vt1" "file2113.vt1";
-connectAttr "place2dTexture481.vt2" "file2113.vt2";
-connectAttr "place2dTexture481.vt3" "file2113.vt3";
-connectAttr "place2dTexture481.vc1" "file2113.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2114.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2114.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2114.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2114.ws";
-connectAttr "place2dTexture481.o" "file2114.uv";
-connectAttr "place2dTexture481.ofs" "file2114.fs";
-connectAttr "place2dTexture481.c" "file2114.c";
-connectAttr "place2dTexture481.tf" "file2114.tf";
-connectAttr "place2dTexture481.rf" "file2114.rf";
-connectAttr "place2dTexture481.mu" "file2114.mu";
-connectAttr "place2dTexture481.mv" "file2114.mv";
-connectAttr "place2dTexture481.s" "file2114.s";
-connectAttr "place2dTexture481.wu" "file2114.wu";
-connectAttr "place2dTexture481.wv" "file2114.wv";
-connectAttr "place2dTexture481.re" "file2114.re";
-connectAttr "place2dTexture481.of" "file2114.of";
-connectAttr "place2dTexture481.r" "file2114.ro";
-connectAttr "place2dTexture481.n" "file2114.n";
-connectAttr "place2dTexture481.vt1" "file2114.vt1";
-connectAttr "place2dTexture481.vt2" "file2114.vt2";
-connectAttr "place2dTexture481.vt3" "file2114.vt3";
-connectAttr "place2dTexture481.vc1" "file2114.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2115.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2115.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2115.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2115.ws";
-connectAttr "place2dTexture481.o" "file2115.uv";
-connectAttr "place2dTexture481.ofs" "file2115.fs";
-connectAttr "place2dTexture481.c" "file2115.c";
-connectAttr "place2dTexture481.tf" "file2115.tf";
-connectAttr "place2dTexture481.rf" "file2115.rf";
-connectAttr "place2dTexture481.mu" "file2115.mu";
-connectAttr "place2dTexture481.mv" "file2115.mv";
-connectAttr "place2dTexture481.s" "file2115.s";
-connectAttr "place2dTexture481.wu" "file2115.wu";
-connectAttr "place2dTexture481.wv" "file2115.wv";
-connectAttr "place2dTexture481.re" "file2115.re";
-connectAttr "place2dTexture481.of" "file2115.of";
-connectAttr "place2dTexture481.r" "file2115.ro";
-connectAttr "place2dTexture481.n" "file2115.n";
-connectAttr "place2dTexture481.vt1" "file2115.vt1";
-connectAttr "place2dTexture481.vt2" "file2115.vt2";
-connectAttr "place2dTexture481.vt3" "file2115.vt3";
-connectAttr "place2dTexture481.vc1" "file2115.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2116.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2116.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2116.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2116.ws";
-connectAttr "place2dTexture481.o" "file2116.uv";
-connectAttr "place2dTexture481.ofs" "file2116.fs";
-connectAttr "place2dTexture481.c" "file2116.c";
-connectAttr "place2dTexture481.tf" "file2116.tf";
-connectAttr "place2dTexture481.rf" "file2116.rf";
-connectAttr "place2dTexture481.mu" "file2116.mu";
-connectAttr "place2dTexture481.mv" "file2116.mv";
-connectAttr "place2dTexture481.s" "file2116.s";
-connectAttr "place2dTexture481.wu" "file2116.wu";
-connectAttr "place2dTexture481.wv" "file2116.wv";
-connectAttr "place2dTexture481.re" "file2116.re";
-connectAttr "place2dTexture481.of" "file2116.of";
-connectAttr "place2dTexture481.r" "file2116.ro";
-connectAttr "place2dTexture481.n" "file2116.n";
-connectAttr "place2dTexture481.vt1" "file2116.vt1";
-connectAttr "place2dTexture481.vt2" "file2116.vt2";
-connectAttr "place2dTexture481.vt3" "file2116.vt3";
-connectAttr "place2dTexture481.vc1" "file2116.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2117.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2117.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2117.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2117.ws";
-connectAttr "place2dTexture481.o" "file2117.uv";
-connectAttr "place2dTexture481.ofs" "file2117.fs";
-connectAttr "place2dTexture481.c" "file2117.c";
-connectAttr "place2dTexture481.tf" "file2117.tf";
-connectAttr "place2dTexture481.rf" "file2117.rf";
-connectAttr "place2dTexture481.mu" "file2117.mu";
-connectAttr "place2dTexture481.mv" "file2117.mv";
-connectAttr "place2dTexture481.s" "file2117.s";
-connectAttr "place2dTexture481.wu" "file2117.wu";
-connectAttr "place2dTexture481.wv" "file2117.wv";
-connectAttr "place2dTexture481.re" "file2117.re";
-connectAttr "place2dTexture481.of" "file2117.of";
-connectAttr "place2dTexture481.r" "file2117.ro";
-connectAttr "place2dTexture481.n" "file2117.n";
-connectAttr "place2dTexture481.vt1" "file2117.vt1";
-connectAttr "place2dTexture481.vt2" "file2117.vt2";
-connectAttr "place2dTexture481.vt3" "file2117.vt3";
-connectAttr "place2dTexture481.vc1" "file2117.vc1";
-connectAttr "file2113.oc" "multiplyDivide406.i1";
 connectAttr "set409.msg" "materialInfo595.sg";
-connectAttr "file2116.oa" "bump2d399.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file2118.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2118.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2118.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2118.ws";
-connectAttr "place2dTexture482.o" "file2118.uv";
-connectAttr "place2dTexture482.ofs" "file2118.fs";
-connectAttr "place2dTexture482.c" "file2118.c";
-connectAttr "place2dTexture482.tf" "file2118.tf";
-connectAttr "place2dTexture482.rf" "file2118.rf";
-connectAttr "place2dTexture482.mu" "file2118.mu";
-connectAttr "place2dTexture482.mv" "file2118.mv";
-connectAttr "place2dTexture482.s" "file2118.s";
-connectAttr "place2dTexture482.wu" "file2118.wu";
-connectAttr "place2dTexture482.wv" "file2118.wv";
-connectAttr "place2dTexture482.re" "file2118.re";
-connectAttr "place2dTexture482.of" "file2118.of";
-connectAttr "place2dTexture482.r" "file2118.ro";
-connectAttr "place2dTexture482.n" "file2118.n";
-connectAttr "place2dTexture482.vt1" "file2118.vt1";
-connectAttr "place2dTexture482.vt2" "file2118.vt2";
-connectAttr "place2dTexture482.vt3" "file2118.vt3";
-connectAttr "place2dTexture482.vc1" "file2118.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2119.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2119.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2119.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2119.ws";
-connectAttr "place2dTexture482.o" "file2119.uv";
-connectAttr "place2dTexture482.ofs" "file2119.fs";
-connectAttr "place2dTexture482.c" "file2119.c";
-connectAttr "place2dTexture482.tf" "file2119.tf";
-connectAttr "place2dTexture482.rf" "file2119.rf";
-connectAttr "place2dTexture482.mu" "file2119.mu";
-connectAttr "place2dTexture482.mv" "file2119.mv";
-connectAttr "place2dTexture482.s" "file2119.s";
-connectAttr "place2dTexture482.wu" "file2119.wu";
-connectAttr "place2dTexture482.wv" "file2119.wv";
-connectAttr "place2dTexture482.re" "file2119.re";
-connectAttr "place2dTexture482.of" "file2119.of";
-connectAttr "place2dTexture482.r" "file2119.ro";
-connectAttr "place2dTexture482.n" "file2119.n";
-connectAttr "place2dTexture482.vt1" "file2119.vt1";
-connectAttr "place2dTexture482.vt2" "file2119.vt2";
-connectAttr "place2dTexture482.vt3" "file2119.vt3";
-connectAttr "place2dTexture482.vc1" "file2119.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2120.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2120.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2120.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2120.ws";
-connectAttr "place2dTexture482.o" "file2120.uv";
-connectAttr "place2dTexture482.ofs" "file2120.fs";
-connectAttr "place2dTexture482.c" "file2120.c";
-connectAttr "place2dTexture482.tf" "file2120.tf";
-connectAttr "place2dTexture482.rf" "file2120.rf";
-connectAttr "place2dTexture482.mu" "file2120.mu";
-connectAttr "place2dTexture482.mv" "file2120.mv";
-connectAttr "place2dTexture482.s" "file2120.s";
-connectAttr "place2dTexture482.wu" "file2120.wu";
-connectAttr "place2dTexture482.wv" "file2120.wv";
-connectAttr "place2dTexture482.re" "file2120.re";
-connectAttr "place2dTexture482.of" "file2120.of";
-connectAttr "place2dTexture482.r" "file2120.ro";
-connectAttr "place2dTexture482.n" "file2120.n";
-connectAttr "place2dTexture482.vt1" "file2120.vt1";
-connectAttr "place2dTexture482.vt2" "file2120.vt2";
-connectAttr "place2dTexture482.vt3" "file2120.vt3";
-connectAttr "place2dTexture482.vc1" "file2120.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2121.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2121.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2121.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2121.ws";
-connectAttr "place2dTexture482.o" "file2121.uv";
-connectAttr "place2dTexture482.ofs" "file2121.fs";
-connectAttr "place2dTexture482.c" "file2121.c";
-connectAttr "place2dTexture482.tf" "file2121.tf";
-connectAttr "place2dTexture482.rf" "file2121.rf";
-connectAttr "place2dTexture482.mu" "file2121.mu";
-connectAttr "place2dTexture482.mv" "file2121.mv";
-connectAttr "place2dTexture482.s" "file2121.s";
-connectAttr "place2dTexture482.wu" "file2121.wu";
-connectAttr "place2dTexture482.wv" "file2121.wv";
-connectAttr "place2dTexture482.re" "file2121.re";
-connectAttr "place2dTexture482.of" "file2121.of";
-connectAttr "place2dTexture482.r" "file2121.ro";
-connectAttr "place2dTexture482.n" "file2121.n";
-connectAttr "place2dTexture482.vt1" "file2121.vt1";
-connectAttr "place2dTexture482.vt2" "file2121.vt2";
-connectAttr "place2dTexture482.vt3" "file2121.vt3";
-connectAttr "place2dTexture482.vc1" "file2121.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2122.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2122.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2122.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2122.ws";
-connectAttr "place2dTexture482.o" "file2122.uv";
-connectAttr "place2dTexture482.ofs" "file2122.fs";
-connectAttr "place2dTexture482.c" "file2122.c";
-connectAttr "place2dTexture482.tf" "file2122.tf";
-connectAttr "place2dTexture482.rf" "file2122.rf";
-connectAttr "place2dTexture482.mu" "file2122.mu";
-connectAttr "place2dTexture482.mv" "file2122.mv";
-connectAttr "place2dTexture482.s" "file2122.s";
-connectAttr "place2dTexture482.wu" "file2122.wu";
-connectAttr "place2dTexture482.wv" "file2122.wv";
-connectAttr "place2dTexture482.re" "file2122.re";
-connectAttr "place2dTexture482.of" "file2122.of";
-connectAttr "place2dTexture482.r" "file2122.ro";
-connectAttr "place2dTexture482.n" "file2122.n";
-connectAttr "place2dTexture482.vt1" "file2122.vt1";
-connectAttr "place2dTexture482.vt2" "file2122.vt2";
-connectAttr "place2dTexture482.vt3" "file2122.vt3";
-connectAttr "place2dTexture482.vc1" "file2122.vc1";
-connectAttr "file2118.oa" "Apollo_Head.specular_roughness";
-connectAttr "bump2d400.o" "Apollo_Head.n";
-connectAttr "file2120.oa" "Apollo_Head.metalness";
-connectAttr "multiplyDivide407.o" "Apollo_Head.base_color";
-connectAttr "Apollo_Head.out" "set410.ss";
 connectAttr "groupId766.msg" "set410.gn" -na;
 connectAttr "set410.msg" "materialInfo596.sg";
-connectAttr "Apollo_Head.msg" "materialInfo596.m";
-connectAttr "file2118.msg" "materialInfo596.t" -na;
-connectAttr "file2119.oa" "bump2d400.bv";
-connectAttr "file2122.oc" "multiplyDivide407.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2123.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2123.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2123.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2123.ws";
-connectAttr "place2dTexture483.o" "file2123.uv";
-connectAttr "place2dTexture483.ofs" "file2123.fs";
-connectAttr "place2dTexture483.c" "file2123.c";
-connectAttr "place2dTexture483.tf" "file2123.tf";
-connectAttr "place2dTexture483.rf" "file2123.rf";
-connectAttr "place2dTexture483.mu" "file2123.mu";
-connectAttr "place2dTexture483.mv" "file2123.mv";
-connectAttr "place2dTexture483.s" "file2123.s";
-connectAttr "place2dTexture483.wu" "file2123.wu";
-connectAttr "place2dTexture483.wv" "file2123.wv";
-connectAttr "place2dTexture483.re" "file2123.re";
-connectAttr "place2dTexture483.of" "file2123.of";
-connectAttr "place2dTexture483.r" "file2123.ro";
-connectAttr "place2dTexture483.n" "file2123.n";
-connectAttr "place2dTexture483.vt1" "file2123.vt1";
-connectAttr "place2dTexture483.vt2" "file2123.vt2";
-connectAttr "place2dTexture483.vt3" "file2123.vt3";
-connectAttr "place2dTexture483.vc1" "file2123.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2124.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2124.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2124.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2124.ws";
-connectAttr "place2dTexture483.o" "file2124.uv";
-connectAttr "place2dTexture483.ofs" "file2124.fs";
-connectAttr "place2dTexture483.c" "file2124.c";
-connectAttr "place2dTexture483.tf" "file2124.tf";
-connectAttr "place2dTexture483.rf" "file2124.rf";
-connectAttr "place2dTexture483.mu" "file2124.mu";
-connectAttr "place2dTexture483.mv" "file2124.mv";
-connectAttr "place2dTexture483.s" "file2124.s";
-connectAttr "place2dTexture483.wu" "file2124.wu";
-connectAttr "place2dTexture483.wv" "file2124.wv";
-connectAttr "place2dTexture483.re" "file2124.re";
-connectAttr "place2dTexture483.of" "file2124.of";
-connectAttr "place2dTexture483.r" "file2124.ro";
-connectAttr "place2dTexture483.n" "file2124.n";
-connectAttr "place2dTexture483.vt1" "file2124.vt1";
-connectAttr "place2dTexture483.vt2" "file2124.vt2";
-connectAttr "place2dTexture483.vt3" "file2124.vt3";
-connectAttr "place2dTexture483.vc1" "file2124.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2125.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2125.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2125.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2125.ws";
-connectAttr "place2dTexture483.o" "file2125.uv";
-connectAttr "place2dTexture483.ofs" "file2125.fs";
-connectAttr "place2dTexture483.c" "file2125.c";
-connectAttr "place2dTexture483.tf" "file2125.tf";
-connectAttr "place2dTexture483.rf" "file2125.rf";
-connectAttr "place2dTexture483.mu" "file2125.mu";
-connectAttr "place2dTexture483.mv" "file2125.mv";
-connectAttr "place2dTexture483.s" "file2125.s";
-connectAttr "place2dTexture483.wu" "file2125.wu";
-connectAttr "place2dTexture483.wv" "file2125.wv";
-connectAttr "place2dTexture483.re" "file2125.re";
-connectAttr "place2dTexture483.of" "file2125.of";
-connectAttr "place2dTexture483.r" "file2125.ro";
-connectAttr "place2dTexture483.n" "file2125.n";
-connectAttr "place2dTexture483.vt1" "file2125.vt1";
-connectAttr "place2dTexture483.vt2" "file2125.vt2";
-connectAttr "place2dTexture483.vt3" "file2125.vt3";
-connectAttr "place2dTexture483.vc1" "file2125.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2126.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2126.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2126.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2126.ws";
-connectAttr "place2dTexture483.o" "file2126.uv";
-connectAttr "place2dTexture483.ofs" "file2126.fs";
-connectAttr "place2dTexture483.c" "file2126.c";
-connectAttr "place2dTexture483.tf" "file2126.tf";
-connectAttr "place2dTexture483.rf" "file2126.rf";
-connectAttr "place2dTexture483.mu" "file2126.mu";
-connectAttr "place2dTexture483.mv" "file2126.mv";
-connectAttr "place2dTexture483.s" "file2126.s";
-connectAttr "place2dTexture483.wu" "file2126.wu";
-connectAttr "place2dTexture483.wv" "file2126.wv";
-connectAttr "place2dTexture483.re" "file2126.re";
-connectAttr "place2dTexture483.of" "file2126.of";
-connectAttr "place2dTexture483.r" "file2126.ro";
-connectAttr "place2dTexture483.n" "file2126.n";
-connectAttr "place2dTexture483.vt1" "file2126.vt1";
-connectAttr "place2dTexture483.vt2" "file2126.vt2";
-connectAttr "place2dTexture483.vt3" "file2126.vt3";
-connectAttr "place2dTexture483.vc1" "file2126.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2127.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2127.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2127.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2127.ws";
-connectAttr "place2dTexture483.o" "file2127.uv";
-connectAttr "place2dTexture483.ofs" "file2127.fs";
-connectAttr "place2dTexture483.c" "file2127.c";
-connectAttr "place2dTexture483.tf" "file2127.tf";
-connectAttr "place2dTexture483.rf" "file2127.rf";
-connectAttr "place2dTexture483.mu" "file2127.mu";
-connectAttr "place2dTexture483.mv" "file2127.mv";
-connectAttr "place2dTexture483.s" "file2127.s";
-connectAttr "place2dTexture483.wu" "file2127.wu";
-connectAttr "place2dTexture483.wv" "file2127.wv";
-connectAttr "place2dTexture483.re" "file2127.re";
-connectAttr "place2dTexture483.of" "file2127.of";
-connectAttr "place2dTexture483.r" "file2127.ro";
-connectAttr "place2dTexture483.n" "file2127.n";
-connectAttr "place2dTexture483.vt1" "file2127.vt1";
-connectAttr "place2dTexture483.vt2" "file2127.vt2";
-connectAttr "place2dTexture483.vt3" "file2127.vt3";
-connectAttr "place2dTexture483.vc1" "file2127.vc1";
-connectAttr "file2123.oc" "multiplyDivide408.i1";
-connectAttr "multiplyDivide408.o" "Apollo_Lower_Half.base_color";
-connectAttr "file2125.oa" "Apollo_Lower_Half.metalness";
-connectAttr "bump2d401.o" "Apollo_Lower_Half.n";
-connectAttr "file2127.oa" "Apollo_Lower_Half.specular_roughness";
-connectAttr "Apollo_Lower_Half.out" "set411.ss";
 connectAttr "groupId762.msg" "set411.gn" -na;
 connectAttr "set411.msg" "materialInfo597.sg";
-connectAttr "Apollo_Lower_Half.msg" "materialInfo597.m";
-connectAttr "file2123.msg" "materialInfo597.t" -na;
-connectAttr "file2126.oa" "bump2d401.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file2128.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2128.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2128.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2128.ws";
-connectAttr "place2dTexture484.o" "file2128.uv";
-connectAttr "place2dTexture484.ofs" "file2128.fs";
-connectAttr "place2dTexture484.c" "file2128.c";
-connectAttr "place2dTexture484.tf" "file2128.tf";
-connectAttr "place2dTexture484.rf" "file2128.rf";
-connectAttr "place2dTexture484.mu" "file2128.mu";
-connectAttr "place2dTexture484.mv" "file2128.mv";
-connectAttr "place2dTexture484.s" "file2128.s";
-connectAttr "place2dTexture484.wu" "file2128.wu";
-connectAttr "place2dTexture484.wv" "file2128.wv";
-connectAttr "place2dTexture484.re" "file2128.re";
-connectAttr "place2dTexture484.of" "file2128.of";
-connectAttr "place2dTexture484.r" "file2128.ro";
-connectAttr "place2dTexture484.n" "file2128.n";
-connectAttr "place2dTexture484.vt1" "file2128.vt1";
-connectAttr "place2dTexture484.vt2" "file2128.vt2";
-connectAttr "place2dTexture484.vt3" "file2128.vt3";
-connectAttr "place2dTexture484.vc1" "file2128.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2129.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2129.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2129.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2129.ws";
-connectAttr "place2dTexture484.o" "file2129.uv";
-connectAttr "place2dTexture484.ofs" "file2129.fs";
-connectAttr "place2dTexture484.c" "file2129.c";
-connectAttr "place2dTexture484.tf" "file2129.tf";
-connectAttr "place2dTexture484.rf" "file2129.rf";
-connectAttr "place2dTexture484.mu" "file2129.mu";
-connectAttr "place2dTexture484.mv" "file2129.mv";
-connectAttr "place2dTexture484.s" "file2129.s";
-connectAttr "place2dTexture484.wu" "file2129.wu";
-connectAttr "place2dTexture484.wv" "file2129.wv";
-connectAttr "place2dTexture484.re" "file2129.re";
-connectAttr "place2dTexture484.of" "file2129.of";
-connectAttr "place2dTexture484.r" "file2129.ro";
-connectAttr "place2dTexture484.n" "file2129.n";
-connectAttr "place2dTexture484.vt1" "file2129.vt1";
-connectAttr "place2dTexture484.vt2" "file2129.vt2";
-connectAttr "place2dTexture484.vt3" "file2129.vt3";
-connectAttr "place2dTexture484.vc1" "file2129.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2130.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2130.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2130.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2130.ws";
-connectAttr "place2dTexture484.o" "file2130.uv";
-connectAttr "place2dTexture484.ofs" "file2130.fs";
-connectAttr "place2dTexture484.c" "file2130.c";
-connectAttr "place2dTexture484.tf" "file2130.tf";
-connectAttr "place2dTexture484.rf" "file2130.rf";
-connectAttr "place2dTexture484.mu" "file2130.mu";
-connectAttr "place2dTexture484.mv" "file2130.mv";
-connectAttr "place2dTexture484.s" "file2130.s";
-connectAttr "place2dTexture484.wu" "file2130.wu";
-connectAttr "place2dTexture484.wv" "file2130.wv";
-connectAttr "place2dTexture484.re" "file2130.re";
-connectAttr "place2dTexture484.of" "file2130.of";
-connectAttr "place2dTexture484.r" "file2130.ro";
-connectAttr "place2dTexture484.n" "file2130.n";
-connectAttr "place2dTexture484.vt1" "file2130.vt1";
-connectAttr "place2dTexture484.vt2" "file2130.vt2";
-connectAttr "place2dTexture484.vt3" "file2130.vt3";
-connectAttr "place2dTexture484.vc1" "file2130.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2131.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2131.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2131.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2131.ws";
-connectAttr "place2dTexture484.o" "file2131.uv";
-connectAttr "place2dTexture484.ofs" "file2131.fs";
-connectAttr "place2dTexture484.c" "file2131.c";
-connectAttr "place2dTexture484.tf" "file2131.tf";
-connectAttr "place2dTexture484.rf" "file2131.rf";
-connectAttr "place2dTexture484.mu" "file2131.mu";
-connectAttr "place2dTexture484.mv" "file2131.mv";
-connectAttr "place2dTexture484.s" "file2131.s";
-connectAttr "place2dTexture484.wu" "file2131.wu";
-connectAttr "place2dTexture484.wv" "file2131.wv";
-connectAttr "place2dTexture484.re" "file2131.re";
-connectAttr "place2dTexture484.of" "file2131.of";
-connectAttr "place2dTexture484.r" "file2131.ro";
-connectAttr "place2dTexture484.n" "file2131.n";
-connectAttr "place2dTexture484.vt1" "file2131.vt1";
-connectAttr "place2dTexture484.vt2" "file2131.vt2";
-connectAttr "place2dTexture484.vt3" "file2131.vt3";
-connectAttr "place2dTexture484.vc1" "file2131.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2132.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2132.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2132.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2132.ws";
-connectAttr "place2dTexture484.o" "file2132.uv";
-connectAttr "place2dTexture484.ofs" "file2132.fs";
-connectAttr "place2dTexture484.c" "file2132.c";
-connectAttr "place2dTexture484.tf" "file2132.tf";
-connectAttr "place2dTexture484.rf" "file2132.rf";
-connectAttr "place2dTexture484.mu" "file2132.mu";
-connectAttr "place2dTexture484.mv" "file2132.mv";
-connectAttr "place2dTexture484.s" "file2132.s";
-connectAttr "place2dTexture484.wu" "file2132.wu";
-connectAttr "place2dTexture484.wv" "file2132.wv";
-connectAttr "place2dTexture484.re" "file2132.re";
-connectAttr "place2dTexture484.of" "file2132.of";
-connectAttr "place2dTexture484.r" "file2132.ro";
-connectAttr "place2dTexture484.n" "file2132.n";
-connectAttr "place2dTexture484.vt1" "file2132.vt1";
-connectAttr "place2dTexture484.vt2" "file2132.vt2";
-connectAttr "place2dTexture484.vt3" "file2132.vt3";
-connectAttr "place2dTexture484.vc1" "file2132.vc1";
-connectAttr "file2128.oa" "Apollo_Arm_Main.specular_roughness";
-connectAttr "bump2d402.o" "Apollo_Arm_Main.n";
-connectAttr "file2130.oa" "Apollo_Arm_Main.metalness";
-connectAttr "multiplyDivide409.o" "Apollo_Arm_Main.base_color";
-connectAttr "Apollo_Arm_Main.out" "set412.ss";
 connectAttr "groupId763.msg" "set412.gn" -na;
 connectAttr "set412.msg" "materialInfo598.sg";
-connectAttr "Apollo_Arm_Main.msg" "materialInfo598.m";
-connectAttr "Apollo_Arm_Main.msg" "materialInfo598.t" -na;
-connectAttr "file2129.oa" "bump2d402.bv";
-connectAttr "file2132.oc" "multiplyDivide409.i1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2133.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2133.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2133.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2133.ws";
-connectAttr "place2dTexture485.o" "file2133.uv";
-connectAttr "place2dTexture485.ofs" "file2133.fs";
-connectAttr "place2dTexture485.c" "file2133.c";
-connectAttr "place2dTexture485.tf" "file2133.tf";
-connectAttr "place2dTexture485.rf" "file2133.rf";
-connectAttr "place2dTexture485.mu" "file2133.mu";
-connectAttr "place2dTexture485.mv" "file2133.mv";
-connectAttr "place2dTexture485.s" "file2133.s";
-connectAttr "place2dTexture485.wu" "file2133.wu";
-connectAttr "place2dTexture485.wv" "file2133.wv";
-connectAttr "place2dTexture485.re" "file2133.re";
-connectAttr "place2dTexture485.of" "file2133.of";
-connectAttr "place2dTexture485.r" "file2133.ro";
-connectAttr "place2dTexture485.n" "file2133.n";
-connectAttr "place2dTexture485.vt1" "file2133.vt1";
-connectAttr "place2dTexture485.vt2" "file2133.vt2";
-connectAttr "place2dTexture485.vt3" "file2133.vt3";
-connectAttr "place2dTexture485.vc1" "file2133.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2134.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2134.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2134.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2134.ws";
-connectAttr "place2dTexture485.o" "file2134.uv";
-connectAttr "place2dTexture485.ofs" "file2134.fs";
-connectAttr "place2dTexture485.c" "file2134.c";
-connectAttr "place2dTexture485.tf" "file2134.tf";
-connectAttr "place2dTexture485.rf" "file2134.rf";
-connectAttr "place2dTexture485.mu" "file2134.mu";
-connectAttr "place2dTexture485.mv" "file2134.mv";
-connectAttr "place2dTexture485.s" "file2134.s";
-connectAttr "place2dTexture485.wu" "file2134.wu";
-connectAttr "place2dTexture485.wv" "file2134.wv";
-connectAttr "place2dTexture485.re" "file2134.re";
-connectAttr "place2dTexture485.of" "file2134.of";
-connectAttr "place2dTexture485.r" "file2134.ro";
-connectAttr "place2dTexture485.n" "file2134.n";
-connectAttr "place2dTexture485.vt1" "file2134.vt1";
-connectAttr "place2dTexture485.vt2" "file2134.vt2";
-connectAttr "place2dTexture485.vt3" "file2134.vt3";
-connectAttr "place2dTexture485.vc1" "file2134.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2135.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2135.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2135.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2135.ws";
-connectAttr "place2dTexture485.o" "file2135.uv";
-connectAttr "place2dTexture485.ofs" "file2135.fs";
-connectAttr "place2dTexture485.c" "file2135.c";
-connectAttr "place2dTexture485.tf" "file2135.tf";
-connectAttr "place2dTexture485.rf" "file2135.rf";
-connectAttr "place2dTexture485.mu" "file2135.mu";
-connectAttr "place2dTexture485.mv" "file2135.mv";
-connectAttr "place2dTexture485.s" "file2135.s";
-connectAttr "place2dTexture485.wu" "file2135.wu";
-connectAttr "place2dTexture485.wv" "file2135.wv";
-connectAttr "place2dTexture485.re" "file2135.re";
-connectAttr "place2dTexture485.of" "file2135.of";
-connectAttr "place2dTexture485.r" "file2135.ro";
-connectAttr "place2dTexture485.n" "file2135.n";
-connectAttr "place2dTexture485.vt1" "file2135.vt1";
-connectAttr "place2dTexture485.vt2" "file2135.vt2";
-connectAttr "place2dTexture485.vt3" "file2135.vt3";
-connectAttr "place2dTexture485.vc1" "file2135.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2136.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2136.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2136.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2136.ws";
-connectAttr "place2dTexture485.o" "file2136.uv";
-connectAttr "place2dTexture485.ofs" "file2136.fs";
-connectAttr "place2dTexture485.c" "file2136.c";
-connectAttr "place2dTexture485.tf" "file2136.tf";
-connectAttr "place2dTexture485.rf" "file2136.rf";
-connectAttr "place2dTexture485.mu" "file2136.mu";
-connectAttr "place2dTexture485.mv" "file2136.mv";
-connectAttr "place2dTexture485.s" "file2136.s";
-connectAttr "place2dTexture485.wu" "file2136.wu";
-connectAttr "place2dTexture485.wv" "file2136.wv";
-connectAttr "place2dTexture485.re" "file2136.re";
-connectAttr "place2dTexture485.of" "file2136.of";
-connectAttr "place2dTexture485.r" "file2136.ro";
-connectAttr "place2dTexture485.n" "file2136.n";
-connectAttr "place2dTexture485.vt1" "file2136.vt1";
-connectAttr "place2dTexture485.vt2" "file2136.vt2";
-connectAttr "place2dTexture485.vt3" "file2136.vt3";
-connectAttr "place2dTexture485.vc1" "file2136.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2137.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2137.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2137.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2137.ws";
-connectAttr "place2dTexture485.o" "file2137.uv";
-connectAttr "place2dTexture485.ofs" "file2137.fs";
-connectAttr "place2dTexture485.c" "file2137.c";
-connectAttr "place2dTexture485.tf" "file2137.tf";
-connectAttr "place2dTexture485.rf" "file2137.rf";
-connectAttr "place2dTexture485.mu" "file2137.mu";
-connectAttr "place2dTexture485.mv" "file2137.mv";
-connectAttr "place2dTexture485.s" "file2137.s";
-connectAttr "place2dTexture485.wu" "file2137.wu";
-connectAttr "place2dTexture485.wv" "file2137.wv";
-connectAttr "place2dTexture485.re" "file2137.re";
-connectAttr "place2dTexture485.of" "file2137.of";
-connectAttr "place2dTexture485.r" "file2137.ro";
-connectAttr "place2dTexture485.n" "file2137.n";
-connectAttr "place2dTexture485.vt1" "file2137.vt1";
-connectAttr "place2dTexture485.vt2" "file2137.vt2";
-connectAttr "place2dTexture485.vt3" "file2137.vt3";
-connectAttr "place2dTexture485.vc1" "file2137.vc1";
-connectAttr "file2133.oc" "multiplyDivide410.i1";
-connectAttr "multiplyDivide410.o" "Tread_Base.base_color";
-connectAttr "file2135.oa" "Tread_Base.metalness";
-connectAttr "bump2d403.o" "Tread_Base.n";
-connectAttr "file2137.oa" "Tread_Base.specular_roughness";
-connectAttr "Tread_Base.out" "set413.ss";
 connectAttr "set413.msg" "materialInfo599.sg";
-connectAttr "Tread_Base.msg" "materialInfo599.m";
-connectAttr "Tread_Base.msg" "materialInfo599.t" -na;
-connectAttr "file2136.oa" "bump2d403.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file2138.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2138.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2138.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2138.ws";
-connectAttr "place2dTexture486.o" "file2138.uv";
-connectAttr "place2dTexture486.ofs" "file2138.fs";
-connectAttr "place2dTexture486.c" "file2138.c";
-connectAttr "place2dTexture486.tf" "file2138.tf";
-connectAttr "place2dTexture486.rf" "file2138.rf";
-connectAttr "place2dTexture486.mu" "file2138.mu";
-connectAttr "place2dTexture486.mv" "file2138.mv";
-connectAttr "place2dTexture486.s" "file2138.s";
-connectAttr "place2dTexture486.wu" "file2138.wu";
-connectAttr "place2dTexture486.wv" "file2138.wv";
-connectAttr "place2dTexture486.re" "file2138.re";
-connectAttr "place2dTexture486.of" "file2138.of";
-connectAttr "place2dTexture486.r" "file2138.ro";
-connectAttr "place2dTexture486.n" "file2138.n";
-connectAttr "place2dTexture486.vt1" "file2138.vt1";
-connectAttr "place2dTexture486.vt2" "file2138.vt2";
-connectAttr "place2dTexture486.vt3" "file2138.vt3";
-connectAttr "place2dTexture486.vc1" "file2138.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2139.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2139.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2139.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2139.ws";
-connectAttr "place2dTexture486.o" "file2139.uv";
-connectAttr "place2dTexture486.ofs" "file2139.fs";
-connectAttr "place2dTexture486.c" "file2139.c";
-connectAttr "place2dTexture486.tf" "file2139.tf";
-connectAttr "place2dTexture486.rf" "file2139.rf";
-connectAttr "place2dTexture486.mu" "file2139.mu";
-connectAttr "place2dTexture486.mv" "file2139.mv";
-connectAttr "place2dTexture486.s" "file2139.s";
-connectAttr "place2dTexture486.wu" "file2139.wu";
-connectAttr "place2dTexture486.wv" "file2139.wv";
-connectAttr "place2dTexture486.re" "file2139.re";
-connectAttr "place2dTexture486.of" "file2139.of";
-connectAttr "place2dTexture486.r" "file2139.ro";
-connectAttr "place2dTexture486.n" "file2139.n";
-connectAttr "place2dTexture486.vt1" "file2139.vt1";
-connectAttr "place2dTexture486.vt2" "file2139.vt2";
-connectAttr "place2dTexture486.vt3" "file2139.vt3";
-connectAttr "place2dTexture486.vc1" "file2139.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2140.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2140.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2140.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2140.ws";
-connectAttr "place2dTexture486.o" "file2140.uv";
-connectAttr "place2dTexture486.ofs" "file2140.fs";
-connectAttr "place2dTexture486.c" "file2140.c";
-connectAttr "place2dTexture486.tf" "file2140.tf";
-connectAttr "place2dTexture486.rf" "file2140.rf";
-connectAttr "place2dTexture486.mu" "file2140.mu";
-connectAttr "place2dTexture486.mv" "file2140.mv";
-connectAttr "place2dTexture486.s" "file2140.s";
-connectAttr "place2dTexture486.wu" "file2140.wu";
-connectAttr "place2dTexture486.wv" "file2140.wv";
-connectAttr "place2dTexture486.re" "file2140.re";
-connectAttr "place2dTexture486.of" "file2140.of";
-connectAttr "place2dTexture486.r" "file2140.ro";
-connectAttr "place2dTexture486.n" "file2140.n";
-connectAttr "place2dTexture486.vt1" "file2140.vt1";
-connectAttr "place2dTexture486.vt2" "file2140.vt2";
-connectAttr "place2dTexture486.vt3" "file2140.vt3";
-connectAttr "place2dTexture486.vc1" "file2140.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2141.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2141.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2141.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2141.ws";
-connectAttr "place2dTexture486.o" "file2141.uv";
-connectAttr "place2dTexture486.ofs" "file2141.fs";
-connectAttr "place2dTexture486.c" "file2141.c";
-connectAttr "place2dTexture486.tf" "file2141.tf";
-connectAttr "place2dTexture486.rf" "file2141.rf";
-connectAttr "place2dTexture486.mu" "file2141.mu";
-connectAttr "place2dTexture486.mv" "file2141.mv";
-connectAttr "place2dTexture486.s" "file2141.s";
-connectAttr "place2dTexture486.wu" "file2141.wu";
-connectAttr "place2dTexture486.wv" "file2141.wv";
-connectAttr "place2dTexture486.re" "file2141.re";
-connectAttr "place2dTexture486.of" "file2141.of";
-connectAttr "place2dTexture486.r" "file2141.ro";
-connectAttr "place2dTexture486.n" "file2141.n";
-connectAttr "place2dTexture486.vt1" "file2141.vt1";
-connectAttr "place2dTexture486.vt2" "file2141.vt2";
-connectAttr "place2dTexture486.vt3" "file2141.vt3";
-connectAttr "place2dTexture486.vc1" "file2141.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2142.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2142.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2142.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2142.ws";
-connectAttr "place2dTexture486.o" "file2142.uv";
-connectAttr "place2dTexture486.ofs" "file2142.fs";
-connectAttr "place2dTexture486.c" "file2142.c";
-connectAttr "place2dTexture486.tf" "file2142.tf";
-connectAttr "place2dTexture486.rf" "file2142.rf";
-connectAttr "place2dTexture486.mu" "file2142.mu";
-connectAttr "place2dTexture486.mv" "file2142.mv";
-connectAttr "place2dTexture486.s" "file2142.s";
-connectAttr "place2dTexture486.wu" "file2142.wu";
-connectAttr "place2dTexture486.wv" "file2142.wv";
-connectAttr "place2dTexture486.re" "file2142.re";
-connectAttr "place2dTexture486.of" "file2142.of";
-connectAttr "place2dTexture486.r" "file2142.ro";
-connectAttr "place2dTexture486.n" "file2142.n";
-connectAttr "place2dTexture486.vt1" "file2142.vt1";
-connectAttr "place2dTexture486.vt2" "file2142.vt2";
-connectAttr "place2dTexture486.vt3" "file2142.vt3";
-connectAttr "place2dTexture486.vc1" "file2142.vc1";
-connectAttr "file2138.oc" "multiplyDivide411.i1";
-connectAttr "multiplyDivide411.o" "Treads.base_color";
-connectAttr "file2140.oa" "Treads.metalness";
-connectAttr "bump2d404.o" "Treads.n";
-connectAttr "file2142.oa" "Treads.specular_roughness";
-connectAttr "Treads.out" "set414.ss";
 connectAttr "set414.msg" "materialInfo600.sg";
-connectAttr "Treads.msg" "materialInfo600.m";
-connectAttr "Treads.msg" "materialInfo600.t" -na;
-connectAttr "file2141.oa" "bump2d404.bv";
-connectAttr ":defaultColorMgtGlobals.cme" "file2143.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2143.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2143.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2143.ws";
-connectAttr "place2dTexture487.o" "file2143.uv";
-connectAttr "place2dTexture487.ofs" "file2143.fs";
-connectAttr "place2dTexture487.c" "file2143.c";
-connectAttr "place2dTexture487.tf" "file2143.tf";
-connectAttr "place2dTexture487.rf" "file2143.rf";
-connectAttr "place2dTexture487.mu" "file2143.mu";
-connectAttr "place2dTexture487.mv" "file2143.mv";
-connectAttr "place2dTexture487.s" "file2143.s";
-connectAttr "place2dTexture487.wu" "file2143.wu";
-connectAttr "place2dTexture487.wv" "file2143.wv";
-connectAttr "place2dTexture487.re" "file2143.re";
-connectAttr "place2dTexture487.of" "file2143.of";
-connectAttr "place2dTexture487.r" "file2143.ro";
-connectAttr "place2dTexture487.n" "file2143.n";
-connectAttr "place2dTexture487.vt1" "file2143.vt1";
-connectAttr "place2dTexture487.vt2" "file2143.vt2";
-connectAttr "place2dTexture487.vt3" "file2143.vt3";
-connectAttr "place2dTexture487.vc1" "file2143.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2144.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2144.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2144.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2144.ws";
-connectAttr "place2dTexture487.o" "file2144.uv";
-connectAttr "place2dTexture487.ofs" "file2144.fs";
-connectAttr "place2dTexture487.c" "file2144.c";
-connectAttr "place2dTexture487.tf" "file2144.tf";
-connectAttr "place2dTexture487.rf" "file2144.rf";
-connectAttr "place2dTexture487.mu" "file2144.mu";
-connectAttr "place2dTexture487.mv" "file2144.mv";
-connectAttr "place2dTexture487.s" "file2144.s";
-connectAttr "place2dTexture487.wu" "file2144.wu";
-connectAttr "place2dTexture487.wv" "file2144.wv";
-connectAttr "place2dTexture487.re" "file2144.re";
-connectAttr "place2dTexture487.of" "file2144.of";
-connectAttr "place2dTexture487.r" "file2144.ro";
-connectAttr "place2dTexture487.n" "file2144.n";
-connectAttr "place2dTexture487.vt1" "file2144.vt1";
-connectAttr "place2dTexture487.vt2" "file2144.vt2";
-connectAttr "place2dTexture487.vt3" "file2144.vt3";
-connectAttr "place2dTexture487.vc1" "file2144.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2145.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2145.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2145.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2145.ws";
-connectAttr "place2dTexture487.o" "file2145.uv";
-connectAttr "place2dTexture487.ofs" "file2145.fs";
-connectAttr "place2dTexture487.c" "file2145.c";
-connectAttr "place2dTexture487.tf" "file2145.tf";
-connectAttr "place2dTexture487.rf" "file2145.rf";
-connectAttr "place2dTexture487.mu" "file2145.mu";
-connectAttr "place2dTexture487.mv" "file2145.mv";
-connectAttr "place2dTexture487.s" "file2145.s";
-connectAttr "place2dTexture487.wu" "file2145.wu";
-connectAttr "place2dTexture487.wv" "file2145.wv";
-connectAttr "place2dTexture487.re" "file2145.re";
-connectAttr "place2dTexture487.of" "file2145.of";
-connectAttr "place2dTexture487.r" "file2145.ro";
-connectAttr "place2dTexture487.n" "file2145.n";
-connectAttr "place2dTexture487.vt1" "file2145.vt1";
-connectAttr "place2dTexture487.vt2" "file2145.vt2";
-connectAttr "place2dTexture487.vt3" "file2145.vt3";
-connectAttr "place2dTexture487.vc1" "file2145.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2146.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2146.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2146.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2146.ws";
-connectAttr "place2dTexture487.o" "file2146.uv";
-connectAttr "place2dTexture487.ofs" "file2146.fs";
-connectAttr "place2dTexture487.c" "file2146.c";
-connectAttr "place2dTexture487.tf" "file2146.tf";
-connectAttr "place2dTexture487.rf" "file2146.rf";
-connectAttr "place2dTexture487.mu" "file2146.mu";
-connectAttr "place2dTexture487.mv" "file2146.mv";
-connectAttr "place2dTexture487.s" "file2146.s";
-connectAttr "place2dTexture487.wu" "file2146.wu";
-connectAttr "place2dTexture487.wv" "file2146.wv";
-connectAttr "place2dTexture487.re" "file2146.re";
-connectAttr "place2dTexture487.of" "file2146.of";
-connectAttr "place2dTexture487.r" "file2146.ro";
-connectAttr "place2dTexture487.n" "file2146.n";
-connectAttr "place2dTexture487.vt1" "file2146.vt1";
-connectAttr "place2dTexture487.vt2" "file2146.vt2";
-connectAttr "place2dTexture487.vt3" "file2146.vt3";
-connectAttr "place2dTexture487.vc1" "file2146.vc1";
-connectAttr ":defaultColorMgtGlobals.cme" "file2147.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "file2147.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "file2147.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "file2147.ws";
-connectAttr "place2dTexture487.o" "file2147.uv";
-connectAttr "place2dTexture487.ofs" "file2147.fs";
-connectAttr "place2dTexture487.c" "file2147.c";
-connectAttr "place2dTexture487.tf" "file2147.tf";
-connectAttr "place2dTexture487.rf" "file2147.rf";
-connectAttr "place2dTexture487.mu" "file2147.mu";
-connectAttr "place2dTexture487.mv" "file2147.mv";
-connectAttr "place2dTexture487.s" "file2147.s";
-connectAttr "place2dTexture487.wu" "file2147.wu";
-connectAttr "place2dTexture487.wv" "file2147.wv";
-connectAttr "place2dTexture487.re" "file2147.re";
-connectAttr "place2dTexture487.of" "file2147.of";
-connectAttr "place2dTexture487.r" "file2147.ro";
-connectAttr "place2dTexture487.n" "file2147.n";
-connectAttr "place2dTexture487.vt1" "file2147.vt1";
-connectAttr "place2dTexture487.vt2" "file2147.vt2";
-connectAttr "place2dTexture487.vt3" "file2147.vt3";
-connectAttr "place2dTexture487.vc1" "file2147.vc1";
-connectAttr "file2143.oc" "multiplyDivide412.i1";
-connectAttr "multiplyDivide412.o" "Arm_Tubes.base_color";
-connectAttr "file2145.oa" "Arm_Tubes.metalness";
-connectAttr "bump2d405.o" "Arm_Tubes.n";
-connectAttr "file2147.oa" "Arm_Tubes.specular_roughness";
-connectAttr "Arm_Tubes.out" "set415.ss";
-connectAttr "displacementShader1.d" "set415.ds";
 connectAttr "set415.msg" "materialInfo601.sg";
-connectAttr "Arm_Tubes.msg" "materialInfo601.m";
-connectAttr "file2143.msg" "materialInfo601.t" -na;
-connectAttr "file2144.oa" "displacementShader1.d";
-connectAttr "file2146.oa" "bump2d405.bv";
-connectAttr "pasted__projection14.oc" "Face_Backer_Projection.oc";
-connectAttr "pasted__file1897.oc" "Face_Backer_Projection.og";
-connectAttr "pasted__file1893.oc" "pasted__projection14.im";
-connectAttr ":defaultColorMgtGlobals.cme" "pasted__file1893.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file1893.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file1893.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "pasted__file1893.ws";
-connectAttr "pasted__place2dTexture428.c" "pasted__file1893.c";
-connectAttr "pasted__place2dTexture428.tf" "pasted__file1893.tf";
-connectAttr "pasted__place2dTexture428.rf" "pasted__file1893.rf";
-connectAttr "pasted__place2dTexture428.mu" "pasted__file1893.mu";
-connectAttr "pasted__place2dTexture428.mv" "pasted__file1893.mv";
-connectAttr "pasted__place2dTexture428.s" "pasted__file1893.s";
-connectAttr "pasted__place2dTexture428.wu" "pasted__file1893.wu";
-connectAttr "pasted__place2dTexture428.wv" "pasted__file1893.wv";
-connectAttr "pasted__place2dTexture428.re" "pasted__file1893.re";
-connectAttr "pasted__place2dTexture428.of" "pasted__file1893.of";
-connectAttr "pasted__place2dTexture428.r" "pasted__file1893.ro";
-connectAttr "pasted__place2dTexture428.n" "pasted__file1893.n";
-connectAttr "pasted__place2dTexture428.vt1" "pasted__file1893.vt1";
-connectAttr "pasted__place2dTexture428.vt2" "pasted__file1893.vt2";
-connectAttr "pasted__place2dTexture428.vt3" "pasted__file1893.vt3";
-connectAttr "pasted__place2dTexture428.vc1" "pasted__file1893.vc1";
-connectAttr "pasted__place2dTexture428.o" "pasted__file1893.uv";
-connectAttr "pasted__place2dTexture428.ofs" "pasted__file1893.fs";
 connectAttr "noise1.ocr" "pasted__place2dTexture428.ofu";
 connectAttr "noise1.ocg" "pasted__place2dTexture428.ofv";
-connectAttr ":defaultColorMgtGlobals.cme" "pasted__file1897.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "pasted__file1897.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "pasted__file1897.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "pasted__file1897.ws";
-connectAttr "pasted__place2dTexture432.c" "pasted__file1897.c";
-connectAttr "pasted__place2dTexture432.tf" "pasted__file1897.tf";
-connectAttr "pasted__place2dTexture432.rf" "pasted__file1897.rf";
-connectAttr "pasted__place2dTexture432.mu" "pasted__file1897.mu";
-connectAttr "pasted__place2dTexture432.mv" "pasted__file1897.mv";
-connectAttr "pasted__place2dTexture432.s" "pasted__file1897.s";
-connectAttr "pasted__place2dTexture432.wu" "pasted__file1897.wu";
-connectAttr "pasted__place2dTexture432.wv" "pasted__file1897.wv";
-connectAttr "pasted__place2dTexture432.re" "pasted__file1897.re";
-connectAttr "pasted__place2dTexture432.of" "pasted__file1897.of";
-connectAttr "pasted__place2dTexture432.r" "pasted__file1897.ro";
-connectAttr "pasted__place2dTexture432.n" "pasted__file1897.n";
-connectAttr "pasted__place2dTexture432.vt1" "pasted__file1897.vt1";
-connectAttr "pasted__place2dTexture432.vt2" "pasted__file1897.vt2";
-connectAttr "pasted__place2dTexture432.vt3" "pasted__file1897.vt3";
-connectAttr "pasted__place2dTexture432.vc1" "pasted__file1897.vc1";
-connectAttr "pasted__place2dTexture432.o" "pasted__file1897.uv";
-connectAttr "pasted__place2dTexture432.ofs" "pasted__file1897.fs";
 connectAttr "Face_Backer_Projection.oc" "Face_Backer_ProjectionSG.ss";
 connectAttr "groupId768.msg" "Face_Backer_ProjectionSG.gn" -na;
 connectAttr "groupId767.msg" "Face_Backer_ProjectionSG.gn" -na;
 connectAttr "Face_Backer_ProjectionSG.msg" "materialInfo602.sg";
 connectAttr "Face_Backer_Projection.msg" "materialInfo602.m";
-connectAttr "pasted__file1897.msg" "materialInfo602.t" -na;
+connectAttr "Face_Backer_Projection.msg" "materialInfo602.t" -na;
 connectAttr "place2dTexture488.o" "noise1.uv";
 connectAttr "place2dTexture488.ofs" "noise1.fs";
 connectAttr "expression1.out[0]" "noise1.ti";
 connectAttr ":time1.o" "expression1.tim";
-connectAttr "pasted__file1897.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo6.tgi[0].ni[0].dn"
-		;
 connectAttr "aiNoise1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo6.tgi[0].ni[1].dn"
 		;
 connectAttr "pasted__place2dTexture428.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo6.tgi[0].ni[2].dn"
@@ -44011,56 +38354,28 @@ connectAttr "Face_Backer_ProjectionSG.msg" "hyperShadePrimaryNodeEditorSavedTabs
 		;
 connectAttr "Face_Backer_Projection.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo6.tgi[0].ni[6].dn"
 		;
-connectAttr "pasted__file1893.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo6.tgi[0].ni[7].dn"
-		;
 connectAttr "place2dTexture488.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo6.tgi[0].ni[8].dn"
 		;
 connectAttr "noise1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo6.tgi[0].ni[9].dn"
 		;
-connectAttr "lambert9.oc" "lambert9SG.ss";
 connectAttr "lambert9SG.msg" "materialInfo603.sg";
-connectAttr "lambert9.msg" "materialInfo603.m";
-connectAttr "lambert10.oc" "lambert10SG.ss";
 connectAttr "lambert10SG.msg" "materialInfo604.sg";
-connectAttr "lambert10.msg" "materialInfo604.m";
-connectAttr "lambert11.oc" "lambert11SG.ss";
 connectAttr "lambert11SG.msg" "materialInfo605.sg";
-connectAttr "lambert11.msg" "materialInfo605.m";
-connectAttr "lambert12.oc" "lambert12SG.ss";
 connectAttr "lambert12SG.msg" "materialInfo606.sg";
-connectAttr "lambert12.msg" "materialInfo606.m";
-connectAttr "lambert13.oc" "lambert13SG.ss";
 connectAttr "lambert13SG.msg" "materialInfo607.sg";
-connectAttr "lambert13.msg" "materialInfo607.m";
-connectAttr "lambert14.oc" "lambert14SG.ss";
 connectAttr "lambert14SG.msg" "materialInfo608.sg";
-connectAttr "lambert14.msg" "materialInfo608.m";
-connectAttr "lambert15.oc" "lambert15SG.ss";
 connectAttr "lambert15SG.msg" "materialInfo609.sg";
-connectAttr "lambert15.msg" "materialInfo609.m";
-connectAttr "ToyRobot:LightBlue.oc" "ToyRobot:lambert2SG.ss";
 connectAttr "ToyRobot:groupId32.msg" "ToyRobot:lambert2SG.gn" -na;
 connectAttr "ToyRobot:lambert2SG.msg" "ToyRobot:materialInfo1.sg";
-connectAttr "ToyRobot:LightBlue.msg" "ToyRobot:materialInfo1.m";
-connectAttr "ToyRobot:lambert3.oc" "ToyRobot:lambert3SG.ss";
 connectAttr "ToyRobot:lambert3SG.msg" "ToyRobot:materialInfo2.sg";
-connectAttr "ToyRobot:lambert3.msg" "ToyRobot:materialInfo2.m";
-connectAttr "ToyRobot:lambert4.oc" "ToyRobot:lambert4SG.ss";
 connectAttr "ToyRobot:groupId38.msg" "ToyRobot:lambert4SG.gn" -na;
 connectAttr "ToyRobot:lambert4SG.msg" "ToyRobot:materialInfo3.sg";
-connectAttr "ToyRobot:lambert4.msg" "ToyRobot:materialInfo3.m";
-connectAttr "ToyRobot:lambert5.oc" "ToyRobot:lambert5SG.ss";
 connectAttr "ToyRobot:lambert5SG.msg" "ToyRobot:materialInfo4.sg";
-connectAttr "ToyRobot:lambert5.msg" "ToyRobot:materialInfo4.m";
 connectAttr ":lambert1.oc" "ToyRobot:lambert1SG.ss";
 connectAttr "ToyRobot:lambert1SG.msg" "ToyRobot:materialInfo5.sg";
 connectAttr ":lambert1.msg" "ToyRobot:materialInfo5.m";
-connectAttr "ToyRobot:Black.oc" "ToyRobot:lambert6SG.ss";
 connectAttr "ToyRobot:lambert6SG.msg" "ToyRobot:materialInfo6.sg";
-connectAttr "ToyRobot:Black.msg" "ToyRobot:materialInfo6.m";
-connectAttr "ToyRobot:lambert7.oc" "ToyRobot:lambert7SG.ss";
 connectAttr "ToyRobot:lambert7SG.msg" "ToyRobot:materialInfo7.sg";
-connectAttr "ToyRobot:lambert7.msg" "ToyRobot:materialInfo7.m";
 connectAttr "layerManager.dli[1]" "CamLayer.id";
 connectAttr "layerManager.dli[2]" "LightLayer.id";
 connectAttr "layerManager.dli[3]" "BackgroundGeoLayer.id";
@@ -44173,57 +38488,30 @@ connectAttr "R_Eye_Ctrl_rotateY.o" "Dionysus_Asset_RigRN.phl[1128]";
 connectAttr "R_Eye_Ctrl_rotateZ.o" "Dionysus_Asset_RigRN.phl[1129]";
 connectAttr "R_Eye_Ctrl_visibility.o" "Dionysus_Asset_RigRN.phl[1130]";
 connectAttr "sharedReferenceNode.sr" "Dionysus_Asset_RigRN.sr";
-connectAttr "StaticBackground.msg" "renderSetup.frl";
-connectAttr "Shadow.msg" "renderSetup.lrl";
+connectAttr "Background.msg" "renderSetup.frl";
+connectAttr "FOG.msg" "renderSetup.lrl";
 connectAttr ":defaultArnoldDriver.msg" "aiAOV_diffuse.out[0].drvr";
 connectAttr ":defaultArnoldFilter.msg" "aiAOV_diffuse.out[0].ftr";
 connectAttr ":defaultArnoldDriver.msg" "aiAOV_specular.out[0].drvr";
 connectAttr ":defaultArnoldFilter.msg" "aiAOV_specular.out[0].ftr";
-connectAttr "rs_StaticBackground.msg" "StaticBackground.lrl";
-connectAttr "renderSetup.lit" "StaticBackground.pls";
-connectAttr "collection2.msg" "StaticBackground.ch";
-connectAttr "RenderSettingsCollection.msg" "StaticBackground.cl";
-connectAttr "renderLayerManager.rlmi[1]" "rs_StaticBackground.rlid";
+connectAttr "rs_Background.msg" "Background.lrl";
+connectAttr "renderSetup.lit" "Background.pls";
+connectAttr "collection2.msg" "Background.ch";
+connectAttr "RenderSettingsCollection.msg" "Background.cl";
+connectAttr "renderLayerManager.rlmi[1]" "rs_Background.rlid";
 connectAttr "RenderSettingsCollectionSelector.c" "RenderSettingsCollection.sel";
-connectAttr "StaticBackground.lit" "RenderSettingsCollection.pls";
-connectAttr "StaticBackground.nic" "RenderSettingsCollection.pic";
+connectAttr "Background.lit" "RenderSettingsCollection.pls";
+connectAttr "Background.nic" "RenderSettingsCollection.pic";
 connectAttr "startFrame.msg" "RenderSettingsCollection.cl";
-connectAttr "endFrame.msg" "RenderSettingsCollection.ch";
+connectAttr "startFrame.msg" "RenderSettingsCollection.ch";
 connectAttr "RenderSettingsCollection.lit" "startFrame.pls";
 connectAttr "RenderSettingsCollection.en" "startFrame.pen";
-connectAttr "startFrame.nxt" "endFrame.prv";
-connectAttr "RenderSettingsCollection.lit" "endFrame.pls";
-connectAttr "RenderSettingsCollection.en" "endFrame.pen";
 connectAttr "collection2Selector.c" "collection2.sel";
 connectAttr "RenderSettingsCollection.nxt" "collection2.prv";
-connectAttr "StaticBackground.lit" "collection2.pls";
-connectAttr "StaticBackground.nic" "collection2.pic";
-connectAttr "rs_ApolloFace.msg" "ApolloFace.lrl";
-connectAttr "StaticBackground.nxt" "ApolloFace.prv";
-connectAttr "renderSetup.lit" "ApolloFace.pls";
-connectAttr "Face.msg" "ApolloFace.cl";
-connectAttr "Negative3.msg" "ApolloFace.ch";
-connectAttr "renderLayerManager.rlmi[2]" "rs_ApolloFace.rlid";
-connectAttr "FaceSelector.c" "Face.sel";
-connectAttr "ApolloFace.lit" "Face.pls";
-connectAttr "ApolloFace.nic" "Face.pic";
-connectAttr "Negative3Selector.c" "Negative3.sel";
-connectAttr "Face.nxt" "Negative3.prv";
-connectAttr "ApolloFace.lit" "Negative3.pls";
-connectAttr "ApolloFace.nic" "Negative3.pic";
-connectAttr "Negative3_shapes.msg" "Negative3.cl";
-connectAttr "Negative3_shapes.msg" "Negative3.ch";
-connectAttr "Negative3_shapesSelector.c" "Negative3_shapes.sel";
-connectAttr "Negative3.lit" "Negative3_shapes.pls";
-connectAttr "Negative3.en" "Negative3_shapes.pen";
-connectAttr "ApolloFace.nic" "Negative3_shapes.pic";
-connectAttr "aiMatte3.msg" "Negative3_shapes.cl";
-connectAttr "aiMatte3.msg" "Negative3_shapes.ch";
-connectAttr "Negative3Selector.out" "Negative3_shapesSelector.in";
-connectAttr "Negative3_shapes.lit" "aiMatte3.pls";
-connectAttr "Negative3_shapes.en" "aiMatte3.pen";
+connectAttr "Background.lit" "collection2.pls";
+connectAttr "Background.nic" "collection2.pic";
 connectAttr "rs_AO.msg" "AO.lrl";
-connectAttr "DioFace.nxt" "AO.prv";
+connectAttr "ActiveProps.nxt" "AO.prv";
 connectAttr "renderSetup.lit" "AO.pls";
 connectAttr "RenderSettingsCollection3.msg" "AO.cl";
 connectAttr "Everything.msg" "AO.ch";
@@ -44261,9 +38549,9 @@ connectAttr "aiAmbientOcclusion1SG.msg" "materialInfo611.sg";
 connectAttr "aiAmbientOcclusion1.msg" "materialInfo611.m";
 connectAttr "aiAmbientOcclusion1.msg" "materialInfo611.t" -na;
 connectAttr "rs_Apollo_Layer.msg" "Apollo_Layer.lrl";
-connectAttr "ApolloFace.nxt" "Apollo_Layer.prv";
+connectAttr "Foreground.nxt" "Apollo_Layer.prv";
 connectAttr "renderSetup.lit" "Apollo_Layer.pls";
-connectAttr "RenderSettingsCollection1.msg" "Apollo_Layer.cl";
+connectAttr "Apollo2.msg" "Apollo_Layer.cl";
 connectAttr "Negative.msg" "Apollo_Layer.ch";
 connectAttr "renderLayerManager.rlmi[9]" "rs_Apollo_Layer.rlid";
 connectAttr "rs_Dio.msg" "Dio.lrl";
@@ -44272,82 +38560,16 @@ connectAttr "renderSetup.lit" "Dio.pls";
 connectAttr "collection7.msg" "Dio.cl";
 connectAttr "Negative5.msg" "Dio.ch";
 connectAttr "renderLayerManager.rlmi[11]" "rs_Dio.rlid";
-connectAttr "rs_DioFace.msg" "DioFace.lrl";
-connectAttr "Dio.nxt" "DioFace.prv";
-connectAttr "renderSetup.lit" "DioFace.pls";
-connectAttr "collection9.msg" "DioFace.cl";
-connectAttr "Negative6.msg" "DioFace.ch";
-connectAttr "renderLayerManager.rlmi[12]" "rs_DioFace.rlid";
 connectAttr "collection3Selector.c" "Apollo2.sel";
 connectAttr "Apollo_Layer.lit" "Apollo2.pls";
 connectAttr "Apollo_Layer.nic" "Apollo2.pic";
-connectAttr "RenderSettingsCollection1.nxt" "Apollo2.prv";
-connectAttr "RenderSettingsCollection1Selector.c" "RenderSettingsCollection1.sel"
-		;
-connectAttr "Apollo_Layer.lit" "RenderSettingsCollection1.pls";
-connectAttr "Apollo_Layer.nic" "RenderSettingsCollection1.pic";
-connectAttr "startFrame1.msg" "RenderSettingsCollection1.cl";
-connectAttr "endFrame1.msg" "RenderSettingsCollection1.ch";
-connectAttr "RenderSettingsCollection1.lit" "startFrame1.pls";
-connectAttr "RenderSettingsCollection1.en" "startFrame1.pen";
-connectAttr "startFrame1.nxt" "endFrame1.prv";
-connectAttr "RenderSettingsCollection1.lit" "endFrame1.pls";
-connectAttr "RenderSettingsCollection1.en" "endFrame1.pen";
 connectAttr "aiMatte4.out" "aiMatte4SG.ss";
 connectAttr "aiMatte4SG.msg" "materialInfo612.sg";
 connectAttr "aiMatte4.msg" "materialInfo612.m";
 connectAttr "aiMatte4.msg" "materialInfo612.t" -na;
-connectAttr "collection4Selector.c" "Negative.sel";
-connectAttr "Apollo2.nxt" "Negative.prv";
-connectAttr "Apollo_Layer.lit" "Negative.pls";
-connectAttr "Apollo_Layer.nic" "Negative.pic";
-connectAttr "Negative_shapes.msg" "Negative.cl";
-connectAttr "Negative_shapes.msg" "Negative.ch";
-connectAttr "Negative_shapes.lit" "aiMatte.pls";
-connectAttr "Negative_shapes.en" "aiMatte.pen";
-connectAttr "Negative_shapesSelector.c" "Negative_shapes.sel";
-connectAttr "Negative.lit" "Negative_shapes.pls";
-connectAttr "Negative.en" "Negative_shapes.pen";
-connectAttr "Apollo_Layer.nic" "Negative_shapes.pic";
-connectAttr "aiMatte.msg" "Negative_shapes.cl";
-connectAttr "aiMatte.msg" "Negative_shapes.ch";
-connectAttr "collection4Selector.out" "Negative_shapesSelector.in";
 connectAttr "collection7Selector.c" "collection7.sel";
 connectAttr "Dio.lit" "collection7.pls";
 connectAttr "Dio.nic" "collection7.pic";
-connectAttr "collection8Selector.c" "Negative5.sel";
-connectAttr "collection7.nxt" "Negative5.prv";
-connectAttr "Dio.lit" "Negative5.pls";
-connectAttr "Dio.nic" "Negative5.pic";
-connectAttr "Negative5_shapes.msg" "Negative5.cl";
-connectAttr "Negative5_shapes.msg" "Negative5.ch";
-connectAttr "collection9Selector.c" "collection9.sel";
-connectAttr "DioFace.lit" "collection9.pls";
-connectAttr "DioFace.nic" "collection9.pic";
-connectAttr "collection10Selector.c" "Negative6.sel";
-connectAttr "collection9.nxt" "Negative6.prv";
-connectAttr "DioFace.lit" "Negative6.pls";
-connectAttr "DioFace.nic" "Negative6.pic";
-connectAttr "Negative6_shapes.msg" "Negative6.cl";
-connectAttr "Negative6_shapes.msg" "Negative6.ch";
-connectAttr "Negative6_shapes.lit" "aiMatte6.pls";
-connectAttr "Negative6_shapes.en" "aiMatte6.pen";
-connectAttr "Negative6_shapesSelector.c" "Negative6_shapes.sel";
-connectAttr "Negative6.lit" "Negative6_shapes.pls";
-connectAttr "Negative6.en" "Negative6_shapes.pen";
-connectAttr "DioFace.nic" "Negative6_shapes.pic";
-connectAttr "aiMatte6.msg" "Negative6_shapes.cl";
-connectAttr "aiMatte6.msg" "Negative6_shapes.ch";
-connectAttr "collection10Selector.out" "Negative6_shapesSelector.in";
-connectAttr "Negative5_shapes.lit" "aiMatte7.pls";
-connectAttr "Negative5_shapes.en" "aiMatte7.pen";
-connectAttr "Negative5_shapesSelector.c" "Negative5_shapes.sel";
-connectAttr "Negative5.lit" "Negative5_shapes.pls";
-connectAttr "Negative5.en" "Negative5_shapes.pen";
-connectAttr "Dio.nic" "Negative5_shapes.pic";
-connectAttr "aiMatte7.msg" "Negative5_shapes.cl";
-connectAttr "aiMatte7.msg" "Negative5_shapes.ch";
-connectAttr "collection8Selector.out" "Negative5_shapesSelector.in";
 connectAttr "RenderSettingsCollection2Selector.c" "RenderSettingsCollection2.sel"
 		;
 connectAttr "Shadow.lit" "RenderSettingsCollection2.pls";
@@ -44427,6 +38649,197 @@ connectAttr "pairBlend4_inRotateX1.o" "pairBlend4.irx1";
 connectAttr "pairBlend4_inRotateY1.o" "pairBlend4.iry1";
 connectAttr "pairBlend4_inRotateZ1.o" "pairBlend4.irz1";
 connectAttr "BrokenPlaqueRNfosterParent1.msg" "BrokenPlaqueRN.fp";
+connectAttr "collection11Selector.c" "Negative.sel";
+connectAttr "Apollo2.nxt" "Negative.prv";
+connectAttr "Apollo_Layer.lit" "Negative.pls";
+connectAttr "Apollo_Layer.nic" "Negative.pic";
+connectAttr "Negative_shapes.msg" "Negative.cl";
+connectAttr "Negative_shapes.msg" "Negative.ch";
+connectAttr "Negative_shapes.lit" "aiMatte.pls";
+connectAttr "Negative_shapes.en" "aiMatte.pen";
+connectAttr "Negative_shapesSelector.c" "Negative_shapes.sel";
+connectAttr "Negative.lit" "Negative_shapes.pls";
+connectAttr "Negative.en" "Negative_shapes.pen";
+connectAttr "Apollo_Layer.nic" "Negative_shapes.pic";
+connectAttr "aiMatte.msg" "Negative_shapes.cl";
+connectAttr "aiMatte.msg" "Negative_shapes.ch";
+connectAttr "collection11Selector.out" "Negative_shapesSelector.in";
+connectAttr "rs_Foreground.msg" "Foreground.lrl";
+connectAttr "Background.nxt" "Foreground.prv";
+connectAttr "renderSetup.lit" "Foreground.pls";
+connectAttr "RenderSettingsCollection4.msg" "Foreground.cl";
+connectAttr "Negative6.msg" "Foreground.ch";
+connectAttr "renderLayerManager.rlmi[13]" "rs_Foreground.rlid";
+connectAttr "collection12Selector.c" "collection12.sel";
+connectAttr "Foreground.lit" "collection12.pls";
+connectAttr "Foreground.nic" "collection12.pic";
+connectAttr "RenderSettingsCollection4.nxt" "collection12.prv";
+connectAttr "collection8Selector.c" "Negative5.sel";
+connectAttr "collection7.nxt" "Negative5.prv";
+connectAttr "Dio.lit" "Negative5.pls";
+connectAttr "Dio.nic" "Negative5.pic";
+connectAttr "Negative5_shapes.msg" "Negative5.cl";
+connectAttr "Negative5_shapes.msg" "Negative5.ch";
+connectAttr "Negative5_shapesSelector.c" "Negative5_shapes.sel";
+connectAttr "Negative5.lit" "Negative5_shapes.pls";
+connectAttr "Negative5.en" "Negative5_shapes.pen";
+connectAttr "Dio.nic" "Negative5_shapes.pic";
+connectAttr "aiMatte7.msg" "Negative5_shapes.cl";
+connectAttr "aiMatte7.msg" "Negative5_shapes.ch";
+connectAttr "collection8Selector.out" "Negative5_shapesSelector.in";
+connectAttr "Negative5_shapes.lit" "aiMatte7.pls";
+connectAttr "Negative5_shapes.en" "aiMatte7.pen";
+connectAttr "RenderSettingsCollection4Selector.c" "RenderSettingsCollection4.sel"
+		;
+connectAttr "Foreground.lit" "RenderSettingsCollection4.pls";
+connectAttr "Foreground.nic" "RenderSettingsCollection4.pic";
+connectAttr "startFrame1.msg" "RenderSettingsCollection4.cl";
+connectAttr "startFrame1.msg" "RenderSettingsCollection4.ch";
+connectAttr "RenderSettingsCollection4.lit" "startFrame1.pls";
+connectAttr "RenderSettingsCollection4.en" "startFrame1.pen";
+connectAttr "collection13Selector.c" "Negative6.sel";
+connectAttr "collection12.nxt" "Negative6.prv";
+connectAttr "Foreground.lit" "Negative6.pls";
+connectAttr "Foreground.nic" "Negative6.pic";
+connectAttr "rs_FOG.msg" "FOG.lrl";
+connectAttr "Shadow.nxt" "FOG.prv";
+connectAttr "renderSetup.lit" "FOG.pls";
+connectAttr "aiAtmosphereVolume_col.msg" "FOG.ch";
+connectAttr "RenderSettingsCollection5.msg" "FOG.cl";
+connectAttr "renderLayerManager.rlmi[14]" "rs_FOG.rlid";
+connectAttr "RenderSettingsCollection5Selector.c" "RenderSettingsCollection5.sel"
+		;
+connectAttr "FOG.lit" "RenderSettingsCollection5.pls";
+connectAttr "FOG.nic" "RenderSettingsCollection5.pic";
+connectAttr "AASamples2.msg" "RenderSettingsCollection5.cl";
+connectAttr "AASamples2.msg" "RenderSettingsCollection5.ch";
+connectAttr "RenderSettingsCollection5.lit" "AASamples2.pls";
+connectAttr "RenderSettingsCollection5.en" "AASamples2.pen";
+connectAttr "AOVCollection2Selector.c" "AOVCollection2.sel";
+connectAttr "RenderSettingsCollection5.nxt" "AOVCollection2.prv";
+connectAttr "FOG.lit" "AOVCollection2.pls";
+connectAttr "FOG.nic" "AOVCollection2.pic";
+connectAttr "diffuse2.msg" "AOVCollection2.cl";
+connectAttr "specular2.msg" "AOVCollection2.ch";
+connectAttr "diffuse2Selector.c" "diffuse2.sel";
+connectAttr "AOVCollection2.lit" "diffuse2.pls";
+connectAttr "AOVCollection2.en" "diffuse2.pen";
+connectAttr "FOG.nic" "diffuse2.pic";
+connectAttr "enabled4.msg" "diffuse2.cl";
+connectAttr "enabled4.msg" "diffuse2.ch";
+connectAttr "AOVCollection2Selector.out" "diffuse2Selector.in";
+connectAttr "diffuse2.lit" "enabled4.pls";
+connectAttr "diffuse2.en" "enabled4.pen";
+connectAttr "specular2Selector.c" "specular2.sel";
+connectAttr "diffuse2.nxt" "specular2.prv";
+connectAttr "AOVCollection2.lit" "specular2.pls";
+connectAttr "AOVCollection2.en" "specular2.pen";
+connectAttr "FOG.nic" "specular2.pic";
+connectAttr "enabled5.msg" "specular2.cl";
+connectAttr "enabled5.msg" "specular2.ch";
+connectAttr "AOVCollection2Selector.out" "specular2Selector.in";
+connectAttr "specular2.lit" "enabled5.pls";
+connectAttr "specular2.en" "enabled5.pen";
+connectAttr "Everything2Selector.c" "Everything2.sel";
+connectAttr "AOVCollection2.nxt" "Everything2.prv";
+connectAttr "FOG.lit" "Everything2.pls";
+connectAttr "FOG.nic" "Everything2.pic";
+connectAttr "Everything2_shapes.msg" "Everything2.cl";
+connectAttr "Everything2_shapes.msg" "Everything2.ch";
+connectAttr "Everything2_shapes.lit" "aiMatte8.pls";
+connectAttr "Everything2_shapes.en" "aiMatte8.pen";
+connectAttr "Everything2_shapesSelector.c" "Everything2_shapes.sel";
+connectAttr "Everything2.lit" "Everything2_shapes.pls";
+connectAttr "Everything2.en" "Everything2_shapes.pen";
+connectAttr "FOG.nic" "Everything2_shapes.pic";
+connectAttr "aiMatte8.msg" "Everything2_shapes.cl";
+connectAttr "aiMatte8.msg" "Everything2_shapes.ch";
+connectAttr "Everything2Selector.out" "Everything2_shapesSelector.in";
+connectAttr "aiAtmosphereVolume_colSelector.c" "aiAtmosphereVolume_col.sel";
+connectAttr "Everything2.nxt" "aiAtmosphereVolume_col.prv";
+connectAttr "FOG.lit" "aiAtmosphereVolume_col.pls";
+connectAttr "FOG.nic" "aiAtmosphereVolume_col.pic";
+connectAttr "density.msg" "aiAtmosphereVolume_col.cl";
+connectAttr "density.msg" "aiAtmosphereVolume_col.ch";
+connectAttr "aiAtmosphereVolume_col.lit" "density.pls";
+connectAttr "aiAtmosphereVolume_col.en" "density.pen";
+connectAttr "rs_ConveyorMain.msg" "ConveyorMain.lrl";
+connectAttr "Dio.nxt" "ConveyorMain.prv";
+connectAttr "renderSetup.lit" "ConveyorMain.pls";
+connectAttr "collection14.msg" "ConveyorMain.cl";
+connectAttr "Negative7.msg" "ConveyorMain.ch";
+connectAttr "renderLayerManager.rlmi[15]" "rs_ConveyorMain.rlid";
+connectAttr "rs_ConveyorBelt.msg" "ConveyorBelt.lrl";
+connectAttr "ConveyorMain.nxt" "ConveyorBelt.prv";
+connectAttr "renderSetup.lit" "ConveyorBelt.pls";
+connectAttr "collection15.msg" "ConveyorBelt.cl";
+connectAttr "Negative8.msg" "ConveyorBelt.ch";
+connectAttr "renderLayerManager.rlmi[16]" "rs_ConveyorBelt.rlid";
+connectAttr "collection14Selector.c" "collection14.sel";
+connectAttr "ConveyorMain.lit" "collection14.pls";
+connectAttr "ConveyorMain.nic" "collection14.pic";
+connectAttr "collection15Selector.c" "collection15.sel";
+connectAttr "ConveyorBelt.lit" "collection15.pls";
+connectAttr "ConveyorBelt.nic" "collection15.pic";
+connectAttr "collection16Selector.c" "Negative7.sel";
+connectAttr "collection14.nxt" "Negative7.prv";
+connectAttr "ConveyorMain.lit" "Negative7.pls";
+connectAttr "ConveyorMain.nic" "Negative7.pic";
+connectAttr "Negative7_shapes.msg" "Negative7.cl";
+connectAttr "Negative7_shapes.msg" "Negative7.ch";
+connectAttr "Negative7_shapes.lit" "aiMatte9.pls";
+connectAttr "Negative7_shapes.en" "aiMatte9.pen";
+connectAttr "Negative7_shapesSelector.c" "Negative7_shapes.sel";
+connectAttr "Negative7.lit" "Negative7_shapes.pls";
+connectAttr "Negative7.en" "Negative7_shapes.pen";
+connectAttr "ConveyorMain.nic" "Negative7_shapes.pic";
+connectAttr "aiMatte9.msg" "Negative7_shapes.cl";
+connectAttr "aiMatte9.msg" "Negative7_shapes.ch";
+connectAttr "collection16Selector.out" "Negative7_shapesSelector.in";
+connectAttr "collection17Selector.c" "Negative8.sel";
+connectAttr "collection15.nxt" "Negative8.prv";
+connectAttr "ConveyorBelt.lit" "Negative8.pls";
+connectAttr "ConveyorBelt.nic" "Negative8.pic";
+connectAttr "Negative8_shapes.msg" "Negative8.cl";
+connectAttr "Negative8_shapes.msg" "Negative8.ch";
+connectAttr "rs_ActiveProps.msg" "ActiveProps.lrl";
+connectAttr "ConveyorBelt.nxt" "ActiveProps.prv";
+connectAttr "renderSetup.lit" "ActiveProps.pls";
+connectAttr "collection18.msg" "ActiveProps.cl";
+connectAttr "Negative9.msg" "ActiveProps.ch";
+connectAttr "renderLayerManager.rlmi[17]" "rs_ActiveProps.rlid";
+connectAttr "collection18Selector.c" "collection18.sel";
+connectAttr "ActiveProps.lit" "collection18.pls";
+connectAttr "ActiveProps.nic" "collection18.pic";
+connectAttr "collection19Selector.c" "Negative9.sel";
+connectAttr "collection18.nxt" "Negative9.prv";
+connectAttr "ActiveProps.lit" "Negative9.pls";
+connectAttr "ActiveProps.nic" "Negative9.pic";
+connectAttr "Negative9_shapes.msg" "Negative9.cl";
+connectAttr "Negative9_shapes.msg" "Negative9.ch";
+connectAttr "Negative9_shapes.lit" "aiMatte10.pls";
+connectAttr "Negative9_shapes.en" "aiMatte10.pen";
+connectAttr "Negative9_shapesSelector.c" "Negative9_shapes.sel";
+connectAttr "Negative9.lit" "Negative9_shapes.pls";
+connectAttr "Negative9.en" "Negative9_shapes.pen";
+connectAttr "ActiveProps.nic" "Negative9_shapes.pic";
+connectAttr "aiMatte10.msg" "Negative9_shapes.cl";
+connectAttr "aiMatte10.msg" "Negative9_shapes.ch";
+connectAttr "collection19Selector.out" "Negative9_shapesSelector.in";
+connectAttr "Negative8_shapes.lit" "aiMatte11.pls";
+connectAttr "Negative8_shapes.en" "aiMatte11.pen";
+connectAttr "Negative8_shapesSelector.c" "Negative8_shapes.sel";
+connectAttr "Negative8.lit" "Negative8_shapes.pls";
+connectAttr "Negative8.en" "Negative8_shapes.pen";
+connectAttr "ConveyorBelt.nic" "Negative8_shapes.pic";
+connectAttr "aiMatte11.msg" "Negative8_shapes.cl";
+connectAttr "aiMatte11.msg" "Negative8_shapes.ch";
+connectAttr "collection17Selector.out" "Negative8_shapesSelector.in";
+connectAttr "pasted__projection14.oc" "Face_Backer_Projection.oc";
+connectAttr "Face_Backer_Projection.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo7.tgi[0].ni[0].dn"
+		;
+connectAttr "set415.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo7.tgi[0].ni[1].dn"
+		;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "set406.pa" ":renderPartition.st" -na;
@@ -44500,35 +38913,13 @@ connectAttr "ToyRobot:lambert7SG.pa" ":renderPartition.st" -na;
 connectAttr "aiShadowMatte1SG.pa" ":renderPartition.st" -na;
 connectAttr "aiAmbientOcclusion1SG.pa" ":renderPartition.st" -na;
 connectAttr "aiMatte4SG.pa" ":renderPartition.st" -na;
-connectAttr "lambert2.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert3.msg" ":defaultShaderList1.s" -na;
 connectAttr "Face_Projection_Map4.msg" ":defaultShaderList1.s" -na;
 connectAttr "Face_Glass4.msg" ":defaultShaderList1.s" -na;
-connectAttr "pasted__aiStandardSurface5.msg" ":defaultShaderList1.s" -na;
-connectAttr "Apollo_Head.msg" ":defaultShaderList1.s" -na;
-connectAttr "Apollo_Lower_Half.msg" ":defaultShaderList1.s" -na;
-connectAttr "Apollo_Arm_Main.msg" ":defaultShaderList1.s" -na;
-connectAttr "Tread_Base.msg" ":defaultShaderList1.s" -na;
-connectAttr "Treads.msg" ":defaultShaderList1.s" -na;
-connectAttr "Arm_Tubes.msg" ":defaultShaderList1.s" -na;
-connectAttr "displacementShader1.msg" ":defaultShaderList1.s" -na;
 connectAttr "Face_Backer_Projection.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert9.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert10.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert11.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert12.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert13.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert14.msg" ":defaultShaderList1.s" -na;
-connectAttr "lambert15.msg" ":defaultShaderList1.s" -na;
-connectAttr "ToyRobot:LightBlue.msg" ":defaultShaderList1.s" -na;
-connectAttr "ToyRobot:lambert3.msg" ":defaultShaderList1.s" -na;
-connectAttr "ToyRobot:lambert4.msg" ":defaultShaderList1.s" -na;
-connectAttr "ToyRobot:lambert5.msg" ":defaultShaderList1.s" -na;
-connectAttr "ToyRobot:Black.msg" ":defaultShaderList1.s" -na;
-connectAttr "ToyRobot:lambert7.msg" ":defaultShaderList1.s" -na;
 connectAttr "aiShadowMatte1.msg" ":defaultShaderList1.s" -na;
 connectAttr "aiAmbientOcclusion1.msg" ":defaultShaderList1.s" -na;
 connectAttr "aiMatte4.msg" ":defaultShaderList1.s" -na;
+connectAttr "aiAtmosphereVolume.msg" ":defaultShaderList1.s" -na;
 connectAttr "place2dTexture478.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "multiplyDivide401.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "bump2d396.msg" ":defaultRenderUtilityList1.u" -na;
@@ -44693,227 +39084,18 @@ connectAttr "place2dTexture488.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "Skirt_MD.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "defaultRenderLayer1.msg" ":defaultRenderingList1.r" -na;
-connectAttr "rs_StaticBackground.msg" ":defaultRenderingList1.r" -na;
-connectAttr "rs_ApolloFace.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_Background.msg" ":defaultRenderingList1.r" -na;
 connectAttr "rs_AO.msg" ":defaultRenderingList1.r" -na;
 connectAttr "rs_Shadow.msg" ":defaultRenderingList1.r" -na;
 connectAttr "rs_Apollo_Layer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "rs_Dio.msg" ":defaultRenderingList1.r" -na;
-connectAttr "rs_DioFace.msg" ":defaultRenderingList1.r" -na;
-connectAttr "file2098.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2099.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2100.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2101.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2102.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2103.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2104.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2105.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2106.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2107.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file16.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file18.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file19.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file20.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file21.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file23.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file24.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file25.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file26.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file28.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file29.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file30.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file31.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file33.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file34.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file35.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file36.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file38.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file39.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file40.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file41.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file43.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file44.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file45.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file46.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file48.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file49.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file50.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file51.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file52.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file53.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file55.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file56.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file57.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file58.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file60.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file61.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file62.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file64.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file65.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file66.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file67.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file68.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file69.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file76.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file78.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file79.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file80.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file81.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file83.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file84.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file85.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file86.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file88.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file89.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file90.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file91.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file92.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file93.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file95.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file96.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file97.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file99.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file100.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file127.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file128.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file129.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file130.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file177.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file179.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file180.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file181.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file182.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file184.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file185.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file186.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file187.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file189.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file190.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file191.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file192.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file193.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file194.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file196.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file197.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file199.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file200.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file201.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file202.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file204.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file205.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file206.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file207.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file209.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file210.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file211.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file372.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file374.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file375.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file376.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file377.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file379.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file380.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file381.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file382.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file384.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file385.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file386.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file387.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file389.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file390.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file391.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file399.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file400.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file402.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file403.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file404.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file406.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file407.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file408.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1794.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1796.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1797.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1798.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1804.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1806.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1807.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1808.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1809.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1811.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1812.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1813.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1814.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1816.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1817.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1818.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1819.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1820.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1821.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1822.msg" ":defaultTextureList1.tx" -na;
+connectAttr "rs_Foreground.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_FOG.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_ConveyorMain.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_ConveyorBelt.msg" ":defaultRenderingList1.r" -na;
+connectAttr "rs_ActiveProps.msg" ":defaultRenderingList1.r" -na;
 connectAttr "projection14.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1893.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1896.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file1897.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pasted__file1208.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pasted__file1209.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pasted__file1211.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pasted__file1212.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2072.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2073.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2075.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2076.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2077.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2078.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2079.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2081.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2082.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2083.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2084.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2085.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2086.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2108.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2109.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2110.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2111.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2112.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2113.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2114.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2115.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2116.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2117.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2118.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2119.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2120.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2121.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2122.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2123.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2124.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2125.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2126.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2127.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2128.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2129.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2130.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2131.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2132.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2133.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2134.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2135.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2136.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2137.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2138.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2139.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2140.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2141.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2142.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2143.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2144.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2145.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2146.msg" ":defaultTextureList1.tx" -na;
-connectAttr "file2147.msg" ":defaultTextureList1.tx" -na;
 connectAttr "pasted__projection14.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pasted__file1893.msg" ":defaultTextureList1.tx" -na;
-connectAttr "pasted__file1897.msg" ":defaultTextureList1.tx" -na;
 connectAttr "aiNoise1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "noise1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "groupId21.msg" ":initialShadingGroup.gn" -na;
