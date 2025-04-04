@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: PaintingScene_ApolloGun_837_871_CC.ma
-//Last modified: Wed, Apr 02, 2025 10:37:44 PM
+//Last modified: Fri, Apr 04, 2025 03:33:20 PM
 //Codeset: 1252
 file -rdi 1 -ns "Apollo" -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
 file -rdi 1 -ns "Painting_Scene" -rfn "Painting_SceneRN" -op "v=0;" -typ "mayaAscii"
@@ -32,7 +32,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "00158B81-4D3E-29FA-21F6-98BD5251FC2D";
+fileInfo "UUID" "D4FF74AA-450E-D8EF-4EEE-63BEED4036DB";
 fileInfo "license" "education";
 fileInfo "exportedFrom" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/Painting/PaintingScene_CC.ma";
 createNode transform -s -n "persp";
@@ -202,7 +202,7 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint2" -p "PaintGunRN1f
 	setAttr ".rsrr" -type "double3" 1.4113711398994355e-14 1.5902773407317582e-15 8.1998675381481314e-16 ;
 	setAttr -k on ".w0" 0;
 createNode fosterParent -n "Painting_SceneRNfosterParent1";
-	rename -uid "D9E77DC0-453E-B8CB-36BD-349CF05595FC";
+	rename -uid "C7069542-441D-572E-BDE9-5EB5A4158915";
 createNode transform -n "pasted__Spotlight_L3" -p "Painting_SceneRNfosterParent1";
 	rename -uid "F737349A-4755-06CD-87B2-32979B1EDADF";
 	setAttr ".t" -type "double3" -2.7446890842687943 5.5656304988798855 -4.847736531899578 ;
@@ -238,7 +238,7 @@ createNode spotLight -n "pasted__Spotlight_L2Shape" -p "pasted__Spotlight_L2";
 	setAttr ".ai_volume_samples" 0;
 	setAttr ".ai_cast_volumetric_shadows" no;
 createNode fosterParent -n "PaintGunRNfosterParent1";
-	rename -uid "37B0D237-49A9-B195-6DC1-3597236A8941";
+	rename -uid "FC60BF97-43D6-A88F-BB9E-1F80B228C3F2";
 createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint1" -p "PaintGunRNfosterParent1";
 	rename -uid "5C19CC19-4F0F-22A5-7C2F-258751E923B2";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "Prop_CtrlW1" -dv 1 -min 0 -at "double";
@@ -261,24 +261,24 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint1" -p "PaintGunRNfo
 	setAttr ".rsrr" -type "double3" 1.4113711398994355e-14 1.5902773407317582e-15 8.1998675381481314e-16 ;
 	setAttr -k on ".w1";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D528F844-48D8-BD66-6B99-41AFDAA6D9AB";
+	rename -uid "31645653-4315-956F-A245-B5871F23E68E";
 	setAttr -s 146 ".lnk";
-	setAttr -s 142 ".ign";
+	setAttr -s 141 ".ign";
 	setAttr -s 146 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "12079AA6-4E69-E6B5-E7B4-48BF56666832";
+	rename -uid "CC647937-4156-CF2D-C2B2-1B9835ED24CF";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 0 2 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "8E91F593-47D4-CF8E-0012-71A6A68271F0";
+	rename -uid "D748C4EB-4D85-DA5B-32FD-3F8FA530A9BB";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E214B890-440C-8A13-982F-F89BE04C0833";
+	rename -uid "175025E4-455B-61C4-7B57-2B89604EFF2B";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "0DFBE31B-4B53-7FF6-5DDE-8ABD325E78B9";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "168DBB47-4CF5-777B-B1E2-F9A69C1A710F";
+	rename -uid "E0F6A2AD-4F7B-60C7-8774-25AFD5CF4011";
 	setAttr -s 10 ".rlmi[1:9]"  1 2 3 4 5 6 7 8 
 		9;
 	setAttr -s 6 ".rlmi";
@@ -323,46 +323,46 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 1046\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 504\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1307\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1310\n            -height 503\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1310\n            -height 503\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
 		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2741\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 724\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
 		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
 		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n"
 		+ "            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
 		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
-		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
-		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n"
-		+ "                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n"
-		+ "                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n"
-		+ "                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n"
-		+ "                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n"
-		+ "                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n"
-		+ "                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n"
-		+ "\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n"
-		+ "                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n"
-		+ "                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
+		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n"
+		+ "                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n"
+		+ "                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
+		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
+		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n"
+		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n"
+		+ "\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
+		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
+		+ "                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
 		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
 		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2741\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2741\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 724\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 724\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -20373,11 +20373,11 @@ createNode reference -n "ApolloRN";
 		
 		2 "Apollo:set418" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		3 "Apollo:groupId766.message" ":defaultLastHiddenSet.groupNodes" "-na"
 		3 "Apollo:groupId766.groupId" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[42].objectGroupId" 
 		""
 		3 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[42]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
+		3 "Apollo:groupId766.message" ":defaultLastHiddenSet.groupNodes" "-na"
 		3 "Apollo:groupId766.groupId" "Apollo:groupParts100.groupId" ""
 		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.instObjGroups" 
 		"ApolloRN.placeHolderList[14]" ""
@@ -21171,7 +21171,7 @@ createNode reference -n "ApolloRN";
 lockNode -l 1 ;
 createNode reference -n "Painting_SceneRN";
 	rename -uid "2F594995-4183-7E97-7C0B-1AA1D51933D6";
-	setAttr -s 189 ".phl";
+	setAttr -s 149 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -21209,7 +21209,17 @@ createNode reference -n "Painting_SceneRN";
 	setAttr ".phl[35]" 0;
 	setAttr ".phl[36]" 0;
 	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
 	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
 	setAttr ".phl[49]" 0;
 	setAttr ".phl[50]" 0;
 	setAttr ".phl[51]" 0;
@@ -21311,206 +21321,11 @@ createNode reference -n "Painting_SceneRN";
 	setAttr ".phl[147]" 0;
 	setAttr ".phl[148]" 0;
 	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
-	setAttr ".phl[158]" 0;
-	setAttr ".phl[159]" 0;
-	setAttr ".phl[160]" 0;
-	setAttr ".phl[161]" 0;
-	setAttr ".phl[162]" 0;
-	setAttr ".phl[163]" 0;
-	setAttr ".phl[164]" 0;
-	setAttr ".phl[165]" 0;
-	setAttr ".phl[166]" 0;
-	setAttr ".phl[167]" 0;
-	setAttr ".phl[168]" 0;
-	setAttr ".phl[169]" 0;
-	setAttr ".phl[170]" 0;
-	setAttr ".phl[171]" 0;
-	setAttr ".phl[172]" 0;
-	setAttr ".phl[173]" 0;
-	setAttr ".phl[174]" 0;
-	setAttr ".phl[175]" 0;
-	setAttr ".phl[176]" 0;
-	setAttr ".phl[177]" 0;
-	setAttr ".phl[178]" 0;
-	setAttr ".phl[179]" 0;
-	setAttr ".phl[180]" 0;
-	setAttr ".phl[181]" 0;
-	setAttr ".phl[182]" 0;
-	setAttr ".phl[183]" 0;
-	setAttr ".phl[184]" 0;
-	setAttr ".phl[185]" 0;
-	setAttr ".phl[186]" 0;
-	setAttr ".phl[187]" 0;
-	setAttr ".phl[188]" 0;
-	setAttr ".phl[189]" 0;
-	setAttr ".phl[190]" 0;
-	setAttr ".phl[191]" 0;
-	setAttr ".phl[192]" 0;
-	setAttr ".phl[193]" 0;
-	setAttr ".phl[194]" 0;
-	setAttr ".phl[195]" 0;
-	setAttr ".phl[196]" 0;
-	setAttr ".phl[197]" 0;
-	setAttr ".phl[198]" 0;
-	setAttr ".phl[199]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Painting_SceneRN"
 		"Painting_Scene:Hopper_BinRN" 0
-		"Painting_Scene:Tug_CarRN" 1
-		2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Tug_Car:Tugger_Geo" 
-		"visibility" " 0"
-		"Painting_SceneRN" 80
-		2 "|Painting_Scene:Enviornment|Painting_Scene:Floor|Painting_Scene:pPlane1" 
-		"visibility" " 1"
-		2 "|Painting_Scene:Enviornment|Painting_Scene:Table_01" "translate" " -type \"double3\" -2.59313437566576077 1.34143569069499136 -2.04439530511998502"
-		
-		2 "|Painting_Scene:sweep1" "visibility" " 0"
-		2 "Painting_Scene:pasted__CTRL_Layer" "visibility" " 0"
-		2 "Painting_Scene:pasted__CTRL_Layer1" "visibility" " 0"
-		2 "Painting_Scene:pasted__pasted__CTRL_Layer" "displayType" " 0"
-		2 "Painting_Scene:pasted__pasted__CTRL_Layer" "visibility" " 0"
-		2 "Painting_Scene:pasted__pasted__CTRL_Layer1" "visibility" " 0"
-		2 "Painting_Scene:standardSurface2SG" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:standardSurface2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Painting_Scene:standardSurface2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
-		
-		2 "Painting_Scene:Hopper_Bin:pasted__set12" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:Hopper_Bin:pasted__set12" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Painting_Scene:Hopper_Bin:pasted__set12" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
-		
-		2 "Painting_Scene:Hopper_Bin:pasted__set13" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:Hopper_Bin:pasted__set13" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Painting_Scene:Hopper_Bin:pasted__set13" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
-		
-		2 "Painting_Scene:Hopper_Bin:set5" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:Hopper_Bin:set5" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Painting_Scene:Hopper_Bin:set5" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
-		
-		2 "Painting_Scene:Hopper_Bin:set6" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:Hopper_Bin:set6" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Painting_Scene:Hopper_Bin:set6" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
-		
-		2 "Painting_Scene:Hopper_Bin:standardSurface1SG1" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:Hopper_Bin:standardSurface1SG1" "aiCustomAOVs[0].aovName" 
-		" -type \"string\" \"diffuse\""
-		2 "Painting_Scene:Hopper_Bin:standardSurface1SG1" "aiCustomAOVs[1].aovName" 
-		" -type \"string\" \"specular\""
-		2 "Painting_Scene:Hopper_Bin:set7" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:Hopper_Bin:set7" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Painting_Scene:Hopper_Bin:set7" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
-		
-		2 "Painting_Scene:Hopper_Bin:set8" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:Hopper_Bin:set8" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Painting_Scene:Hopper_Bin:set8" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
-		
-		2 "Painting_Scene:pasted__standardSurface2SG" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:pasted__standardSurface2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Painting_Scene:pasted__standardSurface2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
-		
-		2 "Painting_Scene:pasted__standardSurface3SG" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:pasted__standardSurface3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Painting_Scene:pasted__standardSurface3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
-		
-		2 "Painting_Scene:standardSurface2SG1" "aiCustomAOVs" " -s 2"
-		2 "Painting_Scene:standardSurface2SG1" "aiCustomAOVs[0].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Painting_Scene:standardSurface2SG1" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
-		
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__file57.message" 
-		"Painting_SceneRN.placeHolderList[1]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__place2dTexture12.message" 
-		"Painting_SceneRN.placeHolderList[2]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__bump2d12.message" 
-		"Painting_SceneRN.placeHolderList[3]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__file58.message" 
-		"Painting_SceneRN.placeHolderList[4]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__file59.message" 
-		"Painting_SceneRN.placeHolderList[5]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__multiplyDivide12.message" 
-		"Painting_SceneRN.placeHolderList[6]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__file60.message" 
-		"Painting_SceneRN.placeHolderList[7]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__file56.message" 
-		"Painting_SceneRN.placeHolderList[8]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__file61.message" 
-		"Painting_SceneRN.placeHolderList[9]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__place2dTexture13.message" 
-		"Painting_SceneRN.placeHolderList[10]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__bump2d13.message" 
-		"Painting_SceneRN.placeHolderList[11]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__file62.message" 
-		"Painting_SceneRN.placeHolderList[12]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__file63.message" 
-		"Painting_SceneRN.placeHolderList[13]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__multiplyDivide13.message" 
-		"Painting_SceneRN.placeHolderList[14]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:pasted__file64.message" 
-		"Painting_SceneRN.placeHolderList[15]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:place2dTexture6.message" 
-		"Painting_SceneRN.placeHolderList[16]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file22.message" "Painting_SceneRN.placeHolderList[17]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file23.message" "Painting_SceneRN.placeHolderList[18]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file24.message" "Painting_SceneRN.placeHolderList[19]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file25.message" "Painting_SceneRN.placeHolderList[20]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file26.message" "Painting_SceneRN.placeHolderList[21]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:bump2d5.message" "Painting_SceneRN.placeHolderList[22]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:multiplyDivide5.message" 
-		"Painting_SceneRN.placeHolderList[23]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:place2dTexture7.message" 
-		"Painting_SceneRN.placeHolderList[24]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file27.message" "Painting_SceneRN.placeHolderList[25]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file28.message" "Painting_SceneRN.placeHolderList[26]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file29.message" "Painting_SceneRN.placeHolderList[27]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file30.message" "Painting_SceneRN.placeHolderList[28]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file31.message" "Painting_SceneRN.placeHolderList[29]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:bump2d6.message" "Painting_SceneRN.placeHolderList[30]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:multiplyDivide6.message" 
-		"Painting_SceneRN.placeHolderList[31]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:place2dTexture8.message" 
-		"Painting_SceneRN.placeHolderList[32]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file34.message" "Painting_SceneRN.placeHolderList[33]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:place2dTexture9.message" 
-		"Painting_SceneRN.placeHolderList[34]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file38.message" "Painting_SceneRN.placeHolderList[35]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:file42.message" "Painting_SceneRN.placeHolderList[36]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:Hopper_Bin:place2dTexture10.message" 
-		"Painting_SceneRN.placeHolderList[37]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:Rocket_surf.message" "Painting_SceneRN.placeHolderList[46]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file2.message" "Painting_SceneRN.placeHolderList[49]" 
-		""
+		"Painting_Scene:Tug_CarRN" 0
+		"Painting_SceneRN" 0
 		"Painting_Scene:Hopper_BinRN" 33
 		2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin" 
 		"rotate" " -type \"double3\" 0 -14.56904486586062397 0"
@@ -21552,17 +21367,17 @@ createNode reference -n "Painting_SceneRN";
 		2 "Painting_Scene:Hopper_Bin:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Hopper_Bin1|Painting_Scene:Hopper_Bin1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:Hopper_Bin:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[88]" 
-		"Painting_SceneRN.placeHolderList[89]" ""
+		"Painting_Scene:Hopper_Bin:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[39]" 
+		"Painting_SceneRN.placeHolderList[40]" ""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:Hopper_Bin:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[90]" 
-		"Painting_SceneRN.placeHolderList[91]" ""
+		"Painting_Scene:Hopper_Bin:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[41]" 
+		"Painting_SceneRN.placeHolderList[42]" ""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:Hopper_Bin:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[92]" 
-		"Painting_SceneRN.placeHolderList[93]" ""
+		"Painting_Scene:Hopper_Bin:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[43]" 
+		"Painting_SceneRN.placeHolderList[44]" ""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.instObjGroups" 
-		"Painting_Scene:Hopper_Bin:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[94]" 
-		"Painting_SceneRN.placeHolderList[95]" ""
+		"Painting_Scene:Hopper_Bin:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[45]" 
+		"Painting_SceneRN.placeHolderList[46]" ""
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
@@ -21575,7 +21390,7 @@ createNode reference -n "Painting_SceneRN";
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		"Painting_SceneRN" 280
+		"Painting_SceneRN" 279
 		0 "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2" "|Painting_Scene:Enviornment|Painting_Scene:Lights" 
 		"-s -r "
 		0 "|Painting_SceneRNfosterParent1|pasted__Spotlight_L3" "|Painting_Scene:Enviornment|Painting_Scene:Lights" 
@@ -21821,246 +21636,246 @@ createNode reference -n "Painting_SceneRN";
 		
 		2 "Painting_Scene:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
+		3 "Painting_Scene:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
+		
 		3 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 ":initialShadingGroup.memberWireframeColor" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		3 "Painting_Scene:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
-		
 		5 0 "Painting_SceneRN" "Painting_Scene:set3.memberWireframeColor" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"Painting_SceneRN.placeHolderList[96]" "Painting_SceneRN.placeHolderList[97]" ""
+		"Painting_SceneRN.placeHolderList[47]" "Painting_SceneRN.placeHolderList[48]" ""
 		5 4 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:Spotlight_L2.visibility" 
-		"Painting_SceneRN.placeHolderList[98]" ""
+		"Painting_SceneRN.placeHolderList[49]" ""
 		5 4 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:Spotlight_L3.visibility" 
-		"Painting_SceneRN.placeHolderList[99]" ""
+		"Painting_SceneRN.placeHolderList[50]" ""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:standardSurface3SG.dagSetMembers" "Painting_SceneRN.placeHolderList[102]" 
-		"Painting_SceneRN.placeHolderList[103]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:place2dTexture1.message" "Painting_SceneRN.placeHolderList[104]" 
+		"Painting_Scene:standardSurface3SG.dagSetMembers" "Painting_SceneRN.placeHolderList[52]" 
+		"Painting_SceneRN.placeHolderList[53]" ""
+		5 3 "Painting_SceneRN" "Painting_Scene:place2dTexture1.message" "Painting_SceneRN.placeHolderList[54]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file1.message" "Painting_SceneRN.placeHolderList[105]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:file1.message" "Painting_SceneRN.placeHolderList[55]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file3.message" "Painting_SceneRN.placeHolderList[106]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:file3.message" "Painting_SceneRN.placeHolderList[56]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file4.message" "Painting_SceneRN.placeHolderList[107]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:file4.message" "Painting_SceneRN.placeHolderList[57]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file5.message" "Painting_SceneRN.placeHolderList[108]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:file5.message" "Painting_SceneRN.placeHolderList[58]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:multiplyDivide1.message" "Painting_SceneRN.placeHolderList[109]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:multiplyDivide1.message" "Painting_SceneRN.placeHolderList[59]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:set1.message" "Painting_SceneRN.placeHolderList[110]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:set1.message" "Painting_SceneRN.placeHolderList[60]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface188|Painting_Scene:polySurfaceShape188.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[111]" "Painting_SceneRN.placeHolderList[112]" 
+		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[61]" "Painting_SceneRN.placeHolderList[62]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:polySurfaceShape195.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[113]" "Painting_SceneRN.placeHolderList[114]" 
+		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[63]" "Painting_SceneRN.placeHolderList[64]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:transform1|Painting_Scene:polySurface184Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[115]" "Painting_SceneRN.placeHolderList[116]" 
+		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[65]" "Painting_SceneRN.placeHolderList[66]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface187|Painting_Scene:polySurfaceShape187.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[117]" "Painting_SceneRN.placeHolderList[118]" 
+		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[67]" "Painting_SceneRN.placeHolderList[68]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface185|Painting_Scene:polySurfaceShape194.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[119]" "Painting_SceneRN.placeHolderList[120]" 
+		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[69]" "Painting_SceneRN.placeHolderList[70]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:bump2d1.message" "Painting_SceneRN.placeHolderList[121]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:bump2d1.message" "Painting_SceneRN.placeHolderList[71]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:polySurfaceShape195.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:standardSurface4SG.dagSetMembers" "Painting_SceneRN.placeHolderList[122]" 
-		"Painting_SceneRN.placeHolderList[123]" ""
+		"Painting_Scene:standardSurface4SG.dagSetMembers" "Painting_SceneRN.placeHolderList[72]" 
+		"Painting_SceneRN.placeHolderList[73]" ""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:transform1|Painting_Scene:polySurface184Shape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:standardSurface4SG.dagSetMembers" "Painting_SceneRN.placeHolderList[124]" 
-		"Painting_SceneRN.placeHolderList[125]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:place2dTexture2.message" "Painting_SceneRN.placeHolderList[126]" 
+		"Painting_Scene:standardSurface4SG.dagSetMembers" "Painting_SceneRN.placeHolderList[74]" 
+		"Painting_SceneRN.placeHolderList[75]" ""
+		5 3 "Painting_SceneRN" "Painting_Scene:place2dTexture2.message" "Painting_SceneRN.placeHolderList[76]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file6.message" "Painting_SceneRN.placeHolderList[127]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:file6.message" "Painting_SceneRN.placeHolderList[77]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set2.dagSetMembers" "Painting_SceneRN.placeHolderList[128]" "Painting_SceneRN.placeHolderList[129]" 
+		"Painting_Scene:set2.dagSetMembers" "Painting_SceneRN.placeHolderList[78]" "Painting_SceneRN.placeHolderList[79]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table_03|Painting_Scene:Table_03Shape.instObjGroups" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[130]" "Painting_SceneRN.placeHolderList[131]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[80]" "Painting_SceneRN.placeHolderList[81]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.instObjGroups" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[132]" "Painting_SceneRN.placeHolderList[133]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[82]" "Painting_SceneRN.placeHolderList[83]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[134]" "Painting_SceneRN.placeHolderList[135]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[84]" "Painting_SceneRN.placeHolderList[85]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[136]" "Painting_SceneRN.placeHolderList[137]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[86]" "Painting_SceneRN.placeHolderList[87]" 
 		":initialShadingGroup.dsm"
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube47|Painting_Scene:pCube47Shape.instObjGroups" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[138]" "Painting_SceneRN.placeHolderList[139]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[88]" "Painting_SceneRN.placeHolderList[89]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube46|Painting_Scene:pCube46Shape.instObjGroups" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[140]" "Painting_SceneRN.placeHolderList[141]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[90]" "Painting_SceneRN.placeHolderList[91]" 
 		""
 		5 0 "Painting_SceneRN" "Painting_Scene:groupId1.message" "Painting_Scene:set3.groupNodes" 
-		"Painting_SceneRN.placeHolderList[142]" "Painting_SceneRN.placeHolderList[143]" ":initialShadingGroup.gn"
+		"Painting_SceneRN.placeHolderList[92]" "Painting_SceneRN.placeHolderList[93]" ":initialShadingGroup.gn"
 		
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[144]" "Painting_SceneRN.placeHolderList[145]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[94]" "Painting_SceneRN.placeHolderList[95]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_05|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[146]" "Painting_SceneRN.placeHolderList[147]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[96]" "Painting_SceneRN.placeHolderList[97]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[148]" "Painting_SceneRN.placeHolderList[149]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[98]" "Painting_SceneRN.placeHolderList[99]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[150]" "Painting_SceneRN.placeHolderList[151]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[100]" "Painting_SceneRN.placeHolderList[101]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[152]" "Painting_SceneRN.placeHolderList[153]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[102]" "Painting_SceneRN.placeHolderList[103]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_07|Painting_Scene:Bay_07Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[154]" "Painting_SceneRN.placeHolderList[155]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[104]" "Painting_SceneRN.placeHolderList[105]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[156]" "Painting_SceneRN.placeHolderList[157]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[106]" "Painting_SceneRN.placeHolderList[107]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[158]" "Painting_SceneRN.placeHolderList[159]" 
+		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[108]" "Painting_SceneRN.placeHolderList[109]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[160]" "Painting_SceneRN.placeHolderList[161]" 
+		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[110]" "Painting_SceneRN.placeHolderList[111]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[162]" "Painting_SceneRN.placeHolderList[163]" 
+		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[112]" "Painting_SceneRN.placeHolderList[113]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_05|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[164]" "Painting_SceneRN.placeHolderList[165]" 
+		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[114]" "Painting_SceneRN.placeHolderList[115]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[166]" "Painting_SceneRN.placeHolderList[167]" 
+		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[116]" "Painting_SceneRN.placeHolderList[117]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[168]" "Painting_SceneRN.placeHolderList[169]" 
+		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[118]" "Painting_SceneRN.placeHolderList[119]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_05|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[170]" "Painting_SceneRN.placeHolderList[171]" 
+		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[120]" "Painting_SceneRN.placeHolderList[121]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[172]" "Painting_SceneRN.placeHolderList[173]" 
+		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[122]" "Painting_SceneRN.placeHolderList[123]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.instObjGroups" 
-		"Painting_Scene:set7.dagSetMembers" "Painting_SceneRN.placeHolderList[174]" "Painting_SceneRN.placeHolderList[175]" 
+		"Painting_Scene:set7.dagSetMembers" "Painting_SceneRN.placeHolderList[124]" "Painting_SceneRN.placeHolderList[125]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor1|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[176]" "Painting_SceneRN.placeHolderList[177]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[126]" "Painting_SceneRN.placeHolderList[127]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor2|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[178]" "Painting_SceneRN.placeHolderList[179]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[128]" "Painting_SceneRN.placeHolderList[129]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor3|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[180]" "Painting_SceneRN.placeHolderList[181]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[130]" "Painting_SceneRN.placeHolderList[131]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor4|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[182]" "Painting_SceneRN.placeHolderList[183]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[132]" "Painting_SceneRN.placeHolderList[133]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor6|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[184]" "Painting_SceneRN.placeHolderList[185]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[134]" "Painting_SceneRN.placeHolderList[135]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor5|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[186]" "Painting_SceneRN.placeHolderList[187]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[136]" "Painting_SceneRN.placeHolderList[137]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor7|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[188]" "Painting_SceneRN.placeHolderList[189]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[138]" "Painting_SceneRN.placeHolderList[139]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface188|Painting_Scene:polySurfaceShape188.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[190]" "Painting_SceneRN.placeHolderList[191]" 
+		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[140]" "Painting_SceneRN.placeHolderList[141]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface185|Painting_Scene:polySurfaceShape194.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[192]" "Painting_SceneRN.placeHolderList[193]" 
+		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[142]" "Painting_SceneRN.placeHolderList[143]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:polySurfaceShape195.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[194]" "Painting_SceneRN.placeHolderList[195]" 
+		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[144]" "Painting_SceneRN.placeHolderList[145]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:transform1|Painting_Scene:polySurface184Shape.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[196]" "Painting_SceneRN.placeHolderList[197]" 
+		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[146]" "Painting_SceneRN.placeHolderList[147]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface187|Painting_Scene:polySurfaceShape187.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[198]" "Painting_SceneRN.placeHolderList[199]" 
+		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[148]" "Painting_SceneRN.placeHolderList[149]" 
 		""
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[50]"
+		2 "" "Painting_SceneRN.placeHolderList[1]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[51]"
+		2 "" "Painting_SceneRN.placeHolderList[2]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[52]"
+		2 "" "Painting_SceneRN.placeHolderList[3]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[53]"
+		2 "" "Painting_SceneRN.placeHolderList[4]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[54]"
+		2 "" "Painting_SceneRN.placeHolderList[5]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[55]"
+		2 "" "Painting_SceneRN.placeHolderList[6]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[56]"
+		2 "" "Painting_SceneRN.placeHolderList[7]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[57]"
+		2 "" "Painting_SceneRN.placeHolderList[8]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[58]"
+		2 "" "Painting_SceneRN.placeHolderList[9]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[59]"
+		2 "" "Painting_SceneRN.placeHolderList[10]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[60]"
+		2 "" "Painting_SceneRN.placeHolderList[11]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[61]"
+		2 "" "Painting_SceneRN.placeHolderList[12]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[62]"
+		2 "" "Painting_SceneRN.placeHolderList[13]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[63]"
+		2 "" "Painting_SceneRN.placeHolderList[14]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[64]"
+		2 "" "Painting_SceneRN.placeHolderList[15]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[65]"
+		2 "" "Painting_SceneRN.placeHolderList[16]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[66]"
+		2 "" "Painting_SceneRN.placeHolderList[17]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[67]"
+		2 "" "Painting_SceneRN.placeHolderList[18]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[68]"
+		2 "" "Painting_SceneRN.placeHolderList[19]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[69]"
+		2 "" "Painting_SceneRN.placeHolderList[20]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[70]"
+		2 "" "Painting_SceneRN.placeHolderList[21]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[71]"
+		2 "" "Painting_SceneRN.placeHolderList[22]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[72]"
+		2 "" "Painting_SceneRN.placeHolderList[23]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[73]"
+		2 "" "Painting_SceneRN.placeHolderList[24]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[74]"
+		2 "" "Painting_SceneRN.placeHolderList[25]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[75]"
+		2 "" "Painting_SceneRN.placeHolderList[26]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Sad|Apollo:R_Eye_SadShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[76]"
+		2 "" "Painting_SceneRN.placeHolderList[27]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Close|Apollo:R_Eye_CloseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[77]"
+		2 "" "Painting_SceneRN.placeHolderList[28]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Squint|Apollo:R_Eye_SquintShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[78]"
+		2 "" "Painting_SceneRN.placeHolderList[29]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Bored|Apollo:Right_Eye_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[79]"
+		2 "" "Painting_SceneRN.placeHolderList[30]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Smirk|Apollo:Right_Eye_SmirkShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[80]"
+		2 "" "Painting_SceneRN.placeHolderList[31]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Arrow|Apollo:Right_Eye_ArrowShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[81]"
+		2 "" "Painting_SceneRN.placeHolderList[32]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Determined|Apollo:Right_Eye_DeterminedShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[82]"
+		2 "" "Painting_SceneRN.placeHolderList[33]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Actually_Bored|Apollo:Right_Eye_Actually_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[83]"
+		2 "" "Painting_SceneRN.placeHolderList[34]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[84]"
+		2 "" "Painting_SceneRN.placeHolderList[35]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[85]"
+		2 "" "Painting_SceneRN.placeHolderList[36]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[86]"
+		2 "" "Painting_SceneRN.placeHolderList[37]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[87]"
+		2 "" "Painting_SceneRN.placeHolderList[38]"
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
@@ -22175,16 +21990,68 @@ createNode reference -n "Painting_SceneRN";
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "PaintGunRN.placeHolderList[56]" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[100]"
 		7 "ignore" ":lightLinker1" 2 "|PaintGun:PaintGun|PaintGun:Geo|PaintGun:Hose|PaintGun:HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[101]";
+		2 "" "Painting_SceneRN.placeHolderList[51]";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "PaintGunRN";
 	rename -uid "D0B384AE-4691-9108-F69F-6B837279AF43";
-	setAttr ".fn[0]" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/PaintGun.ma";
-	setAttr -s 70 ".phl";
+	setAttr -s 66 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
 	setAttr ".phl[56]" 0;
 	setAttr ".phl[57]" 0;
 	setAttr ".phl[58]" 0;
@@ -22196,77 +22063,9 @@ createNode reference -n "PaintGunRN";
 	setAttr ".phl[64]" 0;
 	setAttr ".phl[65]" 0;
 	setAttr ".phl[66]" 0;
-	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
-	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PaintGunRN"
-		"PaintGunRN" 6
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.visibility" 
-		"PaintGunRN.placeHolderList[35]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.visibility" 
-		"PaintGunRN.placeHolderList[45]" ""
-		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.visibility" 
-		"PaintGunRN.placeHolderList[55]" ""
-		7 "ignore" ":lightLinker1" 2 "|PaintGun:PaintGun|PaintGun:Geo|PaintGun:Paint_Gun|PaintGun:transform1|PaintGun:Paint_GunShape.message" "" 
-		2 "PaintGunRN.placeHolderList[56]" ""
-		7 "ignore" ":lightLinker1" 2 "|PaintGun:polySurface289|PaintGun:polySurface289Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
-		7 "ignore" ":lightLinker1" 2 "|PaintGun:polySurface274|PaintGun:polySurface274Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
+		"PaintGunRN" 0
 		"PaintGunRN" 210
 		0 "|PaintGunRNfosterParent1|Gun_Ctrl_Grp_parentConstraint1" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp" 
 		"-s -r "
@@ -22516,135 +22315,135 @@ createNode reference -n "PaintGunRN";
 		2 "PaintGun:polySurface123SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.translateX" 
-		"PaintGunRN.placeHolderList[58]" ""
+		"PaintGunRN.placeHolderList[2]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.translateY" 
-		"PaintGunRN.placeHolderList[59]" ""
+		"PaintGunRN.placeHolderList[3]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.translateZ" 
-		"PaintGunRN.placeHolderList[60]" ""
+		"PaintGunRN.placeHolderList[4]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateX" 
-		"PaintGunRN.placeHolderList[61]" ""
+		"PaintGunRN.placeHolderList[5]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateY" 
-		"PaintGunRN.placeHolderList[62]" ""
+		"PaintGunRN.placeHolderList[6]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateZ" 
-		"PaintGunRN.placeHolderList[63]" ""
+		"PaintGunRN.placeHolderList[7]" ""
 		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotateOrder" 
-		"PaintGunRN.placeHolderList[64]" ""
+		"PaintGunRN.placeHolderList[8]" ""
 		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.parentInverseMatrix" 
-		"PaintGunRN.placeHolderList[65]" ""
+		"PaintGunRN.placeHolderList[9]" ""
 		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotatePivot" 
-		"PaintGunRN.placeHolderList[66]" ""
+		"PaintGunRN.placeHolderList[10]" ""
 		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.rotatePivotTranslate" 
-		"PaintGunRN.placeHolderList[67]" ""
+		"PaintGunRN.placeHolderList[11]" ""
 		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp.message" 
-		"PaintGunRN.placeHolderList[68]" ""
+		"PaintGunRN.placeHolderList[12]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.MasterScale" 
-		"PaintGunRN.placeHolderList[69]" ""
+		"PaintGunRN.placeHolderList[13]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.translateX" 
-		"PaintGunRN.placeHolderList[70]" ""
+		"PaintGunRN.placeHolderList[14]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.translateY" 
-		"PaintGunRN.placeHolderList[71]" ""
+		"PaintGunRN.placeHolderList[15]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.translateZ" 
-		"PaintGunRN.placeHolderList[72]" ""
+		"PaintGunRN.placeHolderList[16]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.rotateX" 
-		"PaintGunRN.placeHolderList[73]" ""
+		"PaintGunRN.placeHolderList[17]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.rotateY" 
-		"PaintGunRN.placeHolderList[74]" ""
+		"PaintGunRN.placeHolderList[18]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.rotateZ" 
-		"PaintGunRN.placeHolderList[75]" ""
+		"PaintGunRN.placeHolderList[19]" ""
 		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.message" 
-		"PaintGunRN.placeHolderList[76]" ""
+		"PaintGunRN.placeHolderList[20]" ""
 		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
-		"PaintGunRN.placeHolderList[77]" ""
+		"PaintGunRN.placeHolderList[21]" ""
 		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
-		"PaintGunRN.placeHolderList[78]" ""
+		"PaintGunRN.placeHolderList[22]" ""
 		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
-		"PaintGunRN.placeHolderList[79]" ""
+		"PaintGunRN.placeHolderList[23]" ""
 		5 3 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
-		"PaintGunRN.placeHolderList[80]" ""
+		"PaintGunRN.placeHolderList[24]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl.Follow" 
-		"PaintGunRN.placeHolderList[81]" ""
+		"PaintGunRN.placeHolderList[25]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:IKStuff|PaintGun:TubeIKCurve.visibility" 
-		"PaintGunRN.placeHolderList[82]" ""
+		"PaintGunRN.placeHolderList[26]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.translateX" 
-		"PaintGunRN.placeHolderList[83]" ""
+		"PaintGunRN.placeHolderList[27]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.translateY" 
-		"PaintGunRN.placeHolderList[84]" ""
+		"PaintGunRN.placeHolderList[28]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.translateZ" 
-		"PaintGunRN.placeHolderList[85]" ""
+		"PaintGunRN.placeHolderList[29]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.rotateX" 
-		"PaintGunRN.placeHolderList[86]" ""
+		"PaintGunRN.placeHolderList[30]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.rotateY" 
-		"PaintGunRN.placeHolderList[87]" ""
+		"PaintGunRN.placeHolderList[31]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.rotateZ" 
-		"PaintGunRN.placeHolderList[88]" ""
+		"PaintGunRN.placeHolderList[32]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.scaleX" 
-		"PaintGunRN.placeHolderList[89]" ""
+		"PaintGunRN.placeHolderList[33]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.scaleY" 
-		"PaintGunRN.placeHolderList[90]" ""
+		"PaintGunRN.placeHolderList[34]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_01_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_01_Ctrl.scaleZ" 
-		"PaintGunRN.placeHolderList[91]" ""
+		"PaintGunRN.placeHolderList[35]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.translateX" 
-		"PaintGunRN.placeHolderList[92]" ""
+		"PaintGunRN.placeHolderList[36]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.translateY" 
-		"PaintGunRN.placeHolderList[93]" ""
+		"PaintGunRN.placeHolderList[37]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.translateZ" 
-		"PaintGunRN.placeHolderList[94]" ""
+		"PaintGunRN.placeHolderList[38]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.rotateX" 
-		"PaintGunRN.placeHolderList[95]" ""
+		"PaintGunRN.placeHolderList[39]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.rotateY" 
-		"PaintGunRN.placeHolderList[96]" ""
+		"PaintGunRN.placeHolderList[40]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.rotateZ" 
-		"PaintGunRN.placeHolderList[97]" ""
+		"PaintGunRN.placeHolderList[41]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.scaleX" 
-		"PaintGunRN.placeHolderList[98]" ""
+		"PaintGunRN.placeHolderList[42]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.scaleY" 
-		"PaintGunRN.placeHolderList[99]" ""
+		"PaintGunRN.placeHolderList[43]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_03_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_03_Ctrl.scaleZ" 
-		"PaintGunRN.placeHolderList[100]" ""
+		"PaintGunRN.placeHolderList[44]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.translateX" 
-		"PaintGunRN.placeHolderList[101]" ""
+		"PaintGunRN.placeHolderList[45]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.translateY" 
-		"PaintGunRN.placeHolderList[102]" ""
+		"PaintGunRN.placeHolderList[46]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.translateZ" 
-		"PaintGunRN.placeHolderList[103]" ""
+		"PaintGunRN.placeHolderList[47]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.rotateX" 
-		"PaintGunRN.placeHolderList[104]" ""
+		"PaintGunRN.placeHolderList[48]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.rotateY" 
-		"PaintGunRN.placeHolderList[105]" ""
+		"PaintGunRN.placeHolderList[49]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.rotateZ" 
-		"PaintGunRN.placeHolderList[106]" ""
+		"PaintGunRN.placeHolderList[50]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.scaleX" 
-		"PaintGunRN.placeHolderList[107]" ""
+		"PaintGunRN.placeHolderList[51]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.scaleY" 
-		"PaintGunRN.placeHolderList[108]" ""
+		"PaintGunRN.placeHolderList[52]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_04_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_04_Ctrl.scaleZ" 
-		"PaintGunRN.placeHolderList[109]" ""
+		"PaintGunRN.placeHolderList[53]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl.translateX" 
-		"PaintGunRN.placeHolderList[110]" ""
+		"PaintGunRN.placeHolderList[54]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl.translateY" 
-		"PaintGunRN.placeHolderList[111]" ""
+		"PaintGunRN.placeHolderList[55]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl.translateZ" 
-		"PaintGunRN.placeHolderList[112]" ""
+		"PaintGunRN.placeHolderList[56]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl.rotateX" 
-		"PaintGunRN.placeHolderList[113]" ""
+		"PaintGunRN.placeHolderList[57]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl.rotateY" 
-		"PaintGunRN.placeHolderList[114]" ""
+		"PaintGunRN.placeHolderList[58]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl.rotateZ" 
-		"PaintGunRN.placeHolderList[115]" ""
+		"PaintGunRN.placeHolderList[59]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl.scaleX" 
-		"PaintGunRN.placeHolderList[116]" ""
+		"PaintGunRN.placeHolderList[60]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl.scaleY" 
-		"PaintGunRN.placeHolderList[117]" ""
+		"PaintGunRN.placeHolderList[61]" ""
 		5 4 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Ctrls|PaintGun:Tube_Driver_Jnt_02_Ctrl_Grp|PaintGun:Tube_Driver_Jnt_02_Ctrl.scaleZ" 
-		"PaintGunRN.placeHolderList[118]" ""
+		"PaintGunRN.placeHolderList[62]" ""
 		5 0 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Gun_Ctrl_Grp|PaintGun:Gun_Ctrl|PaintGun:GunBase|PaintGun:GunBaseShape.instObjGroups.objectGroups[0]" 
-		"PaintGun:set7.dagSetMembers" "PaintGunRN.placeHolderList[119]" "PaintGunRN.placeHolderList[120]" 
+		"PaintGun:set7.dagSetMembers" "PaintGunRN.placeHolderList[63]" "PaintGunRN.placeHolderList[64]" 
 		""
 		5 0 "PaintGunRN" "|PaintGun:PaintGun|PaintGun:Geo|PaintGun:Hose|PaintGun:HoseShape.instObjGroups" 
-		"PaintGun:set7.dagSetMembers" "PaintGunRN.placeHolderList[121]" "PaintGunRN.placeHolderList[122]" 
+		"PaintGun:set7.dagSetMembers" "PaintGunRN.placeHolderList[65]" "PaintGunRN.placeHolderList[66]" 
 		""
 		7 "ignore" ":lightLinker1" 2 "|PaintGun:PaintGun|PaintGun:Geo|PaintGun:Hose|PaintGun:HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "PaintGunRN.placeHolderList[57]" ""
+		2 "PaintGunRN.placeHolderList[1]" ""
 		7 "ignore" ":lightLinker1" 2 "|PaintGun:PaintGun|PaintGun:Geo|PaintGun:Hose|PaintGun:HoseShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0;
 	setAttr ".ptag" -type "string" "";
@@ -32457,6 +32256,8 @@ createNode absUniqueOverride -n "AASamples2";
 	setAttr ".es" yes;
 createNode renderSettingsCollection -n "RenderSettingsCollection3";
 	rename -uid "528972BE-48E4-6EF1-31C5-3AB725C6CDB0";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
+	setAttr ".es" yes;
 createNode simpleSelector -n "RenderSettingsCollection3Selector";
 	rename -uid "229BD41F-47CA-CEA7-0BAC-EB8A8EBDCA3B";
 	setAttr ".ssl" -type "string" "defaultArnoldRenderOptions\ndefaultResolution\ndefaultRenderQuality\ndefaultArnoldFilter\ndefaultArnoldDriver\ndefaultRenderGlobals";
@@ -32464,11 +32265,13 @@ createNode simpleSelector -n "RenderSettingsCollection3Selector";
 createNode absUniqueOverride -n "endFrame";
 	rename -uid "EAAB45F7-4930-9D19-138E-0B863900E1E8";
 	addAttr -ci true -sn "atv" -ln "attrValue" -at "time";
+	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
 	setAttr ".atr" -type "string" "endFrame";
 	setAttr ".tgName" -type "string" "defaultRenderGlobals";
 	setAttr ".atv" 837;
+	setAttr ".es" yes;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "64F33E13-42BB-12C1-65A5-5894CEB111DD";
+	rename -uid "A4AC0737-4C9F-F9CE-7EEC-A5BCF5B2DC46";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 865;
@@ -32525,6 +32328,7 @@ select -ne :defaultRenderGlobals;
 	setAttr ".ofe" -type "string" "";
 	setAttr ".efe" -type "string" "";
 	setAttr ".oft" -type "string" "";
+	setAttr ".pff" yes;
 	setAttr ".ifp" -type "string" "";
 	setAttr ".rv" -type "string" "";
 	setAttr ".pram" -type "string" "";
@@ -32858,79 +32662,104 @@ connectAttr "ApolloRN.phl[367]" "ApolloRN.phl[368]";
 connectAttr "ApolloRN.phl[369]" "ApolloRN.phl[370]";
 connectAttr "ApolloRN.phl[371]" "ApolloRN.phl[372]";
 connectAttr "ApolloRN.phl[373]" "ApolloRN.phl[374]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[1]" "Painting_SceneRN.placeHolderList[50]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[2]" "Painting_SceneRN.placeHolderList[51]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[3]" "Painting_SceneRN.placeHolderList[52]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[4]" "Painting_SceneRN.placeHolderList[53]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[5]" "Painting_SceneRN.placeHolderList[54]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[6]" "Painting_SceneRN.placeHolderList[55]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[7]" "Painting_SceneRN.placeHolderList[56]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[8]" "Painting_SceneRN.placeHolderList[57]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[9]" "Painting_SceneRN.placeHolderList[58]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[10]" "Painting_SceneRN.placeHolderList[59]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[11]" "Painting_SceneRN.placeHolderList[60]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[12]" "Painting_SceneRN.placeHolderList[61]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[13]" "Painting_SceneRN.placeHolderList[62]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[15]" "Painting_SceneRN.placeHolderList[63]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[17]" "Painting_SceneRN.placeHolderList[64]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[19]" "Painting_SceneRN.placeHolderList[65]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[21]" "Painting_SceneRN.placeHolderList[66]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[22]" "Painting_SceneRN.placeHolderList[67]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[23]" "Painting_SceneRN.placeHolderList[68]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[24]" "Painting_SceneRN.placeHolderList[69]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[25]" "Painting_SceneRN.placeHolderList[70]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[26]" "Painting_SceneRN.placeHolderList[71]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[27]" "Painting_SceneRN.placeHolderList[72]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[28]" "Painting_SceneRN.placeHolderList[73]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[29]" "Painting_SceneRN.placeHolderList[74]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[30]" "Painting_SceneRN.placeHolderList[75]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[31]" "Painting_SceneRN.placeHolderList[76]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[32]" "Painting_SceneRN.placeHolderList[77]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[33]" "Painting_SceneRN.placeHolderList[78]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[34]" "Painting_SceneRN.placeHolderList[79]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[35]" "Painting_SceneRN.placeHolderList[80]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[36]" "Painting_SceneRN.placeHolderList[81]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[37]" "Painting_SceneRN.placeHolderList[82]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[38]" "Painting_SceneRN.placeHolderList[83]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[39]" "Painting_SceneRN.placeHolderList[84]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[40]" "Painting_SceneRN.placeHolderList[85]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[41]" "Painting_SceneRN.placeHolderList[86]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[42]" "Painting_SceneRN.placeHolderList[87]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[1]" "Painting_SceneRN.placeHolderList[1]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[2]" "Painting_SceneRN.placeHolderList[2]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[3]" "Painting_SceneRN.placeHolderList[3]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[4]" "Painting_SceneRN.placeHolderList[4]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[5]" "Painting_SceneRN.placeHolderList[5]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[6]" "Painting_SceneRN.placeHolderList[6]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[7]" "Painting_SceneRN.placeHolderList[7]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[8]" "Painting_SceneRN.placeHolderList[8]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[9]" "Painting_SceneRN.placeHolderList[9]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[10]" "Painting_SceneRN.placeHolderList[10]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[11]" "Painting_SceneRN.placeHolderList[11]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[12]" "Painting_SceneRN.placeHolderList[12]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[13]" "Painting_SceneRN.placeHolderList[13]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[15]" "Painting_SceneRN.placeHolderList[14]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[17]" "Painting_SceneRN.placeHolderList[15]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[19]" "Painting_SceneRN.placeHolderList[16]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[21]" "Painting_SceneRN.placeHolderList[17]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[22]" "Painting_SceneRN.placeHolderList[18]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[23]" "Painting_SceneRN.placeHolderList[19]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[24]" "Painting_SceneRN.placeHolderList[20]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[25]" "Painting_SceneRN.placeHolderList[21]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[26]" "Painting_SceneRN.placeHolderList[22]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[27]" "Painting_SceneRN.placeHolderList[23]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[28]" "Painting_SceneRN.placeHolderList[24]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[29]" "Painting_SceneRN.placeHolderList[25]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[30]" "Painting_SceneRN.placeHolderList[26]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[31]" "Painting_SceneRN.placeHolderList[27]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[32]" "Painting_SceneRN.placeHolderList[28]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[33]" "Painting_SceneRN.placeHolderList[29]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[34]" "Painting_SceneRN.placeHolderList[30]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[35]" "Painting_SceneRN.placeHolderList[31]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[36]" "Painting_SceneRN.placeHolderList[32]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[37]" "Painting_SceneRN.placeHolderList[33]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[38]" "Painting_SceneRN.placeHolderList[34]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[39]" "Painting_SceneRN.placeHolderList[35]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[40]" "Painting_SceneRN.placeHolderList[36]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[41]" "Painting_SceneRN.placeHolderList[37]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[42]" "Painting_SceneRN.placeHolderList[38]";
+connectAttr "Painting_SceneRN.phl[39]" "Painting_SceneRN.phl[40]";
+connectAttr "Painting_SceneRN.phl[41]" "Painting_SceneRN.phl[42]";
+connectAttr "Painting_SceneRN.phl[43]" "Painting_SceneRN.phl[44]";
+connectAttr "Painting_SceneRN.phl[45]" "Painting_SceneRN.phl[46]";
+connectAttr "Painting_SceneRN.phl[47]" "Painting_SceneRN.phl[48]";
+connectAttr "Spotlight_L2_visibility.o" "Painting_SceneRN.phl[49]";
+connectAttr "Spotlight_L3_visibility.o" "Painting_SceneRN.phl[50]";
+connectAttr "Painting_SceneRN.phl[52]" "Painting_SceneRN.phl[53]";
+connectAttr "Painting_SceneRN.phl[54]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+		;
+connectAttr "Painting_SceneRN.phl[55]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
+connectAttr "Painting_SceneRN.phl[56]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "Painting_SceneRN.phl[57]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "Painting_SceneRN.phl[58]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "Painting_SceneRN.phl[59]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+		;
+connectAttr "Painting_SceneRN.phl[60]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+		;
+connectAttr "Painting_SceneRN.phl[61]" "Painting_SceneRN.phl[62]";
+connectAttr "Painting_SceneRN.phl[63]" "Painting_SceneRN.phl[64]";
+connectAttr "Painting_SceneRN.phl[65]" "Painting_SceneRN.phl[66]";
+connectAttr "Painting_SceneRN.phl[67]" "Painting_SceneRN.phl[68]";
+connectAttr "Painting_SceneRN.phl[69]" "Painting_SceneRN.phl[70]";
+connectAttr "Painting_SceneRN.phl[71]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "Painting_SceneRN.phl[72]" "Painting_SceneRN.phl[73]";
+connectAttr "Painting_SceneRN.phl[74]" "Painting_SceneRN.phl[75]";
+connectAttr "Painting_SceneRN.phl[76]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+		;
+connectAttr "Painting_SceneRN.phl[77]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "Painting_SceneRN.phl[78]" "Painting_SceneRN.phl[79]";
+connectAttr "Painting_SceneRN.phl[80]" "Painting_SceneRN.phl[81]";
+connectAttr "Painting_SceneRN.phl[82]" "Painting_SceneRN.phl[83]";
+connectAttr "Painting_SceneRN.phl[84]" "Painting_SceneRN.phl[85]";
+connectAttr "Painting_SceneRN.phl[86]" "Painting_SceneRN.phl[87]";
 connectAttr "Painting_SceneRN.phl[88]" "Painting_SceneRN.phl[89]";
 connectAttr "Painting_SceneRN.phl[90]" "Painting_SceneRN.phl[91]";
 connectAttr "Painting_SceneRN.phl[92]" "Painting_SceneRN.phl[93]";
 connectAttr "Painting_SceneRN.phl[94]" "Painting_SceneRN.phl[95]";
 connectAttr "Painting_SceneRN.phl[96]" "Painting_SceneRN.phl[97]";
-connectAttr "Spotlight_L2_visibility.o" "Painting_SceneRN.phl[98]";
-connectAttr "Spotlight_L3_visibility.o" "Painting_SceneRN.phl[99]";
+connectAttr "Painting_SceneRN.phl[98]" "Painting_SceneRN.phl[99]";
+connectAttr "Painting_SceneRN.phl[100]" "Painting_SceneRN.phl[101]";
 connectAttr "Painting_SceneRN.phl[102]" "Painting_SceneRN.phl[103]";
-connectAttr "Painting_SceneRN.phl[104]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
-		;
-connectAttr "Painting_SceneRN.phl[105]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
-		;
-connectAttr "Painting_SceneRN.phl[106]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
-connectAttr "Painting_SceneRN.phl[107]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "Painting_SceneRN.phl[108]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
-		;
-connectAttr "Painting_SceneRN.phl[109]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
-		;
-connectAttr "Painting_SceneRN.phl[110]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
-		;
-connectAttr "Painting_SceneRN.phl[111]" "Painting_SceneRN.phl[112]";
-connectAttr "Painting_SceneRN.phl[113]" "Painting_SceneRN.phl[114]";
-connectAttr "Painting_SceneRN.phl[115]" "Painting_SceneRN.phl[116]";
-connectAttr "Painting_SceneRN.phl[117]" "Painting_SceneRN.phl[118]";
-connectAttr "Painting_SceneRN.phl[119]" "Painting_SceneRN.phl[120]";
-connectAttr "Painting_SceneRN.phl[121]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
-		;
+connectAttr "Painting_SceneRN.phl[104]" "Painting_SceneRN.phl[105]";
+connectAttr "Painting_SceneRN.phl[106]" "Painting_SceneRN.phl[107]";
+connectAttr "Painting_SceneRN.phl[108]" "Painting_SceneRN.phl[109]";
+connectAttr "Painting_SceneRN.phl[110]" "Painting_SceneRN.phl[111]";
+connectAttr "Painting_SceneRN.phl[112]" "Painting_SceneRN.phl[113]";
+connectAttr "Painting_SceneRN.phl[114]" "Painting_SceneRN.phl[115]";
+connectAttr "Painting_SceneRN.phl[116]" "Painting_SceneRN.phl[117]";
+connectAttr "Painting_SceneRN.phl[118]" "Painting_SceneRN.phl[119]";
+connectAttr "Painting_SceneRN.phl[120]" "Painting_SceneRN.phl[121]";
 connectAttr "Painting_SceneRN.phl[122]" "Painting_SceneRN.phl[123]";
 connectAttr "Painting_SceneRN.phl[124]" "Painting_SceneRN.phl[125]";
-connectAttr "Painting_SceneRN.phl[126]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
-		;
-connectAttr "Painting_SceneRN.phl[127]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
-		;
+connectAttr "Painting_SceneRN.phl[126]" "Painting_SceneRN.phl[127]";
 connectAttr "Painting_SceneRN.phl[128]" "Painting_SceneRN.phl[129]";
 connectAttr "Painting_SceneRN.phl[130]" "Painting_SceneRN.phl[131]";
 connectAttr "Painting_SceneRN.phl[132]" "Painting_SceneRN.phl[133]";
@@ -32942,99 +32771,73 @@ connectAttr "Painting_SceneRN.phl[142]" "Painting_SceneRN.phl[143]";
 connectAttr "Painting_SceneRN.phl[144]" "Painting_SceneRN.phl[145]";
 connectAttr "Painting_SceneRN.phl[146]" "Painting_SceneRN.phl[147]";
 connectAttr "Painting_SceneRN.phl[148]" "Painting_SceneRN.phl[149]";
-connectAttr "Painting_SceneRN.phl[150]" "Painting_SceneRN.phl[151]";
-connectAttr "Painting_SceneRN.phl[152]" "Painting_SceneRN.phl[153]";
-connectAttr "Painting_SceneRN.phl[154]" "Painting_SceneRN.phl[155]";
-connectAttr "Painting_SceneRN.phl[156]" "Painting_SceneRN.phl[157]";
-connectAttr "Painting_SceneRN.phl[158]" "Painting_SceneRN.phl[159]";
-connectAttr "Painting_SceneRN.phl[160]" "Painting_SceneRN.phl[161]";
-connectAttr "Painting_SceneRN.phl[162]" "Painting_SceneRN.phl[163]";
-connectAttr "Painting_SceneRN.phl[164]" "Painting_SceneRN.phl[165]";
-connectAttr "Painting_SceneRN.phl[166]" "Painting_SceneRN.phl[167]";
-connectAttr "Painting_SceneRN.phl[168]" "Painting_SceneRN.phl[169]";
-connectAttr "Painting_SceneRN.phl[170]" "Painting_SceneRN.phl[171]";
-connectAttr "Painting_SceneRN.phl[172]" "Painting_SceneRN.phl[173]";
-connectAttr "Painting_SceneRN.phl[174]" "Painting_SceneRN.phl[175]";
-connectAttr "Painting_SceneRN.phl[176]" "Painting_SceneRN.phl[177]";
-connectAttr "Painting_SceneRN.phl[178]" "Painting_SceneRN.phl[179]";
-connectAttr "Painting_SceneRN.phl[180]" "Painting_SceneRN.phl[181]";
-connectAttr "Painting_SceneRN.phl[182]" "Painting_SceneRN.phl[183]";
-connectAttr "Painting_SceneRN.phl[184]" "Painting_SceneRN.phl[185]";
-connectAttr "Painting_SceneRN.phl[186]" "Painting_SceneRN.phl[187]";
-connectAttr "Painting_SceneRN.phl[188]" "Painting_SceneRN.phl[189]";
-connectAttr "Painting_SceneRN.phl[190]" "Painting_SceneRN.phl[191]";
-connectAttr "Painting_SceneRN.phl[192]" "Painting_SceneRN.phl[193]";
-connectAttr "Painting_SceneRN.phl[194]" "Painting_SceneRN.phl[195]";
-connectAttr "Painting_SceneRN.phl[196]" "Painting_SceneRN.phl[197]";
-connectAttr "Painting_SceneRN.phl[198]" "Painting_SceneRN.phl[199]";
-relationship "ignore" ":lightLinker1" "PaintGunRN.placeHolderList[56]" "Painting_SceneRN.placeHolderList[100]";
-relationship "ignore" ":lightLinker1" "PaintGunRN.placeHolderList[57]" "Painting_SceneRN.placeHolderList[101]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.ctx" "PaintGunRN.phl[58]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.cty" "PaintGunRN.phl[59]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.ctz" "PaintGunRN.phl[60]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.crx" "PaintGunRN.phl[61]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.cry" "PaintGunRN.phl[62]";
-connectAttr "Gun_Ctrl_Grp_parentConstraint1.crz" "PaintGunRN.phl[63]";
-connectAttr "PaintGunRN.phl[64]" "Gun_Ctrl_Grp_parentConstraint1.cro";
-connectAttr "PaintGunRN.phl[65]" "Gun_Ctrl_Grp_parentConstraint1.cpim";
-connectAttr "PaintGunRN.phl[66]" "Gun_Ctrl_Grp_parentConstraint1.crp";
-connectAttr "PaintGunRN.phl[67]" "Gun_Ctrl_Grp_parentConstraint1.crt";
-connectAttr "PaintGunRN.phl[68]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn";
-connectAttr "Gun_Ctrl_MasterScale1.o" "PaintGunRN.phl[69]";
-connectAttr "Gun_Ctrl_translateX1.o" "PaintGunRN.phl[70]";
-connectAttr "Gun_Ctrl_translateY1.o" "PaintGunRN.phl[71]";
-connectAttr "Gun_Ctrl_translateZ1.o" "PaintGunRN.phl[72]";
-connectAttr "Gun_Ctrl_rotateX1.o" "PaintGunRN.phl[73]";
-connectAttr "Gun_Ctrl_rotateY1.o" "PaintGunRN.phl[74]";
-connectAttr "Gun_Ctrl_rotateZ1.o" "PaintGunRN.phl[75]";
-connectAttr "PaintGunRN.phl[76]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
-connectAttr "PaintGunRN.phl[77]" "Gun_Ctrl_Grp_parentConstraint1_Prop_CtrlW1.i";
-connectAttr "PaintGunRN.phl[78]" "Gun_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW0.i"
+relationship "ignore" ":lightLinker1" "PaintGunRN.placeHolderList[1]" "Painting_SceneRN.placeHolderList[51]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.ctx" "PaintGunRN.phl[2]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.cty" "PaintGunRN.phl[3]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.ctz" "PaintGunRN.phl[4]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.crx" "PaintGunRN.phl[5]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.cry" "PaintGunRN.phl[6]";
+connectAttr "Gun_Ctrl_Grp_parentConstraint1.crz" "PaintGunRN.phl[7]";
+connectAttr "PaintGunRN.phl[8]" "Gun_Ctrl_Grp_parentConstraint1.cro";
+connectAttr "PaintGunRN.phl[9]" "Gun_Ctrl_Grp_parentConstraint1.cpim";
+connectAttr "PaintGunRN.phl[10]" "Gun_Ctrl_Grp_parentConstraint1.crp";
+connectAttr "PaintGunRN.phl[11]" "Gun_Ctrl_Grp_parentConstraint1.crt";
+connectAttr "PaintGunRN.phl[12]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn";
+connectAttr "Gun_Ctrl_MasterScale1.o" "PaintGunRN.phl[13]";
+connectAttr "Gun_Ctrl_translateX1.o" "PaintGunRN.phl[14]";
+connectAttr "Gun_Ctrl_translateY1.o" "PaintGunRN.phl[15]";
+connectAttr "Gun_Ctrl_translateZ1.o" "PaintGunRN.phl[16]";
+connectAttr "Gun_Ctrl_rotateX1.o" "PaintGunRN.phl[17]";
+connectAttr "Gun_Ctrl_rotateY1.o" "PaintGunRN.phl[18]";
+connectAttr "Gun_Ctrl_rotateZ1.o" "PaintGunRN.phl[19]";
+connectAttr "PaintGunRN.phl[20]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
+connectAttr "PaintGunRN.phl[21]" "Gun_Ctrl_Grp_parentConstraint1_Prop_CtrlW1.i";
+connectAttr "PaintGunRN.phl[22]" "Gun_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW0.i"
 		;
-connectAttr "PaintGunRN.phl[79]" "Gun_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW2.i"
+connectAttr "PaintGunRN.phl[23]" "Gun_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW2.i"
 		;
-connectAttr "PaintGunRN.phl[80]" "Gun_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW3.i"
+connectAttr "PaintGunRN.phl[24]" "Gun_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW3.i"
 		;
-connectAttr "Gun_Ctrl_Follow1.o" "PaintGunRN.phl[81]";
-connectAttr "TubeIKCurve_visibility1.o" "PaintGunRN.phl[82]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_translateX1.o" "PaintGunRN.phl[83]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_translateY1.o" "PaintGunRN.phl[84]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_translateZ1.o" "PaintGunRN.phl[85]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateX1.o" "PaintGunRN.phl[86]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateY1.o" "PaintGunRN.phl[87]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateZ1.o" "PaintGunRN.phl[88]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleX1.o" "PaintGunRN.phl[89]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleY1.o" "PaintGunRN.phl[90]";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleZ1.o" "PaintGunRN.phl[91]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_translateX1.o" "PaintGunRN.phl[92]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_translateY1.o" "PaintGunRN.phl[93]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_translateZ1.o" "PaintGunRN.phl[94]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateX1.o" "PaintGunRN.phl[95]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateY1.o" "PaintGunRN.phl[96]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateZ1.o" "PaintGunRN.phl[97]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleX1.o" "PaintGunRN.phl[98]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleY1.o" "PaintGunRN.phl[99]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleZ1.o" "PaintGunRN.phl[100]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_translateX1.o" "PaintGunRN.phl[101]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_translateY1.o" "PaintGunRN.phl[102]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_translateZ1.o" "PaintGunRN.phl[103]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateX1.o" "PaintGunRN.phl[104]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateY1.o" "PaintGunRN.phl[105]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateZ1.o" "PaintGunRN.phl[106]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleX1.o" "PaintGunRN.phl[107]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleY1.o" "PaintGunRN.phl[108]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleZ1.o" "PaintGunRN.phl[109]";
-connectAttr "Tube_Driver_Jnt_02_Ctrl_translateX1.o" "PaintGunRN.phl[110]";
-connectAttr "Tube_Driver_Jnt_02_Ctrl_translateY1.o" "PaintGunRN.phl[111]";
-connectAttr "Tube_Driver_Jnt_02_Ctrl_translateZ1.o" "PaintGunRN.phl[112]";
-connectAttr "Tube_Driver_Jnt_02_Ctrl_rotateX1.o" "PaintGunRN.phl[113]";
-connectAttr "Tube_Driver_Jnt_02_Ctrl_rotateY1.o" "PaintGunRN.phl[114]";
-connectAttr "Tube_Driver_Jnt_02_Ctrl_rotateZ1.o" "PaintGunRN.phl[115]";
-connectAttr "Tube_Driver_Jnt_02_Ctrl_scaleX1.o" "PaintGunRN.phl[116]";
-connectAttr "Tube_Driver_Jnt_02_Ctrl_scaleY1.o" "PaintGunRN.phl[117]";
-connectAttr "Tube_Driver_Jnt_02_Ctrl_scaleZ1.o" "PaintGunRN.phl[118]";
-connectAttr "PaintGunRN.phl[119]" "PaintGunRN.phl[120]";
-connectAttr "PaintGunRN.phl[121]" "PaintGunRN.phl[122]";
+connectAttr "Gun_Ctrl_Follow1.o" "PaintGunRN.phl[25]";
+connectAttr "TubeIKCurve_visibility1.o" "PaintGunRN.phl[26]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_translateX1.o" "PaintGunRN.phl[27]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_translateY1.o" "PaintGunRN.phl[28]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_translateZ1.o" "PaintGunRN.phl[29]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateX1.o" "PaintGunRN.phl[30]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateY1.o" "PaintGunRN.phl[31]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_rotateZ1.o" "PaintGunRN.phl[32]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleX1.o" "PaintGunRN.phl[33]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleY1.o" "PaintGunRN.phl[34]";
+connectAttr "Tube_Driver_Jnt_01_Ctrl_scaleZ1.o" "PaintGunRN.phl[35]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_translateX1.o" "PaintGunRN.phl[36]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_translateY1.o" "PaintGunRN.phl[37]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_translateZ1.o" "PaintGunRN.phl[38]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateX1.o" "PaintGunRN.phl[39]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateY1.o" "PaintGunRN.phl[40]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_rotateZ1.o" "PaintGunRN.phl[41]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleX1.o" "PaintGunRN.phl[42]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleY1.o" "PaintGunRN.phl[43]";
+connectAttr "Tube_Driver_Jnt_03_Ctrl_scaleZ1.o" "PaintGunRN.phl[44]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_translateX1.o" "PaintGunRN.phl[45]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_translateY1.o" "PaintGunRN.phl[46]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_translateZ1.o" "PaintGunRN.phl[47]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateX1.o" "PaintGunRN.phl[48]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateY1.o" "PaintGunRN.phl[49]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_rotateZ1.o" "PaintGunRN.phl[50]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleX1.o" "PaintGunRN.phl[51]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleY1.o" "PaintGunRN.phl[52]";
+connectAttr "Tube_Driver_Jnt_04_Ctrl_scaleZ1.o" "PaintGunRN.phl[53]";
+connectAttr "Tube_Driver_Jnt_02_Ctrl_translateX1.o" "PaintGunRN.phl[54]";
+connectAttr "Tube_Driver_Jnt_02_Ctrl_translateY1.o" "PaintGunRN.phl[55]";
+connectAttr "Tube_Driver_Jnt_02_Ctrl_translateZ1.o" "PaintGunRN.phl[56]";
+connectAttr "Tube_Driver_Jnt_02_Ctrl_rotateX1.o" "PaintGunRN.phl[57]";
+connectAttr "Tube_Driver_Jnt_02_Ctrl_rotateY1.o" "PaintGunRN.phl[58]";
+connectAttr "Tube_Driver_Jnt_02_Ctrl_rotateZ1.o" "PaintGunRN.phl[59]";
+connectAttr "Tube_Driver_Jnt_02_Ctrl_scaleX1.o" "PaintGunRN.phl[60]";
+connectAttr "Tube_Driver_Jnt_02_Ctrl_scaleY1.o" "PaintGunRN.phl[61]";
+connectAttr "Tube_Driver_Jnt_02_Ctrl_scaleZ1.o" "PaintGunRN.phl[62]";
+connectAttr "PaintGunRN.phl[63]" "PaintGunRN.phl[64]";
+connectAttr "PaintGunRN.phl[65]" "PaintGunRN.phl[66]";
 connectAttr "AnimdCamera_visibility.o" "AnimdCamera.v";
 connectAttr "AnimdCamera_translateX.o" "AnimdCamera.tx" -l on;
 connectAttr "AnimdCamera_translateY.o" "AnimdCamera.ty" -l on;
@@ -33109,9 +32912,6 @@ connectAttr "Gun_Ctrl_Grp_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tg
 		;
 connectAttr "Painting_SceneRNfosterParent1.msg" "Painting_SceneRN.fp";
 connectAttr "sharedReferenceNode.sr" "Painting_SceneRN.sr";
-connectAttr "Tube_Driver_Jnt_01_Ctrl_visibility1.o" "PaintGunRN.phl[35]";
-connectAttr "Tube_Driver_Jnt_03_Ctrl_visibility1.o" "PaintGunRN.phl[45]";
-connectAttr "Tube_Driver_Jnt_04_Ctrl_visibility1.o" "PaintGunRN.phl[55]";
 connectAttr "PaintGunRNfosterParent1.msg" "PaintGunRN.fp";
 connectAttr "sharedReferenceNode.sr" "PaintGunRN.sr";
 connectAttr "Apollo1.msg" "renderSetup.frl";
