@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: PaintingScene_ApolloGun_837_871_CC.ma
-//Last modified: Fri, Apr 04, 2025 03:33:20 PM
+//Last modified: Fri, Apr 04, 2025 04:46:53 PM
 //Codeset: 1252
 file -rdi 1 -ns "Apollo" -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
 file -rdi 1 -ns "Painting_Scene" -rfn "Painting_SceneRN" -op "v=0;" -typ "mayaAscii"
@@ -32,7 +32,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "D4FF74AA-450E-D8EF-4EEE-63BEED4036DB";
+fileInfo "UUID" "80D5231A-4F87-0F00-AACA-21BC72067691";
 fileInfo "license" "education";
 fileInfo "exportedFrom" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/Painting/PaintingScene_CC.ma";
 createNode transform -s -n "persp";
@@ -202,7 +202,7 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint2" -p "PaintGunRN1f
 	setAttr ".rsrr" -type "double3" 1.4113711398994355e-14 1.5902773407317582e-15 8.1998675381481314e-16 ;
 	setAttr -k on ".w0" 0;
 createNode fosterParent -n "Painting_SceneRNfosterParent1";
-	rename -uid "C7069542-441D-572E-BDE9-5EB5A4158915";
+	rename -uid "31FF33C1-4F16-6A0E-8BE5-088368B53B7B";
 createNode transform -n "pasted__Spotlight_L3" -p "Painting_SceneRNfosterParent1";
 	rename -uid "F737349A-4755-06CD-87B2-32979B1EDADF";
 	setAttr ".t" -type "double3" -2.7446890842687943 5.5656304988798855 -4.847736531899578 ;
@@ -238,7 +238,7 @@ createNode spotLight -n "pasted__Spotlight_L2Shape" -p "pasted__Spotlight_L2";
 	setAttr ".ai_volume_samples" 0;
 	setAttr ".ai_cast_volumetric_shadows" no;
 createNode fosterParent -n "PaintGunRNfosterParent1";
-	rename -uid "FC60BF97-43D6-A88F-BB9E-1F80B228C3F2";
+	rename -uid "9E95DD10-4E0D-A149-BF40-548E36BA9778";
 createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint1" -p "PaintGunRNfosterParent1";
 	rename -uid "5C19CC19-4F0F-22A5-7C2F-258751E923B2";
 	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "Prop_CtrlW1" -dv 1 -min 0 -at "double";
@@ -261,24 +261,24 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint1" -p "PaintGunRNfo
 	setAttr ".rsrr" -type "double3" 1.4113711398994355e-14 1.5902773407317582e-15 8.1998675381481314e-16 ;
 	setAttr -k on ".w1";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "31645653-4315-956F-A245-B5871F23E68E";
-	setAttr -s 146 ".lnk";
-	setAttr -s 141 ".ign";
-	setAttr -s 146 ".slnk";
+	rename -uid "BC39CA34-446D-8D9F-E18B-F7AAC65FB03E";
+	setAttr -s 148 ".lnk";
+	setAttr -s 135 ".ign";
+	setAttr -s 148 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "CC647937-4156-CF2D-C2B2-1B9835ED24CF";
+	rename -uid "755525F5-44C4-52CE-A546-C9B3A4C2287A";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 0 2 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "D748C4EB-4D85-DA5B-32FD-3F8FA530A9BB";
+	rename -uid "A0E01D33-4E96-BEF5-4457-0A83748A7ADB";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "175025E4-455B-61C4-7B57-2B89604EFF2B";
+	rename -uid "BC204745-4774-8387-4C0A-7288C6ED43AC";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "0DFBE31B-4B53-7FF6-5DDE-8ABD325E78B9";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E0F6A2AD-4F7B-60C7-8774-25AFD5CF4011";
+	rename -uid "30B6E0EF-4B90-7AEA-0DFC-F1A4F02BDE63";
 	setAttr -s 10 ".rlmi[1:9]"  1 2 3 4 5 6 7 8 
 		9;
 	setAttr -s 6 ".rlmi";
@@ -304,7 +304,7 @@ createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	setAttr ".ipr_step_started" -type "string" "";
 	setAttr ".ipr_step_finished" -type "string" "";
 	setAttr ".output_overscan" -type "string" "";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1   1;Background.Offset=0   0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1   1;Foreground.Offset=0   0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1    1;Background.Offset=0    0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1    1;Foreground.Offset=0    0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "A7A3AB83-40A2-199A-B6BF-ED8453C79E9A";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -323,17 +323,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 504\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 1047\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1310\n            -height 503\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1307\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1310\n            -height 503\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
 		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 724\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1051\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
 		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
 		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n"
@@ -361,8 +361,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
 		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 724\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 724\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1051\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1051\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -21015,106 +21015,106 @@ createNode reference -n "ApolloRN";
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.instObjGroups" 
 		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[373]" "ApolloRN.placeHolderList[374]" 
 		""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[1]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[2]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[3]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[4]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[5]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[6]" ""
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[7]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[8]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[9]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[10]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[11]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[12]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[13]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[15]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[17]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[19]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[21]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[22]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[23]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[24]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[25]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[26]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[27]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[28]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[29]" ""
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
@@ -21151,181 +21151,205 @@ createNode reference -n "ApolloRN";
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Actually_Bored|Apollo:Right_Eye_Actually_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[38]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[39]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[40]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[41]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "ApolloRN.placeHolderList[42]" "";
+		2 "ApolloRN.placeHolderList[42]" ""
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Painting_SceneRN";
 	rename -uid "2F594995-4183-7E97-7C0B-1AA1D51933D6";
 	setAttr -s 149 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
-	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
-	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
-	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
-	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
 	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
-	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
-	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
 	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
 	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
-	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
-	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
-	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
-	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
-	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
-	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
-	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
-	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
-	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
-	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
-	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
-	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
-	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
-	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
-	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
-	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
-	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
-	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
-	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
-	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
-	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
-	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
-	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
-	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
-	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
-	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
-	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
-	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
-	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
-	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
 	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
 	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
 	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
+	setAttr ".phl[150]" 0;
+	setAttr ".phl[151]" 0;
+	setAttr ".phl[152]" 0;
+	setAttr ".phl[153]" 0;
+	setAttr ".phl[154]" 0;
+	setAttr ".phl[155]" 0;
+	setAttr ".phl[156]" 0;
+	setAttr ".phl[157]" 0;
+	setAttr ".phl[158]" 0;
+	setAttr ".phl[159]" 0;
+	setAttr ".phl[160]" 0;
+	setAttr ".phl[161]" 0;
+	setAttr ".phl[162]" 0;
+	setAttr ".phl[163]" 0;
+	setAttr ".phl[164]" 0;
+	setAttr ".phl[165]" 0;
+	setAttr ".phl[166]" 0;
+	setAttr ".phl[167]" 0;
+	setAttr ".phl[168]" 0;
+	setAttr ".phl[169]" 0;
+	setAttr ".phl[170]" 0;
+	setAttr ".phl[171]" 0;
+	setAttr ".phl[172]" 0;
+	setAttr ".phl[173]" 0;
+	setAttr ".phl[174]" 0;
+	setAttr ".phl[175]" 0;
+	setAttr ".phl[176]" 0;
+	setAttr ".phl[177]" 0;
+	setAttr ".phl[178]" 0;
+	setAttr ".phl[179]" 0;
+	setAttr ".phl[180]" 0;
+	setAttr ".phl[181]" 0;
+	setAttr ".phl[182]" 0;
+	setAttr ".phl[183]" 0;
+	setAttr ".phl[184]" 0;
+	setAttr ".phl[185]" 0;
+	setAttr ".phl[186]" 0;
+	setAttr ".phl[187]" 0;
+	setAttr ".phl[188]" 0;
+	setAttr ".phl[189]" 0;
+	setAttr ".phl[190]" 0;
+	setAttr ".phl[191]" 0;
+	setAttr ".phl[192]" 0;
+	setAttr ".phl[193]" 0;
+	setAttr ".phl[194]" 0;
+	setAttr ".phl[195]" 0;
+	setAttr ".phl[196]" 0;
+	setAttr ".phl[197]" 0;
+	setAttr ".phl[198]" 0;
+	setAttr ".phl[199]" 0;
+	setAttr ".phl[200]" 0;
+	setAttr ".phl[201]" 0;
+	setAttr ".phl[202]" 0;
+	setAttr ".phl[203]" 0;
+	setAttr ".phl[204]" 0;
+	setAttr ".phl[205]" 0;
+	setAttr ".phl[206]" 0;
+	setAttr ".phl[207]" 0;
+	setAttr ".phl[208]" 0;
+	setAttr ".phl[209]" 0;
+	setAttr ".phl[210]" 0;
+	setAttr ".phl[211]" 0;
+	setAttr ".phl[212]" 0;
+	setAttr ".phl[213]" 0;
+	setAttr ".phl[214]" 0;
+	setAttr ".phl[215]" 0;
+	setAttr ".phl[216]" 0;
+	setAttr ".phl[217]" 0;
+	setAttr ".phl[218]" 0;
+	setAttr ".phl[219]" 0;
+	setAttr ".phl[220]" 0;
+	setAttr ".phl[221]" 0;
+	setAttr ".phl[222]" 0;
+	setAttr ".phl[223]" 0;
+	setAttr ".phl[224]" 0;
+	setAttr ".phl[225]" 0;
+	setAttr ".phl[226]" 0;
+	setAttr ".phl[227]" 0;
+	setAttr ".phl[228]" 0;
+	setAttr ".phl[229]" 0;
+	setAttr ".phl[230]" 0;
+	setAttr ".phl[231]" 0;
+	setAttr ".phl[232]" 0;
+	setAttr ".phl[233]" 0;
+	setAttr ".phl[234]" 0;
+	setAttr ".phl[235]" 0;
+	setAttr ".phl[236]" 0;
+	setAttr ".phl[237]" 0;
+	setAttr ".phl[238]" 0;
+	setAttr ".phl[239]" 0;
+	setAttr ".phl[240]" 0;
+	setAttr ".phl[241]" 0;
+	setAttr ".phl[242]" 0;
+	setAttr ".phl[243]" 0;
+	setAttr ".phl[244]" 0;
+	setAttr ".phl[245]" 0;
+	setAttr ".phl[246]" 0;
+	setAttr ".phl[247]" 0;
+	setAttr ".phl[248]" 0;
+	setAttr ".phl[249]" 0;
+	setAttr ".phl[250]" 0;
+	setAttr ".phl[251]" 0;
+	setAttr ".phl[252]" 0;
+	setAttr ".phl[253]" 0;
+	setAttr ".phl[254]" 0;
+	setAttr ".phl[255]" 0;
+	setAttr ".phl[256]" 0;
+	setAttr ".phl[257]" 0;
+	setAttr ".phl[258]" 0;
+	setAttr ".phl[259]" 0;
+	setAttr ".phl[260]" 0;
+	setAttr ".phl[261]" 0;
+	setAttr ".phl[262]" 0;
+	setAttr ".phl[263]" 0;
+	setAttr ".phl[264]" 0;
+	setAttr ".phl[265]" 0;
+	setAttr ".phl[266]" 0;
+	setAttr ".phl[267]" 0;
+	setAttr ".phl[268]" 0;
+	setAttr ".phl[269]" 0;
+	setAttr ".phl[270]" 0;
+	setAttr ".phl[271]" 0;
+	setAttr ".phl[272]" 0;
+	setAttr ".phl[273]" 0;
+	setAttr ".phl[274]" 0;
+	setAttr ".phl[275]" 0;
+	setAttr ".phl[276]" 0;
+	setAttr ".phl[277]" 0;
+	setAttr ".phl[278]" 0;
+	setAttr ".phl[279]" 0;
+	setAttr ".phl[280]" 0;
+	setAttr ".phl[281]" 0;
+	setAttr ".phl[282]" 0;
+	setAttr ".phl[283]" 0;
+	setAttr ".phl[284]" 0;
+	setAttr ".phl[285]" 0;
+	setAttr ".phl[286]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Painting_SceneRN"
 		"Painting_Scene:Hopper_BinRN" 0
 		"Painting_Scene:Tug_CarRN" 0
-		"Painting_SceneRN" 0
+		"Painting_SceneRN" 12
+		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface188|Painting_Scene:polySurfaceShape188.instObjGroups.objectGroups[0]" 
+		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[61]" "Painting_SceneRN.placeHolderList[62]" 
+		""
+		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface187|Painting_Scene:polySurfaceShape187.instObjGroups.objectGroups[0]" 
+		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[67]" "Painting_SceneRN.placeHolderList[68]" 
+		""
+		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface185|Painting_Scene:polySurfaceShape194.instObjGroups.objectGroups[0]" 
+		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[69]" "Painting_SceneRN.placeHolderList[70]" 
+		""
+		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface188|Painting_Scene:polySurfaceShape188.instObjGroups.objectGroups[1]" 
+		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[140]" "Painting_SceneRN.placeHolderList[141]" 
+		""
+		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface185|Painting_Scene:polySurfaceShape194.instObjGroups.objectGroups[1]" 
+		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[142]" "Painting_SceneRN.placeHolderList[143]" 
+		""
+		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface187|Painting_Scene:polySurfaceShape187.instObjGroups.objectGroups[1]" 
+		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[148]" "Painting_SceneRN.placeHolderList[149]" 
+		""
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface185|Painting_Scene:polySurfaceShape194.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface185|Painting_Scene:polySurfaceShape194.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface187|Painting_Scene:polySurfaceShape187.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface187|Painting_Scene:polySurfaceShape187.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface188|Painting_Scene:polySurfaceShape188.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface188|Painting_Scene:polySurfaceShape188.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
 		"Painting_Scene:Hopper_BinRN" 33
 		2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin" 
 		"rotate" " -type \"double3\" 0 -14.56904486586062397 0"
@@ -21367,30 +21391,30 @@ createNode reference -n "Painting_SceneRN";
 		2 "Painting_Scene:Hopper_Bin:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Hopper_Bin1|Painting_Scene:Hopper_Bin1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:Hopper_Bin:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[39]" 
-		"Painting_SceneRN.placeHolderList[40]" ""
+		"Painting_Scene:Hopper_Bin:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[188]" 
+		"Painting_SceneRN.placeHolderList[189]" ""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:Hopper_Bin:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[41]" 
-		"Painting_SceneRN.placeHolderList[42]" ""
+		"Painting_Scene:Hopper_Bin:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[190]" 
+		"Painting_SceneRN.placeHolderList[191]" ""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:Hopper_Bin:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[43]" 
-		"Painting_SceneRN.placeHolderList[44]" ""
+		"Painting_Scene:Hopper_Bin:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[192]" 
+		"Painting_SceneRN.placeHolderList[193]" ""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.instObjGroups" 
-		"Painting_Scene:Hopper_Bin:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[45]" 
-		"Painting_SceneRN.placeHolderList[46]" ""
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
+		"Painting_Scene:Hopper_Bin:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[194]" 
+		"Painting_SceneRN.placeHolderList[195]" ""
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		"Painting_SceneRN" 279
+		"Painting_SceneRN" 267
 		0 "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2" "|Painting_Scene:Enviornment|Painting_Scene:Lights" 
 		"-s -r "
 		0 "|Painting_SceneRNfosterParent1|pasted__Spotlight_L3" "|Painting_Scene:Enviornment|Painting_Scene:Lights" 
@@ -21636,362 +21660,333 @@ createNode reference -n "Painting_SceneRN";
 		
 		2 "Painting_Scene:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		3 "Painting_Scene:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
-		
 		3 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 ":initialShadingGroup.memberWireframeColor" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
+		3 "Painting_Scene:groupId1.message" ":initialShadingGroup.groupNodes" "-na"
+		
 		5 0 "Painting_SceneRN" "Painting_Scene:set3.memberWireframeColor" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"Painting_SceneRN.placeHolderList[47]" "Painting_SceneRN.placeHolderList[48]" ""
+		"Painting_SceneRN.placeHolderList[196]" "Painting_SceneRN.placeHolderList[197]" ""
+		
 		5 4 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:Spotlight_L2.visibility" 
-		"Painting_SceneRN.placeHolderList[49]" ""
+		"Painting_SceneRN.placeHolderList[198]" ""
 		5 4 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:Spotlight_L3.visibility" 
-		"Painting_SceneRN.placeHolderList[50]" ""
+		"Painting_SceneRN.placeHolderList[199]" ""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:standardSurface3SG.dagSetMembers" "Painting_SceneRN.placeHolderList[52]" 
-		"Painting_SceneRN.placeHolderList[53]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:place2dTexture1.message" "Painting_SceneRN.placeHolderList[54]" 
+		"Painting_Scene:standardSurface3SG.dagSetMembers" "Painting_SceneRN.placeHolderList[201]" 
+		"Painting_SceneRN.placeHolderList[202]" ""
+		5 3 "Painting_SceneRN" "Painting_Scene:place2dTexture1.message" "Painting_SceneRN.placeHolderList[203]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file1.message" "Painting_SceneRN.placeHolderList[55]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:file1.message" "Painting_SceneRN.placeHolderList[204]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file3.message" "Painting_SceneRN.placeHolderList[56]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:file3.message" "Painting_SceneRN.placeHolderList[205]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file4.message" "Painting_SceneRN.placeHolderList[57]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:file4.message" "Painting_SceneRN.placeHolderList[206]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file5.message" "Painting_SceneRN.placeHolderList[58]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:file5.message" "Painting_SceneRN.placeHolderList[207]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:multiplyDivide1.message" "Painting_SceneRN.placeHolderList[59]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:multiplyDivide1.message" "Painting_SceneRN.placeHolderList[208]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:set1.message" "Painting_SceneRN.placeHolderList[60]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:set1.message" "Painting_SceneRN.placeHolderList[209]" 
 		""
-		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface188|Painting_Scene:polySurfaceShape188.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[61]" "Painting_SceneRN.placeHolderList[62]" 
-		""
-		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:polySurfaceShape195.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[63]" "Painting_SceneRN.placeHolderList[64]" 
+		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:transform2|Painting_Scene:polySurfaceShape195.instObjGroups.objectGroups[0]" 
+		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[210]" "Painting_SceneRN.placeHolderList[211]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:transform1|Painting_Scene:polySurface184Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[65]" "Painting_SceneRN.placeHolderList[66]" 
+		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[212]" "Painting_SceneRN.placeHolderList[213]" 
 		""
-		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface187|Painting_Scene:polySurfaceShape187.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[67]" "Painting_SceneRN.placeHolderList[68]" 
-		""
-		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface185|Painting_Scene:polySurfaceShape194.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set1.dagSetMembers" "Painting_SceneRN.placeHolderList[69]" "Painting_SceneRN.placeHolderList[70]" 
-		""
-		5 3 "Painting_SceneRN" "Painting_Scene:bump2d1.message" "Painting_SceneRN.placeHolderList[71]" 
-		""
-		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:polySurfaceShape195.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:standardSurface4SG.dagSetMembers" "Painting_SceneRN.placeHolderList[72]" 
-		"Painting_SceneRN.placeHolderList[73]" ""
+		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:transform2|Painting_Scene:polySurfaceShape195.instObjGroups.objectGroups[1]" 
+		"Painting_Scene:standardSurface4SG.dagSetMembers" "Painting_SceneRN.placeHolderList[214]" 
+		"Painting_SceneRN.placeHolderList[215]" ""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:transform1|Painting_Scene:polySurface184Shape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:standardSurface4SG.dagSetMembers" "Painting_SceneRN.placeHolderList[74]" 
-		"Painting_SceneRN.placeHolderList[75]" ""
-		5 3 "Painting_SceneRN" "Painting_Scene:place2dTexture2.message" "Painting_SceneRN.placeHolderList[76]" 
+		"Painting_Scene:standardSurface4SG.dagSetMembers" "Painting_SceneRN.placeHolderList[216]" 
+		"Painting_SceneRN.placeHolderList[217]" ""
+		5 3 "Painting_SceneRN" "Painting_Scene:place2dTexture2.message" "Painting_SceneRN.placeHolderList[218]" 
 		""
-		5 3 "Painting_SceneRN" "Painting_Scene:file6.message" "Painting_SceneRN.placeHolderList[77]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:file6.message" "Painting_SceneRN.placeHolderList[219]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set2.dagSetMembers" "Painting_SceneRN.placeHolderList[78]" "Painting_SceneRN.placeHolderList[79]" 
+		"Painting_Scene:set2.dagSetMembers" "Painting_SceneRN.placeHolderList[220]" "Painting_SceneRN.placeHolderList[221]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table_03|Painting_Scene:Table_03Shape.instObjGroups" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[80]" "Painting_SceneRN.placeHolderList[81]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[222]" "Painting_SceneRN.placeHolderList[223]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.instObjGroups" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[82]" "Painting_SceneRN.placeHolderList[83]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[224]" "Painting_SceneRN.placeHolderList[225]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[84]" "Painting_SceneRN.placeHolderList[85]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[226]" "Painting_SceneRN.placeHolderList[227]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[86]" "Painting_SceneRN.placeHolderList[87]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[228]" "Painting_SceneRN.placeHolderList[229]" 
 		":initialShadingGroup.dsm"
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube47|Painting_Scene:pCube47Shape.instObjGroups" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[88]" "Painting_SceneRN.placeHolderList[89]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[230]" "Painting_SceneRN.placeHolderList[231]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube46|Painting_Scene:pCube46Shape.instObjGroups" 
-		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[90]" "Painting_SceneRN.placeHolderList[91]" 
+		"Painting_Scene:set3.dagSetMembers" "Painting_SceneRN.placeHolderList[232]" "Painting_SceneRN.placeHolderList[233]" 
 		""
 		5 0 "Painting_SceneRN" "Painting_Scene:groupId1.message" "Painting_Scene:set3.groupNodes" 
-		"Painting_SceneRN.placeHolderList[92]" "Painting_SceneRN.placeHolderList[93]" ":initialShadingGroup.gn"
+		"Painting_SceneRN.placeHolderList[234]" "Painting_SceneRN.placeHolderList[235]" ":initialShadingGroup.gn"
 		
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[94]" "Painting_SceneRN.placeHolderList[95]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[236]" "Painting_SceneRN.placeHolderList[237]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_05|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[96]" "Painting_SceneRN.placeHolderList[97]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[238]" "Painting_SceneRN.placeHolderList[239]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[98]" "Painting_SceneRN.placeHolderList[99]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[240]" "Painting_SceneRN.placeHolderList[241]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[100]" "Painting_SceneRN.placeHolderList[101]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[242]" "Painting_SceneRN.placeHolderList[243]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[102]" "Painting_SceneRN.placeHolderList[103]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[244]" "Painting_SceneRN.placeHolderList[245]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_07|Painting_Scene:Bay_07Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[104]" "Painting_SceneRN.placeHolderList[105]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[246]" "Painting_SceneRN.placeHolderList[247]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[106]" "Painting_SceneRN.placeHolderList[107]" 
+		"Painting_Scene:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[248]" "Painting_SceneRN.placeHolderList[249]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[108]" "Painting_SceneRN.placeHolderList[109]" 
+		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[250]" "Painting_SceneRN.placeHolderList[251]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[110]" "Painting_SceneRN.placeHolderList[111]" 
+		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[252]" "Painting_SceneRN.placeHolderList[253]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[112]" "Painting_SceneRN.placeHolderList[113]" 
+		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[254]" "Painting_SceneRN.placeHolderList[255]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_05|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[114]" "Painting_SceneRN.placeHolderList[115]" 
+		"Painting_Scene:set5.dagSetMembers" "Painting_SceneRN.placeHolderList[256]" "Painting_SceneRN.placeHolderList[257]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[116]" "Painting_SceneRN.placeHolderList[117]" 
+		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[258]" "Painting_SceneRN.placeHolderList[259]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[118]" "Painting_SceneRN.placeHolderList[119]" 
+		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[260]" "Painting_SceneRN.placeHolderList[261]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_05|Painting_Scene:Bay_01Shape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[120]" "Painting_SceneRN.placeHolderList[121]" 
+		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[262]" "Painting_SceneRN.placeHolderList[263]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[122]" "Painting_SceneRN.placeHolderList[123]" 
+		"Painting_Scene:set6.dagSetMembers" "Painting_SceneRN.placeHolderList[264]" "Painting_SceneRN.placeHolderList[265]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.instObjGroups" 
-		"Painting_Scene:set7.dagSetMembers" "Painting_SceneRN.placeHolderList[124]" "Painting_SceneRN.placeHolderList[125]" 
+		"Painting_Scene:set7.dagSetMembers" "Painting_SceneRN.placeHolderList[266]" "Painting_SceneRN.placeHolderList[267]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor1|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[126]" "Painting_SceneRN.placeHolderList[127]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[268]" "Painting_SceneRN.placeHolderList[269]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor2|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[128]" "Painting_SceneRN.placeHolderList[129]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[270]" "Painting_SceneRN.placeHolderList[271]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor3|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[130]" "Painting_SceneRN.placeHolderList[131]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[272]" "Painting_SceneRN.placeHolderList[273]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor4|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[132]" "Painting_SceneRN.placeHolderList[133]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[274]" "Painting_SceneRN.placeHolderList[275]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor6|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[134]" "Painting_SceneRN.placeHolderList[135]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[276]" "Painting_SceneRN.placeHolderList[277]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor5|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[136]" "Painting_SceneRN.placeHolderList[137]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[278]" "Painting_SceneRN.placeHolderList[279]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor7|Painting_Scene:Floor1Shape.instObjGroups.objectGroups[0]" 
-		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[138]" "Painting_SceneRN.placeHolderList[139]" 
+		"Painting_Scene:set8.dagSetMembers" "Painting_SceneRN.placeHolderList[280]" "Painting_SceneRN.placeHolderList[281]" 
 		""
-		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface188|Painting_Scene:polySurfaceShape188.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[140]" "Painting_SceneRN.placeHolderList[141]" 
-		""
-		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface185|Painting_Scene:polySurfaceShape194.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[142]" "Painting_SceneRN.placeHolderList[143]" 
-		""
-		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:polySurfaceShape195.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[144]" "Painting_SceneRN.placeHolderList[145]" 
+		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:transform2|Painting_Scene:polySurfaceShape195.instObjGroups.objectGroups[2]" 
+		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[282]" "Painting_SceneRN.placeHolderList[283]" 
 		""
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:transform1|Painting_Scene:polySurface184Shape.instObjGroups.objectGroups[2]" 
-		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[146]" "Painting_SceneRN.placeHolderList[147]" 
+		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[284]" "Painting_SceneRN.placeHolderList[285]" 
 		""
-		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface187|Painting_Scene:polySurfaceShape187.instObjGroups.objectGroups[1]" 
-		"Painting_Scene:set9.dagSetMembers" "Painting_SceneRN.placeHolderList[148]" "Painting_SceneRN.placeHolderList[149]" 
+		5 3 "Painting_SceneRN" "Painting_Scene:bump2d1.message" "Painting_SceneRN.placeHolderList[286]" 
 		""
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[1]"
+		2 "" "Painting_SceneRN.placeHolderList[150]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[2]"
+		2 "" "Painting_SceneRN.placeHolderList[151]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[3]"
+		2 "" "Painting_SceneRN.placeHolderList[152]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[4]"
+		2 "" "Painting_SceneRN.placeHolderList[153]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[5]"
+		2 "" "Painting_SceneRN.placeHolderList[154]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[6]"
+		2 "" "Painting_SceneRN.placeHolderList[155]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[7]"
+		2 "" "Painting_SceneRN.placeHolderList[156]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[8]"
+		2 "" "Painting_SceneRN.placeHolderList[157]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[9]"
+		2 "" "Painting_SceneRN.placeHolderList[158]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[10]"
+		2 "" "Painting_SceneRN.placeHolderList[159]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[11]"
+		2 "" "Painting_SceneRN.placeHolderList[160]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[12]"
+		2 "" "Painting_SceneRN.placeHolderList[161]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[13]"
+		2 "" "Painting_SceneRN.placeHolderList[162]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[14]"
+		2 "" "Painting_SceneRN.placeHolderList[163]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[15]"
+		2 "" "Painting_SceneRN.placeHolderList[164]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[16]"
+		2 "" "Painting_SceneRN.placeHolderList[165]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[17]"
+		2 "" "Painting_SceneRN.placeHolderList[166]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[18]"
+		2 "" "Painting_SceneRN.placeHolderList[167]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[19]"
+		2 "" "Painting_SceneRN.placeHolderList[168]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[20]"
+		2 "" "Painting_SceneRN.placeHolderList[169]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[21]"
+		2 "" "Painting_SceneRN.placeHolderList[170]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[22]"
+		2 "" "Painting_SceneRN.placeHolderList[171]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[23]"
+		2 "" "Painting_SceneRN.placeHolderList[172]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[24]"
+		2 "" "Painting_SceneRN.placeHolderList[173]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[25]"
+		2 "" "Painting_SceneRN.placeHolderList[174]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[26]"
+		2 "" "Painting_SceneRN.placeHolderList[175]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Sad|Apollo:R_Eye_SadShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[27]"
+		2 "" "Painting_SceneRN.placeHolderList[176]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Close|Apollo:R_Eye_CloseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[28]"
+		2 "" "Painting_SceneRN.placeHolderList[177]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Squint|Apollo:R_Eye_SquintShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[29]"
+		2 "" "Painting_SceneRN.placeHolderList[178]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Bored|Apollo:Right_Eye_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[30]"
+		2 "" "Painting_SceneRN.placeHolderList[179]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Smirk|Apollo:Right_Eye_SmirkShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[31]"
+		2 "" "Painting_SceneRN.placeHolderList[180]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Arrow|Apollo:Right_Eye_ArrowShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[32]"
+		2 "" "Painting_SceneRN.placeHolderList[181]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Determined|Apollo:Right_Eye_DeterminedShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[33]"
+		2 "" "Painting_SceneRN.placeHolderList[182]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Actually_Bored|Apollo:Right_Eye_Actually_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[34]"
+		2 "" "Painting_SceneRN.placeHolderList[183]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[35]"
+		2 "" "Painting_SceneRN.placeHolderList[184]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[36]"
+		2 "" "Painting_SceneRN.placeHolderList[185]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[37]"
+		2 "" "Painting_SceneRN.placeHolderList[186]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[38]"
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
+		2 "" "Painting_SceneRN.placeHolderList[187]"
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table_03|Painting_Scene:Table_03Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table_03|Painting_Scene:Table_03Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table_03|Painting_Scene:Table_03Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table_03|Painting_Scene:Table_03Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube46|Painting_Scene:pCube46Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube46|Painting_Scene:pCube46Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube46|Painting_Scene:pCube46Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube46|Painting_Scene:pCube46Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube47|Painting_Scene:pCube47Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube47|Painting_Scene:pCube47Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube47|Painting_Scene:pCube47Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube47|Painting_Scene:pCube47Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor1|Painting_Scene:Floor1Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor1|Painting_Scene:Floor1Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor1|Painting_Scene:Floor1Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor1|Painting_Scene:Floor1Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Hopper_Bin1|Painting_Scene:Hopper_Bin1Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Hopper_Bin1|Painting_Scene:Hopper_Bin1Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Hopper_Bin1|Painting_Scene:Hopper_Bin1Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Hopper_Bin1|Painting_Scene:Hopper_Bin1Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface185|Painting_Scene:polySurfaceShape194.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:transform2|Painting_Scene:polySurfaceShape195.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface185|Painting_Scene:polySurfaceShape194.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:polySurfaceShape195.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
-		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:polySurfaceShape195.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:transform2|Painting_Scene:polySurfaceShape195.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:transform1|Painting_Scene:polySurface184Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface187|Painting_Scene:polySurfaceShape187.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
-		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface187|Painting_Scene:polySurfaceShape187.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface188|Painting_Scene:polySurfaceShape188.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
-		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface188|Painting_Scene:polySurfaceShape188.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
-		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_07|Painting_Scene:Bay_07Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_07|Painting_Scene:Bay_07Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_07|Painting_Scene:Bay_07Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_07|Painting_Scene:Bay_07Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|PaintGun:PaintGun|PaintGun:Geo|PaintGun:Hose|PaintGun:HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "" "Painting_SceneRN.placeHolderList[51]";
+		2 "" "Painting_SceneRN.placeHolderList[200]";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "PaintGunRN";
@@ -32222,38 +32217,6 @@ createNode absUniqueOverride -n "AASamples";
 	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
 	setAttr ".atv" 2;
 	setAttr ".es" yes;
-createNode renderSettingsCollection -n "RenderSettingsCollection1";
-	rename -uid "2A2005CB-4D45-60CA-022E-D083398C2C5A";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "RenderSettingsCollection1Selector";
-	rename -uid "659E7206-4378-C096-0A27-93917FD4E37A";
-	setAttr ".ssl" -type "string" "defaultArnoldRenderOptions\ndefaultResolution\ndefaultRenderQuality\ndefaultArnoldFilter\ndefaultArnoldDriver\ndefaultRenderGlobals";
-	setAttr ".tf" 0;
-createNode absUniqueOverride -n "AASamples1";
-	rename -uid "F22960B4-483D-4E07-EF93-028A56CD876A";
-	addAttr -ci true -sn "atv" -ln "attrValue" -min -10 -max 100 -smn 1 -smx 10 -at "long";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "AASamples";
-	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
-	setAttr ".atv" 2;
-	setAttr ".es" yes;
-createNode renderSettingsCollection -n "RenderSettingsCollection2";
-	rename -uid "0D027B4F-485F-CF29-D236-F7A77FDC5EFD";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".es" yes;
-createNode simpleSelector -n "RenderSettingsCollection2Selector";
-	rename -uid "1F45E139-4EA6-A775-A68B-BE8F77A76FA5";
-	setAttr ".ssl" -type "string" "defaultArnoldRenderOptions\ndefaultResolution\ndefaultRenderQuality\ndefaultArnoldFilter\ndefaultArnoldDriver\ndefaultRenderGlobals";
-	setAttr ".tf" 0;
-createNode absUniqueOverride -n "AASamples2";
-	rename -uid "3D404AE4-4B44-58EA-8D25-298EB2B158B1";
-	addAttr -ci true -sn "atv" -ln "attrValue" -min -10 -max 100 -smn 1 -smx 10 -at "long";
-	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
-	setAttr ".atr" -type "string" "AASamples";
-	setAttr ".tgName" -type "string" "defaultArnoldRenderOptions";
-	setAttr ".atv" 2;
-	setAttr ".es" yes;
 createNode renderSettingsCollection -n "RenderSettingsCollection3";
 	rename -uid "528972BE-48E4-6EF1-31C5-3AB725C6CDB0";
 	addAttr -ci true -sn "es" -ln "expandedState" -min 0 -max 1 -at "bool";
@@ -32271,7 +32234,7 @@ createNode absUniqueOverride -n "endFrame";
 	setAttr ".atv" 837;
 	setAttr ".es" yes;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "A4AC0737-4C9F-F9CE-7EEC-A5BCF5B2DC46";
+	rename -uid "3AC26A68-4B5C-18B6-A25A-D08634995F36";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 865;
@@ -32285,20 +32248,20 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 146 ".st";
+	setAttr -s 148 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
 	setAttr -s 29 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 85 ".u";
+	setAttr -s 92 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 12 ".r";
 select -ne :lightList1;
 	setAttr -s 116 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 72 ".tx";
+	setAttr -s 82 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -32571,29 +32534,29 @@ connectAttr "Piston_01_Ctrl_translateX.o" "ApolloRN.phl[244]";
 connectAttr "Piston_02_Ctrl_translateX.o" "ApolloRN.phl[245]";
 connectAttr "Piston_03_Ctrl_translateX.o" "ApolloRN.phl[246]";
 connectAttr "Prop_Ctrl_Follow.o" "ApolloRN.phl[247]";
-connectAttr "ApolloRN.phl[248]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tt";
-connectAttr "ApolloRN.phl[249]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tt";
+connectAttr "ApolloRN.phl[248]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tt";
+connectAttr "ApolloRN.phl[249]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tt";
 connectAttr "Prop_Ctrl_translateX.o" "ApolloRN.phl[250]";
 connectAttr "Prop_Ctrl_translateY.o" "ApolloRN.phl[251]";
 connectAttr "Prop_Ctrl_translateZ.o" "ApolloRN.phl[252]";
-connectAttr "ApolloRN.phl[253]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trp";
-connectAttr "ApolloRN.phl[254]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trp";
-connectAttr "ApolloRN.phl[255]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trt";
-connectAttr "ApolloRN.phl[256]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trt";
-connectAttr "ApolloRN.phl[257]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tr";
-connectAttr "ApolloRN.phl[258]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tr";
+connectAttr "ApolloRN.phl[253]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trp";
+connectAttr "ApolloRN.phl[254]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trp";
+connectAttr "ApolloRN.phl[255]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trt";
+connectAttr "ApolloRN.phl[256]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trt";
+connectAttr "ApolloRN.phl[257]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tr";
+connectAttr "ApolloRN.phl[258]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tr";
 connectAttr "Prop_Ctrl_rotateX.o" "ApolloRN.phl[259]";
 connectAttr "Prop_Ctrl_rotateY.o" "ApolloRN.phl[260]";
 connectAttr "Prop_Ctrl_rotateZ.o" "ApolloRN.phl[261]";
-connectAttr "ApolloRN.phl[262]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tro";
-connectAttr "ApolloRN.phl[263]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tro";
-connectAttr "ApolloRN.phl[264]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].ts";
-connectAttr "ApolloRN.phl[265]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].ts";
+connectAttr "ApolloRN.phl[262]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tro";
+connectAttr "ApolloRN.phl[263]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tro";
+connectAttr "ApolloRN.phl[264]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].ts";
+connectAttr "ApolloRN.phl[265]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].ts";
 connectAttr "Prop_Ctrl_scaleX.o" "ApolloRN.phl[266]";
 connectAttr "Prop_Ctrl_scaleY.o" "ApolloRN.phl[267]";
 connectAttr "Prop_Ctrl_scaleZ.o" "ApolloRN.phl[268]";
-connectAttr "ApolloRN.phl[269]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tpm";
-connectAttr "ApolloRN.phl[270]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tpm";
+connectAttr "ApolloRN.phl[269]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tpm";
+connectAttr "ApolloRN.phl[270]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tpm";
 connectAttr "ApolloRN.phl[271]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
 connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[272]";
 connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[273]";
@@ -32662,116 +32625,110 @@ connectAttr "ApolloRN.phl[367]" "ApolloRN.phl[368]";
 connectAttr "ApolloRN.phl[369]" "ApolloRN.phl[370]";
 connectAttr "ApolloRN.phl[371]" "ApolloRN.phl[372]";
 connectAttr "ApolloRN.phl[373]" "ApolloRN.phl[374]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[1]" "Painting_SceneRN.placeHolderList[1]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[2]" "Painting_SceneRN.placeHolderList[2]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[3]" "Painting_SceneRN.placeHolderList[3]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[4]" "Painting_SceneRN.placeHolderList[4]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[5]" "Painting_SceneRN.placeHolderList[5]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[6]" "Painting_SceneRN.placeHolderList[6]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[7]" "Painting_SceneRN.placeHolderList[7]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[8]" "Painting_SceneRN.placeHolderList[8]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[9]" "Painting_SceneRN.placeHolderList[9]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[10]" "Painting_SceneRN.placeHolderList[10]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[11]" "Painting_SceneRN.placeHolderList[11]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[12]" "Painting_SceneRN.placeHolderList[12]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[13]" "Painting_SceneRN.placeHolderList[13]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[15]" "Painting_SceneRN.placeHolderList[14]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[17]" "Painting_SceneRN.placeHolderList[15]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[19]" "Painting_SceneRN.placeHolderList[16]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[21]" "Painting_SceneRN.placeHolderList[17]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[22]" "Painting_SceneRN.placeHolderList[18]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[23]" "Painting_SceneRN.placeHolderList[19]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[24]" "Painting_SceneRN.placeHolderList[20]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[25]" "Painting_SceneRN.placeHolderList[21]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[26]" "Painting_SceneRN.placeHolderList[22]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[27]" "Painting_SceneRN.placeHolderList[23]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[28]" "Painting_SceneRN.placeHolderList[24]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[29]" "Painting_SceneRN.placeHolderList[25]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[30]" "Painting_SceneRN.placeHolderList[26]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[31]" "Painting_SceneRN.placeHolderList[27]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[32]" "Painting_SceneRN.placeHolderList[28]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[33]" "Painting_SceneRN.placeHolderList[29]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[34]" "Painting_SceneRN.placeHolderList[30]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[35]" "Painting_SceneRN.placeHolderList[31]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[36]" "Painting_SceneRN.placeHolderList[32]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[37]" "Painting_SceneRN.placeHolderList[33]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[38]" "Painting_SceneRN.placeHolderList[34]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[39]" "Painting_SceneRN.placeHolderList[35]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[40]" "Painting_SceneRN.placeHolderList[36]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[41]" "Painting_SceneRN.placeHolderList[37]";
-relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[42]" "Painting_SceneRN.placeHolderList[38]";
-connectAttr "Painting_SceneRN.phl[39]" "Painting_SceneRN.phl[40]";
-connectAttr "Painting_SceneRN.phl[41]" "Painting_SceneRN.phl[42]";
-connectAttr "Painting_SceneRN.phl[43]" "Painting_SceneRN.phl[44]";
-connectAttr "Painting_SceneRN.phl[45]" "Painting_SceneRN.phl[46]";
-connectAttr "Painting_SceneRN.phl[47]" "Painting_SceneRN.phl[48]";
-connectAttr "Spotlight_L2_visibility.o" "Painting_SceneRN.phl[49]";
-connectAttr "Spotlight_L3_visibility.o" "Painting_SceneRN.phl[50]";
-connectAttr "Painting_SceneRN.phl[52]" "Painting_SceneRN.phl[53]";
-connectAttr "Painting_SceneRN.phl[54]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[1]" "Painting_SceneRN.placeHolderList[150]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[2]" "Painting_SceneRN.placeHolderList[151]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[3]" "Painting_SceneRN.placeHolderList[152]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[4]" "Painting_SceneRN.placeHolderList[153]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[5]" "Painting_SceneRN.placeHolderList[154]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[6]" "Painting_SceneRN.placeHolderList[155]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[7]" "Painting_SceneRN.placeHolderList[156]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[8]" "Painting_SceneRN.placeHolderList[157]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[9]" "Painting_SceneRN.placeHolderList[158]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[10]" "Painting_SceneRN.placeHolderList[159]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[11]" "Painting_SceneRN.placeHolderList[160]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[12]" "Painting_SceneRN.placeHolderList[161]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[13]" "Painting_SceneRN.placeHolderList[162]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[15]" "Painting_SceneRN.placeHolderList[163]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[17]" "Painting_SceneRN.placeHolderList[164]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[19]" "Painting_SceneRN.placeHolderList[165]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[21]" "Painting_SceneRN.placeHolderList[166]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[22]" "Painting_SceneRN.placeHolderList[167]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[23]" "Painting_SceneRN.placeHolderList[168]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[24]" "Painting_SceneRN.placeHolderList[169]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[25]" "Painting_SceneRN.placeHolderList[170]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[26]" "Painting_SceneRN.placeHolderList[171]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[27]" "Painting_SceneRN.placeHolderList[172]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[28]" "Painting_SceneRN.placeHolderList[173]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[29]" "Painting_SceneRN.placeHolderList[174]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[30]" "Painting_SceneRN.placeHolderList[175]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[31]" "Painting_SceneRN.placeHolderList[176]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[32]" "Painting_SceneRN.placeHolderList[177]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[33]" "Painting_SceneRN.placeHolderList[178]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[34]" "Painting_SceneRN.placeHolderList[179]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[35]" "Painting_SceneRN.placeHolderList[180]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[36]" "Painting_SceneRN.placeHolderList[181]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[37]" "Painting_SceneRN.placeHolderList[182]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[38]" "Painting_SceneRN.placeHolderList[183]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[39]" "Painting_SceneRN.placeHolderList[184]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[40]" "Painting_SceneRN.placeHolderList[185]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[41]" "Painting_SceneRN.placeHolderList[186]";
+relationship "ignore" ":lightLinker1" "ApolloRN.placeHolderList[42]" "Painting_SceneRN.placeHolderList[187]";
+connectAttr "Painting_SceneRN.phl[188]" "Painting_SceneRN.phl[189]";
+connectAttr "Painting_SceneRN.phl[190]" "Painting_SceneRN.phl[191]";
+connectAttr "Painting_SceneRN.phl[192]" "Painting_SceneRN.phl[193]";
+connectAttr "Painting_SceneRN.phl[194]" "Painting_SceneRN.phl[195]";
+connectAttr "Painting_SceneRN.phl[196]" "Painting_SceneRN.phl[197]";
+connectAttr "Spotlight_L2_visibility.o" "Painting_SceneRN.phl[198]";
+connectAttr "Spotlight_L3_visibility.o" "Painting_SceneRN.phl[199]";
+connectAttr "Painting_SceneRN.phl[201]" "Painting_SceneRN.phl[202]";
+connectAttr "Painting_SceneRN.phl[203]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
 		;
-connectAttr "Painting_SceneRN.phl[55]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+connectAttr "Painting_SceneRN.phl[204]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
 		;
-connectAttr "Painting_SceneRN.phl[56]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "Painting_SceneRN.phl[205]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "Painting_SceneRN.phl[57]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "Painting_SceneRN.phl[206]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "Painting_SceneRN.phl[58]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+connectAttr "Painting_SceneRN.phl[207]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
 		;
-connectAttr "Painting_SceneRN.phl[59]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+connectAttr "Painting_SceneRN.phl[208]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
 		;
-connectAttr "Painting_SceneRN.phl[60]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+connectAttr "Painting_SceneRN.phl[209]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
 		;
-connectAttr "Painting_SceneRN.phl[61]" "Painting_SceneRN.phl[62]";
-connectAttr "Painting_SceneRN.phl[63]" "Painting_SceneRN.phl[64]";
-connectAttr "Painting_SceneRN.phl[65]" "Painting_SceneRN.phl[66]";
-connectAttr "Painting_SceneRN.phl[67]" "Painting_SceneRN.phl[68]";
-connectAttr "Painting_SceneRN.phl[69]" "Painting_SceneRN.phl[70]";
-connectAttr "Painting_SceneRN.phl[71]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+connectAttr "Painting_SceneRN.phl[210]" "Painting_SceneRN.phl[211]";
+connectAttr "Painting_SceneRN.phl[212]" "Painting_SceneRN.phl[213]";
+connectAttr "Painting_SceneRN.phl[214]" "Painting_SceneRN.phl[215]";
+connectAttr "Painting_SceneRN.phl[216]" "Painting_SceneRN.phl[217]";
+connectAttr "Painting_SceneRN.phl[218]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
 		;
-connectAttr "Painting_SceneRN.phl[72]" "Painting_SceneRN.phl[73]";
-connectAttr "Painting_SceneRN.phl[74]" "Painting_SceneRN.phl[75]";
-connectAttr "Painting_SceneRN.phl[76]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+connectAttr "Painting_SceneRN.phl[219]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
-connectAttr "Painting_SceneRN.phl[77]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "Painting_SceneRN.phl[220]" "Painting_SceneRN.phl[221]";
+connectAttr "Painting_SceneRN.phl[222]" "Painting_SceneRN.phl[223]";
+connectAttr "Painting_SceneRN.phl[224]" "Painting_SceneRN.phl[225]";
+connectAttr "Painting_SceneRN.phl[226]" "Painting_SceneRN.phl[227]";
+connectAttr "Painting_SceneRN.phl[228]" "Painting_SceneRN.phl[229]";
+connectAttr "Painting_SceneRN.phl[230]" "Painting_SceneRN.phl[231]";
+connectAttr "Painting_SceneRN.phl[232]" "Painting_SceneRN.phl[233]";
+connectAttr "Painting_SceneRN.phl[234]" "Painting_SceneRN.phl[235]";
+connectAttr "Painting_SceneRN.phl[236]" "Painting_SceneRN.phl[237]";
+connectAttr "Painting_SceneRN.phl[238]" "Painting_SceneRN.phl[239]";
+connectAttr "Painting_SceneRN.phl[240]" "Painting_SceneRN.phl[241]";
+connectAttr "Painting_SceneRN.phl[242]" "Painting_SceneRN.phl[243]";
+connectAttr "Painting_SceneRN.phl[244]" "Painting_SceneRN.phl[245]";
+connectAttr "Painting_SceneRN.phl[246]" "Painting_SceneRN.phl[247]";
+connectAttr "Painting_SceneRN.phl[248]" "Painting_SceneRN.phl[249]";
+connectAttr "Painting_SceneRN.phl[250]" "Painting_SceneRN.phl[251]";
+connectAttr "Painting_SceneRN.phl[252]" "Painting_SceneRN.phl[253]";
+connectAttr "Painting_SceneRN.phl[254]" "Painting_SceneRN.phl[255]";
+connectAttr "Painting_SceneRN.phl[256]" "Painting_SceneRN.phl[257]";
+connectAttr "Painting_SceneRN.phl[258]" "Painting_SceneRN.phl[259]";
+connectAttr "Painting_SceneRN.phl[260]" "Painting_SceneRN.phl[261]";
+connectAttr "Painting_SceneRN.phl[262]" "Painting_SceneRN.phl[263]";
+connectAttr "Painting_SceneRN.phl[264]" "Painting_SceneRN.phl[265]";
+connectAttr "Painting_SceneRN.phl[266]" "Painting_SceneRN.phl[267]";
+connectAttr "Painting_SceneRN.phl[268]" "Painting_SceneRN.phl[269]";
+connectAttr "Painting_SceneRN.phl[270]" "Painting_SceneRN.phl[271]";
+connectAttr "Painting_SceneRN.phl[272]" "Painting_SceneRN.phl[273]";
+connectAttr "Painting_SceneRN.phl[274]" "Painting_SceneRN.phl[275]";
+connectAttr "Painting_SceneRN.phl[276]" "Painting_SceneRN.phl[277]";
+connectAttr "Painting_SceneRN.phl[278]" "Painting_SceneRN.phl[279]";
+connectAttr "Painting_SceneRN.phl[280]" "Painting_SceneRN.phl[281]";
+connectAttr "Painting_SceneRN.phl[282]" "Painting_SceneRN.phl[283]";
+connectAttr "Painting_SceneRN.phl[284]" "Painting_SceneRN.phl[285]";
+connectAttr "Painting_SceneRN.phl[286]" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
 		;
-connectAttr "Painting_SceneRN.phl[78]" "Painting_SceneRN.phl[79]";
-connectAttr "Painting_SceneRN.phl[80]" "Painting_SceneRN.phl[81]";
-connectAttr "Painting_SceneRN.phl[82]" "Painting_SceneRN.phl[83]";
-connectAttr "Painting_SceneRN.phl[84]" "Painting_SceneRN.phl[85]";
-connectAttr "Painting_SceneRN.phl[86]" "Painting_SceneRN.phl[87]";
-connectAttr "Painting_SceneRN.phl[88]" "Painting_SceneRN.phl[89]";
-connectAttr "Painting_SceneRN.phl[90]" "Painting_SceneRN.phl[91]";
-connectAttr "Painting_SceneRN.phl[92]" "Painting_SceneRN.phl[93]";
-connectAttr "Painting_SceneRN.phl[94]" "Painting_SceneRN.phl[95]";
-connectAttr "Painting_SceneRN.phl[96]" "Painting_SceneRN.phl[97]";
-connectAttr "Painting_SceneRN.phl[98]" "Painting_SceneRN.phl[99]";
-connectAttr "Painting_SceneRN.phl[100]" "Painting_SceneRN.phl[101]";
-connectAttr "Painting_SceneRN.phl[102]" "Painting_SceneRN.phl[103]";
-connectAttr "Painting_SceneRN.phl[104]" "Painting_SceneRN.phl[105]";
-connectAttr "Painting_SceneRN.phl[106]" "Painting_SceneRN.phl[107]";
-connectAttr "Painting_SceneRN.phl[108]" "Painting_SceneRN.phl[109]";
-connectAttr "Painting_SceneRN.phl[110]" "Painting_SceneRN.phl[111]";
-connectAttr "Painting_SceneRN.phl[112]" "Painting_SceneRN.phl[113]";
-connectAttr "Painting_SceneRN.phl[114]" "Painting_SceneRN.phl[115]";
-connectAttr "Painting_SceneRN.phl[116]" "Painting_SceneRN.phl[117]";
-connectAttr "Painting_SceneRN.phl[118]" "Painting_SceneRN.phl[119]";
-connectAttr "Painting_SceneRN.phl[120]" "Painting_SceneRN.phl[121]";
-connectAttr "Painting_SceneRN.phl[122]" "Painting_SceneRN.phl[123]";
-connectAttr "Painting_SceneRN.phl[124]" "Painting_SceneRN.phl[125]";
-connectAttr "Painting_SceneRN.phl[126]" "Painting_SceneRN.phl[127]";
-connectAttr "Painting_SceneRN.phl[128]" "Painting_SceneRN.phl[129]";
-connectAttr "Painting_SceneRN.phl[130]" "Painting_SceneRN.phl[131]";
-connectAttr "Painting_SceneRN.phl[132]" "Painting_SceneRN.phl[133]";
-connectAttr "Painting_SceneRN.phl[134]" "Painting_SceneRN.phl[135]";
-connectAttr "Painting_SceneRN.phl[136]" "Painting_SceneRN.phl[137]";
-connectAttr "Painting_SceneRN.phl[138]" "Painting_SceneRN.phl[139]";
-connectAttr "Painting_SceneRN.phl[140]" "Painting_SceneRN.phl[141]";
-connectAttr "Painting_SceneRN.phl[142]" "Painting_SceneRN.phl[143]";
-connectAttr "Painting_SceneRN.phl[144]" "Painting_SceneRN.phl[145]";
-connectAttr "Painting_SceneRN.phl[146]" "Painting_SceneRN.phl[147]";
-connectAttr "Painting_SceneRN.phl[148]" "Painting_SceneRN.phl[149]";
-relationship "ignore" ":lightLinker1" "PaintGunRN.placeHolderList[1]" "Painting_SceneRN.placeHolderList[51]";
+relationship "ignore" ":lightLinker1" "PaintGunRN.placeHolderList[1]" "Painting_SceneRN.placeHolderList[200]";
 connectAttr "Gun_Ctrl_Grp_parentConstraint1.ctx" "PaintGunRN.phl[2]";
 connectAttr "Gun_Ctrl_Grp_parentConstraint1.cty" "PaintGunRN.phl[3]";
 connectAttr "Gun_Ctrl_Grp_parentConstraint1.ctz" "PaintGunRN.phl[4]";
@@ -32791,9 +32748,9 @@ connectAttr "Gun_Ctrl_rotateX1.o" "PaintGunRN.phl[17]";
 connectAttr "Gun_Ctrl_rotateY1.o" "PaintGunRN.phl[18]";
 connectAttr "Gun_Ctrl_rotateZ1.o" "PaintGunRN.phl[19]";
 connectAttr "PaintGunRN.phl[20]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn";
-connectAttr "PaintGunRN.phl[21]" "Gun_Ctrl_Grp_parentConstraint1_Prop_CtrlW1.i";
-connectAttr "PaintGunRN.phl[22]" "Gun_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW0.i"
+connectAttr "PaintGunRN.phl[21]" "Gun_Ctrl_Grp_parentConstraint1_Two_Handed_Prop_CtrlW0.i"
 		;
+connectAttr "PaintGunRN.phl[22]" "Gun_Ctrl_Grp_parentConstraint1_Prop_CtrlW1.i";
 connectAttr "PaintGunRN.phl[23]" "Gun_Ctrl_Grp_parentConstraint1_L_Hand_Prop_CtrlW2.i"
 		;
 connectAttr "PaintGunRN.phl[24]" "Gun_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW3.i"
@@ -32910,6 +32867,12 @@ connectAttr "Gun_Ctrl_Grp_parentConstraint1_R_Hand_Prop_CtrlW3.msg" "MayaNodeEdi
 		;
 connectAttr "Gun_Ctrl_Grp_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
 		;
+connectAttr "Painting_SceneRN.phl[61]" "Painting_SceneRN.phl[62]";
+connectAttr "Painting_SceneRN.phl[67]" "Painting_SceneRN.phl[68]";
+connectAttr "Painting_SceneRN.phl[69]" "Painting_SceneRN.phl[70]";
+connectAttr "Painting_SceneRN.phl[140]" "Painting_SceneRN.phl[141]";
+connectAttr "Painting_SceneRN.phl[142]" "Painting_SceneRN.phl[143]";
+connectAttr "Painting_SceneRN.phl[148]" "Painting_SceneRN.phl[149]";
 connectAttr "Painting_SceneRNfosterParent1.msg" "Painting_SceneRN.fp";
 connectAttr "sharedReferenceNode.sr" "Painting_SceneRN.sr";
 connectAttr "PaintGunRNfosterParent1.msg" "PaintGunRN.fp";
@@ -32941,7 +32904,7 @@ connectAttr "RenderSettingsCollection3.nxt" "collection3.prv";
 connectAttr "rs_AO.msg" "AO.lrl";
 connectAttr "Background.nxt" "AO.prv";
 connectAttr "renderSetup.lit" "AO.pls";
-connectAttr "RenderSettingsCollection2.msg" "AO.cl";
+connectAttr "AOVCollection.msg" "AO.cl";
 connectAttr "Everything.msg" "AO.ch";
 connectAttr "renderLayerManager.rlmi[7]" "rs_AO.rlid";
 connectAttr "EverythingSelector.c" "Everything.sel";
@@ -32953,7 +32916,7 @@ connectAttr "AOVCollection.nxt" "Everything.prv";
 connectAttr "rs_Shadow.msg" "Shadow.lrl";
 connectAttr "AO.nxt" "Shadow.prv";
 connectAttr "renderSetup.lit" "Shadow.pls";
-connectAttr "RenderSettingsCollection1.msg" "Shadow.cl";
+connectAttr "AOVCollection1.msg" "Shadow.cl";
 connectAttr "collection4.msg" "Shadow.ch";
 connectAttr "renderLayerManager.rlmi[8]" "rs_Shadow.rlid";
 connectAttr "rs_FOG.msg" "FOG.lrl";
@@ -33016,7 +32979,6 @@ connectAttr "AO.lit" "AOVCollection.pls";
 connectAttr "AO.nic" "AOVCollection.pic";
 connectAttr "diffuse.msg" "AOVCollection.cl";
 connectAttr "specular.msg" "AOVCollection.ch";
-connectAttr "RenderSettingsCollection2.nxt" "AOVCollection.prv";
 connectAttr "diffuseSelector.c" "diffuse.sel";
 connectAttr "AOVCollection.lit" "diffuse.pls";
 connectAttr "AOVCollection.en" "diffuse.pen";
@@ -33041,7 +33003,6 @@ connectAttr "Shadow.lit" "AOVCollection1.pls";
 connectAttr "Shadow.nic" "AOVCollection1.pic";
 connectAttr "diffuse1.msg" "AOVCollection1.cl";
 connectAttr "specular1.msg" "AOVCollection1.ch";
-connectAttr "RenderSettingsCollection1.nxt" "AOVCollection1.prv";
 connectAttr "diffuse1Selector.c" "diffuse1.sel";
 connectAttr "AOVCollection1.lit" "diffuse1.pls";
 connectAttr "AOVCollection1.en" "diffuse1.pen";
@@ -33093,22 +33054,6 @@ connectAttr "AASamples.msg" "RenderSettingsCollection.cl";
 connectAttr "AASamples.msg" "RenderSettingsCollection.ch";
 connectAttr "RenderSettingsCollection.lit" "AASamples.pls";
 connectAttr "RenderSettingsCollection.en" "AASamples.pen";
-connectAttr "RenderSettingsCollection1Selector.c" "RenderSettingsCollection1.sel"
-		;
-connectAttr "Shadow.lit" "RenderSettingsCollection1.pls";
-connectAttr "Shadow.nic" "RenderSettingsCollection1.pic";
-connectAttr "AASamples1.msg" "RenderSettingsCollection1.cl";
-connectAttr "AASamples1.msg" "RenderSettingsCollection1.ch";
-connectAttr "RenderSettingsCollection1.lit" "AASamples1.pls";
-connectAttr "RenderSettingsCollection1.en" "AASamples1.pen";
-connectAttr "RenderSettingsCollection2Selector.c" "RenderSettingsCollection2.sel"
-		;
-connectAttr "AO.lit" "RenderSettingsCollection2.pls";
-connectAttr "AO.nic" "RenderSettingsCollection2.pic";
-connectAttr "AASamples2.msg" "RenderSettingsCollection2.cl";
-connectAttr "AASamples2.msg" "RenderSettingsCollection2.ch";
-connectAttr "RenderSettingsCollection2.lit" "AASamples2.pls";
-connectAttr "RenderSettingsCollection2.en" "AASamples2.pen";
 connectAttr "RenderSettingsCollection3Selector.c" "RenderSettingsCollection3.sel"
 		;
 connectAttr "Background.lit" "RenderSettingsCollection3.pls";
