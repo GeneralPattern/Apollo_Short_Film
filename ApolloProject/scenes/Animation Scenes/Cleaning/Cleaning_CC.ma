@@ -1,6 +1,6 @@
-//Maya ASCII 2025ff03 scene
+//Maya ASCII 2024 scene
 //Name: Cleaning_CC.ma
-//Last modified: Mon, Apr 07, 2025 12:39:41 PM
+//Last modified: Mon, Apr 07, 2025 01:36:01 PM
 //Codeset: 1252
 file -rdi 1 -ns "Cleaning_Scene" -rfn "Cleaning_SceneRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 2 _ Cleaning/Cleaning Scene.ma";
@@ -20,8 +20,6 @@ file -rdi 2 -ns "Shelf" -rfn "Cleaning_Scene:ShelfRN" -op "v=0;" -typ "mayaAscii
 		 "/Users/bradywallace/GitReps/Apollo_Short_Film/ApolloProject//scenes/Props/Cleaning Scene/Shelf.ma";
 file -rdi 2 -ns "Battery" -rfn "Cleaning_Scene:BatteryRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/bradywallace/GitReps/Apollo_Short_Film/ApolloProject//scenes/Props/Cleaning Scene/Battery.ma";
-file -rdi 2 -ns "PaintHose" -rfn "Cleaning_Scene:PaintHoseRN" -op "v=0;" -typ
-		 "mayaAscii" "/Users/bradywallace/GitReps/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 3 _ Painting/PaintHose.ma";
 file -rdi 2 -ns "SprayBottle" -rfn "Cleaning_Scene:SprayBottleRN" -op "v=0;"
 		 -typ "mayaAscii" "/Users/bradywallace/GitReps/Apollo_Short_Film/ApolloProject//scenes/Props/Cleaning Scene/SprayBottle.ma";
 file -rdi 2 -ns "FloorPolisher" -rfn "Cleaning_Scene:FloorPolisherRN" -op "v=0;"
@@ -66,8 +64,8 @@ file -rdi 2 -ns "Vacuum" -rfn "Cleaning_Scene:VacuumRN" -op "v=0;" -typ "mayaAsc
 		 "/Users/bradywallace/GitReps/Apollo_Short_Film/ApolloProject//scenes/Props/Cleaning Scene/Vacuum.ma";
 file -rdi 2 -ns "Mop" -rfn "Cleaning_Scene:MopRN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/Cleaning Scene/Mop.ma";
-file -rdi 2 -ns "ToiletPaperRoll" -dr 1 -rfn "Cleaning_Scene:ToiletPaperRollRN"
-		 -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/Cleaning Scene/ToiletPaperRoll.ma";
+file -rdi 2 -ns "ToiletPaperRoll" -rfn "Cleaning_Scene:ToiletPaperRollRN" -op
+		 "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Props/Cleaning Scene/ToiletPaperRoll.ma";
 file -rdi 1 -ns "Prometheus" -rfn "PrometheusRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject//scenes/Characters/Prometheus.ma";
 file -rdi 1 -ns "Tug_Car" -rfn "Tug_CarRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/Tug Car.ma";
@@ -75,34 +73,35 @@ file -r -ns "Cleaning_Scene" -dr 1 -rfn "Cleaning_SceneRN" -op "v=0;" -typ "maya
 		 "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 2 _ Cleaning/Cleaning Scene.ma";
 file -r -ns "Prometheus" -dr 1 -rfn "PrometheusRN" -op "v=0;" -typ "mayaAscii" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject//scenes/Characters/Prometheus.ma";
 file -r -ns "Tug_Car" -dr 1 -rfn "Tug_CarRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/Tug Car.ma";
-requires maya "2025ff03";
+requires maya "2024";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.4.2.1";
-requires "stereoCamera" "10.0";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
+		 "mtoa" "5.3.4.1";
+requires -nodeType "mayaUsdLayerManager" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.25.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2025";
-fileInfo "version" "2025";
-fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
-fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "64932BE2-4389-AB5D-6974-07965399A063";
+fileInfo "product" "Maya 2024";
+fileInfo "version" "2024";
+fileInfo "cutIdentifier" "202310181224-69282f2959";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
+fileInfo "UUID" "B58A485F-4A7E-A2D0-9ACF-AAA0F643B251";
 fileInfo "license" "education";
 fileInfo "exportedFrom" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/Cleaning/Cleaning_CC.ma";
 createNode transform -s -n "persp";
 	rename -uid "D6963A28-4A5C-FA63-5A7E-A68069038F2C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.1769458437625708 8.5533996309191735 28.694237662365413 ;
-	setAttr ".r" -type "double3" -14.738352729647398 3.8000000000011092 9.9611332468638452e-17 ;
+	setAttr ".t" -type "double3" 9.1651046507813323 4.1016676902769031 19.223576665523691 ;
+	setAttr ".r" -type "double3" -9.3383527296466298 9.8000000000044096 -2.0172830753375875e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1E0C466F-42EF-E27D-4F05-0DA479E8273A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 32.125921094893584;
+	setAttr ".coi" 23.930087367838425;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -1.1920928955078125e-07 5.8730959892272949 -1.1025056838989258 ;
+	setAttr ".tp" -type "double3" -5.6602694988250732 2.382504305918701 3.9440219402313232 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dgm" no;
 createNode transform -s -n "top";
@@ -174,27 +173,73 @@ createNode camera -n "SLIP_CAMShape" -p "SLIP_CAM";
 	setAttr ".tp" -type "double3" -4.5203590379901719 3.6163062573540001 2.8613984805424311 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr ".dgm" no;
-createNode transform -n "locator1";
-	rename -uid "05CEB09F-4FE5-4B71-09E1-F28C55059658";
-	setAttr ".t" -type "double3" 7.9101672179826465 0 0.97906072217557916 ;
-createNode locator -n "locatorShape1" -p "locator1";
-	rename -uid "5FFB94F9-44AD-691F-177A-6AADE93B223A";
+createNode transform -n "nRigid1";
+	rename -uid "D031EAFD-4985-C349-9107-28AB8D90D911";
+	setAttr -l on ".t";
+	setAttr -l on ".r";
+	setAttr -l on ".s";
+createNode nRigid -n "nRigidShape1" -p "nRigid1";
+	rename -uid "41BD6DCB-4675-3D12-9A78-45A73CB6B334";
+	addAttr -ci true -sn "lifespan" -ln "lifespan" -at "double";
+	addAttr -s false -ci true -sn "lifespanPP" -ln "lifespanPP" -dt "doubleArray";
+	addAttr -ci true -h true -sn "lifespanPP0" -ln "lifespanPP0" -dt "doubleArray";
 	setAttr -k off ".v";
+	setAttr ".gf" -type "Int32Array" 0 ;
+	setAttr ".pos0" -type "vectorArray" 0 ;
+	setAttr ".vel0" -type "vectorArray" 0 ;
+	setAttr ".acc0" -type "vectorArray" 0 ;
+	setAttr ".mas0" -type "doubleArray" 0 ;
+	setAttr ".id0" -type "doubleArray" 0 ;
+	setAttr ".bt0" -type "doubleArray" 0 ;
+	setAttr ".ag0" -type "doubleArray" 0 ;
+	setAttr -k off ".dve";
+	setAttr -k off ".lfm";
+	setAttr -k off ".lfr";
+	setAttr -k off ".ead";
+	setAttr ".irbx" -type "string" "";
+	setAttr ".irax" -type "string" "";
+	setAttr ".icx" -type "string" "";
+	setAttr -k off ".dw";
+	setAttr -k off ".fiw";
+	setAttr -k off ".con";
+	setAttr -k off ".eiw";
+	setAttr -k off ".mxc";
+	setAttr -k off ".lod";
+	setAttr -k off ".inh";
+	setAttr ".cts" 1;
+	setAttr -k off ".stf";
+	setAttr -k off ".igs";
+	setAttr -k off ".ecfh";
+	setAttr -k off ".tgs";
+	setAttr -k off ".gsm";
+	setAttr -k off ".chd";
+	setAttr ".chw" 550;
+	setAttr -k off ".trd";
+	setAttr -k off ".prt";
+	setAttr ".thss" 0.11001360416412354;
+	setAttr ".actv" no;
+	setAttr ".scld" no;
+	setAttr ".por" 0.44005441665649414;
+	setAttr ".tpc" yes;
+	setAttr -s 2 ".fsc[0:1]"  0 1 1 1 0 1;
+	setAttr -s 2 ".pfdo[0:1]"  0 1 1 1 0 1;
+	setAttr -k on ".lifespan" 1;
+	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "E37E5F6E-414A-11E0-2D67-438FB3C01148";
-	setAttr -s 725 ".lnk";
+	rename -uid "4709BAA0-4228-DA04-90FB-5F976D477888";
+	setAttr -s 722 ".lnk";
 	setAttr -s 53 ".ign";
-	setAttr -s 724 ".slnk";
+	setAttr -s 721 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2B2669CD-4D1C-8664-CBCB-F19DC81DC580";
+	rename -uid "06FF08B5-4CB6-79E1-0464-BFAF77E73A05";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 7 0 1 2 3 4
 		 5 6 ;
-	setAttr -s 7 ".bspr";
-	setAttr -s 7 ".obsv";
+	setAttr -s 6 ".bspr";
+	setAttr -s 6 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "5771BCFA-4457-9C9D-8E76-8087F8E7E559";
+	rename -uid "D5ACA79D-4195-0736-BAD2-0C8DC9FFC5BE";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "DFD6093C-4634-5E88-2FC5-52A531DBE6BA";
+	rename -uid "DD04AAF1-490A-5788-E483-469077C7E5A8";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -202,7 +247,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "2FE82AEA-4DBE-9167-B396-EF825906B46D";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B54F6087-451A-B015-BF73-A7B49D96C78B";
+	rename -uid "D4619C80-4636-6FF3-E01E-9A81A35B8C14";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "A325AA0A-485D-BE28-EE89-D5AD17780933";
 	setAttr ".g" yes;
@@ -229,7 +274,7 @@ createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	setAttr ".ipr_step_started" -type "string" "";
 	setAttr ".ipr_step_finished" -type "string" "";
 	setAttr ".output_overscan" -type "string" "";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1  1;Background.Offset=0  0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1  1;Foreground.Offset=0  0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1   1;Background.Offset=0   0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1   1;Foreground.Offset=0   0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "0DB7ED49-4554-EEEC-A914-B9AD15A0CF3D";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -434,45 +479,46 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|SLIP_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1408\n            -height 503\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1762\n            -height 1047\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1408\n            -height 502\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
-		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
-		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
-		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
-		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
-		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n"
-		+ "                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
-		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
-		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
-		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
-		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
-		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|SLIP_CAM\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n"
-		+ "                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n"
-		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n"
-		+ "                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|SLIP_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1762\\n    -height 1047\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|SLIP_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1762\\n    -height 1047\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
+		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
+		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n"
+		+ "            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
+		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
+		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
+		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n"
+		+ "                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n"
+		+ "                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
+		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
+		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n"
+		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n"
+		+ "\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
+		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
+		+ "                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|SLIP_CAM\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
+		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
+		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -12636,57 +12682,57 @@ createNode animCurveTL -n "Mop_Top_Ctrl_translateX";
 	rename -uid "53D659C2-47EB-8CE2-16F2-4AADA95204E9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 40 ".ktv[0:39]"  56 0 67.500002891156456 0 79.620696598639455 0
-		 100.00000034013605 0 109.92307738095238 0 118.37606904761905 0 127.56410306122449 0
-		 136.38461717687076 0 143.00002380952381 0 157.00000085034014 0 163 0 181.00000017006803 0
-		 188.37500051020407 0 191.75000187074829 0 195.12500221088436 0 198.50000374149658 0
-		 201.87500391156462 0 205.25000425170069 0 208.62500561224491 0 212 0 212.00000595238095 0
-		 321.00000017006801 0 332.5000030612245 0 341.00000017006801 0 350.00000017006801 0
-		 364.00000017006801 0 369 0 373.00000034013607 0 381.00004030612246 0 385.0000102040816 0
-		 394.00000153061222 0 398.00000017006801 0 402.00000017006801 0 407.00000017006801 0
-		 412.00000017006801 0 415 0 419.00000034013607 0 427.00000017006801 0 432.57142976190477 0
-		 440 0;
-	setAttr -s 40 ".kit[2:39]"  1 18 18 18 18 18 18 1 
+	setAttr -s 41 ".ktv[0:40]"  1 1.8575930028607204 56 0 67.500002891156456 0
+		 79.620696598639455 0 100.00000034013605 0 109.92307738095238 0 118.37606904761905 0
+		 127.56410306122449 0 136.38461717687076 0 143.00002380952381 0 157.00000085034014 0
+		 163 0 181.00000017006803 0 188.37500051020407 0 191.75000187074829 0 195.12500221088436 0
+		 198.50000374149658 0 201.87500391156462 0 205.25000425170069 0 208.62500561224491 0
+		 212 0 212.00000595238095 0 321.00000017006801 0 332.5000030612245 0 341.00000017006801 0
+		 350.00000017006801 0 364.00000017006801 0 369 0 373.00000034013607 0 381.00004030612246 0
+		 385.0000102040816 0 394.00000153061222 0 398.00000017006801 0 402.00000017006801 0
+		 407.00000017006801 0 412.00000017006801 0 415 0 419.00000034013607 0 427.00000017006801 0
+		 432.57142976190477 0 440 0;
+	setAttr -s 41 ".kit[3:40]"  1 18 18 18 18 18 18 1 
 		18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 18 18 
 		1 18 1 18 18 18 1 18 18 18 18 18 18;
-	setAttr -s 40 ".kot[2:39]"  1 18 18 18 18 18 18 1 
+	setAttr -s 41 ".kot[3:40]"  1 18 18 18 18 18 18 1 
 		18 18 18 18 18 18 18 18 18 18 1 1 18 1 18 18 18 
 		1 18 1 18 18 1 18 1 18 18 18 18 18;
-	setAttr -s 40 ".kix[2:39]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+	setAttr -s 41 ".kix[3:40]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 40 ".kiy[2:39]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	setAttr -s 41 ".kiy[3:40]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 40 ".kox[2:39]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+	setAttr -s 41 ".kox[3:40]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 40 ".koy[2:39]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	setAttr -s 41 ".koy[3:40]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Mop_Top_Ctrl_translateY";
 	rename -uid "B4796BC1-4699-D041-5855-F6BBA3E24D67";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 40 ".ktv[0:39]"  56 0 67.500002891156456 0 79.620696598639455 0
-		 100.00000034013605 0 109.92307738095238 0 118.37606904761905 0 127.56410306122449 0
-		 136.38461717687076 0 143.00002380952381 0 157.00000085034014 0 163 0 181.00000017006803 0
-		 188.37500051020407 0 191.75000187074829 0 195.12500221088436 0 198.50000374149658 0
-		 201.87500391156462 0 205.25000425170069 0 208.62500561224491 0 212 0 212.00000595238095 0
-		 321.00000017006801 0 332.5000030612245 0 341.00000017006801 0 350.00000017006801 0
-		 364.00000017006801 0 369 0 373.00000034013607 0 381.00004030612246 0 385.0000102040816 0
-		 394.00000153061222 0 398.00000017006801 0 402.00000017006801 0 407.00000017006801 0
-		 412.00000017006801 0 415 0 419.00000034013607 0 427.00000017006801 0 432.57142976190477 0
-		 440 0;
-	setAttr -s 40 ".kit[2:39]"  1 18 18 18 18 18 18 1 
+	setAttr -s 41 ".ktv[0:40]"  1 3.2428679824793338 56 0 67.500002891156456 0
+		 79.620696598639455 0 100.00000034013605 0 109.92307738095238 0 118.37606904761905 0
+		 127.56410306122449 0 136.38461717687076 0 143.00002380952381 0 157.00000085034014 0
+		 163 0 181.00000017006803 0 188.37500051020407 0 191.75000187074829 0 195.12500221088436 0
+		 198.50000374149658 0 201.87500391156462 0 205.25000425170069 0 208.62500561224491 0
+		 212 0 212.00000595238095 0 321.00000017006801 0 332.5000030612245 0 341.00000017006801 0
+		 350.00000017006801 0 364.00000017006801 0 369 0 373.00000034013607 0 381.00004030612246 0
+		 385.0000102040816 0 394.00000153061222 0 398.00000017006801 0 402.00000017006801 0
+		 407.00000017006801 0 412.00000017006801 0 415 0 419.00000034013607 0 427.00000017006801 0
+		 432.57142976190477 0 440 0;
+	setAttr -s 41 ".kit[3:40]"  1 18 18 18 18 18 18 1 
 		18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 18 18 
 		1 18 1 18 18 18 1 18 18 18 18 18 18;
-	setAttr -s 40 ".kot[2:39]"  1 18 18 18 18 18 18 1 
+	setAttr -s 41 ".kot[3:40]"  1 18 18 18 18 18 18 1 
 		18 18 18 18 18 18 18 18 18 18 1 1 18 1 18 18 18 
 		1 18 1 18 18 1 18 1 18 18 18 18 18;
-	setAttr -s 40 ".kix[2:39]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+	setAttr -s 41 ".kix[3:40]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 40 ".kiy[2:39]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	setAttr -s 41 ".kiy[3:40]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 40 ".kox[2:39]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+	setAttr -s 41 ".kox[3:40]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 40 ".koy[2:39]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+	setAttr -s 41 ".koy[3:40]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Mop_Top_Ctrl_translateZ";
 	rename -uid "B9922CEA-4B58-1E83-4B8D-9E981568B108";
@@ -27060,27 +27106,6 @@ createNode animCurveTU -n "Mop_Top_Ctrl_scaleZ";
 		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
 	setAttr -s 40 ".koy[2:39]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTU -n "Mop_Top_Ctrl_Simulation";
-	rename -uid "2C3AD2BE-426C-AA03-96D8-BEB9F8867F8F";
-	setAttr ".tan" 5;
-	setAttr ".wgt" no;
-	setAttr -s 40 ".ktv[0:39]"  56 1 67.500002891156456 1 79.620696598639455 1
-		 100.00000034013605 1 109.92307738095238 1 118.37606904761905 1 127.56410306122449 1
-		 136.38461717687076 1 143.00002380952381 1 157.00000085034014 1 163 1 181.00000017006803 1
-		 188.37500051020407 1 191.75000187074829 1 195.12500221088436 1 198.50000374149658 1
-		 201.87500391156462 1 205.25000425170069 1 208.62500561224491 1 212 1 212.00000595238095 1
-		 321.00000017006801 1 332.5000030612245 1 341.00000017006801 1 350.00000017006801 1
-		 364.00000017006801 1 369 1 373.00000034013607 1 381.00004030612246 1 385.0000102040816 1
-		 394.00000153061222 1 398.00000017006801 1 402.00000017006801 1 407.00000017006801 1
-		 412.00000017006801 1 415 1 419.00000034013607 1 427.00000017006801 1 432.57142976190477 1
-		 440 1;
-	setAttr -s 40 ".kit[0:39]"  9 9 1 9 9 9 9 9 
-		9 1 9 9 9 9 9 9 9 9 9 9 1 9 9 9 9 
-		9 9 1 9 1 9 9 9 1 9 9 9 9 9 9;
-	setAttr -s 40 ".kix[2:39]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-		1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 40 ".kiy[2:39]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTU -n "Mop_Top_Ctrl_Follow";
 	rename -uid "1152FF6A-4014-8A40-44D2-3AA8D044878B";
 	setAttr ".tan" 5;
@@ -28738,11 +28763,6 @@ createNode animCurveTU -n "Spray_Bottle16_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  247 0.99999999999999978;
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "3E83A16F-46D2-7682-9681-7CADBA520003";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -44.047617297323995 -615.47616601936511 ;
-	setAttr ".tgi[0].vh" -type "double2" 604.76188073082676 44.047617297323995 ;
 createNode animCurveTU -n "Spray_Bottle5_visibility";
 	rename -uid "FAD74D7C-4A19-9A18-0B61-56A346642AF2";
 	setAttr ".tan" 9;
@@ -30296,7 +30316,7 @@ createNode animCurveTU -n "Room_scaleZ";
 	setAttr -s 4 ".ktv[0:3]"  380 1 388 1 390 1 394 1;
 createNode reference -n "Cleaning_SceneRN";
 	rename -uid "008AB74E-416C-6CAE-5A2A-EE8425BFCD8F";
-	setAttr -s 1365 ".phl";
+	setAttr -s 1368 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -31662,11 +31682,13 @@ createNode reference -n "Cleaning_SceneRN";
 	setAttr ".phl[1363]" 0;
 	setAttr ".phl[1364]" 0;
 	setAttr ".phl[1365]" 0;
+	setAttr ".phl[1366]" 0;
+	setAttr ".phl[1367]" 0;
+	setAttr ".phl[1368]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Cleaning_SceneRN"
 		"Cleaning_Scene:BatteryRN" 0
 		"Cleaning_Scene:CartRN" 0
-		"Cleaning_Scene:FireExtinguisherRN" 0
 		"Cleaning_Scene:SprayBottleRN" 5
 		0 "|SprayBottleRNfosterParent1|fosterParent24" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle" 
 		"-s -r "
@@ -31678,9 +31700,11 @@ createNode reference -n "Cleaning_SceneRN";
 		"-s -r "
 		0 "|SprayBottleRNfosterParent1|fosterParent24" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle" 
 		"-s -r "
+		"Cleaning_Scene:ToiletPaperRollRN" 0
+		"Cleaning_Scene:FireExtinguisherRN" 0
 		"Cleaning_Scene:Analog_SignRN" 0
-		"Cleaning_Scene:FloorPolisherRN" 0
 		"Cleaning_Scene:BatteryRN3" 0
+		"Cleaning_Scene:FloorPolisherRN" 0
 		"Cleaning_Scene:ApolloRN" 15
 		0 "|ApolloRNfosterParent1|fosterParent3" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Geo|Cleaning_Scene:Apollo:NewTreads|Cleaning_Scene:Apollo:TreadsBase" 
 		"-s -r "
@@ -31717,7 +31741,7 @@ createNode reference -n "Cleaning_SceneRN";
 		"Cleaning_Scene:ToolBoardLightRN" 0
 		"Cleaning_Scene:Hammer1RN1" 0
 		"Cleaning_Scene:BatteryRN2" 0
-		"Cleaning_Scene:PaintHoseRN" 5
+		"Cleaning_Scene:PaintHoseRN" 6
 		0 "|PaintHoseRNfosterParent1|fosterParent23" "|Cleaning_Scene:PaintHose:Hose" 
 		"-s -r "
 		0 "|PaintHoseRNfosterParent1|fosterParent23" "|Cleaning_Scene:PaintHose:Hose" 
@@ -31728,6 +31752,7 @@ createNode reference -n "Cleaning_SceneRN";
 		"-s -r "
 		0 "|PaintHoseRNfosterParent1|fosterParent23" "|Cleaning_Scene:PaintHose:Hose" 
 		"-s -r "
+		2 "Cleaning_Scene:PaintHose:Apollo:CTRL_Layer" "visibility" " 1"
 		"Cleaning_Scene:HammerRN1" 0
 		"Cleaning_Scene:Hammer1RN" 0
 		"Cleaning_Scene:BatteryRN1" 0
@@ -31978,16 +32003,36 @@ createNode reference -n "Cleaning_SceneRN";
 		2 "Cleaning_Scene:EmployeeOfTheMonth_HankW:Geo_Layer" "visibility" " 1"
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:EmployeeOfTheMonth_HankW:Sign.drawOverride" 
 		"Cleaning_SceneRN.placeHolderList[917]" ""
-		"Cleaning_Scene:MopRN" 43
+		"Cleaning_Scene:MopRN" 55
 		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl" 
 		"rotatePivot" " -type \"double3\" 0 0 0"
 		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl" 
 		"scalePivot" " -type \"double3\" 0 0 0"
+		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl" 
+		"Simulation" " -k 1 0"
+		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1" 
+		"collideStrength" " 1"
+		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1" 
+		"groundHeight" " 0"
+		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1" 
+		"stretchResistance" " 20"
+		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1" 
+		"compressionResistance" " 5"
+		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1" 
+		"bendResistance" " 2"
+		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1" 
+		"drag" " 1"
+		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1" 
+		"collideWidthOffset" " 0"
+		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1" 
+		"motionDrag" " 0"
+		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1" 
+		"solverDisplay" " 1"
 		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:ikHandle1" 
-		"translate" " -type \"double3\" 16.32346128201209012 2.94488848045770579 5.87602684888168358"
+		"translate" " -type \"double3\" 8.77314263819207696 0.26714438018046094 1.07868710574248516"
 		
 		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:ikHandle1" 
-		"rotate" " -type \"double3\" -96.91770305541193409 47.92233720751543302 -31.74650925469545015"
+		"rotate" " -type \"double3\" -4.17468091981368072 17.64905371494195307 27.54655930795850338"
 		
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl.MasterScale" 
 		"Cleaning_SceneRN.placeHolderList[1021]" ""
@@ -32003,70 +32048,74 @@ createNode reference -n "Cleaning_SceneRN";
 		"Cleaning_SceneRN.placeHolderList[1026]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1027]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.Simulation" 
-		"Cleaning_SceneRN.placeHolderList[1028]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[1029]" ""
+		"Cleaning_SceneRN.placeHolderList[1028]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1030]" ""
+		"Cleaning_SceneRN.placeHolderList[1029]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1031]" ""
+		"Cleaning_SceneRN.placeHolderList[1030]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1032]" ""
+		"Cleaning_SceneRN.placeHolderList[1031]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1033]" ""
+		"Cleaning_SceneRN.placeHolderList[1032]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1034]" ""
+		"Cleaning_SceneRN.placeHolderList[1033]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1035]" ""
+		"Cleaning_SceneRN.placeHolderList[1034]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1036]" ""
+		"Cleaning_SceneRN.placeHolderList[1035]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1037]" ""
+		"Cleaning_SceneRN.placeHolderList[1036]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1038]" ""
+		"Cleaning_SceneRN.placeHolderList[1037]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1039]" ""
+		"Cleaning_SceneRN.placeHolderList[1038]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1040]" ""
+		"Cleaning_SceneRN.placeHolderList[1039]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1041]" ""
+		"Cleaning_SceneRN.placeHolderList[1040]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1042]" ""
+		"Cleaning_SceneRN.placeHolderList[1041]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1043]" ""
+		"Cleaning_SceneRN.placeHolderList[1042]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1044]" ""
+		"Cleaning_SceneRN.placeHolderList[1043]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1045]" ""
+		"Cleaning_SceneRN.placeHolderList[1044]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1046]" ""
+		"Cleaning_SceneRN.placeHolderList[1045]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1047]" ""
+		"Cleaning_SceneRN.placeHolderList[1046]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1048]" ""
+		"Cleaning_SceneRN.placeHolderList[1047]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1049]" ""
+		"Cleaning_SceneRN.placeHolderList[1048]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1050]" ""
+		"Cleaning_SceneRN.placeHolderList[1049]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1051]" ""
+		"Cleaning_SceneRN.placeHolderList[1050]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1052]" ""
+		"Cleaning_SceneRN.placeHolderList[1051]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1053]" ""
+		"Cleaning_SceneRN.placeHolderList[1052]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1054]" ""
+		"Cleaning_SceneRN.placeHolderList[1053]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1055]" ""
+		"Cleaning_SceneRN.placeHolderList[1054]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1056]" ""
+		"Cleaning_SceneRN.placeHolderList[1055]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1057]" ""
+		"Cleaning_SceneRN.placeHolderList[1056]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1058]" ""
+		"Cleaning_SceneRN.placeHolderList[1057]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[1058]" ""
+		5 3 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:nucleus1.startFrame" 
 		"Cleaning_SceneRN.placeHolderList[1059]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:nucleus1.inputPassive[0]" 
+		"Cleaning_SceneRN.placeHolderList[1060]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:nucleus1.inputPassiveStart[0]" 
+		"Cleaning_SceneRN.placeHolderList[1061]" ""
 		"Cleaning_Scene:CartRN" 2
 		2 "|Cleaning_Scene:Cart:Cart" "translate" " -type \"double3\" 13.01740485120996205 -0.34431223136077266 4.53213076586679176"
 		
@@ -32130,8 +32179,6 @@ createNode reference -n "Cleaning_SceneRN";
 		"Cleaning_SceneRN.placeHolderList[933]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.visibility" 
 		"Cleaning_SceneRN.placeHolderList[934]" ""
-		"Cleaning_Scene:PaintHoseRN" 1
-		2 "Cleaning_Scene:PaintHose:Apollo:CTRL_Layer" "visibility" " 1"
 		"Cleaning_Scene:ApolloRN" 260
 		2 "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_01_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
@@ -32649,165 +32696,6 @@ createNode reference -n "Cleaning_SceneRN";
 		"Cleaning_SceneRN.placeHolderList[250]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[251]" ""
-		"Cleaning_Scene:VacuumRN" 80
-		2 "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:SuckyBlendShapes|Cleaning_Scene:Vacuum:Circle" 
-		"visibility" " 0"
-		2 "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:SuckyBlendShapes|Cleaning_Scene:Vacuum:Circle" 
-		"translate" " -type \"double3\" -10.06744568099879089 0 0"
-		2 "Cleaning_Scene:Vacuum:VacuumGeo" "visibility" " 1"
-		2 "Cleaning_Scene:Vacuum:VacuumCtrl" "visibility" " 1"
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl_Grp|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[945]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl_Grp|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[946]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.MasterScale" 
-		"Cleaning_SceneRN.placeHolderList[947]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[948]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[949]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[950]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[951]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[952]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[953]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[954]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[955]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[956]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[957]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[958]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[959]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[960]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[961]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[962]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[963]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_01_Grp|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_01.translateX" 
-		"Cleaning_SceneRN.placeHolderList[964]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_02_Grp|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_02.translateX" 
-		"Cleaning_SceneRN.placeHolderList[965]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_01_Grp|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_01.translateX" 
-		"Cleaning_SceneRN.placeHolderList[966]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_02_Grp|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_02.translateX" 
-		"Cleaning_SceneRN.placeHolderList[967]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[968]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[969]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[970]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[971]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[972]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[973]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[974]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[975]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[976]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[977]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[978]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[979]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[980]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[981]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[982]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[983]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[984]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[985]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[986]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[987]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[988]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[989]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[990]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[991]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[992]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[993]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[994]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[995]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[996]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[997]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[998]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[999]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1000]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1001]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1002]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1003]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1004]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1005]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1006]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1007]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1008]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1009]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1010]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1011]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1012]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1013]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1014]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1015]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1016]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1017]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1018]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Button_Ctrl_Grp|Cleaning_Scene:Vacuum:Button_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1019]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Button_Ctrl_Grp|Cleaning_Scene:Vacuum:Button_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1020]" ""
 		"Cleaning_Scene:Dionysus_Asset_RigRN" 704
 		2 "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
@@ -32885,9 +32773,9 @@ createNode reference -n "Cleaning_SceneRN";
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "Cleaning_Scene:Dionysus_Asset_Rig:Dionysus_Ctrl" "visibility" " 1"
 		2 "Cleaning_Scene:Dionysus_Asset_Rig:Dionysus_Geo" "visibility" " 1"
-		3 "Cleaning_Scene:Dionysus_Asset_Rig:unitConversion66.output" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl.rotateY" 
-		""
 		3 "Cleaning_Scene:Dionysus_Asset_Rig:unitConversion67.output" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Prop_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Prop_01_Ctrl.rotateY" 
+		""
+		3 "Cleaning_Scene:Dionysus_Asset_Rig:unitConversion66.output" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl.rotateY" 
 		""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.FollowTranslate" 
 		"Cleaning_SceneRN.placeHolderList[252]" ""
@@ -34219,7 +34107,166 @@ createNode reference -n "Cleaning_SceneRN";
 		"Cleaning_SceneRN.placeHolderList[915]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[916]" ""
-		"Cleaning_SceneRN" 391
+		"Cleaning_Scene:VacuumRN" 80
+		2 "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:SuckyBlendShapes|Cleaning_Scene:Vacuum:Circle" 
+		"visibility" " 0"
+		2 "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:SuckyBlendShapes|Cleaning_Scene:Vacuum:Circle" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "Cleaning_Scene:Vacuum:VacuumGeo" "visibility" " 1"
+		2 "Cleaning_Scene:Vacuum:VacuumCtrl" "visibility" " 1"
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl_Grp|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[945]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl_Grp|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl.visibility" 
+		"Cleaning_SceneRN.placeHolderList[946]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.MasterScale" 
+		"Cleaning_SceneRN.placeHolderList[947]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.translateX" 
+		"Cleaning_SceneRN.placeHolderList[948]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.translateY" 
+		"Cleaning_SceneRN.placeHolderList[949]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[950]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[951]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[952]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[953]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[954]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[955]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[956]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.visibility" 
+		"Cleaning_SceneRN.placeHolderList[957]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.translateX" 
+		"Cleaning_SceneRN.placeHolderList[958]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.translateY" 
+		"Cleaning_SceneRN.placeHolderList[959]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[960]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[961]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[962]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[963]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_01_Grp|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_01.translateX" 
+		"Cleaning_SceneRN.placeHolderList[964]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_02_Grp|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_02.translateX" 
+		"Cleaning_SceneRN.placeHolderList[965]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_01_Grp|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_01.translateX" 
+		"Cleaning_SceneRN.placeHolderList[966]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_02_Grp|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_02.translateX" 
+		"Cleaning_SceneRN.placeHolderList[967]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.translateX" 
+		"Cleaning_SceneRN.placeHolderList[968]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.translateY" 
+		"Cleaning_SceneRN.placeHolderList[969]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[970]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[971]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[972]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[973]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[974]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[975]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[976]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.visibility" 
+		"Cleaning_SceneRN.placeHolderList[977]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateX" 
+		"Cleaning_SceneRN.placeHolderList[978]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateY" 
+		"Cleaning_SceneRN.placeHolderList[979]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[980]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[981]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[982]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[983]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[984]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[985]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[986]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.visibility" 
+		"Cleaning_SceneRN.placeHolderList[987]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateX" 
+		"Cleaning_SceneRN.placeHolderList[988]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateY" 
+		"Cleaning_SceneRN.placeHolderList[989]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[990]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[991]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[992]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[993]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[994]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[995]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[996]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.Follow" 
+		"Cleaning_SceneRN.placeHolderList[997]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.visibility" 
+		"Cleaning_SceneRN.placeHolderList[998]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.translateX" 
+		"Cleaning_SceneRN.placeHolderList[999]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.translateY" 
+		"Cleaning_SceneRN.placeHolderList[1000]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[1001]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[1002]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[1003]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[1004]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[1005]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[1006]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[1007]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.visibility" 
+		"Cleaning_SceneRN.placeHolderList[1008]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.translateX" 
+		"Cleaning_SceneRN.placeHolderList[1009]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.translateY" 
+		"Cleaning_SceneRN.placeHolderList[1010]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[1011]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[1012]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[1013]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[1014]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[1015]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[1016]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[1017]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.visibility" 
+		"Cleaning_SceneRN.placeHolderList[1018]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Button_Ctrl_Grp|Cleaning_Scene:Vacuum:Button_Ctrl.translateX" 
+		"Cleaning_SceneRN.placeHolderList[1019]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Button_Ctrl_Grp|Cleaning_Scene:Vacuum:Button_Ctrl.visibility" 
+		"Cleaning_SceneRN.placeHolderList[1020]" ""
+		"Cleaning_SceneRN" 393
 		2 "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl" 
 		"rotatePivot" " -type \"double3\" 0 -0.34366838531978505 0"
 		2 "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl" 
@@ -34256,6 +34303,8 @@ createNode reference -n "Cleaning_SceneRN";
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl" 
 		"scalePivot" " -type \"double3\" 0 -0.40755988960775236 0"
+		2 "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room|Cleaning_Scene:RoomShape" 
+		"quadSplit" " 0"
 		2 "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Prom_Chager" 
 		"translate" " -type \"double3\" 1.35045527972651414 0 0"
 		2 "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:WetFloorSignOnCart|Cleaning_Scene:WetFloorSignOnCartShape" 
@@ -34308,617 +34357,619 @@ createNode reference -n "Cleaning_SceneRN";
 		3 "Cleaning_Scene:groupId298.message" ":defaultLastHiddenSet.groupNodes" 
 		"-na"
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1060]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1061]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1062]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1063]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1064]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1065]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1066]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1067]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1068]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1069]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1070]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1071]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.visibility" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1072]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1073]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.visibility" 
 		"Cleaning_SceneRN.placeHolderList[1074]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1075]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1076]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1077]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1078]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1079]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle6.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1080]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1081]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1082]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1083]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1084]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1085]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1086]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1087]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.visibility" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1088]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1089]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.visibility" 
 		"Cleaning_SceneRN.placeHolderList[1090]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1091]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1092]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1093]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1094]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1095]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1096]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1097]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1098]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle2.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1099]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1100]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1101]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1102]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1103]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1104]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1105]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1106]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1107]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1108]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1109]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.visibility" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1110]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1111]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.visibility" 
 		"Cleaning_SceneRN.placeHolderList[1112]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1113]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1114]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1115]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1116]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1117]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle11.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1118]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1119]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1120]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1121]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1122]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1123]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1124]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1125]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.visibility" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1126]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1127]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.visibility" 
 		"Cleaning_SceneRN.placeHolderList[1128]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1129]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1130]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1131]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1132]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1133]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1134]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1135]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1136]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle1.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1137]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1138]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1139]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1140]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1141]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1142]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1143]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1144]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1145]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1146]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1147]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1148]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1149]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1150]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1151]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1152]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1153]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1154]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1155]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1156]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1157]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1158]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1159]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1160]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1161]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1162]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.visibility" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1163]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1164]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.visibility" 
 		"Cleaning_SceneRN.placeHolderList[1165]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1166]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1167]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1168]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1169]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1170]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1171]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1172]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1173]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle5.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1174]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1175]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1176]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1177]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1178]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1179]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1180]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1181]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1182]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1183]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1184]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1185]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1186]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1187]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1188]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1189]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1190]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.visibility" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1191]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1192]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.visibility" 
 		"Cleaning_SceneRN.placeHolderList[1193]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1194]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1195]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1196]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1197]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1198]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1199]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1200]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1201]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle16.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1202]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1203]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1204]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1205]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1206]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1207]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1208]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1209]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1210]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1211]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1212]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1213]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1214]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1215]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1216]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1217]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1218]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1219]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1220]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1221]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1222]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1223]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1224]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1225]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1226]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1227]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1228]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1229]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1230]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1231]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1232]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1233]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1234]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1235]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1236]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.visibility" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1237]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1238]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.visibility" 
 		"Cleaning_SceneRN.placeHolderList[1239]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1240]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1241]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1242]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1243]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1244]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1245]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1246]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1247]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1248]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
+		5 3 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room|Cleaning_Scene:RoomShape.worldMesh" 
 		"Cleaning_SceneRN.placeHolderList[1249]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1250]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1251]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1252]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1253]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1254]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1255]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1256]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1257]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1258]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1259]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1260]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1261]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1262]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1263]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1264]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1265]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1266]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1267]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1268]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1269]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1270]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1271]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1272]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1273]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1274]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1275]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1276]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1277]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1278]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1279]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1280]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1281]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1282]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1283]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1284]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1285]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1286]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1287]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1288]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1289]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1290]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1291]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1292]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1293]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1294]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1295]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1296]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1297]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1298]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1299]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1300]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1301]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1302]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1303]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1304]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1305]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1306]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1307]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1308]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1309]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1310]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1311]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1312]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1313]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1314]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1315]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1316]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1317]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1318]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1319]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1320]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1321]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1322]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1323]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1324]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1325]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1326]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1327]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1328]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1329]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1330]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1331]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1332]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1333]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1334]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1335]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1336]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.translateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.scaleX" 
 		"Cleaning_SceneRN.placeHolderList[1337]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.translateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.scaleY" 
 		"Cleaning_SceneRN.placeHolderList[1338]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.translateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.scaleZ" 
 		"Cleaning_SceneRN.placeHolderList[1339]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1340]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1341]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1342]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1343]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1344]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1345]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateX" "Cleaning_SceneRN.placeHolderList[1346]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[1346]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[1347]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[1348]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateX" "Cleaning_SceneRN.placeHolderList[1349]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateY" "Cleaning_SceneRN.placeHolderList[1347]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateY" "Cleaning_SceneRN.placeHolderList[1350]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateZ" "Cleaning_SceneRN.placeHolderList[1348]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateZ" "Cleaning_SceneRN.placeHolderList[1351]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateX" "Cleaning_SceneRN.placeHolderList[1349]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateX" "Cleaning_SceneRN.placeHolderList[1352]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateY" "Cleaning_SceneRN.placeHolderList[1350]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateY" "Cleaning_SceneRN.placeHolderList[1353]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateZ" "Cleaning_SceneRN.placeHolderList[1351]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateZ" "Cleaning_SceneRN.placeHolderList[1354]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleX" "Cleaning_SceneRN.placeHolderList[1352]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleX" "Cleaning_SceneRN.placeHolderList[1355]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleY" "Cleaning_SceneRN.placeHolderList[1353]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleY" "Cleaning_SceneRN.placeHolderList[1356]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleZ" "Cleaning_SceneRN.placeHolderList[1354]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleZ" "Cleaning_SceneRN.placeHolderList[1357]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.visibility" "Cleaning_SceneRN.placeHolderList[1355]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.visibility" "Cleaning_SceneRN.placeHolderList[1358]" 
 		""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.LatticeState" 
-		"Cleaning_SceneRN.placeHolderList[1356]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1357]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1358]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1359]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.rotateX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.translateX" 
 		"Cleaning_SceneRN.placeHolderList[1360]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.rotateY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.translateY" 
 		"Cleaning_SceneRN.placeHolderList[1361]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.rotateZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.translateZ" 
 		"Cleaning_SceneRN.placeHolderList[1362]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.scaleX" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.rotateX" 
 		"Cleaning_SceneRN.placeHolderList[1363]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.scaleY" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.rotateY" 
 		"Cleaning_SceneRN.placeHolderList[1364]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.scaleZ" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.rotateZ" 
 		"Cleaning_SceneRN.placeHolderList[1365]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[1366]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[1367]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[1368]" ""
 		8 "|Cleaning_Scene:Dio_Cam1" "translateX"
 		8 "|Cleaning_Scene:Dio_Cam1" "translateY"
 		8 "|Cleaning_Scene:Dio_Cam1" "translateZ"
@@ -35086,12 +35137,12 @@ createNode reference -n "PrometheusRN";
 		2 "Prometheus:groupParts21" "inputRemoveComponent" " -type \"componentList\" 1 \"f[16135:17118]\""
 		
 		2 "Prometheus:groupParts21" "groupId" " 673"
-		3 "Prometheus:groupId196.message" ":defaultLastHiddenSet.groupNodes" "-na"
-		
 		3 "Prometheus:groupId196.groupId" "|Prometheus:Prometheus|Prometheus:Geo|Prometheus:Prometheus_Model|Prometheus:Prometheus_Geo|Prometheus:Prometheus_GeoShape.instObjGroups.objectGroups[13].objectGroupId" 
 		""
 		3 "|Prometheus:Prometheus|Prometheus:Geo|Prometheus:Prometheus_Model|Prometheus:Prometheus_Geo|Prometheus:Prometheus_GeoShape.instObjGroups.objectGroups[13]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
+		3 "Prometheus:groupId196.message" ":defaultLastHiddenSet.groupNodes" "-na"
+		
 		3 "Prometheus:groupId196.groupId" "Prometheus:groupParts21.groupId" ""
 		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl.Left_Leg_IKFK" 
 		"PrometheusRN.placeHolderList[1]" ""
@@ -36129,9 +36180,88 @@ createNode animCurveTU -n "Eyes_Ctrl_Charging";
 	setAttr -s 6 ".kiy[5]"  0;
 	setAttr -s 6 ".kox[4:5]"  1 1;
 	setAttr -s 6 ".koy[4:5]"  0 0;
+createNode place2dTexture -n "place2dTexture1";
+	rename -uid "9067898E-442E-8D54-AAE1-43B02A8CD12C";
+createNode file -n "file1";
+	rename -uid "04A655EF-4955-B787-FC29-BB9A6E8AF81A";
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Cleaning Scene/ToiletPaper/ToiletPaper_ToiletPaper_BaseColor.1001_sRGB_ACEScg.png.tx";
+	setAttr ".cs" -type "string" "sRGB";
+createNode file -n "file2";
+	rename -uid "A7BBC84A-470B-BF68-1AB4-C2A15020B92C";
+	setAttr ".ail" yes;
+	setAttr ".ao" -0.5;
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Cleaning Scene/ToiletPaper/ToiletPaper_ToiletPaper_Height.1001.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file3";
+	rename -uid "AFB7FB05-48B2-F6BE-32AD-79BA7635FBEA";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Cleaning Scene/ToiletPaper/ToiletPaper_ToiletPaper_Metalness.1001_Raw_ACEScg.png.tx";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file4";
+	rename -uid "ACABE98F-4B24-90A5-3E7E-729719EF70F6";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Cleaning Scene/ToiletPaper/ToiletPaper_ToiletPaper_Normal.1001_Raw_ACEScg.png.tx";
+	setAttr ".cs" -type "string" "Raw";
+createNode file -n "file5";
+	rename -uid "30CBAAA0-4437-C62F-5448-F888FC67CEE6";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//sourceimages/Textures/Cleaning Scene/ToiletPaper/ToiletPaper_ToiletPaper_Roughness.1001_Raw_ACEScg.png.tx";
+	setAttr ".cs" -type "string" "Raw";
+createNode multiplyDivide -n "multiplyDivide1";
+	rename -uid "F35F6E7F-4D94-E3C7-D2D0-2D974CB1A507";
+createNode aiStandardSurface -n "ToiletPaperShader";
+	rename -uid "8029933F-4A6B-BB78-3335-0F81D4FE60CD";
+	setAttr ".emission" 1;
+	setAttr ".emission_color" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "set1";
+	rename -uid "0C60EE6A-4B44-4880-B7C1-E4BEF021B0F9";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "C86BF92D-44BA-D00C-6492-62A81E20F171";
+createNode bump2d -n "bump2d1";
+	rename -uid "2410A13B-4C92-31B8-33CA-D7BB3E0AB8E7";
+	setAttr ".bi" 1;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "33BD1198-4F27-50DF-2760-D99E87B1623B";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -248.55254301269684 -616.66664216253594 ;
+	setAttr ".tgi[0].vh" -type "double2" 810.45728258937061 44.04761729732396 ;
+	setAttr -s 9 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 74.285713195800781;
+	setAttr ".tgi[0].ni[0].y" -185.71427917480469;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 74.285713195800781;
+	setAttr ".tgi[0].ni[1].y" -338.57144165039062;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 74.285713195800781;
+	setAttr ".tgi[0].ni[2].y" -10;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 571.4285888671875;
+	setAttr ".tgi[0].ni[3].y" 47.142856597900391;
+	setAttr ".tgi[0].ni[3].nvs" 2387;
+	setAttr ".tgi[0].ni[4].x" 74.285713195800781;
+	setAttr ".tgi[0].ni[4].y" 172.85714721679688;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 920;
+	setAttr ".tgi[0].ni[5].y" 157.14285278320312;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" 920;
+	setAttr ".tgi[0].ni[6].y" -652.85711669921875;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" -725.71429443359375;
+	setAttr ".tgi[0].ni[7].y" -162.85714721679688;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" -418.57144165039062;
+	setAttr ".tgi[0].ni[8].y" -94.285713195800781;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
+	rename -uid "FA1B19D8-4A69-D12C-9FFA-8E879C1B2E53";
+	setAttr ".sst" -type "string" "";
 select -ne :time1;
-	setAttr ".o" 550;
-	setAttr ".unw" 550;
+	setAttr ".o" 1;
+	setAttr ".unw" 1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -36140,27 +36270,27 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 724 ".st";
+	setAttr -s 721 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 77 ".s";
+	setAttr -s 79 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 413 ".u";
+	setAttr -s 310 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 37 ".r";
+	setAttr -s 38 ".r";
 select -ne :lightList1;
 	setAttr -s 44 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 547 ".tx";
+	setAttr -s 376 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 76 ".dsm";
+	setAttr -s 41 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 195 ".gn";
+	setAttr -s 160 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -36196,38 +36326,40 @@ connectAttr "Transform_Ctrl_translateZ4.o" "Cleaning_SceneRN.phl[1024]";
 connectAttr "Transform_Ctrl_rotateX3.o" "Cleaning_SceneRN.phl[1025]";
 connectAttr "Transform_Ctrl_rotateY4.o" "Cleaning_SceneRN.phl[1026]";
 connectAttr "Transform_Ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[1027]";
-connectAttr "Mop_Top_Ctrl_Simulation.o" "Cleaning_SceneRN.phl[1028]";
-connectAttr "Mop_Top_Ctrl_Follow.o" "Cleaning_SceneRN.phl[1029]";
-connectAttr "Mop_Top_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1030]";
-connectAttr "Mop_Top_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1031]";
-connectAttr "Mop_Top_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1032]";
-connectAttr "Mop_Top_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1033]";
-connectAttr "Mop_Top_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1034]";
-connectAttr "Mop_Top_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1035]";
-connectAttr "Mop_Top_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1036]";
-connectAttr "Mop_Top_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1037]";
-connectAttr "Mop_Top_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1038]";
-connectAttr "Mop_Bottom_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1039]";
-connectAttr "Mop_Bottom_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1040]";
-connectAttr "Mop_Bottom_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1041]";
-connectAttr "Mop_Bottom_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1042]";
-connectAttr "Mop_Bottom_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1043]";
-connectAttr "Mop_Bottom_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1044]";
-connectAttr "Mop_Bottom_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1045]";
-connectAttr "Mop_Bottom_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1046]";
-connectAttr "Mop_Bottom_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1047]";
-connectAttr "Hand_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1048]";
-connectAttr "Hand_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1049]";
-connectAttr "Hand_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1050]";
-connectAttr "Hand_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1051]";
-connectAttr "Hand_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1052]";
-connectAttr "Hand_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1053]";
-connectAttr "Hand_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1054]";
-connectAttr "Hand_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1055]";
-connectAttr "Hand_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1056]";
-connectAttr "Hand_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1057]";
-connectAttr "Hand_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1058]";
-connectAttr "Hand_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1059]";
+connectAttr "Mop_Top_Ctrl_Follow.o" "Cleaning_SceneRN.phl[1028]";
+connectAttr "Mop_Top_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1029]";
+connectAttr "Mop_Top_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1030]";
+connectAttr "Mop_Top_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1031]";
+connectAttr "Mop_Top_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1032]";
+connectAttr "Mop_Top_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1033]";
+connectAttr "Mop_Top_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1034]";
+connectAttr "Mop_Top_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1035]";
+connectAttr "Mop_Top_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1036]";
+connectAttr "Mop_Top_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1037]";
+connectAttr "Mop_Bottom_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1038]";
+connectAttr "Mop_Bottom_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1039]";
+connectAttr "Mop_Bottom_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1040]";
+connectAttr "Mop_Bottom_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1041]";
+connectAttr "Mop_Bottom_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1042]";
+connectAttr "Mop_Bottom_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1043]";
+connectAttr "Mop_Bottom_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1044]";
+connectAttr "Mop_Bottom_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1045]";
+connectAttr "Mop_Bottom_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1046]";
+connectAttr "Hand_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1047]";
+connectAttr "Hand_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1048]";
+connectAttr "Hand_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1049]";
+connectAttr "Hand_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1050]";
+connectAttr "Hand_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1051]";
+connectAttr "Hand_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1052]";
+connectAttr "Hand_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1053]";
+connectAttr "Hand_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1054]";
+connectAttr "Hand_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1055]";
+connectAttr "Hand_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1056]";
+connectAttr "Hand_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1057]";
+connectAttr "Hand_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1058]";
+connectAttr "Cleaning_SceneRN.phl[1059]" "nRigidShape1.stf";
+connectAttr "nRigidShape1.cust" "Cleaning_SceneRN.phl[1060]";
+connectAttr "nRigidShape1.stst" "Cleaning_SceneRN.phl[1061]";
 connectAttr "Spray_Bottle_visibility.o" "Cleaning_SceneRN.phl[935]";
 connectAttr "Spray_Bottle_translateX.o" "Cleaning_SceneRN.phl[936]";
 connectAttr "Spray_Bottle_translateY.o" "Cleaning_SceneRN.phl[937]";
@@ -36519,82 +36651,6 @@ connectAttr "Light_Rig_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[248]";
 connectAttr "Light_Rig_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[249]";
 connectAttr "Light_Rig_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[250]";
 connectAttr "Light_Rig_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[251]";
-connectAttr "Vacuum_BlendShape_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[945]";
-connectAttr "Vacuum_BlendShape_Ctrl_visibility.o" "Cleaning_SceneRN.phl[946]";
-connectAttr "Transform_Ctrl_MasterScale1.o" "Cleaning_SceneRN.phl[947]";
-connectAttr "Transform_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[948]";
-connectAttr "Transform_Ctrl_translateY1.o" "Cleaning_SceneRN.phl[949]";
-connectAttr "Transform_Ctrl_translateZ1.o" "Cleaning_SceneRN.phl[950]";
-connectAttr "Transform_Ctrl_rotateX1.o" "Cleaning_SceneRN.phl[951]";
-connectAttr "Transform_Ctrl_rotateY5.o" "Cleaning_SceneRN.phl[952]";
-connectAttr "Transform_Ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[953]";
-connectAttr "Blendshape_Panel_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[954]";
-connectAttr "Blendshape_Panel_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[955]";
-connectAttr "Blendshape_Panel_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[956]";
-connectAttr "Blendshape_Panel_Ctrl_visibility.o" "Cleaning_SceneRN.phl[957]";
-connectAttr "Blendshape_Panel_Ctrl_translateX.o" "Cleaning_SceneRN.phl[958]";
-connectAttr "Blendshape_Panel_Ctrl_translateY.o" "Cleaning_SceneRN.phl[959]";
-connectAttr "Blendshape_Panel_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[960]";
-connectAttr "Blendshape_Panel_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[961]";
-connectAttr "Blendshape_Panel_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[962]";
-connectAttr "Blendshape_Panel_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[963]";
-connectAttr "Sphere_Suck_Ctrl_01_translateX.o" "Cleaning_SceneRN.phl[964]";
-connectAttr "Sphere_Suck_Ctrl_02_translateX.o" "Cleaning_SceneRN.phl[965]";
-connectAttr "Squre_Suck_Ctrl_01_translateX.o" "Cleaning_SceneRN.phl[966]";
-connectAttr "Squre_Suck_Ctrl_02_translateX.o" "Cleaning_SceneRN.phl[967]";
-connectAttr "Base_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[968]";
-connectAttr "Base_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[969]";
-connectAttr "Base_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[970]";
-connectAttr "Base_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[971]";
-connectAttr "Base_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[972]";
-connectAttr "Base_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[973]";
-connectAttr "Base_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[974]";
-connectAttr "Base_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[975]";
-connectAttr "Base_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[976]";
-connectAttr "Base_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[977]";
-connectAttr "Middle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[978]";
-connectAttr "Middle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[979]";
-connectAttr "Middle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[980]";
-connectAttr "Middle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[981]";
-connectAttr "Middle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[982]";
-connectAttr "Middle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[983]";
-connectAttr "Middle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[984]";
-connectAttr "Middle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[985]";
-connectAttr "Middle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[986]";
-connectAttr "Middle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[987]";
-connectAttr "Middle_Tube_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[988]";
-connectAttr "Middle_Tube_Ctrl_translateY1.o" "Cleaning_SceneRN.phl[989]";
-connectAttr "Middle_Tube_Ctrl_translateZ1.o" "Cleaning_SceneRN.phl[990]";
-connectAttr "Middle_Tube_Ctrl_rotateX1.o" "Cleaning_SceneRN.phl[991]";
-connectAttr "Middle_Tube_Ctrl_rotateY1.o" "Cleaning_SceneRN.phl[992]";
-connectAttr "Middle_Tube_Ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[993]";
-connectAttr "Middle_Tube_Ctrl_scaleX1.o" "Cleaning_SceneRN.phl[994]";
-connectAttr "Middle_Tube_Ctrl_scaleY1.o" "Cleaning_SceneRN.phl[995]";
-connectAttr "Middle_Tube_Ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[996]";
-connectAttr "Middle_Tube_Ctrl_Follow.o" "Cleaning_SceneRN.phl[997]";
-connectAttr "Middle_Tube_Ctrl_visibility1.o" "Cleaning_SceneRN.phl[998]";
-connectAttr "LowerMiddle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[999]";
-connectAttr "LowerMiddle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1000]";
-connectAttr "LowerMiddle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1001]";
-connectAttr "LowerMiddle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1002]";
-connectAttr "LowerMiddle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1003]";
-connectAttr "LowerMiddle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1004]";
-connectAttr "LowerMiddle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1005]";
-connectAttr "LowerMiddle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1006]";
-connectAttr "LowerMiddle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1007]";
-connectAttr "LowerMiddle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1008]";
-connectAttr "UpperMiddle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1009]";
-connectAttr "UpperMiddle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1010]";
-connectAttr "UpperMiddle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1011]";
-connectAttr "UpperMiddle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1012]";
-connectAttr "UpperMiddle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1013]";
-connectAttr "UpperMiddle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1014]";
-connectAttr "UpperMiddle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1015]";
-connectAttr "UpperMiddle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1016]";
-connectAttr "UpperMiddle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1017]";
-connectAttr "UpperMiddle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1018]";
-connectAttr "Button_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1019]";
-connectAttr "Button_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1020]";
 connectAttr "Booster_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[252]";
 connectAttr "Booster_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[253]";
 connectAttr "Booster_Ctrl_translateX.o" "Cleaning_SceneRN.phl[254]";
@@ -37351,321 +37407,398 @@ connectAttr "Two_Handed_Prop_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[913]";
 connectAttr "Two_Handed_Prop_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[914]";
 connectAttr "Two_Handed_Prop_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[915]";
 connectAttr "Two_Handed_Prop_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[916]";
-connectAttr "sprayCan_ctrl_translateX3.o" "Cleaning_SceneRN.phl[1060]";
-connectAttr "sprayCan_ctrl_translateY3.o" "Cleaning_SceneRN.phl[1061]";
-connectAttr "sprayCan_ctrl_translateZ3.o" "Cleaning_SceneRN.phl[1062]";
-connectAttr "sprayCan_ctrl_rotateX3.o" "Cleaning_SceneRN.phl[1063]";
-connectAttr "sprayCan_ctrl_rotateY3.o" "Cleaning_SceneRN.phl[1064]";
-connectAttr "sprayCan_ctrl_rotateZ3.o" "Cleaning_SceneRN.phl[1065]";
-connectAttr "sprayCan_ctrl_scaleX3.o" "Cleaning_SceneRN.phl[1066]";
-connectAttr "sprayCan_ctrl_scaleY3.o" "Cleaning_SceneRN.phl[1067]";
-connectAttr "sprayCan_ctrl_scaleZ3.o" "Cleaning_SceneRN.phl[1068]";
-connectAttr "Spray_Bottle6_translateX.o" "Cleaning_SceneRN.phl[1069]";
-connectAttr "Spray_Bottle6_translateY.o" "Cleaning_SceneRN.phl[1070]";
-connectAttr "Spray_Bottle6_translateZ.o" "Cleaning_SceneRN.phl[1071]";
-connectAttr "Spray_Bottle6_visibility.o" "Cleaning_SceneRN.phl[1072]";
-connectAttr "Spray_Bottle6_rotateX.o" "Cleaning_SceneRN.phl[1073]";
-connectAttr "Spray_Bottle6_rotateY.o" "Cleaning_SceneRN.phl[1074]";
-connectAttr "Spray_Bottle6_rotateZ.o" "Cleaning_SceneRN.phl[1075]";
-connectAttr "Spray_Bottle6_scaleX.o" "Cleaning_SceneRN.phl[1076]";
-connectAttr "Spray_Bottle6_scaleY.o" "Cleaning_SceneRN.phl[1077]";
-connectAttr "Spray_Bottle6_scaleZ.o" "Cleaning_SceneRN.phl[1078]";
-connectAttr "sprayCan_ctrl_translateX4.o" "Cleaning_SceneRN.phl[1079]";
-connectAttr "sprayCan_ctrl_translateY4.o" "Cleaning_SceneRN.phl[1080]";
-connectAttr "sprayCan_ctrl_translateZ4.o" "Cleaning_SceneRN.phl[1081]";
-connectAttr "sprayCan_ctrl_rotateX4.o" "Cleaning_SceneRN.phl[1082]";
-connectAttr "sprayCan_ctrl_rotateY4.o" "Cleaning_SceneRN.phl[1083]";
-connectAttr "sprayCan_ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[1084]";
-connectAttr "sprayCan_ctrl_scaleX4.o" "Cleaning_SceneRN.phl[1085]";
-connectAttr "sprayCan_ctrl_scaleY4.o" "Cleaning_SceneRN.phl[1086]";
-connectAttr "sprayCan_ctrl_scaleZ4.o" "Cleaning_SceneRN.phl[1087]";
-connectAttr "Spray_Bottle2_visibility.o" "Cleaning_SceneRN.phl[1088]";
-connectAttr "Spray_Bottle2_translateX.o" "Cleaning_SceneRN.phl[1089]";
-connectAttr "Spray_Bottle2_translateY.o" "Cleaning_SceneRN.phl[1090]";
-connectAttr "Spray_Bottle2_translateZ.o" "Cleaning_SceneRN.phl[1091]";
-connectAttr "Spray_Bottle2_rotateX.o" "Cleaning_SceneRN.phl[1092]";
-connectAttr "Spray_Bottle2_rotateY.o" "Cleaning_SceneRN.phl[1093]";
-connectAttr "Spray_Bottle2_rotateZ.o" "Cleaning_SceneRN.phl[1094]";
-connectAttr "Spray_Bottle2_scaleX.o" "Cleaning_SceneRN.phl[1095]";
-connectAttr "Spray_Bottle2_scaleY.o" "Cleaning_SceneRN.phl[1096]";
-connectAttr "Spray_Bottle2_scaleZ.o" "Cleaning_SceneRN.phl[1097]";
-connectAttr "sprayCan_ctrl_translateX2.o" "Cleaning_SceneRN.phl[1098]";
-connectAttr "sprayCan_ctrl_translateY2.o" "Cleaning_SceneRN.phl[1099]";
-connectAttr "sprayCan_ctrl_translateZ2.o" "Cleaning_SceneRN.phl[1100]";
-connectAttr "sprayCan_ctrl_rotateX2.o" "Cleaning_SceneRN.phl[1101]";
-connectAttr "sprayCan_ctrl_rotateY2.o" "Cleaning_SceneRN.phl[1102]";
-connectAttr "sprayCan_ctrl_rotateZ2.o" "Cleaning_SceneRN.phl[1103]";
-connectAttr "sprayCan_ctrl_scaleX2.o" "Cleaning_SceneRN.phl[1104]";
-connectAttr "sprayCan_ctrl_scaleY2.o" "Cleaning_SceneRN.phl[1105]";
-connectAttr "sprayCan_ctrl_scaleZ2.o" "Cleaning_SceneRN.phl[1106]";
-connectAttr "Spray_Bottle11_translateX.o" "Cleaning_SceneRN.phl[1107]";
-connectAttr "Spray_Bottle11_translateY.o" "Cleaning_SceneRN.phl[1108]";
-connectAttr "Spray_Bottle11_translateZ.o" "Cleaning_SceneRN.phl[1109]";
-connectAttr "Spray_Bottle11_visibility.o" "Cleaning_SceneRN.phl[1110]";
-connectAttr "Spray_Bottle11_rotateX.o" "Cleaning_SceneRN.phl[1111]";
-connectAttr "Spray_Bottle11_rotateY.o" "Cleaning_SceneRN.phl[1112]";
-connectAttr "Spray_Bottle11_rotateZ.o" "Cleaning_SceneRN.phl[1113]";
-connectAttr "Spray_Bottle11_scaleX.o" "Cleaning_SceneRN.phl[1114]";
-connectAttr "Spray_Bottle11_scaleY.o" "Cleaning_SceneRN.phl[1115]";
-connectAttr "Spray_Bottle11_scaleZ.o" "Cleaning_SceneRN.phl[1116]";
-connectAttr "sprayCan_ctrl_translateX1.o" "Cleaning_SceneRN.phl[1117]";
-connectAttr "sprayCan_ctrl_translateY1.o" "Cleaning_SceneRN.phl[1118]";
-connectAttr "sprayCan_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[1119]";
-connectAttr "sprayCan_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[1120]";
-connectAttr "sprayCan_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[1121]";
-connectAttr "sprayCan_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[1122]";
-connectAttr "sprayCan_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[1123]";
-connectAttr "sprayCan_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[1124]";
-connectAttr "sprayCan_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[1125]";
-connectAttr "Spray_Bottle1_visibility.o" "Cleaning_SceneRN.phl[1126]";
-connectAttr "Spray_Bottle1_translateX.o" "Cleaning_SceneRN.phl[1127]";
-connectAttr "Spray_Bottle1_translateY.o" "Cleaning_SceneRN.phl[1128]";
-connectAttr "Spray_Bottle1_translateZ.o" "Cleaning_SceneRN.phl[1129]";
-connectAttr "Spray_Bottle1_rotateX.o" "Cleaning_SceneRN.phl[1130]";
-connectAttr "Spray_Bottle1_rotateY.o" "Cleaning_SceneRN.phl[1131]";
-connectAttr "Spray_Bottle1_rotateZ.o" "Cleaning_SceneRN.phl[1132]";
-connectAttr "Spray_Bottle1_scaleX.o" "Cleaning_SceneRN.phl[1133]";
-connectAttr "Spray_Bottle1_scaleY.o" "Cleaning_SceneRN.phl[1134]";
-connectAttr "Spray_Bottle1_scaleZ.o" "Cleaning_SceneRN.phl[1135]";
-connectAttr "sprayCan_ctrl_translateX.o" "Cleaning_SceneRN.phl[1136]";
-connectAttr "sprayCan_ctrl_translateY.o" "Cleaning_SceneRN.phl[1137]";
-connectAttr "sprayCan_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1138]";
-connectAttr "sprayCan_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1139]";
-connectAttr "sprayCan_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1140]";
-connectAttr "sprayCan_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1141]";
-connectAttr "sprayCan_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1142]";
-connectAttr "sprayCan_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1143]";
-connectAttr "sprayCan_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1144]";
-connectAttr "sprayCan_ctrl_translateX5.o" "Cleaning_SceneRN.phl[1145]";
-connectAttr "sprayCan_ctrl_translateY5.o" "Cleaning_SceneRN.phl[1146]";
-connectAttr "sprayCan_ctrl_translateZ5.o" "Cleaning_SceneRN.phl[1147]";
-connectAttr "sprayCan_ctrl_rotateX5.o" "Cleaning_SceneRN.phl[1148]";
-connectAttr "sprayCan_ctrl_rotateY5.o" "Cleaning_SceneRN.phl[1149]";
-connectAttr "sprayCan_ctrl_rotateZ5.o" "Cleaning_SceneRN.phl[1150]";
-connectAttr "sprayCan_ctrl_scaleX5.o" "Cleaning_SceneRN.phl[1151]";
-connectAttr "sprayCan_ctrl_scaleY5.o" "Cleaning_SceneRN.phl[1152]";
-connectAttr "sprayCan_ctrl_scaleZ5.o" "Cleaning_SceneRN.phl[1153]";
-connectAttr "sprayCan_ctrl_translateX6.o" "Cleaning_SceneRN.phl[1154]";
-connectAttr "sprayCan_ctrl_translateY6.o" "Cleaning_SceneRN.phl[1155]";
-connectAttr "sprayCan_ctrl_translateZ6.o" "Cleaning_SceneRN.phl[1156]";
-connectAttr "sprayCan_ctrl_rotateX6.o" "Cleaning_SceneRN.phl[1157]";
-connectAttr "sprayCan_ctrl_rotateY6.o" "Cleaning_SceneRN.phl[1158]";
-connectAttr "sprayCan_ctrl_rotateZ6.o" "Cleaning_SceneRN.phl[1159]";
-connectAttr "sprayCan_ctrl_scaleX6.o" "Cleaning_SceneRN.phl[1160]";
-connectAttr "sprayCan_ctrl_scaleY6.o" "Cleaning_SceneRN.phl[1161]";
-connectAttr "sprayCan_ctrl_scaleZ6.o" "Cleaning_SceneRN.phl[1162]";
-connectAttr "Spray_Bottle5_visibility.o" "Cleaning_SceneRN.phl[1163]";
-connectAttr "Spray_Bottle5_translateX.o" "Cleaning_SceneRN.phl[1164]";
-connectAttr "Spray_Bottle5_translateY.o" "Cleaning_SceneRN.phl[1165]";
-connectAttr "Spray_Bottle5_translateZ.o" "Cleaning_SceneRN.phl[1166]";
-connectAttr "Spray_Bottle5_rotateX.o" "Cleaning_SceneRN.phl[1167]";
-connectAttr "Spray_Bottle5_rotateY.o" "Cleaning_SceneRN.phl[1168]";
-connectAttr "Spray_Bottle5_rotateZ.o" "Cleaning_SceneRN.phl[1169]";
-connectAttr "Spray_Bottle5_scaleX.o" "Cleaning_SceneRN.phl[1170]";
-connectAttr "Spray_Bottle5_scaleY.o" "Cleaning_SceneRN.phl[1171]";
-connectAttr "Spray_Bottle5_scaleZ.o" "Cleaning_SceneRN.phl[1172]";
-connectAttr "sprayCan_ctrl_translateX11.o" "Cleaning_SceneRN.phl[1173]";
-connectAttr "sprayCan_ctrl_translateY11.o" "Cleaning_SceneRN.phl[1174]";
-connectAttr "sprayCan_ctrl_translateZ11.o" "Cleaning_SceneRN.phl[1175]";
-connectAttr "sprayCan_ctrl_rotateX11.o" "Cleaning_SceneRN.phl[1176]";
-connectAttr "sprayCan_ctrl_rotateY11.o" "Cleaning_SceneRN.phl[1177]";
-connectAttr "sprayCan_ctrl_rotateZ11.o" "Cleaning_SceneRN.phl[1178]";
-connectAttr "sprayCan_ctrl_scaleX11.o" "Cleaning_SceneRN.phl[1179]";
-connectAttr "sprayCan_ctrl_scaleY11.o" "Cleaning_SceneRN.phl[1180]";
-connectAttr "sprayCan_ctrl_scaleZ11.o" "Cleaning_SceneRN.phl[1181]";
-connectAttr "sprayCan_ctrl_translateX7.o" "Cleaning_SceneRN.phl[1182]";
-connectAttr "sprayCan_ctrl_translateY7.o" "Cleaning_SceneRN.phl[1183]";
-connectAttr "sprayCan_ctrl_translateZ7.o" "Cleaning_SceneRN.phl[1184]";
-connectAttr "sprayCan_ctrl_rotateX7.o" "Cleaning_SceneRN.phl[1185]";
-connectAttr "sprayCan_ctrl_rotateY7.o" "Cleaning_SceneRN.phl[1186]";
-connectAttr "sprayCan_ctrl_rotateZ7.o" "Cleaning_SceneRN.phl[1187]";
-connectAttr "sprayCan_ctrl_scaleX7.o" "Cleaning_SceneRN.phl[1188]";
-connectAttr "sprayCan_ctrl_scaleY7.o" "Cleaning_SceneRN.phl[1189]";
-connectAttr "sprayCan_ctrl_scaleZ7.o" "Cleaning_SceneRN.phl[1190]";
-connectAttr "Spray_Bottle16_visibility.o" "Cleaning_SceneRN.phl[1191]";
-connectAttr "Spray_Bottle16_translateX.o" "Cleaning_SceneRN.phl[1192]";
-connectAttr "Spray_Bottle16_translateY.o" "Cleaning_SceneRN.phl[1193]";
-connectAttr "Spray_Bottle16_translateZ.o" "Cleaning_SceneRN.phl[1194]";
-connectAttr "Spray_Bottle16_rotateX.o" "Cleaning_SceneRN.phl[1195]";
-connectAttr "Spray_Bottle16_rotateY.o" "Cleaning_SceneRN.phl[1196]";
-connectAttr "Spray_Bottle16_rotateZ.o" "Cleaning_SceneRN.phl[1197]";
-connectAttr "Spray_Bottle16_scaleX.o" "Cleaning_SceneRN.phl[1198]";
-connectAttr "Spray_Bottle16_scaleY.o" "Cleaning_SceneRN.phl[1199]";
-connectAttr "Spray_Bottle16_scaleZ.o" "Cleaning_SceneRN.phl[1200]";
-connectAttr "sprayCan_ctrl_translateX8.o" "Cleaning_SceneRN.phl[1201]";
-connectAttr "sprayCan_ctrl_translateY8.o" "Cleaning_SceneRN.phl[1202]";
-connectAttr "sprayCan_ctrl_translateZ8.o" "Cleaning_SceneRN.phl[1203]";
-connectAttr "sprayCan_ctrl_rotateX8.o" "Cleaning_SceneRN.phl[1204]";
-connectAttr "sprayCan_ctrl_rotateY8.o" "Cleaning_SceneRN.phl[1205]";
-connectAttr "sprayCan_ctrl_rotateZ8.o" "Cleaning_SceneRN.phl[1206]";
-connectAttr "sprayCan_ctrl_scaleX8.o" "Cleaning_SceneRN.phl[1207]";
-connectAttr "sprayCan_ctrl_scaleY8.o" "Cleaning_SceneRN.phl[1208]";
-connectAttr "sprayCan_ctrl_scaleZ8.o" "Cleaning_SceneRN.phl[1209]";
-connectAttr "sprayCan_ctrl_translateX12.o" "Cleaning_SceneRN.phl[1210]";
-connectAttr "sprayCan_ctrl_translateY12.o" "Cleaning_SceneRN.phl[1211]";
-connectAttr "sprayCan_ctrl_translateZ12.o" "Cleaning_SceneRN.phl[1212]";
-connectAttr "sprayCan_ctrl_rotateX12.o" "Cleaning_SceneRN.phl[1213]";
-connectAttr "sprayCan_ctrl_rotateY12.o" "Cleaning_SceneRN.phl[1214]";
-connectAttr "sprayCan_ctrl_rotateZ12.o" "Cleaning_SceneRN.phl[1215]";
-connectAttr "sprayCan_ctrl_scaleX12.o" "Cleaning_SceneRN.phl[1216]";
-connectAttr "sprayCan_ctrl_scaleY12.o" "Cleaning_SceneRN.phl[1217]";
-connectAttr "sprayCan_ctrl_scaleZ12.o" "Cleaning_SceneRN.phl[1218]";
-connectAttr "sprayCan_ctrl_translateX9.o" "Cleaning_SceneRN.phl[1219]";
-connectAttr "sprayCan_ctrl_translateY9.o" "Cleaning_SceneRN.phl[1220]";
-connectAttr "sprayCan_ctrl_translateZ9.o" "Cleaning_SceneRN.phl[1221]";
-connectAttr "sprayCan_ctrl_rotateX9.o" "Cleaning_SceneRN.phl[1222]";
-connectAttr "sprayCan_ctrl_rotateY9.o" "Cleaning_SceneRN.phl[1223]";
-connectAttr "sprayCan_ctrl_rotateZ9.o" "Cleaning_SceneRN.phl[1224]";
-connectAttr "sprayCan_ctrl_scaleX9.o" "Cleaning_SceneRN.phl[1225]";
-connectAttr "sprayCan_ctrl_scaleY9.o" "Cleaning_SceneRN.phl[1226]";
-connectAttr "sprayCan_ctrl_scaleZ9.o" "Cleaning_SceneRN.phl[1227]";
-connectAttr "sprayCan_ctrl_translateX10.o" "Cleaning_SceneRN.phl[1228]";
-connectAttr "sprayCan_ctrl_translateY10.o" "Cleaning_SceneRN.phl[1229]";
-connectAttr "sprayCan_ctrl_translateZ10.o" "Cleaning_SceneRN.phl[1230]";
-connectAttr "sprayCan_ctrl_rotateX10.o" "Cleaning_SceneRN.phl[1231]";
-connectAttr "sprayCan_ctrl_rotateY10.o" "Cleaning_SceneRN.phl[1232]";
-connectAttr "sprayCan_ctrl_rotateZ10.o" "Cleaning_SceneRN.phl[1233]";
-connectAttr "sprayCan_ctrl_scaleX10.o" "Cleaning_SceneRN.phl[1234]";
-connectAttr "sprayCan_ctrl_scaleY10.o" "Cleaning_SceneRN.phl[1235]";
-connectAttr "sprayCan_ctrl_scaleZ10.o" "Cleaning_SceneRN.phl[1236]";
-connectAttr "Room_visibility.o" "Cleaning_SceneRN.phl[1237]";
-connectAttr "Room_translateX.o" "Cleaning_SceneRN.phl[1238]";
-connectAttr "Room_translateY.o" "Cleaning_SceneRN.phl[1239]";
-connectAttr "Room_translateZ.o" "Cleaning_SceneRN.phl[1240]";
-connectAttr "Room_rotateX.o" "Cleaning_SceneRN.phl[1241]";
-connectAttr "Room_rotateY.o" "Cleaning_SceneRN.phl[1242]";
-connectAttr "Room_rotateZ.o" "Cleaning_SceneRN.phl[1243]";
-connectAttr "Room_scaleX.o" "Cleaning_SceneRN.phl[1244]";
-connectAttr "Room_scaleY.o" "Cleaning_SceneRN.phl[1245]";
-connectAttr "Room_scaleZ.o" "Cleaning_SceneRN.phl[1246]";
-connectAttr "PaintBucket4_ctrl_translateX3.o" "Cleaning_SceneRN.phl[1247]";
-connectAttr "PaintBucket4_ctrl_translateY3.o" "Cleaning_SceneRN.phl[1248]";
-connectAttr "PaintBucket4_ctrl_translateZ3.o" "Cleaning_SceneRN.phl[1249]";
-connectAttr "PaintBucket4_ctrl_rotateX3.o" "Cleaning_SceneRN.phl[1250]";
-connectAttr "PaintBucket4_ctrl_rotateY3.o" "Cleaning_SceneRN.phl[1251]";
-connectAttr "PaintBucket4_ctrl_rotateZ3.o" "Cleaning_SceneRN.phl[1252]";
-connectAttr "PaintBucket4_ctrl_scaleX3.o" "Cleaning_SceneRN.phl[1253]";
-connectAttr "PaintBucket4_ctrl_scaleY3.o" "Cleaning_SceneRN.phl[1254]";
-connectAttr "PaintBucket4_ctrl_scaleZ3.o" "Cleaning_SceneRN.phl[1255]";
-connectAttr "PaintBucket4_ctrl_translateX2.o" "Cleaning_SceneRN.phl[1256]";
-connectAttr "PaintBucket4_ctrl_translateY2.o" "Cleaning_SceneRN.phl[1257]";
-connectAttr "PaintBucket4_ctrl_translateZ2.o" "Cleaning_SceneRN.phl[1258]";
-connectAttr "PaintBucket4_ctrl_rotateX2.o" "Cleaning_SceneRN.phl[1259]";
-connectAttr "PaintBucket4_ctrl_rotateY2.o" "Cleaning_SceneRN.phl[1260]";
-connectAttr "PaintBucket4_ctrl_rotateZ2.o" "Cleaning_SceneRN.phl[1261]";
-connectAttr "PaintBucket4_ctrl_scaleX2.o" "Cleaning_SceneRN.phl[1262]";
-connectAttr "PaintBucket4_ctrl_scaleY2.o" "Cleaning_SceneRN.phl[1263]";
-connectAttr "PaintBucket4_ctrl_scaleZ2.o" "Cleaning_SceneRN.phl[1264]";
-connectAttr "PaintBucket4_ctrl_translateX1.o" "Cleaning_SceneRN.phl[1265]";
-connectAttr "PaintBucket4_ctrl_translateY1.o" "Cleaning_SceneRN.phl[1266]";
-connectAttr "PaintBucket4_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[1267]";
-connectAttr "PaintBucket4_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[1268]";
-connectAttr "PaintBucket4_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[1269]";
-connectAttr "PaintBucket4_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[1270]";
-connectAttr "PaintBucket4_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[1271]";
-connectAttr "PaintBucket4_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[1272]";
-connectAttr "PaintBucket4_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[1273]";
-connectAttr "PaintBucket4_ctrl_translateX5.o" "Cleaning_SceneRN.phl[1274]";
-connectAttr "PaintBucket4_ctrl_translateY5.o" "Cleaning_SceneRN.phl[1275]";
-connectAttr "PaintBucket4_ctrl_translateZ5.o" "Cleaning_SceneRN.phl[1276]";
-connectAttr "PaintBucket4_ctrl_rotateX5.o" "Cleaning_SceneRN.phl[1277]";
-connectAttr "PaintBucket4_ctrl_rotateY5.o" "Cleaning_SceneRN.phl[1278]";
-connectAttr "PaintBucket4_ctrl_rotateZ5.o" "Cleaning_SceneRN.phl[1279]";
-connectAttr "PaintBucket4_ctrl_scaleX5.o" "Cleaning_SceneRN.phl[1280]";
-connectAttr "PaintBucket4_ctrl_scaleY5.o" "Cleaning_SceneRN.phl[1281]";
-connectAttr "PaintBucket4_ctrl_scaleZ5.o" "Cleaning_SceneRN.phl[1282]";
-connectAttr "PaintBucket4_ctrl_translateX4.o" "Cleaning_SceneRN.phl[1283]";
-connectAttr "PaintBucket4_ctrl_translateY4.o" "Cleaning_SceneRN.phl[1284]";
-connectAttr "PaintBucket4_ctrl_translateZ4.o" "Cleaning_SceneRN.phl[1285]";
-connectAttr "PaintBucket4_ctrl_rotateX4.o" "Cleaning_SceneRN.phl[1286]";
-connectAttr "PaintBucket4_ctrl_rotateY4.o" "Cleaning_SceneRN.phl[1287]";
-connectAttr "PaintBucket4_ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[1288]";
-connectAttr "PaintBucket4_ctrl_scaleX4.o" "Cleaning_SceneRN.phl[1289]";
-connectAttr "PaintBucket4_ctrl_scaleY4.o" "Cleaning_SceneRN.phl[1290]";
-connectAttr "PaintBucket4_ctrl_scaleZ4.o" "Cleaning_SceneRN.phl[1291]";
-connectAttr "PaintBucket4_ctrl_translateX.o" "Cleaning_SceneRN.phl[1292]";
-connectAttr "PaintBucket4_ctrl_translateY.o" "Cleaning_SceneRN.phl[1293]";
-connectAttr "PaintBucket4_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1294]";
-connectAttr "PaintBucket4_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1295]";
-connectAttr "PaintBucket4_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1296]";
-connectAttr "PaintBucket4_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1297]";
-connectAttr "PaintBucket4_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1298]";
-connectAttr "PaintBucket4_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1299]";
-connectAttr "PaintBucket4_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1300]";
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateX.o" "Cleaning_SceneRN.phl[1301]"
+connectAttr "Vacuum_BlendShape_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[945]";
+connectAttr "Vacuum_BlendShape_Ctrl_visibility.o" "Cleaning_SceneRN.phl[946]";
+connectAttr "Transform_Ctrl_MasterScale1.o" "Cleaning_SceneRN.phl[947]";
+connectAttr "Transform_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[948]";
+connectAttr "Transform_Ctrl_translateY1.o" "Cleaning_SceneRN.phl[949]";
+connectAttr "Transform_Ctrl_translateZ1.o" "Cleaning_SceneRN.phl[950]";
+connectAttr "Transform_Ctrl_rotateX1.o" "Cleaning_SceneRN.phl[951]";
+connectAttr "Transform_Ctrl_rotateY5.o" "Cleaning_SceneRN.phl[952]";
+connectAttr "Transform_Ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[953]";
+connectAttr "Blendshape_Panel_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[954]";
+connectAttr "Blendshape_Panel_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[955]";
+connectAttr "Blendshape_Panel_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[956]";
+connectAttr "Blendshape_Panel_Ctrl_visibility.o" "Cleaning_SceneRN.phl[957]";
+connectAttr "Blendshape_Panel_Ctrl_translateX.o" "Cleaning_SceneRN.phl[958]";
+connectAttr "Blendshape_Panel_Ctrl_translateY.o" "Cleaning_SceneRN.phl[959]";
+connectAttr "Blendshape_Panel_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[960]";
+connectAttr "Blendshape_Panel_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[961]";
+connectAttr "Blendshape_Panel_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[962]";
+connectAttr "Blendshape_Panel_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[963]";
+connectAttr "Sphere_Suck_Ctrl_01_translateX.o" "Cleaning_SceneRN.phl[964]";
+connectAttr "Sphere_Suck_Ctrl_02_translateX.o" "Cleaning_SceneRN.phl[965]";
+connectAttr "Squre_Suck_Ctrl_01_translateX.o" "Cleaning_SceneRN.phl[966]";
+connectAttr "Squre_Suck_Ctrl_02_translateX.o" "Cleaning_SceneRN.phl[967]";
+connectAttr "Base_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[968]";
+connectAttr "Base_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[969]";
+connectAttr "Base_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[970]";
+connectAttr "Base_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[971]";
+connectAttr "Base_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[972]";
+connectAttr "Base_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[973]";
+connectAttr "Base_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[974]";
+connectAttr "Base_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[975]";
+connectAttr "Base_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[976]";
+connectAttr "Base_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[977]";
+connectAttr "Middle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[978]";
+connectAttr "Middle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[979]";
+connectAttr "Middle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[980]";
+connectAttr "Middle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[981]";
+connectAttr "Middle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[982]";
+connectAttr "Middle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[983]";
+connectAttr "Middle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[984]";
+connectAttr "Middle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[985]";
+connectAttr "Middle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[986]";
+connectAttr "Middle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[987]";
+connectAttr "Middle_Tube_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[988]";
+connectAttr "Middle_Tube_Ctrl_translateY1.o" "Cleaning_SceneRN.phl[989]";
+connectAttr "Middle_Tube_Ctrl_translateZ1.o" "Cleaning_SceneRN.phl[990]";
+connectAttr "Middle_Tube_Ctrl_rotateX1.o" "Cleaning_SceneRN.phl[991]";
+connectAttr "Middle_Tube_Ctrl_rotateY1.o" "Cleaning_SceneRN.phl[992]";
+connectAttr "Middle_Tube_Ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[993]";
+connectAttr "Middle_Tube_Ctrl_scaleX1.o" "Cleaning_SceneRN.phl[994]";
+connectAttr "Middle_Tube_Ctrl_scaleY1.o" "Cleaning_SceneRN.phl[995]";
+connectAttr "Middle_Tube_Ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[996]";
+connectAttr "Middle_Tube_Ctrl_Follow.o" "Cleaning_SceneRN.phl[997]";
+connectAttr "Middle_Tube_Ctrl_visibility1.o" "Cleaning_SceneRN.phl[998]";
+connectAttr "LowerMiddle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[999]";
+connectAttr "LowerMiddle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1000]";
+connectAttr "LowerMiddle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1001]";
+connectAttr "LowerMiddle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1002]";
+connectAttr "LowerMiddle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1003]";
+connectAttr "LowerMiddle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1004]";
+connectAttr "LowerMiddle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1005]";
+connectAttr "LowerMiddle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1006]";
+connectAttr "LowerMiddle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1007]";
+connectAttr "LowerMiddle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1008]";
+connectAttr "UpperMiddle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1009]";
+connectAttr "UpperMiddle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1010]";
+connectAttr "UpperMiddle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1011]";
+connectAttr "UpperMiddle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1012]";
+connectAttr "UpperMiddle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1013]";
+connectAttr "UpperMiddle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1014]";
+connectAttr "UpperMiddle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1015]";
+connectAttr "UpperMiddle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1016]";
+connectAttr "UpperMiddle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1017]";
+connectAttr "UpperMiddle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1018]";
+connectAttr "Button_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1019]";
+connectAttr "Button_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1020]";
+connectAttr "sprayCan_ctrl_translateX3.o" "Cleaning_SceneRN.phl[1062]";
+connectAttr "sprayCan_ctrl_translateY3.o" "Cleaning_SceneRN.phl[1063]";
+connectAttr "sprayCan_ctrl_translateZ3.o" "Cleaning_SceneRN.phl[1064]";
+connectAttr "sprayCan_ctrl_rotateX3.o" "Cleaning_SceneRN.phl[1065]";
+connectAttr "sprayCan_ctrl_rotateY3.o" "Cleaning_SceneRN.phl[1066]";
+connectAttr "sprayCan_ctrl_rotateZ3.o" "Cleaning_SceneRN.phl[1067]";
+connectAttr "sprayCan_ctrl_scaleX3.o" "Cleaning_SceneRN.phl[1068]";
+connectAttr "sprayCan_ctrl_scaleY3.o" "Cleaning_SceneRN.phl[1069]";
+connectAttr "sprayCan_ctrl_scaleZ3.o" "Cleaning_SceneRN.phl[1070]";
+connectAttr "Spray_Bottle6_translateX.o" "Cleaning_SceneRN.phl[1071]";
+connectAttr "Spray_Bottle6_translateY.o" "Cleaning_SceneRN.phl[1072]";
+connectAttr "Spray_Bottle6_translateZ.o" "Cleaning_SceneRN.phl[1073]";
+connectAttr "Spray_Bottle6_visibility.o" "Cleaning_SceneRN.phl[1074]";
+connectAttr "Spray_Bottle6_rotateX.o" "Cleaning_SceneRN.phl[1075]";
+connectAttr "Spray_Bottle6_rotateY.o" "Cleaning_SceneRN.phl[1076]";
+connectAttr "Spray_Bottle6_rotateZ.o" "Cleaning_SceneRN.phl[1077]";
+connectAttr "Spray_Bottle6_scaleX.o" "Cleaning_SceneRN.phl[1078]";
+connectAttr "Spray_Bottle6_scaleY.o" "Cleaning_SceneRN.phl[1079]";
+connectAttr "Spray_Bottle6_scaleZ.o" "Cleaning_SceneRN.phl[1080]";
+connectAttr "sprayCan_ctrl_translateX4.o" "Cleaning_SceneRN.phl[1081]";
+connectAttr "sprayCan_ctrl_translateY4.o" "Cleaning_SceneRN.phl[1082]";
+connectAttr "sprayCan_ctrl_translateZ4.o" "Cleaning_SceneRN.phl[1083]";
+connectAttr "sprayCan_ctrl_rotateX4.o" "Cleaning_SceneRN.phl[1084]";
+connectAttr "sprayCan_ctrl_rotateY4.o" "Cleaning_SceneRN.phl[1085]";
+connectAttr "sprayCan_ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[1086]";
+connectAttr "sprayCan_ctrl_scaleX4.o" "Cleaning_SceneRN.phl[1087]";
+connectAttr "sprayCan_ctrl_scaleY4.o" "Cleaning_SceneRN.phl[1088]";
+connectAttr "sprayCan_ctrl_scaleZ4.o" "Cleaning_SceneRN.phl[1089]";
+connectAttr "Spray_Bottle2_visibility.o" "Cleaning_SceneRN.phl[1090]";
+connectAttr "Spray_Bottle2_translateX.o" "Cleaning_SceneRN.phl[1091]";
+connectAttr "Spray_Bottle2_translateY.o" "Cleaning_SceneRN.phl[1092]";
+connectAttr "Spray_Bottle2_translateZ.o" "Cleaning_SceneRN.phl[1093]";
+connectAttr "Spray_Bottle2_rotateX.o" "Cleaning_SceneRN.phl[1094]";
+connectAttr "Spray_Bottle2_rotateY.o" "Cleaning_SceneRN.phl[1095]";
+connectAttr "Spray_Bottle2_rotateZ.o" "Cleaning_SceneRN.phl[1096]";
+connectAttr "Spray_Bottle2_scaleX.o" "Cleaning_SceneRN.phl[1097]";
+connectAttr "Spray_Bottle2_scaleY.o" "Cleaning_SceneRN.phl[1098]";
+connectAttr "Spray_Bottle2_scaleZ.o" "Cleaning_SceneRN.phl[1099]";
+connectAttr "sprayCan_ctrl_translateX2.o" "Cleaning_SceneRN.phl[1100]";
+connectAttr "sprayCan_ctrl_translateY2.o" "Cleaning_SceneRN.phl[1101]";
+connectAttr "sprayCan_ctrl_translateZ2.o" "Cleaning_SceneRN.phl[1102]";
+connectAttr "sprayCan_ctrl_rotateX2.o" "Cleaning_SceneRN.phl[1103]";
+connectAttr "sprayCan_ctrl_rotateY2.o" "Cleaning_SceneRN.phl[1104]";
+connectAttr "sprayCan_ctrl_rotateZ2.o" "Cleaning_SceneRN.phl[1105]";
+connectAttr "sprayCan_ctrl_scaleX2.o" "Cleaning_SceneRN.phl[1106]";
+connectAttr "sprayCan_ctrl_scaleY2.o" "Cleaning_SceneRN.phl[1107]";
+connectAttr "sprayCan_ctrl_scaleZ2.o" "Cleaning_SceneRN.phl[1108]";
+connectAttr "Spray_Bottle11_translateX.o" "Cleaning_SceneRN.phl[1109]";
+connectAttr "Spray_Bottle11_translateY.o" "Cleaning_SceneRN.phl[1110]";
+connectAttr "Spray_Bottle11_translateZ.o" "Cleaning_SceneRN.phl[1111]";
+connectAttr "Spray_Bottle11_visibility.o" "Cleaning_SceneRN.phl[1112]";
+connectAttr "Spray_Bottle11_rotateX.o" "Cleaning_SceneRN.phl[1113]";
+connectAttr "Spray_Bottle11_rotateY.o" "Cleaning_SceneRN.phl[1114]";
+connectAttr "Spray_Bottle11_rotateZ.o" "Cleaning_SceneRN.phl[1115]";
+connectAttr "Spray_Bottle11_scaleX.o" "Cleaning_SceneRN.phl[1116]";
+connectAttr "Spray_Bottle11_scaleY.o" "Cleaning_SceneRN.phl[1117]";
+connectAttr "Spray_Bottle11_scaleZ.o" "Cleaning_SceneRN.phl[1118]";
+connectAttr "sprayCan_ctrl_translateX1.o" "Cleaning_SceneRN.phl[1119]";
+connectAttr "sprayCan_ctrl_translateY1.o" "Cleaning_SceneRN.phl[1120]";
+connectAttr "sprayCan_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[1121]";
+connectAttr "sprayCan_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[1122]";
+connectAttr "sprayCan_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[1123]";
+connectAttr "sprayCan_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[1124]";
+connectAttr "sprayCan_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[1125]";
+connectAttr "sprayCan_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[1126]";
+connectAttr "sprayCan_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[1127]";
+connectAttr "Spray_Bottle1_visibility.o" "Cleaning_SceneRN.phl[1128]";
+connectAttr "Spray_Bottle1_translateX.o" "Cleaning_SceneRN.phl[1129]";
+connectAttr "Spray_Bottle1_translateY.o" "Cleaning_SceneRN.phl[1130]";
+connectAttr "Spray_Bottle1_translateZ.o" "Cleaning_SceneRN.phl[1131]";
+connectAttr "Spray_Bottle1_rotateX.o" "Cleaning_SceneRN.phl[1132]";
+connectAttr "Spray_Bottle1_rotateY.o" "Cleaning_SceneRN.phl[1133]";
+connectAttr "Spray_Bottle1_rotateZ.o" "Cleaning_SceneRN.phl[1134]";
+connectAttr "Spray_Bottle1_scaleX.o" "Cleaning_SceneRN.phl[1135]";
+connectAttr "Spray_Bottle1_scaleY.o" "Cleaning_SceneRN.phl[1136]";
+connectAttr "Spray_Bottle1_scaleZ.o" "Cleaning_SceneRN.phl[1137]";
+connectAttr "sprayCan_ctrl_translateX.o" "Cleaning_SceneRN.phl[1138]";
+connectAttr "sprayCan_ctrl_translateY.o" "Cleaning_SceneRN.phl[1139]";
+connectAttr "sprayCan_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1140]";
+connectAttr "sprayCan_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1141]";
+connectAttr "sprayCan_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1142]";
+connectAttr "sprayCan_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1143]";
+connectAttr "sprayCan_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1144]";
+connectAttr "sprayCan_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1145]";
+connectAttr "sprayCan_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1146]";
+connectAttr "sprayCan_ctrl_translateX5.o" "Cleaning_SceneRN.phl[1147]";
+connectAttr "sprayCan_ctrl_translateY5.o" "Cleaning_SceneRN.phl[1148]";
+connectAttr "sprayCan_ctrl_translateZ5.o" "Cleaning_SceneRN.phl[1149]";
+connectAttr "sprayCan_ctrl_rotateX5.o" "Cleaning_SceneRN.phl[1150]";
+connectAttr "sprayCan_ctrl_rotateY5.o" "Cleaning_SceneRN.phl[1151]";
+connectAttr "sprayCan_ctrl_rotateZ5.o" "Cleaning_SceneRN.phl[1152]";
+connectAttr "sprayCan_ctrl_scaleX5.o" "Cleaning_SceneRN.phl[1153]";
+connectAttr "sprayCan_ctrl_scaleY5.o" "Cleaning_SceneRN.phl[1154]";
+connectAttr "sprayCan_ctrl_scaleZ5.o" "Cleaning_SceneRN.phl[1155]";
+connectAttr "sprayCan_ctrl_translateX6.o" "Cleaning_SceneRN.phl[1156]";
+connectAttr "sprayCan_ctrl_translateY6.o" "Cleaning_SceneRN.phl[1157]";
+connectAttr "sprayCan_ctrl_translateZ6.o" "Cleaning_SceneRN.phl[1158]";
+connectAttr "sprayCan_ctrl_rotateX6.o" "Cleaning_SceneRN.phl[1159]";
+connectAttr "sprayCan_ctrl_rotateY6.o" "Cleaning_SceneRN.phl[1160]";
+connectAttr "sprayCan_ctrl_rotateZ6.o" "Cleaning_SceneRN.phl[1161]";
+connectAttr "sprayCan_ctrl_scaleX6.o" "Cleaning_SceneRN.phl[1162]";
+connectAttr "sprayCan_ctrl_scaleY6.o" "Cleaning_SceneRN.phl[1163]";
+connectAttr "sprayCan_ctrl_scaleZ6.o" "Cleaning_SceneRN.phl[1164]";
+connectAttr "Spray_Bottle5_visibility.o" "Cleaning_SceneRN.phl[1165]";
+connectAttr "Spray_Bottle5_translateX.o" "Cleaning_SceneRN.phl[1166]";
+connectAttr "Spray_Bottle5_translateY.o" "Cleaning_SceneRN.phl[1167]";
+connectAttr "Spray_Bottle5_translateZ.o" "Cleaning_SceneRN.phl[1168]";
+connectAttr "Spray_Bottle5_rotateX.o" "Cleaning_SceneRN.phl[1169]";
+connectAttr "Spray_Bottle5_rotateY.o" "Cleaning_SceneRN.phl[1170]";
+connectAttr "Spray_Bottle5_rotateZ.o" "Cleaning_SceneRN.phl[1171]";
+connectAttr "Spray_Bottle5_scaleX.o" "Cleaning_SceneRN.phl[1172]";
+connectAttr "Spray_Bottle5_scaleY.o" "Cleaning_SceneRN.phl[1173]";
+connectAttr "Spray_Bottle5_scaleZ.o" "Cleaning_SceneRN.phl[1174]";
+connectAttr "sprayCan_ctrl_translateX11.o" "Cleaning_SceneRN.phl[1175]";
+connectAttr "sprayCan_ctrl_translateY11.o" "Cleaning_SceneRN.phl[1176]";
+connectAttr "sprayCan_ctrl_translateZ11.o" "Cleaning_SceneRN.phl[1177]";
+connectAttr "sprayCan_ctrl_rotateX11.o" "Cleaning_SceneRN.phl[1178]";
+connectAttr "sprayCan_ctrl_rotateY11.o" "Cleaning_SceneRN.phl[1179]";
+connectAttr "sprayCan_ctrl_rotateZ11.o" "Cleaning_SceneRN.phl[1180]";
+connectAttr "sprayCan_ctrl_scaleX11.o" "Cleaning_SceneRN.phl[1181]";
+connectAttr "sprayCan_ctrl_scaleY11.o" "Cleaning_SceneRN.phl[1182]";
+connectAttr "sprayCan_ctrl_scaleZ11.o" "Cleaning_SceneRN.phl[1183]";
+connectAttr "sprayCan_ctrl_translateX7.o" "Cleaning_SceneRN.phl[1184]";
+connectAttr "sprayCan_ctrl_translateY7.o" "Cleaning_SceneRN.phl[1185]";
+connectAttr "sprayCan_ctrl_translateZ7.o" "Cleaning_SceneRN.phl[1186]";
+connectAttr "sprayCan_ctrl_rotateX7.o" "Cleaning_SceneRN.phl[1187]";
+connectAttr "sprayCan_ctrl_rotateY7.o" "Cleaning_SceneRN.phl[1188]";
+connectAttr "sprayCan_ctrl_rotateZ7.o" "Cleaning_SceneRN.phl[1189]";
+connectAttr "sprayCan_ctrl_scaleX7.o" "Cleaning_SceneRN.phl[1190]";
+connectAttr "sprayCan_ctrl_scaleY7.o" "Cleaning_SceneRN.phl[1191]";
+connectAttr "sprayCan_ctrl_scaleZ7.o" "Cleaning_SceneRN.phl[1192]";
+connectAttr "Spray_Bottle16_visibility.o" "Cleaning_SceneRN.phl[1193]";
+connectAttr "Spray_Bottle16_translateX.o" "Cleaning_SceneRN.phl[1194]";
+connectAttr "Spray_Bottle16_translateY.o" "Cleaning_SceneRN.phl[1195]";
+connectAttr "Spray_Bottle16_translateZ.o" "Cleaning_SceneRN.phl[1196]";
+connectAttr "Spray_Bottle16_rotateX.o" "Cleaning_SceneRN.phl[1197]";
+connectAttr "Spray_Bottle16_rotateY.o" "Cleaning_SceneRN.phl[1198]";
+connectAttr "Spray_Bottle16_rotateZ.o" "Cleaning_SceneRN.phl[1199]";
+connectAttr "Spray_Bottle16_scaleX.o" "Cleaning_SceneRN.phl[1200]";
+connectAttr "Spray_Bottle16_scaleY.o" "Cleaning_SceneRN.phl[1201]";
+connectAttr "Spray_Bottle16_scaleZ.o" "Cleaning_SceneRN.phl[1202]";
+connectAttr "sprayCan_ctrl_translateX8.o" "Cleaning_SceneRN.phl[1203]";
+connectAttr "sprayCan_ctrl_translateY8.o" "Cleaning_SceneRN.phl[1204]";
+connectAttr "sprayCan_ctrl_translateZ8.o" "Cleaning_SceneRN.phl[1205]";
+connectAttr "sprayCan_ctrl_rotateX8.o" "Cleaning_SceneRN.phl[1206]";
+connectAttr "sprayCan_ctrl_rotateY8.o" "Cleaning_SceneRN.phl[1207]";
+connectAttr "sprayCan_ctrl_rotateZ8.o" "Cleaning_SceneRN.phl[1208]";
+connectAttr "sprayCan_ctrl_scaleX8.o" "Cleaning_SceneRN.phl[1209]";
+connectAttr "sprayCan_ctrl_scaleY8.o" "Cleaning_SceneRN.phl[1210]";
+connectAttr "sprayCan_ctrl_scaleZ8.o" "Cleaning_SceneRN.phl[1211]";
+connectAttr "sprayCan_ctrl_translateX12.o" "Cleaning_SceneRN.phl[1212]";
+connectAttr "sprayCan_ctrl_translateY12.o" "Cleaning_SceneRN.phl[1213]";
+connectAttr "sprayCan_ctrl_translateZ12.o" "Cleaning_SceneRN.phl[1214]";
+connectAttr "sprayCan_ctrl_rotateX12.o" "Cleaning_SceneRN.phl[1215]";
+connectAttr "sprayCan_ctrl_rotateY12.o" "Cleaning_SceneRN.phl[1216]";
+connectAttr "sprayCan_ctrl_rotateZ12.o" "Cleaning_SceneRN.phl[1217]";
+connectAttr "sprayCan_ctrl_scaleX12.o" "Cleaning_SceneRN.phl[1218]";
+connectAttr "sprayCan_ctrl_scaleY12.o" "Cleaning_SceneRN.phl[1219]";
+connectAttr "sprayCan_ctrl_scaleZ12.o" "Cleaning_SceneRN.phl[1220]";
+connectAttr "sprayCan_ctrl_translateX9.o" "Cleaning_SceneRN.phl[1221]";
+connectAttr "sprayCan_ctrl_translateY9.o" "Cleaning_SceneRN.phl[1222]";
+connectAttr "sprayCan_ctrl_translateZ9.o" "Cleaning_SceneRN.phl[1223]";
+connectAttr "sprayCan_ctrl_rotateX9.o" "Cleaning_SceneRN.phl[1224]";
+connectAttr "sprayCan_ctrl_rotateY9.o" "Cleaning_SceneRN.phl[1225]";
+connectAttr "sprayCan_ctrl_rotateZ9.o" "Cleaning_SceneRN.phl[1226]";
+connectAttr "sprayCan_ctrl_scaleX9.o" "Cleaning_SceneRN.phl[1227]";
+connectAttr "sprayCan_ctrl_scaleY9.o" "Cleaning_SceneRN.phl[1228]";
+connectAttr "sprayCan_ctrl_scaleZ9.o" "Cleaning_SceneRN.phl[1229]";
+connectAttr "sprayCan_ctrl_translateX10.o" "Cleaning_SceneRN.phl[1230]";
+connectAttr "sprayCan_ctrl_translateY10.o" "Cleaning_SceneRN.phl[1231]";
+connectAttr "sprayCan_ctrl_translateZ10.o" "Cleaning_SceneRN.phl[1232]";
+connectAttr "sprayCan_ctrl_rotateX10.o" "Cleaning_SceneRN.phl[1233]";
+connectAttr "sprayCan_ctrl_rotateY10.o" "Cleaning_SceneRN.phl[1234]";
+connectAttr "sprayCan_ctrl_rotateZ10.o" "Cleaning_SceneRN.phl[1235]";
+connectAttr "sprayCan_ctrl_scaleX10.o" "Cleaning_SceneRN.phl[1236]";
+connectAttr "sprayCan_ctrl_scaleY10.o" "Cleaning_SceneRN.phl[1237]";
+connectAttr "sprayCan_ctrl_scaleZ10.o" "Cleaning_SceneRN.phl[1238]";
+connectAttr "Room_visibility.o" "Cleaning_SceneRN.phl[1239]";
+connectAttr "Room_translateX.o" "Cleaning_SceneRN.phl[1240]";
+connectAttr "Room_translateY.o" "Cleaning_SceneRN.phl[1241]";
+connectAttr "Room_translateZ.o" "Cleaning_SceneRN.phl[1242]";
+connectAttr "Room_rotateX.o" "Cleaning_SceneRN.phl[1243]";
+connectAttr "Room_rotateY.o" "Cleaning_SceneRN.phl[1244]";
+connectAttr "Room_rotateZ.o" "Cleaning_SceneRN.phl[1245]";
+connectAttr "Room_scaleX.o" "Cleaning_SceneRN.phl[1246]";
+connectAttr "Room_scaleY.o" "Cleaning_SceneRN.phl[1247]";
+connectAttr "Room_scaleZ.o" "Cleaning_SceneRN.phl[1248]";
+connectAttr "Cleaning_SceneRN.phl[1249]" "nRigidShape1.imsh";
+connectAttr "PaintBucket4_ctrl_translateX3.o" "Cleaning_SceneRN.phl[1250]";
+connectAttr "PaintBucket4_ctrl_translateY3.o" "Cleaning_SceneRN.phl[1251]";
+connectAttr "PaintBucket4_ctrl_translateZ3.o" "Cleaning_SceneRN.phl[1252]";
+connectAttr "PaintBucket4_ctrl_rotateX3.o" "Cleaning_SceneRN.phl[1253]";
+connectAttr "PaintBucket4_ctrl_rotateY3.o" "Cleaning_SceneRN.phl[1254]";
+connectAttr "PaintBucket4_ctrl_rotateZ3.o" "Cleaning_SceneRN.phl[1255]";
+connectAttr "PaintBucket4_ctrl_scaleX3.o" "Cleaning_SceneRN.phl[1256]";
+connectAttr "PaintBucket4_ctrl_scaleY3.o" "Cleaning_SceneRN.phl[1257]";
+connectAttr "PaintBucket4_ctrl_scaleZ3.o" "Cleaning_SceneRN.phl[1258]";
+connectAttr "PaintBucket4_ctrl_translateX2.o" "Cleaning_SceneRN.phl[1259]";
+connectAttr "PaintBucket4_ctrl_translateY2.o" "Cleaning_SceneRN.phl[1260]";
+connectAttr "PaintBucket4_ctrl_translateZ2.o" "Cleaning_SceneRN.phl[1261]";
+connectAttr "PaintBucket4_ctrl_rotateX2.o" "Cleaning_SceneRN.phl[1262]";
+connectAttr "PaintBucket4_ctrl_rotateY2.o" "Cleaning_SceneRN.phl[1263]";
+connectAttr "PaintBucket4_ctrl_rotateZ2.o" "Cleaning_SceneRN.phl[1264]";
+connectAttr "PaintBucket4_ctrl_scaleX2.o" "Cleaning_SceneRN.phl[1265]";
+connectAttr "PaintBucket4_ctrl_scaleY2.o" "Cleaning_SceneRN.phl[1266]";
+connectAttr "PaintBucket4_ctrl_scaleZ2.o" "Cleaning_SceneRN.phl[1267]";
+connectAttr "PaintBucket4_ctrl_translateX1.o" "Cleaning_SceneRN.phl[1268]";
+connectAttr "PaintBucket4_ctrl_translateY1.o" "Cleaning_SceneRN.phl[1269]";
+connectAttr "PaintBucket4_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[1270]";
+connectAttr "PaintBucket4_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[1271]";
+connectAttr "PaintBucket4_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[1272]";
+connectAttr "PaintBucket4_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[1273]";
+connectAttr "PaintBucket4_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[1274]";
+connectAttr "PaintBucket4_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[1275]";
+connectAttr "PaintBucket4_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[1276]";
+connectAttr "PaintBucket4_ctrl_translateX5.o" "Cleaning_SceneRN.phl[1277]";
+connectAttr "PaintBucket4_ctrl_translateY5.o" "Cleaning_SceneRN.phl[1278]";
+connectAttr "PaintBucket4_ctrl_translateZ5.o" "Cleaning_SceneRN.phl[1279]";
+connectAttr "PaintBucket4_ctrl_rotateX5.o" "Cleaning_SceneRN.phl[1280]";
+connectAttr "PaintBucket4_ctrl_rotateY5.o" "Cleaning_SceneRN.phl[1281]";
+connectAttr "PaintBucket4_ctrl_rotateZ5.o" "Cleaning_SceneRN.phl[1282]";
+connectAttr "PaintBucket4_ctrl_scaleX5.o" "Cleaning_SceneRN.phl[1283]";
+connectAttr "PaintBucket4_ctrl_scaleY5.o" "Cleaning_SceneRN.phl[1284]";
+connectAttr "PaintBucket4_ctrl_scaleZ5.o" "Cleaning_SceneRN.phl[1285]";
+connectAttr "PaintBucket4_ctrl_translateX4.o" "Cleaning_SceneRN.phl[1286]";
+connectAttr "PaintBucket4_ctrl_translateY4.o" "Cleaning_SceneRN.phl[1287]";
+connectAttr "PaintBucket4_ctrl_translateZ4.o" "Cleaning_SceneRN.phl[1288]";
+connectAttr "PaintBucket4_ctrl_rotateX4.o" "Cleaning_SceneRN.phl[1289]";
+connectAttr "PaintBucket4_ctrl_rotateY4.o" "Cleaning_SceneRN.phl[1290]";
+connectAttr "PaintBucket4_ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[1291]";
+connectAttr "PaintBucket4_ctrl_scaleX4.o" "Cleaning_SceneRN.phl[1292]";
+connectAttr "PaintBucket4_ctrl_scaleY4.o" "Cleaning_SceneRN.phl[1293]";
+connectAttr "PaintBucket4_ctrl_scaleZ4.o" "Cleaning_SceneRN.phl[1294]";
+connectAttr "PaintBucket4_ctrl_translateX.o" "Cleaning_SceneRN.phl[1295]";
+connectAttr "PaintBucket4_ctrl_translateY.o" "Cleaning_SceneRN.phl[1296]";
+connectAttr "PaintBucket4_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1297]";
+connectAttr "PaintBucket4_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1298]";
+connectAttr "PaintBucket4_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1299]";
+connectAttr "PaintBucket4_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1300]";
+connectAttr "PaintBucket4_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1301]";
+connectAttr "PaintBucket4_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1302]";
+connectAttr "PaintBucket4_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1303]";
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateX.o" "Cleaning_SceneRN.phl[1304]"
 		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateY.o" "Cleaning_SceneRN.phl[1302]"
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateY.o" "Cleaning_SceneRN.phl[1305]"
 		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1303]"
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1306]"
 		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1304]"
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1307]"
 		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1305]"
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1308]"
 		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1306]"
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1309]"
 		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1307]"
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1310]"
 		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1308]"
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1311]"
 		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1309]"
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1312]"
 		;
-connectAttr "pCylinder11_ctrl_translateX1.o" "Cleaning_SceneRN.phl[1310]";
-connectAttr "pCylinder11_ctrl_translateY1.o" "Cleaning_SceneRN.phl[1311]";
-connectAttr "pCylinder11_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[1312]";
-connectAttr "pCylinder11_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[1313]";
-connectAttr "pCylinder11_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[1314]";
-connectAttr "pCylinder11_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[1315]";
-connectAttr "pCylinder11_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[1316]";
-connectAttr "pCylinder11_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[1317]";
-connectAttr "pCylinder11_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[1318]";
-connectAttr "pCylinder9_ctrl_translateX.o" "Cleaning_SceneRN.phl[1319]";
-connectAttr "pCylinder9_ctrl_translateY.o" "Cleaning_SceneRN.phl[1320]";
-connectAttr "pCylinder9_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1321]";
-connectAttr "pCylinder9_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1322]";
-connectAttr "pCylinder9_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1323]";
-connectAttr "pCylinder9_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1324]";
-connectAttr "pCylinder9_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1325]";
-connectAttr "pCylinder9_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1326]";
-connectAttr "pCylinder9_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1327]";
-connectAttr "pCylinder10_ctrl_translateX.o" "Cleaning_SceneRN.phl[1328]";
-connectAttr "pCylinder10_ctrl_translateY.o" "Cleaning_SceneRN.phl[1329]";
-connectAttr "pCylinder10_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1330]";
-connectAttr "pCylinder10_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1331]";
-connectAttr "pCylinder10_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1332]";
-connectAttr "pCylinder10_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1333]";
-connectAttr "pCylinder10_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1334]";
-connectAttr "pCylinder10_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1335]";
-connectAttr "pCylinder10_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1336]";
-connectAttr "pCylinder11_ctrl_translateX.o" "Cleaning_SceneRN.phl[1337]";
-connectAttr "pCylinder11_ctrl_translateY.o" "Cleaning_SceneRN.phl[1338]";
-connectAttr "pCylinder11_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1339]";
-connectAttr "pCylinder11_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1340]";
-connectAttr "pCylinder11_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1341]";
-connectAttr "pCylinder11_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1342]";
-connectAttr "pCylinder11_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1343]";
-connectAttr "pCylinder11_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1344]";
-connectAttr "pCylinder11_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1345]";
-connectAttr "Apollo_Cam1_translateX.o" "Cleaning_SceneRN.phl[1346]";
-connectAttr "Apollo_Cam1_translateY.o" "Cleaning_SceneRN.phl[1347]";
-connectAttr "Apollo_Cam1_translateZ.o" "Cleaning_SceneRN.phl[1348]";
-connectAttr "Apollo_Cam1_rotateX.o" "Cleaning_SceneRN.phl[1349]";
-connectAttr "Apollo_Cam1_rotateY.o" "Cleaning_SceneRN.phl[1350]";
-connectAttr "Apollo_Cam1_rotateZ.o" "Cleaning_SceneRN.phl[1351]";
-connectAttr "Apollo_Cam1_scaleX.o" "Cleaning_SceneRN.phl[1352]";
-connectAttr "Apollo_Cam1_scaleY.o" "Cleaning_SceneRN.phl[1353]";
-connectAttr "Apollo_Cam1_scaleZ.o" "Cleaning_SceneRN.phl[1354]";
-connectAttr "Apollo_Cam1_visibility.o" "Cleaning_SceneRN.phl[1355]";
-connectAttr "LatticeControl_LatticeState.o" "Cleaning_SceneRN.phl[1356]";
-connectAttr "LatticeControl_translateX.o" "Cleaning_SceneRN.phl[1357]";
-connectAttr "LatticeControl_translateY.o" "Cleaning_SceneRN.phl[1358]";
-connectAttr "LatticeControl_translateZ.o" "Cleaning_SceneRN.phl[1359]";
-connectAttr "LatticeControl_rotateX.o" "Cleaning_SceneRN.phl[1360]";
-connectAttr "LatticeControl_rotateY.o" "Cleaning_SceneRN.phl[1361]";
-connectAttr "LatticeControl_rotateZ.o" "Cleaning_SceneRN.phl[1362]";
-connectAttr "LatticeControl_scaleX.o" "Cleaning_SceneRN.phl[1363]";
-connectAttr "LatticeControl_scaleY.o" "Cleaning_SceneRN.phl[1364]";
-connectAttr "LatticeControl_scaleZ.o" "Cleaning_SceneRN.phl[1365]";
+connectAttr "pCylinder11_ctrl_translateX1.o" "Cleaning_SceneRN.phl[1313]";
+connectAttr "pCylinder11_ctrl_translateY1.o" "Cleaning_SceneRN.phl[1314]";
+connectAttr "pCylinder11_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[1315]";
+connectAttr "pCylinder11_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[1316]";
+connectAttr "pCylinder11_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[1317]";
+connectAttr "pCylinder11_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[1318]";
+connectAttr "pCylinder11_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[1319]";
+connectAttr "pCylinder11_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[1320]";
+connectAttr "pCylinder11_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[1321]";
+connectAttr "pCylinder9_ctrl_translateX.o" "Cleaning_SceneRN.phl[1322]";
+connectAttr "pCylinder9_ctrl_translateY.o" "Cleaning_SceneRN.phl[1323]";
+connectAttr "pCylinder9_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1324]";
+connectAttr "pCylinder9_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1325]";
+connectAttr "pCylinder9_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1326]";
+connectAttr "pCylinder9_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1327]";
+connectAttr "pCylinder9_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1328]";
+connectAttr "pCylinder9_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1329]";
+connectAttr "pCylinder9_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1330]";
+connectAttr "pCylinder10_ctrl_translateX.o" "Cleaning_SceneRN.phl[1331]";
+connectAttr "pCylinder10_ctrl_translateY.o" "Cleaning_SceneRN.phl[1332]";
+connectAttr "pCylinder10_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1333]";
+connectAttr "pCylinder10_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1334]";
+connectAttr "pCylinder10_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1335]";
+connectAttr "pCylinder10_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1336]";
+connectAttr "pCylinder10_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1337]";
+connectAttr "pCylinder10_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1338]";
+connectAttr "pCylinder10_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1339]";
+connectAttr "pCylinder11_ctrl_translateX.o" "Cleaning_SceneRN.phl[1340]";
+connectAttr "pCylinder11_ctrl_translateY.o" "Cleaning_SceneRN.phl[1341]";
+connectAttr "pCylinder11_ctrl_translateZ.o" "Cleaning_SceneRN.phl[1342]";
+connectAttr "pCylinder11_ctrl_rotateX.o" "Cleaning_SceneRN.phl[1343]";
+connectAttr "pCylinder11_ctrl_rotateY.o" "Cleaning_SceneRN.phl[1344]";
+connectAttr "pCylinder11_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1345]";
+connectAttr "pCylinder11_ctrl_scaleX.o" "Cleaning_SceneRN.phl[1346]";
+connectAttr "pCylinder11_ctrl_scaleY.o" "Cleaning_SceneRN.phl[1347]";
+connectAttr "pCylinder11_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1348]";
+connectAttr "Apollo_Cam1_translateX.o" "Cleaning_SceneRN.phl[1349]";
+connectAttr "Apollo_Cam1_translateY.o" "Cleaning_SceneRN.phl[1350]";
+connectAttr "Apollo_Cam1_translateZ.o" "Cleaning_SceneRN.phl[1351]";
+connectAttr "Apollo_Cam1_rotateX.o" "Cleaning_SceneRN.phl[1352]";
+connectAttr "Apollo_Cam1_rotateY.o" "Cleaning_SceneRN.phl[1353]";
+connectAttr "Apollo_Cam1_rotateZ.o" "Cleaning_SceneRN.phl[1354]";
+connectAttr "Apollo_Cam1_scaleX.o" "Cleaning_SceneRN.phl[1355]";
+connectAttr "Apollo_Cam1_scaleY.o" "Cleaning_SceneRN.phl[1356]";
+connectAttr "Apollo_Cam1_scaleZ.o" "Cleaning_SceneRN.phl[1357]";
+connectAttr "Apollo_Cam1_visibility.o" "Cleaning_SceneRN.phl[1358]";
+connectAttr "LatticeControl_LatticeState.o" "Cleaning_SceneRN.phl[1359]";
+connectAttr "LatticeControl_translateX.o" "Cleaning_SceneRN.phl[1360]";
+connectAttr "LatticeControl_translateY.o" "Cleaning_SceneRN.phl[1361]";
+connectAttr "LatticeControl_translateZ.o" "Cleaning_SceneRN.phl[1362]";
+connectAttr "LatticeControl_rotateX.o" "Cleaning_SceneRN.phl[1363]";
+connectAttr "LatticeControl_rotateY.o" "Cleaning_SceneRN.phl[1364]";
+connectAttr "LatticeControl_rotateZ.o" "Cleaning_SceneRN.phl[1365]";
+connectAttr "LatticeControl_scaleX.o" "Cleaning_SceneRN.phl[1366]";
+connectAttr "LatticeControl_scaleY.o" "Cleaning_SceneRN.phl[1367]";
+connectAttr "LatticeControl_scaleZ.o" "Cleaning_SceneRN.phl[1368]";
 connectAttr "Transform_Ctrl_Left_Leg_IKFK.o" "PrometheusRN.phl[1]";
 connectAttr "Transform_Ctrl_Right_Leg_IKFK.o" "PrometheusRN.phl[2]";
 connectAttr "Transform_Ctrl_Back_Leg_IKFK.o" "PrometheusRN.phl[3]";
@@ -37788,12 +37921,162 @@ connectAttr "Tugger_rotateY.o" "Tug_CarRN.phl[7]";
 connectAttr "Tugger_rotateX.o" "Tug_CarRN.phl[8]";
 connectAttr "Tugger_rotateZ.o" "Tug_CarRN.phl[9]";
 connectAttr "Tugger_visibility.o" "Tug_CarRN.phl[10]";
+connectAttr ":time1.o" "nRigidShape1.cti";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "set1.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "set1.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "layerManager.dli[1]" "PlaquesLayer.id";
+connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file1.ws";
+connectAttr "place2dTexture1.o" "file1.uv";
+connectAttr "place2dTexture1.ofs" "file1.fs";
+connectAttr "place2dTexture1.c" "file1.c";
+connectAttr "place2dTexture1.tf" "file1.tf";
+connectAttr "place2dTexture1.rf" "file1.rf";
+connectAttr "place2dTexture1.mu" "file1.mu";
+connectAttr "place2dTexture1.mv" "file1.mv";
+connectAttr "place2dTexture1.s" "file1.s";
+connectAttr "place2dTexture1.wu" "file1.wu";
+connectAttr "place2dTexture1.wv" "file1.wv";
+connectAttr "place2dTexture1.re" "file1.re";
+connectAttr "place2dTexture1.of" "file1.of";
+connectAttr "place2dTexture1.r" "file1.ro";
+connectAttr "place2dTexture1.n" "file1.n";
+connectAttr "place2dTexture1.vt1" "file1.vt1";
+connectAttr "place2dTexture1.vt2" "file1.vt2";
+connectAttr "place2dTexture1.vt3" "file1.vt3";
+connectAttr "place2dTexture1.vc1" "file1.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file2.ws";
+connectAttr "place2dTexture1.o" "file2.uv";
+connectAttr "place2dTexture1.ofs" "file2.fs";
+connectAttr "place2dTexture1.c" "file2.c";
+connectAttr "place2dTexture1.tf" "file2.tf";
+connectAttr "place2dTexture1.rf" "file2.rf";
+connectAttr "place2dTexture1.mu" "file2.mu";
+connectAttr "place2dTexture1.mv" "file2.mv";
+connectAttr "place2dTexture1.s" "file2.s";
+connectAttr "place2dTexture1.wu" "file2.wu";
+connectAttr "place2dTexture1.wv" "file2.wv";
+connectAttr "place2dTexture1.re" "file2.re";
+connectAttr "place2dTexture1.of" "file2.of";
+connectAttr "place2dTexture1.r" "file2.ro";
+connectAttr "place2dTexture1.n" "file2.n";
+connectAttr "place2dTexture1.vt1" "file2.vt1";
+connectAttr "place2dTexture1.vt2" "file2.vt2";
+connectAttr "place2dTexture1.vt3" "file2.vt3";
+connectAttr "place2dTexture1.vc1" "file2.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file3.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file3.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file3.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file3.ws";
+connectAttr "place2dTexture1.o" "file3.uv";
+connectAttr "place2dTexture1.ofs" "file3.fs";
+connectAttr "place2dTexture1.c" "file3.c";
+connectAttr "place2dTexture1.tf" "file3.tf";
+connectAttr "place2dTexture1.rf" "file3.rf";
+connectAttr "place2dTexture1.mu" "file3.mu";
+connectAttr "place2dTexture1.mv" "file3.mv";
+connectAttr "place2dTexture1.s" "file3.s";
+connectAttr "place2dTexture1.wu" "file3.wu";
+connectAttr "place2dTexture1.wv" "file3.wv";
+connectAttr "place2dTexture1.re" "file3.re";
+connectAttr "place2dTexture1.of" "file3.of";
+connectAttr "place2dTexture1.r" "file3.ro";
+connectAttr "place2dTexture1.n" "file3.n";
+connectAttr "place2dTexture1.vt1" "file3.vt1";
+connectAttr "place2dTexture1.vt2" "file3.vt2";
+connectAttr "place2dTexture1.vt3" "file3.vt3";
+connectAttr "place2dTexture1.vc1" "file3.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file4.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file4.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file4.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file4.ws";
+connectAttr "place2dTexture1.o" "file4.uv";
+connectAttr "place2dTexture1.ofs" "file4.fs";
+connectAttr "place2dTexture1.c" "file4.c";
+connectAttr "place2dTexture1.tf" "file4.tf";
+connectAttr "place2dTexture1.rf" "file4.rf";
+connectAttr "place2dTexture1.mu" "file4.mu";
+connectAttr "place2dTexture1.mv" "file4.mv";
+connectAttr "place2dTexture1.s" "file4.s";
+connectAttr "place2dTexture1.wu" "file4.wu";
+connectAttr "place2dTexture1.wv" "file4.wv";
+connectAttr "place2dTexture1.re" "file4.re";
+connectAttr "place2dTexture1.of" "file4.of";
+connectAttr "place2dTexture1.r" "file4.ro";
+connectAttr "place2dTexture1.n" "file4.n";
+connectAttr "place2dTexture1.vt1" "file4.vt1";
+connectAttr "place2dTexture1.vt2" "file4.vt2";
+connectAttr "place2dTexture1.vt3" "file4.vt3";
+connectAttr "place2dTexture1.vc1" "file4.vc1";
+connectAttr ":defaultColorMgtGlobals.cme" "file5.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "file5.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "file5.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "file5.ws";
+connectAttr "place2dTexture1.o" "file5.uv";
+connectAttr "place2dTexture1.ofs" "file5.fs";
+connectAttr "place2dTexture1.c" "file5.c";
+connectAttr "place2dTexture1.tf" "file5.tf";
+connectAttr "place2dTexture1.rf" "file5.rf";
+connectAttr "place2dTexture1.mu" "file5.mu";
+connectAttr "place2dTexture1.mv" "file5.mv";
+connectAttr "place2dTexture1.s" "file5.s";
+connectAttr "place2dTexture1.wu" "file5.wu";
+connectAttr "place2dTexture1.wv" "file5.wv";
+connectAttr "place2dTexture1.re" "file5.re";
+connectAttr "place2dTexture1.of" "file5.of";
+connectAttr "place2dTexture1.r" "file5.ro";
+connectAttr "place2dTexture1.n" "file5.n";
+connectAttr "place2dTexture1.vt1" "file5.vt1";
+connectAttr "place2dTexture1.vt2" "file5.vt2";
+connectAttr "place2dTexture1.vt3" "file5.vt3";
+connectAttr "place2dTexture1.vc1" "file5.vc1";
+connectAttr "file1.oc" "multiplyDivide1.i1";
+connectAttr "multiplyDivide1.o" "ToiletPaperShader.base_color";
+connectAttr "file3.oa" "ToiletPaperShader.metalness";
+connectAttr "bump2d1.o" "ToiletPaperShader.n";
+connectAttr "file5.oa" "ToiletPaperShader.specular_roughness";
+connectAttr "ToiletPaperShader.out" "set1.ss";
+connectAttr "set1.msg" "materialInfo1.sg";
+connectAttr "ToiletPaperShader.msg" "materialInfo1.m";
+connectAttr "ToiletPaperShader.msg" "materialInfo1.t" -na;
+connectAttr "file4.oa" "bump2d1.bv";
+connectAttr "bump2d1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "file5.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "file3.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "ToiletPaperShader.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "file2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "set1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "file1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "place2dTexture1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "file4.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "set1.pa" ":renderPartition.st" -na;
+connectAttr "ToiletPaperShader.msg" ":defaultShaderList1.s" -na;
+connectAttr "place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
+connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
 // End of Cleaning_CC.ma
