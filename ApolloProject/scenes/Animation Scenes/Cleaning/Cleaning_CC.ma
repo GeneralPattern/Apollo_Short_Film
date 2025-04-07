@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Cleaning_CC.ma
-//Last modified: Tue, Apr 01, 2025 06:33:12 PM
+//Last modified: Mon, Apr 07, 2025 12:39:41 PM
 //Codeset: 1252
 file -rdi 1 -ns "Cleaning_Scene" -rfn "Cleaning_SceneRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 2 _ Cleaning/Cleaning Scene.ma";
@@ -86,19 +86,19 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202407121012-8ed02f4c99";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "2C2C4E11-463F-5DC7-A671-78946F331AAB";
+fileInfo "UUID" "64932BE2-4389-AB5D-6974-07965399A063";
 fileInfo "license" "education";
 fileInfo "exportedFrom" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/Cleaning/Cleaning_CC.ma";
 createNode transform -s -n "persp";
 	rename -uid "D6963A28-4A5C-FA63-5A7E-A68069038F2C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.5225421579021177 6.0038519135924107 13.232189124648535 ;
+	setAttr ".t" -type "double3" 9.1769458437625708 8.5533996309191735 28.694237662365413 ;
 	setAttr ".r" -type "double3" -14.738352729647398 3.8000000000011092 9.9611332468638452e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1E0C466F-42EF-E27D-4F05-0DA479E8273A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 16.258550372158215;
+	setAttr ".coi" 32.125921094893584;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -181,20 +181,20 @@ createNode locator -n "locatorShape1" -p "locator1";
 	rename -uid "5FFB94F9-44AD-691F-177A-6AADE93B223A";
 	setAttr -k off ".v";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "284C7C16-46BD-1E76-5CAC-C8A93F80F189";
-	setAttr -s 710 ".lnk";
+	rename -uid "E37E5F6E-414A-11E0-2D67-438FB3C01148";
+	setAttr -s 725 ".lnk";
 	setAttr -s 53 ".ign";
-	setAttr -s 709 ".slnk";
+	setAttr -s 724 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "E4367AD2-42D8-B68A-6390-89AE4FDA8790";
+	rename -uid "2B2669CD-4D1C-8664-CBCB-F19DC81DC580";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 7 0 1 2 3 4
 		 5 6 ;
 	setAttr -s 7 ".bspr";
 	setAttr -s 7 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "5001FAF0-4252-21D6-9F72-A490A8C0F24E";
+	rename -uid "5771BCFA-4457-9C9D-8E76-8087F8E7E559";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "D31CF1E0-4C9E-B909-E8DC-0AAF270C4A17";
+	rename -uid "DFD6093C-4634-5E88-2FC5-52A531DBE6BA";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -202,7 +202,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "2FE82AEA-4DBE-9167-B396-EF825906B46D";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "31F60DAA-412B-21C1-3798-C8B1E1B6DD77";
+	rename -uid "B54F6087-451A-B015-BF73-A7B49D96C78B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "A325AA0A-485D-BE28-EE89-D5AD17780933";
 	setAttr ".g" yes;
@@ -434,17 +434,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 878\n            -height 367\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|SLIP_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
 		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1762\n            -height 1047\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 877\n            -height 367\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 878\n            -height 367\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -477,7 +477,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "1573FA1D-4046-DA23-1615-919CBF0A7FA2";
-	setAttr ".b" -type "string" "playbackOptions -min 322 -max 550 -ast 1 -aet 550 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 550 -ast 1 -aet 550 ";
 	setAttr ".st" 6;
 createNode animCurveTA -n "Cog_Jnt_Ctrl_rotateX";
 	rename -uid "D5443EA8-46CD-D7BD-0809-6AA2FEE41B4F";
@@ -12237,7 +12237,7 @@ createNode animCurveTL -n "Transform_Ctrl_translateX3";
 		 412.00000017006801 6.9806554155947147 415 6.9806554155947147 419.00000034013607 6.9806554155947147
 		 427.00000017006801 6.9806554155947147 432.57142976190477 5.4095146681195905 440 -0.62247928124279372
 		 440.00000051020407 -0.62247928124286034 441 -1.083582085006807 481.99999982993199 -0.62247928124279372
-		 482 -0.62247928124286034 507 12.562151939139255;
+		 482 -0.62247928124286034 507 13.507072746626752;
 	setAttr -s 46 ".kit[10:45]"  1 18 18 18 18 18 18 18 
 		18 18 1 18 18 18 1 18 18 18 1 18 1 18 18 18 1 
 		18 18 18 18 18 18 18 18 18 1 18;
@@ -14466,7 +14466,7 @@ createNode animCurveTA -n "Hip_Ctrl_rotateZ";
 		 385.0000102040816 2.4405436671502092 394.00000153061222 0.33256456344732449 398.00000017006801 0.33256456344732449
 		 402.00000017006801 0.33256456344732449 407.00000017006801 0.33256456344732449 412.00000017006801 0.33256456344732449
 		 414.99999982993199 -1.6674831072582823 419.00000017006801 -15.342054221958769 419.00000034013607 -14.384295527091172
-		 427.00000017006801 -14.384295527091172 432.57142976190477 0 440 0 452 0 473 0 496 6.7962869603662046;
+		 427.00000017006801 -14.384295527091172 432.57142976190477 0 440 0 452 0 473 0 496 6.7962869603662055;
 	setAttr -s 46 ".kit[2:45]"  1 18 18 18 18 18 18 1 
 		18 18 18 18 18 18 18 18 18 18 1 18 18 18 18 18 18 
 		18 18 18 18 1 18 18 18 1 18 18 18 18 18 18 18 1 
@@ -31984,10 +31984,10 @@ createNode reference -n "Cleaning_SceneRN";
 		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl" 
 		"scalePivot" " -type \"double3\" 0 0 0"
 		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:ikHandle1" 
-		"translate" " -type \"double3\" -1.08387970906602527 2.94488848045770268 3.35204732132042338"
+		"translate" " -type \"double3\" 16.32346128201209012 2.94488848045770579 5.87602684888168358"
 		
 		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:ikHandle1" 
-		"rotate" " -type \"double3\" -59.11364854715014161 -31.09806393034428496 -24.31670175692635283"
+		"rotate" " -type \"double3\" -96.91770305541193409 47.92233720751543302 -31.74650925469545015"
 		
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl.MasterScale" 
 		"Cleaning_SceneRN.placeHolderList[1021]" ""
@@ -34962,7 +34962,7 @@ createNode reference -n "Cleaning_SceneRN";
 lockNode -l 1 ;
 createNode reference -n "PrometheusRN";
 	rename -uid "51EA76A1-4A70-E8B6-F375-8386570F7ADE";
-	setAttr -s 109 ".phl";
+	setAttr -s 112 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -35072,10 +35072,13 @@ createNode reference -n "PrometheusRN";
 	setAttr ".phl[107]" 0;
 	setAttr ".phl[108]" 0;
 	setAttr ".phl[109]" 0;
+	setAttr ".phl[110]" 0;
+	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"PrometheusRN"
 		"PrometheusRN" 0
-		"PrometheusRN" 117
+		"PrometheusRN" 120
 		2 "|Prometheus:Prometheus|Prometheus:Geo|Prometheus:Prometheus_Model|Prometheus:Prometheus_Geo|Prometheus:Prometheus_GeoShape" 
 		"instObjGroups.objectGroups" " -s 4"
 		2 "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl" 
@@ -35083,13 +35086,13 @@ createNode reference -n "PrometheusRN";
 		2 "Prometheus:groupParts21" "inputRemoveComponent" " -type \"componentList\" 1 \"f[16135:17118]\""
 		
 		2 "Prometheus:groupParts21" "groupId" " 673"
-		3 "Prometheus:groupId196.groupId" "Prometheus:groupParts21.groupId" ""
 		3 "Prometheus:groupId196.message" ":defaultLastHiddenSet.groupNodes" "-na"
 		
 		3 "Prometheus:groupId196.groupId" "|Prometheus:Prometheus|Prometheus:Geo|Prometheus:Prometheus_Model|Prometheus:Prometheus_Geo|Prometheus:Prometheus_GeoShape.instObjGroups.objectGroups[13].objectGroupId" 
 		""
 		3 "|Prometheus:Prometheus|Prometheus:Geo|Prometheus:Prometheus_Model|Prometheus:Prometheus_Geo|Prometheus:Prometheus_GeoShape.instObjGroups.objectGroups[13]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
+		3 "Prometheus:groupId196.groupId" "Prometheus:groupParts21.groupId" ""
 		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl.Left_Leg_IKFK" 
 		"PrometheusRN.placeHolderList[1]" ""
 		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl.Right_Leg_IKFK" 
@@ -35180,134 +35183,140 @@ createNode reference -n "PrometheusRN";
 		"PrometheusRN.placeHolderList[44]" ""
 		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl.Aperture_Close" 
 		"PrometheusRN.placeHolderList[45]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl.translateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl.LeftEye" 
 		"PrometheusRN.placeHolderList[46]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl.translateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl.RightEye" 
 		"PrometheusRN.placeHolderList[47]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl.translateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl.Charging" 
 		"PrometheusRN.placeHolderList[48]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Left_Eye_Ctrl_Grp|Prometheus:Left_Eye_Ctrl.Scale" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl.translateY" 
 		"PrometheusRN.placeHolderList[49]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Left_Eye_Ctrl_Grp|Prometheus:Left_Eye_Ctrl.HappyEye" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl.translateX" 
 		"PrometheusRN.placeHolderList[50]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Left_Eye_Ctrl_Grp|Prometheus:Left_Eye_Ctrl.translateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl.translateZ" 
 		"PrometheusRN.placeHolderList[51]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Left_Eye_Ctrl_Grp|Prometheus:Left_Eye_Ctrl.translateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Left_Eye_Ctrl_Grp|Prometheus:Left_Eye_Ctrl.Scale" 
 		"PrometheusRN.placeHolderList[52]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Left_Eye_Ctrl_Grp|Prometheus:Left_Eye_Ctrl.translateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Left_Eye_Ctrl_Grp|Prometheus:Left_Eye_Ctrl.HappyEye" 
 		"PrometheusRN.placeHolderList[53]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Right_Eye_Ctrl_Grp|Prometheus:Right_Eye_Ctrl.Scale" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Left_Eye_Ctrl_Grp|Prometheus:Left_Eye_Ctrl.translateX" 
 		"PrometheusRN.placeHolderList[54]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Right_Eye_Ctrl_Grp|Prometheus:Right_Eye_Ctrl.HappyEye" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Left_Eye_Ctrl_Grp|Prometheus:Left_Eye_Ctrl.translateY" 
 		"PrometheusRN.placeHolderList[55]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Right_Eye_Ctrl_Grp|Prometheus:Right_Eye_Ctrl.translateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Left_Eye_Ctrl_Grp|Prometheus:Left_Eye_Ctrl.translateZ" 
 		"PrometheusRN.placeHolderList[56]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Right_Eye_Ctrl_Grp|Prometheus:Right_Eye_Ctrl.translateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Right_Eye_Ctrl_Grp|Prometheus:Right_Eye_Ctrl.Scale" 
 		"PrometheusRN.placeHolderList[57]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Right_Eye_Ctrl_Grp|Prometheus:Right_Eye_Ctrl.translateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Right_Eye_Ctrl_Grp|Prometheus:Right_Eye_Ctrl.HappyEye" 
 		"PrometheusRN.placeHolderList[58]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Left_Leg_Door_Ctrl_Grp|Prometheus:Left_Leg_Door_Ctrl.Open_Door" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Right_Eye_Ctrl_Grp|Prometheus:Right_Eye_Ctrl.translateX" 
 		"PrometheusRN.placeHolderList[59]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Left_Leg_Door_Ctrl_Grp|Prometheus:Left_Leg_Door_Ctrl|Prometheus:Left_Leg_Door_Jnt_01_Ctrl_Grp|Prometheus:Left_Leg_Door_Jnt_01_Offset_Ctrl_Grp|Prometheus:Left_Leg_Door_Jnt_01_Ctrl.rotateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Right_Eye_Ctrl_Grp|Prometheus:Right_Eye_Ctrl.translateY" 
 		"PrometheusRN.placeHolderList[60]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Left_Leg_Door_Ctrl_Grp|Prometheus:Left_Leg_Door_Ctrl|Prometheus:Left_Leg_Door_Jnt_02_Ctrl_Grp|Prometheus:Left_Leg_Door_Jnt_02_Offset_Ctrl_Grp|Prometheus:Left_Leg_Door_Jnt_02_Ctrl.rotateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Face_Ctrl_Grp|Prometheus:Face_Ctrl|Prometheus:Eyes_Ctrl_Grp|Prometheus:Eyes_Ctrl|Prometheus:Right_Eye_Ctrl_Grp|Prometheus:Right_Eye_Ctrl.translateZ" 
 		"PrometheusRN.placeHolderList[61]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Right_Leg_Door_Ctrl_Grp|Prometheus:Right_Leg_Door_Ctrl.Open_Door" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Left_Leg_Door_Ctrl_Grp|Prometheus:Left_Leg_Door_Ctrl.Open_Door" 
 		"PrometheusRN.placeHolderList[62]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Right_Leg_Door_Ctrl_Grp|Prometheus:Right_Leg_Door_Ctrl|Prometheus:Right_Leg_Door_Jnt_01_Ctrl_Grp|Prometheus:Right_Leg_Door_Jnt_01_Offset_Ctrl_Grp|Prometheus:Right_Leg_Door_Jnt_01_Ctrl.rotateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Left_Leg_Door_Ctrl_Grp|Prometheus:Left_Leg_Door_Ctrl|Prometheus:Left_Leg_Door_Jnt_01_Ctrl_Grp|Prometheus:Left_Leg_Door_Jnt_01_Offset_Ctrl_Grp|Prometheus:Left_Leg_Door_Jnt_01_Ctrl.rotateZ" 
 		"PrometheusRN.placeHolderList[63]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Right_Leg_Door_Ctrl_Grp|Prometheus:Right_Leg_Door_Ctrl|Prometheus:Right_Leg_Door_Jnt_02_Ctrl_Grp|Prometheus:Right_Leg_Door_Jnt_02_Offset_Ctrl_Grp|Prometheus:Right_Leg_Door_Jnt_02_Ctrl.rotateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Left_Leg_Door_Ctrl_Grp|Prometheus:Left_Leg_Door_Ctrl|Prometheus:Left_Leg_Door_Jnt_02_Ctrl_Grp|Prometheus:Left_Leg_Door_Jnt_02_Offset_Ctrl_Grp|Prometheus:Left_Leg_Door_Jnt_02_Ctrl.rotateZ" 
 		"PrometheusRN.placeHolderList[64]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Back_Leg_Door_Ctrl_Grp|Prometheus:Back_Leg_Door_Ctrl.Open_Door" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Right_Leg_Door_Ctrl_Grp|Prometheus:Right_Leg_Door_Ctrl.Open_Door" 
 		"PrometheusRN.placeHolderList[65]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Back_Leg_Door_Ctrl_Grp|Prometheus:Back_Leg_Door_Ctrl|Prometheus:Back_Leg_Door_Jnt_01_Ctrl_Grp|Prometheus:Back_Leg_Door_Jnt_01_Offset_Ctrl_Grp|Prometheus:Back_Leg_Door_Jnt_01_Ctrl.rotateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Right_Leg_Door_Ctrl_Grp|Prometheus:Right_Leg_Door_Ctrl|Prometheus:Right_Leg_Door_Jnt_01_Ctrl_Grp|Prometheus:Right_Leg_Door_Jnt_01_Offset_Ctrl_Grp|Prometheus:Right_Leg_Door_Jnt_01_Ctrl.rotateZ" 
 		"PrometheusRN.placeHolderList[66]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Back_Leg_Door_Ctrl_Grp|Prometheus:Back_Leg_Door_Ctrl|Prometheus:Back_Leg_Door_Jnt_02_Ctrl_Grp|Prometheus:Back_Leg_Door_Jnt_02_Offset_Ctrl_Grp|Prometheus:Back_Leg_Door_Jnt_02_Ctrl.rotateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Right_Leg_Door_Ctrl_Grp|Prometheus:Right_Leg_Door_Ctrl|Prometheus:Right_Leg_Door_Jnt_02_Ctrl_Grp|Prometheus:Right_Leg_Door_Jnt_02_Offset_Ctrl_Grp|Prometheus:Right_Leg_Door_Jnt_02_Ctrl.rotateZ" 
 		"PrometheusRN.placeHolderList[67]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Hand_Ctrl_Grp|Prometheus:Hand_Ctrl.HideArm" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Back_Leg_Door_Ctrl_Grp|Prometheus:Back_Leg_Door_Ctrl.Open_Door" 
 		"PrometheusRN.placeHolderList[68]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Arm_IK_Control_Setup|Prometheus:Arm_IK_Curve.visibility" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Back_Leg_Door_Ctrl_Grp|Prometheus:Back_Leg_Door_Ctrl|Prometheus:Back_Leg_Door_Jnt_01_Ctrl_Grp|Prometheus:Back_Leg_Door_Jnt_01_Offset_Ctrl_Grp|Prometheus:Back_Leg_Door_Jnt_01_Ctrl.rotateZ" 
 		"PrometheusRN.placeHolderList[69]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.translateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl|Prometheus:COG_Jnt_Ctrl_Grp|Prometheus:COG_Jnt_Ctrl|Prometheus:Back_Leg_Door_Ctrl_Grp|Prometheus:Back_Leg_Door_Ctrl|Prometheus:Back_Leg_Door_Jnt_02_Ctrl_Grp|Prometheus:Back_Leg_Door_Jnt_02_Offset_Ctrl_Grp|Prometheus:Back_Leg_Door_Jnt_02_Ctrl.rotateZ" 
 		"PrometheusRN.placeHolderList[70]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.translateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Hand_Ctrl_Grp|Prometheus:Hand_Ctrl.HideArm" 
 		"PrometheusRN.placeHolderList[71]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.translateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Arm_IK_Control_Setup|Prometheus:Arm_IK_Curve.visibility" 
 		"PrometheusRN.placeHolderList[72]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.rotateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.translateX" 
 		"PrometheusRN.placeHolderList[73]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.rotateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.translateY" 
 		"PrometheusRN.placeHolderList[74]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.rotateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.translateZ" 
 		"PrometheusRN.placeHolderList[75]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.scaleX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.rotateX" 
 		"PrometheusRN.placeHolderList[76]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.scaleY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.rotateY" 
 		"PrometheusRN.placeHolderList[77]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.scaleZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.rotateZ" 
 		"PrometheusRN.placeHolderList[78]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.visibility" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.scaleX" 
 		"PrometheusRN.placeHolderList[79]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.translateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.scaleY" 
 		"PrometheusRN.placeHolderList[80]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.translateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.scaleZ" 
 		"PrometheusRN.placeHolderList[81]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.translateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_03_Jnt_01_Ctrl_Grp|Prometheus:Finger_03_Jnt_01_Ctrl.visibility" 
 		"PrometheusRN.placeHolderList[82]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.rotateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.translateX" 
 		"PrometheusRN.placeHolderList[83]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.rotateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.translateY" 
 		"PrometheusRN.placeHolderList[84]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.rotateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.translateZ" 
 		"PrometheusRN.placeHolderList[85]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.scaleX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.rotateX" 
 		"PrometheusRN.placeHolderList[86]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.scaleY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.rotateY" 
 		"PrometheusRN.placeHolderList[87]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.scaleZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.rotateZ" 
 		"PrometheusRN.placeHolderList[88]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.visibility" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.scaleX" 
 		"PrometheusRN.placeHolderList[89]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.translateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.scaleY" 
 		"PrometheusRN.placeHolderList[90]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.translateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.scaleZ" 
 		"PrometheusRN.placeHolderList[91]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.translateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_02_Jnt_01_Ctrl_Grp|Prometheus:Finger_02_Jnt_01_Ctrl.visibility" 
 		"PrometheusRN.placeHolderList[92]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.rotateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.translateX" 
 		"PrometheusRN.placeHolderList[93]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.rotateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.translateY" 
 		"PrometheusRN.placeHolderList[94]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.rotateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.translateZ" 
 		"PrometheusRN.placeHolderList[95]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.scaleX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.rotateX" 
 		"PrometheusRN.placeHolderList[96]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.scaleY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.rotateY" 
 		"PrometheusRN.placeHolderList[97]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.scaleZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.rotateZ" 
 		"PrometheusRN.placeHolderList[98]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.visibility" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.scaleX" 
 		"PrometheusRN.placeHolderList[99]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.translateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.scaleY" 
 		"PrometheusRN.placeHolderList[100]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.translateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.scaleZ" 
 		"PrometheusRN.placeHolderList[101]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.translateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Finger_Ctrls|Prometheus:Finger_01_Jnt_01_Ctrl_Grp|Prometheus:Finger_01_Jnt_01_Ctrl.visibility" 
 		"PrometheusRN.placeHolderList[102]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.visibility" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.translateX" 
 		"PrometheusRN.placeHolderList[103]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.rotateX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.translateY" 
 		"PrometheusRN.placeHolderList[104]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.rotateY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.translateZ" 
 		"PrometheusRN.placeHolderList[105]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.rotateZ" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.visibility" 
 		"PrometheusRN.placeHolderList[106]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.scaleX" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.rotateX" 
 		"PrometheusRN.placeHolderList[107]" ""
-		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.scaleY" 
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.rotateY" 
 		"PrometheusRN.placeHolderList[108]" ""
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.rotateZ" 
+		"PrometheusRN.placeHolderList[109]" ""
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.scaleX" 
+		"PrometheusRN.placeHolderList[110]" ""
+		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.scaleY" 
+		"PrometheusRN.placeHolderList[111]" ""
 		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Prop_Ctrl_Grp|Prometheus:Prop_Ctrl.scaleZ" 
-		"PrometheusRN.placeHolderList[109]" "";
+		"PrometheusRN.placeHolderList[112]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "Finger_01_Jnt_01_Ctrl_translateX";
@@ -35407,17 +35416,35 @@ createNode animCurveTL -n "Eyes_Ctrl_translateX1";
 	rename -uid "69C0415C-417A-B5CB-378F-6989965A0580";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 369 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 369 0 371 0 373 0 375 0;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[3:4]"  1 18;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[3:4]"  1 1;
+	setAttr -s 5 ".koy[3:4]"  0 0;
 createNode animCurveTL -n "Eyes_Ctrl_translateY1";
 	rename -uid "9BDB1B1B-4935-E0B4-EBC4-12B3950BEF5F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 369 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 369 0 371 0 373 0 375 0;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[3:4]"  1 18;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[3:4]"  1 1;
+	setAttr -s 5 ".koy[3:4]"  0 0;
 createNode animCurveTL -n "Eyes_Ctrl_translateZ";
 	rename -uid "D3D6C1AE-4BD5-7066-5F8D-A9B15E6B84A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 369 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 369 0 371 0 373 0 375 0;
+	setAttr -s 5 ".kit[4]"  1;
+	setAttr -s 5 ".kot[3:4]"  1 18;
+	setAttr -s 5 ".kix[4]"  1;
+	setAttr -s 5 ".kiy[4]"  0;
+	setAttr -s 5 ".kox[3:4]"  1 1;
+	setAttr -s 5 ".koy[3:4]"  0 0;
 createNode animCurveTL -n "Left_Eye_Ctrl_translateX";
 	rename -uid "5314B014-4752-520F-24C2-66826D012AC4";
 	setAttr ".tan" 18;
@@ -36069,9 +36096,42 @@ createNode animCurveTU -n "Tugger_scaleZ";
 	setAttr -s 4 ".kiy[2:3]"  0 0;
 	setAttr -s 4 ".kox[2:3]"  1 1;
 	setAttr -s 4 ".koy[2:3]"  0 0;
+createNode animCurveTU -n "Eyes_Ctrl_LeftEye";
+	rename -uid "25079365-4612-CBA8-0341-9FBC168291D4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 0 369 0 371 1 372 1 373 0 375 1;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 18;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  1 1;
+	setAttr -s 6 ".koy[4:5]"  0 0;
+createNode animCurveTU -n "Eyes_Ctrl_RightEye";
+	rename -uid "0C16D1E2-4041-CCB1-047A-569275D9E548";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 0 369 0 371 1 372 1 373 0 375 1;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 18;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  1 1;
+	setAttr -s 6 ".koy[4:5]"  0 0;
+createNode animCurveTU -n "Eyes_Ctrl_Charging";
+	rename -uid "BC350279-48B0-13BD-AE97-AF9F5BF4EB12";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  1 1 369 1 371 0 372 0 373 1 375 0;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[4:5]"  1 18;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[4:5]"  1 1;
+	setAttr -s 6 ".koy[4:5]"  0 0;
 select -ne :time1;
-	setAttr ".o" 326;
-	setAttr ".unw" 326;
+	setAttr ".o" 550;
+	setAttr ".unw" 550;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -36080,27 +36140,27 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 709 ".st";
+	setAttr -s 724 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 167 ".s";
+	setAttr -s 77 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 375 ".u";
+	setAttr -s 413 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 37 ".r";
 select -ne :lightList1;
 	setAttr -s 44 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 482 ".tx";
+	setAttr -s 547 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 93 ".dsm";
+	setAttr -s 76 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 198 ".gn";
+	setAttr -s 195 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -37651,70 +37711,73 @@ connectAttr "Arm_End_Driver_Ctrl_translateY.o" "PrometheusRN.phl[42]";
 connectAttr "Arm_End_Driver_Ctrl_translateZ.o" "PrometheusRN.phl[43]";
 connectAttr "Hatch_Jnt_Ctrl_rotateZ.o" "PrometheusRN.phl[44]";
 connectAttr "Face_Ctrl_Aperture_Close.o" "PrometheusRN.phl[45]";
-connectAttr "Eyes_Ctrl_translateY1.o" "PrometheusRN.phl[46]";
-connectAttr "Eyes_Ctrl_translateX1.o" "PrometheusRN.phl[47]";
-connectAttr "Eyes_Ctrl_translateZ.o" "PrometheusRN.phl[48]";
-connectAttr "Left_Eye_Ctrl_Scale.o" "PrometheusRN.phl[49]";
-connectAttr "Left_Eye_Ctrl_HappyEye.o" "PrometheusRN.phl[50]";
-connectAttr "Left_Eye_Ctrl_translateX.o" "PrometheusRN.phl[51]";
-connectAttr "Left_Eye_Ctrl_translateY.o" "PrometheusRN.phl[52]";
-connectAttr "Left_Eye_Ctrl_translateZ.o" "PrometheusRN.phl[53]";
-connectAttr "Right_Eye_Ctrl_Scale.o" "PrometheusRN.phl[54]";
-connectAttr "Right_Eye_Ctrl_HappyEye.o" "PrometheusRN.phl[55]";
-connectAttr "Right_Eye_Ctrl_translateX.o" "PrometheusRN.phl[56]";
-connectAttr "Right_Eye_Ctrl_translateY.o" "PrometheusRN.phl[57]";
-connectAttr "Right_Eye_Ctrl_translateZ.o" "PrometheusRN.phl[58]";
-connectAttr "Left_Leg_Door_Ctrl_Open_Door.o" "PrometheusRN.phl[59]";
-connectAttr "Left_Leg_Door_Jnt_01_Ctrl_rotateZ.o" "PrometheusRN.phl[60]";
-connectAttr "Left_Leg_Door_Jnt_02_Ctrl_rotateZ.o" "PrometheusRN.phl[61]";
-connectAttr "Right_Leg_Door_Ctrl_Open_Door.o" "PrometheusRN.phl[62]";
-connectAttr "Right_Leg_Door_Jnt_01_Ctrl_rotateZ.o" "PrometheusRN.phl[63]";
-connectAttr "Right_Leg_Door_Jnt_02_Ctrl_rotateZ.o" "PrometheusRN.phl[64]";
-connectAttr "Back_Leg_Door_Ctrl_Open_Door.o" "PrometheusRN.phl[65]";
-connectAttr "Back_Leg_Door_Jnt_01_Ctrl_rotateZ.o" "PrometheusRN.phl[66]";
-connectAttr "Back_Leg_Door_Jnt_02_Ctrl_rotateZ.o" "PrometheusRN.phl[67]";
-connectAttr "Hand_Ctrl_HideArm.o" "PrometheusRN.phl[68]";
-connectAttr "Arm_IK_Curve_visibility.o" "PrometheusRN.phl[69]";
-connectAttr "Finger_03_Jnt_01_Ctrl_translateX.o" "PrometheusRN.phl[70]";
-connectAttr "Finger_03_Jnt_01_Ctrl_translateY.o" "PrometheusRN.phl[71]";
-connectAttr "Finger_03_Jnt_01_Ctrl_translateZ.o" "PrometheusRN.phl[72]";
-connectAttr "Finger_03_Jnt_01_Ctrl_rotateX.o" "PrometheusRN.phl[73]";
-connectAttr "Finger_03_Jnt_01_Ctrl_rotateY.o" "PrometheusRN.phl[74]";
-connectAttr "Finger_03_Jnt_01_Ctrl_rotateZ1.o" "PrometheusRN.phl[75]";
-connectAttr "Finger_03_Jnt_01_Ctrl_scaleX.o" "PrometheusRN.phl[76]";
-connectAttr "Finger_03_Jnt_01_Ctrl_scaleY.o" "PrometheusRN.phl[77]";
-connectAttr "Finger_03_Jnt_01_Ctrl_scaleZ.o" "PrometheusRN.phl[78]";
-connectAttr "Finger_03_Jnt_01_Ctrl_visibility.o" "PrometheusRN.phl[79]";
-connectAttr "Finger_02_Jnt_01_Ctrl_translateX.o" "PrometheusRN.phl[80]";
-connectAttr "Finger_02_Jnt_01_Ctrl_translateY.o" "PrometheusRN.phl[81]";
-connectAttr "Finger_02_Jnt_01_Ctrl_translateZ.o" "PrometheusRN.phl[82]";
-connectAttr "Finger_02_Jnt_01_Ctrl_rotateX.o" "PrometheusRN.phl[83]";
-connectAttr "Finger_02_Jnt_01_Ctrl_rotateY.o" "PrometheusRN.phl[84]";
-connectAttr "Finger_02_Jnt_01_Ctrl_rotateZ1.o" "PrometheusRN.phl[85]";
-connectAttr "Finger_02_Jnt_01_Ctrl_scaleX.o" "PrometheusRN.phl[86]";
-connectAttr "Finger_02_Jnt_01_Ctrl_scaleY.o" "PrometheusRN.phl[87]";
-connectAttr "Finger_02_Jnt_01_Ctrl_scaleZ.o" "PrometheusRN.phl[88]";
-connectAttr "Finger_02_Jnt_01_Ctrl_visibility.o" "PrometheusRN.phl[89]";
-connectAttr "Finger_01_Jnt_01_Ctrl_translateX.o" "PrometheusRN.phl[90]";
-connectAttr "Finger_01_Jnt_01_Ctrl_translateY.o" "PrometheusRN.phl[91]";
-connectAttr "Finger_01_Jnt_01_Ctrl_translateZ.o" "PrometheusRN.phl[92]";
-connectAttr "Finger_01_Jnt_01_Ctrl_rotateX.o" "PrometheusRN.phl[93]";
-connectAttr "Finger_01_Jnt_01_Ctrl_rotateY.o" "PrometheusRN.phl[94]";
-connectAttr "Finger_01_Jnt_01_Ctrl_rotateZ1.o" "PrometheusRN.phl[95]";
-connectAttr "Finger_01_Jnt_01_Ctrl_scaleX.o" "PrometheusRN.phl[96]";
-connectAttr "Finger_01_Jnt_01_Ctrl_scaleY.o" "PrometheusRN.phl[97]";
-connectAttr "Finger_01_Jnt_01_Ctrl_scaleZ.o" "PrometheusRN.phl[98]";
-connectAttr "Finger_01_Jnt_01_Ctrl_visibility.o" "PrometheusRN.phl[99]";
-connectAttr "Prop_Ctrl_translateX1.o" "PrometheusRN.phl[100]";
-connectAttr "Prop_Ctrl_translateY1.o" "PrometheusRN.phl[101]";
-connectAttr "Prop_Ctrl_translateZ1.o" "PrometheusRN.phl[102]";
-connectAttr "Prop_Ctrl_visibility.o" "PrometheusRN.phl[103]";
-connectAttr "Prop_Ctrl_rotateX1.o" "PrometheusRN.phl[104]";
-connectAttr "Prop_Ctrl_rotateY1.o" "PrometheusRN.phl[105]";
-connectAttr "Prop_Ctrl_rotateZ1.o" "PrometheusRN.phl[106]";
-connectAttr "Prop_Ctrl_scaleX1.o" "PrometheusRN.phl[107]";
-connectAttr "Prop_Ctrl_scaleY1.o" "PrometheusRN.phl[108]";
-connectAttr "Prop_Ctrl_scaleZ1.o" "PrometheusRN.phl[109]";
+connectAttr "Eyes_Ctrl_LeftEye.o" "PrometheusRN.phl[46]";
+connectAttr "Eyes_Ctrl_RightEye.o" "PrometheusRN.phl[47]";
+connectAttr "Eyes_Ctrl_Charging.o" "PrometheusRN.phl[48]";
+connectAttr "Eyes_Ctrl_translateY1.o" "PrometheusRN.phl[49]";
+connectAttr "Eyes_Ctrl_translateX1.o" "PrometheusRN.phl[50]";
+connectAttr "Eyes_Ctrl_translateZ.o" "PrometheusRN.phl[51]";
+connectAttr "Left_Eye_Ctrl_Scale.o" "PrometheusRN.phl[52]";
+connectAttr "Left_Eye_Ctrl_HappyEye.o" "PrometheusRN.phl[53]";
+connectAttr "Left_Eye_Ctrl_translateX.o" "PrometheusRN.phl[54]";
+connectAttr "Left_Eye_Ctrl_translateY.o" "PrometheusRN.phl[55]";
+connectAttr "Left_Eye_Ctrl_translateZ.o" "PrometheusRN.phl[56]";
+connectAttr "Right_Eye_Ctrl_Scale.o" "PrometheusRN.phl[57]";
+connectAttr "Right_Eye_Ctrl_HappyEye.o" "PrometheusRN.phl[58]";
+connectAttr "Right_Eye_Ctrl_translateX.o" "PrometheusRN.phl[59]";
+connectAttr "Right_Eye_Ctrl_translateY.o" "PrometheusRN.phl[60]";
+connectAttr "Right_Eye_Ctrl_translateZ.o" "PrometheusRN.phl[61]";
+connectAttr "Left_Leg_Door_Ctrl_Open_Door.o" "PrometheusRN.phl[62]";
+connectAttr "Left_Leg_Door_Jnt_01_Ctrl_rotateZ.o" "PrometheusRN.phl[63]";
+connectAttr "Left_Leg_Door_Jnt_02_Ctrl_rotateZ.o" "PrometheusRN.phl[64]";
+connectAttr "Right_Leg_Door_Ctrl_Open_Door.o" "PrometheusRN.phl[65]";
+connectAttr "Right_Leg_Door_Jnt_01_Ctrl_rotateZ.o" "PrometheusRN.phl[66]";
+connectAttr "Right_Leg_Door_Jnt_02_Ctrl_rotateZ.o" "PrometheusRN.phl[67]";
+connectAttr "Back_Leg_Door_Ctrl_Open_Door.o" "PrometheusRN.phl[68]";
+connectAttr "Back_Leg_Door_Jnt_01_Ctrl_rotateZ.o" "PrometheusRN.phl[69]";
+connectAttr "Back_Leg_Door_Jnt_02_Ctrl_rotateZ.o" "PrometheusRN.phl[70]";
+connectAttr "Hand_Ctrl_HideArm.o" "PrometheusRN.phl[71]";
+connectAttr "Arm_IK_Curve_visibility.o" "PrometheusRN.phl[72]";
+connectAttr "Finger_03_Jnt_01_Ctrl_translateX.o" "PrometheusRN.phl[73]";
+connectAttr "Finger_03_Jnt_01_Ctrl_translateY.o" "PrometheusRN.phl[74]";
+connectAttr "Finger_03_Jnt_01_Ctrl_translateZ.o" "PrometheusRN.phl[75]";
+connectAttr "Finger_03_Jnt_01_Ctrl_rotateX.o" "PrometheusRN.phl[76]";
+connectAttr "Finger_03_Jnt_01_Ctrl_rotateY.o" "PrometheusRN.phl[77]";
+connectAttr "Finger_03_Jnt_01_Ctrl_rotateZ1.o" "PrometheusRN.phl[78]";
+connectAttr "Finger_03_Jnt_01_Ctrl_scaleX.o" "PrometheusRN.phl[79]";
+connectAttr "Finger_03_Jnt_01_Ctrl_scaleY.o" "PrometheusRN.phl[80]";
+connectAttr "Finger_03_Jnt_01_Ctrl_scaleZ.o" "PrometheusRN.phl[81]";
+connectAttr "Finger_03_Jnt_01_Ctrl_visibility.o" "PrometheusRN.phl[82]";
+connectAttr "Finger_02_Jnt_01_Ctrl_translateX.o" "PrometheusRN.phl[83]";
+connectAttr "Finger_02_Jnt_01_Ctrl_translateY.o" "PrometheusRN.phl[84]";
+connectAttr "Finger_02_Jnt_01_Ctrl_translateZ.o" "PrometheusRN.phl[85]";
+connectAttr "Finger_02_Jnt_01_Ctrl_rotateX.o" "PrometheusRN.phl[86]";
+connectAttr "Finger_02_Jnt_01_Ctrl_rotateY.o" "PrometheusRN.phl[87]";
+connectAttr "Finger_02_Jnt_01_Ctrl_rotateZ1.o" "PrometheusRN.phl[88]";
+connectAttr "Finger_02_Jnt_01_Ctrl_scaleX.o" "PrometheusRN.phl[89]";
+connectAttr "Finger_02_Jnt_01_Ctrl_scaleY.o" "PrometheusRN.phl[90]";
+connectAttr "Finger_02_Jnt_01_Ctrl_scaleZ.o" "PrometheusRN.phl[91]";
+connectAttr "Finger_02_Jnt_01_Ctrl_visibility.o" "PrometheusRN.phl[92]";
+connectAttr "Finger_01_Jnt_01_Ctrl_translateX.o" "PrometheusRN.phl[93]";
+connectAttr "Finger_01_Jnt_01_Ctrl_translateY.o" "PrometheusRN.phl[94]";
+connectAttr "Finger_01_Jnt_01_Ctrl_translateZ.o" "PrometheusRN.phl[95]";
+connectAttr "Finger_01_Jnt_01_Ctrl_rotateX.o" "PrometheusRN.phl[96]";
+connectAttr "Finger_01_Jnt_01_Ctrl_rotateY.o" "PrometheusRN.phl[97]";
+connectAttr "Finger_01_Jnt_01_Ctrl_rotateZ1.o" "PrometheusRN.phl[98]";
+connectAttr "Finger_01_Jnt_01_Ctrl_scaleX.o" "PrometheusRN.phl[99]";
+connectAttr "Finger_01_Jnt_01_Ctrl_scaleY.o" "PrometheusRN.phl[100]";
+connectAttr "Finger_01_Jnt_01_Ctrl_scaleZ.o" "PrometheusRN.phl[101]";
+connectAttr "Finger_01_Jnt_01_Ctrl_visibility.o" "PrometheusRN.phl[102]";
+connectAttr "Prop_Ctrl_translateX1.o" "PrometheusRN.phl[103]";
+connectAttr "Prop_Ctrl_translateY1.o" "PrometheusRN.phl[104]";
+connectAttr "Prop_Ctrl_translateZ1.o" "PrometheusRN.phl[105]";
+connectAttr "Prop_Ctrl_visibility.o" "PrometheusRN.phl[106]";
+connectAttr "Prop_Ctrl_rotateX1.o" "PrometheusRN.phl[107]";
+connectAttr "Prop_Ctrl_rotateY1.o" "PrometheusRN.phl[108]";
+connectAttr "Prop_Ctrl_rotateZ1.o" "PrometheusRN.phl[109]";
+connectAttr "Prop_Ctrl_scaleX1.o" "PrometheusRN.phl[110]";
+connectAttr "Prop_Ctrl_scaleY1.o" "PrometheusRN.phl[111]";
+connectAttr "Prop_Ctrl_scaleZ1.o" "PrometheusRN.phl[112]";
 connectAttr "Tugger_scaleX.o" "Tug_CarRN.phl[1]";
 connectAttr "Tugger_scaleY.o" "Tug_CarRN.phl[2]";
 connectAttr "Tugger_scaleZ.o" "Tug_CarRN.phl[3]";
