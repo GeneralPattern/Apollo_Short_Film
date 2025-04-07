@@ -140,7 +140,7 @@
   <extra>Cleaning_Scene:Mop:hairSystemShape1.numVClumps=15</extra>
   <extra>Cleaning_Scene:Mop:hairSystemShape1.clumpInterpolation=0</extra>
   <extra>Cleaning_Scene:Mop:hairSystemShape1.interpolationRange=8</extra>
-  <extra>Cleaning_Scene:Mop:hairSystemShape1.currentTime=0</extra>
+  <extra>Cleaning_Scene:Mop:hairSystemShape1.currentTime=365</extra>
   <extra>Cleaning_Scene:Mop:hairSystemShape1.startFrame=1</extra>
   <extra>Cleaning_Scene:Mop:hairSystemShape1.usePre70ForceIntensity=0</extra>
   <extra>Cleaning_Scene:Mop:hairSystemShape1.disableFollicleAnim=0</extra>
@@ -158,7 +158,7 @@
   <extra>Cleaning_Scene:Mop:nucleus1.scaleX=1</extra>
   <extra>Cleaning_Scene:Mop:nucleus1.scaleY=1</extra>
   <extra>Cleaning_Scene:Mop:nucleus1.scaleZ=1</extra>
-  <extra>Cleaning_Scene:Mop:nucleus1.currentTime=0</extra>
+  <extra>Cleaning_Scene:Mop:nucleus1.currentTime=365</extra>
   <extra>Cleaning_Scene:Mop:nucleus1.startFrame=1</extra>
   <extra>Cleaning_Scene:Mop:nucleus1.frameJumpLimit=1</extra>
   <extra>Cleaning_Scene:Mop:nucleus1.enable=1</extra>
