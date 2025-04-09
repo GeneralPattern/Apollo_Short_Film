@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: PaintingScene_Apollo_Closeup_460_597_CC.ma
-//Last modified: Fri, Apr 04, 2025 04:44:45 PM
+//Last modified: Mon, Apr 07, 2025 07:38:33 PM
 //Codeset: 1252
 file -rdi 1 -ns "Apollo" -rfn "ApolloRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/Apollo_Short_Film/ApolloProject//scenes/Characters/Apollo.ma";
 file -rdi 1 -ns "Painting_Scene" -rfn "Painting_SceneRN" -op "v=0;" -typ "mayaAscii"
@@ -31,7 +31,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "C7FED0AD-436B-BC71-96C3-B7A2E13CA42E";
+fileInfo "UUID" "18B253D4-4CB3-C7C2-75EA-EFBE90EF687B";
 fileInfo "license" "education";
 fileInfo "exportedFrom" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/Painting/PaintingScene_CC.ma";
 createNode transform -s -n "persp";
@@ -217,7 +217,7 @@ createNode parentConstraint -n "Gun_Ctrl_Grp_parentConstraint2" -p "PaintGunRN1f
 	setAttr ".rsrr" -type "double3" 1.4113711398994355e-14 1.5902773407317582e-15 8.1998675381481314e-16 ;
 	setAttr -k on ".w0" 0;
 createNode fosterParent -n "Painting_SceneRNfosterParent1";
-	rename -uid "AAFC2FB8-4949-A94C-2B7B-3A897EC9EADC";
+	rename -uid "E59C6C49-486B-41C8-A337-9E9C64F86442";
 createNode transform -n "pasted__Spotlight_L3" -p "Painting_SceneRNfosterParent1";
 	rename -uid "F737349A-4755-06CD-87B2-32979B1EDADF";
 	setAttr ".t" -type "double3" -2.7446890842687943 5.5656304988798855 -4.847736531899578 ;
@@ -251,24 +251,24 @@ createNode spotLight -n "pasted__Spotlight_L2Shape" -p "pasted__Spotlight_L2";
 	setAttr ".ai_volume_samples" 0;
 	setAttr ".ai_cast_volumetric_shadows" no;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "62329CEE-4417-BF71-51F6-6E93F2CCFFCA";
+	rename -uid "CD081693-4C77-44DB-6B4B-918B3159176C";
 	setAttr -s 91 ".lnk";
 	setAttr -s 133 ".ign";
 	setAttr -s 91 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "4467B60D-436F-93B7-D6BD-6C893F8DA4D3";
+	rename -uid "2A0F9392-42EA-27CD-813B-108A4C4BFFC9";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 3 0 2 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "FA2858A1-47C3-618C-D5D1-BA94135EAB6A";
+	rename -uid "602C1CAB-4819-95FC-A351-A1AEFF69C74D";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B238A05F-4B72-97E7-91E9-47955F684614";
+	rename -uid "A63AFC32-4854-B4AA-1316-92BF379D0DAB";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "0DFBE31B-4B53-7FF6-5DDE-8ABD325E78B9";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "17F359BA-4E8A-A8F5-1454-06B6406FD1CC";
+	rename -uid "4B01A28D-4209-2FE7-2DBD-D1919DEFC1C5";
 	setAttr ".crl" 9;
 	setAttr -s 10 ".rlmi[1:9]"  1 2 3 4 5 6 7 8 
 		9;
@@ -295,7 +295,7 @@ createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	setAttr ".ipr_step_started" -type "string" "";
 	setAttr ".ipr_step_finished" -type "string" "";
 	setAttr ".output_overscan" -type "string" "";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1   1;Background.Offset=0   0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1   1;Foreground.Offset=0   0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Snapshots Folder=C:/Users/newsi/GitRepos/Apollo_Short_Film/ApolloProject/images/snapshots/Versus;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1    1;Background.Offset=0    0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1    1;Foreground.Offset=0    0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "A7A3AB83-40A2-199A-B6BF-ED8453C79E9A";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -314,17 +314,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 1047\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1307\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 123\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
 		+ "        modelEditor -e \n            -camera \"|Apollo_Closeup_Cam460_597\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1051\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n"
 		+ "            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n"
 		+ "            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
@@ -350,10 +350,10 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
 		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
-		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|Apollo_Closeup_Cam460_597\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1051\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|Apollo_Closeup_Cam460_597\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1051\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|Apollo_Closeup_Cam460_597\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|Apollo_Closeup_Cam460_597\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -20025,11 +20025,11 @@ createNode reference -n "ApolloRN";
 		
 		2 "Apollo:set418" "aiCustomAOVs[1].aovName" " -type \"string\" \"specular\""
 		
-		3 "Apollo:groupId766.message" ":defaultLastHiddenSet.groupNodes" "-na"
 		3 "Apollo:groupId766.groupId" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[42].objectGroupId" 
 		""
 		3 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[42]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
+		3 "Apollo:groupId766.message" ":defaultLastHiddenSet.groupNodes" "-na"
 		3 "Apollo:groupId766.groupId" "Apollo:groupParts100.groupId" ""
 		5 3 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.instObjGroups" 
 		"ApolloRN.placeHolderList[14]" ""
@@ -20667,106 +20667,106 @@ createNode reference -n "ApolloRN";
 		5 0 "ApolloRN" "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.instObjGroups.objectGroups[45]" 
 		"Apollo:set418.dagSetMembers" "ApolloRN.placeHolderList[373]" "ApolloRN.placeHolderList[374]" 
 		""
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[1]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:L_Hose|Apollo:L_HoseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[2]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:R_Hose|Apollo:R_HoseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[3]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:ArmGeo|Apollo:MainArmGeo|Apollo:MainArmGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[4]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:TreadsBase|Apollo:TreadsBaseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[5]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:L_Tread_Ctrl_Grp|Apollo:L_Tread_Offset_Grp|Apollo:LeftTreadGeo|Apollo:LeftTreadGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[6]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:NewTreads|Apollo:R_Tread_Ctrl_Grp|Apollo:R_Tread_Offset_Grp|Apollo:RightTreadGeo|Apollo:RightTreadGeoShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Right_Eye_Grp|Apollo:Right_Eye|Apollo:Right_EyeShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[7]" ""
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[8]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eyes|Apollo:Left_Eye_Grp|Apollo:Left_Eye|Apollo:Left_EyeShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[9]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Face_Glass5|Apollo:Face_GlassShape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[10]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Mouth_Grp|Apollo:Mouth|Apollo:MouthShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[11]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Exclamation_Point_Grp|Apollo:Exclamation_Point|Apollo:Exclamation_PointShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[12]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_2_Grp|Apollo:Eye_X_2|Apollo:Eye_X_2Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[13]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:FaceGeo|Apollo:Eye_X_1_Grp|Apollo:Eye_X_1|Apollo:Eye_X_1Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[15]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Open|Apollo:L_Eye_Open_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[17]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Squint|Apollo:L_Eye_Squint_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[19]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Close|Apollo:L_Eye_Close_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_Shape1.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[21]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:L_Eye_Sad|Apollo:L_Eye_Sad_Shape1.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[22]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Sad|Apollo:L_Eye_SadShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[23]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Close|Apollo:L_Eye_CloseShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[24]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Squint|Apollo:L_Eye_SquintShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[25]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Ref|Apollo:L_Eye_Open|Apollo:L_Eye_OpenShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[26]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Arrow|Apollo:Left_Eye_ArrowShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[27]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Bored|Apollo:Left_Eye_BoredShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[28]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Determined|Apollo:Left_Eye_DeterminedShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[29]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:L_Eye_BlendShapes|Apollo:Left_Eye_Smirk|Apollo:Left_Eye_SmirkShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:R_Eye_Open|Apollo:R_Eye_OpenShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
@@ -20803,22 +20803,22 @@ createNode reference -n "ApolloRN";
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:R_Eye_BlendShapes|Apollo:Right_Eye_Actually_Bored|Apollo:Right_Eye_Actually_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[38]" ""
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[39]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Neutral|Apollo:NeutralShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[40]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Oooh|Apollo:OoohShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "ApolloRN.placeHolderList[41]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Smirk|Apollo:Mouth_SmirkShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
-		2 "ApolloRN.placeHolderList[42]" ""
-		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
-		0;
+		2 "ApolloRN.placeHolderList[42]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Painting_SceneRN";
@@ -21234,15 +21234,15 @@ createNode reference -n "Painting_SceneRN";
 		5 0 "Painting_SceneRN" "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.instObjGroups" 
 		"Painting_Scene:Hopper_Bin:set4.dagSetMembers" "Painting_SceneRN.placeHolderList[242]" 
 		"Painting_SceneRN.placeHolderList[243]" ""
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Trash_Bin|Painting_Scene:Hopper_Bin:Trash_BinShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Hopper_Bin:Hopper_Bin|Painting_Scene:Hopper_Bin:Hopper_BinShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
@@ -21497,105 +21497,105 @@ createNode reference -n "Painting_SceneRN";
 		2 "" "Painting_SceneRN.placeHolderList[234]"
 		7 "ignore" ":lightLinker1" 2 "|Apollo:Apollo|Apollo:Geo|Apollo:Face_Shapes|Apollo:BlendShapeGeo|Apollo:Mouth_BlendShapes|Apollo:Mouth_Bored|Apollo:Mouth_BoredShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		2 "" "Painting_SceneRN.placeHolderList[235]"
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table|Painting_Scene:TableShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table_03|Painting_Scene:Table_03Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table_03|Painting_Scene:Table_03Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table_03|Painting_Scene:Table_03Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:Table_03|Painting_Scene:Table_03Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube46|Painting_Scene:pCube46Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube46|Painting_Scene:pCube46Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube46|Painting_Scene:pCube46Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube46|Painting_Scene:pCube46Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube47|Painting_Scene:pCube47Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube47|Painting_Scene:pCube47Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube47|Painting_Scene:pCube47Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Foreground|Painting_Scene:pCube47|Painting_Scene:pCube47Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:PaintVat|Painting_Scene:PaintVatShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:BG_Tables|Painting_Scene:BG_TablesShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Pillars|Painting_Scene:PillarsShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor1|Painting_Scene:Floor1Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor1|Painting_Scene:Floor1Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor1|Painting_Scene:Floor1Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Floor1|Painting_Scene:Floor1Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Hopper_Bin1|Painting_Scene:Hopper_Bin1Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Hopper_Bin1|Painting_Scene:Hopper_Bin1Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Hopper_Bin1|Painting_Scene:Hopper_Bin1Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Hopper_Bin1|Painting_Scene:Hopper_Bin1Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:transform2|Painting_Scene:polySurfaceShape195.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:transform2|Painting_Scene:polySurfaceShape195.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:polySurface186|Painting_Scene:transform2|Painting_Scene:polySurfaceShape195.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:polySurface184|Painting_Scene:transform1|Painting_Scene:polySurface184Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_03|Painting_Scene:Bay_03Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_02|Painting_Scene:Bay_02Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_01|Painting_Scene:Bay_01Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_04|Painting_Scene:Bay_04Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_06|Painting_Scene:Bay_06Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_07|Painting_Scene:Bay_07Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_07|Painting_Scene:Bay_07Shape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_07|Painting_Scene:Bay_07Shape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Bay_07|Painting_Scene:Bay_07Shape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0
-		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
-		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.message" "|Painting_Scene:Enviornment|Painting_Scene:Lights|Painting_Scene:pasted__Spotlight_L2|Painting_Scene:pasted__Spotlight_L2Shape.message" 
+		0
+		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.message" "|Painting_SceneRNfosterParent1|pasted__Spotlight_L2|pasted__Spotlight_L2Shape.message" 
 		0
 		7 "ignore" ":lightLinker1" 2 "|Painting_Scene:Enviornment|Painting_Scene:Backround|Painting_Scene:Ceiling|Painting_Scene:CeilingShape.message" "|ANIMATION_LIGHTS|spotLight3|spotLightShape3.message" 
 		0;
@@ -30637,726 +30637,726 @@ createNode absUniqueOverride -n "endFrame";
 	setAttr ".atv" 574;
 	setAttr ".es" yes;
 createNode applyAbsIntOverride -n "AASamples2_defaultArnoldRenderOptions_AA_samples";
-	rename -uid "6ECF04E9-4936-F2C4-F322-48AAE96CEA31";
+	rename -uid "F2CACF42-4A89-DC96-199A-86B6CBEE80CA";
 	setAttr ".ori" 3;
 createNode applyAbsBoolOverride -n "enabled_aiAOV_diffuse_aoven";
-	rename -uid "ECF7082A-4CFE-0266-63E8-8ABD06662CBF";
+	rename -uid "9B5FFD00-4EEC-BB62-697C-2781B9C9E8DD";
 	setAttr ".ori" yes;
 createNode applyAbsBoolOverride -n "enabled1_aiAOV_specular_aoven";
-	rename -uid "F4259273-46C2-1522-C8E2-DCB34E54EDE3";
+	rename -uid "38C31B82-48D2-B271-0D9E-DC8A11E1AA03";
 	setAttr ".ori" yes;
 createNode applyAbsFloatOverride -n "density_aiAtmosphereVolume_density";
-	rename -uid "38271E7F-402B-53F3-9E32-5F84C457D512";
-createNode applyAbsBoolOverride -n "Left_Eye_SmirkShape_ai_matte";
-	rename -uid "D8F396B2-49AD-F378-53FF-E4A0150F8BED";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Treads_Base_FK_Jnt_CtrlShape_ai_matte";
-	rename -uid "AB6F7797-4E28-1579-1BDE-2A867A851CE1";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_BoredShapeOrig2_ai_matte";
-	rename -uid "F902B643-4B34-8C1F-524A-AE895C25376C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_SmirkShapeOrig1_ai_matte";
-	rename -uid "D7ED4BCF-4607-2F8F-5D3F-A48C78DCE2D8";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig2_ai_matte";
-	rename -uid "923D8517-41DC-1507-C2A4-CD80C136921C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Eye_X_1_CtrlShape_ai_matte";
-	rename -uid "C4336993-44D3-6D30-E13B-DE8D898334EA";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_BoredShape_ai_matte";
-	rename -uid "95274C21-4F48-F083-AE00-AD930073F806";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Hand_Ring_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "3D75F030-4277-09F3-DAFB-ECBC9623F39F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_Open_ShapeOrig_ai_matte";
-	rename -uid "53D2D6CB-4CD9-9B85-68E4-178166DBD0FB";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "CA77DB67-4F61-BF0C-F644-72B874DDE050";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_BoredShapeOrig_ai_matte";
-	rename -uid "978360A6-4541-A8A4-16B3-F98C2E2DD410";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "MainArmGeoShape_ai_matte";
-	rename -uid "3DB7DFAF-4A79-A866-3A8F-729F13F125D7";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Face_CtrlShape_ai_matte";
-	rename -uid "99FFBEC9-4C97-EC85-2B82-E2A72691578E";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_12_CtrlShape_ai_matte";
-	rename -uid "09C70AF2-49C9-C0B3-F5D2-98B6A47B548C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Mid_Wheel_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "500A999D-466C-8F9F-5E0D-D6A7B1DF5814";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_CurveShape_ai_matte";
-	rename -uid "0D9A3DA4-46CE-E075-3A69-73A936481CE4";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_09_CtrlShape_ai_matte";
-	rename -uid "6DB1D838-421F-A00F-E817-7ABFAF601C04";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Eye_OpenShapeOrig_ai_matte";
-	rename -uid "C1C32C0D-44BD-A8E5-FC21-40A5B4B1C247";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "TreadsBaseShapeOrig_ai_matte";
-	rename -uid "F82544A2-49BE-C2A9-6635-79927F20EA3E";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "DACFC6C8-4E21-9DCF-48D7-EF9878DC0530";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Exclamation_PointShape_ai_matte";
-	rename -uid "DF588D5B-4EF3-A678-3159-A2B87D2CFF02";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "ED06E8C6-4649-5255-F527-048611ADBA89";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Tread_Wire_Base_CurveShape_ai_matte";
-	rename -uid "EE133588-484C-0141-0E3D-4BA8B25B5628";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "pCube46Shape_ai_matte";
-	rename -uid "6B881E9E-41CB-E47B-02E5-22BC544500E3";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShape_ai_matte";
-	rename -uid "DFD7A355-4D30-7D3C-4E5A-12BB01E9CF70";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte";
-	rename -uid "74D9A456-4D16-89C0-701A-6AA2516CAC87";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte";
-	rename -uid "552F3F32-4E12-C321-078F-C8B8F3927E56";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "PoleVector_CtrlShape_ai_matte";
-	rename -uid "39A0CEF1-4FB1-1F86-DD1D-18A6C9CE5814";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_SmirkShapeOrig2_ai_matte";
-	rename -uid "26E60320-47FB-8445-77E4-EE8CC1865E68";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Mouth_BoredShapeOrig_ai_matte";
-	rename -uid "49F0D439-42C0-42C4-02DC-D79135166EF7";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Table_03Shape_ai_matte";
-	rename -uid "E7BD08AD-44E0-C8E4-09FA-839B9EA5ACBC";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_13_CtrlShape_ai_matte";
-	rename -uid "ABC9A287-4DDD-238D-1EFF-A787ACA3E5CA";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_EyeShapeOrig_ai_matte";
-	rename -uid "E8D42336-4EBF-4BA8-C173-A583042EA03F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig_ai_matte";
-	rename -uid "0AC386A6-42F8-E893-B24D-8A9BCCA57688";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Eye_SadShapeOrig_ai_matte";
-	rename -uid "9B0B8261-49D0-1622-9701-2387357C08A4";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_SmirkShapeOrig_ai_matte";
-	rename -uid "C16FF013-4C6E-8D60-9C96-F6A64677EA96";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "AD3108BC-4222-5FCB-B243-4198128BB163";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polySurface184Shape_ai_matte";
-	rename -uid "A8740758-4720-20AF-9704-07ABC6A40709";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_Close_Shape1_ai_matte";
-	rename -uid "D4C03292-420E-A913-1E6D-86ABA4DBA049";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polySurfaceShape195_ai_matte";
-	rename -uid "F9FB33E7-4C46-8AED-C4EC-14BA84D3E267";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "BlendShapeShape_ai_matte";
-	rename -uid "97966285-47C6-1A1E-3497-48BBC79905AC";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Eyes_CtrlShape_ai_matte";
-	rename -uid "8CC3EC5A-4E36-8224-6F1F-B580ECDBA111";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "pCube47Shape_ai_matte";
-	rename -uid "8A485D63-4EC8-9A3D-1AA7-B6B66224A409";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Treads_CtrlShape_ai_matte";
-	rename -uid "DEA13371-4268-FF03-E831-DABBEC40C8C8";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Eye_X_2Shape_ai_matte";
-	rename -uid "ECC6F3E0-48AE-DEC6-ED13-E38F94EA90C8";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Mouth_SmirkShapeOrig_ai_matte";
-	rename -uid "55BE5A7C-443C-E279-A044-E6AF20177FAB";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Hand_Ring_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "0EC4D8DE-45F0-464B-0865-B7B0BDA1845F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_Sad_Shape1_ai_matte";
-	rename -uid "1EE7AEFE-4279-B224-8A1B-6387BB0001F7";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_SquintShape_ai_matte";
-	rename -uid "1CCBE9B7-413F-20AE-7E47-A28A23A76CE8";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte";
-	rename -uid "7DE271D7-472A-2031-8F8D-75A0350E027A";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_ArrowShapeOrig1_ai_matte";
-	rename -uid "AFCE9123-4BC6-817B-7207-06A2EC4FFF31";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Arm_Base_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "63FA58CA-48E9-2E87-7C0A-C5B888479A0F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_Actually_BoredShapeOrig_ai_matte";
-	rename -uid "F566EA76-4FBF-87C7-3541-43A98EF5AB64";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_DeterminedShapeOrig_ai_matte";
-	rename -uid "E81070A0-4867-B981-2EE1-8CAC61B06C58";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Piston_02_CtrlShape_ai_matte";
-	rename -uid "7A976765-4036-FCB1-EBD0-499E87C8F58C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte";
-	rename -uid "9B113738-4502-03C5-D142-76B2F43E14ED";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Finger_03_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "086DC82E-418E-1C22-958C-A39BE2D4EC64";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_09_CtrlShape_ai_matte";
-	rename -uid "955B6D79-4736-78D9-0B64-0C8D134FA9D2";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "MouthShape_ai_matte";
-	rename -uid "B3891E5F-4061-6DC9-1F69-D7A8ACACA5AD";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_HoseShape_ai_matte";
-	rename -uid "33051CD3-4274-1D3D-7F63-A19388FDF0D8";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_ArrowShape_ai_matte";
-	rename -uid "93680CA6-42A1-60D4-FEFC-EDABC40E43CB";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_04_CtrlShape_ai_matte";
-	rename -uid "69B3562F-4A13-FEF7-7681-33BBE269FF13";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_CtrlShape_ai_matte";
-	rename -uid "F034D0E2-4348-2EE7-AF99-708BF233A5C2";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte";
-	rename -uid "81DBE180-4309-5B4D-AAF4-D593F3E717CA";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Trash_BinShape_ai_matte";
-	rename -uid "AA69ED12-49BF-0FE9-6A40-8D8035CC9FC7";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_07_CtrlShape_ai_matte";
-	rename -uid "9DFC0AA9-4F5D-6955-29A5-51B981591838";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Finger_02_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "3565B832-4418-9639-B900-42A0819FB678";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte";
-	rename -uid "528C8832-45D8-DF31-8D69-FA9676CF9D2B";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Eye_OpenShape_ai_matte";
-	rename -uid "324D3F11-4FCC-F2A5-2DDD-FFBEBD574F7C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_Squint_ShapeOrig_ai_matte";
-	rename -uid "0532D941-4651-CFBC-9CA4-C4B9E0F3FF41";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_HoseShapeOrig1_ai_matte";
-	rename -uid "F4306B3D-4157-63A2-44DA-C2B8E7189921";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polySurfaceShape199_ai_matte";
-	rename -uid "7FED7DEA-40F4-374C-7AC7-3BA2223B60A1";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "WallShape_ai_matte";
-	rename -uid "EF36705C-4FCF-AE64-5B99-4DB6CF903E91";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "TableShape_ai_matte";
-	rename -uid "AF8E3DFA-42BE-5F76-DD40-789101C48BF3";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Arm_FK_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "DCA62CEE-4F96-0DDC-ACD7-3D85B47F8B21";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "40B7AA45-4B8B-CA51-FE74-C5B3A357DBFF";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_EyeShapeOrig1_ai_matte";
-	rename -uid "8C12750A-448F-A2EC-49AB-FAA4CC3AFE8C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+	rename -uid "ED51CD05-4D03-253E-AF21-1A8D37BA1A10";
 createNode applyAbsBoolOverride -n "MouthShapeOrig_ai_matte";
-	rename -uid "6B9B9C3B-4B51-7D41-263C-08B47A867343";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Bay_07Shape_ai_matte";
-	rename -uid "A817D684-44F9-0672-6DC8-60965AB1CE2E";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_Swing_CtrlShape_ai_matte";
-	rename -uid "C536BFDE-49F6-0455-D6E5-D385C921376A";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_ArrowShapeOrig_ai_matte";
-	rename -uid "A969FC1A-44F0-06A6-B3C0-8FBB1829379E";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Tread_Wire_Base_CurveShape_ai_matte";
-	rename -uid "E17F5829-490F-211E-DC0A-A18B0A650809";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polySurfaceShape190_ai_matte";
-	rename -uid "52C5FA01-4278-4B63-A3C2-DC8CB84AE542";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Tread_Wire_CurveShape_ai_matte";
-	rename -uid "2EC1F3F8-4056-8B62-82C8-C7B00EDEEC6F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Eye_SquintShape_ai_matte";
-	rename -uid "439C270D-4DB3-D8DA-BDB7-F6810469864D";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Mid_Wheel_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "8C47F94A-47AB-6386-666D-E0AC63B8964F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_Squint_ShapeOrig1_ai_matte";
-	rename -uid "17A26008-4795-10DA-2804-7CA008D9277A";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_Close_ShapeOrig_ai_matte";
-	rename -uid "80C681A2-4F64-43E9-C567-AA856EC66537";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte";
-	rename -uid "CCC3FA1A-4113-6623-571F-6CAD96AB6612";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Arm_IK_Jnt_05_CtrlShape_ai_matte";
-	rename -uid "8424A176-498A-FA7A-A710-E4A6398A52F5";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Mid_Wheel_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "4AA3A54B-46A1-7D8C-F933-0EA5C933F946";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polySurfaceShape192_ai_matte";
-	rename -uid "4165E129-411C-8F63-F5CD-89ABD467FA22";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Transform_CtrlShape_ai_matte";
-	rename -uid "0BD46E3E-4CCE-7BC0-CAEE-D5911C32865F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_06_CtrlShape_ai_matte";
-	rename -uid "7A49627C-47C1-AC38-5E03-2BA82298E0DB";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_Sad_ShapeOrig_ai_matte";
-	rename -uid "F7027FEF-40F6-4069-0F44-C5BCE39E1EFB";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "RightTreadGeoShapeOrig2_ai_matte";
-	rename -uid "D716C8F8-4811-E5A0-7365-C0A5B598C390";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig1_ai_matte";
-	rename -uid "DB86A596-4E77-4255-A91C-92AA6D182DC2";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "OoohShape_ai_matte";
-	rename -uid "F5BFCC6F-4F56-5264-5783-C996E4A0E70B";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "MainArmGeoShapeOrig_ai_matte";
-	rename -uid "9CC09FB8-4C9C-D85D-63E8-43A4D38B296F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_HoseShape_ai_matte";
-	rename -uid "58DD93B4-42CC-DE56-EFB9-8EAB9CD5D669";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Head_FK_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "71831856-40E0-F28C-3434-3FA197999F5C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Tread_Wire_CurveShapeOrig2_ai_matte";
-	rename -uid "274E3776-43BB-B8DD-EBBF-16B857F18978";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye4ShapeOrig_ai_matte";
-	rename -uid "78C854E7-47D8-99C2-BC82-07A19C1F583A";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Mouth_SmirkShapeOrig1_ai_matte";
-	rename -uid "1ABD571D-44ED-C939-8894-79A2016C2EE7";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Palm_Jnt_CtrlShape_ai_matte";
-	rename -uid "CA9A6A46-4285-496D-CCC0-AD8AD2CF8059";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Eye_SquintShapeOrig_ai_matte";
-	rename -uid "F3F87E1D-4B05-4B62-E167-06B32C6245DE";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polySurfaceShape191_ai_matte";
-	rename -uid "6B8FCC42-4FB3-FCC4-CF55-FF88B60DE925";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_BoredShape_ai_matte";
-	rename -uid "F91D3CA5-4363-0C20-DA9B-6799000CE369";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Tread_Wire_CurveShape_ai_matte";
-	rename -uid "CAE2565E-4688-0744-AAE8-CDB72C9CC2BC";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_11_CtrlShape_ai_matte";
-	rename -uid "87695004-48C8-6D2D-6E4D-BE863C34CDA9";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_10_CtrlShape_ai_matte";
-	rename -uid "F184403D-4FA8-0E86-0D46-5EA7B6D1E682";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Tread_Wire_CurveShapeOrig1_ai_matte";
-	rename -uid "AD998480-4A98-4767-C04A-E3B724AA3B19";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Treads_CtrlShape_ai_matte";
-	rename -uid "D737AC24-4231-8505-B864-EF9038F922DC";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "D7985889-4178-42B1-02E2-1B834A216154";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Mouth_BoredShape_ai_matte";
-	rename -uid "4791AF4C-4113-F3C7-BC04-A1859BEC3C61";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "RightTreadGeoShape_ai_matte";
-	rename -uid "60FE9B80-475C-1311-98E7-2685C4126E90";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_DeterminedShape_ai_matte";
-	rename -uid "21F82099-4425-EFF7-BB55-FCB95FB878E0";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polySurfaceShape189_ai_matte";
-	rename -uid "430E6588-48E5-8448-3991-01AAF1A5FBBB";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Visor_CtrlShape_ai_matte";
-	rename -uid "5C86892E-4532-9A67-B491-A6BC8DC6B524";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte";
-	rename -uid "6A2D08C5-40A0-A84F-01CD-26B418D0F7B4";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_Squint_Shape1_ai_matte";
-	rename -uid "AF0EE4B4-4BF5-34E3-3C08-EFB4FED1D852";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_Swing_CtrlShape_ai_matte";
-	rename -uid "E0034E52-49A3-57F6-4910-21A38A39B235";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShapeOrig_ai_matte";
-	rename -uid "F7765A06-48C7-CAFD-FB83-57A628BCE916";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_SmirkShape_ai_matte";
-	rename -uid "992CECB5-4095-46E1-DF50-9190FA3897F3";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte";
-	rename -uid "FD7F5029-42A1-3E9C-22D2-20997BEE76C4";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte";
-	rename -uid "0DACD9EA-43DE-3AEF-AB74-C6B13DE7B4BD";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Head_FK_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "479136DD-4A0D-6501-57AD-B097A5C7A0A8";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Bay_01Shape_ai_matte";
-	rename -uid "2137F783-4CCB-F223-837E-1890D5C001EA";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Finger_01_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "A9D48B3E-4BA5-025D-B311-2E8AEF0E1374";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "BG_TablesShape_ai_matte";
-	rename -uid "27753CC2-4BCC-FBA2-83F6-67ABAECEA7D1";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Arm_Base_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "35BDD467-4BF4-6635-8BF5-5D9901672B5C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Eye_SadShape_ai_matte";
-	rename -uid "35E2F272-4A40-2886-ADB8-5C8705CF02EF";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Arm_FK_Jnt_05_CtrlShape_ai_matte";
-	rename -uid "FEDBAC91-4472-D124-7852-7A9C039F423A";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "NeutralShape_ai_matte";
-	rename -uid "7F3881F1-4D1C-9652-C3BD-82AFE023C471";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte";
-	rename -uid "CA64E9F1-49AD-E556-F8EB-9CB7AD3A2FFF";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte";
-	rename -uid "A8318672-41C6-53B8-15B9-28AC5DCD94B7";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polyToCurveShape1_ai_matte";
-	rename -uid "F895E055-4773-D346-3E51-EDBEFF3D3119";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Light_Rig_CtrlShape_ai_matte";
-	rename -uid "30D86719-428E-CC18-9499-C29922694177";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "RocketShape_ai_matte";
-	rename -uid "DB7D2320-41FD-673D-1872-209733C1B67E";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_11_CtrlShape_ai_matte";
-	rename -uid "0A892438-4121-1A88-1741-A4B4394C29F9";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Mouth_BoredShapeOrig1_ai_matte";
-	rename -uid "E8934C1F-492E-38F0-FBFA-03934C488D91";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "PillarsShape_ai_matte";
-	rename -uid "8C5CE5FF-47EF-87A3-7EF4-1987932F07C9";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "70F1B6CC-465C-78D9-2C99-19AF63375387";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte";
-	rename -uid "060FCAE8-4480-A0C1-2CFA-39968F39A77F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_Actually_BoredShape_ai_matte";
-	rename -uid "6AB8ECB1-4E04-D3B2-CF77-688610BEA40B";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "LeftTreadGeoShapeOrig1_ai_matte";
-	rename -uid "B4B38389-4C54-A76C-9D33-4EB9E0D043E3";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_EyeShape_ai_matte";
-	rename -uid "BC84EC47-4985-E6A5-BE15-4EBE3CC4A214";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_CurveShape1Orig_ai_matte";
-	rename -uid "1DC98EEC-4184-4FC8-1790-EBA2BE6E21F6";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_OpenShape_ai_matte";
-	rename -uid "DCB58778-4DA6-5D05-E0E8-09905F9EA62A";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Cog_Jnt_CtrlShape_ai_matte";
-	rename -uid "5AC0FDC3-4A47-47D2-764C-44B5C74BD9CA";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Finger_01_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "762A6D4D-4642-D23A-5E10-6CA71C5AC544";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "PaintVatShape_ai_matte";
-	rename -uid "BCB5B830-4299-6E71-C685-7593A40F9699";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "LeftTreadGeoShape_ai_matte";
-	rename -uid "9E2E91FE-4F66-DF55-45F4-B8A857E19580";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_04_CtrlShape_ai_matte";
-	rename -uid "ACD2FB2E-4354-80AB-099E-19B833C83D84";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig1_ai_matte";
-	rename -uid "A7A491B5-4523-EFD3-8D29-C4A22BA8D20F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_EyeShape_ai_matte";
-	rename -uid "D124D6F2-4660-A5ED-5280-7AADACEF3899";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_08_CtrlShape_ai_matte";
-	rename -uid "D6F8D42F-4B55-FB07-558E-59ACFA23FD78";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Bay_03Shape_ai_matte";
-	rename -uid "3276CCBA-4761-90DA-6253-20A0288F1DC1";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_08_CtrlShape_ai_matte";
-	rename -uid "835C1F7F-4671-D4CE-47AC-08897C0C6F08";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte";
-	rename -uid "CC431A03-484F-DCBE-DB7D-8A8C6535EFDF";
+	rename -uid "B652341C-49DF-1AAE-C73E-F1BBD6569D44";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Mouth_CtrlShape_ai_matte";
-	rename -uid "56303645-426B-AAEE-CB33-7EBF2519D271";
+	rename -uid "89E5423D-41AB-1920-0C96-44B1F7FE6D24";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_HoseShapeOrig1_ai_matte";
-	rename -uid "30782CD1-4DF6-12B7-9F4E-AE9F49BC07CF";
+createNode applyAbsBoolOverride -n "Left_Eye_BoredShape_ai_matte";
+	rename -uid "C355BADB-446D-0A05-63A5-F4B4E5FAFFB2";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Mid_Wheel_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "CE777AB0-4348-AF83-CAFF-AAB7C82C09A2";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Hopper_BinShape_ai_matte";
-	rename -uid "175350D6-45EB-C725-7A93-B9A55AC958DE";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Eye_CloseShapeOrig_ai_matte";
-	rename -uid "FA5B2415-4AE2-37EC-9048-4ABB03E7A9A4";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_BoredShapeOrig1_ai_matte";
-	rename -uid "2F1160A6-424E-F7F1-9DF1-85B49BC9EDAE";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte";
-	rename -uid "29701993-4E4E-2D89-C222-5CB8109FC492";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Floor1Shape_ai_matte";
-	rename -uid "B3A5D743-4949-C4A1-D269-AE8288CC5634";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Mouth_SmirkShape_ai_matte";
-	rename -uid "8ACD702E-452F-E9D0-2403-5FA93A54505C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Wiper_CtrlShape_ai_matte";
-	rename -uid "137D35EE-4E2E-DF81-9317-95944719BF9D";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Front_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "E1F00CDB-403B-5825-1677-9993205BCFB6";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_10_CtrlShape_ai_matte";
+	rename -uid "A4E4842B-4C6E-B076-721B-D9B19F3A4B3E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Hand_Ring_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "28A56DBA-4798-6A5F-3CF3-26A5C93115F3";
+	rename -uid "9A1B564C-42FB-7A76-84F9-FC9DE53E919F";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Eye_CloseShape_ai_matte";
-	rename -uid "5CB5367F-4AFE-B97C-2ACF-99A4EB1FEE29";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte";
+	rename -uid "72F9BF0F-4A33-6C27-1ECC-BAB8844470B6";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShapeOrig1_ai_matte";
-	rename -uid "2F61A7F0-4AA5-9157-2372-E8BC01E38D9D";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_07_CtrlShape_ai_matte";
+	rename -uid "DD0DC8CE-494B-0B3B-ECDC-819B60E456DF";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Eye_CtrlShape_ai_matte";
-	rename -uid "9A68D979-4551-1CA8-18C9-91919CC7FBB8";
+createNode applyAbsBoolOverride -n "Arm_IK_Jnt_05_CtrlShape_ai_matte";
+	rename -uid "40B47C43-454C-B106-6819-96B1DE5D1BD9";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_CloseShape_ai_matte";
-	rename -uid "7798FE5E-4AA7-D486-AA2D-05A93778CF15";
+createNode applyAbsBoolOverride -n "L_Tread_Wire_CurveShape_ai_matte";
+	rename -uid "5FA5397B-4D45-108B-054C-0D893359B5FB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "CeilingShape_ai_matte";
-	rename -uid "5FBBCC89-4F80-AC4C-3A92-D48A4D446D42";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_11_CtrlShape_ai_matte";
+	rename -uid "98777D70-4D21-7C9C-94F8-018CB42D5F50";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_SmirkShapeOrig_ai_matte";
-	rename -uid "48A5844D-4114-AA5A-4D6F-9DAFA150558C";
+createNode applyAbsBoolOverride -n "L_Eye_Sad_Shape1_ai_matte";
+	rename -uid "29A8D25E-412E-0E23-6640-CEA0B30500AC";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_05_CtrlShape_ai_matte";
-	rename -uid "BED11EBD-4176-2A99-6AC4-DD94940BB1CE";
+createNode applyAbsBoolOverride -n "Bay_03Shape_ai_matte";
+	rename -uid "D59ED48A-4A13-1D37-FC85-81B0B36ECEA4";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polyToCurveShape2_ai_matte";
-	rename -uid "756A3E90-4791-6291-6BAB-A696E094D9ED";
+createNode applyAbsBoolOverride -n "R_Tread_Wire_CurveShapeOrig2_ai_matte";
+	rename -uid "D6878F1E-48AE-048E-D3E3-389DFCE0F5DE";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Wiper_CtrlShape_ai_matte";
-	rename -uid "202B9544-4CF5-4AC3-97EB-1CB38E74FFE1";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte";
+	rename -uid "B3391E87-4C81-06DA-02FF-44954976ADDB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye_ArrowShape_ai_matte";
-	rename -uid "665C47F7-40FA-ACC0-0C81-9394F5073C1F";
+createNode applyAbsBoolOverride -n "Eyes_CtrlShape_ai_matte";
+	rename -uid "FA032032-4D2D-0DF2-5AFD-B3AE97ED2585";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Arm_FK_Jnt_04_CtrlShape_ai_matte";
-	rename -uid "D8CD6627-4AC4-89AF-8E65-35A83B3D1D71";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte";
+	rename -uid "AC9AA91E-4E59-6A41-7546-988F08123547";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Finger_02_Jnt_02_CtrlShape_ai_matte";
-	rename -uid "D281BDF9-4F0C-2E50-9806-17BE8DFF6B41";
+createNode applyAbsBoolOverride -n "LeftTreadGeoShape_ai_matte";
+	rename -uid "858B165C-422B-F2DB-DE9E-1496255E685A";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Eye_SquintShapeOrig1_ai_matte";
-	rename -uid "16722554-4AF9-BE55-BEC5-02BEF711A7D4";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Prop_CtrlShape_ai_matte";
-	rename -uid "1E99F77E-4DFB-46E1-E2F8-5E89A647F8D2";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Finger_03_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "6B99EB30-4165-5170-44EF-268DC10CAF95";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_07_CtrlShape_ai_matte";
-	rename -uid "48C15214-4EAB-D42B-1B26-0BB121260202";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte";
-	rename -uid "9E19872A-4517-11CC-A044-12BFC5F7A926";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig_ai_matte";
-	rename -uid "3F158BD1-4A6B-497F-3148-30B325B87498";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_CurveShape1Orig_ai_matte";
-	rename -uid "6E15C417-4010-1F35-50A2-1D9F32DCDF83";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "IK_Base_CtrlShape_ai_matte";
-	rename -uid "405351BB-4B15-1556-9AF8-D5BC29B8430F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Face_GlassShape1_ai_matte";
-	rename -uid "86730A54-41C2-DC2A-3E61-2DB98D48D334";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Bay_02Shape_ai_matte";
-	rename -uid "693C93BD-436D-E659-0D46-278E336D36CD";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Bay_04Shape_ai_matte";
-	rename -uid "436D94FA-48E9-C587-4F4F-3DB545EF409B";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte";
-	rename -uid "E0A6D199-4AB3-7B49-67FA-26BD5CBFFC45";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte";
-	rename -uid "2CB1D95A-4542-2BAE-B4B1-9986CC301502";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Front_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "02068DA7-4472-86FE-F075-52987F9D0725";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polySurfaceShape72_ai_matte";
-	rename -uid "DF7D8406-4CBC-E2E7-AAD6-51A71C6B8B57";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_06_CtrlShape_ai_matte";
-	rename -uid "290FC61F-49C4-B08C-16DB-2B9FF7B9276A";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Arm_FK_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "2B466106-4602-8E5D-FCD4-2DA2D134F2F9";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte";
-	rename -uid "D6983B19-4024-DB4A-90D1-CA88EF4C1FE7";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte";
-	rename -uid "10DBE553-4A53-0775-2FDE-798177FF5AF9";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_05_CtrlShape_ai_matte";
-	rename -uid "E5542B4E-4602-9867-7483-3AA3244ECEFC";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Piston_03_CtrlShape_ai_matte";
-	rename -uid "43BF5101-4980-239B-B0C2-17ABA02A7CA6";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "polySurfaceShape193_ai_matte";
-	rename -uid "38EBCC81-45F6-5FB9-2E10-17ACE459B62D";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_Open_Shape1_ai_matte";
-	rename -uid "3AAB59BA-4066-2AE0-EE37-659CEB1ADF88";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Piston_01_CtrlShape_ai_matte";
-	rename -uid "74A68310-4692-241C-75BA-4189AFEC1CA2";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "BlendShapeShape_ai_matte1";
-	rename -uid "F60D1786-4125-4C4A-CC00-9BA273C1EC52";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_Eye3ShapeOrig_ai_matte";
-	rename -uid "4FF64FE4-4F3A-8177-7A83-91883EBCE640";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Eye_X_1Shape_ai_matte";
-	rename -uid "24C48CCD-4959-2C8D-A81D-A2A033ED3D40";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Bay_06Shape_ai_matte";
-	rename -uid "FC7A276C-4A22-B10A-BE28-08ADC53871EE";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_12_CtrlShape_ai_matte";
-	rename -uid "B9F13486-4CC4-C391-BAFF-9D8D5D106714";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Back_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "A7FCB9F0-4FD6-86C4-1987-61B888E4B83A";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte";
-	rename -uid "6F847099-4008-5DA1-5F03-99AC896FAE0C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Right_EyeShapeOrig_ai_matte";
-	rename -uid "48EF3ADD-49DA-8955-6B93-64B12D21347C";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "TreadsBaseShape_ai_matte";
-	rename -uid "9C42FC7B-46C3-8EDE-5ED4-09B4223BD451";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Arm_FK_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "A3267921-483D-39B6-A092-DD849FC065BD";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Mid_Wheel_Jnt_01_CtrlShape_ai_matte";
-	rename -uid "EC956902-42E2-8FDA-05AF-19AE38175905";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte";
-	rename -uid "12A9B902-4346-353F-7669-EAB339536376";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Eye_SadShape_ai_matte";
-	rename -uid "14EBF4FF-4A8C-94CB-7EF1-599D3C38C75F";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte";
-	rename -uid "D6C173F4-4ADF-35DD-51FA-F29BD43ECB04";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_13_CtrlShape_ai_matte";
-	rename -uid "D004F9A1-49DB-1613-61E4-259A65F3D767";
-	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_10_CtrlShape_ai_matte";
-	rename -uid "B11A7A51-48CA-C359-5A8C-698EC2D529FF";
+createNode applyAbsBoolOverride -n "L_HoseShapeOrig1_ai_matte";
+	rename -uid "D4800B8E-4B73-8659-6877-DC81AC1C24DB";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Back_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "5DB8C673-4531-B3E3-49BF-A3BA272B7020";
+	rename -uid "A135FB8F-45E5-B8C3-1902-56882E3A5799";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig2_ai_matte";
-	rename -uid "0A4E0D86-4A49-B666-E32E-C7B80EF18CAD";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_13_CtrlShape_ai_matte";
+	rename -uid "561ADB9D-4936-F7B5-6843-81B37B4A39F1";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte";
-	rename -uid "C3AA398B-4DEF-EB91-3058-DEAE5EEE4E25";
+createNode applyAbsBoolOverride -n "Finger_03_Jnt_02_CtrlShape_ai_matte";
+	rename -uid "BAE797B9-4A04-D61A-C5C2-A18CCA532956";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte";
-	rename -uid "368F7006-4B86-A121-B1CF-9F9914F85584";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte";
+	rename -uid "E9F150EF-4C39-500F-2FB9-E0BFCF8CE740";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_CurveShape_ai_matte";
-	rename -uid "AE71E227-4A7E-1C60-2352-15BB311BB42F";
+createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShape_ai_matte";
+	rename -uid "8A8914C8-4354-523B-41C8-84A2702E8A34";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Mid_Wheel_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "7C8BAB14-47AB-BE0F-775F-02A8A15A7B97";
+createNode applyAbsBoolOverride -n "Mouth_SmirkShapeOrig_ai_matte";
+	rename -uid "7E0ED3AF-493D-2FB2-386A-14A8BDC1A9C3";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Eye_X_2_CtrlShape_ai_matte";
-	rename -uid "8E8F79C6-49EF-00FC-1801-319B0CC99D86";
+createNode applyAbsBoolOverride -n "IK_Base_CtrlShape_ai_matte";
+	rename -uid "3F4EB67A-4063-2199-BE8B-B2A8ABB4B9A7";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte";
+	rename -uid "6AC481F1-4AA1-617A-A3CC-C8BBD05B54F0";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_11_CtrlShape_ai_matte";
+	rename -uid "F62F90EA-4FB5-8D71-C4C3-CD8DCA1FD3D8";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_08_CtrlShape_ai_matte";
+	rename -uid "5D85B67A-4A22-0C53-097E-6B948384E9AB";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Finger_02_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "FBEC9329-4B41-E7F0-9A5B-11B6F1195C55";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_BoredShapeOrig1_ai_matte";
+	rename -uid "05992A23-4104-D022-798C-808E157AF841";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_ArrowShape_ai_matte";
+	rename -uid "9BFC925A-42C1-3E67-B868-11877865BD13";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Eye_OpenShapeOrig_ai_matte";
+	rename -uid "8E4C2866-4B1A-E198-440C-34A8BFCB88FE";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Tread_Wire_CurveShape_ai_matte";
+	rename -uid "36A43E6B-4A86-1A5D-9713-EE9B150A227D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Transform_CtrlShape_ai_matte";
+	rename -uid "DB227189-4052-9BBA-9C32-37BC8BBEA884";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "BlendShapeShape_ai_matte";
+	rename -uid "7F8AADE7-4AAF-04C2-3B92-498D876EB20B";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Finger_02_Jnt_02_CtrlShape_ai_matte";
+	rename -uid "8A57A55F-4FC0-41F6-0810-66AB3007A5AE";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte";
+	rename -uid "0A22BAB3-4889-1B22-9642-E19F34247D52";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "polySurface184Shape_ai_matte";
+	rename -uid "49946EE5-4CF9-134F-80DD-0C9088BAD433";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_EyeShapeOrig1_ai_matte";
+	rename -uid "5E034A9F-4EC5-C0F4-15A7-759E47819158";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_03_CtrlShape_ai_matte";
+	rename -uid "22B03504-4575-C168-4832-7099743C936A";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Light_Rig_CtrlShape_ai_matte";
+	rename -uid "2B7A9284-4822-ABA6-C677-2DB32EEC5723";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_SquintShape_ai_matte";
+	rename -uid "019D7ADE-473B-CB5F-38CE-E18028363651";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Hand_Jnt_CtrlShape_ai_matte";
-	rename -uid "44D15DB9-4D4F-71EB-7833-24B50A78FA01";
+	rename -uid "E59F5849-4D67-4F54-A245-D78724379253";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Eye_X_2Shape_ai_matte";
+	rename -uid "73D09648-4428-EE44-9EA9-2C9FF07A5999";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Face_CtrlShape_ai_matte";
+	rename -uid "D87C95FC-4CF5-5151-144B-EF8BAEAA85E6";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Treads_CtrlShape_ai_matte";
+	rename -uid "FD283466-409D-666D-0695-BE986B7401A5";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_09_CtrlShape_ai_matte";
+	rename -uid "A9693EB8-4946-E4C0-20BF-E0B068390B2E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Prop_CtrlShape_ai_matte";
+	rename -uid "3AB5FE5C-4652-3EE0-3D8C-2B8DD9BDEAF9";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_Swing_CtrlShape_ai_matte";
+	rename -uid "425E9384-4E39-DE68-19BE-85B8F43FD7FD";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Eye_SquintShapeOrig_ai_matte";
+	rename -uid "EAE112FE-48AA-80FE-DBBE-6D8E3CC51C39";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig1_ai_matte";
+	rename -uid "5B06BE32-4BBF-C553-7669-94A381978E9D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_CurveShape1Orig_ai_matte";
+	rename -uid "67F6C764-431D-22E1-8C0B-F78CF484321C";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "LeftTreadGeoShapeOrig1_ai_matte";
+	rename -uid "B24E9A08-4931-ADFD-9223-A39F485DCC59";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_12_CtrlShape_ai_matte";
+	rename -uid "F26CC701-42BB-1B76-A4CD-E881CAB750F5";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_12_CtrlShape_ai_matte";
+	rename -uid "D35A759B-4C37-3A0B-20D4-AB923B6ED666";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "E3FC7BA5-405C-D62C-EC6C-899C38B5ED2E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "polySurfaceShape193_ai_matte";
+	rename -uid "388088CA-48C6-65A5-AB4D-1DA05C1068F7";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_SmirkShapeOrig_ai_matte";
+	rename -uid "89679D40-4332-CE61-1453-BCBE044F9443";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "Hopper_Bin1Shape_ai_matte";
-	rename -uid "2960FD6C-4106-70BC-73E4-E9964979B2BC";
+	rename -uid "74384ACB-41CA-E0FE-8380-0B977C98373E";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "Head_FK_Jnt_03_CtrlShape_ai_matte";
-	rename -uid "35818939-49DE-7615-4608-4DA2B003F35F";
+createNode applyAbsBoolOverride -n "polyToCurveShape2_ai_matte";
+	rename -uid "1243A608-499C-3A2A-5B32-32A4D0E772DE";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
-createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte";
-	rename -uid "29710B66-4774-9A5D-A93C-81966BCEA10F";
+createNode applyAbsBoolOverride -n "L_Eye_Squint_ShapeOrig1_ai_matte";
+	rename -uid "669B852B-4D9B-D515-E06D-36A671E1DE76";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Mouth_SmirkShape_ai_matte";
+	rename -uid "A3A260B3-420C-AE6D-E297-A2BC23B2706E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Piston_01_CtrlShape_ai_matte";
+	rename -uid "23028657-452F-04F5-5009-6CA52FAAC31E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Arm_FK_Jnt_03_CtrlShape_ai_matte";
+	rename -uid "9DB1D67C-4BCA-88FE-5F25-168266E4DC7C";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Hand_Ring_Jnt_03_CtrlShape_ai_matte";
+	rename -uid "14D206DF-43D0-CFA9-B96F-98BDFD300501";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_04_CtrlShape_ai_matte";
+	rename -uid "946F38AA-4B55-C19E-0ED3-F3AB1291A6E9";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Bay_06Shape_ai_matte";
+	rename -uid "7A797D28-488D-8AB8-480A-3896E426DFF5";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Eye_CloseShapeOrig_ai_matte";
+	rename -uid "B045E075-4894-750E-4C45-8B823CB93E5A";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Mid_Wheel_Jnt_03_CtrlShape_ai_matte";
+	rename -uid "8AE77772-4473-AA63-0348-7D9841CE6CC2";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Mouth_BoredShapeOrig_ai_matte";
+	rename -uid "F6E56773-4BAC-517E-1467-E88E5FE1E602";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Trash_BinShape_ai_matte";
+	rename -uid "19CBDC6F-4BB3-1AAE-558D-BEBEA54E1660";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Hand_Ring_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "1C8752BA-4F6B-06CB-CA26-718D743115F2";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_HoseShapeOrig1_ai_matte";
+	rename -uid "A51E074E-4444-C312-1255-448EA63D82B8";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "polyToCurveShape1_ai_matte";
+	rename -uid "03AED0BF-4434-3013-5BA6-DC96425406E8";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_Open_Shape1_ai_matte";
+	rename -uid "98403598-40F7-5A95-2C4E-BCB55000F8C6";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_CurveShape1Orig_ai_matte";
+	rename -uid "1315A533-46BC-6F4F-C0AA-019188E35DBA";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_ArrowShape_ai_matte";
+	rename -uid "23906706-4099-8530-FEBA-7F89E3C47438";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_CurveShape_ai_matte";
+	rename -uid "128FDD50-4DFF-8D93-C3BB-218CCF60FE19";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "CeilingShape_ai_matte";
+	rename -uid "4657E8C4-48B3-038A-75ED-6484DC0D9910";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte";
+	rename -uid "8698FA25-4DB7-5667-7776-90B9DC0EBB29";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Bay_01Shape_ai_matte";
+	rename -uid "149F2225-4381-2E7D-0902-9E94D8FBD5AD";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Eye_X_2_CtrlShape_ai_matte";
+	rename -uid "6158E0F7-406A-6B40-F5FF-7097C81417FF";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Palm_Jnt_CtrlShape_ai_matte";
+	rename -uid "243505C6-4742-5001-B372-51A4060A2C7D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_CtrlShape_ai_matte";
+	rename -uid "97A52EE0-4C80-A2A9-56F9-01AAAFDF0CE4";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Table_03Shape_ai_matte";
+	rename -uid "97A928CA-4F23-E9B2-BB70-0D9B34BD0573";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_05_CtrlShape_ai_matte";
+	rename -uid "ACAA02F9-4C39-8D22-2049-06B0EAB8A5C6";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "polySurfaceShape199_ai_matte";
+	rename -uid "5E024E88-4061-DC6E-5230-85938D48ADA1";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "polySurfaceShape190_ai_matte";
+	rename -uid "97B060B9-4D23-D49A-D62C-BCBD95B8E44A";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "pCube47Shape_ai_matte";
+	rename -uid "26100A14-437D-2472-C2D6-2186ED168FB6";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Tread_Wire_Base_CurveShape_ai_matte";
+	rename -uid "52FF27E0-4DD6-BDF5-C794-318DA3F4FCC0";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_Squint_Shape1_ai_matte";
+	rename -uid "24F055DA-4447-C10A-5BF7-5295E56C84F4";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Eye_OpenShape_ai_matte";
+	rename -uid "3117EF69-4BA6-FB08-62D5-F9A5B05949D5";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Eye_CloseShape_ai_matte";
+	rename -uid "AC228ECE-40DE-FE7E-3659-F69DE8C4A962";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte";
+	rename -uid "FACB9B1E-4E48-2EB3-D209-DF92BCCFD027";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_Sad_ShapeOrig_ai_matte";
+	rename -uid "D137C3B0-4F0E-1DA2-BCA9-B6B3DDE11F29";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_SmirkShape_ai_matte";
+	rename -uid "5518EE9F-4298-1BF6-1AB9-F39BBDA3C886";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "PillarsShape_ai_matte";
+	rename -uid "FE1A2FC7-45CD-B723-CB61-B58868910BF3";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte";
+	rename -uid "7494D5C1-40A6-792F-24B5-419E9A86FD45";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode applyAbsBoolOverride -n "L_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte";
-	rename -uid "5768BB4E-4B06-C865-AAEE-B0A445EF5D21";
+	rename -uid "032B2284-4587-5BA7-EB75-2AAD4F980C78";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Eye_SquintShapeOrig1_ai_matte";
+	rename -uid "B929E09C-410F-A18D-FD20-98AE126BCA52";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte";
+	rename -uid "284006F1-48B2-63AB-9CBE-0AA41E5C7A09";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Tread_Wire_Base_CurveShape_ai_matte";
+	rename -uid "8E0BEFEA-4D8F-5C2D-9088-97B0DEF235C1";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte";
+	rename -uid "ED8ABBE6-4F14-C896-77BE-E6AA6E51BE01";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Mid_Wheel_Jnt_02_CtrlShape_ai_matte";
+	rename -uid "D017A3A7-494E-D4F0-A22F-87996B3F9271";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Mouth_BoredShapeOrig1_ai_matte";
+	rename -uid "6CE9F2BD-4940-4EE4-69BF-328AC7334CF9";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Arm_FK_Jnt_05_CtrlShape_ai_matte";
+	rename -uid "7803E53C-41A2-DA1A-18B9-CD9A19092D4A";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Bay_04Shape_ai_matte";
+	rename -uid "3B014789-4BA1-3596-5F20-63BD657EE839";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_02_CtrlShape_ai_matte";
+	rename -uid "B2AFB6F9-4C6F-98A4-6FCD-2F9E58315274";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "polySurfaceShape195_ai_matte";
+	rename -uid "006B9EB1-406C-55E1-1620-19BAEEE51D4B";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Exclamation_PointShape_ai_matte";
+	rename -uid "5728C557-4E11-60CF-BA4A-9D8DCE156CB7";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Arm_Base_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "23DD0960-4728-549E-031C-3691D7D12D1C";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte";
+	rename -uid "2B600B24-4FF6-4F87-B0E6-769A75153CCE";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Eye_X_1Shape_ai_matte";
+	rename -uid "5E0AEE86-4983-6BA9-C37D-E5A0930A77FB";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "BlendShapeShape_ai_matte1";
+	rename -uid "34D9E50F-4408-3FAB-BFD6-66B4D099B779";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye4ShapeOrig_ai_matte";
+	rename -uid "AED984E1-4322-7B61-7D67-B682502B370E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Cog_Jnt_CtrlShape_ai_matte";
+	rename -uid "E5722749-4903-5B81-10F6-0BA1C6CB21BD";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_13_CtrlShape_ai_matte";
+	rename -uid "B52CE519-4589-F91D-D578-EEBDC61A2EE0";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte";
+	rename -uid "BB6285C6-43A2-FF31-4C1E-149AAC6B17E7";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Arm_Base_Jnt_02_CtrlShape_ai_matte";
+	rename -uid "A2300678-4D7C-9E5C-E95E-DDB503108292";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_06_CtrlShape_ai_matte";
+	rename -uid "0C4B92CB-4AA8-9283-66D7-F6AEAFCF40A7";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig2_ai_matte";
+	rename -uid "81EDB413-4D7A-DF57-CBE9-3581BCDC2067";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "polySurfaceShape72_ai_matte";
+	rename -uid "6FDBDA41-4375-186B-0827-3186D35EA6A3";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Tread_Wire_CurveShapeOrig1_ai_matte";
+	rename -uid "2AED3E0C-4056-F655-512F-58BCCD9BD7CD";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_CloseShape_ai_matte";
+	rename -uid "38C648B9-4EEB-2F49-3B79-B3BF14B10948";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "MouthShape_ai_matte";
+	rename -uid "FDBCAEB9-4972-2ECE-BCEE-3383D8CFCAAA";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_SmirkShapeOrig2_ai_matte";
+	rename -uid "77587B1B-4ABA-7320-6DFF-13A0800B9711";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Treads_CtrlShape_ai_matte";
+	rename -uid "FE35B3F2-4500-FFBD-2393-C6915BC7BF22";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "pCube46Shape_ai_matte";
+	rename -uid "7FD6194E-49E0-EE5E-6CBE-2A91E062D47B";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Eye_SadShapeOrig_ai_matte";
+	rename -uid "218C8D11-4A20-2FFE-99F8-EC9A4478C8C2";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Eye_X_1_CtrlShape_ai_matte";
+	rename -uid "5B491D77-4E53-CD0E-68D1-D9AF3AFB7035";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "RocketShape_ai_matte";
+	rename -uid "F6F4128B-4408-891E-EA89-97B33BE72086";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte";
+	rename -uid "53201609-4AC0-04A5-463C-F4B05200A806";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte";
+	rename -uid "C6844053-4F38-B559-03CA-C194D7761C24";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Wiper_CtrlShape_ai_matte";
+	rename -uid "F2AB418C-40BC-DF70-ACCD-69B38484E33B";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_SmirkShapeOrig_ai_matte";
+	rename -uid "C9FCBEBB-4CCB-3530-B787-F7ADC9882835";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Visor_CtrlShape_ai_matte";
+	rename -uid "FDB1F97D-4597-BB1C-43DA-42A6083B9F41";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Arm_FK_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "FBB2BAD6-4DB4-1360-6440-F7A1EAA3436E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShapeOrig_ai_matte";
+	rename -uid "87EEC5F6-4638-DCEC-EC36-A19A23080E79";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig1_ai_matte";
+	rename -uid "D5D60699-49F0-763E-C673-359E89C3F9A4";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_EyeShapeOrig_ai_matte";
+	rename -uid "BBE31574-4850-5474-57A8-DFA4C198EE24";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_Close_Shape1_ai_matte";
+	rename -uid "9A7D3F09-4B07-C734-CE67-82A6DE8011FB";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Floor1Shape_ai_matte";
+	rename -uid "36812B2A-483D-B341-BB02-BD97ED97633D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_03_CtrlShape_ai_matte";
+	rename -uid "DBB2E909-4E6E-DC83-A103-E9BC1B0D0D5E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye3ShapeOrig_ai_matte";
+	rename -uid "29139F24-45A6-4172-B982-E385FB89129C";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_BoredShapeOrig_ai_matte";
+	rename -uid "23BBCC5D-45A8-AF57-D607-8484CBA5D0EE";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_SadShape_ai_matte";
+	rename -uid "B42DAC51-4006-F9FA-A275-60B5576BC2EC";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "NeutralShape_ai_matte";
+	rename -uid "72D50B2C-4999-6626-F0DC-3FBC458F001C";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Arm_FK_Jnt_04_CtrlShape_ai_matte";
+	rename -uid "8141AC0F-45B8-014C-12C1-309FC048BFC4";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_ArrowShapeOrig_ai_matte";
+	rename -uid "81B4198E-4EB8-95B4-A7F6-2AB0F874F2E4";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_EyeShape_ai_matte";
+	rename -uid "E0C31130-48A2-22B8-36AB-5B96B7D6DFA4";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte";
+	rename -uid "F0A707B0-4C10-5FC1-C8CF-E49A23E5293E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_BoredShapeOrig2_ai_matte";
+	rename -uid "A8DB3C57-4170-F8E1-96B6-C4B4DB47B00D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte";
+	rename -uid "1F3DE2B3-4DDD-77BD-9EA5-FCBF676744AD";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte";
+	rename -uid "68E936CC-4387-E5D5-DCB7-6F99C40D8569";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Face_GlassShape1_ai_matte";
+	rename -uid "CD31F1C3-4B28-48AF-21A4-B8859EE63FD3";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_DeterminedShapeOrig1_ai_matte";
+	rename -uid "5A6190DF-481E-42F4-D077-0CACE0DE228F";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_06_CtrlShape_ai_matte";
+	rename -uid "C67E7688-49CD-17CA-5994-B9B32ED8E80E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Eye_SquintShape_ai_matte";
+	rename -uid "0E8FFEB3-4230-EE7C-403A-7D9BED3B4FE7";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_OpenShape_ai_matte";
+	rename -uid "83746AFD-4441-16C2-1A86-E99F5BC18E4D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte";
+	rename -uid "04149311-4E6F-BC2D-3756-FDA9B90D6550";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Mid_Wheel_Jnt_02_CtrlShape_ai_matte";
+	rename -uid "BDED1D45-4718-4602-C721-B191D06A8F3D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_08_CtrlShape_ai_matte";
+	rename -uid "9267BFA4-43B2-CC0B-78BC-2990071818C8";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Eye_SadShape_ai_matte";
+	rename -uid "9F825B8D-47C0-A063-FD1E-A49B8B1738AE";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "TreadsBaseShape_ai_matte";
+	rename -uid "35EBB4E6-480D-6D26-FB98-509310148F63";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte";
+	rename -uid "6275E382-4E4B-3DD0-705D-43BF28A0CE38";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_Open_ShapeOrig_ai_matte";
+	rename -uid "07B1B8CB-4FE6-C96E-4C02-0EA61AA0CA15";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "3314054F-46AA-5FF8-B3ED-68BC7728D0E1";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_BoredShape_ai_matte";
+	rename -uid "0D38E94F-41E0-8469-C4F4-FF8BF62F838A";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Finger_01_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "17BB49F9-4DF8-73F9-876C-AB8F2D4C640B";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "MainArmGeoShapeOrig_ai_matte";
+	rename -uid "261E7B28-4562-4702-BA10-9BABF40DB948";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_Actually_BoredShape_ai_matte";
+	rename -uid "3833DDE9-4F67-994F-A8CB-C9942FF7DE19";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_SmirkShape_ai_matte";
+	rename -uid "FE209FA0-4CE6-8E47-0418-8E8274257F65";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_HoseShape_ai_matte";
+	rename -uid "03381156-4365-F8AE-D186-DBBF884EE3D9";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte";
+	rename -uid "AB600A74-43AD-76CF-99D0-FD9B061B283D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_Close_ShapeOrig_ai_matte";
+	rename -uid "63FB5643-4010-265A-7EB9-AB84C279A9CB";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Bay_07Shape_ai_matte";
+	rename -uid "E8773D50-4BEE-323D-B983-8989973A67FC";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Finger_01_Jnt_02_CtrlShape_ai_matte";
+	rename -uid "3AA0BD47-42B7-A084-F342-C8856B36CB76";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "OoohShape_ai_matte";
+	rename -uid "DA0157B0-4610-4CF6-D58F-96BEAA9B164F";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Piston_02_CtrlShape_ai_matte";
+	rename -uid "E18F5199-4883-10E7-461A-37B1CFDA557C";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "WallShape_ai_matte";
+	rename -uid "0D4A656A-483B-84D5-8205-E7B9A410FC25";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Wiper_CtrlShape_ai_matte";
+	rename -uid "FFEC4316-438F-4B07-2725-CC9783B3D9DC";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "RightTreadGeoShape_ai_matte";
+	rename -uid "0893B22E-4F8C-D8DE-AF82-1682DEBA4EDC";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Mouth_BoredShape_ai_matte";
+	rename -uid "CCE1B8E1-4093-A5F8-8498-749C50C74BA3";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "polySurfaceShape191_ai_matte";
+	rename -uid "EBC0EB13-4D76-9B5C-4D6B-B5BDF770D501";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_10_CtrlShape_ai_matte";
+	rename -uid "DC8AB427-45C8-54D1-ACD1-48AD6244BECF";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "PaintVatShape_ai_matte";
+	rename -uid "FA69AA76-49E3-30FB-E9AB-08993CEF5A80";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Finger_03_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "2154183B-44DA-4113-BED8-DF97C9671139";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_HoseShape_ai_matte";
+	rename -uid "525C180E-4C22-77F7-823E-EA9CA77E0C6B";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte";
+	rename -uid "F8C9DA98-4F42-C95C-756F-E98B6912DC5C";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_ArrowShapeOrig_ai_matte";
+	rename -uid "C5C57DE6-4BDF-8FE7-0101-48B876C50714";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_Actually_BoredShapeOrig_ai_matte";
+	rename -uid "EE571EC8-4C73-93DD-4903-6AB50FADF65E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Mouth_SmirkShapeOrig1_ai_matte";
+	rename -uid "A5EC4CDD-46E2-235B-8D08-DC93A2E01840";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_04_CtrlShape_ai_matte";
+	rename -uid "191CDBE4-40DF-8C5F-994D-AD97F659F85E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Eye_CtrlShape_ai_matte";
+	rename -uid "36902404-4118-A5E4-BC2F-74BEA9A08822";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "polySurfaceShape189_ai_matte";
+	rename -uid "CBE57CDA-4DD1-CC66-F731-FB8DE5AEF917";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "polySurfaceShape192_ai_matte";
+	rename -uid "2429B057-4B8E-5ED7-1DED-B3924AE36BD4";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "BG_TablesShape_ai_matte";
+	rename -uid "186CDDC0-46CE-C7FF-84D9-8E9DEEB50040";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Front_Main_Wheel_Jnt_CtrlShape_ai_matte";
+	rename -uid "E2ADB056-4204-CC01-2487-3D926628D902";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_02_CtrlShape_ai_matte";
+	rename -uid "BCD28AB1-44B9-6280-CA4F-F287AA5936AE";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig_ai_matte";
+	rename -uid "A6B0C9B9-409E-AEF9-6B1F-0FB68AB4CCD0";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte";
+	rename -uid "6B080087-4793-C1E0-1253-E99C079711A8";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_Eye_BoredShapeOrig2_ai_matte";
+	rename -uid "34657E7F-4872-0EB8-4E3B-1A9F53077E91";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "MainArmGeoShape_ai_matte";
+	rename -uid "3E39E5D0-4DF1-EE7D-D8BD-31985B1FE5AF";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Piston_03_CtrlShape_ai_matte";
+	rename -uid "65059AC7-4AB5-D238-ACF9-5BACB1639B9D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Bay_02Shape_ai_matte";
+	rename -uid "BA2F8D6E-45E0-1C84-F648-048C496A4576";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Hopper_BinShape_ai_matte";
+	rename -uid "846B8634-42C5-D2AA-0126-97B7B79F0091";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Treads_Base_FK_Jnt_CtrlShape_ai_matte";
+	rename -uid "2CE48A01-4AB6-E30A-393F-3E82FA5F4B8C";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Left_EyeShapeOrig_ai_matte";
+	rename -uid "2BA334C9-4F0C-D1FE-F290-93BF01BFEBF8";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_CurveShape_ai_matte";
+	rename -uid "63E5FD1A-4920-4CD1-FAA6-7AB6E61FFD0F";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_EyeShape_ai_matte";
+	rename -uid "13EEACE4-4A9E-494E-392A-D29096FA83BA";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_DeterminedShape_ai_matte";
+	rename -uid "57348397-4EC4-A5F3-89B1-1B84605BEB7A";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Eye_Squint_ShapeOrig_ai_matte";
+	rename -uid "2924D142-44F7-0799-1B58-B68B09638B89";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_05_CtrlShape_ai_matte";
+	rename -uid "1827ECC4-4AC1-DF11-296F-B5AC854A8673";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Mid_Wheel_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "7AF634E6-41DD-2E06-7743-40923BC7518A";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "TreadsBaseShapeOrig_ai_matte";
+	rename -uid "179F1170-45FB-C335-68F2-449145D55AD4";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "TableShape_ai_matte";
+	rename -uid "2E852520-46B9-D23E-D211-A09813785C6D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Back_Main_Wheel_Jnt_CtrlShape_ai_matte";
+	rename -uid "05CC3B3E-41D3-5571-B9EA-D1BE3332A743";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_SmirkShapeOrig1_ai_matte";
+	rename -uid "ED5C8EC4-4EDC-598E-D9B9-928CD28977B7";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_07_CtrlShape_ai_matte";
+	rename -uid "5AA8D964-407B-87DD-223E-4DA49032D43E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Front_Main_Wheel_Jnt_CtrlShape_ai_matte";
+	rename -uid "7935C4AC-431E-6B50-C6E8-9F968C41F77D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_DeterminedShapeOrig_ai_matte";
+	rename -uid "27A075DE-497E-1C19-C93C-15B2B96FCB01";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte";
+	rename -uid "21774500-4A09-9D9D-6C25-85A8E6593295";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Mid_Wheel_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "8B4EA022-4479-7637-D94E-43A8D87A5827";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte";
+	rename -uid "C936054A-4234-A0B2-506B-18AF163C546C";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte";
+	rename -uid "A51AAB5D-499E-A958-09AB-DCA5DF5F2932";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "RightTreadGeoShapeOrig2_ai_matte";
+	rename -uid "F38B7361-418D-0253-D1AC-01A617BD62B7";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "PoleVector_CtrlShape_ai_matte";
+	rename -uid "EA4960AB-4D5C-AF95-794A-C281B49D18F3";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Head_FK_Jnt_03_CtrlShape_ai_matte";
+	rename -uid "5CC617A5-42CD-A04A-AA3A-E09B182966F9";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Right_Eye_ArrowShapeOrig1_ai_matte";
+	rename -uid "32CFC9EF-4216-EC97-F790-51B75B903712";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Head_FK_Jnt_01_CtrlShape_ai_matte";
+	rename -uid "02227146-40B9-F5B3-C9ED-429F0B7688F7";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_IK_Jnt_09_CtrlShape_ai_matte";
+	rename -uid "0AB948C9-49FF-5B98-36EE-B1818841DE01";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Hose_Swing_CtrlShape_ai_matte";
+	rename -uid "C5A8EF35-4BBA-FFE1-1B14-E38A8028B96E";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "L_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte";
+	rename -uid "18D56CF7-4E3D-1D6D-D806-47A36BBC7B3F";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Head_FK_Jnt_02_CtrlShape_ai_matte";
+	rename -uid "1427D503-4DD4-26CC-DDD2-1395BA9E69F9";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "Arm_FK_Jnt_02_CtrlShape_ai_matte";
+	rename -uid "B116B992-478A-D8A2-E7EC-0E894351E48D";
+	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
+createNode applyAbsBoolOverride -n "R_Mid_Wheel_Jnt_03_CtrlShape_ai_matte";
+	rename -uid "FB68BE89-45B8-ABCD-C6E0-9CBD6DB4D485";
 	addAttr -ci true -sn "nms" -ln "notOnMainScene" -min 0 -max 1 -at "bool";
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "882F51C2-4966-1893-10D2-1E963DB4BFFB";
+	rename -uid "C530CB60-4786-F971-1EC4-2BA4F84FEC97";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 517;
@@ -31377,13 +31377,13 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 66 ".u";
+	setAttr -s 67 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 11 ".r";
 select -ne :lightList1;
 	setAttr -s 116 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 77 ".tx";
+	setAttr -s 78 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -31413,7 +31413,7 @@ select -ne :defaultRenderGlobals;
 	setAttr ".ofe" -type "string" "";
 	setAttr ".efe" -type "string" "";
 	setAttr ".oft" -type "string" "";
-	setAttr ".ifp" -type "string" "";
+	setAttr ".ifp" -type "string" "<Scene>/<RenderLayer>/ApolloCloseup";
 	setAttr ".rv" -type "string" "";
 	setAttr ".pram" -type "string" "";
 	setAttr ".poam" -type "string" "";
@@ -31655,29 +31655,29 @@ connectAttr "Piston_01_Ctrl_translateX.o" "ApolloRN.phl[244]";
 connectAttr "Piston_02_Ctrl_translateX.o" "ApolloRN.phl[245]";
 connectAttr "Piston_03_Ctrl_translateX.o" "ApolloRN.phl[246]";
 connectAttr "Prop_Ctrl_Follow.o" "ApolloRN.phl[247]";
-connectAttr "ApolloRN.phl[248]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tt";
-connectAttr "ApolloRN.phl[249]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tt";
+connectAttr "ApolloRN.phl[248]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tt";
+connectAttr "ApolloRN.phl[249]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tt";
 connectAttr "Prop_Ctrl_translateX.o" "ApolloRN.phl[250]";
 connectAttr "Prop_Ctrl_translateY.o" "ApolloRN.phl[251]";
 connectAttr "Prop_Ctrl_translateZ.o" "ApolloRN.phl[252]";
-connectAttr "ApolloRN.phl[253]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trp";
-connectAttr "ApolloRN.phl[254]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trp";
-connectAttr "ApolloRN.phl[255]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trt";
-connectAttr "ApolloRN.phl[256]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trt";
-connectAttr "ApolloRN.phl[257]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tr";
-connectAttr "ApolloRN.phl[258]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tr";
+connectAttr "ApolloRN.phl[253]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trp";
+connectAttr "ApolloRN.phl[254]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trp";
+connectAttr "ApolloRN.phl[255]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].trt";
+connectAttr "ApolloRN.phl[256]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].trt";
+connectAttr "ApolloRN.phl[257]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tr";
+connectAttr "ApolloRN.phl[258]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tr";
 connectAttr "Prop_Ctrl_rotateX.o" "ApolloRN.phl[259]";
 connectAttr "Prop_Ctrl_rotateY.o" "ApolloRN.phl[260]";
 connectAttr "Prop_Ctrl_rotateZ.o" "ApolloRN.phl[261]";
-connectAttr "ApolloRN.phl[262]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tro";
-connectAttr "ApolloRN.phl[263]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tro";
-connectAttr "ApolloRN.phl[264]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].ts";
-connectAttr "ApolloRN.phl[265]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].ts";
+connectAttr "ApolloRN.phl[262]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tro";
+connectAttr "ApolloRN.phl[263]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tro";
+connectAttr "ApolloRN.phl[264]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].ts";
+connectAttr "ApolloRN.phl[265]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].ts";
 connectAttr "Prop_Ctrl_scaleX.o" "ApolloRN.phl[266]";
 connectAttr "Prop_Ctrl_scaleY.o" "ApolloRN.phl[267]";
 connectAttr "Prop_Ctrl_scaleZ.o" "ApolloRN.phl[268]";
-connectAttr "ApolloRN.phl[269]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tpm";
-connectAttr "ApolloRN.phl[270]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tpm";
+connectAttr "ApolloRN.phl[269]" "Gun_Ctrl_Grp_parentConstraint1.tg[1].tpm";
+connectAttr "ApolloRN.phl[270]" "Gun_Ctrl_Grp_parentConstraint2.tg[0].tpm";
 connectAttr "ApolloRN.phl[271]" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
 connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowTranslate.o" "ApolloRN.phl[272]";
 connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowRotate.o" "ApolloRN.phl[273]";
@@ -32130,478 +32130,478 @@ connectAttr "enabled1.en" "enabled1_aiAOV_specular_aoven.en";
 connectAttr "enabled1.atv" "enabled1_aiAOV_specular_aoven.val";
 connectAttr "density.en" "density_aiAtmosphereVolume_density.en";
 connectAttr "density.atv" "density_aiAtmosphereVolume_density.val";
-connectAttr "aiMatte.en" "Left_Eye_SmirkShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_SmirkShape_ai_matte.val";
-connectAttr "aiMatte.en" "Treads_Base_FK_Jnt_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Treads_Base_FK_Jnt_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_BoredShapeOrig2_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_BoredShapeOrig2_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_SmirkShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_SmirkShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_ArrowShapeOrig2_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_ArrowShapeOrig2_ai_matte.val";
-connectAttr "aiMatte.en" "Eye_X_1_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Eye_X_1_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_BoredShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_BoredShape_ai_matte.val";
-connectAttr "aiMatte.en" "Hand_Ring_Jnt_03_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Hand_Ring_Jnt_03_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_Open_ShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_Open_ShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_BoredShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_BoredShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "MainArmGeoShape_ai_matte.en";
-connectAttr "aiMatte.atv" "MainArmGeoShape_ai_matte.val";
-connectAttr "aiMatte.en" "Face_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Face_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_12_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_12_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Mid_Wheel_Jnt_03_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Mid_Wheel_Jnt_03_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_CurveShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_CurveShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_09_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_09_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Eye_OpenShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Eye_OpenShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "TreadsBaseShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "TreadsBaseShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_03_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_03_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Exclamation_PointShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Exclamation_PointShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_03_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_03_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Tread_Wire_Base_CurveShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Tread_Wire_Base_CurveShape_ai_matte.val";
-connectAttr "aiMatte.en" "pCube46Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "pCube46Shape_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_DeterminedShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_DeterminedShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "PoleVector_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "PoleVector_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_SmirkShapeOrig2_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_SmirkShapeOrig2_ai_matte.val";
-connectAttr "aiMatte.en" "Mouth_BoredShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Mouth_BoredShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Table_03Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "Table_03Shape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_13_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_13_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Left_EyeShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_EyeShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_BoredShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_BoredShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Eye_SadShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Eye_SadShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_SmirkShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_SmirkShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "polySurface184Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "polySurface184Shape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_Close_Shape1_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_Close_Shape1_ai_matte.val";
-connectAttr "aiMatte.en" "polySurfaceShape195_ai_matte.en";
-connectAttr "aiMatte.atv" "polySurfaceShape195_ai_matte.val";
-connectAttr "aiMatte.en" "BlendShapeShape_ai_matte.en";
-connectAttr "aiMatte.atv" "BlendShapeShape_ai_matte.val";
-connectAttr "aiMatte.en" "Eyes_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Eyes_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "pCube47Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "pCube47Shape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Treads_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Treads_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Eye_X_2Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "Eye_X_2Shape_ai_matte.val";
-connectAttr "aiMatte.en" "Mouth_SmirkShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Mouth_SmirkShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Hand_Ring_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Hand_Ring_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_Sad_Shape1_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_Sad_Shape1_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_SquintShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_SquintShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_ArrowShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_ArrowShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "Arm_Base_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Arm_Base_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_Actually_BoredShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_Actually_BoredShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_DeterminedShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_DeterminedShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Piston_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Piston_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Finger_03_Jnt_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Finger_03_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_09_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_09_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "MouthShape_ai_matte.en";
-connectAttr "aiMatte.atv" "MouthShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_HoseShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_HoseShape_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_ArrowShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_ArrowShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_04_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_04_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Trash_BinShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Trash_BinShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_07_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_07_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Finger_02_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Finger_02_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Eye_OpenShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Eye_OpenShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_Squint_ShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_Squint_ShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_HoseShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "R_HoseShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "polySurfaceShape199_ai_matte.en";
-connectAttr "aiMatte.atv" "polySurfaceShape199_ai_matte.val";
-connectAttr "aiMatte.en" "WallShape_ai_matte.en";
-connectAttr "aiMatte.atv" "WallShape_ai_matte.val";
-connectAttr "aiMatte.en" "TableShape_ai_matte.en";
-connectAttr "aiMatte.atv" "TableShape_ai_matte.val";
-connectAttr "aiMatte.en" "Arm_FK_Jnt_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Arm_FK_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Left_EyeShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_EyeShapeOrig1_ai_matte.val";
 connectAttr "aiMatte.en" "MouthShapeOrig_ai_matte.en";
 connectAttr "aiMatte.atv" "MouthShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Bay_07Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "Bay_07Shape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_Swing_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_Swing_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_ArrowShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_ArrowShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Tread_Wire_Base_CurveShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Tread_Wire_Base_CurveShape_ai_matte.val";
-connectAttr "aiMatte.en" "polySurfaceShape190_ai_matte.en";
-connectAttr "aiMatte.atv" "polySurfaceShape190_ai_matte.val";
-connectAttr "aiMatte.en" "R_Tread_Wire_CurveShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Tread_Wire_CurveShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Eye_SquintShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Eye_SquintShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Mid_Wheel_Jnt_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Mid_Wheel_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_Squint_ShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_Squint_ShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_Close_ShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_Close_ShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Arm_IK_Jnt_05_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Arm_IK_Jnt_05_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Mid_Wheel_Jnt_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Mid_Wheel_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "polySurfaceShape192_ai_matte.en";
-connectAttr "aiMatte.atv" "polySurfaceShape192_ai_matte.val";
-connectAttr "aiMatte.en" "Transform_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Transform_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_06_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_06_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_Sad_ShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_Sad_ShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "RightTreadGeoShapeOrig2_ai_matte.en";
-connectAttr "aiMatte.atv" "RightTreadGeoShapeOrig2_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_BoredShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_BoredShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "OoohShape_ai_matte.en";
-connectAttr "aiMatte.atv" "OoohShape_ai_matte.val";
-connectAttr "aiMatte.en" "MainArmGeoShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "MainArmGeoShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "L_HoseShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_HoseShape_ai_matte.val";
-connectAttr "aiMatte.en" "Head_FK_Jnt_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Head_FK_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Tread_Wire_CurveShapeOrig2_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Tread_Wire_CurveShapeOrig2_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye4ShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye4ShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Mouth_SmirkShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "Mouth_SmirkShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "Palm_Jnt_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Palm_Jnt_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Eye_SquintShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Eye_SquintShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "polySurfaceShape191_ai_matte.en";
-connectAttr "aiMatte.atv" "polySurfaceShape191_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_BoredShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_BoredShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Tread_Wire_CurveShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Tread_Wire_CurveShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_11_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_11_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_10_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_10_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Tread_Wire_CurveShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Tread_Wire_CurveShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "R_Treads_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Treads_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Mouth_BoredShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Mouth_BoredShape_ai_matte.val";
-connectAttr "aiMatte.en" "RightTreadGeoShape_ai_matte.en";
-connectAttr "aiMatte.atv" "RightTreadGeoShape_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_DeterminedShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_DeterminedShape_ai_matte.val";
-connectAttr "aiMatte.en" "polySurfaceShape189_ai_matte.en";
-connectAttr "aiMatte.atv" "polySurfaceShape189_ai_matte.val";
-connectAttr "aiMatte.en" "Visor_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Visor_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_Squint_Shape1_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_Squint_Shape1_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_Swing_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_Swing_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_DeterminedShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_DeterminedShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_SmirkShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_SmirkShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Head_FK_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Head_FK_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Bay_01Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "Bay_01Shape_ai_matte.val";
-connectAttr "aiMatte.en" "Finger_01_Jnt_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Finger_01_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "BG_TablesShape_ai_matte.en";
-connectAttr "aiMatte.atv" "BG_TablesShape_ai_matte.val";
-connectAttr "aiMatte.en" "Arm_Base_Jnt_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Arm_Base_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Eye_SadShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Eye_SadShape_ai_matte.val";
-connectAttr "aiMatte.en" "Arm_FK_Jnt_05_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Arm_FK_Jnt_05_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "NeutralShape_ai_matte.en";
-connectAttr "aiMatte.atv" "NeutralShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "polyToCurveShape1_ai_matte.en";
-connectAttr "aiMatte.atv" "polyToCurveShape1_ai_matte.val";
-connectAttr "aiMatte.en" "Light_Rig_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Light_Rig_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "RocketShape_ai_matte.en";
-connectAttr "aiMatte.atv" "RocketShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_11_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_11_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Mouth_BoredShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "Mouth_BoredShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "PillarsShape_ai_matte.en";
-connectAttr "aiMatte.atv" "PillarsShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_Actually_BoredShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_Actually_BoredShape_ai_matte.val";
-connectAttr "aiMatte.en" "LeftTreadGeoShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "LeftTreadGeoShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "Left_EyeShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_EyeShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_CurveShape1Orig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_CurveShape1Orig_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_OpenShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_OpenShape_ai_matte.val";
-connectAttr "aiMatte.en" "Cog_Jnt_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Cog_Jnt_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Finger_01_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Finger_01_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "PaintVatShape_ai_matte.en";
-connectAttr "aiMatte.atv" "PaintVatShape_ai_matte.val";
-connectAttr "aiMatte.en" "LeftTreadGeoShape_ai_matte.en";
-connectAttr "aiMatte.atv" "LeftTreadGeoShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_04_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_04_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_ArrowShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_ArrowShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "Right_EyeShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_EyeShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_08_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_08_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Bay_03Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "Bay_03Shape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_08_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_08_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte.val";
 connectAttr "aiMatte.en" "Mouth_CtrlShape_ai_matte.en";
 connectAttr "aiMatte.atv" "Mouth_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_HoseShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "L_HoseShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "R_Mid_Wheel_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Mid_Wheel_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Hopper_BinShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Hopper_BinShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Eye_CloseShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Eye_CloseShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_BoredShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_BoredShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Floor1Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "Floor1Shape_ai_matte.val";
-connectAttr "aiMatte.en" "Mouth_SmirkShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Mouth_SmirkShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Wiper_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Wiper_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Front_Main_Wheel_Jnt_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Front_Main_Wheel_Jnt_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_BoredShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_BoredShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_10_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_10_CtrlShape_ai_matte.val";
 connectAttr "aiMatte.en" "Hand_Ring_Jnt_02_CtrlShape_ai_matte.en";
 connectAttr "aiMatte.atv" "Hand_Ring_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Eye_CloseShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Eye_CloseShape_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_DeterminedShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_DeterminedShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "R_Eye_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Eye_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_CloseShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_CloseShape_ai_matte.val";
-connectAttr "aiMatte.en" "CeilingShape_ai_matte.en";
-connectAttr "aiMatte.atv" "CeilingShape_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_SmirkShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_SmirkShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_05_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_05_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "polyToCurveShape2_ai_matte.en";
-connectAttr "aiMatte.atv" "polyToCurveShape2_ai_matte.val";
-connectAttr "aiMatte.en" "L_Wiper_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Wiper_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Right_Eye_ArrowShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye_ArrowShape_ai_matte.val";
-connectAttr "aiMatte.en" "Arm_FK_Jnt_04_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Arm_FK_Jnt_04_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Finger_02_Jnt_02_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Finger_02_Jnt_02_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Eye_SquintShapeOrig1_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Eye_SquintShapeOrig1_ai_matte.val";
-connectAttr "aiMatte.en" "Prop_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Prop_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Finger_03_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Finger_03_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_07_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_07_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_ArrowShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_ArrowShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_CurveShape1Orig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_CurveShape1Orig_ai_matte.val";
-connectAttr "aiMatte.en" "IK_Base_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "IK_Base_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Face_GlassShape1_ai_matte.en";
-connectAttr "aiMatte.atv" "Face_GlassShape1_ai_matte.val";
-connectAttr "aiMatte.en" "Bay_02Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "Bay_02Shape_ai_matte.val";
-connectAttr "aiMatte.en" "Bay_04Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "Bay_04Shape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "L_Front_Main_Wheel_Jnt_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Front_Main_Wheel_Jnt_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "polySurfaceShape72_ai_matte.en";
-connectAttr "aiMatte.atv" "polySurfaceShape72_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_06_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_06_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Arm_FK_Jnt_03_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Arm_FK_Jnt_03_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_05_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_05_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Piston_03_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Piston_03_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "polySurfaceShape193_ai_matte.en";
-connectAttr "aiMatte.atv" "polySurfaceShape193_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_Open_Shape1_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_Open_Shape1_ai_matte.val";
-connectAttr "aiMatte.en" "Piston_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Piston_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "BlendShapeShape_ai_matte1.en";
-connectAttr "aiMatte.atv" "BlendShapeShape_ai_matte1.val";
-connectAttr "aiMatte.en" "Right_Eye3ShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_Eye3ShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Eye_X_1Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "Eye_X_1Shape_ai_matte.val";
-connectAttr "aiMatte.en" "Bay_06Shape_ai_matte.en";
-connectAttr "aiMatte.atv" "Bay_06Shape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_12_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_12_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Back_Main_Wheel_Jnt_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Back_Main_Wheel_Jnt_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "Right_EyeShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "Right_EyeShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "TreadsBaseShape_ai_matte.en";
-connectAttr "aiMatte.atv" "TreadsBaseShape_ai_matte.val";
-connectAttr "aiMatte.en" "Arm_FK_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Arm_FK_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Mid_Wheel_Jnt_01_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Mid_Wheel_Jnt_01_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "L_Eye_SadShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Eye_SadShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "R_Hose_IK_Jnt_13_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_13_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_10_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_10_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_07_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_07_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Arm_IK_Jnt_05_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Arm_IK_Jnt_05_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Tread_Wire_CurveShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Tread_Wire_CurveShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_11_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_11_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_Sad_Shape1_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_Sad_Shape1_ai_matte.val";
+connectAttr "aiMatte.en" "Bay_03Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Bay_03Shape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Tread_Wire_CurveShapeOrig2_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Tread_Wire_CurveShapeOrig2_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Eyes_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Eyes_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "LeftTreadGeoShape_ai_matte.en";
+connectAttr "aiMatte.atv" "LeftTreadGeoShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_HoseShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "L_HoseShapeOrig1_ai_matte.val";
 connectAttr "aiMatte.en" "L_Back_Main_Wheel_Jnt_CtrlShape_ai_matte.en";
 connectAttr "aiMatte.atv" "L_Back_Main_Wheel_Jnt_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Left_Eye_BoredShapeOrig2_ai_matte.en";
-connectAttr "aiMatte.atv" "Left_Eye_BoredShapeOrig2_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_CurveShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_CurveShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Mid_Wheel_Jnt_03_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Mid_Wheel_Jnt_03_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "Eye_X_2_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Eye_X_2_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_13_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_13_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Finger_03_Jnt_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Finger_03_Jnt_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_DeterminedShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_DeterminedShape_ai_matte.val";
+connectAttr "aiMatte.en" "Mouth_SmirkShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Mouth_SmirkShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "IK_Base_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "IK_Base_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_11_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_11_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_08_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_08_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Finger_02_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Finger_02_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_BoredShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_BoredShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_ArrowShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_ArrowShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Eye_OpenShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Eye_OpenShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "R_Tread_Wire_CurveShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Tread_Wire_CurveShape_ai_matte.val";
+connectAttr "aiMatte.en" "Transform_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Transform_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "BlendShapeShape_ai_matte.en";
+connectAttr "aiMatte.atv" "BlendShapeShape_ai_matte.val";
+connectAttr "aiMatte.en" "Finger_02_Jnt_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Finger_02_Jnt_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "polySurface184Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "polySurface184Shape_ai_matte.val";
+connectAttr "aiMatte.en" "Left_EyeShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_EyeShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_03_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_03_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Light_Rig_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Light_Rig_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_SquintShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_SquintShape_ai_matte.val";
 connectAttr "aiMatte.en" "Hand_Jnt_CtrlShape_ai_matte.en";
 connectAttr "aiMatte.atv" "Hand_Jnt_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Eye_X_2Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Eye_X_2Shape_ai_matte.val";
+connectAttr "aiMatte.en" "Face_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Face_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Treads_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Treads_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_09_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_09_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Prop_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Prop_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_Swing_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_Swing_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Eye_SquintShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Eye_SquintShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_BoredShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_BoredShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_CurveShape1Orig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_CurveShape1Orig_ai_matte.val";
+connectAttr "aiMatte.en" "LeftTreadGeoShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "LeftTreadGeoShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_12_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_12_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_12_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_12_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "polySurfaceShape193_ai_matte.en";
+connectAttr "aiMatte.atv" "polySurfaceShape193_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_SmirkShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_SmirkShapeOrig_ai_matte.val";
 connectAttr "aiMatte.en" "Hopper_Bin1Shape_ai_matte.en";
 connectAttr "aiMatte.atv" "Hopper_Bin1Shape_ai_matte.val";
-connectAttr "aiMatte.en" "Head_FK_Jnt_03_CtrlShape_ai_matte.en";
-connectAttr "aiMatte.atv" "Head_FK_Jnt_03_CtrlShape_ai_matte.val";
-connectAttr "aiMatte.en" "L_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte.en";
-connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "polyToCurveShape2_ai_matte.en";
+connectAttr "aiMatte.atv" "polyToCurveShape2_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_Squint_ShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_Squint_ShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "Mouth_SmirkShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Mouth_SmirkShape_ai_matte.val";
+connectAttr "aiMatte.en" "Piston_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Piston_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Arm_FK_Jnt_03_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Arm_FK_Jnt_03_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Hand_Ring_Jnt_03_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Hand_Ring_Jnt_03_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_04_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_04_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Bay_06Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Bay_06Shape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Eye_CloseShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Eye_CloseShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Mid_Wheel_Jnt_03_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Mid_Wheel_Jnt_03_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Mouth_BoredShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Mouth_BoredShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Trash_BinShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Trash_BinShape_ai_matte.val";
+connectAttr "aiMatte.en" "Hand_Ring_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Hand_Ring_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_HoseShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "R_HoseShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "polyToCurveShape1_ai_matte.en";
+connectAttr "aiMatte.atv" "polyToCurveShape1_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_Open_Shape1_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_Open_Shape1_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_CurveShape1Orig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_CurveShape1Orig_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_ArrowShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_ArrowShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_CurveShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_CurveShape_ai_matte.val";
+connectAttr "aiMatte.en" "CeilingShape_ai_matte.en";
+connectAttr "aiMatte.atv" "CeilingShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Bay_01Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Bay_01Shape_ai_matte.val";
+connectAttr "aiMatte.en" "Eye_X_2_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Eye_X_2_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Palm_Jnt_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Palm_Jnt_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Table_03Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Table_03Shape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_05_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_05_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "polySurfaceShape199_ai_matte.en";
+connectAttr "aiMatte.atv" "polySurfaceShape199_ai_matte.val";
+connectAttr "aiMatte.en" "polySurfaceShape190_ai_matte.en";
+connectAttr "aiMatte.atv" "polySurfaceShape190_ai_matte.val";
+connectAttr "aiMatte.en" "pCube47Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "pCube47Shape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Tread_Wire_Base_CurveShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Tread_Wire_Base_CurveShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_Squint_Shape1_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_Squint_Shape1_ai_matte.val";
+connectAttr "aiMatte.en" "R_Eye_OpenShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Eye_OpenShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Eye_CloseShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Eye_CloseShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_Sad_ShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_Sad_ShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_SmirkShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_SmirkShape_ai_matte.val";
+connectAttr "aiMatte.en" "PillarsShape_ai_matte.en";
+connectAttr "aiMatte.atv" "PillarsShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_02_CtrlShapeOrig_ai_matte.val";
 connectAttr "aiMatte.en" "L_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte.en";
 connectAttr "aiMatte.atv" "L_Mid_Main_Wheel_Jnt_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Eye_SquintShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Eye_SquintShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "R_Tread_Wire_Base_CurveShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Tread_Wire_Base_CurveShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Mid_Wheel_Jnt_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Mid_Wheel_Jnt_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Mouth_BoredShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "Mouth_BoredShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "Arm_FK_Jnt_05_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Arm_FK_Jnt_05_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Bay_04Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Bay_04Shape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "polySurfaceShape195_ai_matte.en";
+connectAttr "aiMatte.atv" "polySurfaceShape195_ai_matte.val";
+connectAttr "aiMatte.en" "Exclamation_PointShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Exclamation_PointShape_ai_matte.val";
+connectAttr "aiMatte.en" "Arm_Base_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Arm_Base_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Eye_X_1Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Eye_X_1Shape_ai_matte.val";
+connectAttr "aiMatte.en" "BlendShapeShape_ai_matte1.en";
+connectAttr "aiMatte.atv" "BlendShapeShape_ai_matte1.val";
+connectAttr "aiMatte.en" "Right_Eye4ShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye4ShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Cog_Jnt_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Cog_Jnt_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_13_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_13_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_03_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Arm_Base_Jnt_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Arm_Base_Jnt_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_06_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_06_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_ArrowShapeOrig2_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_ArrowShapeOrig2_ai_matte.val";
+connectAttr "aiMatte.en" "polySurfaceShape72_ai_matte.en";
+connectAttr "aiMatte.atv" "polySurfaceShape72_ai_matte.val";
+connectAttr "aiMatte.en" "L_Tread_Wire_CurveShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Tread_Wire_CurveShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_CloseShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_CloseShape_ai_matte.val";
+connectAttr "aiMatte.en" "MouthShape_ai_matte.en";
+connectAttr "aiMatte.atv" "MouthShape_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_SmirkShapeOrig2_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_SmirkShapeOrig2_ai_matte.val";
+connectAttr "aiMatte.en" "R_Treads_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Treads_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "pCube46Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "pCube46Shape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Eye_SadShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Eye_SadShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Eye_X_1_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Eye_X_1_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "RocketShape_ai_matte.en";
+connectAttr "aiMatte.atv" "RocketShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_07_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "R_Wiper_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Wiper_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_SmirkShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_SmirkShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Visor_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Visor_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Arm_FK_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Arm_FK_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_DeterminedShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_DeterminedShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_ArrowShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_ArrowShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "Right_EyeShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_EyeShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_Close_Shape1_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_Close_Shape1_ai_matte.val";
+connectAttr "aiMatte.en" "Floor1Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Floor1Shape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_03_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_03_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye3ShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye3ShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_BoredShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_BoredShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_SadShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_SadShape_ai_matte.val";
+connectAttr "aiMatte.en" "NeutralShape_ai_matte.en";
+connectAttr "aiMatte.atv" "NeutralShape_ai_matte.val";
+connectAttr "aiMatte.en" "Arm_FK_Jnt_04_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Arm_FK_Jnt_04_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_ArrowShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_ArrowShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Left_EyeShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_EyeShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_06_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_BoredShapeOrig2_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_BoredShapeOrig2_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_13_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Face_GlassShape1_ai_matte.en";
+connectAttr "aiMatte.atv" "Face_GlassShape1_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_DeterminedShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_DeterminedShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_06_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_06_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Eye_SquintShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Eye_SquintShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_OpenShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_OpenShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_11_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "R_Mid_Wheel_Jnt_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Mid_Wheel_Jnt_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_08_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_08_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Eye_SadShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Eye_SadShape_ai_matte.val";
+connectAttr "aiMatte.en" "TreadsBaseShape_ai_matte.en";
+connectAttr "aiMatte.atv" "TreadsBaseShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_05_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_Open_ShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_Open_ShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_BoredShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_BoredShape_ai_matte.val";
+connectAttr "aiMatte.en" "Finger_01_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Finger_01_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "MainArmGeoShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "MainArmGeoShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_Actually_BoredShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_Actually_BoredShape_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_SmirkShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_SmirkShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_HoseShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_HoseShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_09_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_Close_ShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_Close_ShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Bay_07Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Bay_07Shape_ai_matte.val";
+connectAttr "aiMatte.en" "Finger_01_Jnt_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Finger_01_Jnt_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "OoohShape_ai_matte.en";
+connectAttr "aiMatte.atv" "OoohShape_ai_matte.val";
+connectAttr "aiMatte.en" "Piston_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Piston_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "WallShape_ai_matte.en";
+connectAttr "aiMatte.atv" "WallShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Wiper_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Wiper_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "RightTreadGeoShape_ai_matte.en";
+connectAttr "aiMatte.atv" "RightTreadGeoShape_ai_matte.val";
+connectAttr "aiMatte.en" "Mouth_BoredShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Mouth_BoredShape_ai_matte.val";
+connectAttr "aiMatte.en" "polySurfaceShape191_ai_matte.en";
+connectAttr "aiMatte.atv" "polySurfaceShape191_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_10_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_10_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "PaintVatShape_ai_matte.en";
+connectAttr "aiMatte.atv" "PaintVatShape_ai_matte.val";
+connectAttr "aiMatte.en" "Finger_03_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Finger_03_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_HoseShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_HoseShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_08_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_ArrowShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_ArrowShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_Actually_BoredShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_Actually_BoredShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Mouth_SmirkShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "Mouth_SmirkShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_04_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_04_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Eye_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Eye_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "polySurfaceShape189_ai_matte.en";
+connectAttr "aiMatte.atv" "polySurfaceShape189_ai_matte.val";
+connectAttr "aiMatte.en" "polySurfaceShape192_ai_matte.en";
+connectAttr "aiMatte.atv" "polySurfaceShape192_ai_matte.val";
+connectAttr "aiMatte.en" "BG_TablesShape_ai_matte.en";
+connectAttr "aiMatte.atv" "BG_TablesShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Front_Main_Wheel_Jnt_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Front_Main_Wheel_Jnt_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_BoredShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_BoredShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_04_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Left_Eye_BoredShapeOrig2_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_Eye_BoredShapeOrig2_ai_matte.val";
+connectAttr "aiMatte.en" "MainArmGeoShape_ai_matte.en";
+connectAttr "aiMatte.atv" "MainArmGeoShape_ai_matte.val";
+connectAttr "aiMatte.en" "Piston_03_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Piston_03_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Bay_02Shape_ai_matte.en";
+connectAttr "aiMatte.atv" "Bay_02Shape_ai_matte.val";
+connectAttr "aiMatte.en" "Hopper_BinShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Hopper_BinShape_ai_matte.val";
+connectAttr "aiMatte.en" "Treads_Base_FK_Jnt_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Treads_Base_FK_Jnt_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Left_EyeShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Left_EyeShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_CurveShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_CurveShape_ai_matte.val";
+connectAttr "aiMatte.en" "Right_EyeShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_EyeShape_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_DeterminedShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_DeterminedShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Eye_Squint_ShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Eye_Squint_ShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_05_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_05_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Mid_Wheel_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Mid_Wheel_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "TreadsBaseShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "TreadsBaseShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "TableShape_ai_matte.en";
+connectAttr "aiMatte.atv" "TableShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Back_Main_Wheel_Jnt_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Back_Main_Wheel_Jnt_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_SmirkShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_SmirkShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_07_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_07_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Front_Main_Wheel_Jnt_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Front_Main_Wheel_Jnt_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_DeterminedShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_DeterminedShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_01_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "R_Mid_Wheel_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Mid_Wheel_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_10_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "RightTreadGeoShapeOrig2_ai_matte.en";
+connectAttr "aiMatte.atv" "RightTreadGeoShapeOrig2_ai_matte.val";
+connectAttr "aiMatte.en" "PoleVector_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "PoleVector_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Head_FK_Jnt_03_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Head_FK_Jnt_03_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Right_Eye_ArrowShapeOrig1_ai_matte.en";
+connectAttr "aiMatte.atv" "Right_Eye_ArrowShapeOrig1_ai_matte.val";
+connectAttr "aiMatte.en" "Head_FK_Jnt_01_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Head_FK_Jnt_01_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_IK_Jnt_09_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_IK_Jnt_09_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Hose_Swing_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Hose_Swing_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "L_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte.en";
+connectAttr "aiMatte.atv" "L_Hose_IK_Jnt_12_CtrlShapeOrig_ai_matte.val";
+connectAttr "aiMatte.en" "Head_FK_Jnt_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Head_FK_Jnt_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "Arm_FK_Jnt_02_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "Arm_FK_Jnt_02_CtrlShape_ai_matte.val";
+connectAttr "aiMatte.en" "R_Mid_Wheel_Jnt_03_CtrlShape_ai_matte.en";
+connectAttr "aiMatte.atv" "R_Mid_Wheel_Jnt_03_CtrlShape_ai_matte.val";
 connectAttr "aiAmbientOcclusion1SG.pa" ":renderPartition.st" -na;
 connectAttr "aiShadowMatte1SG.pa" ":renderPartition.st" -na;
 connectAttr "aiAtmosphereVolume.msg" ":defaultShaderList1.s" -na;
