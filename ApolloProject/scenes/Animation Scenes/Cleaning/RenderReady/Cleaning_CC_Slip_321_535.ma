@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Cleaning_CC_Slip_321_535.ma
-//Last modified: Mon, Apr 07, 2025 07:50:37 PM
+//Last modified: Wed, Apr 09, 2025 06:09:00 PM
 //Codeset: 1252
 file -rdi 1 -ns "Cleaning_Scene" -rfn "Cleaning_SceneRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject//scenes/Environments/Act 2 _ Cleaning/Cleaning Scene.ma";
@@ -14,8 +14,6 @@ file -rdi 2 -ns "Dionysus_Asset_Rig" -rfn "Cleaning_Scene:Dionysus_Asset_RigRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/bradywallace/GitReps/Apollo_Short_Film/ApolloProject//scenes/Characters/Dionysus_Asset_Rig.ma";
 file -rdi 2 -ns "EmployeeOfTheMonth_HankW" -rfn "Cleaning_Scene:EmployeeOfTheMonth_HankWRN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/bradywallace/GitReps/Apollo_Short_Film/ApolloProject//scenes/Props/Intro Scene/EmployeeOfTheMonth-HankW.ma";
-file -rdi 2 -ns "Analog_Sign" -rfn "Cleaning_Scene:Analog_SignRN" -op "v=0;"
-		 -typ "mayaAscii" "/Users/bradywallace/GitReps/Apollo_Short_Film/ApolloProject//scenes/Props/Act 1 _ Conveyor/Analog Sign.ma";
 file -rdi 2 -ns "Shelf" -rfn "Cleaning_Scene:ShelfRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/bradywallace/GitReps/Apollo_Short_Film/ApolloProject//scenes/Props/Cleaning Scene/Shelf.ma";
 file -rdi 2 -ns "Battery" -rfn "Cleaning_Scene:BatteryRN" -op "v=0;" -typ "mayaAscii"
@@ -75,20 +73,19 @@ file -r -ns "Prometheus" -dr 1 -rfn "PrometheusRN" -op "v=0;" -typ "mayaAscii" "
 file -r -ns "Tug_Car" -dr 1 -rfn "Tug_CarRN" -op "v=0;" -typ "mayaAscii" "C:/Users/Colby/Desktop/Apollo_Short_Film/ApolloProject//scenes/Props/PaintScene/Tug Car.ma";
 requires maya "2024";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
-requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
-		 -nodeType "aiStandardSurface" -nodeType "aiAtmosphereVolume" "mtoa" "5.3.4.1";
-requires -nodeType "mayaUsdLayerManager" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.25.0";
 requires -nodeType "simpleSelector" -nodeType "renderSetupLayer" -nodeType "renderSetup"
 		 -nodeType "collection" -nodeType "renderSettingsCollection" -nodeType "absUniqueOverride"
 		 "renderSetup.py" "1.0";
+requires "stereoCamera" "10.0";
+requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
+		 -nodeType "aiStandardSurface" -nodeType "aiAtmosphereVolume" "mtoa" "5.3.1.1";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
-fileInfo "cutIdentifier" "202310181224-69282f2959";
-fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "0284505F-4A15-3029-DED2-D085B6C11177";
+fileInfo "cutIdentifier" "202304191415-7fa20164c6";
+fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 22621)";
+fileInfo "UUID" "EFDDD395-4A78-D7F3-7BBC-91A523F9DBAA";
 fileInfo "license" "education";
 fileInfo "exportedFrom" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject/scenes/Animation Scenes/Cleaning/Cleaning_CC.ma";
 createNode transform -s -n "persp";
@@ -211,7 +208,7 @@ createNode nRigid -n "nRigidShape1" -p "nRigid1";
 	setAttr -k off ".mxc";
 	setAttr -k off ".lod";
 	setAttr -k off ".inh";
-	setAttr ".cts" 391;
+	setAttr ".cts" 512;
 	setAttr -k off ".stf";
 	setAttr -k off ".igs";
 	setAttr -k off ".ecfh";
@@ -231,20 +228,20 @@ createNode nRigid -n "nRigidShape1" -p "nRigid1";
 	setAttr -k on ".lifespan" 1;
 	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "69671DA2-40FF-89BA-6CBA-1795D81E5926";
-	setAttr -s 724 ".lnk";
-	setAttr -s 49 ".ign";
-	setAttr -s 723 ".slnk";
+	rename -uid "76EFE24A-45A6-168A-CC18-7FBEAEEE2476";
+	setAttr -s 714 ".lnk";
+	setAttr -s 234 ".ign";
+	setAttr -s 713 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D0DB9E3A-4EF2-0D2A-91C0-51BC5E7C9C78";
+	rename -uid "2D67745C-416B-305E-3B96-30A188C32E4A";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 7 0 1 2 3 4
 		 5 6 ;
 	setAttr -s 6 ".bspr";
 	setAttr -s 6 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "42C112C5-449B-D16C-F17F-719C764897E7";
+	rename -uid "FC23EE32-41C2-4882-F3E8-6CBDFE5BA0A2";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7A8EA3CE-4674-B986-468D-53A5BB18953F";
+	rename -uid "EBFCB6BB-4057-3B13-3FF9-979B1AB25D65";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -252,7 +249,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "2FE82AEA-4DBE-9167-B396-EF825906B46D";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "FF4A9F3C-4CEA-594D-9F16-BC8D96759E4B";
+	rename -uid "A620B0A9-4452-47EB-A54A-FC9D3F8830B2";
 	setAttr -s 9 ".rlmi[1:8]"  1 2 3 4 5 6 7 8;
 	setAttr -s 9 ".rlmi";
 createNode renderLayer -n "defaultRenderLayer";
@@ -286,8 +283,8 @@ createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	setAttr ".ai_translator" -type "string" "exr";
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "F13FB0BC-4FFA-20B0-2098-A991EE3808FA";
-	setAttr ".ai_translator" -type "string" "maya";
 	setAttr ".output_mode" 0;
+	setAttr ".ai_translator" -type "string" "maya";
 createNode ikSpringSolver -s -n "ikSpringSolver";
 	rename -uid "8847349B-40FC-240A-6780-C08398D6317E";
 createNode displayLayer -n "PlaquesLayer";
@@ -481,46 +478,45 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|SLIP_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
-		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
-		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 0\n            -cameras 0\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
-		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
-		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1308\n            -height 123\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
-		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2622\n            -height 1050\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
-		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
-		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n"
-		+ "            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -autoExpandAllAnimatedShapes 1\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
-		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
-		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
-		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n"
-		+ "                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n"
-		+ "                -autoExpandAllAnimatedShapes 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n"
-		+ "                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
-		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n"
-		+ "                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n"
-		+ "                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n"
-		+ "\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
-		+ "                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n"
-		+ "                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|SLIP_CAM\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
-		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
-		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
-		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
-		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Side View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|SLIP_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Side View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|SLIP_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 1\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 0\\n    -cameras 0\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2622\\n    -height 1050\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|SLIP_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 1\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n"
+		+ "            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 0\n            -cameras 0\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n"
+		+ "            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n"
+		+ "            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n"
+		+ "            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n"
+		+ "            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|SLIP_CAM\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n"
+		+ "            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n"
+		+ "            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 0\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n"
+		+ "            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1319\n            -height 689\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n"
+		+ "            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n"
+		+ "            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n"
+		+ "            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n"
+		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n"
+		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n"
+		+ "                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n"
+		+ "                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n"
+		+ "                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n"
+		+ "                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n"
+		+ "                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
+		+ "            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
+		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
+		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n"
+		+ "                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|SLIP_CAM\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
+		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n"
+		+ "                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n"
+		+ "                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n"
+		+ "\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|SLIP_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 689\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|SLIP_CAM\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 0\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 689\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -28448,59 +28444,59 @@ createNode animCurveTU -n "Spray_Bottle_visibility";
 	rename -uid "0ACCC8A6-464A-CD8C-3AD1-B0827FA75A57";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  199 1 201 1 202 1 203 0 338 0 339 1;
-	setAttr -s 6 ".kot[0:5]"  5 5 5 5 5 5;
+	setAttr -s 7 ".ktv[0:6]"  199 1 201 1 202 1 203 0 338 0 339 0 340 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTL -n "Spray_Bottle_translateX";
 	rename -uid "A4E57360-45F7-4146-7905-1B8A5FF18483";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  194 5.4237325817224011 196 5.5046536622330535
-		 197 5.5329760404117838 333 5.5329760404117838 334 5.6644959440363083;
+	setAttr -s 6 ".ktv[0:5]"  194 5.4237325817224011 196 5.5046536622330535
+		 197 5.5329760404117838 333 5.5329760404117838 334 5.6644959440363083 340 5.6644959440363083;
 createNode animCurveTL -n "Spray_Bottle_translateY";
 	rename -uid "8D9DEDC0-4CE3-54DA-C348-9DA32FC4AACB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  194 -3.6665628260809098 196 -3.8007059457636418
-		 197 -3.8476560376526012 333 -3.8476560376526012 334 -3.8480540456195649;
+	setAttr -s 6 ".ktv[0:5]"  194 -3.6665628260809098 196 -3.8007059457636418
+		 197 -3.8476560376526012 333 -3.8476560376526012 334 -3.8480540456195649 340 -3.8480540456195649;
 createNode animCurveTL -n "Spray_Bottle_translateZ";
 	rename -uid "CC69FB6F-4E3E-9657-31FB-73B21C0FA5DD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  194 -3.3721518957927015 196 -3.5496215740654198
-		 197 -3.6117359614608753 333 -3.6117359614608753 334 -3.5344510017913837;
+	setAttr -s 6 ".ktv[0:5]"  194 -3.3721518957927015 196 -3.5496215740654198
+		 197 -3.6117359614608753 333 -3.6117359614608753 334 -3.5344510017913837 340 -3.5344510017913837;
 createNode animCurveTA -n "Spray_Bottle_rotateX";
 	rename -uid "82FB0847-446B-5DA9-74A1-3BB597D63165";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  194 0 196 0 197 0 333 0 334 0;
+	setAttr -s 6 ".ktv[0:5]"  194 0 196 0 197 0 333 0 334 0 340 0;
 createNode animCurveTA -n "Spray_Bottle_rotateY";
 	rename -uid "74AAC3FD-4E36-CE89-EE80-2896B0682FA6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  194 0 196 0 197 0 333 0 334 0;
+	setAttr -s 6 ".ktv[0:5]"  194 0 196 0 197 0 333 0 334 0 340 0;
 createNode animCurveTA -n "Spray_Bottle_rotateZ";
 	rename -uid "DFBCB069-4722-F3C3-38CB-BF8BEBCEF16C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  194 0 196 0 197 0 333 0 334 0;
+	setAttr -s 6 ".ktv[0:5]"  194 0 196 0 197 0 333 0 334 0 340 0;
 createNode animCurveTU -n "Spray_Bottle_scaleX";
 	rename -uid "7DEB9544-468A-645C-7E50-1099630899B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  194 0.99999999999999978 196 0.99999999999999978
-		 197 0.99999999999999978 333 0.99999999999999978 334 0.99999999999999978;
+	setAttr -s 6 ".ktv[0:5]"  194 0.99999999999999978 196 0.99999999999999978
+		 197 0.99999999999999978 333 0.99999999999999978 334 0.99999999999999978 340 0.99999999999999978;
 createNode animCurveTU -n "Spray_Bottle_scaleY";
 	rename -uid "DF494641-4E79-3BC2-FE4D-43B0CF88DF88";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  194 0.99999999999999989 196 0.99999999999999989
-		 197 0.99999999999999989 333 0.99999999999999989 334 0.99999999999999989;
+	setAttr -s 6 ".ktv[0:5]"  194 0.99999999999999989 196 0.99999999999999989
+		 197 0.99999999999999989 333 0.99999999999999989 334 0.99999999999999989 340 0.99999999999999989;
 createNode animCurveTU -n "Spray_Bottle_scaleZ";
 	rename -uid "4D33AC4E-4E5E-59F9-9E08-1C9746853E4A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  194 0.99999999999999978 196 0.99999999999999978
-		 197 0.99999999999999978 333 0.99999999999999978 334 0.99999999999999978;
+	setAttr -s 6 ".ktv[0:5]"  194 0.99999999999999978 196 0.99999999999999978
+		 197 0.99999999999999978 333 0.99999999999999978 334 0.99999999999999978 340 0.99999999999999978;
 createNode animCurveTU -n "Spray_Bottle1_visibility";
 	rename -uid "4B932AF6-4228-F90D-30CB-BDBF0C29E94B";
 	setAttr ".tan" 9;
@@ -30324,941 +30320,7 @@ createNode animCurveTU -n "Room_scaleZ";
 	setAttr -s 4 ".ktv[0:3]"  380 1 388 1 390 1 394 1;
 createNode reference -n "Cleaning_SceneRN";
 	rename -uid "008AB74E-416C-6CAE-5A2A-EE8425BFCD8F";
-	setAttr -s 1372 ".phl";
-	setAttr ".phl[1203]" 0;
-	setAttr ".phl[1204]" 0;
-	setAttr ".phl[1205]" 0;
-	setAttr ".phl[1206]" 0;
-	setAttr ".phl[1207]" 0;
-	setAttr ".phl[1208]" 0;
-	setAttr ".phl[1209]" 0;
-	setAttr ".phl[1210]" 0;
-	setAttr ".phl[1211]" 0;
-	setAttr ".phl[1212]" 0;
-	setAttr ".phl[1213]" 0;
-	setAttr ".phl[1214]" 0;
-	setAttr ".phl[1215]" 0;
-	setAttr ".phl[1216]" 0;
-	setAttr ".phl[1217]" 0;
-	setAttr ".phl[1218]" 0;
-	setAttr ".phl[1219]" 0;
-	setAttr ".phl[1220]" 0;
-	setAttr ".phl[1221]" 0;
-	setAttr ".phl[1222]" 0;
-	setAttr ".phl[1223]" 0;
-	setAttr ".phl[1224]" 0;
-	setAttr ".phl[1225]" 0;
-	setAttr ".phl[1226]" 0;
-	setAttr ".phl[1227]" 0;
-	setAttr ".phl[1228]" 0;
-	setAttr ".phl[1229]" 0;
-	setAttr ".phl[1230]" 0;
-	setAttr ".phl[1231]" 0;
-	setAttr ".phl[1232]" 0;
-	setAttr ".phl[1233]" 0;
-	setAttr ".phl[1234]" 0;
-	setAttr ".phl[1235]" 0;
-	setAttr ".phl[1236]" 0;
-	setAttr ".phl[1237]" 0;
-	setAttr ".phl[1238]" 0;
-	setAttr ".phl[1239]" 0;
-	setAttr ".phl[1240]" 0;
-	setAttr ".phl[1241]" 0;
-	setAttr ".phl[1242]" 0;
-	setAttr ".phl[1243]" 0;
-	setAttr ".phl[1244]" 0;
-	setAttr ".phl[1245]" 0;
-	setAttr ".phl[1246]" 0;
-	setAttr ".phl[1247]" 0;
-	setAttr ".phl[1248]" 0;
-	setAttr ".phl[1249]" 0;
-	setAttr ".phl[1250]" 0;
-	setAttr ".phl[1251]" 0;
-	setAttr ".phl[1252]" 0;
-	setAttr ".phl[1253]" 0;
-	setAttr ".phl[1254]" 0;
-	setAttr ".phl[1255]" 0;
-	setAttr ".phl[1256]" 0;
-	setAttr ".phl[1257]" 0;
-	setAttr ".phl[1258]" 0;
-	setAttr ".phl[1259]" 0;
-	setAttr ".phl[1260]" 0;
-	setAttr ".phl[1261]" 0;
-	setAttr ".phl[1262]" 0;
-	setAttr ".phl[1263]" 0;
-	setAttr ".phl[1264]" 0;
-	setAttr ".phl[1265]" 0;
-	setAttr ".phl[1266]" 0;
-	setAttr ".phl[1267]" 0;
-	setAttr ".phl[1268]" 0;
-	setAttr ".phl[1269]" 0;
-	setAttr ".phl[1270]" 0;
-	setAttr ".phl[1271]" 0;
-	setAttr ".phl[1272]" 0;
-	setAttr ".phl[1273]" 0;
-	setAttr ".phl[1274]" 0;
-	setAttr ".phl[1275]" 0;
-	setAttr ".phl[1276]" 0;
-	setAttr ".phl[1277]" 0;
-	setAttr ".phl[1278]" 0;
-	setAttr ".phl[1279]" 0;
-	setAttr ".phl[1280]" 0;
-	setAttr ".phl[1281]" 0;
-	setAttr ".phl[1282]" 0;
-	setAttr ".phl[1283]" 0;
-	setAttr ".phl[1284]" 0;
-	setAttr ".phl[1285]" 0;
-	setAttr ".phl[1286]" 0;
-	setAttr ".phl[1287]" 0;
-	setAttr ".phl[1288]" 0;
-	setAttr ".phl[1289]" 0;
-	setAttr ".phl[1290]" 0;
-	setAttr ".phl[1291]" 0;
-	setAttr ".phl[1292]" 0;
-	setAttr ".phl[1293]" 0;
-	setAttr ".phl[1294]" 0;
-	setAttr ".phl[1295]" 0;
-	setAttr ".phl[1296]" 0;
-	setAttr ".phl[1297]" 0;
-	setAttr ".phl[1298]" 0;
-	setAttr ".phl[1299]" 0;
-	setAttr ".phl[1300]" 0;
-	setAttr ".phl[1301]" 0;
-	setAttr ".phl[1302]" 0;
-	setAttr ".phl[1303]" 0;
-	setAttr ".phl[1304]" 0;
-	setAttr ".phl[1305]" 0;
-	setAttr ".phl[1306]" 0;
-	setAttr ".phl[1307]" 0;
-	setAttr ".phl[1308]" 0;
-	setAttr ".phl[1309]" 0;
-	setAttr ".phl[1310]" 0;
-	setAttr ".phl[1311]" 0;
-	setAttr ".phl[1312]" 0;
-	setAttr ".phl[1313]" 0;
-	setAttr ".phl[1314]" 0;
-	setAttr ".phl[1315]" 0;
-	setAttr ".phl[1316]" 0;
-	setAttr ".phl[1317]" 0;
-	setAttr ".phl[1318]" 0;
-	setAttr ".phl[1319]" 0;
-	setAttr ".phl[1320]" 0;
-	setAttr ".phl[1321]" 0;
-	setAttr ".phl[1322]" 0;
-	setAttr ".phl[1323]" 0;
-	setAttr ".phl[1324]" 0;
-	setAttr ".phl[1325]" 0;
-	setAttr ".phl[1326]" 0;
-	setAttr ".phl[1327]" 0;
-	setAttr ".phl[1328]" 0;
-	setAttr ".phl[1329]" 0;
-	setAttr ".phl[1330]" 0;
-	setAttr ".phl[1331]" 0;
-	setAttr ".phl[1332]" 0;
-	setAttr ".phl[1333]" 0;
-	setAttr ".phl[1334]" 0;
-	setAttr ".phl[1335]" 0;
-	setAttr ".phl[1336]" 0;
-	setAttr ".phl[1337]" 0;
-	setAttr ".phl[1338]" 0;
-	setAttr ".phl[1339]" 0;
-	setAttr ".phl[1340]" 0;
-	setAttr ".phl[1341]" 0;
-	setAttr ".phl[1342]" 0;
-	setAttr ".phl[1343]" 0;
-	setAttr ".phl[1344]" 0;
-	setAttr ".phl[1345]" 0;
-	setAttr ".phl[1346]" 0;
-	setAttr ".phl[1347]" 0;
-	setAttr ".phl[1348]" 0;
-	setAttr ".phl[1349]" 0;
-	setAttr ".phl[1350]" 0;
-	setAttr ".phl[1351]" 0;
-	setAttr ".phl[1352]" 0;
-	setAttr ".phl[1353]" 0;
-	setAttr ".phl[1354]" 0;
-	setAttr ".phl[1355]" 0;
-	setAttr ".phl[1356]" 0;
-	setAttr ".phl[1357]" 0;
-	setAttr ".phl[1358]" 0;
-	setAttr ".phl[1359]" 0;
-	setAttr ".phl[1360]" 0;
-	setAttr ".phl[1361]" 0;
-	setAttr ".phl[1362]" 0;
-	setAttr ".phl[1363]" 0;
-	setAttr ".phl[1364]" 0;
-	setAttr ".phl[1365]" 0;
-	setAttr ".phl[1366]" 0;
-	setAttr ".phl[1367]" 0;
-	setAttr ".phl[1368]" 0;
-	setAttr ".phl[1369]" 0;
-	setAttr ".phl[1370]" 0;
-	setAttr ".phl[1371]" 0;
-	setAttr ".phl[1372]" 0;
-	setAttr ".phl[1373]" 0;
-	setAttr ".phl[1374]" 0;
-	setAttr ".phl[1375]" 0;
-	setAttr ".phl[1376]" 0;
-	setAttr ".phl[1377]" 0;
-	setAttr ".phl[1378]" 0;
-	setAttr ".phl[1379]" 0;
-	setAttr ".phl[1380]" 0;
-	setAttr ".phl[1381]" 0;
-	setAttr ".phl[1382]" 0;
-	setAttr ".phl[1383]" 0;
-	setAttr ".phl[1384]" 0;
-	setAttr ".phl[1385]" 0;
-	setAttr ".phl[1386]" 0;
-	setAttr ".phl[1387]" 0;
-	setAttr ".phl[1388]" 0;
-	setAttr ".phl[1389]" 0;
-	setAttr ".phl[1390]" 0;
-	setAttr ".phl[1391]" 0;
-	setAttr ".phl[1392]" 0;
-	setAttr ".phl[1393]" 0;
-	setAttr ".phl[1394]" 0;
-	setAttr ".phl[1395]" 0;
-	setAttr ".phl[1396]" 0;
-	setAttr ".phl[1397]" 0;
-	setAttr ".phl[1398]" 0;
-	setAttr ".phl[1399]" 0;
-	setAttr ".phl[1400]" 0;
-	setAttr ".phl[1401]" 0;
-	setAttr ".phl[1402]" 0;
-	setAttr ".phl[1403]" 0;
-	setAttr ".phl[1404]" 0;
-	setAttr ".phl[1405]" 0;
-	setAttr ".phl[1406]" 0;
-	setAttr ".phl[1407]" 0;
-	setAttr ".phl[1408]" 0;
-	setAttr ".phl[1409]" 0;
-	setAttr ".phl[1410]" 0;
-	setAttr ".phl[1411]" 0;
-	setAttr ".phl[1412]" 0;
-	setAttr ".phl[1413]" 0;
-	setAttr ".phl[1414]" 0;
-	setAttr ".phl[1415]" 0;
-	setAttr ".phl[1416]" 0;
-	setAttr ".phl[1417]" 0;
-	setAttr ".phl[1418]" 0;
-	setAttr ".phl[1419]" 0;
-	setAttr ".phl[1420]" 0;
-	setAttr ".phl[1421]" 0;
-	setAttr ".phl[1422]" 0;
-	setAttr ".phl[1423]" 0;
-	setAttr ".phl[1424]" 0;
-	setAttr ".phl[1425]" 0;
-	setAttr ".phl[1426]" 0;
-	setAttr ".phl[1427]" 0;
-	setAttr ".phl[1428]" 0;
-	setAttr ".phl[1429]" 0;
-	setAttr ".phl[1430]" 0;
-	setAttr ".phl[1431]" 0;
-	setAttr ".phl[1432]" 0;
-	setAttr ".phl[1433]" 0;
-	setAttr ".phl[1434]" 0;
-	setAttr ".phl[1435]" 0;
-	setAttr ".phl[1436]" 0;
-	setAttr ".phl[1437]" 0;
-	setAttr ".phl[1438]" 0;
-	setAttr ".phl[1439]" 0;
-	setAttr ".phl[1440]" 0;
-	setAttr ".phl[1441]" 0;
-	setAttr ".phl[1442]" 0;
-	setAttr ".phl[1443]" 0;
-	setAttr ".phl[1444]" 0;
-	setAttr ".phl[1445]" 0;
-	setAttr ".phl[1446]" 0;
-	setAttr ".phl[1447]" 0;
-	setAttr ".phl[1448]" 0;
-	setAttr ".phl[1449]" 0;
-	setAttr ".phl[1450]" 0;
-	setAttr ".phl[1451]" 0;
-	setAttr ".phl[1452]" 0;
-	setAttr ".phl[1453]" 0;
-	setAttr ".phl[1454]" 0;
-	setAttr ".phl[1455]" 0;
-	setAttr ".phl[1456]" 0;
-	setAttr ".phl[1457]" 0;
-	setAttr ".phl[1458]" 0;
-	setAttr ".phl[1459]" 0;
-	setAttr ".phl[1460]" 0;
-	setAttr ".phl[1461]" 0;
-	setAttr ".phl[1462]" 0;
-	setAttr ".phl[1463]" 0;
-	setAttr ".phl[1464]" 0;
-	setAttr ".phl[1465]" 0;
-	setAttr ".phl[1466]" 0;
-	setAttr ".phl[1467]" 0;
-	setAttr ".phl[1468]" 0;
-	setAttr ".phl[1469]" 0;
-	setAttr ".phl[1470]" 0;
-	setAttr ".phl[1471]" 0;
-	setAttr ".phl[1472]" 0;
-	setAttr ".phl[1473]" 0;
-	setAttr ".phl[1474]" 0;
-	setAttr ".phl[1475]" 0;
-	setAttr ".phl[1476]" 0;
-	setAttr ".phl[1477]" 0;
-	setAttr ".phl[1478]" 0;
-	setAttr ".phl[1479]" 0;
-	setAttr ".phl[1480]" 0;
-	setAttr ".phl[1481]" 0;
-	setAttr ".phl[1482]" 0;
-	setAttr ".phl[1483]" 0;
-	setAttr ".phl[1484]" 0;
-	setAttr ".phl[1485]" 0;
-	setAttr ".phl[1486]" 0;
-	setAttr ".phl[1487]" 0;
-	setAttr ".phl[1488]" 0;
-	setAttr ".phl[1489]" 0;
-	setAttr ".phl[1490]" 0;
-	setAttr ".phl[1491]" 0;
-	setAttr ".phl[1492]" 0;
-	setAttr ".phl[1493]" 0;
-	setAttr ".phl[1494]" 0;
-	setAttr ".phl[1495]" 0;
-	setAttr ".phl[1496]" 0;
-	setAttr ".phl[1497]" 0;
-	setAttr ".phl[1498]" 0;
-	setAttr ".phl[1499]" 0;
-	setAttr ".phl[1500]" 0;
-	setAttr ".phl[1501]" 0;
-	setAttr ".phl[1502]" 0;
-	setAttr ".phl[1503]" 0;
-	setAttr ".phl[1504]" 0;
-	setAttr ".phl[1505]" 0;
-	setAttr ".phl[1506]" 0;
-	setAttr ".phl[1507]" 0;
-	setAttr ".phl[1508]" 0;
-	setAttr ".phl[1509]" 0;
-	setAttr ".phl[1510]" 0;
-	setAttr ".phl[1511]" 0;
-	setAttr ".phl[1512]" 0;
-	setAttr ".phl[1513]" 0;
-	setAttr ".phl[1514]" 0;
-	setAttr ".phl[1515]" 0;
-	setAttr ".phl[1516]" 0;
-	setAttr ".phl[1517]" 0;
-	setAttr ".phl[1518]" 0;
-	setAttr ".phl[1519]" 0;
-	setAttr ".phl[1520]" 0;
-	setAttr ".phl[1521]" 0;
-	setAttr ".phl[1522]" 0;
-	setAttr ".phl[1523]" 0;
-	setAttr ".phl[1524]" 0;
-	setAttr ".phl[1525]" 0;
-	setAttr ".phl[1526]" 0;
-	setAttr ".phl[1527]" 0;
-	setAttr ".phl[1528]" 0;
-	setAttr ".phl[1529]" 0;
-	setAttr ".phl[1530]" 0;
-	setAttr ".phl[1531]" 0;
-	setAttr ".phl[1532]" 0;
-	setAttr ".phl[1533]" 0;
-	setAttr ".phl[1534]" 0;
-	setAttr ".phl[1535]" 0;
-	setAttr ".phl[1536]" 0;
-	setAttr ".phl[1537]" 0;
-	setAttr ".phl[1538]" 0;
-	setAttr ".phl[1539]" 0;
-	setAttr ".phl[1540]" 0;
-	setAttr ".phl[1541]" 0;
-	setAttr ".phl[1542]" 0;
-	setAttr ".phl[1543]" 0;
-	setAttr ".phl[1544]" 0;
-	setAttr ".phl[1545]" 0;
-	setAttr ".phl[1546]" 0;
-	setAttr ".phl[1547]" 0;
-	setAttr ".phl[1548]" 0;
-	setAttr ".phl[1549]" 0;
-	setAttr ".phl[1550]" 0;
-	setAttr ".phl[1551]" 0;
-	setAttr ".phl[1552]" 0;
-	setAttr ".phl[1553]" 0;
-	setAttr ".phl[1554]" 0;
-	setAttr ".phl[1555]" 0;
-	setAttr ".phl[1556]" 0;
-	setAttr ".phl[1557]" 0;
-	setAttr ".phl[1558]" 0;
-	setAttr ".phl[1559]" 0;
-	setAttr ".phl[1560]" 0;
-	setAttr ".phl[1561]" 0;
-	setAttr ".phl[1562]" 0;
-	setAttr ".phl[1563]" 0;
-	setAttr ".phl[1564]" 0;
-	setAttr ".phl[1565]" 0;
-	setAttr ".phl[1566]" 0;
-	setAttr ".phl[1567]" 0;
-	setAttr ".phl[1568]" 0;
-	setAttr ".phl[1569]" 0;
-	setAttr ".phl[1570]" 0;
-	setAttr ".phl[1571]" 0;
-	setAttr ".phl[1572]" 0;
-	setAttr ".phl[1573]" 0;
-	setAttr ".phl[1574]" 0;
-	setAttr ".phl[1575]" 0;
-	setAttr ".phl[1576]" 0;
-	setAttr ".phl[1577]" 0;
-	setAttr ".phl[1578]" 0;
-	setAttr ".phl[1579]" 0;
-	setAttr ".phl[1580]" 0;
-	setAttr ".phl[1581]" 0;
-	setAttr ".phl[1582]" 0;
-	setAttr ".phl[1583]" 0;
-	setAttr ".phl[1584]" 0;
-	setAttr ".phl[1585]" 0;
-	setAttr ".phl[1586]" 0;
-	setAttr ".phl[1587]" 0;
-	setAttr ".phl[1588]" 0;
-	setAttr ".phl[1589]" 0;
-	setAttr ".phl[1590]" 0;
-	setAttr ".phl[1591]" 0;
-	setAttr ".phl[1592]" 0;
-	setAttr ".phl[1593]" 0;
-	setAttr ".phl[1594]" 0;
-	setAttr ".phl[1595]" 0;
-	setAttr ".phl[1596]" 0;
-	setAttr ".phl[1597]" 0;
-	setAttr ".phl[1598]" 0;
-	setAttr ".phl[1599]" 0;
-	setAttr ".phl[1600]" 0;
-	setAttr ".phl[1601]" 0;
-	setAttr ".phl[1602]" 0;
-	setAttr ".phl[1603]" 0;
-	setAttr ".phl[1604]" 0;
-	setAttr ".phl[1605]" 0;
-	setAttr ".phl[1606]" 0;
-	setAttr ".phl[1607]" 0;
-	setAttr ".phl[1608]" 0;
-	setAttr ".phl[1609]" 0;
-	setAttr ".phl[1610]" 0;
-	setAttr ".phl[1611]" 0;
-	setAttr ".phl[1612]" 0;
-	setAttr ".phl[1613]" 0;
-	setAttr ".phl[1614]" 0;
-	setAttr ".phl[1615]" 0;
-	setAttr ".phl[1616]" 0;
-	setAttr ".phl[1617]" 0;
-	setAttr ".phl[1618]" 0;
-	setAttr ".phl[1619]" 0;
-	setAttr ".phl[1620]" 0;
-	setAttr ".phl[1621]" 0;
-	setAttr ".phl[1622]" 0;
-	setAttr ".phl[1623]" 0;
-	setAttr ".phl[1624]" 0;
-	setAttr ".phl[1625]" 0;
-	setAttr ".phl[1626]" 0;
-	setAttr ".phl[1627]" 0;
-	setAttr ".phl[1628]" 0;
-	setAttr ".phl[1629]" 0;
-	setAttr ".phl[1630]" 0;
-	setAttr ".phl[1631]" 0;
-	setAttr ".phl[1632]" 0;
-	setAttr ".phl[1633]" 0;
-	setAttr ".phl[1634]" 0;
-	setAttr ".phl[1635]" 0;
-	setAttr ".phl[1636]" 0;
-	setAttr ".phl[1637]" 0;
-	setAttr ".phl[1638]" 0;
-	setAttr ".phl[1639]" 0;
-	setAttr ".phl[1640]" 0;
-	setAttr ".phl[1641]" 0;
-	setAttr ".phl[1642]" 0;
-	setAttr ".phl[1643]" 0;
-	setAttr ".phl[1644]" 0;
-	setAttr ".phl[1645]" 0;
-	setAttr ".phl[1646]" 0;
-	setAttr ".phl[1647]" 0;
-	setAttr ".phl[1648]" 0;
-	setAttr ".phl[1649]" 0;
-	setAttr ".phl[1650]" 0;
-	setAttr ".phl[1651]" 0;
-	setAttr ".phl[1652]" 0;
-	setAttr ".phl[1653]" 0;
-	setAttr ".phl[1654]" 0;
-	setAttr ".phl[1655]" 0;
-	setAttr ".phl[1656]" 0;
-	setAttr ".phl[1657]" 0;
-	setAttr ".phl[1658]" 0;
-	setAttr ".phl[1659]" 0;
-	setAttr ".phl[1660]" 0;
-	setAttr ".phl[1661]" 0;
-	setAttr ".phl[1662]" 0;
-	setAttr ".phl[1663]" 0;
-	setAttr ".phl[1664]" 0;
-	setAttr ".phl[1665]" 0;
-	setAttr ".phl[1666]" 0;
-	setAttr ".phl[1667]" 0;
-	setAttr ".phl[1668]" 0;
-	setAttr ".phl[1669]" 0;
-	setAttr ".phl[1670]" 0;
-	setAttr ".phl[1671]" 0;
-	setAttr ".phl[1672]" 0;
-	setAttr ".phl[1673]" 0;
-	setAttr ".phl[1674]" 0;
-	setAttr ".phl[1675]" 0;
-	setAttr ".phl[1676]" 0;
-	setAttr ".phl[1677]" 0;
-	setAttr ".phl[1678]" 0;
-	setAttr ".phl[1679]" 0;
-	setAttr ".phl[1680]" 0;
-	setAttr ".phl[1681]" 0;
-	setAttr ".phl[1682]" 0;
-	setAttr ".phl[1683]" 0;
-	setAttr ".phl[1684]" 0;
-	setAttr ".phl[1685]" 0;
-	setAttr ".phl[1686]" 0;
-	setAttr ".phl[1687]" 0;
-	setAttr ".phl[1688]" 0;
-	setAttr ".phl[1689]" 0;
-	setAttr ".phl[1690]" 0;
-	setAttr ".phl[1691]" 0;
-	setAttr ".phl[1692]" 0;
-	setAttr ".phl[1693]" 0;
-	setAttr ".phl[1694]" 0;
-	setAttr ".phl[1695]" 0;
-	setAttr ".phl[1696]" 0;
-	setAttr ".phl[1697]" 0;
-	setAttr ".phl[1698]" 0;
-	setAttr ".phl[1699]" 0;
-	setAttr ".phl[1700]" 0;
-	setAttr ".phl[1701]" 0;
-	setAttr ".phl[1702]" 0;
-	setAttr ".phl[1703]" 0;
-	setAttr ".phl[1704]" 0;
-	setAttr ".phl[1705]" 0;
-	setAttr ".phl[1706]" 0;
-	setAttr ".phl[1707]" 0;
-	setAttr ".phl[1708]" 0;
-	setAttr ".phl[1709]" 0;
-	setAttr ".phl[1710]" 0;
-	setAttr ".phl[1711]" 0;
-	setAttr ".phl[1712]" 0;
-	setAttr ".phl[1713]" 0;
-	setAttr ".phl[1714]" 0;
-	setAttr ".phl[1715]" 0;
-	setAttr ".phl[1716]" 0;
-	setAttr ".phl[1717]" 0;
-	setAttr ".phl[1718]" 0;
-	setAttr ".phl[1719]" 0;
-	setAttr ".phl[1720]" 0;
-	setAttr ".phl[1721]" 0;
-	setAttr ".phl[1722]" 0;
-	setAttr ".phl[1723]" 0;
-	setAttr ".phl[1724]" 0;
-	setAttr ".phl[1725]" 0;
-	setAttr ".phl[1726]" 0;
-	setAttr ".phl[1727]" 0;
-	setAttr ".phl[1728]" 0;
-	setAttr ".phl[1729]" 0;
-	setAttr ".phl[1730]" 0;
-	setAttr ".phl[1731]" 0;
-	setAttr ".phl[1732]" 0;
-	setAttr ".phl[1733]" 0;
-	setAttr ".phl[1734]" 0;
-	setAttr ".phl[1735]" 0;
-	setAttr ".phl[1736]" 0;
-	setAttr ".phl[1737]" 0;
-	setAttr ".phl[1738]" 0;
-	setAttr ".phl[1739]" 0;
-	setAttr ".phl[1740]" 0;
-	setAttr ".phl[1741]" 0;
-	setAttr ".phl[1742]" 0;
-	setAttr ".phl[1743]" 0;
-	setAttr ".phl[1744]" 0;
-	setAttr ".phl[1745]" 0;
-	setAttr ".phl[1746]" 0;
-	setAttr ".phl[1747]" 0;
-	setAttr ".phl[1748]" 0;
-	setAttr ".phl[1749]" 0;
-	setAttr ".phl[1750]" 0;
-	setAttr ".phl[1751]" 0;
-	setAttr ".phl[1752]" 0;
-	setAttr ".phl[1753]" 0;
-	setAttr ".phl[1754]" 0;
-	setAttr ".phl[1755]" 0;
-	setAttr ".phl[1756]" 0;
-	setAttr ".phl[1757]" 0;
-	setAttr ".phl[1758]" 0;
-	setAttr ".phl[1759]" 0;
-	setAttr ".phl[1760]" 0;
-	setAttr ".phl[1761]" 0;
-	setAttr ".phl[1762]" 0;
-	setAttr ".phl[1763]" 0;
-	setAttr ".phl[1764]" 0;
-	setAttr ".phl[1765]" 0;
-	setAttr ".phl[1766]" 0;
-	setAttr ".phl[1767]" 0;
-	setAttr ".phl[1768]" 0;
-	setAttr ".phl[1769]" 0;
-	setAttr ".phl[1770]" 0;
-	setAttr ".phl[1771]" 0;
-	setAttr ".phl[1772]" 0;
-	setAttr ".phl[1773]" 0;
-	setAttr ".phl[1774]" 0;
-	setAttr ".phl[1775]" 0;
-	setAttr ".phl[1776]" 0;
-	setAttr ".phl[1777]" 0;
-	setAttr ".phl[1778]" 0;
-	setAttr ".phl[1779]" 0;
-	setAttr ".phl[1780]" 0;
-	setAttr ".phl[1781]" 0;
-	setAttr ".phl[1782]" 0;
-	setAttr ".phl[1783]" 0;
-	setAttr ".phl[1784]" 0;
-	setAttr ".phl[1785]" 0;
-	setAttr ".phl[1786]" 0;
-	setAttr ".phl[1787]" 0;
-	setAttr ".phl[1788]" 0;
-	setAttr ".phl[1789]" 0;
-	setAttr ".phl[1790]" 0;
-	setAttr ".phl[1791]" 0;
-	setAttr ".phl[1792]" 0;
-	setAttr ".phl[1793]" 0;
-	setAttr ".phl[1794]" 0;
-	setAttr ".phl[1795]" 0;
-	setAttr ".phl[1796]" 0;
-	setAttr ".phl[1797]" 0;
-	setAttr ".phl[1798]" 0;
-	setAttr ".phl[1799]" 0;
-	setAttr ".phl[1800]" 0;
-	setAttr ".phl[1801]" 0;
-	setAttr ".phl[1802]" 0;
-	setAttr ".phl[1803]" 0;
-	setAttr ".phl[1804]" 0;
-	setAttr ".phl[1805]" 0;
-	setAttr ".phl[1806]" 0;
-	setAttr ".phl[1807]" 0;
-	setAttr ".phl[1808]" 0;
-	setAttr ".phl[1809]" 0;
-	setAttr ".phl[1810]" 0;
-	setAttr ".phl[1811]" 0;
-	setAttr ".phl[1812]" 0;
-	setAttr ".phl[1813]" 0;
-	setAttr ".phl[1814]" 0;
-	setAttr ".phl[1815]" 0;
-	setAttr ".phl[1816]" 0;
-	setAttr ".phl[1817]" 0;
-	setAttr ".phl[1818]" 0;
-	setAttr ".phl[1819]" 0;
-	setAttr ".phl[1820]" 0;
-	setAttr ".phl[1821]" 0;
-	setAttr ".phl[1822]" 0;
-	setAttr ".phl[1823]" 0;
-	setAttr ".phl[1824]" 0;
-	setAttr ".phl[1825]" 0;
-	setAttr ".phl[1826]" 0;
-	setAttr ".phl[1827]" 0;
-	setAttr ".phl[1828]" 0;
-	setAttr ".phl[1829]" 0;
-	setAttr ".phl[1830]" 0;
-	setAttr ".phl[1831]" 0;
-	setAttr ".phl[1832]" 0;
-	setAttr ".phl[1833]" 0;
-	setAttr ".phl[1834]" 0;
-	setAttr ".phl[1835]" 0;
-	setAttr ".phl[1836]" 0;
-	setAttr ".phl[1837]" 0;
-	setAttr ".phl[1838]" 0;
-	setAttr ".phl[1839]" 0;
-	setAttr ".phl[1840]" 0;
-	setAttr ".phl[1841]" 0;
-	setAttr ".phl[1842]" 0;
-	setAttr ".phl[1843]" 0;
-	setAttr ".phl[1844]" 0;
-	setAttr ".phl[1845]" 0;
-	setAttr ".phl[1846]" 0;
-	setAttr ".phl[1847]" 0;
-	setAttr ".phl[1848]" 0;
-	setAttr ".phl[1849]" 0;
-	setAttr ".phl[1850]" 0;
-	setAttr ".phl[1851]" 0;
-	setAttr ".phl[1852]" 0;
-	setAttr ".phl[1853]" 0;
-	setAttr ".phl[1854]" 0;
-	setAttr ".phl[1855]" 0;
-	setAttr ".phl[1856]" 0;
-	setAttr ".phl[1857]" 0;
-	setAttr ".phl[1858]" 0;
-	setAttr ".phl[1859]" 0;
-	setAttr ".phl[1860]" 0;
-	setAttr ".phl[1861]" 0;
-	setAttr ".phl[1862]" 0;
-	setAttr ".phl[1863]" 0;
-	setAttr ".phl[1864]" 0;
-	setAttr ".phl[1865]" 0;
-	setAttr ".phl[1866]" 0;
-	setAttr ".phl[1867]" 0;
-	setAttr ".phl[1868]" 0;
-	setAttr ".phl[1869]" 0;
-	setAttr ".phl[1870]" 0;
-	setAttr ".phl[1871]" 0;
-	setAttr ".phl[1872]" 0;
-	setAttr ".phl[1873]" 0;
-	setAttr ".phl[1874]" 0;
-	setAttr ".phl[1875]" 0;
-	setAttr ".phl[1876]" 0;
-	setAttr ".phl[1877]" 0;
-	setAttr ".phl[1878]" 0;
-	setAttr ".phl[1879]" 0;
-	setAttr ".phl[1880]" 0;
-	setAttr ".phl[1881]" 0;
-	setAttr ".phl[1882]" 0;
-	setAttr ".phl[1883]" 0;
-	setAttr ".phl[1884]" 0;
-	setAttr ".phl[1885]" 0;
-	setAttr ".phl[1886]" 0;
-	setAttr ".phl[1887]" 0;
-	setAttr ".phl[1888]" 0;
-	setAttr ".phl[1889]" 0;
-	setAttr ".phl[1890]" 0;
-	setAttr ".phl[1891]" 0;
-	setAttr ".phl[1892]" 0;
-	setAttr ".phl[1893]" 0;
-	setAttr ".phl[1894]" 0;
-	setAttr ".phl[1895]" 0;
-	setAttr ".phl[1896]" 0;
-	setAttr ".phl[1897]" 0;
-	setAttr ".phl[1898]" 0;
-	setAttr ".phl[1899]" 0;
-	setAttr ".phl[1900]" 0;
-	setAttr ".phl[1901]" 0;
-	setAttr ".phl[1902]" 0;
-	setAttr ".phl[1903]" 0;
-	setAttr ".phl[1904]" 0;
-	setAttr ".phl[1905]" 0;
-	setAttr ".phl[1906]" 0;
-	setAttr ".phl[1907]" 0;
-	setAttr ".phl[1908]" 0;
-	setAttr ".phl[1909]" 0;
-	setAttr ".phl[1910]" 0;
-	setAttr ".phl[1911]" 0;
-	setAttr ".phl[1912]" 0;
-	setAttr ".phl[1913]" 0;
-	setAttr ".phl[1914]" 0;
-	setAttr ".phl[1915]" 0;
-	setAttr ".phl[1916]" 0;
-	setAttr ".phl[1917]" 0;
-	setAttr ".phl[1918]" 0;
-	setAttr ".phl[1919]" 0;
-	setAttr ".phl[1920]" 0;
-	setAttr ".phl[1921]" 0;
-	setAttr ".phl[1922]" 0;
-	setAttr ".phl[1923]" 0;
-	setAttr ".phl[1924]" 0;
-	setAttr ".phl[1925]" 0;
-	setAttr ".phl[1926]" 0;
-	setAttr ".phl[1927]" 0;
-	setAttr ".phl[1928]" 0;
-	setAttr ".phl[1929]" 0;
-	setAttr ".phl[1930]" 0;
-	setAttr ".phl[1931]" 0;
-	setAttr ".phl[1932]" 0;
-	setAttr ".phl[1933]" 0;
-	setAttr ".phl[1934]" 0;
-	setAttr ".phl[1935]" 0;
-	setAttr ".phl[1936]" 0;
-	setAttr ".phl[1937]" 0;
-	setAttr ".phl[1938]" 0;
-	setAttr ".phl[1939]" 0;
-	setAttr ".phl[1940]" 0;
-	setAttr ".phl[1941]" 0;
-	setAttr ".phl[1942]" 0;
-	setAttr ".phl[1943]" 0;
-	setAttr ".phl[1944]" 0;
-	setAttr ".phl[1945]" 0;
-	setAttr ".phl[1946]" 0;
-	setAttr ".phl[1947]" 0;
-	setAttr ".phl[1948]" 0;
-	setAttr ".phl[1949]" 0;
-	setAttr ".phl[1950]" 0;
-	setAttr ".phl[1951]" 0;
-	setAttr ".phl[1952]" 0;
-	setAttr ".phl[1953]" 0;
-	setAttr ".phl[1954]" 0;
-	setAttr ".phl[1955]" 0;
-	setAttr ".phl[1956]" 0;
-	setAttr ".phl[1957]" 0;
-	setAttr ".phl[1958]" 0;
-	setAttr ".phl[1959]" 0;
-	setAttr ".phl[1960]" 0;
-	setAttr ".phl[1961]" 0;
-	setAttr ".phl[1962]" 0;
-	setAttr ".phl[1963]" 0;
-	setAttr ".phl[1964]" 0;
-	setAttr ".phl[1965]" 0;
-	setAttr ".phl[1966]" 0;
-	setAttr ".phl[1967]" 0;
-	setAttr ".phl[1968]" 0;
-	setAttr ".phl[1969]" 0;
-	setAttr ".phl[1970]" 0;
-	setAttr ".phl[1971]" 0;
-	setAttr ".phl[1972]" 0;
-	setAttr ".phl[1973]" 0;
-	setAttr ".phl[1974]" 0;
-	setAttr ".phl[1975]" 0;
-	setAttr ".phl[1976]" 0;
-	setAttr ".phl[1977]" 0;
-	setAttr ".phl[1978]" 0;
-	setAttr ".phl[1979]" 0;
-	setAttr ".phl[1980]" 0;
-	setAttr ".phl[1981]" 0;
-	setAttr ".phl[1982]" 0;
-	setAttr ".phl[1983]" 0;
-	setAttr ".phl[1984]" 0;
-	setAttr ".phl[1985]" 0;
-	setAttr ".phl[1986]" 0;
-	setAttr ".phl[1987]" 0;
-	setAttr ".phl[1988]" 0;
-	setAttr ".phl[1989]" 0;
-	setAttr ".phl[1990]" 0;
-	setAttr ".phl[1991]" 0;
-	setAttr ".phl[1992]" 0;
-	setAttr ".phl[1993]" 0;
-	setAttr ".phl[1994]" 0;
-	setAttr ".phl[1995]" 0;
-	setAttr ".phl[1996]" 0;
-	setAttr ".phl[1997]" 0;
-	setAttr ".phl[1998]" 0;
-	setAttr ".phl[1999]" 0;
-	setAttr ".phl[2000]" 0;
-	setAttr ".phl[2001]" 0;
-	setAttr ".phl[2002]" 0;
-	setAttr ".phl[2003]" 0;
-	setAttr ".phl[2004]" 0;
-	setAttr ".phl[2005]" 0;
-	setAttr ".phl[2006]" 0;
-	setAttr ".phl[2007]" 0;
-	setAttr ".phl[2008]" 0;
-	setAttr ".phl[2009]" 0;
-	setAttr ".phl[2010]" 0;
-	setAttr ".phl[2011]" 0;
-	setAttr ".phl[2012]" 0;
-	setAttr ".phl[2013]" 0;
-	setAttr ".phl[2014]" 0;
-	setAttr ".phl[2015]" 0;
-	setAttr ".phl[2016]" 0;
-	setAttr ".phl[2017]" 0;
-	setAttr ".phl[2018]" 0;
-	setAttr ".phl[2019]" 0;
-	setAttr ".phl[2020]" 0;
-	setAttr ".phl[2021]" 0;
-	setAttr ".phl[2022]" 0;
-	setAttr ".phl[2023]" 0;
-	setAttr ".phl[2024]" 0;
-	setAttr ".phl[2025]" 0;
-	setAttr ".phl[2026]" 0;
-	setAttr ".phl[2027]" 0;
-	setAttr ".phl[2028]" 0;
-	setAttr ".phl[2029]" 0;
-	setAttr ".phl[2030]" 0;
-	setAttr ".phl[2031]" 0;
-	setAttr ".phl[2032]" 0;
-	setAttr ".phl[2033]" 0;
-	setAttr ".phl[2034]" 0;
-	setAttr ".phl[2035]" 0;
-	setAttr ".phl[2036]" 0;
-	setAttr ".phl[2037]" 0;
-	setAttr ".phl[2038]" 0;
-	setAttr ".phl[2039]" 0;
-	setAttr ".phl[2040]" 0;
-	setAttr ".phl[2041]" 0;
-	setAttr ".phl[2042]" 0;
-	setAttr ".phl[2043]" 0;
-	setAttr ".phl[2044]" 0;
-	setAttr ".phl[2045]" 0;
-	setAttr ".phl[2046]" 0;
-	setAttr ".phl[2047]" 0;
-	setAttr ".phl[2048]" 0;
-	setAttr ".phl[2049]" 0;
-	setAttr ".phl[2050]" 0;
-	setAttr ".phl[2051]" 0;
-	setAttr ".phl[2052]" 0;
-	setAttr ".phl[2053]" 0;
-	setAttr ".phl[2054]" 0;
-	setAttr ".phl[2055]" 0;
-	setAttr ".phl[2056]" 0;
-	setAttr ".phl[2057]" 0;
-	setAttr ".phl[2058]" 0;
-	setAttr ".phl[2059]" 0;
-	setAttr ".phl[2060]" 0;
-	setAttr ".phl[2061]" 0;
-	setAttr ".phl[2062]" 0;
-	setAttr ".phl[2063]" 0;
-	setAttr ".phl[2064]" 0;
-	setAttr ".phl[2065]" 0;
-	setAttr ".phl[2066]" 0;
-	setAttr ".phl[2067]" 0;
-	setAttr ".phl[2068]" 0;
-	setAttr ".phl[2069]" 0;
-	setAttr ".phl[2070]" 0;
-	setAttr ".phl[2071]" 0;
-	setAttr ".phl[2072]" 0;
-	setAttr ".phl[2073]" 0;
-	setAttr ".phl[2074]" 0;
-	setAttr ".phl[2075]" 0;
-	setAttr ".phl[2076]" 0;
-	setAttr ".phl[2077]" 0;
-	setAttr ".phl[2078]" 0;
-	setAttr ".phl[2079]" 0;
-	setAttr ".phl[2080]" 0;
-	setAttr ".phl[2081]" 0;
-	setAttr ".phl[2082]" 0;
-	setAttr ".phl[2083]" 0;
-	setAttr ".phl[2084]" 0;
-	setAttr ".phl[2085]" 0;
-	setAttr ".phl[2086]" 0;
-	setAttr ".phl[2087]" 0;
-	setAttr ".phl[2088]" 0;
-	setAttr ".phl[2089]" 0;
-	setAttr ".phl[2090]" 0;
-	setAttr ".phl[2091]" 0;
-	setAttr ".phl[2092]" 0;
-	setAttr ".phl[2093]" 0;
-	setAttr ".phl[2094]" 0;
-	setAttr ".phl[2095]" 0;
-	setAttr ".phl[2096]" 0;
-	setAttr ".phl[2097]" 0;
-	setAttr ".phl[2098]" 0;
-	setAttr ".phl[2099]" 0;
-	setAttr ".phl[2100]" 0;
-	setAttr ".phl[2101]" 0;
-	setAttr ".phl[2102]" 0;
-	setAttr ".phl[2103]" 0;
-	setAttr ".phl[2104]" 0;
-	setAttr ".phl[2105]" 0;
-	setAttr ".phl[2106]" 0;
-	setAttr ".phl[2107]" 0;
-	setAttr ".phl[2108]" 0;
-	setAttr ".phl[2109]" 0;
-	setAttr ".phl[2110]" 0;
-	setAttr ".phl[2111]" 0;
-	setAttr ".phl[2112]" 0;
-	setAttr ".phl[2113]" 0;
-	setAttr ".phl[2114]" 0;
-	setAttr ".phl[2115]" 0;
-	setAttr ".phl[2116]" 0;
-	setAttr ".phl[2117]" 0;
-	setAttr ".phl[2118]" 0;
-	setAttr ".phl[2119]" 0;
-	setAttr ".phl[2120]" 0;
-	setAttr ".phl[2121]" 0;
-	setAttr ".phl[2122]" 0;
-	setAttr ".phl[2123]" 0;
-	setAttr ".phl[2124]" 0;
-	setAttr ".phl[2125]" 0;
-	setAttr ".phl[2126]" 0;
-	setAttr ".phl[2127]" 0;
-	setAttr ".phl[2128]" 0;
-	setAttr ".phl[2129]" 0;
-	setAttr ".phl[2130]" 0;
-	setAttr ".phl[2131]" 0;
-	setAttr ".phl[2132]" 0;
-	setAttr ".phl[2133]" 0;
-	setAttr ".phl[2134]" 0;
-	setAttr ".phl[2135]" 0;
-	setAttr ".phl[2136]" 0;
+	setAttr -s 1422 ".phl";
 	setAttr ".phl[2137]" 0;
 	setAttr ".phl[2138]" 0;
 	setAttr ".phl[2139]" 0;
@@ -31637,10 +30699,978 @@ createNode reference -n "Cleaning_SceneRN";
 	setAttr ".phl[2512]" 0;
 	setAttr ".phl[2513]" 0;
 	setAttr ".phl[2514]" 0;
+	setAttr ".phl[2515]" 0;
+	setAttr ".phl[2516]" 0;
+	setAttr ".phl[2517]" 0;
+	setAttr ".phl[2518]" 0;
+	setAttr ".phl[2519]" 0;
+	setAttr ".phl[2520]" 0;
+	setAttr ".phl[2521]" 0;
+	setAttr ".phl[2522]" 0;
+	setAttr ".phl[2523]" 0;
+	setAttr ".phl[2524]" 0;
+	setAttr ".phl[2525]" 0;
+	setAttr ".phl[2526]" 0;
+	setAttr ".phl[2527]" 0;
+	setAttr ".phl[2528]" 0;
+	setAttr ".phl[2529]" 0;
+	setAttr ".phl[2530]" 0;
+	setAttr ".phl[2531]" 0;
+	setAttr ".phl[2532]" 0;
+	setAttr ".phl[2533]" 0;
+	setAttr ".phl[2534]" 0;
+	setAttr ".phl[2535]" 0;
+	setAttr ".phl[2536]" 0;
+	setAttr ".phl[2537]" 0;
+	setAttr ".phl[2538]" 0;
+	setAttr ".phl[2539]" 0;
+	setAttr ".phl[2540]" 0;
+	setAttr ".phl[2541]" 0;
+	setAttr ".phl[2542]" 0;
+	setAttr ".phl[2543]" 0;
+	setAttr ".phl[2544]" 0;
+	setAttr ".phl[2545]" 0;
+	setAttr ".phl[2546]" 0;
+	setAttr ".phl[2547]" 0;
+	setAttr ".phl[2548]" 0;
+	setAttr ".phl[2549]" 0;
+	setAttr ".phl[2550]" 0;
+	setAttr ".phl[2551]" 0;
+	setAttr ".phl[2552]" 0;
+	setAttr ".phl[2553]" 0;
+	setAttr ".phl[2554]" 0;
+	setAttr ".phl[2555]" 0;
+	setAttr ".phl[2556]" 0;
+	setAttr ".phl[2557]" 0;
+	setAttr ".phl[2558]" 0;
+	setAttr ".phl[2559]" 0;
+	setAttr ".phl[2560]" 0;
+	setAttr ".phl[2561]" 0;
+	setAttr ".phl[2562]" 0;
+	setAttr ".phl[2563]" 0;
+	setAttr ".phl[2564]" 0;
+	setAttr ".phl[2565]" 0;
+	setAttr ".phl[2566]" 0;
+	setAttr ".phl[2567]" 0;
+	setAttr ".phl[2568]" 0;
+	setAttr ".phl[2569]" 0;
+	setAttr ".phl[2570]" 0;
+	setAttr ".phl[2571]" 0;
+	setAttr ".phl[2572]" 0;
+	setAttr ".phl[2573]" 0;
+	setAttr ".phl[2574]" 0;
+	setAttr ".phl[2575]" 0;
+	setAttr ".phl[2576]" 0;
+	setAttr ".phl[2577]" 0;
+	setAttr ".phl[2578]" 0;
+	setAttr ".phl[2579]" 0;
+	setAttr ".phl[2580]" 0;
+	setAttr ".phl[2581]" 0;
+	setAttr ".phl[2582]" 0;
+	setAttr ".phl[2583]" 0;
+	setAttr ".phl[2584]" 0;
+	setAttr ".phl[2585]" 0;
+	setAttr ".phl[2586]" 0;
+	setAttr ".phl[2587]" 0;
+	setAttr ".phl[2588]" 0;
+	setAttr ".phl[2589]" 0;
+	setAttr ".phl[2590]" 0;
+	setAttr ".phl[2591]" 0;
+	setAttr ".phl[2592]" 0;
+	setAttr ".phl[2593]" 0;
+	setAttr ".phl[2594]" 0;
+	setAttr ".phl[2595]" 0;
+	setAttr ".phl[2596]" 0;
+	setAttr ".phl[2597]" 0;
+	setAttr ".phl[2598]" 0;
+	setAttr ".phl[2599]" 0;
+	setAttr ".phl[2600]" 0;
+	setAttr ".phl[2601]" 0;
+	setAttr ".phl[2602]" 0;
+	setAttr ".phl[2603]" 0;
+	setAttr ".phl[2604]" 0;
+	setAttr ".phl[2605]" 0;
+	setAttr ".phl[2606]" 0;
+	setAttr ".phl[2607]" 0;
+	setAttr ".phl[2608]" 0;
+	setAttr ".phl[2609]" 0;
+	setAttr ".phl[2610]" 0;
+	setAttr ".phl[2611]" 0;
+	setAttr ".phl[2612]" 0;
+	setAttr ".phl[2613]" 0;
+	setAttr ".phl[2614]" 0;
+	setAttr ".phl[2615]" 0;
+	setAttr ".phl[2616]" 0;
+	setAttr ".phl[2617]" 0;
+	setAttr ".phl[2618]" 0;
+	setAttr ".phl[2619]" 0;
+	setAttr ".phl[2620]" 0;
+	setAttr ".phl[2621]" 0;
+	setAttr ".phl[2622]" 0;
+	setAttr ".phl[2623]" 0;
+	setAttr ".phl[2624]" 0;
+	setAttr ".phl[2625]" 0;
+	setAttr ".phl[2626]" 0;
+	setAttr ".phl[2627]" 0;
+	setAttr ".phl[2628]" 0;
+	setAttr ".phl[2629]" 0;
+	setAttr ".phl[2630]" 0;
+	setAttr ".phl[2631]" 0;
+	setAttr ".phl[2632]" 0;
+	setAttr ".phl[2633]" 0;
+	setAttr ".phl[2634]" 0;
+	setAttr ".phl[2635]" 0;
+	setAttr ".phl[2636]" 0;
+	setAttr ".phl[2637]" 0;
+	setAttr ".phl[2638]" 0;
+	setAttr ".phl[2639]" 0;
+	setAttr ".phl[2640]" 0;
+	setAttr ".phl[2641]" 0;
+	setAttr ".phl[2642]" 0;
+	setAttr ".phl[2643]" 0;
+	setAttr ".phl[2644]" 0;
+	setAttr ".phl[2645]" 0;
+	setAttr ".phl[2646]" 0;
+	setAttr ".phl[2647]" 0;
+	setAttr ".phl[2648]" 0;
+	setAttr ".phl[2649]" 0;
+	setAttr ".phl[2650]" 0;
+	setAttr ".phl[2651]" 0;
+	setAttr ".phl[2652]" 0;
+	setAttr ".phl[2653]" 0;
+	setAttr ".phl[2654]" 0;
+	setAttr ".phl[2655]" 0;
+	setAttr ".phl[2656]" 0;
+	setAttr ".phl[2657]" 0;
+	setAttr ".phl[2658]" 0;
+	setAttr ".phl[2659]" 0;
+	setAttr ".phl[2660]" 0;
+	setAttr ".phl[2661]" 0;
+	setAttr ".phl[2662]" 0;
+	setAttr ".phl[2663]" 0;
+	setAttr ".phl[2664]" 0;
+	setAttr ".phl[2665]" 0;
+	setAttr ".phl[2666]" 0;
+	setAttr ".phl[2667]" 0;
+	setAttr ".phl[2668]" 0;
+	setAttr ".phl[2669]" 0;
+	setAttr ".phl[2670]" 0;
+	setAttr ".phl[2671]" 0;
+	setAttr ".phl[2672]" 0;
+	setAttr ".phl[2673]" 0;
+	setAttr ".phl[2674]" 0;
+	setAttr ".phl[2675]" 0;
+	setAttr ".phl[2676]" 0;
+	setAttr ".phl[2677]" 0;
+	setAttr ".phl[2678]" 0;
+	setAttr ".phl[2679]" 0;
+	setAttr ".phl[2680]" 0;
+	setAttr ".phl[2681]" 0;
+	setAttr ".phl[2682]" 0;
+	setAttr ".phl[2683]" 0;
+	setAttr ".phl[2684]" 0;
+	setAttr ".phl[2685]" 0;
+	setAttr ".phl[2686]" 0;
+	setAttr ".phl[2687]" 0;
+	setAttr ".phl[2688]" 0;
+	setAttr ".phl[2689]" 0;
+	setAttr ".phl[2690]" 0;
+	setAttr ".phl[2691]" 0;
+	setAttr ".phl[2692]" 0;
+	setAttr ".phl[2693]" 0;
+	setAttr ".phl[2694]" 0;
+	setAttr ".phl[2695]" 0;
+	setAttr ".phl[2696]" 0;
+	setAttr ".phl[2697]" 0;
+	setAttr ".phl[2698]" 0;
+	setAttr ".phl[2699]" 0;
+	setAttr ".phl[2700]" 0;
+	setAttr ".phl[2701]" 0;
+	setAttr ".phl[2702]" 0;
+	setAttr ".phl[2703]" 0;
+	setAttr ".phl[2704]" 0;
+	setAttr ".phl[2705]" 0;
+	setAttr ".phl[2706]" 0;
+	setAttr ".phl[2707]" 0;
+	setAttr ".phl[2708]" 0;
+	setAttr ".phl[2709]" 0;
+	setAttr ".phl[2710]" 0;
+	setAttr ".phl[2711]" 0;
+	setAttr ".phl[2712]" 0;
+	setAttr ".phl[2713]" 0;
+	setAttr ".phl[2714]" 0;
+	setAttr ".phl[2715]" 0;
+	setAttr ".phl[2716]" 0;
+	setAttr ".phl[2717]" 0;
+	setAttr ".phl[2718]" 0;
+	setAttr ".phl[2719]" 0;
+	setAttr ".phl[2720]" 0;
+	setAttr ".phl[2721]" 0;
+	setAttr ".phl[2722]" 0;
+	setAttr ".phl[2723]" 0;
+	setAttr ".phl[2724]" 0;
+	setAttr ".phl[2725]" 0;
+	setAttr ".phl[2726]" 0;
+	setAttr ".phl[2727]" 0;
+	setAttr ".phl[2728]" 0;
+	setAttr ".phl[2729]" 0;
+	setAttr ".phl[2730]" 0;
+	setAttr ".phl[2731]" 0;
+	setAttr ".phl[2732]" 0;
+	setAttr ".phl[2733]" 0;
+	setAttr ".phl[2734]" 0;
+	setAttr ".phl[2735]" 0;
+	setAttr ".phl[2736]" 0;
+	setAttr ".phl[2737]" 0;
+	setAttr ".phl[2738]" 0;
+	setAttr ".phl[2739]" 0;
+	setAttr ".phl[2740]" 0;
+	setAttr ".phl[2741]" 0;
+	setAttr ".phl[2742]" 0;
+	setAttr ".phl[2743]" 0;
+	setAttr ".phl[2744]" 0;
+	setAttr ".phl[2745]" 0;
+	setAttr ".phl[2746]" 0;
+	setAttr ".phl[2747]" 0;
+	setAttr ".phl[2748]" 0;
+	setAttr ".phl[2749]" 0;
+	setAttr ".phl[2750]" 0;
+	setAttr ".phl[2751]" 0;
+	setAttr ".phl[2752]" 0;
+	setAttr ".phl[2753]" 0;
+	setAttr ".phl[2754]" 0;
+	setAttr ".phl[2755]" 0;
+	setAttr ".phl[2756]" 0;
+	setAttr ".phl[2757]" 0;
+	setAttr ".phl[2758]" 0;
+	setAttr ".phl[2759]" 0;
+	setAttr ".phl[2760]" 0;
+	setAttr ".phl[2761]" 0;
+	setAttr ".phl[2762]" 0;
+	setAttr ".phl[2763]" 0;
+	setAttr ".phl[2764]" 0;
+	setAttr ".phl[2765]" 0;
+	setAttr ".phl[2766]" 0;
+	setAttr ".phl[2767]" 0;
+	setAttr ".phl[2768]" 0;
+	setAttr ".phl[2769]" 0;
+	setAttr ".phl[2770]" 0;
+	setAttr ".phl[2771]" 0;
+	setAttr ".phl[2772]" 0;
+	setAttr ".phl[2773]" 0;
+	setAttr ".phl[2774]" 0;
+	setAttr ".phl[2775]" 0;
+	setAttr ".phl[2776]" 0;
+	setAttr ".phl[2777]" 0;
+	setAttr ".phl[2778]" 0;
+	setAttr ".phl[2779]" 0;
+	setAttr ".phl[2780]" 0;
+	setAttr ".phl[2781]" 0;
+	setAttr ".phl[2782]" 0;
+	setAttr ".phl[2783]" 0;
+	setAttr ".phl[2784]" 0;
+	setAttr ".phl[2785]" 0;
+	setAttr ".phl[2786]" 0;
+	setAttr ".phl[2787]" 0;
+	setAttr ".phl[2788]" 0;
+	setAttr ".phl[2789]" 0;
+	setAttr ".phl[2790]" 0;
+	setAttr ".phl[2791]" 0;
+	setAttr ".phl[2792]" 0;
+	setAttr ".phl[2793]" 0;
+	setAttr ".phl[2794]" 0;
+	setAttr ".phl[2795]" 0;
+	setAttr ".phl[2796]" 0;
+	setAttr ".phl[2797]" 0;
+	setAttr ".phl[2798]" 0;
+	setAttr ".phl[2799]" 0;
+	setAttr ".phl[2800]" 0;
+	setAttr ".phl[2801]" 0;
+	setAttr ".phl[2802]" 0;
+	setAttr ".phl[2803]" 0;
+	setAttr ".phl[2804]" 0;
+	setAttr ".phl[2805]" 0;
+	setAttr ".phl[2806]" 0;
+	setAttr ".phl[2807]" 0;
+	setAttr ".phl[2808]" 0;
+	setAttr ".phl[2809]" 0;
+	setAttr ".phl[2810]" 0;
+	setAttr ".phl[2811]" 0;
+	setAttr ".phl[2812]" 0;
+	setAttr ".phl[2813]" 0;
+	setAttr ".phl[2814]" 0;
+	setAttr ".phl[2815]" 0;
+	setAttr ".phl[2816]" 0;
+	setAttr ".phl[2817]" 0;
+	setAttr ".phl[2818]" 0;
+	setAttr ".phl[2819]" 0;
+	setAttr ".phl[2820]" 0;
+	setAttr ".phl[2821]" 0;
+	setAttr ".phl[2822]" 0;
+	setAttr ".phl[2823]" 0;
+	setAttr ".phl[2824]" 0;
+	setAttr ".phl[2825]" 0;
+	setAttr ".phl[2826]" 0;
+	setAttr ".phl[2827]" 0;
+	setAttr ".phl[2828]" 0;
+	setAttr ".phl[2829]" 0;
+	setAttr ".phl[2830]" 0;
+	setAttr ".phl[2831]" 0;
+	setAttr ".phl[2832]" 0;
+	setAttr ".phl[2833]" 0;
+	setAttr ".phl[2834]" 0;
+	setAttr ".phl[2835]" 0;
+	setAttr ".phl[2836]" 0;
+	setAttr ".phl[2837]" 0;
+	setAttr ".phl[2838]" 0;
+	setAttr ".phl[2839]" 0;
+	setAttr ".phl[2840]" 0;
+	setAttr ".phl[2841]" 0;
+	setAttr ".phl[2842]" 0;
+	setAttr ".phl[2843]" 0;
+	setAttr ".phl[2844]" 0;
+	setAttr ".phl[2845]" 0;
+	setAttr ".phl[2846]" 0;
+	setAttr ".phl[2847]" 0;
+	setAttr ".phl[2848]" 0;
+	setAttr ".phl[2849]" 0;
+	setAttr ".phl[2850]" 0;
+	setAttr ".phl[2851]" 0;
+	setAttr ".phl[2852]" 0;
+	setAttr ".phl[2853]" 0;
+	setAttr ".phl[2854]" 0;
+	setAttr ".phl[2855]" 0;
+	setAttr ".phl[2856]" 0;
+	setAttr ".phl[2857]" 0;
+	setAttr ".phl[2858]" 0;
+	setAttr ".phl[2859]" 0;
+	setAttr ".phl[2860]" 0;
+	setAttr ".phl[2861]" 0;
+	setAttr ".phl[2862]" 0;
+	setAttr ".phl[2863]" 0;
+	setAttr ".phl[2864]" 0;
+	setAttr ".phl[2865]" 0;
+	setAttr ".phl[2866]" 0;
+	setAttr ".phl[2867]" 0;
+	setAttr ".phl[2868]" 0;
+	setAttr ".phl[2869]" 0;
+	setAttr ".phl[2870]" 0;
+	setAttr ".phl[2871]" 0;
+	setAttr ".phl[2872]" 0;
+	setAttr ".phl[2873]" 0;
+	setAttr ".phl[2874]" 0;
+	setAttr ".phl[2875]" 0;
+	setAttr ".phl[2876]" 0;
+	setAttr ".phl[2877]" 0;
+	setAttr ".phl[2878]" 0;
+	setAttr ".phl[2879]" 0;
+	setAttr ".phl[2880]" 0;
+	setAttr ".phl[2881]" 0;
+	setAttr ".phl[2882]" 0;
+	setAttr ".phl[2883]" 0;
+	setAttr ".phl[2884]" 0;
+	setAttr ".phl[2885]" 0;
+	setAttr ".phl[2886]" 0;
+	setAttr ".phl[2887]" 0;
+	setAttr ".phl[2888]" 0;
+	setAttr ".phl[2889]" 0;
+	setAttr ".phl[2890]" 0;
+	setAttr ".phl[2891]" 0;
+	setAttr ".phl[2892]" 0;
+	setAttr ".phl[2893]" 0;
+	setAttr ".phl[2894]" 0;
+	setAttr ".phl[2895]" 0;
+	setAttr ".phl[2896]" 0;
+	setAttr ".phl[2897]" 0;
+	setAttr ".phl[2898]" 0;
+	setAttr ".phl[2899]" 0;
+	setAttr ".phl[2900]" 0;
+	setAttr ".phl[2901]" 0;
+	setAttr ".phl[2902]" 0;
+	setAttr ".phl[2903]" 0;
+	setAttr ".phl[2904]" 0;
+	setAttr ".phl[2905]" 0;
+	setAttr ".phl[2906]" 0;
+	setAttr ".phl[2907]" 0;
+	setAttr ".phl[2908]" 0;
+	setAttr ".phl[2909]" 0;
+	setAttr ".phl[2910]" 0;
+	setAttr ".phl[2911]" 0;
+	setAttr ".phl[2912]" 0;
+	setAttr ".phl[2913]" 0;
+	setAttr ".phl[2914]" 0;
+	setAttr ".phl[2915]" 0;
+	setAttr ".phl[2916]" 0;
+	setAttr ".phl[2917]" 0;
+	setAttr ".phl[2918]" 0;
+	setAttr ".phl[2919]" 0;
+	setAttr ".phl[2920]" 0;
+	setAttr ".phl[2921]" 0;
+	setAttr ".phl[2922]" 0;
+	setAttr ".phl[2923]" 0;
+	setAttr ".phl[2924]" 0;
+	setAttr ".phl[2925]" 0;
+	setAttr ".phl[2926]" 0;
+	setAttr ".phl[2927]" 0;
+	setAttr ".phl[2928]" 0;
+	setAttr ".phl[2929]" 0;
+	setAttr ".phl[2930]" 0;
+	setAttr ".phl[2931]" 0;
+	setAttr ".phl[2932]" 0;
+	setAttr ".phl[2933]" 0;
+	setAttr ".phl[2934]" 0;
+	setAttr ".phl[2935]" 0;
+	setAttr ".phl[2936]" 0;
+	setAttr ".phl[2937]" 0;
+	setAttr ".phl[2938]" 0;
+	setAttr ".phl[2939]" 0;
+	setAttr ".phl[2940]" 0;
+	setAttr ".phl[2941]" 0;
+	setAttr ".phl[2942]" 0;
+	setAttr ".phl[2943]" 0;
+	setAttr ".phl[2944]" 0;
+	setAttr ".phl[2945]" 0;
+	setAttr ".phl[2946]" 0;
+	setAttr ".phl[2947]" 0;
+	setAttr ".phl[2948]" 0;
+	setAttr ".phl[2949]" 0;
+	setAttr ".phl[2950]" 0;
+	setAttr ".phl[2951]" 0;
+	setAttr ".phl[2952]" 0;
+	setAttr ".phl[2953]" 0;
+	setAttr ".phl[2954]" 0;
+	setAttr ".phl[2955]" 0;
+	setAttr ".phl[2956]" 0;
+	setAttr ".phl[2957]" 0;
+	setAttr ".phl[2958]" 0;
+	setAttr ".phl[2959]" 0;
+	setAttr ".phl[2960]" 0;
+	setAttr ".phl[2961]" 0;
+	setAttr ".phl[2962]" 0;
+	setAttr ".phl[2963]" 0;
+	setAttr ".phl[2964]" 0;
+	setAttr ".phl[2965]" 0;
+	setAttr ".phl[2966]" 0;
+	setAttr ".phl[2967]" 0;
+	setAttr ".phl[2968]" 0;
+	setAttr ".phl[2969]" 0;
+	setAttr ".phl[2970]" 0;
+	setAttr ".phl[2971]" 0;
+	setAttr ".phl[2972]" 0;
+	setAttr ".phl[2973]" 0;
+	setAttr ".phl[2974]" 0;
+	setAttr ".phl[2975]" 0;
+	setAttr ".phl[2976]" 0;
+	setAttr ".phl[2977]" 0;
+	setAttr ".phl[2978]" 0;
+	setAttr ".phl[2979]" 0;
+	setAttr ".phl[2980]" 0;
+	setAttr ".phl[2981]" 0;
+	setAttr ".phl[2982]" 0;
+	setAttr ".phl[2983]" 0;
+	setAttr ".phl[2984]" 0;
+	setAttr ".phl[2985]" 0;
+	setAttr ".phl[2986]" 0;
+	setAttr ".phl[2987]" 0;
+	setAttr ".phl[2988]" 0;
+	setAttr ".phl[2989]" 0;
+	setAttr ".phl[2990]" 0;
+	setAttr ".phl[2991]" 0;
+	setAttr ".phl[2992]" 0;
+	setAttr ".phl[2993]" 0;
+	setAttr ".phl[2994]" 0;
+	setAttr ".phl[2995]" 0;
+	setAttr ".phl[2996]" 0;
+	setAttr ".phl[2997]" 0;
+	setAttr ".phl[2998]" 0;
+	setAttr ".phl[2999]" 0;
+	setAttr ".phl[3000]" 0;
+	setAttr ".phl[3001]" 0;
+	setAttr ".phl[3002]" 0;
+	setAttr ".phl[3003]" 0;
+	setAttr ".phl[3004]" 0;
+	setAttr ".phl[3005]" 0;
+	setAttr ".phl[3006]" 0;
+	setAttr ".phl[3007]" 0;
+	setAttr ".phl[3008]" 0;
+	setAttr ".phl[3009]" 0;
+	setAttr ".phl[3010]" 0;
+	setAttr ".phl[3011]" 0;
+	setAttr ".phl[3012]" 0;
+	setAttr ".phl[3013]" 0;
+	setAttr ".phl[3014]" 0;
+	setAttr ".phl[3015]" 0;
+	setAttr ".phl[3016]" 0;
+	setAttr ".phl[3017]" 0;
+	setAttr ".phl[3018]" 0;
+	setAttr ".phl[3019]" 0;
+	setAttr ".phl[3020]" 0;
+	setAttr ".phl[3021]" 0;
+	setAttr ".phl[3022]" 0;
+	setAttr ".phl[3023]" 0;
+	setAttr ".phl[3024]" 0;
+	setAttr ".phl[3025]" 0;
+	setAttr ".phl[3026]" 0;
+	setAttr ".phl[3027]" 0;
+	setAttr ".phl[3028]" 0;
+	setAttr ".phl[3029]" 0;
+	setAttr ".phl[3030]" 0;
+	setAttr ".phl[3031]" 0;
+	setAttr ".phl[3032]" 0;
+	setAttr ".phl[3033]" 0;
+	setAttr ".phl[3034]" 0;
+	setAttr ".phl[3035]" 0;
+	setAttr ".phl[3036]" 0;
+	setAttr ".phl[3037]" 0;
+	setAttr ".phl[3038]" 0;
+	setAttr ".phl[3039]" 0;
+	setAttr ".phl[3040]" 0;
+	setAttr ".phl[3041]" 0;
+	setAttr ".phl[3042]" 0;
+	setAttr ".phl[3043]" 0;
+	setAttr ".phl[3044]" 0;
+	setAttr ".phl[3045]" 0;
+	setAttr ".phl[3046]" 0;
+	setAttr ".phl[3047]" 0;
+	setAttr ".phl[3048]" 0;
+	setAttr ".phl[3049]" 0;
+	setAttr ".phl[3050]" 0;
+	setAttr ".phl[3051]" 0;
+	setAttr ".phl[3052]" 0;
+	setAttr ".phl[3053]" 0;
+	setAttr ".phl[3054]" 0;
+	setAttr ".phl[3055]" 0;
+	setAttr ".phl[3056]" 0;
+	setAttr ".phl[3057]" 0;
+	setAttr ".phl[3058]" 0;
+	setAttr ".phl[3059]" 0;
+	setAttr ".phl[3060]" 0;
+	setAttr ".phl[3061]" 0;
+	setAttr ".phl[3062]" 0;
+	setAttr ".phl[3063]" 0;
+	setAttr ".phl[3064]" 0;
+	setAttr ".phl[3065]" 0;
+	setAttr ".phl[3066]" 0;
+	setAttr ".phl[3067]" 0;
+	setAttr ".phl[3068]" 0;
+	setAttr ".phl[3069]" 0;
+	setAttr ".phl[3070]" 0;
+	setAttr ".phl[3071]" 0;
+	setAttr ".phl[3072]" 0;
+	setAttr ".phl[3073]" 0;
+	setAttr ".phl[3074]" 0;
+	setAttr ".phl[3075]" 0;
+	setAttr ".phl[3076]" 0;
+	setAttr ".phl[3077]" 0;
+	setAttr ".phl[3078]" 0;
+	setAttr ".phl[3079]" 0;
+	setAttr ".phl[3080]" 0;
+	setAttr ".phl[3081]" 0;
+	setAttr ".phl[3082]" 0;
+	setAttr ".phl[3083]" 0;
+	setAttr ".phl[3084]" 0;
+	setAttr ".phl[3085]" 0;
+	setAttr ".phl[3086]" 0;
+	setAttr ".phl[3087]" 0;
+	setAttr ".phl[3088]" 0;
+	setAttr ".phl[3089]" 0;
+	setAttr ".phl[3090]" 0;
+	setAttr ".phl[3091]" 0;
+	setAttr ".phl[3092]" 0;
+	setAttr ".phl[3093]" 0;
+	setAttr ".phl[3094]" 0;
+	setAttr ".phl[3095]" 0;
+	setAttr ".phl[3096]" 0;
+	setAttr ".phl[3097]" 0;
+	setAttr ".phl[3098]" 0;
+	setAttr ".phl[3099]" 0;
+	setAttr ".phl[3100]" 0;
+	setAttr ".phl[3101]" 0;
+	setAttr ".phl[3102]" 0;
+	setAttr ".phl[3103]" 0;
+	setAttr ".phl[3104]" 0;
+	setAttr ".phl[3105]" 0;
+	setAttr ".phl[3106]" 0;
+	setAttr ".phl[3107]" 0;
+	setAttr ".phl[3108]" 0;
+	setAttr ".phl[3109]" 0;
+	setAttr ".phl[3110]" 0;
+	setAttr ".phl[3111]" 0;
+	setAttr ".phl[3112]" 0;
+	setAttr ".phl[3113]" 0;
+	setAttr ".phl[3114]" 0;
+	setAttr ".phl[3115]" 0;
+	setAttr ".phl[3116]" 0;
+	setAttr ".phl[3117]" 0;
+	setAttr ".phl[3118]" 0;
+	setAttr ".phl[3119]" 0;
+	setAttr ".phl[3120]" 0;
+	setAttr ".phl[3121]" 0;
+	setAttr ".phl[3122]" 0;
+	setAttr ".phl[3123]" 0;
+	setAttr ".phl[3124]" 0;
+	setAttr ".phl[3125]" 0;
+	setAttr ".phl[3126]" 0;
+	setAttr ".phl[3127]" 0;
+	setAttr ".phl[3128]" 0;
+	setAttr ".phl[3129]" 0;
+	setAttr ".phl[3130]" 0;
+	setAttr ".phl[3131]" 0;
+	setAttr ".phl[3132]" 0;
+	setAttr ".phl[3133]" 0;
+	setAttr ".phl[3134]" 0;
+	setAttr ".phl[3135]" 0;
+	setAttr ".phl[3136]" 0;
+	setAttr ".phl[3137]" 0;
+	setAttr ".phl[3138]" 0;
+	setAttr ".phl[3139]" 0;
+	setAttr ".phl[3140]" 0;
+	setAttr ".phl[3141]" 0;
+	setAttr ".phl[3142]" 0;
+	setAttr ".phl[3143]" 0;
+	setAttr ".phl[3144]" 0;
+	setAttr ".phl[3145]" 0;
+	setAttr ".phl[3146]" 0;
+	setAttr ".phl[3147]" 0;
+	setAttr ".phl[3148]" 0;
+	setAttr ".phl[3149]" 0;
+	setAttr ".phl[3150]" 0;
+	setAttr ".phl[3151]" 0;
+	setAttr ".phl[3152]" 0;
+	setAttr ".phl[3153]" 0;
+	setAttr ".phl[3154]" 0;
+	setAttr ".phl[3155]" 0;
+	setAttr ".phl[3156]" 0;
+	setAttr ".phl[3157]" 0;
+	setAttr ".phl[3158]" 0;
+	setAttr ".phl[3159]" 0;
+	setAttr ".phl[3160]" 0;
+	setAttr ".phl[3161]" 0;
+	setAttr ".phl[3162]" 0;
+	setAttr ".phl[3163]" 0;
+	setAttr ".phl[3164]" 0;
+	setAttr ".phl[3165]" 0;
+	setAttr ".phl[3166]" 0;
+	setAttr ".phl[3167]" 0;
+	setAttr ".phl[3168]" 0;
+	setAttr ".phl[3169]" 0;
+	setAttr ".phl[3170]" 0;
+	setAttr ".phl[3171]" 0;
+	setAttr ".phl[3172]" 0;
+	setAttr ".phl[3173]" 0;
+	setAttr ".phl[3174]" 0;
+	setAttr ".phl[3175]" 0;
+	setAttr ".phl[3176]" 0;
+	setAttr ".phl[3177]" 0;
+	setAttr ".phl[3178]" 0;
+	setAttr ".phl[3179]" 0;
+	setAttr ".phl[3180]" 0;
+	setAttr ".phl[3181]" 0;
+	setAttr ".phl[3182]" 0;
+	setAttr ".phl[3183]" 0;
+	setAttr ".phl[3184]" 0;
+	setAttr ".phl[3185]" 0;
+	setAttr ".phl[3186]" 0;
+	setAttr ".phl[3187]" 0;
+	setAttr ".phl[3188]" 0;
+	setAttr ".phl[3189]" 0;
+	setAttr ".phl[3190]" 0;
+	setAttr ".phl[3191]" 0;
+	setAttr ".phl[3192]" 0;
+	setAttr ".phl[3193]" 0;
+	setAttr ".phl[3194]" 0;
+	setAttr ".phl[3195]" 0;
+	setAttr ".phl[3196]" 0;
+	setAttr ".phl[3197]" 0;
+	setAttr ".phl[3198]" 0;
+	setAttr ".phl[3199]" 0;
+	setAttr ".phl[3200]" 0;
+	setAttr ".phl[3201]" 0;
+	setAttr ".phl[3202]" 0;
+	setAttr ".phl[3203]" 0;
+	setAttr ".phl[3204]" 0;
+	setAttr ".phl[3205]" 0;
+	setAttr ".phl[3206]" 0;
+	setAttr ".phl[3207]" 0;
+	setAttr ".phl[3208]" 0;
+	setAttr ".phl[3209]" 0;
+	setAttr ".phl[3210]" 0;
+	setAttr ".phl[3211]" 0;
+	setAttr ".phl[3212]" 0;
+	setAttr ".phl[3213]" 0;
+	setAttr ".phl[3214]" 0;
+	setAttr ".phl[3215]" 0;
+	setAttr ".phl[3216]" 0;
+	setAttr ".phl[3217]" 0;
+	setAttr ".phl[3218]" 0;
+	setAttr ".phl[3219]" 0;
+	setAttr ".phl[3220]" 0;
+	setAttr ".phl[3221]" 0;
+	setAttr ".phl[3222]" 0;
+	setAttr ".phl[3223]" 0;
+	setAttr ".phl[3224]" 0;
+	setAttr ".phl[3225]" 0;
+	setAttr ".phl[3226]" 0;
+	setAttr ".phl[3227]" 0;
+	setAttr ".phl[3228]" 0;
+	setAttr ".phl[3229]" 0;
+	setAttr ".phl[3230]" 0;
+	setAttr ".phl[3231]" 0;
+	setAttr ".phl[3232]" 0;
+	setAttr ".phl[3233]" 0;
+	setAttr ".phl[3234]" 0;
+	setAttr ".phl[3235]" 0;
+	setAttr ".phl[3236]" 0;
+	setAttr ".phl[3237]" 0;
+	setAttr ".phl[3238]" 0;
+	setAttr ".phl[3239]" 0;
+	setAttr ".phl[3240]" 0;
+	setAttr ".phl[3241]" 0;
+	setAttr ".phl[3242]" 0;
+	setAttr ".phl[3243]" 0;
+	setAttr ".phl[3244]" 0;
+	setAttr ".phl[3245]" 0;
+	setAttr ".phl[3246]" 0;
+	setAttr ".phl[3247]" 0;
+	setAttr ".phl[3248]" 0;
+	setAttr ".phl[3249]" 0;
+	setAttr ".phl[3250]" 0;
+	setAttr ".phl[3251]" 0;
+	setAttr ".phl[3252]" 0;
+	setAttr ".phl[3253]" 0;
+	setAttr ".phl[3254]" 0;
+	setAttr ".phl[3255]" 0;
+	setAttr ".phl[3256]" 0;
+	setAttr ".phl[3257]" 0;
+	setAttr ".phl[3258]" 0;
+	setAttr ".phl[3259]" 0;
+	setAttr ".phl[3260]" 0;
+	setAttr ".phl[3261]" 0;
+	setAttr ".phl[3262]" 0;
+	setAttr ".phl[3263]" 0;
+	setAttr ".phl[3264]" 0;
+	setAttr ".phl[3265]" 0;
+	setAttr ".phl[3266]" 0;
+	setAttr ".phl[3267]" 0;
+	setAttr ".phl[3268]" 0;
+	setAttr ".phl[3269]" 0;
+	setAttr ".phl[3270]" 0;
+	setAttr ".phl[3271]" 0;
+	setAttr ".phl[3272]" 0;
+	setAttr ".phl[3273]" 0;
+	setAttr ".phl[3274]" 0;
+	setAttr ".phl[3275]" 0;
+	setAttr ".phl[3276]" 0;
+	setAttr ".phl[3277]" 0;
+	setAttr ".phl[3278]" 0;
+	setAttr ".phl[3279]" 0;
+	setAttr ".phl[3280]" 0;
+	setAttr ".phl[3281]" 0;
+	setAttr ".phl[3282]" 0;
+	setAttr ".phl[3283]" 0;
+	setAttr ".phl[3284]" 0;
+	setAttr ".phl[3285]" 0;
+	setAttr ".phl[3286]" 0;
+	setAttr ".phl[3287]" 0;
+	setAttr ".phl[3288]" 0;
+	setAttr ".phl[3289]" 0;
+	setAttr ".phl[3290]" 0;
+	setAttr ".phl[3291]" 0;
+	setAttr ".phl[3292]" 0;
+	setAttr ".phl[3293]" 0;
+	setAttr ".phl[3294]" 0;
+	setAttr ".phl[3295]" 0;
+	setAttr ".phl[3296]" 0;
+	setAttr ".phl[3297]" 0;
+	setAttr ".phl[3298]" 0;
+	setAttr ".phl[3299]" 0;
+	setAttr ".phl[3300]" 0;
+	setAttr ".phl[3301]" 0;
+	setAttr ".phl[3302]" 0;
+	setAttr ".phl[3303]" 0;
+	setAttr ".phl[3304]" 0;
+	setAttr ".phl[3305]" 0;
+	setAttr ".phl[3306]" 0;
+	setAttr ".phl[3307]" 0;
+	setAttr ".phl[3308]" 0;
+	setAttr ".phl[3309]" 0;
+	setAttr ".phl[3310]" 0;
+	setAttr ".phl[3311]" 0;
+	setAttr ".phl[3312]" 0;
+	setAttr ".phl[3313]" 0;
+	setAttr ".phl[3314]" 0;
+	setAttr ".phl[3315]" 0;
+	setAttr ".phl[3316]" 0;
+	setAttr ".phl[3317]" 0;
+	setAttr ".phl[3318]" 0;
+	setAttr ".phl[3319]" 0;
+	setAttr ".phl[3320]" 0;
+	setAttr ".phl[3321]" 0;
+	setAttr ".phl[3322]" 0;
+	setAttr ".phl[3323]" 0;
+	setAttr ".phl[3324]" 0;
+	setAttr ".phl[3325]" 0;
+	setAttr ".phl[3326]" 0;
+	setAttr ".phl[3327]" 0;
+	setAttr ".phl[3328]" 0;
+	setAttr ".phl[3329]" 0;
+	setAttr ".phl[3330]" 0;
+	setAttr ".phl[3331]" 0;
+	setAttr ".phl[3332]" 0;
+	setAttr ".phl[3333]" 0;
+	setAttr ".phl[3334]" 0;
+	setAttr ".phl[3335]" 0;
+	setAttr ".phl[3336]" 0;
+	setAttr ".phl[3337]" 0;
+	setAttr ".phl[3338]" 0;
+	setAttr ".phl[3339]" 0;
+	setAttr ".phl[3340]" 0;
+	setAttr ".phl[3341]" 0;
+	setAttr ".phl[3342]" 0;
+	setAttr ".phl[3343]" 0;
+	setAttr ".phl[3344]" 0;
+	setAttr ".phl[3345]" 0;
+	setAttr ".phl[3346]" 0;
+	setAttr ".phl[3347]" 0;
+	setAttr ".phl[3348]" 0;
+	setAttr ".phl[3349]" 0;
+	setAttr ".phl[3350]" 0;
+	setAttr ".phl[3351]" 0;
+	setAttr ".phl[3352]" 0;
+	setAttr ".phl[3353]" 0;
+	setAttr ".phl[3354]" 0;
+	setAttr ".phl[3355]" 0;
+	setAttr ".phl[3356]" 0;
+	setAttr ".phl[3357]" 0;
+	setAttr ".phl[3358]" 0;
+	setAttr ".phl[3359]" 0;
+	setAttr ".phl[3360]" 0;
+	setAttr ".phl[3361]" 0;
+	setAttr ".phl[3362]" 0;
+	setAttr ".phl[3363]" 0;
+	setAttr ".phl[3364]" 0;
+	setAttr ".phl[3365]" 0;
+	setAttr ".phl[3366]" 0;
+	setAttr ".phl[3367]" 0;
+	setAttr ".phl[3368]" 0;
+	setAttr ".phl[3369]" 0;
+	setAttr ".phl[3370]" 0;
+	setAttr ".phl[3371]" 0;
+	setAttr ".phl[3372]" 0;
+	setAttr ".phl[3373]" 0;
+	setAttr ".phl[3374]" 0;
+	setAttr ".phl[3375]" 0;
+	setAttr ".phl[3376]" 0;
+	setAttr ".phl[3377]" 0;
+	setAttr ".phl[3378]" 0;
+	setAttr ".phl[3379]" 0;
+	setAttr ".phl[3380]" 0;
+	setAttr ".phl[3381]" 0;
+	setAttr ".phl[3382]" 0;
+	setAttr ".phl[3383]" 0;
+	setAttr ".phl[3384]" 0;
+	setAttr ".phl[3385]" 0;
+	setAttr ".phl[3386]" 0;
+	setAttr ".phl[3387]" 0;
+	setAttr ".phl[3388]" 0;
+	setAttr ".phl[3389]" 0;
+	setAttr ".phl[3390]" 0;
+	setAttr ".phl[3391]" 0;
+	setAttr ".phl[3392]" 0;
+	setAttr ".phl[3393]" 0;
+	setAttr ".phl[3394]" 0;
+	setAttr ".phl[3395]" 0;
+	setAttr ".phl[3396]" 0;
+	setAttr ".phl[3397]" 0;
+	setAttr ".phl[3398]" 0;
+	setAttr ".phl[3399]" 0;
+	setAttr ".phl[3400]" 0;
+	setAttr ".phl[3401]" 0;
+	setAttr ".phl[3402]" 0;
+	setAttr ".phl[3403]" 0;
+	setAttr ".phl[3404]" 0;
+	setAttr ".phl[3405]" 0;
+	setAttr ".phl[3406]" 0;
+	setAttr ".phl[3407]" 0;
+	setAttr ".phl[3408]" 0;
+	setAttr ".phl[3409]" 0;
+	setAttr ".phl[3410]" 0;
+	setAttr ".phl[3411]" 0;
+	setAttr ".phl[3412]" 0;
+	setAttr ".phl[3413]" 0;
+	setAttr ".phl[3414]" 0;
+	setAttr ".phl[3415]" 0;
+	setAttr ".phl[3416]" 0;
+	setAttr ".phl[3417]" 0;
+	setAttr ".phl[3418]" 0;
+	setAttr ".phl[3419]" 0;
+	setAttr ".phl[3420]" 0;
+	setAttr ".phl[3421]" 0;
+	setAttr ".phl[3422]" 0;
+	setAttr ".phl[3423]" 0;
+	setAttr ".phl[3424]" 0;
+	setAttr ".phl[3425]" 0;
+	setAttr ".phl[3426]" 0;
+	setAttr ".phl[3427]" 0;
+	setAttr ".phl[3428]" 0;
+	setAttr ".phl[3429]" 0;
+	setAttr ".phl[3430]" 0;
+	setAttr ".phl[3431]" 0;
+	setAttr ".phl[3432]" 0;
+	setAttr ".phl[3433]" 0;
+	setAttr ".phl[3434]" 0;
+	setAttr ".phl[3435]" 0;
+	setAttr ".phl[3436]" 0;
+	setAttr ".phl[3437]" 0;
+	setAttr ".phl[3438]" 0;
+	setAttr ".phl[3439]" 0;
+	setAttr ".phl[3440]" 0;
+	setAttr ".phl[3441]" 0;
+	setAttr ".phl[3442]" 0;
+	setAttr ".phl[3443]" 0;
+	setAttr ".phl[3444]" 0;
+	setAttr ".phl[3445]" 0;
+	setAttr ".phl[3446]" 0;
+	setAttr ".phl[3447]" 0;
+	setAttr ".phl[3448]" 0;
+	setAttr ".phl[3449]" 0;
+	setAttr ".phl[3450]" 0;
+	setAttr ".phl[3451]" 0;
+	setAttr ".phl[3452]" 0;
+	setAttr ".phl[3453]" 0;
+	setAttr ".phl[3454]" 0;
+	setAttr ".phl[3455]" 0;
+	setAttr ".phl[3456]" 0;
+	setAttr ".phl[3457]" 0;
+	setAttr ".phl[3458]" 0;
+	setAttr ".phl[3459]" 0;
+	setAttr ".phl[3460]" 0;
+	setAttr ".phl[3461]" 0;
+	setAttr ".phl[3462]" 0;
+	setAttr ".phl[3463]" 0;
+	setAttr ".phl[3464]" 0;
+	setAttr ".phl[3465]" 0;
+	setAttr ".phl[3466]" 0;
+	setAttr ".phl[3467]" 0;
+	setAttr ".phl[3468]" 0;
+	setAttr ".phl[3469]" 0;
+	setAttr ".phl[3470]" 0;
+	setAttr ".phl[3471]" 0;
+	setAttr ".phl[3472]" 0;
+	setAttr ".phl[3473]" 0;
+	setAttr ".phl[3474]" 0;
+	setAttr ".phl[3475]" 0;
+	setAttr ".phl[3476]" 0;
+	setAttr ".phl[3477]" 0;
+	setAttr ".phl[3478]" 0;
+	setAttr ".phl[3479]" 0;
+	setAttr ".phl[3480]" 0;
+	setAttr ".phl[3481]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Cleaning_SceneRN"
 		"Cleaning_Scene:BatteryRN" 0
 		"Cleaning_Scene:CartRN" 0
+		"Cleaning_Scene:ToiletPaperRollRN" 0
 		"Cleaning_Scene:SprayBottleRN" 5
 		0 "|SprayBottleRNfosterParent1|fosterParent24" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle" 
 		"-s -r "
@@ -31652,11 +31682,116 @@ createNode reference -n "Cleaning_SceneRN";
 		"-s -r "
 		0 "|SprayBottleRNfosterParent1|fosterParent24" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle" 
 		"-s -r "
-		"Cleaning_Scene:ToiletPaperRollRN" 0
 		"Cleaning_Scene:FireExtinguisherRN" 0
-		"Cleaning_Scene:Analog_SignRN" 0
-		"Cleaning_Scene:BatteryRN3" 0
+		"Cleaning_Scene:Analog_SignRN" 61
+		2 "Cleaning_Scene:Analog_Sign:set1" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"specular\""
+		2 "Cleaning_Scene:Analog_Sign:standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"diffuse\""
+		2 "Cleaning_Scene:Analog_Sign:set2" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set2" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set2" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:standardSurface3SG" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:standardSurface3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"specular\""
+		2 "Cleaning_Scene:Analog_Sign:standardSurface3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"diffuse\""
+		2 "Cleaning_Scene:Analog_Sign:AnalogSignGeo" "visibility" " 1"
+		2 "Cleaning_Scene:Analog_Sign:AnalogSignCtrls" "visibility" " 1"
+		2 "Cleaning_Scene:Analog_Sign:set3" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set3" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set3" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set4" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set4" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set5" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set5" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set5" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set6" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set6" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set6" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set7" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set7" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set7" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set8" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set8" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set8" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set9" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set9" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set9" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set10" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set10" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set10" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set11" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set11" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set11" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set12" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Analog_Sign:set12" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Analog_Sign:set12" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.translateX" 
+		"Cleaning_SceneRN.placeHolderList[2120]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.translateY" 
+		"Cleaning_SceneRN.placeHolderList[2121]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[2122]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[2123]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[2124]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[2125]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[2126]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[2127]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[2128]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.visibility" 
+		"Cleaning_SceneRN.placeHolderList[2129]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[2130]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[2131]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.MasterScale" 
+		"Cleaning_SceneRN.placeHolderList[2132]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.translateX" 
+		"Cleaning_SceneRN.placeHolderList[2133]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.translateY" 
+		"Cleaning_SceneRN.placeHolderList[2134]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[2135]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.visibility" 
+		"Cleaning_SceneRN.placeHolderList[2136]" ""
 		"Cleaning_Scene:FloorPolisherRN" 0
+		"Cleaning_Scene:BatteryRN3" 0
 		"Cleaning_Scene:ApolloRN" 15
 		0 "|ApolloRNfosterParent1|fosterParent3" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Geo|Cleaning_Scene:Apollo:NewTreads|Cleaning_Scene:Apollo:TreadsBase" 
 		"-s -r "
@@ -32038,7 +32173,6 @@ createNode reference -n "Cleaning_SceneRN";
 		"Cleaning_Scene:WetFloorSignRN" 0
 		"Cleaning_Scene:PowerDrillRN" 0
 		"Cleaning_Scene:BatteryRN4" 0
-		"Cleaning_Scene:Dionysus_Asset_RigRN" 0
 		"Cleaning_Scene:VacuumRN" 13
 		0 "|VacuumRNfosterParent1|fosterParent26" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp" 
 		"-s -r "
@@ -32067,6 +32201,7 @@ createNode reference -n "Cleaning_SceneRN";
 		2 "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:SuckyBlendShapes|Cleaning_Scene:Vacuum:Square|Cleaning_Scene:Vacuum:ffd2Lattice" 
 		"translate" " -type \"double3\" 10.41973309490823141 0.26015994697809219 2.02146451058355048"
 		
+		"Cleaning_Scene:Dionysus_Asset_RigRN" 0
 		"Cleaning_Scene:EmployeeOfTheMonth_HankWRN" 13
 		2 "|Cleaning_Scene:Assets|Cleaning_Scene:EmployeeOfTheMonth_HankW:Sign" "visibility" 
 		" 1"
@@ -32091,7 +32226,7 @@ createNode reference -n "Cleaning_SceneRN";
 		2 "Cleaning_Scene:EmployeeOfTheMonth_HankW:set1" "aiCustomAOVs[1].aovName" 
 		" -type \"string\" \"diffuse\""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:EmployeeOfTheMonth_HankW:Sign.drawOverride" 
-		"Cleaning_SceneRN.placeHolderList[2119]" ""
+		"Cleaning_SceneRN.placeHolderList[3053]" ""
 		"Cleaning_Scene:BatteryRN" 3
 		2 "Cleaning_Scene:Battery:set1" "aiCustomAOVs" " -s 2"
 		2 "Cleaning_Scene:Battery:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
@@ -32124,10 +32259,10 @@ createNode reference -n "Cleaning_SceneRN";
 		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1" 
 		"solverDisplay" " 1"
 		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:ikHandle1" 
-		"translate" " -type \"double3\" 7.81203163868608019 -0.82300853441084687 0.99878197875947583"
+		"translate" " -type \"double3\" 16.435157811329141 2.92172192346999937 5.64752196838646547"
 		
 		2 "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:ikHandle1" 
-		"rotate" " -type \"double3\" -3.12431039436335789 13.77794606164339264 1.3297359706418963"
+		"rotate" " -type \"double3\" -106.03002553726663848 42.56793360688045169 -21.80958071170813284"
 		
 		2 "Cleaning_Scene:Mop:lambert2SG" "aiCustomAOVs" " -s 2"
 		2 "Cleaning_Scene:Mop:lambert2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
@@ -32160,95 +32295,95 @@ createNode reference -n "Cleaning_SceneRN";
 		2 "Cleaning_Scene:Mop:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
 		
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl.MasterScale" 
-		"Cleaning_SceneRN.placeHolderList[2223]" ""
+		"Cleaning_SceneRN.placeHolderList[3140]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2224]" ""
+		"Cleaning_SceneRN.placeHolderList[3141]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2225]" ""
+		"Cleaning_SceneRN.placeHolderList[3142]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2226]" ""
+		"Cleaning_SceneRN.placeHolderList[3143]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2227]" ""
+		"Cleaning_SceneRN.placeHolderList[3144]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2228]" ""
+		"Cleaning_SceneRN.placeHolderList[3145]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2229]" ""
+		"Cleaning_SceneRN.placeHolderList[3146]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[2230]" ""
+		"Cleaning_SceneRN.placeHolderList[3147]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2231]" ""
+		"Cleaning_SceneRN.placeHolderList[3148]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2232]" ""
+		"Cleaning_SceneRN.placeHolderList[3149]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2233]" ""
+		"Cleaning_SceneRN.placeHolderList[3150]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2234]" ""
+		"Cleaning_SceneRN.placeHolderList[3151]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2235]" ""
+		"Cleaning_SceneRN.placeHolderList[3152]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2236]" ""
+		"Cleaning_SceneRN.placeHolderList[3153]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2237]" ""
+		"Cleaning_SceneRN.placeHolderList[3154]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2238]" ""
+		"Cleaning_SceneRN.placeHolderList[3155]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2239]" ""
+		"Cleaning_SceneRN.placeHolderList[3156]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2240]" ""
+		"Cleaning_SceneRN.placeHolderList[3157]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2241]" ""
+		"Cleaning_SceneRN.placeHolderList[3158]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2242]" ""
+		"Cleaning_SceneRN.placeHolderList[3159]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2243]" ""
+		"Cleaning_SceneRN.placeHolderList[3160]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2244]" ""
+		"Cleaning_SceneRN.placeHolderList[3161]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2245]" ""
+		"Cleaning_SceneRN.placeHolderList[3162]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2246]" ""
+		"Cleaning_SceneRN.placeHolderList[3163]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2247]" ""
+		"Cleaning_SceneRN.placeHolderList[3164]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2248]" ""
+		"Cleaning_SceneRN.placeHolderList[3165]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2249]" ""
+		"Cleaning_SceneRN.placeHolderList[3166]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2250]" ""
+		"Cleaning_SceneRN.placeHolderList[3167]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2251]" ""
+		"Cleaning_SceneRN.placeHolderList[3168]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2252]" ""
+		"Cleaning_SceneRN.placeHolderList[3169]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2253]" ""
+		"Cleaning_SceneRN.placeHolderList[3170]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_01_Ctrl_Grp|Cleaning_Scene:Mop:Hand_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2254]" ""
+		"Cleaning_SceneRN.placeHolderList[3171]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2255]" ""
+		"Cleaning_SceneRN.placeHolderList[3172]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2256]" ""
+		"Cleaning_SceneRN.placeHolderList[3173]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2257]" ""
+		"Cleaning_SceneRN.placeHolderList[3174]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2258]" ""
+		"Cleaning_SceneRN.placeHolderList[3175]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2259]" ""
+		"Cleaning_SceneRN.placeHolderList[3176]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:Crls|Cleaning_Scene:Mop:Transform_Ctrl_Grp|Cleaning_Scene:Mop:Transform_Ctrl|Cleaning_Scene:Mop:Mop_Top_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Top_Ctrl|Cleaning_Scene:Mop:Mop_Base_Ctrl_Grp|Cleaning_Scene:Mop:Mop_Bottom_Ctrl|Cleaning_Scene:Mop:Hand_02_Ctrl_Grp|Cleaning_Scene:Mop:Hand_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2260]" ""
+		"Cleaning_SceneRN.placeHolderList[3177]" ""
 		5 3 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:nucleus1.startFrame" 
-		"Cleaning_SceneRN.placeHolderList[2261]" ""
+		"Cleaning_SceneRN.placeHolderList[3178]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:nucleus1.inputPassive[0]" 
-		"Cleaning_SceneRN.placeHolderList[2262]" ""
+		"Cleaning_SceneRN.placeHolderList[3179]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:nucleus1.inputPassiveStart[0]" 
-		"Cleaning_SceneRN.placeHolderList[2263]" ""
+		"Cleaning_SceneRN.placeHolderList[3180]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1.hairCounts" 
-		"Cleaning_SceneRN.placeHolderList[2264]" ""
+		"Cleaning_SceneRN.placeHolderList[3181]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1.vertexCounts" 
-		"Cleaning_SceneRN.placeHolderList[2265]" ""
+		"Cleaning_SceneRN.placeHolderList[3182]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1.positions" 
-		"Cleaning_SceneRN.placeHolderList[2266]" ""
+		"Cleaning_SceneRN.placeHolderList[3183]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Mop:Mop|Cleaning_Scene:Mop:HairStuff|Cleaning_Scene:Mop:hairSystem1|Cleaning_Scene:Mop:hairSystemShape1.playFromCache" 
-		"Cleaning_SceneRN.placeHolderList[2267]" ""
+		"Cleaning_SceneRN.placeHolderList[3184]" ""
 		"Cleaning_Scene:CartRN" 5
 		2 "|Cleaning_Scene:Cart:Cart" "translate" " -type \"double3\" 13.01740485120996205 -0.34431223136077266 4.53213076586679176"
 		
@@ -32265,13 +32400,6 @@ createNode reference -n "Cleaning_SceneRN";
 		
 		2 "Cleaning_Scene:ToiletPaperRoll:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
 		
-		"Cleaning_Scene:FireExtinguisherRN" 3
-		2 "Cleaning_Scene:FireExtinguisher:standardSurface1SG" "aiCustomAOVs" " -s 2"
-		
-		2 "Cleaning_Scene:FireExtinguisher:standardSurface1SG" "aiCustomAOVs[0].aovName" 
-		" -type \"string\" \"specular\""
-		2 "Cleaning_Scene:FireExtinguisher:standardSurface1SG" "aiCustomAOVs[1].aovName" 
-		" -type \"string\" \"diffuse\""
 		"Cleaning_Scene:SprayBottleRN" 34
 		2 "Cleaning_Scene:SprayBottle:lambert2SG" "aiCustomAOVs" " -s 2"
 		2 "Cleaning_Scene:SprayBottle:lambert2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
@@ -32314,132 +32442,32 @@ createNode reference -n "Cleaning_SceneRN";
 		2 "Cleaning_Scene:SprayBottle:set3" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
 		
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2137]" ""
+		"Cleaning_SceneRN.placeHolderList[3054]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2138]" ""
+		"Cleaning_SceneRN.placeHolderList[3055]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2139]" ""
+		"Cleaning_SceneRN.placeHolderList[3056]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2140]" ""
+		"Cleaning_SceneRN.placeHolderList[3057]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2141]" ""
+		"Cleaning_SceneRN.placeHolderList[3058]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2142]" ""
+		"Cleaning_SceneRN.placeHolderList[3059]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2143]" ""
+		"Cleaning_SceneRN.placeHolderList[3060]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2144]" ""
+		"Cleaning_SceneRN.placeHolderList[3061]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2145]" ""
+		"Cleaning_SceneRN.placeHolderList[3062]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:SprayBottle:Spray_Bottle.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2146]" ""
-		"Cleaning_Scene:Analog_SignRN" 61
-		2 "Cleaning_Scene:Analog_Sign:set1" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		"Cleaning_SceneRN.placeHolderList[3063]" ""
+		"Cleaning_Scene:FireExtinguisherRN" 3
+		2 "Cleaning_Scene:FireExtinguisher:standardSurface1SG" "aiCustomAOVs" " -s 2"
 		
-		2 "Cleaning_Scene:Analog_Sign:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:standardSurface2SG" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		2 "Cleaning_Scene:FireExtinguisher:standardSurface1SG" "aiCustomAOVs[0].aovName" 
 		" -type \"string\" \"specular\""
-		2 "Cleaning_Scene:Analog_Sign:standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		2 "Cleaning_Scene:FireExtinguisher:standardSurface1SG" "aiCustomAOVs[1].aovName" 
 		" -type \"string\" \"diffuse\""
-		2 "Cleaning_Scene:Analog_Sign:set2" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set2" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set2" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:standardSurface3SG" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:standardSurface3SG" "aiCustomAOVs[0].aovName" 
-		" -type \"string\" \"specular\""
-		2 "Cleaning_Scene:Analog_Sign:standardSurface3SG" "aiCustomAOVs[1].aovName" 
-		" -type \"string\" \"diffuse\""
-		2 "Cleaning_Scene:Analog_Sign:AnalogSignGeo" "visibility" " 1"
-		2 "Cleaning_Scene:Analog_Sign:AnalogSignCtrls" "visibility" " 1"
-		2 "Cleaning_Scene:Analog_Sign:set3" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set3" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set3" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set4" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set4" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set5" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set5" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set5" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set6" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set6" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set6" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set7" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set7" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set7" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set8" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set8" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set8" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set9" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set9" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set9" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set10" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set10" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set10" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set11" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set11" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set11" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set12" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Analog_Sign:set12" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Analog_Sign:set12" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2120]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2121]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2122]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2123]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2124]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2125]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2126]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2127]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2128]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Sign_Rotate_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2129]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2130]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2131]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.MasterScale" 
-		"Cleaning_SceneRN.placeHolderList[2132]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2133]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2134]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2135]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Analog_Sign:Analog_Sign_Asset|Cleaning_Scene:Analog_Sign:Ctrl|Cleaning_Scene:Analog_Sign:Transform_Ctrl_Grp|Cleaning_Scene:Analog_Sign:Transform_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2136]" ""
 		"Cleaning_Scene:FloorPolisherRN" 87
 		2 "Cleaning_Scene:FloorPolisher:lambert1SG" "aiCustomAOVs" " -s 2"
 		2 "Cleaning_Scene:FloorPolisher:lambert1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
@@ -32934,508 +32962,508 @@ createNode reference -n "Cleaning_SceneRN";
 		2 "Cleaning_Scene:Apollo:set418" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
 		
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl.ArmIKFK" 
-		"Cleaning_SceneRN.placeHolderList[1203]" ""
+		"Cleaning_SceneRN.placeHolderList[2137]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl.MasterScale" 
-		"Cleaning_SceneRN.placeHolderList[1204]" ""
+		"Cleaning_SceneRN.placeHolderList[2138]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1205]" ""
+		"Cleaning_SceneRN.placeHolderList[2139]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1206]" ""
+		"Cleaning_SceneRN.placeHolderList[2140]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1207]" ""
+		"Cleaning_SceneRN.placeHolderList[2141]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1208]" ""
+		"Cleaning_SceneRN.placeHolderList[2142]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1209]" ""
+		"Cleaning_SceneRN.placeHolderList[2143]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1210]" ""
+		"Cleaning_SceneRN.placeHolderList[2144]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1211]" ""
+		"Cleaning_SceneRN.placeHolderList[2145]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1212]" ""
+		"Cleaning_SceneRN.placeHolderList[2146]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1213]" ""
+		"Cleaning_SceneRN.placeHolderList[2147]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1214]" ""
+		"Cleaning_SceneRN.placeHolderList[2148]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1215]" ""
+		"Cleaning_SceneRN.placeHolderList[2149]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1216]" ""
+		"Cleaning_SceneRN.placeHolderList[2150]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1217]" ""
+		"Cleaning_SceneRN.placeHolderList[2151]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1218]" ""
+		"Cleaning_SceneRN.placeHolderList[2152]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_13_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1219]" ""
+		"Cleaning_SceneRN.placeHolderList[2153]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_13_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1220]" ""
+		"Cleaning_SceneRN.placeHolderList[2154]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_13_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_13_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1221]" ""
+		"Cleaning_SceneRN.placeHolderList[2155]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_12_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1222]" ""
+		"Cleaning_SceneRN.placeHolderList[2156]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_12_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1223]" ""
+		"Cleaning_SceneRN.placeHolderList[2157]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_12_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_12_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1224]" ""
+		"Cleaning_SceneRN.placeHolderList[2158]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_11_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1225]" ""
+		"Cleaning_SceneRN.placeHolderList[2159]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_11_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1226]" ""
+		"Cleaning_SceneRN.placeHolderList[2160]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_11_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_11_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1227]" ""
+		"Cleaning_SceneRN.placeHolderList[2161]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_10_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1228]" ""
+		"Cleaning_SceneRN.placeHolderList[2162]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_10_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1229]" ""
+		"Cleaning_SceneRN.placeHolderList[2163]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_10_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_10_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1230]" ""
+		"Cleaning_SceneRN.placeHolderList[2164]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_09_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1231]" ""
+		"Cleaning_SceneRN.placeHolderList[2165]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_09_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1232]" ""
+		"Cleaning_SceneRN.placeHolderList[2166]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_09_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_09_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1233]" ""
+		"Cleaning_SceneRN.placeHolderList[2167]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_08_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1234]" ""
+		"Cleaning_SceneRN.placeHolderList[2168]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_08_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1235]" ""
+		"Cleaning_SceneRN.placeHolderList[2169]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_08_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_08_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1236]" ""
+		"Cleaning_SceneRN.placeHolderList[2170]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_07_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1237]" ""
+		"Cleaning_SceneRN.placeHolderList[2171]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_07_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1238]" ""
+		"Cleaning_SceneRN.placeHolderList[2172]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_07_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_07_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1239]" ""
+		"Cleaning_SceneRN.placeHolderList[2173]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_06_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1240]" ""
+		"Cleaning_SceneRN.placeHolderList[2174]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_06_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1241]" ""
+		"Cleaning_SceneRN.placeHolderList[2175]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_06_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_06_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1242]" ""
+		"Cleaning_SceneRN.placeHolderList[2176]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_05_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1243]" ""
+		"Cleaning_SceneRN.placeHolderList[2177]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_05_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1244]" ""
+		"Cleaning_SceneRN.placeHolderList[2178]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_05_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_05_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1245]" ""
+		"Cleaning_SceneRN.placeHolderList[2179]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_04_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1246]" ""
+		"Cleaning_SceneRN.placeHolderList[2180]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_04_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1247]" ""
+		"Cleaning_SceneRN.placeHolderList[2181]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_04_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_04_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1248]" ""
+		"Cleaning_SceneRN.placeHolderList[2182]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_03_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1249]" ""
+		"Cleaning_SceneRN.placeHolderList[2183]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_03_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1250]" ""
+		"Cleaning_SceneRN.placeHolderList[2184]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_03_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1251]" ""
+		"Cleaning_SceneRN.placeHolderList[2185]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_02_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1252]" ""
+		"Cleaning_SceneRN.placeHolderList[2186]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_02_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1253]" ""
+		"Cleaning_SceneRN.placeHolderList[2187]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_02_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1254]" ""
+		"Cleaning_SceneRN.placeHolderList[2188]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_01_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1255]" ""
+		"Cleaning_SceneRN.placeHolderList[2189]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_01_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1256]" ""
+		"Cleaning_SceneRN.placeHolderList[2190]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:L_Hose_IK_Jnt_01_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1257]" ""
+		"Cleaning_SceneRN.placeHolderList[2191]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Hose_Ctrls|Cleaning_Scene:Apollo:L_Hose_Swing_Ctrl.Swing" 
-		"Cleaning_SceneRN.placeHolderList[1258]" ""
+		"Cleaning_SceneRN.placeHolderList[2192]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_13_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1259]" ""
+		"Cleaning_SceneRN.placeHolderList[2193]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_13_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1260]" ""
+		"Cleaning_SceneRN.placeHolderList[2194]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_13_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_13_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1261]" ""
+		"Cleaning_SceneRN.placeHolderList[2195]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_12_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1262]" ""
+		"Cleaning_SceneRN.placeHolderList[2196]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_12_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1263]" ""
+		"Cleaning_SceneRN.placeHolderList[2197]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_12_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_12_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1264]" ""
+		"Cleaning_SceneRN.placeHolderList[2198]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_11_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1265]" ""
+		"Cleaning_SceneRN.placeHolderList[2199]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_11_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1266]" ""
+		"Cleaning_SceneRN.placeHolderList[2200]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_11_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_11_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1267]" ""
+		"Cleaning_SceneRN.placeHolderList[2201]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_10_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1268]" ""
+		"Cleaning_SceneRN.placeHolderList[2202]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_10_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1269]" ""
+		"Cleaning_SceneRN.placeHolderList[2203]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_10_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_10_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1270]" ""
+		"Cleaning_SceneRN.placeHolderList[2204]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_09_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1271]" ""
+		"Cleaning_SceneRN.placeHolderList[2205]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_09_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1272]" ""
+		"Cleaning_SceneRN.placeHolderList[2206]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_09_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_09_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1273]" ""
+		"Cleaning_SceneRN.placeHolderList[2207]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_08_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1274]" ""
+		"Cleaning_SceneRN.placeHolderList[2208]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_08_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1275]" ""
+		"Cleaning_SceneRN.placeHolderList[2209]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_08_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_08_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1276]" ""
+		"Cleaning_SceneRN.placeHolderList[2210]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_07_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1277]" ""
+		"Cleaning_SceneRN.placeHolderList[2211]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_07_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1278]" ""
+		"Cleaning_SceneRN.placeHolderList[2212]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_07_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_07_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1279]" ""
+		"Cleaning_SceneRN.placeHolderList[2213]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_06_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1280]" ""
+		"Cleaning_SceneRN.placeHolderList[2214]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_06_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1281]" ""
+		"Cleaning_SceneRN.placeHolderList[2215]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_06_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_06_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1282]" ""
+		"Cleaning_SceneRN.placeHolderList[2216]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_05_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1283]" ""
+		"Cleaning_SceneRN.placeHolderList[2217]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_05_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1284]" ""
+		"Cleaning_SceneRN.placeHolderList[2218]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_05_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_05_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1285]" ""
+		"Cleaning_SceneRN.placeHolderList[2219]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_04_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1286]" ""
+		"Cleaning_SceneRN.placeHolderList[2220]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_04_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1287]" ""
+		"Cleaning_SceneRN.placeHolderList[2221]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_04_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_04_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1288]" ""
+		"Cleaning_SceneRN.placeHolderList[2222]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_03_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1289]" ""
+		"Cleaning_SceneRN.placeHolderList[2223]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_03_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1290]" ""
+		"Cleaning_SceneRN.placeHolderList[2224]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_03_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1291]" ""
+		"Cleaning_SceneRN.placeHolderList[2225]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_02_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1292]" ""
+		"Cleaning_SceneRN.placeHolderList[2226]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_02_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1293]" ""
+		"Cleaning_SceneRN.placeHolderList[2227]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_02_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1294]" ""
+		"Cleaning_SceneRN.placeHolderList[2228]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_01_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1295]" ""
+		"Cleaning_SceneRN.placeHolderList[2229]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_01_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1296]" ""
+		"Cleaning_SceneRN.placeHolderList[2230]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:R_Hose_IK_Jnt_01_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1297]" ""
+		"Cleaning_SceneRN.placeHolderList[2231]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Hose_Ctrls|Cleaning_Scene:Apollo:R_Hose_Swing_Ctrl.Swing" 
-		"Cleaning_SceneRN.placeHolderList[1298]" ""
+		"Cleaning_SceneRN.placeHolderList[2232]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1299]" ""
+		"Cleaning_SceneRN.placeHolderList[2233]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_01_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1300]" ""
+		"Cleaning_SceneRN.placeHolderList[2234]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_01_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1301]" ""
+		"Cleaning_SceneRN.placeHolderList[2235]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_02_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1302]" ""
+		"Cleaning_SceneRN.placeHolderList[2236]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_02_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1303]" ""
+		"Cleaning_SceneRN.placeHolderList[2237]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_02_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1304]" ""
+		"Cleaning_SceneRN.placeHolderList[2238]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_02_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1305]" ""
+		"Cleaning_SceneRN.placeHolderList[2239]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1306]" ""
+		"Cleaning_SceneRN.placeHolderList[2240]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_03_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1307]" ""
+		"Cleaning_SceneRN.placeHolderList[2241]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_03_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1308]" ""
+		"Cleaning_SceneRN.placeHolderList[2242]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_03_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1309]" ""
+		"Cleaning_SceneRN.placeHolderList[2243]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_04_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1310]" ""
+		"Cleaning_SceneRN.placeHolderList[2244]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_04_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1311]" ""
+		"Cleaning_SceneRN.placeHolderList[2245]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_04_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_04_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1312]" ""
+		"Cleaning_SceneRN.placeHolderList[2246]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_05_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1313]" ""
+		"Cleaning_SceneRN.placeHolderList[2247]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_05_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1314]" ""
+		"Cleaning_SceneRN.placeHolderList[2248]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:FK_Ctrls_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_05_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_FK_Jnt_05_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1315]" ""
+		"Cleaning_SceneRN.placeHolderList[2249]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_Base_Jnt_01_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1316]" ""
+		"Cleaning_SceneRN.placeHolderList[2250]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_Base_Jnt_01_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1317]" ""
+		"Cleaning_SceneRN.placeHolderList[2251]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_Base_Jnt_01_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1318]" ""
+		"Cleaning_SceneRN.placeHolderList[2252]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Arm_Base_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_Base_Jnt_01_Ctrl|Cleaning_Scene:Apollo:Arm_Base_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Arm_Base_Jnt_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1319]" ""
+		"Cleaning_SceneRN.placeHolderList[2253]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1320]" ""
+		"Cleaning_SceneRN.placeHolderList[2254]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_01_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1321]" ""
+		"Cleaning_SceneRN.placeHolderList[2255]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_01_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1322]" ""
+		"Cleaning_SceneRN.placeHolderList[2256]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1323]" ""
+		"Cleaning_SceneRN.placeHolderList[2257]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1324]" ""
+		"Cleaning_SceneRN.placeHolderList[2258]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1325]" ""
+		"Cleaning_SceneRN.placeHolderList[2259]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1326]" ""
+		"Cleaning_SceneRN.placeHolderList[2260]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1327]" ""
+		"Cleaning_SceneRN.placeHolderList[2261]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1328]" ""
+		"Cleaning_SceneRN.placeHolderList[2262]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1329]" ""
+		"Cleaning_SceneRN.placeHolderList[2263]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1330]" ""
+		"Cleaning_SceneRN.placeHolderList[2264]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1331]" ""
+		"Cleaning_SceneRN.placeHolderList[2265]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Mouth_Ctrl_Grp|Cleaning_Scene:Apollo:Mouth_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1332]" ""
+		"Cleaning_SceneRN.placeHolderList[2266]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Mouth_Ctrl_Grp|Cleaning_Scene:Apollo:Mouth_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1333]" ""
+		"Cleaning_SceneRN.placeHolderList[2267]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Mouth_Ctrl_Grp|Cleaning_Scene:Apollo:Mouth_Ctrl.Neutral" 
-		"Cleaning_SceneRN.placeHolderList[1334]" ""
+		"Cleaning_SceneRN.placeHolderList[2268]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Mouth_Ctrl_Grp|Cleaning_Scene:Apollo:Mouth_Ctrl.Oooh" 
-		"Cleaning_SceneRN.placeHolderList[1335]" ""
+		"Cleaning_SceneRN.placeHolderList[2269]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Mouth_Ctrl_Grp|Cleaning_Scene:Apollo:Mouth_Ctrl.Bored" 
-		"Cleaning_SceneRN.placeHolderList[1336]" ""
+		"Cleaning_SceneRN.placeHolderList[2270]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Mouth_Ctrl_Grp|Cleaning_Scene:Apollo:Mouth_Ctrl.Smirk" 
-		"Cleaning_SceneRN.placeHolderList[1337]" ""
+		"Cleaning_SceneRN.placeHolderList[2271]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Mouth_Ctrl_Grp|Cleaning_Scene:Apollo:Mouth_Ctrl.MouthScale" 
-		"Cleaning_SceneRN.placeHolderList[1338]" ""
+		"Cleaning_SceneRN.placeHolderList[2272]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1339]" ""
+		"Cleaning_SceneRN.placeHolderList[2273]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1340]" ""
+		"Cleaning_SceneRN.placeHolderList[2274]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl.ExclamationPoint" 
-		"Cleaning_SceneRN.placeHolderList[1341]" ""
+		"Cleaning_SceneRN.placeHolderList[2275]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl.REye" 
-		"Cleaning_SceneRN.placeHolderList[1342]" ""
+		"Cleaning_SceneRN.placeHolderList[2276]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl.LEye" 
-		"Cleaning_SceneRN.placeHolderList[1343]" ""
+		"Cleaning_SceneRN.placeHolderList[2277]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl.Mouth" 
-		"Cleaning_SceneRN.placeHolderList[1344]" ""
+		"Cleaning_SceneRN.placeHolderList[2278]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl.X1" 
-		"Cleaning_SceneRN.placeHolderList[1345]" ""
+		"Cleaning_SceneRN.placeHolderList[2279]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl.X2" 
-		"Cleaning_SceneRN.placeHolderList[1346]" ""
+		"Cleaning_SceneRN.placeHolderList[2280]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1347]" ""
+		"Cleaning_SceneRN.placeHolderList[2281]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1348]" ""
+		"Cleaning_SceneRN.placeHolderList[2282]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.Open" 
-		"Cleaning_SceneRN.placeHolderList[1349]" ""
+		"Cleaning_SceneRN.placeHolderList[2283]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.Squint" 
-		"Cleaning_SceneRN.placeHolderList[1350]" ""
+		"Cleaning_SceneRN.placeHolderList[2284]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.Close" 
-		"Cleaning_SceneRN.placeHolderList[1351]" ""
+		"Cleaning_SceneRN.placeHolderList[2285]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.Sad" 
-		"Cleaning_SceneRN.placeHolderList[1352]" ""
+		"Cleaning_SceneRN.placeHolderList[2286]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.Wink" 
-		"Cleaning_SceneRN.placeHolderList[1353]" ""
+		"Cleaning_SceneRN.placeHolderList[2287]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.Bored" 
-		"Cleaning_SceneRN.placeHolderList[1354]" ""
+		"Cleaning_SceneRN.placeHolderList[2288]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.Smirk" 
-		"Cleaning_SceneRN.placeHolderList[1355]" ""
+		"Cleaning_SceneRN.placeHolderList[2289]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.EyeScale" 
-		"Cleaning_SceneRN.placeHolderList[1356]" ""
+		"Cleaning_SceneRN.placeHolderList[2290]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:L_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:L_Eye_Ctrl.Determined" 
-		"Cleaning_SceneRN.placeHolderList[1357]" ""
+		"Cleaning_SceneRN.placeHolderList[2291]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1358]" ""
+		"Cleaning_SceneRN.placeHolderList[2292]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1359]" ""
+		"Cleaning_SceneRN.placeHolderList[2293]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.Open" 
-		"Cleaning_SceneRN.placeHolderList[1360]" ""
+		"Cleaning_SceneRN.placeHolderList[2294]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.Squint" 
-		"Cleaning_SceneRN.placeHolderList[1361]" ""
+		"Cleaning_SceneRN.placeHolderList[2295]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.Close" 
-		"Cleaning_SceneRN.placeHolderList[1362]" ""
+		"Cleaning_SceneRN.placeHolderList[2296]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.Sad" 
-		"Cleaning_SceneRN.placeHolderList[1363]" ""
+		"Cleaning_SceneRN.placeHolderList[2297]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.Wink" 
-		"Cleaning_SceneRN.placeHolderList[1364]" ""
+		"Cleaning_SceneRN.placeHolderList[2298]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.Bored" 
-		"Cleaning_SceneRN.placeHolderList[1365]" ""
+		"Cleaning_SceneRN.placeHolderList[2299]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.Smirk" 
-		"Cleaning_SceneRN.placeHolderList[1366]" ""
+		"Cleaning_SceneRN.placeHolderList[2300]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.EyeScale" 
-		"Cleaning_SceneRN.placeHolderList[1367]" ""
+		"Cleaning_SceneRN.placeHolderList[2301]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Eyes_Ctrl_Grp|Cleaning_Scene:Apollo:Eyes_Ctrl|Cleaning_Scene:Apollo:R_Eye_Ctrl_Grp|Cleaning_Scene:Apollo:R_Eye_Ctrl.Determined" 
-		"Cleaning_SceneRN.placeHolderList[1368]" ""
+		"Cleaning_SceneRN.placeHolderList[2302]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Visor_Ctrl_Grp|Cleaning_Scene:Apollo:Visor_Ctrl.L_Visor" 
-		"Cleaning_SceneRN.placeHolderList[1369]" ""
+		"Cleaning_SceneRN.placeHolderList[2303]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Visor_Ctrl_Grp|Cleaning_Scene:Apollo:Visor_Ctrl.RVisor" 
-		"Cleaning_SceneRN.placeHolderList[1370]" ""
+		"Cleaning_SceneRN.placeHolderList[2304]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Wipers_Ctrl_Grp|Cleaning_Scene:Apollo:R_Wiper_Ctrl_Grp|Cleaning_Scene:Apollo:R_Wiper_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1371]" ""
+		"Cleaning_SceneRN.placeHolderList[2305]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Head_Ctrls|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Head_FK_Jnt_03_Ctrl|Cleaning_Scene:Apollo:Face_Ctrl_Grp|Cleaning_Scene:Apollo:Face_Ctrl|Cleaning_Scene:Apollo:Wipers_Ctrl_Grp|Cleaning_Scene:Apollo:L_Wiper_Ctrl_Grp|Cleaning_Scene:Apollo:L_Wiper_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1372]" ""
+		"Cleaning_SceneRN.placeHolderList[2306]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Hand_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1373]" ""
+		"Cleaning_SceneRN.placeHolderList[2307]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Hand_Ring_Jnt_02_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1374]" ""
+		"Cleaning_SceneRN.placeHolderList[2308]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Hand_Ring_Jnt_02_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1375]" ""
+		"Cleaning_SceneRN.placeHolderList[2309]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Hand_Ring_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Hand_Ring_Jnt_02_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1376]" ""
+		"Cleaning_SceneRN.placeHolderList[2310]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Hand_Ring_Jnt_03_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1377]" ""
+		"Cleaning_SceneRN.placeHolderList[2311]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Hand_Ring_Jnt_03_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1378]" ""
+		"Cleaning_SceneRN.placeHolderList[2312]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Hand_Ring_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:Hand_Ring_Jnt_03_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1379]" ""
+		"Cleaning_SceneRN.placeHolderList[2313]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Hand_Ring_Jnt_01_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1380]" ""
+		"Cleaning_SceneRN.placeHolderList[2314]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Hand_Ring_Jnt_01_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1381]" ""
+		"Cleaning_SceneRN.placeHolderList[2315]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Hand_Ring_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Hand_Ring_Jnt_01_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1382]" ""
+		"Cleaning_SceneRN.placeHolderList[2316]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_02_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_02_Jnt_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1383]" ""
+		"Cleaning_SceneRN.placeHolderList[2317]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_02_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_02_Jnt_02_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1384]" ""
+		"Cleaning_SceneRN.placeHolderList[2318]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_02_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_02_Jnt_02_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1385]" ""
+		"Cleaning_SceneRN.placeHolderList[2319]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_01_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_01_Jnt_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1386]" ""
+		"Cleaning_SceneRN.placeHolderList[2320]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_01_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_01_Jnt_02_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1387]" ""
+		"Cleaning_SceneRN.placeHolderList[2321]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_01_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_01_Jnt_02_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1388]" ""
+		"Cleaning_SceneRN.placeHolderList[2322]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_01_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_01_Jnt_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1389]" ""
+		"Cleaning_SceneRN.placeHolderList[2323]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_01_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_01_Jnt_01_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1390]" ""
+		"Cleaning_SceneRN.placeHolderList[2324]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_01_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_01_Jnt_01_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1391]" ""
+		"Cleaning_SceneRN.placeHolderList[2325]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_02_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_02_Jnt_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1392]" ""
+		"Cleaning_SceneRN.placeHolderList[2326]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_02_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_02_Jnt_01_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1393]" ""
+		"Cleaning_SceneRN.placeHolderList[2327]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_02_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_02_Jnt_01_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1394]" ""
+		"Cleaning_SceneRN.placeHolderList[2328]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_03_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_03_Jnt_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1395]" ""
+		"Cleaning_SceneRN.placeHolderList[2329]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_03_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_03_Jnt_01_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1396]" ""
+		"Cleaning_SceneRN.placeHolderList[2330]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_03_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_03_Jnt_01_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1397]" ""
+		"Cleaning_SceneRN.placeHolderList[2331]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_03_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_03_Jnt_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1398]" ""
+		"Cleaning_SceneRN.placeHolderList[2332]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_03_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_03_Jnt_02_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1399]" ""
+		"Cleaning_SceneRN.placeHolderList[2333]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Finger_03_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:Finger_03_Jnt_02_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1400]" ""
+		"Cleaning_SceneRN.placeHolderList[2334]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Palm_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Palm_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1401]" ""
+		"Cleaning_SceneRN.placeHolderList[2335]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Palm_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Palm_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1402]" ""
+		"Cleaning_SceneRN.placeHolderList[2336]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Hand_Ctrls|Cleaning_Scene:Apollo:Palm_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Palm_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1403]" ""
+		"Cleaning_SceneRN.placeHolderList[2337]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Arm_Piston_Ctrls|Cleaning_Scene:Apollo:Piston_01_Ctrl_Grp|Cleaning_Scene:Apollo:Piston_01_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1404]" ""
+		"Cleaning_SceneRN.placeHolderList[2338]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Arm_Piston_Ctrls|Cleaning_Scene:Apollo:Piston_02_Ctrl_Grp|Cleaning_Scene:Apollo:Piston_02_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1405]" ""
+		"Cleaning_SceneRN.placeHolderList[2339]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Arm_Piston_Ctrls|Cleaning_Scene:Apollo:Piston_03_Ctrl_Grp|Cleaning_Scene:Apollo:Piston_03_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1406]" ""
+		"Cleaning_SceneRN.placeHolderList[2340]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Prop_Ctrl_Grp|Cleaning_Scene:Apollo:Prop_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[1407]" ""
+		"Cleaning_SceneRN.placeHolderList[2341]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Prop_Ctrl_Grp|Cleaning_Scene:Apollo:Prop_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1408]" ""
+		"Cleaning_SceneRN.placeHolderList[2342]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Prop_Ctrl_Grp|Cleaning_Scene:Apollo:Prop_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1409]" ""
+		"Cleaning_SceneRN.placeHolderList[2343]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Prop_Ctrl_Grp|Cleaning_Scene:Apollo:Prop_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1410]" ""
+		"Cleaning_SceneRN.placeHolderList[2344]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Prop_Ctrl_Grp|Cleaning_Scene:Apollo:Prop_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1411]" ""
+		"Cleaning_SceneRN.placeHolderList[2345]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Prop_Ctrl_Grp|Cleaning_Scene:Apollo:Prop_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1412]" ""
+		"Cleaning_SceneRN.placeHolderList[2346]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Prop_Ctrl_Grp|Cleaning_Scene:Apollo:Prop_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1413]" ""
+		"Cleaning_SceneRN.placeHolderList[2347]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Prop_Ctrl_Grp|Cleaning_Scene:Apollo:Prop_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1414]" ""
+		"Cleaning_SceneRN.placeHolderList[2348]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Prop_Ctrl_Grp|Cleaning_Scene:Apollo:Prop_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1415]" ""
+		"Cleaning_SceneRN.placeHolderList[2349]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl|Cleaning_Scene:Apollo:Prop_Ctrl_Grp|Cleaning_Scene:Apollo:Prop_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1416]" ""
+		"Cleaning_SceneRN.placeHolderList[2350]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1417]" ""
+		"Cleaning_SceneRN.placeHolderList[2351]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1418]" ""
+		"Cleaning_SceneRN.placeHolderList[2352]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl.TreadsRoll" 
-		"Cleaning_SceneRN.placeHolderList[1419]" ""
+		"Cleaning_SceneRN.placeHolderList[2353]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl.IndividualRoll" 
-		"Cleaning_SceneRN.placeHolderList[1420]" ""
+		"Cleaning_SceneRN.placeHolderList[2354]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1421]" ""
+		"Cleaning_SceneRN.placeHolderList[2355]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1422]" ""
+		"Cleaning_SceneRN.placeHolderList[2356]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1423]" ""
+		"Cleaning_SceneRN.placeHolderList[2357]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:R_Treads_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1424]" ""
+		"Cleaning_SceneRN.placeHolderList[2358]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:R_Treads_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1425]" ""
+		"Cleaning_SceneRN.placeHolderList[2359]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:R_Treads_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1426]" ""
+		"Cleaning_SceneRN.placeHolderList[2360]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:R_Treads_Ctrl.Roll" 
-		"Cleaning_SceneRN.placeHolderList[1427]" ""
+		"Cleaning_SceneRN.placeHolderList[2361]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:R_Treads_Ctrl|Cleaning_Scene:Apollo:R_Back_Main_Wheel_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:R_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1428]" ""
+		"Cleaning_SceneRN.placeHolderList[2362]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:R_Treads_Ctrl|Cleaning_Scene:Apollo:R_Mid_Wheel_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:R_Mid_Wheel_Jnt_03_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1429]" ""
+		"Cleaning_SceneRN.placeHolderList[2363]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:R_Treads_Ctrl|Cleaning_Scene:Apollo:R_Mid_Wheel_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:R_Mid_Wheel_Jnt_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1430]" ""
+		"Cleaning_SceneRN.placeHolderList[2364]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:R_Treads_Ctrl|Cleaning_Scene:Apollo:R_Mid_Wheel_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:R_Mid_Wheel_Jnt_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1431]" ""
+		"Cleaning_SceneRN.placeHolderList[2365]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:R_Treads_Ctrl|Cleaning_Scene:Apollo:R_Mid_Main_Wheel_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:R_Mid_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1432]" ""
+		"Cleaning_SceneRN.placeHolderList[2366]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:R_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:R_Treads_Ctrl|Cleaning_Scene:Apollo:R_Front_Main_Wheel_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:R_Front_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1433]" ""
+		"Cleaning_SceneRN.placeHolderList[2367]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:L_Treads_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1434]" ""
+		"Cleaning_SceneRN.placeHolderList[2368]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:L_Treads_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1435]" ""
+		"Cleaning_SceneRN.placeHolderList[2369]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:L_Treads_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1436]" ""
+		"Cleaning_SceneRN.placeHolderList[2370]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:L_Treads_Ctrl.Roll" 
-		"Cleaning_SceneRN.placeHolderList[1437]" ""
+		"Cleaning_SceneRN.placeHolderList[2371]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:L_Treads_Ctrl|Cleaning_Scene:Apollo:L_Front_Main_Wheel_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:L_Front_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1438]" ""
+		"Cleaning_SceneRN.placeHolderList[2372]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:L_Treads_Ctrl|Cleaning_Scene:Apollo:L_Mid_Main_Wheel_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:L_Mid_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1439]" ""
+		"Cleaning_SceneRN.placeHolderList[2373]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:L_Treads_Ctrl|Cleaning_Scene:Apollo:L_Mid_Wheel_Jnt_01_Ctrl_Grp|Cleaning_Scene:Apollo:L_Mid_Wheel_Jnt_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1440]" ""
+		"Cleaning_SceneRN.placeHolderList[2374]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:L_Treads_Ctrl|Cleaning_Scene:Apollo:L_Mid_Wheel_Jnt_02_Ctrl_Grp|Cleaning_Scene:Apollo:L_Mid_Wheel_Jnt_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1441]" ""
+		"Cleaning_SceneRN.placeHolderList[2375]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:L_Treads_Ctrl|Cleaning_Scene:Apollo:L_Mid_Wheel_Jnt_03_Ctrl_Grp|Cleaning_Scene:Apollo:L_Mid_Wheel_Jnt_03_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1442]" ""
+		"Cleaning_SceneRN.placeHolderList[2376]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Cog_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:Treads_Base_FK_Jnt_Ctrl|Cleaning_Scene:Apollo:L_Treads_Ctrl_Grp|Cleaning_Scene:Apollo:L_Treads_Ctrl|Cleaning_Scene:Apollo:L_Back_Main_Wheel_Jnt_Ctrl_Grp|Cleaning_Scene:Apollo:L_Back_Main_Wheel_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1443]" ""
+		"Cleaning_SceneRN.placeHolderList[2377]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1444]" ""
+		"Cleaning_SceneRN.placeHolderList[2378]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1445]" ""
+		"Cleaning_SceneRN.placeHolderList[2379]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1446]" ""
+		"Cleaning_SceneRN.placeHolderList[2380]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1447]" ""
+		"Cleaning_SceneRN.placeHolderList[2381]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1448]" ""
+		"Cleaning_SceneRN.placeHolderList[2382]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1449]" ""
+		"Cleaning_SceneRN.placeHolderList[2383]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1450]" ""
+		"Cleaning_SceneRN.placeHolderList[2384]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1451]" ""
+		"Cleaning_SceneRN.placeHolderList[2385]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1452]" ""
+		"Cleaning_SceneRN.placeHolderList[2386]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo:Apollo|Cleaning_Scene:Apollo:Ctrls|Cleaning_Scene:Apollo:Transform_Ctrl_Grp|Cleaning_Scene:Apollo:Transform_Ctrl|Cleaning_Scene:Apollo:Lights|Cleaning_Scene:Apollo:Light_Rig_Ctrl_Grp|Cleaning_Scene:Apollo:Light_Rig_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1453]" ""
-		"Cleaning_SceneRN" 652
+		"Cleaning_SceneRN.placeHolderList[2387]" ""
+		"Cleaning_SceneRN" 702
 		2 "|Cleaning_Scene:TEMP|Cleaning_Scene:TEMPShape" "renderable" " 0"
 		2 "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl" 
 		"rotatePivot" " -type \"double3\" 0 -0.34366838531978505 0"
@@ -34092,499 +34120,599 @@ createNode reference -n "Cleaning_SceneRN";
 		3 "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:WetFloorSignOnCart|Cleaning_Scene:WetFloorSignOnCartShape.instObjGroups.objectGroups[1]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2268]" ""
+		"Cleaning_SceneRN.placeHolderList[3185]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2269]" ""
+		"Cleaning_SceneRN.placeHolderList[3186]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2270]" ""
+		"Cleaning_SceneRN.placeHolderList[3187]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2271]" ""
+		"Cleaning_SceneRN.placeHolderList[3188]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2272]" ""
+		"Cleaning_SceneRN.placeHolderList[3189]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2273]" ""
+		"Cleaning_SceneRN.placeHolderList[3190]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2274]" ""
+		"Cleaning_SceneRN.placeHolderList[3191]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2275]" ""
+		"Cleaning_SceneRN.placeHolderList[3192]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp6|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2276]" ""
+		"Cleaning_SceneRN.placeHolderList[3193]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2277]" ""
+		"Cleaning_SceneRN.placeHolderList[3194]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2278]" ""
+		"Cleaning_SceneRN.placeHolderList[3195]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2279]" ""
+		"Cleaning_SceneRN.placeHolderList[3196]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2280]" ""
+		"Cleaning_SceneRN.placeHolderList[3197]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2281]" ""
+		"Cleaning_SceneRN.placeHolderList[3198]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2282]" ""
+		"Cleaning_SceneRN.placeHolderList[3199]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2283]" ""
+		"Cleaning_SceneRN.placeHolderList[3200]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2284]" ""
+		"Cleaning_SceneRN.placeHolderList[3201]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2285]" ""
+		"Cleaning_SceneRN.placeHolderList[3202]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle19.visibility" 
+		"Cleaning_SceneRN.placeHolderList[3203]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle19.translateX" 
+		"Cleaning_SceneRN.placeHolderList[3204]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle19.translateY" 
+		"Cleaning_SceneRN.placeHolderList[3205]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle19.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[3206]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle19.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[3207]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle19.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[3208]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle19.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[3209]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle19.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[3210]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle19.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[3211]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp7|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle19.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[3212]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2286]" ""
+		"Cleaning_SceneRN.placeHolderList[3213]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2287]" ""
+		"Cleaning_SceneRN.placeHolderList[3214]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2288]" ""
+		"Cleaning_SceneRN.placeHolderList[3215]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2289]" ""
+		"Cleaning_SceneRN.placeHolderList[3216]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2290]" ""
+		"Cleaning_SceneRN.placeHolderList[3217]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2291]" ""
+		"Cleaning_SceneRN.placeHolderList[3218]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2292]" ""
+		"Cleaning_SceneRN.placeHolderList[3219]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2293]" ""
+		"Cleaning_SceneRN.placeHolderList[3220]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2294]" ""
+		"Cleaning_SceneRN.placeHolderList[3221]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle17.visibility" 
+		"Cleaning_SceneRN.placeHolderList[3222]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle17.translateX" 
+		"Cleaning_SceneRN.placeHolderList[3223]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle17.translateY" 
+		"Cleaning_SceneRN.placeHolderList[3224]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle17.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[3225]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle17.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[3226]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle17.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[3227]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle17.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[3228]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle17.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[3229]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle17.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[3230]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp8|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle17.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[3231]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2295]" ""
+		"Cleaning_SceneRN.placeHolderList[3232]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2296]" ""
+		"Cleaning_SceneRN.placeHolderList[3233]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2297]" ""
+		"Cleaning_SceneRN.placeHolderList[3234]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2298]" ""
+		"Cleaning_SceneRN.placeHolderList[3235]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2299]" ""
+		"Cleaning_SceneRN.placeHolderList[3236]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2300]" ""
+		"Cleaning_SceneRN.placeHolderList[3237]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2301]" ""
+		"Cleaning_SceneRN.placeHolderList[3238]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2302]" ""
+		"Cleaning_SceneRN.placeHolderList[3239]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2303]" ""
+		"Cleaning_SceneRN.placeHolderList[3240]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle.visibility" 
+		"Cleaning_SceneRN.placeHolderList[3241]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle.translateX" 
+		"Cleaning_SceneRN.placeHolderList[3242]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle.translateY" 
+		"Cleaning_SceneRN.placeHolderList[3243]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[3244]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[3245]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[3246]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[3247]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[3248]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[3249]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp9|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[3250]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2304]" ""
+		"Cleaning_SceneRN.placeHolderList[3251]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2305]" ""
+		"Cleaning_SceneRN.placeHolderList[3252]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2306]" ""
+		"Cleaning_SceneRN.placeHolderList[3253]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2307]" ""
+		"Cleaning_SceneRN.placeHolderList[3254]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2308]" ""
+		"Cleaning_SceneRN.placeHolderList[3255]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2309]" ""
+		"Cleaning_SceneRN.placeHolderList[3256]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2310]" ""
+		"Cleaning_SceneRN.placeHolderList[3257]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2311]" ""
+		"Cleaning_SceneRN.placeHolderList[3258]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp10|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2312]" ""
+		"Cleaning_SceneRN.placeHolderList[3259]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2313]" ""
+		"Cleaning_SceneRN.placeHolderList[3260]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2314]" ""
+		"Cleaning_SceneRN.placeHolderList[3261]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2315]" ""
+		"Cleaning_SceneRN.placeHolderList[3262]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2316]" ""
+		"Cleaning_SceneRN.placeHolderList[3263]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2317]" ""
+		"Cleaning_SceneRN.placeHolderList[3264]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2318]" ""
+		"Cleaning_SceneRN.placeHolderList[3265]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2319]" ""
+		"Cleaning_SceneRN.placeHolderList[3266]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2320]" ""
+		"Cleaning_SceneRN.placeHolderList[3267]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp11|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2321]" ""
+		"Cleaning_SceneRN.placeHolderList[3268]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2322]" ""
+		"Cleaning_SceneRN.placeHolderList[3269]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2323]" ""
+		"Cleaning_SceneRN.placeHolderList[3270]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2324]" ""
+		"Cleaning_SceneRN.placeHolderList[3271]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2325]" ""
+		"Cleaning_SceneRN.placeHolderList[3272]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2326]" ""
+		"Cleaning_SceneRN.placeHolderList[3273]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2327]" ""
+		"Cleaning_SceneRN.placeHolderList[3274]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2328]" ""
+		"Cleaning_SceneRN.placeHolderList[3275]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2329]" ""
+		"Cleaning_SceneRN.placeHolderList[3276]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2330]" ""
+		"Cleaning_SceneRN.placeHolderList[3277]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle21.visibility" 
+		"Cleaning_SceneRN.placeHolderList[3278]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle21.translateX" 
+		"Cleaning_SceneRN.placeHolderList[3279]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle21.translateY" 
+		"Cleaning_SceneRN.placeHolderList[3280]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle21.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[3281]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle21.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[3282]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle21.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[3283]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle21.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[3284]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle21.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[3285]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle21.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[3286]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp12|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle21.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[3287]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2331]" ""
+		"Cleaning_SceneRN.placeHolderList[3288]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2332]" ""
+		"Cleaning_SceneRN.placeHolderList[3289]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2333]" ""
+		"Cleaning_SceneRN.placeHolderList[3290]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2334]" ""
+		"Cleaning_SceneRN.placeHolderList[3291]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2335]" ""
+		"Cleaning_SceneRN.placeHolderList[3292]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2336]" ""
+		"Cleaning_SceneRN.placeHolderList[3293]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2337]" ""
+		"Cleaning_SceneRN.placeHolderList[3294]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2338]" ""
+		"Cleaning_SceneRN.placeHolderList[3295]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp13|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2339]" ""
+		"Cleaning_SceneRN.placeHolderList[3296]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2340]" ""
+		"Cleaning_SceneRN.placeHolderList[3297]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2341]" ""
+		"Cleaning_SceneRN.placeHolderList[3298]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2342]" ""
+		"Cleaning_SceneRN.placeHolderList[3299]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2343]" ""
+		"Cleaning_SceneRN.placeHolderList[3300]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2344]" ""
+		"Cleaning_SceneRN.placeHolderList[3301]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2345]" ""
+		"Cleaning_SceneRN.placeHolderList[3302]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2346]" ""
+		"Cleaning_SceneRN.placeHolderList[3303]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2347]" ""
+		"Cleaning_SceneRN.placeHolderList[3304]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2348]" ""
+		"Cleaning_SceneRN.placeHolderList[3305]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle20.visibility" 
+		"Cleaning_SceneRN.placeHolderList[3306]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle20.translateX" 
+		"Cleaning_SceneRN.placeHolderList[3307]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle20.translateY" 
+		"Cleaning_SceneRN.placeHolderList[3308]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle20.translateZ" 
+		"Cleaning_SceneRN.placeHolderList[3309]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle20.rotateX" 
+		"Cleaning_SceneRN.placeHolderList[3310]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle20.rotateY" 
+		"Cleaning_SceneRN.placeHolderList[3311]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle20.rotateZ" 
+		"Cleaning_SceneRN.placeHolderList[3312]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle20.scaleX" 
+		"Cleaning_SceneRN.placeHolderList[3313]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle20.scaleY" 
+		"Cleaning_SceneRN.placeHolderList[3314]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp14|Cleaning_Scene:sprayCan_ctrl|Cleaning_Scene:Spray_Bottle20.scaleZ" 
+		"Cleaning_SceneRN.placeHolderList[3315]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2349]" ""
+		"Cleaning_SceneRN.placeHolderList[3316]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2350]" ""
+		"Cleaning_SceneRN.placeHolderList[3317]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2351]" ""
+		"Cleaning_SceneRN.placeHolderList[3318]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2352]" ""
+		"Cleaning_SceneRN.placeHolderList[3319]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2353]" ""
+		"Cleaning_SceneRN.placeHolderList[3320]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2354]" ""
+		"Cleaning_SceneRN.placeHolderList[3321]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2355]" ""
+		"Cleaning_SceneRN.placeHolderList[3322]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2356]" ""
+		"Cleaning_SceneRN.placeHolderList[3323]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp15|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2357]" ""
+		"Cleaning_SceneRN.placeHolderList[3324]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2358]" ""
+		"Cleaning_SceneRN.placeHolderList[3325]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2359]" ""
+		"Cleaning_SceneRN.placeHolderList[3326]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2360]" ""
+		"Cleaning_SceneRN.placeHolderList[3327]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2361]" ""
+		"Cleaning_SceneRN.placeHolderList[3328]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2362]" ""
+		"Cleaning_SceneRN.placeHolderList[3329]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2363]" ""
+		"Cleaning_SceneRN.placeHolderList[3330]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2364]" ""
+		"Cleaning_SceneRN.placeHolderList[3331]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2365]" ""
+		"Cleaning_SceneRN.placeHolderList[3332]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp16|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2366]" ""
+		"Cleaning_SceneRN.placeHolderList[3333]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2367]" ""
+		"Cleaning_SceneRN.placeHolderList[3334]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2368]" ""
+		"Cleaning_SceneRN.placeHolderList[3335]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2369]" ""
+		"Cleaning_SceneRN.placeHolderList[3336]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2370]" ""
+		"Cleaning_SceneRN.placeHolderList[3337]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2371]" ""
+		"Cleaning_SceneRN.placeHolderList[3338]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2372]" ""
+		"Cleaning_SceneRN.placeHolderList[3339]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2373]" ""
+		"Cleaning_SceneRN.placeHolderList[3340]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2374]" ""
+		"Cleaning_SceneRN.placeHolderList[3341]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp17|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2375]" ""
+		"Cleaning_SceneRN.placeHolderList[3342]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2376]" ""
+		"Cleaning_SceneRN.placeHolderList[3343]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2377]" ""
+		"Cleaning_SceneRN.placeHolderList[3344]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2378]" ""
+		"Cleaning_SceneRN.placeHolderList[3345]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2379]" ""
+		"Cleaning_SceneRN.placeHolderList[3346]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2380]" ""
+		"Cleaning_SceneRN.placeHolderList[3347]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2381]" ""
+		"Cleaning_SceneRN.placeHolderList[3348]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2382]" ""
+		"Cleaning_SceneRN.placeHolderList[3349]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2383]" ""
+		"Cleaning_SceneRN.placeHolderList[3350]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:SprayBottles|Cleaning_Scene:sprayCan_ctrl_grp18|Cleaning_Scene:sprayCan_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2384]" ""
+		"Cleaning_SceneRN.placeHolderList[3351]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2385]" ""
+		"Cleaning_SceneRN.placeHolderList[3352]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2386]" ""
+		"Cleaning_SceneRN.placeHolderList[3353]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2387]" ""
+		"Cleaning_SceneRN.placeHolderList[3354]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2388]" ""
+		"Cleaning_SceneRN.placeHolderList[3355]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2389]" ""
+		"Cleaning_SceneRN.placeHolderList[3356]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2390]" ""
+		"Cleaning_SceneRN.placeHolderList[3357]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2391]" ""
+		"Cleaning_SceneRN.placeHolderList[3358]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2392]" ""
+		"Cleaning_SceneRN.placeHolderList[3359]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2393]" ""
+		"Cleaning_SceneRN.placeHolderList[3360]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2394]" ""
+		"Cleaning_SceneRN.placeHolderList[3361]" ""
 		5 3 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:Etc|Cleaning_Scene:Room|Cleaning_Scene:RoomShape.worldMesh" 
-		"Cleaning_SceneRN.placeHolderList[2395]" ""
+		"Cleaning_SceneRN.placeHolderList[3362]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2396]" ""
+		"Cleaning_SceneRN.placeHolderList[3363]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2397]" ""
+		"Cleaning_SceneRN.placeHolderList[3364]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2398]" ""
+		"Cleaning_SceneRN.placeHolderList[3365]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2399]" ""
+		"Cleaning_SceneRN.placeHolderList[3366]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2400]" ""
+		"Cleaning_SceneRN.placeHolderList[3367]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2401]" ""
+		"Cleaning_SceneRN.placeHolderList[3368]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2402]" ""
+		"Cleaning_SceneRN.placeHolderList[3369]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2403]" ""
+		"Cleaning_SceneRN.placeHolderList[3370]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2404]" ""
+		"Cleaning_SceneRN.placeHolderList[3371]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2405]" ""
+		"Cleaning_SceneRN.placeHolderList[3372]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2406]" ""
+		"Cleaning_SceneRN.placeHolderList[3373]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2407]" ""
+		"Cleaning_SceneRN.placeHolderList[3374]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2408]" ""
+		"Cleaning_SceneRN.placeHolderList[3375]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2409]" ""
+		"Cleaning_SceneRN.placeHolderList[3376]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2410]" ""
+		"Cleaning_SceneRN.placeHolderList[3377]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2411]" ""
+		"Cleaning_SceneRN.placeHolderList[3378]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2412]" ""
+		"Cleaning_SceneRN.placeHolderList[3379]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp1|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2413]" ""
+		"Cleaning_SceneRN.placeHolderList[3380]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2414]" ""
+		"Cleaning_SceneRN.placeHolderList[3381]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2415]" ""
+		"Cleaning_SceneRN.placeHolderList[3382]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2416]" ""
+		"Cleaning_SceneRN.placeHolderList[3383]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2417]" ""
+		"Cleaning_SceneRN.placeHolderList[3384]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2418]" ""
+		"Cleaning_SceneRN.placeHolderList[3385]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2419]" ""
+		"Cleaning_SceneRN.placeHolderList[3386]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2420]" ""
+		"Cleaning_SceneRN.placeHolderList[3387]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2421]" ""
+		"Cleaning_SceneRN.placeHolderList[3388]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp2|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2422]" ""
+		"Cleaning_SceneRN.placeHolderList[3389]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2423]" ""
+		"Cleaning_SceneRN.placeHolderList[3390]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2424]" ""
+		"Cleaning_SceneRN.placeHolderList[3391]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2425]" ""
+		"Cleaning_SceneRN.placeHolderList[3392]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2426]" ""
+		"Cleaning_SceneRN.placeHolderList[3393]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2427]" ""
+		"Cleaning_SceneRN.placeHolderList[3394]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2428]" ""
+		"Cleaning_SceneRN.placeHolderList[3395]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2429]" ""
+		"Cleaning_SceneRN.placeHolderList[3396]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2430]" ""
+		"Cleaning_SceneRN.placeHolderList[3397]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp3|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2431]" ""
+		"Cleaning_SceneRN.placeHolderList[3398]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2432]" ""
+		"Cleaning_SceneRN.placeHolderList[3399]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2433]" ""
+		"Cleaning_SceneRN.placeHolderList[3400]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2434]" ""
+		"Cleaning_SceneRN.placeHolderList[3401]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2435]" ""
+		"Cleaning_SceneRN.placeHolderList[3402]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2436]" ""
+		"Cleaning_SceneRN.placeHolderList[3403]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2437]" ""
+		"Cleaning_SceneRN.placeHolderList[3404]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2438]" ""
+		"Cleaning_SceneRN.placeHolderList[3405]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2439]" ""
+		"Cleaning_SceneRN.placeHolderList[3406]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp4|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2440]" ""
+		"Cleaning_SceneRN.placeHolderList[3407]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2441]" ""
+		"Cleaning_SceneRN.placeHolderList[3408]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2442]" ""
+		"Cleaning_SceneRN.placeHolderList[3409]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2443]" ""
+		"Cleaning_SceneRN.placeHolderList[3410]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2444]" ""
+		"Cleaning_SceneRN.placeHolderList[3411]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2445]" ""
+		"Cleaning_SceneRN.placeHolderList[3412]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2446]" ""
+		"Cleaning_SceneRN.placeHolderList[3413]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2447]" ""
+		"Cleaning_SceneRN.placeHolderList[3414]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2448]" ""
+		"Cleaning_SceneRN.placeHolderList[3415]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:PaintBuckets|Cleaning_Scene:PaintBucket4_ctrl_grp5|Cleaning_Scene:PaintBucket4_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2449]" ""
+		"Cleaning_SceneRN.placeHolderList[3416]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2450]" ""
+		"Cleaning_SceneRN.placeHolderList[3417]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2451]" ""
+		"Cleaning_SceneRN.placeHolderList[3418]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2452]" ""
+		"Cleaning_SceneRN.placeHolderList[3419]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2453]" ""
+		"Cleaning_SceneRN.placeHolderList[3420]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2454]" ""
+		"Cleaning_SceneRN.placeHolderList[3421]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2455]" ""
+		"Cleaning_SceneRN.placeHolderList[3422]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2456]" ""
+		"Cleaning_SceneRN.placeHolderList[3423]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2457]" ""
+		"Cleaning_SceneRN.placeHolderList[3424]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl_grp|Cleaning_Scene:ToiletPaperRolls_pCylinder1_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2458]" ""
+		"Cleaning_SceneRN.placeHolderList[3425]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2459]" ""
+		"Cleaning_SceneRN.placeHolderList[3426]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2460]" ""
+		"Cleaning_SceneRN.placeHolderList[3427]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2461]" ""
+		"Cleaning_SceneRN.placeHolderList[3428]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2462]" ""
+		"Cleaning_SceneRN.placeHolderList[3429]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2463]" ""
+		"Cleaning_SceneRN.placeHolderList[3430]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2464]" ""
+		"Cleaning_SceneRN.placeHolderList[3431]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2465]" ""
+		"Cleaning_SceneRN.placeHolderList[3432]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2466]" ""
+		"Cleaning_SceneRN.placeHolderList[3433]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp|Cleaning_Scene:pCylinder11_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2467]" ""
+		"Cleaning_SceneRN.placeHolderList[3434]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2468]" ""
+		"Cleaning_SceneRN.placeHolderList[3435]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2469]" ""
+		"Cleaning_SceneRN.placeHolderList[3436]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2470]" ""
+		"Cleaning_SceneRN.placeHolderList[3437]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2471]" ""
+		"Cleaning_SceneRN.placeHolderList[3438]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2472]" ""
+		"Cleaning_SceneRN.placeHolderList[3439]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2473]" ""
+		"Cleaning_SceneRN.placeHolderList[3440]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2474]" ""
+		"Cleaning_SceneRN.placeHolderList[3441]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2475]" ""
+		"Cleaning_SceneRN.placeHolderList[3442]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder9_ctrl_grp|Cleaning_Scene:pCylinder9_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2476]" ""
+		"Cleaning_SceneRN.placeHolderList[3443]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2477]" ""
+		"Cleaning_SceneRN.placeHolderList[3444]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2478]" ""
+		"Cleaning_SceneRN.placeHolderList[3445]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2479]" ""
+		"Cleaning_SceneRN.placeHolderList[3446]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2480]" ""
+		"Cleaning_SceneRN.placeHolderList[3447]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2481]" ""
+		"Cleaning_SceneRN.placeHolderList[3448]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2482]" ""
+		"Cleaning_SceneRN.placeHolderList[3449]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2483]" ""
+		"Cleaning_SceneRN.placeHolderList[3450]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2484]" ""
+		"Cleaning_SceneRN.placeHolderList[3451]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder10_ctrl_grp|Cleaning_Scene:pCylinder10_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2485]" ""
+		"Cleaning_SceneRN.placeHolderList[3452]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2486]" ""
+		"Cleaning_SceneRN.placeHolderList[3453]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2487]" ""
+		"Cleaning_SceneRN.placeHolderList[3454]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2488]" ""
+		"Cleaning_SceneRN.placeHolderList[3455]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2489]" ""
+		"Cleaning_SceneRN.placeHolderList[3456]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2490]" ""
+		"Cleaning_SceneRN.placeHolderList[3457]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2491]" ""
+		"Cleaning_SceneRN.placeHolderList[3458]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2492]" ""
+		"Cleaning_SceneRN.placeHolderList[3459]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2493]" ""
+		"Cleaning_SceneRN.placeHolderList[3460]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Assets|Cleaning_Scene:ToiletPaperRolls|Cleaning_Scene:pCylinder11_ctrl_grp1|Cleaning_Scene:pCylinder11_ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2494]" ""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateX" "Cleaning_SceneRN.placeHolderList[2495]" 
+		"Cleaning_SceneRN.placeHolderList[3461]" ""
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateX" "Cleaning_SceneRN.placeHolderList[3462]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateY" "Cleaning_SceneRN.placeHolderList[2496]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateY" "Cleaning_SceneRN.placeHolderList[3463]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateZ" "Cleaning_SceneRN.placeHolderList[2497]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.translateZ" "Cleaning_SceneRN.placeHolderList[3464]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateX" "Cleaning_SceneRN.placeHolderList[2498]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateX" "Cleaning_SceneRN.placeHolderList[3465]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateY" "Cleaning_SceneRN.placeHolderList[2499]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateY" "Cleaning_SceneRN.placeHolderList[3466]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateZ" "Cleaning_SceneRN.placeHolderList[2500]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.rotateZ" "Cleaning_SceneRN.placeHolderList[3467]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleX" "Cleaning_SceneRN.placeHolderList[2501]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleX" "Cleaning_SceneRN.placeHolderList[3468]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleY" "Cleaning_SceneRN.placeHolderList[2502]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleY" "Cleaning_SceneRN.placeHolderList[3469]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleZ" "Cleaning_SceneRN.placeHolderList[2503]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.scaleZ" "Cleaning_SceneRN.placeHolderList[3470]" 
 		""
-		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.visibility" "Cleaning_SceneRN.placeHolderList[2504]" 
+		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Apollo_Cam1.visibility" "Cleaning_SceneRN.placeHolderList[3471]" 
 		""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.LatticeState" 
-		"Cleaning_SceneRN.placeHolderList[2505]" ""
+		"Cleaning_SceneRN.placeHolderList[3472]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2506]" ""
+		"Cleaning_SceneRN.placeHolderList[3473]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2507]" ""
+		"Cleaning_SceneRN.placeHolderList[3474]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2508]" ""
+		"Cleaning_SceneRN.placeHolderList[3475]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2509]" ""
+		"Cleaning_SceneRN.placeHolderList[3476]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2510]" ""
+		"Cleaning_SceneRN.placeHolderList[3477]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2511]" ""
+		"Cleaning_SceneRN.placeHolderList[3478]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2512]" ""
+		"Cleaning_SceneRN.placeHolderList[3479]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2513]" ""
+		"Cleaning_SceneRN.placeHolderList[3480]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:VacuumRNfosterParent2|Cleaning_Scene:LatticeControl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2514]" ""
+		"Cleaning_SceneRN.placeHolderList[3481]" ""
 		8 "|Cleaning_Scene:Dio_Cam1" "translateX"
 		8 "|Cleaning_Scene:Dio_Cam1" "translateY"
 		8 "|Cleaning_Scene:Dio_Cam1" "translateZ"
@@ -34631,6 +34759,7 @@ createNode reference -n "Cleaning_SceneRN";
 		
 		2 "Cleaning_Scene:StepStool:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
 		
+		"Cleaning_Scene:ToolBoardLightRN" 0
 		"Cleaning_Scene:BatteryRN2" 3
 		2 "Cleaning_Scene:Battery7:set1" "aiCustomAOVs" " -s 2"
 		2 "Cleaning_Scene:Battery7:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
@@ -34649,17 +34778,17 @@ createNode reference -n "Cleaning_SceneRN";
 		
 		2 "Cleaning_Scene:Battery6:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
 		
-		"Cleaning_Scene:BroomRN" 3
-		2 "Cleaning_Scene:Broom:set1" "aiCustomAOVs" " -s 2"
-		2 "Cleaning_Scene:Broom:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
-		
-		2 "Cleaning_Scene:Broom:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
-		
 		"Cleaning_Scene:BatteryRN4" 3
 		2 "Cleaning_Scene:Battery9:set1" "aiCustomAOVs" " -s 2"
 		2 "Cleaning_Scene:Battery9:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
 		
 		2 "Cleaning_Scene:Battery9:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
+		
+		"Cleaning_Scene:BroomRN" 3
+		2 "Cleaning_Scene:Broom:set1" "aiCustomAOVs" " -s 2"
+		2 "Cleaning_Scene:Broom:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"specular\""
+		
+		2 "Cleaning_Scene:Broom:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
 		
 		"Cleaning_Scene:VacuumRN" 86
 		2 "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:SuckyBlendShapes|Cleaning_Scene:Vacuum:Circle" 
@@ -34679,157 +34808,157 @@ createNode reference -n "Cleaning_SceneRN";
 		2 "Cleaning_Scene:Vacuum:standardSurface1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"diffuse\""
 		
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl_Grp|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2147]" ""
+		"Cleaning_SceneRN.placeHolderList[3064]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl_Grp|Cleaning_Scene:Vacuum:Vacuum_BlendShape_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2148]" ""
+		"Cleaning_SceneRN.placeHolderList[3065]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.MasterScale" 
-		"Cleaning_SceneRN.placeHolderList[2149]" ""
+		"Cleaning_SceneRN.placeHolderList[3066]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2150]" ""
+		"Cleaning_SceneRN.placeHolderList[3067]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2151]" ""
+		"Cleaning_SceneRN.placeHolderList[3068]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2152]" ""
+		"Cleaning_SceneRN.placeHolderList[3069]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2153]" ""
+		"Cleaning_SceneRN.placeHolderList[3070]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2154]" ""
+		"Cleaning_SceneRN.placeHolderList[3071]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2155]" ""
+		"Cleaning_SceneRN.placeHolderList[3072]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2156]" ""
+		"Cleaning_SceneRN.placeHolderList[3073]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2157]" ""
+		"Cleaning_SceneRN.placeHolderList[3074]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2158]" ""
+		"Cleaning_SceneRN.placeHolderList[3075]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2159]" ""
+		"Cleaning_SceneRN.placeHolderList[3076]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2160]" ""
+		"Cleaning_SceneRN.placeHolderList[3077]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2161]" ""
+		"Cleaning_SceneRN.placeHolderList[3078]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2162]" ""
+		"Cleaning_SceneRN.placeHolderList[3079]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2163]" ""
+		"Cleaning_SceneRN.placeHolderList[3080]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2164]" ""
+		"Cleaning_SceneRN.placeHolderList[3081]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2165]" ""
+		"Cleaning_SceneRN.placeHolderList[3082]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_01_Grp|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_01.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2166]" ""
+		"Cleaning_SceneRN.placeHolderList[3083]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_02_Grp|Cleaning_Scene:Vacuum:Sphere_Suck_Ctrl_02.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2167]" ""
+		"Cleaning_SceneRN.placeHolderList[3084]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_01_Grp|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_01.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2168]" ""
+		"Cleaning_SceneRN.placeHolderList[3085]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Transform_Ctrl_Grp|Cleaning_Scene:Vacuum:Transform_Ctrl|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl_Grp|Cleaning_Scene:Vacuum:Blendshape_Panel_Ctrl|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_02_Grp|Cleaning_Scene:Vacuum:Squre_Suck_Ctrl_02.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2169]" ""
+		"Cleaning_SceneRN.placeHolderList[3086]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2170]" ""
+		"Cleaning_SceneRN.placeHolderList[3087]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2171]" ""
+		"Cleaning_SceneRN.placeHolderList[3088]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2172]" ""
+		"Cleaning_SceneRN.placeHolderList[3089]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2173]" ""
+		"Cleaning_SceneRN.placeHolderList[3090]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2174]" ""
+		"Cleaning_SceneRN.placeHolderList[3091]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2175]" ""
+		"Cleaning_SceneRN.placeHolderList[3092]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2176]" ""
+		"Cleaning_SceneRN.placeHolderList[3093]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2177]" ""
+		"Cleaning_SceneRN.placeHolderList[3094]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2178]" ""
+		"Cleaning_SceneRN.placeHolderList[3095]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Base_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Base_Tube_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2179]" ""
+		"Cleaning_SceneRN.placeHolderList[3096]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2180]" ""
+		"Cleaning_SceneRN.placeHolderList[3097]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2181]" ""
+		"Cleaning_SceneRN.placeHolderList[3098]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2182]" ""
+		"Cleaning_SceneRN.placeHolderList[3099]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2183]" ""
+		"Cleaning_SceneRN.placeHolderList[3100]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2184]" ""
+		"Cleaning_SceneRN.placeHolderList[3101]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2185]" ""
+		"Cleaning_SceneRN.placeHolderList[3102]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2186]" ""
+		"Cleaning_SceneRN.placeHolderList[3103]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2187]" ""
+		"Cleaning_SceneRN.placeHolderList[3104]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2188]" ""
+		"Cleaning_SceneRN.placeHolderList[3105]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2189]" ""
+		"Cleaning_SceneRN.placeHolderList[3106]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2190]" ""
+		"Cleaning_SceneRN.placeHolderList[3107]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2191]" ""
+		"Cleaning_SceneRN.placeHolderList[3108]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2192]" ""
+		"Cleaning_SceneRN.placeHolderList[3109]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2193]" ""
+		"Cleaning_SceneRN.placeHolderList[3110]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2194]" ""
+		"Cleaning_SceneRN.placeHolderList[3111]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2195]" ""
+		"Cleaning_SceneRN.placeHolderList[3112]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2196]" ""
+		"Cleaning_SceneRN.placeHolderList[3113]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2197]" ""
+		"Cleaning_SceneRN.placeHolderList[3114]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2198]" ""
+		"Cleaning_SceneRN.placeHolderList[3115]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[2199]" ""
+		"Cleaning_SceneRN.placeHolderList[3116]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Top_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:Middle_Tube_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2200]" ""
+		"Cleaning_SceneRN.placeHolderList[3117]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2201]" ""
+		"Cleaning_SceneRN.placeHolderList[3118]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2202]" ""
+		"Cleaning_SceneRN.placeHolderList[3119]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2203]" ""
+		"Cleaning_SceneRN.placeHolderList[3120]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2204]" ""
+		"Cleaning_SceneRN.placeHolderList[3121]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2205]" ""
+		"Cleaning_SceneRN.placeHolderList[3122]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2206]" ""
+		"Cleaning_SceneRN.placeHolderList[3123]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2207]" ""
+		"Cleaning_SceneRN.placeHolderList[3124]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2208]" ""
+		"Cleaning_SceneRN.placeHolderList[3125]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2209]" ""
+		"Cleaning_SceneRN.placeHolderList[3126]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:LowerMiddle_Tube_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2210]" ""
+		"Cleaning_SceneRN.placeHolderList[3127]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2211]" ""
+		"Cleaning_SceneRN.placeHolderList[3128]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2212]" ""
+		"Cleaning_SceneRN.placeHolderList[3129]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2213]" ""
+		"Cleaning_SceneRN.placeHolderList[3130]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2214]" ""
+		"Cleaning_SceneRN.placeHolderList[3131]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2215]" ""
+		"Cleaning_SceneRN.placeHolderList[3132]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2216]" ""
+		"Cleaning_SceneRN.placeHolderList[3133]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2217]" ""
+		"Cleaning_SceneRN.placeHolderList[3134]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2218]" ""
+		"Cleaning_SceneRN.placeHolderList[3135]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2219]" ""
+		"Cleaning_SceneRN.placeHolderList[3136]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl_Grp|Cleaning_Scene:Vacuum:UpperMiddle_Tube_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2220]" ""
+		"Cleaning_SceneRN.placeHolderList[3137]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Button_Ctrl_Grp|Cleaning_Scene:Vacuum:Button_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2221]" ""
+		"Cleaning_SceneRN.placeHolderList[3138]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Vacuum:Vacuum|Cleaning_Scene:Vacuum:Ctrls|Cleaning_Scene:Vacuum:Button_Ctrl_Grp|Cleaning_Scene:Vacuum:Button_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2222]" ""
+		"Cleaning_SceneRN.placeHolderList[3139]" ""
 		"Cleaning_Scene:Dionysus_Asset_RigRN" 794
 		2 "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
@@ -35066,1340 +35195,1340 @@ createNode reference -n "Cleaning_SceneRN";
 		" -type \"string\" \"specular\""
 		2 "Cleaning_Scene:Dionysus_Asset_Rig:pasted__surfaceShader3SG" "aiCustomAOVs[1].aovName" 
 		" -type \"string\" \"diffuse\""
-		3 "Cleaning_Scene:Dionysus_Asset_Rig:unitConversion66.output" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl.rotateY" 
-		""
 		3 "Cleaning_Scene:Dionysus_Asset_Rig:unitConversion67.output" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Prop_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Prop_01_Ctrl.rotateY" 
 		""
+		3 "Cleaning_Scene:Dionysus_Asset_Rig:unitConversion66.output" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl.rotateY" 
+		""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1454]" ""
+		"Cleaning_SceneRN.placeHolderList[2388]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1455]" ""
+		"Cleaning_SceneRN.placeHolderList[2389]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1456]" ""
+		"Cleaning_SceneRN.placeHolderList[2390]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1457]" ""
+		"Cleaning_SceneRN.placeHolderList[2391]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1458]" ""
+		"Cleaning_SceneRN.placeHolderList[2392]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1459]" ""
+		"Cleaning_SceneRN.placeHolderList[2393]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1460]" ""
+		"Cleaning_SceneRN.placeHolderList[2394]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1461]" ""
+		"Cleaning_SceneRN.placeHolderList[2395]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1462]" ""
+		"Cleaning_SceneRN.placeHolderList[2396]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1463]" ""
+		"Cleaning_SceneRN.placeHolderList[2397]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1464]" ""
+		"Cleaning_SceneRN.placeHolderList[2398]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Booster_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1465]" ""
+		"Cleaning_SceneRN.placeHolderList[2399]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1466]" ""
+		"Cleaning_SceneRN.placeHolderList[2400]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1467]" ""
+		"Cleaning_SceneRN.placeHolderList[2401]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1468]" ""
+		"Cleaning_SceneRN.placeHolderList[2402]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1469]" ""
+		"Cleaning_SceneRN.placeHolderList[2403]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1470]" ""
+		"Cleaning_SceneRN.placeHolderList[2404]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1471]" ""
+		"Cleaning_SceneRN.placeHolderList[2405]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1472]" ""
+		"Cleaning_SceneRN.placeHolderList[2406]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1473]" ""
+		"Cleaning_SceneRN.placeHolderList[2407]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1474]" ""
+		"Cleaning_SceneRN.placeHolderList[2408]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1475]" ""
+		"Cleaning_SceneRN.placeHolderList[2409]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1476]" ""
+		"Cleaning_SceneRN.placeHolderList[2410]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:COG_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1477]" ""
+		"Cleaning_SceneRN.placeHolderList[2411]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1478]" ""
+		"Cleaning_SceneRN.placeHolderList[2412]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1479]" ""
+		"Cleaning_SceneRN.placeHolderList[2413]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1480]" ""
+		"Cleaning_SceneRN.placeHolderList[2414]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1481]" ""
+		"Cleaning_SceneRN.placeHolderList[2415]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1482]" ""
+		"Cleaning_SceneRN.placeHolderList[2416]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1483]" ""
+		"Cleaning_SceneRN.placeHolderList[2417]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1484]" ""
+		"Cleaning_SceneRN.placeHolderList[2418]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1485]" ""
+		"Cleaning_SceneRN.placeHolderList[2419]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1486]" ""
+		"Cleaning_SceneRN.placeHolderList[2420]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1487]" ""
+		"Cleaning_SceneRN.placeHolderList[2421]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1488]" ""
+		"Cleaning_SceneRN.placeHolderList[2422]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Furnace_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1489]" ""
+		"Cleaning_SceneRN.placeHolderList[2423]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1490]" ""
+		"Cleaning_SceneRN.placeHolderList[2424]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1491]" ""
+		"Cleaning_SceneRN.placeHolderList[2425]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1492]" ""
+		"Cleaning_SceneRN.placeHolderList[2426]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1493]" ""
+		"Cleaning_SceneRN.placeHolderList[2427]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1494]" ""
+		"Cleaning_SceneRN.placeHolderList[2428]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1495]" ""
+		"Cleaning_SceneRN.placeHolderList[2429]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1496]" ""
+		"Cleaning_SceneRN.placeHolderList[2430]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1497]" ""
+		"Cleaning_SceneRN.placeHolderList[2431]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1498]" ""
+		"Cleaning_SceneRN.placeHolderList[2432]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1499]" ""
+		"Cleaning_SceneRN.placeHolderList[2433]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1500]" ""
+		"Cleaning_SceneRN.placeHolderList[2434]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Hip_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1501]" ""
+		"Cleaning_SceneRN.placeHolderList[2435]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1502]" ""
+		"Cleaning_SceneRN.placeHolderList[2436]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1503]" ""
+		"Cleaning_SceneRN.placeHolderList[2437]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1504]" ""
+		"Cleaning_SceneRN.placeHolderList[2438]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1505]" ""
+		"Cleaning_SceneRN.placeHolderList[2439]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1506]" ""
+		"Cleaning_SceneRN.placeHolderList[2440]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1507]" ""
+		"Cleaning_SceneRN.placeHolderList[2441]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1508]" ""
+		"Cleaning_SceneRN.placeHolderList[2442]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1509]" ""
+		"Cleaning_SceneRN.placeHolderList[2443]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1510]" ""
+		"Cleaning_SceneRN.placeHolderList[2444]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1511]" ""
+		"Cleaning_SceneRN.placeHolderList[2445]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1512]" ""
+		"Cleaning_SceneRN.placeHolderList[2446]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Plate_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1513]" ""
+		"Cleaning_SceneRN.placeHolderList[2447]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.L_Arm_IKFK" 
-		"Cleaning_SceneRN.placeHolderList[1514]" ""
+		"Cleaning_SceneRN.placeHolderList[2448]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.R_Arm_IKFK" 
-		"Cleaning_SceneRN.placeHolderList[1515]" ""
+		"Cleaning_SceneRN.placeHolderList[2449]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.MasterScale" 
-		"Cleaning_SceneRN.placeHolderList[1516]" ""
+		"Cleaning_SceneRN.placeHolderList[2450]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.Prop_Ctrls_Vis" 
-		"Cleaning_SceneRN.placeHolderList[1517]" ""
+		"Cleaning_SceneRN.placeHolderList[2451]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1518]" ""
+		"Cleaning_SceneRN.placeHolderList[2452]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1519]" ""
+		"Cleaning_SceneRN.placeHolderList[2453]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1520]" ""
+		"Cleaning_SceneRN.placeHolderList[2454]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1521]" ""
+		"Cleaning_SceneRN.placeHolderList[2455]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1522]" ""
+		"Cleaning_SceneRN.placeHolderList[2456]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1523]" ""
+		"Cleaning_SceneRN.placeHolderList[2457]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1524]" ""
+		"Cleaning_SceneRN.placeHolderList[2458]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Lights|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1525]" ""
+		"Cleaning_SceneRN.placeHolderList[2459]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Lights|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1526]" ""
+		"Cleaning_SceneRN.placeHolderList[2460]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Lights|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1527]" ""
+		"Cleaning_SceneRN.placeHolderList[2461]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Lights|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1528]" ""
+		"Cleaning_SceneRN.placeHolderList[2462]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Lights|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1529]" ""
+		"Cleaning_SceneRN.placeHolderList[2463]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Lights|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1530]" ""
+		"Cleaning_SceneRN.placeHolderList[2464]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Lights|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1531]" ""
+		"Cleaning_SceneRN.placeHolderList[2465]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Lights|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1532]" ""
+		"Cleaning_SceneRN.placeHolderList[2466]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Lights|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1533]" ""
+		"Cleaning_SceneRN.placeHolderList[2467]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Transform_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Lights|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Light_Rig_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1534]" ""
+		"Cleaning_SceneRN.placeHolderList[2468]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1535]" ""
+		"Cleaning_SceneRN.placeHolderList[2469]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1536]" ""
+		"Cleaning_SceneRN.placeHolderList[2470]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1537]" ""
+		"Cleaning_SceneRN.placeHolderList[2471]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1538]" ""
+		"Cleaning_SceneRN.placeHolderList[2472]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1539]" ""
+		"Cleaning_SceneRN.placeHolderList[2473]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1540]" ""
+		"Cleaning_SceneRN.placeHolderList[2474]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1541]" ""
+		"Cleaning_SceneRN.placeHolderList[2475]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1542]" ""
+		"Cleaning_SceneRN.placeHolderList[2476]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1543]" ""
+		"Cleaning_SceneRN.placeHolderList[2477]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1544]" ""
+		"Cleaning_SceneRN.placeHolderList[2478]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1545]" ""
+		"Cleaning_SceneRN.placeHolderList[2479]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Panel_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1546]" ""
+		"Cleaning_SceneRN.placeHolderList[2480]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1547]" ""
+		"Cleaning_SceneRN.placeHolderList[2481]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1548]" ""
+		"Cleaning_SceneRN.placeHolderList[2482]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1549]" ""
+		"Cleaning_SceneRN.placeHolderList[2483]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1550]" ""
+		"Cleaning_SceneRN.placeHolderList[2484]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1551]" ""
+		"Cleaning_SceneRN.placeHolderList[2485]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1552]" ""
+		"Cleaning_SceneRN.placeHolderList[2486]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1553]" ""
+		"Cleaning_SceneRN.placeHolderList[2487]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1554]" ""
+		"Cleaning_SceneRN.placeHolderList[2488]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1555]" ""
+		"Cleaning_SceneRN.placeHolderList[2489]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1556]" ""
+		"Cleaning_SceneRN.placeHolderList[2490]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1557]" ""
+		"Cleaning_SceneRN.placeHolderList[2491]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Panel_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1558]" ""
+		"Cleaning_SceneRN.placeHolderList[2492]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Cylinder_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Cylinder_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1559]" ""
+		"Cleaning_SceneRN.placeHolderList[2493]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Cylinder_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Cylinder_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1560]" ""
+		"Cleaning_SceneRN.placeHolderList[2494]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Cylinder_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Cylinder_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1561]" ""
+		"Cleaning_SceneRN.placeHolderList[2495]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Cylinder_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Cylinder_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1562]" ""
+		"Cleaning_SceneRN.placeHolderList[2496]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1563]" ""
+		"Cleaning_SceneRN.placeHolderList[2497]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1564]" ""
+		"Cleaning_SceneRN.placeHolderList[2498]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1565]" ""
+		"Cleaning_SceneRN.placeHolderList[2499]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1566]" ""
+		"Cleaning_SceneRN.placeHolderList[2500]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1567]" ""
+		"Cleaning_SceneRN.placeHolderList[2501]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1568]" ""
+		"Cleaning_SceneRN.placeHolderList[2502]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1569]" ""
+		"Cleaning_SceneRN.placeHolderList[2503]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1570]" ""
+		"Cleaning_SceneRN.placeHolderList[2504]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1571]" ""
+		"Cleaning_SceneRN.placeHolderList[2505]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1572]" ""
+		"Cleaning_SceneRN.placeHolderList[2506]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1573]" ""
+		"Cleaning_SceneRN.placeHolderList[2507]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Plate_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1574]" ""
+		"Cleaning_SceneRN.placeHolderList[2508]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1575]" ""
+		"Cleaning_SceneRN.placeHolderList[2509]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1576]" ""
+		"Cleaning_SceneRN.placeHolderList[2510]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1577]" ""
+		"Cleaning_SceneRN.placeHolderList[2511]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1578]" ""
+		"Cleaning_SceneRN.placeHolderList[2512]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1579]" ""
+		"Cleaning_SceneRN.placeHolderList[2513]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1580]" ""
+		"Cleaning_SceneRN.placeHolderList[2514]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1581]" ""
+		"Cleaning_SceneRN.placeHolderList[2515]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1582]" ""
+		"Cleaning_SceneRN.placeHolderList[2516]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1583]" ""
+		"Cleaning_SceneRN.placeHolderList[2517]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1584]" ""
+		"Cleaning_SceneRN.placeHolderList[2518]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1585]" ""
+		"Cleaning_SceneRN.placeHolderList[2519]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1586]" ""
+		"Cleaning_SceneRN.placeHolderList[2520]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1587]" ""
+		"Cleaning_SceneRN.placeHolderList[2521]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1588]" ""
+		"Cleaning_SceneRN.placeHolderList[2522]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1589]" ""
+		"Cleaning_SceneRN.placeHolderList[2523]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1590]" ""
+		"Cleaning_SceneRN.placeHolderList[2524]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1591]" ""
+		"Cleaning_SceneRN.placeHolderList[2525]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1592]" ""
+		"Cleaning_SceneRN.placeHolderList[2526]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1593]" ""
+		"Cleaning_SceneRN.placeHolderList[2527]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1594]" ""
+		"Cleaning_SceneRN.placeHolderList[2528]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1595]" ""
+		"Cleaning_SceneRN.placeHolderList[2529]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Bottom_Booster_Ctrl|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Skirt_Driver_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1596]" ""
+		"Cleaning_SceneRN.placeHolderList[2530]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1597]" ""
+		"Cleaning_SceneRN.placeHolderList[2531]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1598]" ""
+		"Cleaning_SceneRN.placeHolderList[2532]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1599]" ""
+		"Cleaning_SceneRN.placeHolderList[2533]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1600]" ""
+		"Cleaning_SceneRN.placeHolderList[2534]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1601]" ""
+		"Cleaning_SceneRN.placeHolderList[2535]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1602]" ""
+		"Cleaning_SceneRN.placeHolderList[2536]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1603]" ""
+		"Cleaning_SceneRN.placeHolderList[2537]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1604]" ""
+		"Cleaning_SceneRN.placeHolderList[2538]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1605]" ""
+		"Cleaning_SceneRN.placeHolderList[2539]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1606]" ""
+		"Cleaning_SceneRN.placeHolderList[2540]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1607]" ""
+		"Cleaning_SceneRN.placeHolderList[2541]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Propellor_Shaft_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1608]" ""
+		"Cleaning_SceneRN.placeHolderList[2542]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1609]" ""
+		"Cleaning_SceneRN.placeHolderList[2543]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1610]" ""
+		"Cleaning_SceneRN.placeHolderList[2544]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1611]" ""
+		"Cleaning_SceneRN.placeHolderList[2545]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1612]" ""
+		"Cleaning_SceneRN.placeHolderList[2546]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1613]" ""
+		"Cleaning_SceneRN.placeHolderList[2547]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1614]" ""
+		"Cleaning_SceneRN.placeHolderList[2548]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1615]" ""
+		"Cleaning_SceneRN.placeHolderList[2549]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1616]" ""
+		"Cleaning_SceneRN.placeHolderList[2550]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1617]" ""
+		"Cleaning_SceneRN.placeHolderList[2551]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_01_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1618]" ""
+		"Cleaning_SceneRN.placeHolderList[2552]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1619]" ""
+		"Cleaning_SceneRN.placeHolderList[2553]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1620]" ""
+		"Cleaning_SceneRN.placeHolderList[2554]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1621]" ""
+		"Cleaning_SceneRN.placeHolderList[2555]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1622]" ""
+		"Cleaning_SceneRN.placeHolderList[2556]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1623]" ""
+		"Cleaning_SceneRN.placeHolderList[2557]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1624]" ""
+		"Cleaning_SceneRN.placeHolderList[2558]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1625]" ""
+		"Cleaning_SceneRN.placeHolderList[2559]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1626]" ""
+		"Cleaning_SceneRN.placeHolderList[2560]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1627]" ""
+		"Cleaning_SceneRN.placeHolderList[2561]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1628]" ""
+		"Cleaning_SceneRN.placeHolderList[2562]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1629]" ""
+		"Cleaning_SceneRN.placeHolderList[2563]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_Spinner_02_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1630]" ""
+		"Cleaning_SceneRN.placeHolderList[2564]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1631]" ""
+		"Cleaning_SceneRN.placeHolderList[2565]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1632]" ""
+		"Cleaning_SceneRN.placeHolderList[2566]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp.MouthFrown" 
-		"Cleaning_SceneRN.placeHolderList[1633]" ""
+		"Cleaning_SceneRN.placeHolderList[2567]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp.MouthSuprise" 
-		"Cleaning_SceneRN.placeHolderList[1634]" ""
+		"Cleaning_SceneRN.placeHolderList[2568]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp.MouthBored" 
-		"Cleaning_SceneRN.placeHolderList[1635]" ""
+		"Cleaning_SceneRN.placeHolderList[2569]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp.MouthSmirk" 
-		"Cleaning_SceneRN.placeHolderList[1636]" ""
+		"Cleaning_SceneRN.placeHolderList[2570]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Mouth_Ctrl_Grp.MouthScale" 
-		"Cleaning_SceneRN.placeHolderList[1637]" ""
+		"Cleaning_SceneRN.placeHolderList[2571]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Extras_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1638]" ""
+		"Cleaning_SceneRN.placeHolderList[2572]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Extras_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1639]" ""
+		"Cleaning_SceneRN.placeHolderList[2573]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Extras_Ctrl.QuestionMark" 
-		"Cleaning_SceneRN.placeHolderList[1640]" ""
+		"Cleaning_SceneRN.placeHolderList[2574]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Extras_Ctrl.Hazard_Sign" 
-		"Cleaning_SceneRN.placeHolderList[1641]" ""
+		"Cleaning_SceneRN.placeHolderList[2575]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Extras_Ctrl.LoadingScreen" 
-		"Cleaning_SceneRN.placeHolderList[1642]" ""
+		"Cleaning_SceneRN.placeHolderList[2576]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Extras_Ctrl.LeftEye" 
-		"Cleaning_SceneRN.placeHolderList[1643]" ""
+		"Cleaning_SceneRN.placeHolderList[2577]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Extras_Ctrl.RightEye" 
-		"Cleaning_SceneRN.placeHolderList[1644]" ""
+		"Cleaning_SceneRN.placeHolderList[2578]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Eyes_Extras_Ctrl.Mouth" 
-		"Cleaning_SceneRN.placeHolderList[1645]" ""
+		"Cleaning_SceneRN.placeHolderList[2579]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1646]" ""
+		"Cleaning_SceneRN.placeHolderList[2580]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1647]" ""
+		"Cleaning_SceneRN.placeHolderList[2581]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.EyeWink" 
-		"Cleaning_SceneRN.placeHolderList[1648]" ""
+		"Cleaning_SceneRN.placeHolderList[2582]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.EyeWide" 
-		"Cleaning_SceneRN.placeHolderList[1649]" ""
+		"Cleaning_SceneRN.placeHolderList[2583]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.EyeAngerSad" 
-		"Cleaning_SceneRN.placeHolderList[1650]" ""
+		"Cleaning_SceneRN.placeHolderList[2584]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.EyeSquint" 
-		"Cleaning_SceneRN.placeHolderList[1651]" ""
+		"Cleaning_SceneRN.placeHolderList[2585]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.EyeClosed" 
-		"Cleaning_SceneRN.placeHolderList[1652]" ""
+		"Cleaning_SceneRN.placeHolderList[2586]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.EyeBored" 
-		"Cleaning_SceneRN.placeHolderList[1653]" ""
+		"Cleaning_SceneRN.placeHolderList[2587]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.EyeSmirk" 
-		"Cleaning_SceneRN.placeHolderList[1654]" ""
+		"Cleaning_SceneRN.placeHolderList[2588]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.EyeScale" 
-		"Cleaning_SceneRN.placeHolderList[1655]" ""
+		"Cleaning_SceneRN.placeHolderList[2589]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Eye_Ctrl.EyeDetermined" 
-		"Cleaning_SceneRN.placeHolderList[1656]" ""
+		"Cleaning_SceneRN.placeHolderList[2590]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1657]" ""
+		"Cleaning_SceneRN.placeHolderList[2591]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1658]" ""
+		"Cleaning_SceneRN.placeHolderList[2592]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.EyeWink" 
-		"Cleaning_SceneRN.placeHolderList[1659]" ""
+		"Cleaning_SceneRN.placeHolderList[2593]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.EyeWide" 
-		"Cleaning_SceneRN.placeHolderList[1660]" ""
+		"Cleaning_SceneRN.placeHolderList[2594]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.EyeAnger_Sad" 
-		"Cleaning_SceneRN.placeHolderList[1661]" ""
+		"Cleaning_SceneRN.placeHolderList[2595]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.EyeSquint" 
-		"Cleaning_SceneRN.placeHolderList[1662]" ""
+		"Cleaning_SceneRN.placeHolderList[2596]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.EyeClosed" 
-		"Cleaning_SceneRN.placeHolderList[1663]" ""
+		"Cleaning_SceneRN.placeHolderList[2597]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.EyeBored" 
-		"Cleaning_SceneRN.placeHolderList[1664]" ""
+		"Cleaning_SceneRN.placeHolderList[2598]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.EyeSmirk" 
-		"Cleaning_SceneRN.placeHolderList[1665]" ""
+		"Cleaning_SceneRN.placeHolderList[2599]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.EyeScale" 
-		"Cleaning_SceneRN.placeHolderList[1666]" ""
+		"Cleaning_SceneRN.placeHolderList[2600]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Eye_Ctrl.EyeDetermined" 
-		"Cleaning_SceneRN.placeHolderList[1667]" ""
+		"Cleaning_SceneRN.placeHolderList[2601]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1668]" ""
+		"Cleaning_SceneRN.placeHolderList[2602]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1669]" ""
+		"Cleaning_SceneRN.placeHolderList[2603]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1670]" ""
+		"Cleaning_SceneRN.placeHolderList[2604]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1671]" ""
+		"Cleaning_SceneRN.placeHolderList[2605]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1672]" ""
+		"Cleaning_SceneRN.placeHolderList[2606]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1673]" ""
+		"Cleaning_SceneRN.placeHolderList[2607]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1674]" ""
+		"Cleaning_SceneRN.placeHolderList[2608]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1675]" ""
+		"Cleaning_SceneRN.placeHolderList[2609]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1676]" ""
+		"Cleaning_SceneRN.placeHolderList[2610]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1677]" ""
+		"Cleaning_SceneRN.placeHolderList[2611]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1678]" ""
+		"Cleaning_SceneRN.placeHolderList[2612]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Three_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1679]" ""
+		"Cleaning_SceneRN.placeHolderList[2613]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1680]" ""
+		"Cleaning_SceneRN.placeHolderList[2614]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1681]" ""
+		"Cleaning_SceneRN.placeHolderList[2615]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1682]" ""
+		"Cleaning_SceneRN.placeHolderList[2616]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1683]" ""
+		"Cleaning_SceneRN.placeHolderList[2617]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1684]" ""
+		"Cleaning_SceneRN.placeHolderList[2618]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1685]" ""
+		"Cleaning_SceneRN.placeHolderList[2619]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1686]" ""
+		"Cleaning_SceneRN.placeHolderList[2620]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1687]" ""
+		"Cleaning_SceneRN.placeHolderList[2621]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1688]" ""
+		"Cleaning_SceneRN.placeHolderList[2622]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1689]" ""
+		"Cleaning_SceneRN.placeHolderList[2623]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1690]" ""
+		"Cleaning_SceneRN.placeHolderList[2624]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_Two_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1691]" ""
+		"Cleaning_SceneRN.placeHolderList[2625]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1692]" ""
+		"Cleaning_SceneRN.placeHolderList[2626]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1693]" ""
+		"Cleaning_SceneRN.placeHolderList[2627]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1694]" ""
+		"Cleaning_SceneRN.placeHolderList[2628]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1695]" ""
+		"Cleaning_SceneRN.placeHolderList[2629]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1696]" ""
+		"Cleaning_SceneRN.placeHolderList[2630]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1697]" ""
+		"Cleaning_SceneRN.placeHolderList[2631]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1698]" ""
+		"Cleaning_SceneRN.placeHolderList[2632]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1699]" ""
+		"Cleaning_SceneRN.placeHolderList[2633]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1700]" ""
+		"Cleaning_SceneRN.placeHolderList[2634]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1701]" ""
+		"Cleaning_SceneRN.placeHolderList[2635]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1702]" ""
+		"Cleaning_SceneRN.placeHolderList[2636]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger02_One_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1703]" ""
+		"Cleaning_SceneRN.placeHolderList[2637]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1704]" ""
+		"Cleaning_SceneRN.placeHolderList[2638]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1705]" ""
+		"Cleaning_SceneRN.placeHolderList[2639]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1706]" ""
+		"Cleaning_SceneRN.placeHolderList[2640]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1707]" ""
+		"Cleaning_SceneRN.placeHolderList[2641]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1708]" ""
+		"Cleaning_SceneRN.placeHolderList[2642]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1709]" ""
+		"Cleaning_SceneRN.placeHolderList[2643]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1710]" ""
+		"Cleaning_SceneRN.placeHolderList[2644]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1711]" ""
+		"Cleaning_SceneRN.placeHolderList[2645]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1712]" ""
+		"Cleaning_SceneRN.placeHolderList[2646]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1713]" ""
+		"Cleaning_SceneRN.placeHolderList[2647]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1714]" ""
+		"Cleaning_SceneRN.placeHolderList[2648]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Three_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1715]" ""
+		"Cleaning_SceneRN.placeHolderList[2649]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1716]" ""
+		"Cleaning_SceneRN.placeHolderList[2650]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1717]" ""
+		"Cleaning_SceneRN.placeHolderList[2651]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1718]" ""
+		"Cleaning_SceneRN.placeHolderList[2652]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1719]" ""
+		"Cleaning_SceneRN.placeHolderList[2653]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1720]" ""
+		"Cleaning_SceneRN.placeHolderList[2654]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1721]" ""
+		"Cleaning_SceneRN.placeHolderList[2655]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1722]" ""
+		"Cleaning_SceneRN.placeHolderList[2656]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1723]" ""
+		"Cleaning_SceneRN.placeHolderList[2657]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1724]" ""
+		"Cleaning_SceneRN.placeHolderList[2658]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1725]" ""
+		"Cleaning_SceneRN.placeHolderList[2659]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1726]" ""
+		"Cleaning_SceneRN.placeHolderList[2660]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_Two_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1727]" ""
+		"Cleaning_SceneRN.placeHolderList[2661]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1728]" ""
+		"Cleaning_SceneRN.placeHolderList[2662]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1729]" ""
+		"Cleaning_SceneRN.placeHolderList[2663]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1730]" ""
+		"Cleaning_SceneRN.placeHolderList[2664]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1731]" ""
+		"Cleaning_SceneRN.placeHolderList[2665]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1732]" ""
+		"Cleaning_SceneRN.placeHolderList[2666]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1733]" ""
+		"Cleaning_SceneRN.placeHolderList[2667]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1734]" ""
+		"Cleaning_SceneRN.placeHolderList[2668]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1735]" ""
+		"Cleaning_SceneRN.placeHolderList[2669]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1736]" ""
+		"Cleaning_SceneRN.placeHolderList[2670]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1737]" ""
+		"Cleaning_SceneRN.placeHolderList[2671]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1738]" ""
+		"Cleaning_SceneRN.placeHolderList[2672]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Finger01_One_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1739]" ""
+		"Cleaning_SceneRN.placeHolderList[2673]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1740]" ""
+		"Cleaning_SceneRN.placeHolderList[2674]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1741]" ""
+		"Cleaning_SceneRN.placeHolderList[2675]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1742]" ""
+		"Cleaning_SceneRN.placeHolderList[2676]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1743]" ""
+		"Cleaning_SceneRN.placeHolderList[2677]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1744]" ""
+		"Cleaning_SceneRN.placeHolderList[2678]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1745]" ""
+		"Cleaning_SceneRN.placeHolderList[2679]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1746]" ""
+		"Cleaning_SceneRN.placeHolderList[2680]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1747]" ""
+		"Cleaning_SceneRN.placeHolderList[2681]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1748]" ""
+		"Cleaning_SceneRN.placeHolderList[2682]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1749]" ""
+		"Cleaning_SceneRN.placeHolderList[2683]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1750]" ""
+		"Cleaning_SceneRN.placeHolderList[2684]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_03_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1751]" ""
+		"Cleaning_SceneRN.placeHolderList[2685]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1752]" ""
+		"Cleaning_SceneRN.placeHolderList[2686]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1753]" ""
+		"Cleaning_SceneRN.placeHolderList[2687]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1754]" ""
+		"Cleaning_SceneRN.placeHolderList[2688]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1755]" ""
+		"Cleaning_SceneRN.placeHolderList[2689]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1756]" ""
+		"Cleaning_SceneRN.placeHolderList[2690]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1757]" ""
+		"Cleaning_SceneRN.placeHolderList[2691]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1758]" ""
+		"Cleaning_SceneRN.placeHolderList[2692]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1759]" ""
+		"Cleaning_SceneRN.placeHolderList[2693]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1760]" ""
+		"Cleaning_SceneRN.placeHolderList[2694]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1761]" ""
+		"Cleaning_SceneRN.placeHolderList[2695]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1762]" ""
+		"Cleaning_SceneRN.placeHolderList[2696]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_02_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1763]" ""
+		"Cleaning_SceneRN.placeHolderList[2697]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1764]" ""
+		"Cleaning_SceneRN.placeHolderList[2698]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1765]" ""
+		"Cleaning_SceneRN.placeHolderList[2699]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1766]" ""
+		"Cleaning_SceneRN.placeHolderList[2700]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1767]" ""
+		"Cleaning_SceneRN.placeHolderList[2701]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1768]" ""
+		"Cleaning_SceneRN.placeHolderList[2702]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1769]" ""
+		"Cleaning_SceneRN.placeHolderList[2703]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1770]" ""
+		"Cleaning_SceneRN.placeHolderList[2704]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1771]" ""
+		"Cleaning_SceneRN.placeHolderList[2705]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1772]" ""
+		"Cleaning_SceneRN.placeHolderList[2706]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1773]" ""
+		"Cleaning_SceneRN.placeHolderList[2707]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1774]" ""
+		"Cleaning_SceneRN.placeHolderList[2708]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Thumb_01_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1775]" ""
+		"Cleaning_SceneRN.placeHolderList[2709]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1776]" ""
+		"Cleaning_SceneRN.placeHolderList[2710]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1777]" ""
+		"Cleaning_SceneRN.placeHolderList[2711]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1778]" ""
+		"Cleaning_SceneRN.placeHolderList[2712]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1779]" ""
+		"Cleaning_SceneRN.placeHolderList[2713]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1780]" ""
+		"Cleaning_SceneRN.placeHolderList[2714]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1781]" ""
+		"Cleaning_SceneRN.placeHolderList[2715]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1782]" ""
+		"Cleaning_SceneRN.placeHolderList[2716]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1783]" ""
+		"Cleaning_SceneRN.placeHolderList[2717]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1784]" ""
+		"Cleaning_SceneRN.placeHolderList[2718]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1785]" ""
+		"Cleaning_SceneRN.placeHolderList[2719]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1786]" ""
+		"Cleaning_SceneRN.placeHolderList[2720]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1787]" ""
+		"Cleaning_SceneRN.placeHolderList[2721]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1788]" ""
+		"Cleaning_SceneRN.placeHolderList[2722]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1789]" ""
+		"Cleaning_SceneRN.placeHolderList[2723]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1790]" ""
+		"Cleaning_SceneRN.placeHolderList[2724]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1791]" ""
+		"Cleaning_SceneRN.placeHolderList[2725]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1792]" ""
+		"Cleaning_SceneRN.placeHolderList[2726]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1793]" ""
+		"Cleaning_SceneRN.placeHolderList[2727]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1794]" ""
+		"Cleaning_SceneRN.placeHolderList[2728]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1795]" ""
+		"Cleaning_SceneRN.placeHolderList[2729]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1796]" ""
+		"Cleaning_SceneRN.placeHolderList[2730]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1797]" ""
+		"Cleaning_SceneRN.placeHolderList[2731]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1798]" ""
+		"Cleaning_SceneRN.placeHolderList[2732]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_L_Palm_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1799]" ""
+		"Cleaning_SceneRN.placeHolderList[2733]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1800]" ""
+		"Cleaning_SceneRN.placeHolderList[2734]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1801]" ""
+		"Cleaning_SceneRN.placeHolderList[2735]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1802]" ""
+		"Cleaning_SceneRN.placeHolderList[2736]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1803]" ""
+		"Cleaning_SceneRN.placeHolderList[2737]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1804]" ""
+		"Cleaning_SceneRN.placeHolderList[2738]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1805]" ""
+		"Cleaning_SceneRN.placeHolderList[2739]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1806]" ""
+		"Cleaning_SceneRN.placeHolderList[2740]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1807]" ""
+		"Cleaning_SceneRN.placeHolderList[2741]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1808]" ""
+		"Cleaning_SceneRN.placeHolderList[2742]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1809]" ""
+		"Cleaning_SceneRN.placeHolderList[2743]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1810]" ""
+		"Cleaning_SceneRN.placeHolderList[2744]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1811]" ""
+		"Cleaning_SceneRN.placeHolderList[2745]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1812]" ""
+		"Cleaning_SceneRN.placeHolderList[2746]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1813]" ""
+		"Cleaning_SceneRN.placeHolderList[2747]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1814]" ""
+		"Cleaning_SceneRN.placeHolderList[2748]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1815]" ""
+		"Cleaning_SceneRN.placeHolderList[2749]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1816]" ""
+		"Cleaning_SceneRN.placeHolderList[2750]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1817]" ""
+		"Cleaning_SceneRN.placeHolderList[2751]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1818]" ""
+		"Cleaning_SceneRN.placeHolderList[2752]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1819]" ""
+		"Cleaning_SceneRN.placeHolderList[2753]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1820]" ""
+		"Cleaning_SceneRN.placeHolderList[2754]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1821]" ""
+		"Cleaning_SceneRN.placeHolderList[2755]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1822]" ""
+		"Cleaning_SceneRN.placeHolderList[2756]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_03_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1823]" ""
+		"Cleaning_SceneRN.placeHolderList[2757]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1824]" ""
+		"Cleaning_SceneRN.placeHolderList[2758]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1825]" ""
+		"Cleaning_SceneRN.placeHolderList[2759]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1826]" ""
+		"Cleaning_SceneRN.placeHolderList[2760]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1827]" ""
+		"Cleaning_SceneRN.placeHolderList[2761]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1828]" ""
+		"Cleaning_SceneRN.placeHolderList[2762]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1829]" ""
+		"Cleaning_SceneRN.placeHolderList[2763]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1830]" ""
+		"Cleaning_SceneRN.placeHolderList[2764]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1831]" ""
+		"Cleaning_SceneRN.placeHolderList[2765]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1832]" ""
+		"Cleaning_SceneRN.placeHolderList[2766]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1833]" ""
+		"Cleaning_SceneRN.placeHolderList[2767]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1834]" ""
+		"Cleaning_SceneRN.placeHolderList[2768]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_01_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1835]" ""
+		"Cleaning_SceneRN.placeHolderList[2769]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1836]" ""
+		"Cleaning_SceneRN.placeHolderList[2770]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1837]" ""
+		"Cleaning_SceneRN.placeHolderList[2771]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1838]" ""
+		"Cleaning_SceneRN.placeHolderList[2772]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1839]" ""
+		"Cleaning_SceneRN.placeHolderList[2773]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1840]" ""
+		"Cleaning_SceneRN.placeHolderList[2774]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1841]" ""
+		"Cleaning_SceneRN.placeHolderList[2775]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1842]" ""
+		"Cleaning_SceneRN.placeHolderList[2776]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1843]" ""
+		"Cleaning_SceneRN.placeHolderList[2777]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1844]" ""
+		"Cleaning_SceneRN.placeHolderList[2778]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1845]" ""
+		"Cleaning_SceneRN.placeHolderList[2779]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1846]" ""
+		"Cleaning_SceneRN.placeHolderList[2780]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Thumb_02_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1847]" ""
+		"Cleaning_SceneRN.placeHolderList[2781]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1848]" ""
+		"Cleaning_SceneRN.placeHolderList[2782]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1849]" ""
+		"Cleaning_SceneRN.placeHolderList[2783]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1850]" ""
+		"Cleaning_SceneRN.placeHolderList[2784]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1851]" ""
+		"Cleaning_SceneRN.placeHolderList[2785]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1852]" ""
+		"Cleaning_SceneRN.placeHolderList[2786]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1853]" ""
+		"Cleaning_SceneRN.placeHolderList[2787]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1854]" ""
+		"Cleaning_SceneRN.placeHolderList[2788]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1855]" ""
+		"Cleaning_SceneRN.placeHolderList[2789]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1856]" ""
+		"Cleaning_SceneRN.placeHolderList[2790]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1857]" ""
+		"Cleaning_SceneRN.placeHolderList[2791]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1858]" ""
+		"Cleaning_SceneRN.placeHolderList[2792]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Palm_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1859]" ""
+		"Cleaning_SceneRN.placeHolderList[2793]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1860]" ""
+		"Cleaning_SceneRN.placeHolderList[2794]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1861]" ""
+		"Cleaning_SceneRN.placeHolderList[2795]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1862]" ""
+		"Cleaning_SceneRN.placeHolderList[2796]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1863]" ""
+		"Cleaning_SceneRN.placeHolderList[2797]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1864]" ""
+		"Cleaning_SceneRN.placeHolderList[2798]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1865]" ""
+		"Cleaning_SceneRN.placeHolderList[2799]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1866]" ""
+		"Cleaning_SceneRN.placeHolderList[2800]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1867]" ""
+		"Cleaning_SceneRN.placeHolderList[2801]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1868]" ""
+		"Cleaning_SceneRN.placeHolderList[2802]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1869]" ""
+		"Cleaning_SceneRN.placeHolderList[2803]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1870]" ""
+		"Cleaning_SceneRN.placeHolderList[2804]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_One_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1871]" ""
+		"Cleaning_SceneRN.placeHolderList[2805]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1872]" ""
+		"Cleaning_SceneRN.placeHolderList[2806]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1873]" ""
+		"Cleaning_SceneRN.placeHolderList[2807]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1874]" ""
+		"Cleaning_SceneRN.placeHolderList[2808]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1875]" ""
+		"Cleaning_SceneRN.placeHolderList[2809]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1876]" ""
+		"Cleaning_SceneRN.placeHolderList[2810]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1877]" ""
+		"Cleaning_SceneRN.placeHolderList[2811]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1878]" ""
+		"Cleaning_SceneRN.placeHolderList[2812]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1879]" ""
+		"Cleaning_SceneRN.placeHolderList[2813]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1880]" ""
+		"Cleaning_SceneRN.placeHolderList[2814]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1881]" ""
+		"Cleaning_SceneRN.placeHolderList[2815]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1882]" ""
+		"Cleaning_SceneRN.placeHolderList[2816]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Two_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1883]" ""
+		"Cleaning_SceneRN.placeHolderList[2817]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1884]" ""
+		"Cleaning_SceneRN.placeHolderList[2818]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1885]" ""
+		"Cleaning_SceneRN.placeHolderList[2819]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1886]" ""
+		"Cleaning_SceneRN.placeHolderList[2820]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1887]" ""
+		"Cleaning_SceneRN.placeHolderList[2821]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1888]" ""
+		"Cleaning_SceneRN.placeHolderList[2822]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1889]" ""
+		"Cleaning_SceneRN.placeHolderList[2823]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1890]" ""
+		"Cleaning_SceneRN.placeHolderList[2824]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1891]" ""
+		"Cleaning_SceneRN.placeHolderList[2825]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1892]" ""
+		"Cleaning_SceneRN.placeHolderList[2826]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1893]" ""
+		"Cleaning_SceneRN.placeHolderList[2827]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1894]" ""
+		"Cleaning_SceneRN.placeHolderList[2828]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Three_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1895]" ""
+		"Cleaning_SceneRN.placeHolderList[2829]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1896]" ""
+		"Cleaning_SceneRN.placeHolderList[2830]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1897]" ""
+		"Cleaning_SceneRN.placeHolderList[2831]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1898]" ""
+		"Cleaning_SceneRN.placeHolderList[2832]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1899]" ""
+		"Cleaning_SceneRN.placeHolderList[2833]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1900]" ""
+		"Cleaning_SceneRN.placeHolderList[2834]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1901]" ""
+		"Cleaning_SceneRN.placeHolderList[2835]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1902]" ""
+		"Cleaning_SceneRN.placeHolderList[2836]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1903]" ""
+		"Cleaning_SceneRN.placeHolderList[2837]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1904]" ""
+		"Cleaning_SceneRN.placeHolderList[2838]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1905]" ""
+		"Cleaning_SceneRN.placeHolderList[2839]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1906]" ""
+		"Cleaning_SceneRN.placeHolderList[2840]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger01_Three_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1907]" ""
+		"Cleaning_SceneRN.placeHolderList[2841]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1908]" ""
+		"Cleaning_SceneRN.placeHolderList[2842]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1909]" ""
+		"Cleaning_SceneRN.placeHolderList[2843]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1910]" ""
+		"Cleaning_SceneRN.placeHolderList[2844]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1911]" ""
+		"Cleaning_SceneRN.placeHolderList[2845]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1912]" ""
+		"Cleaning_SceneRN.placeHolderList[2846]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1913]" ""
+		"Cleaning_SceneRN.placeHolderList[2847]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1914]" ""
+		"Cleaning_SceneRN.placeHolderList[2848]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1915]" ""
+		"Cleaning_SceneRN.placeHolderList[2849]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1916]" ""
+		"Cleaning_SceneRN.placeHolderList[2850]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1917]" ""
+		"Cleaning_SceneRN.placeHolderList[2851]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1918]" ""
+		"Cleaning_SceneRN.placeHolderList[2852]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_Two_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1919]" ""
+		"Cleaning_SceneRN.placeHolderList[2853]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1920]" ""
+		"Cleaning_SceneRN.placeHolderList[2854]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1921]" ""
+		"Cleaning_SceneRN.placeHolderList[2855]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1922]" ""
+		"Cleaning_SceneRN.placeHolderList[2856]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1923]" ""
+		"Cleaning_SceneRN.placeHolderList[2857]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1924]" ""
+		"Cleaning_SceneRN.placeHolderList[2858]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1925]" ""
+		"Cleaning_SceneRN.placeHolderList[2859]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1926]" ""
+		"Cleaning_SceneRN.placeHolderList[2860]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1927]" ""
+		"Cleaning_SceneRN.placeHolderList[2861]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1928]" ""
+		"Cleaning_SceneRN.placeHolderList[2862]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1929]" ""
+		"Cleaning_SceneRN.placeHolderList[2863]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1930]" ""
+		"Cleaning_SceneRN.placeHolderList[2864]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:FK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Hand|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:FK_R_Finger02_One_Jnt_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1931]" ""
+		"Cleaning_SceneRN.placeHolderList[2865]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[1932]" ""
+		"Cleaning_SceneRN.placeHolderList[2866]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[1933]" ""
+		"Cleaning_SceneRN.placeHolderList[2867]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1934]" ""
+		"Cleaning_SceneRN.placeHolderList[2868]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1935]" ""
+		"Cleaning_SceneRN.placeHolderList[2869]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1936]" ""
+		"Cleaning_SceneRN.placeHolderList[2870]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1937]" ""
+		"Cleaning_SceneRN.placeHolderList[2871]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1938]" ""
+		"Cleaning_SceneRN.placeHolderList[2872]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1939]" ""
+		"Cleaning_SceneRN.placeHolderList[2873]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1940]" ""
+		"Cleaning_SceneRN.placeHolderList[2874]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1941]" ""
+		"Cleaning_SceneRN.placeHolderList[2875]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1942]" ""
+		"Cleaning_SceneRN.placeHolderList[2876]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_02_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1943]" ""
+		"Cleaning_SceneRN.placeHolderList[2877]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1944]" ""
+		"Cleaning_SceneRN.placeHolderList[2878]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1945]" ""
+		"Cleaning_SceneRN.placeHolderList[2879]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1946]" ""
+		"Cleaning_SceneRN.placeHolderList[2880]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1947]" ""
+		"Cleaning_SceneRN.placeHolderList[2881]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1948]" ""
+		"Cleaning_SceneRN.placeHolderList[2882]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1949]" ""
+		"Cleaning_SceneRN.placeHolderList[2883]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1950]" ""
+		"Cleaning_SceneRN.placeHolderList[2884]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1951]" ""
+		"Cleaning_SceneRN.placeHolderList[2885]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1952]" ""
+		"Cleaning_SceneRN.placeHolderList[2886]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_Spinner_01_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1953]" ""
+		"Cleaning_SceneRN.placeHolderList[2887]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[1954]" ""
+		"Cleaning_SceneRN.placeHolderList[2888]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1955]" ""
+		"Cleaning_SceneRN.placeHolderList[2889]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1956]" ""
+		"Cleaning_SceneRN.placeHolderList[2890]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1957]" ""
+		"Cleaning_SceneRN.placeHolderList[2891]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1958]" ""
+		"Cleaning_SceneRN.placeHolderList[2892]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1959]" ""
+		"Cleaning_SceneRN.placeHolderList[2893]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1960]" ""
+		"Cleaning_SceneRN.placeHolderList[2894]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1961]" ""
+		"Cleaning_SceneRN.placeHolderList[2895]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1962]" ""
+		"Cleaning_SceneRN.placeHolderList[2896]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1963]" ""
+		"Cleaning_SceneRN.placeHolderList[2897]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Base_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1964]" ""
+		"Cleaning_SceneRN.placeHolderList[2898]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[1965]" ""
+		"Cleaning_SceneRN.placeHolderList[2899]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1966]" ""
+		"Cleaning_SceneRN.placeHolderList[2900]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1967]" ""
+		"Cleaning_SceneRN.placeHolderList[2901]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1968]" ""
+		"Cleaning_SceneRN.placeHolderList[2902]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1969]" ""
+		"Cleaning_SceneRN.placeHolderList[2903]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1970]" ""
+		"Cleaning_SceneRN.placeHolderList[2904]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1971]" ""
+		"Cleaning_SceneRN.placeHolderList[2905]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1972]" ""
+		"Cleaning_SceneRN.placeHolderList[2906]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1973]" ""
+		"Cleaning_SceneRN.placeHolderList[2907]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1974]" ""
+		"Cleaning_SceneRN.placeHolderList[2908]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1975]" ""
+		"Cleaning_SceneRN.placeHolderList[2909]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[1976]" ""
+		"Cleaning_SceneRN.placeHolderList[2910]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1977]" ""
+		"Cleaning_SceneRN.placeHolderList[2911]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1978]" ""
+		"Cleaning_SceneRN.placeHolderList[2912]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1979]" ""
+		"Cleaning_SceneRN.placeHolderList[2913]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1980]" ""
+		"Cleaning_SceneRN.placeHolderList[2914]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1981]" ""
+		"Cleaning_SceneRN.placeHolderList[2915]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1982]" ""
+		"Cleaning_SceneRN.placeHolderList[2916]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1983]" ""
+		"Cleaning_SceneRN.placeHolderList[2917]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1984]" ""
+		"Cleaning_SceneRN.placeHolderList[2918]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1985]" ""
+		"Cleaning_SceneRN.placeHolderList[2919]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Arm_PV_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1986]" ""
+		"Cleaning_SceneRN.placeHolderList[2920]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[1987]" ""
+		"Cleaning_SceneRN.placeHolderList[2921]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[1988]" ""
+		"Cleaning_SceneRN.placeHolderList[2922]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[1989]" ""
+		"Cleaning_SceneRN.placeHolderList[2923]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[1990]" ""
+		"Cleaning_SceneRN.placeHolderList[2924]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1991]" ""
+		"Cleaning_SceneRN.placeHolderList[2925]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[1992]" ""
+		"Cleaning_SceneRN.placeHolderList[2926]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[1993]" ""
+		"Cleaning_SceneRN.placeHolderList[2927]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[1994]" ""
+		"Cleaning_SceneRN.placeHolderList[2928]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[1995]" ""
+		"Cleaning_SceneRN.placeHolderList[2929]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[1996]" ""
+		"Cleaning_SceneRN.placeHolderList[2930]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[1997]" ""
+		"Cleaning_SceneRN.placeHolderList[2931]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[1998]" ""
+		"Cleaning_SceneRN.placeHolderList[2932]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[1999]" ""
+		"Cleaning_SceneRN.placeHolderList[2933]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2000]" ""
+		"Cleaning_SceneRN.placeHolderList[2934]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2001]" ""
+		"Cleaning_SceneRN.placeHolderList[2935]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2002]" ""
+		"Cleaning_SceneRN.placeHolderList[2936]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2003]" ""
+		"Cleaning_SceneRN.placeHolderList[2937]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2004]" ""
+		"Cleaning_SceneRN.placeHolderList[2938]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2005]" ""
+		"Cleaning_SceneRN.placeHolderList[2939]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2006]" ""
+		"Cleaning_SceneRN.placeHolderList[2940]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2007]" ""
+		"Cleaning_SceneRN.placeHolderList[2941]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Base_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2008]" ""
+		"Cleaning_SceneRN.placeHolderList[2942]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.Follow" 
-		"Cleaning_SceneRN.placeHolderList[2009]" ""
+		"Cleaning_SceneRN.placeHolderList[2943]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2010]" ""
+		"Cleaning_SceneRN.placeHolderList[2944]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2011]" ""
+		"Cleaning_SceneRN.placeHolderList[2945]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2012]" ""
+		"Cleaning_SceneRN.placeHolderList[2946]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2013]" ""
+		"Cleaning_SceneRN.placeHolderList[2947]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2014]" ""
+		"Cleaning_SceneRN.placeHolderList[2948]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2015]" ""
+		"Cleaning_SceneRN.placeHolderList[2949]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2016]" ""
+		"Cleaning_SceneRN.placeHolderList[2950]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2017]" ""
+		"Cleaning_SceneRN.placeHolderList[2951]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2018]" ""
+		"Cleaning_SceneRN.placeHolderList[2952]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:IK_Arms|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_Main_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl_Offset_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Arm_IK_PV_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2019]" ""
+		"Cleaning_SceneRN.placeHolderList[2953]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[2020]" ""
+		"Cleaning_SceneRN.placeHolderList[2954]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[2021]" ""
+		"Cleaning_SceneRN.placeHolderList[2955]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2022]" ""
+		"Cleaning_SceneRN.placeHolderList[2956]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2023]" ""
+		"Cleaning_SceneRN.placeHolderList[2957]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2024]" ""
+		"Cleaning_SceneRN.placeHolderList[2958]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2025]" ""
+		"Cleaning_SceneRN.placeHolderList[2959]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2026]" ""
+		"Cleaning_SceneRN.placeHolderList[2960]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2027]" ""
+		"Cleaning_SceneRN.placeHolderList[2961]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2028]" ""
+		"Cleaning_SceneRN.placeHolderList[2962]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2029]" ""
+		"Cleaning_SceneRN.placeHolderList[2963]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2030]" ""
+		"Cleaning_SceneRN.placeHolderList[2964]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_05_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2031]" ""
+		"Cleaning_SceneRN.placeHolderList[2965]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[2032]" ""
+		"Cleaning_SceneRN.placeHolderList[2966]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[2033]" ""
+		"Cleaning_SceneRN.placeHolderList[2967]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2034]" ""
+		"Cleaning_SceneRN.placeHolderList[2968]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2035]" ""
+		"Cleaning_SceneRN.placeHolderList[2969]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2036]" ""
+		"Cleaning_SceneRN.placeHolderList[2970]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2037]" ""
+		"Cleaning_SceneRN.placeHolderList[2971]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2038]" ""
+		"Cleaning_SceneRN.placeHolderList[2972]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2039]" ""
+		"Cleaning_SceneRN.placeHolderList[2973]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2040]" ""
+		"Cleaning_SceneRN.placeHolderList[2974]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2041]" ""
+		"Cleaning_SceneRN.placeHolderList[2975]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2042]" ""
+		"Cleaning_SceneRN.placeHolderList[2976]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_04_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2043]" ""
+		"Cleaning_SceneRN.placeHolderList[2977]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[2044]" ""
+		"Cleaning_SceneRN.placeHolderList[2978]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[2045]" ""
+		"Cleaning_SceneRN.placeHolderList[2979]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2046]" ""
+		"Cleaning_SceneRN.placeHolderList[2980]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2047]" ""
+		"Cleaning_SceneRN.placeHolderList[2981]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2048]" ""
+		"Cleaning_SceneRN.placeHolderList[2982]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2049]" ""
+		"Cleaning_SceneRN.placeHolderList[2983]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2050]" ""
+		"Cleaning_SceneRN.placeHolderList[2984]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2051]" ""
+		"Cleaning_SceneRN.placeHolderList[2985]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2052]" ""
+		"Cleaning_SceneRN.placeHolderList[2986]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2053]" ""
+		"Cleaning_SceneRN.placeHolderList[2987]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2054]" ""
+		"Cleaning_SceneRN.placeHolderList[2988]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_03_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2055]" ""
+		"Cleaning_SceneRN.placeHolderList[2989]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[2056]" ""
+		"Cleaning_SceneRN.placeHolderList[2990]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[2057]" ""
+		"Cleaning_SceneRN.placeHolderList[2991]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2058]" ""
+		"Cleaning_SceneRN.placeHolderList[2992]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2059]" ""
+		"Cleaning_SceneRN.placeHolderList[2993]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2060]" ""
+		"Cleaning_SceneRN.placeHolderList[2994]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2061]" ""
+		"Cleaning_SceneRN.placeHolderList[2995]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2062]" ""
+		"Cleaning_SceneRN.placeHolderList[2996]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2063]" ""
+		"Cleaning_SceneRN.placeHolderList[2997]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2064]" ""
+		"Cleaning_SceneRN.placeHolderList[2998]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2065]" ""
+		"Cleaning_SceneRN.placeHolderList[2999]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2066]" ""
+		"Cleaning_SceneRN.placeHolderList[3000]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_02_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2067]" ""
+		"Cleaning_SceneRN.placeHolderList[3001]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[2068]" ""
+		"Cleaning_SceneRN.placeHolderList[3002]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[2069]" ""
+		"Cleaning_SceneRN.placeHolderList[3003]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2070]" ""
+		"Cleaning_SceneRN.placeHolderList[3004]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2071]" ""
+		"Cleaning_SceneRN.placeHolderList[3005]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2072]" ""
+		"Cleaning_SceneRN.placeHolderList[3006]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2073]" ""
+		"Cleaning_SceneRN.placeHolderList[3007]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2074]" ""
+		"Cleaning_SceneRN.placeHolderList[3008]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2075]" ""
+		"Cleaning_SceneRN.placeHolderList[3009]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2076]" ""
+		"Cleaning_SceneRN.placeHolderList[3010]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2077]" ""
+		"Cleaning_SceneRN.placeHolderList[3011]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2078]" ""
+		"Cleaning_SceneRN.placeHolderList[3012]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Neck_01_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2079]" ""
+		"Cleaning_SceneRN.placeHolderList[3013]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[2080]" ""
+		"Cleaning_SceneRN.placeHolderList[3014]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[2081]" ""
+		"Cleaning_SceneRN.placeHolderList[3015]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2082]" ""
+		"Cleaning_SceneRN.placeHolderList[3016]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2083]" ""
+		"Cleaning_SceneRN.placeHolderList[3017]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2084]" ""
+		"Cleaning_SceneRN.placeHolderList[3018]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2085]" ""
+		"Cleaning_SceneRN.placeHolderList[3019]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2086]" ""
+		"Cleaning_SceneRN.placeHolderList[3020]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2087]" ""
+		"Cleaning_SceneRN.placeHolderList[3021]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2088]" ""
+		"Cleaning_SceneRN.placeHolderList[3022]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2089]" ""
+		"Cleaning_SceneRN.placeHolderList[3023]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2090]" ""
+		"Cleaning_SceneRN.placeHolderList[3024]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:R_Clav_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2091]" ""
+		"Cleaning_SceneRN.placeHolderList[3025]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.FollowTranslate" 
-		"Cleaning_SceneRN.placeHolderList[2092]" ""
+		"Cleaning_SceneRN.placeHolderList[3026]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.FollowRotate" 
-		"Cleaning_SceneRN.placeHolderList[2093]" ""
+		"Cleaning_SceneRN.placeHolderList[3027]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2094]" ""
+		"Cleaning_SceneRN.placeHolderList[3028]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2095]" ""
+		"Cleaning_SceneRN.placeHolderList[3029]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2096]" ""
+		"Cleaning_SceneRN.placeHolderList[3030]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2097]" ""
+		"Cleaning_SceneRN.placeHolderList[3031]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2098]" ""
+		"Cleaning_SceneRN.placeHolderList[3032]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2099]" ""
+		"Cleaning_SceneRN.placeHolderList[3033]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2100]" ""
+		"Cleaning_SceneRN.placeHolderList[3034]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2101]" ""
+		"Cleaning_SceneRN.placeHolderList[3035]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2102]" ""
+		"Cleaning_SceneRN.placeHolderList[3036]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:L_Clav_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2103]" ""
+		"Cleaning_SceneRN.placeHolderList[3037]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Prop_Shaft_Length_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Prop_Shaft_Length_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2104]" ""
+		"Cleaning_SceneRN.placeHolderList[3038]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Prop_Shaft_Length_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Prop_Shaft_Length_Ctrl.visibility" 
-		"Cleaning_SceneRN.placeHolderList[2105]" ""
+		"Cleaning_SceneRN.placeHolderList[3039]" ""
 		5 0 "Cleaning_SceneRN" "Cleaning_Scene:Dionysus_Asset_Rig:unitConversion66.output" 
 		"|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2106]" "Cleaning_SceneRN.placeHolderList[2107]" 
+		"Cleaning_SceneRN.placeHolderList[3040]" "Cleaning_SceneRN.placeHolderList[3041]" 
 		"Cleaning_Scene:Dionysus_Asset_Rig:Prop_02_Ctrl.ry"
 		5 0 "Cleaning_SceneRN" "Cleaning_Scene:Dionysus_Asset_Rig:unitConversion67.output" 
 		"|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Prop_01_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Prop_01_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2108]" "Cleaning_SceneRN.placeHolderList[2109]" 
+		"Cleaning_SceneRN.placeHolderList[3042]" "Cleaning_SceneRN.placeHolderList[3043]" 
 		"Cleaning_Scene:Dionysus_Asset_Rig:Prop_01_Ctrl.ry"
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.translateX" 
-		"Cleaning_SceneRN.placeHolderList[2110]" ""
+		"Cleaning_SceneRN.placeHolderList[3044]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.translateY" 
-		"Cleaning_SceneRN.placeHolderList[2111]" ""
+		"Cleaning_SceneRN.placeHolderList[3045]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.translateZ" 
-		"Cleaning_SceneRN.placeHolderList[2112]" ""
+		"Cleaning_SceneRN.placeHolderList[3046]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotateZ" 
-		"Cleaning_SceneRN.placeHolderList[2113]" ""
+		"Cleaning_SceneRN.placeHolderList[3047]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotateX" 
-		"Cleaning_SceneRN.placeHolderList[2114]" ""
+		"Cleaning_SceneRN.placeHolderList[3048]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.rotateY" 
-		"Cleaning_SceneRN.placeHolderList[2115]" ""
+		"Cleaning_SceneRN.placeHolderList[3049]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.scaleX" 
-		"Cleaning_SceneRN.placeHolderList[2116]" ""
+		"Cleaning_SceneRN.placeHolderList[3050]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.scaleY" 
-		"Cleaning_SceneRN.placeHolderList[2117]" ""
+		"Cleaning_SceneRN.placeHolderList[3051]" ""
 		5 4 "Cleaning_SceneRN" "|Cleaning_Scene:Dionysus_Asset_Rig:Dionysus|Cleaning_Scene:Dionysus_Asset_Rig:CTRLS|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl_Grp|Cleaning_Scene:Dionysus_Asset_Rig:Two_Handed_Prop_Ctrl.scaleZ" 
-		"Cleaning_SceneRN.placeHolderList[2118]" "";
+		"Cleaning_SceneRN.placeHolderList[3052]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "PrometheusRN";
@@ -38816,9 +38945,9 @@ createNode reference -n "PrometheusRN";
 		""
 		3 "|Prometheus:Prometheus|Prometheus:Geo|Prometheus:Prometheus_Model|Prometheus:Prometheus_Geo|Prometheus:Prometheus_GeoShape.instObjGroups.objectGroups[13]" 
 		":defaultLastHiddenSet.dagSetMembers" "-na"
-		3 "Prometheus:groupId196.groupId" "Prometheus:groupParts21.groupId" ""
 		3 "Prometheus:groupId196.message" ":defaultLastHiddenSet.groupNodes" "-na"
 		
+		3 "Prometheus:groupId196.groupId" "Prometheus:groupParts21.groupId" ""
 		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl.Left_Leg_IKFK" 
 		"PrometheusRN.placeHolderList[1]" ""
 		5 4 "PrometheusRN" "|Prometheus:Prometheus|Prometheus:Ctrls|Prometheus:Transform_Ctrl_Grp|Prometheus:Transform_Ctrl.Right_Leg_IKFK" 
@@ -40038,7 +40167,7 @@ createNode cacheFile -n "MopHairCache1";
 	rename -uid "F40C7103-43E4-00F5-3701-41A7340AE737";
 	setAttr -s 3 ".ocd";
 	setAttr ".cn" -type "string" "MopHair";
-	setAttr ".cp" -type "string" "D:/GitRepos/Apollo_Short_Film/ApolloProject//cache/nCache/Cleaning_CC/";
+	setAttr ".cp" -type "string" "C:/Users/10876761/Desktop/Apollo_Short_Film/ApolloProject//cache/nCache/Cleaning_CC/";
 	setAttr -s 3 ".ch";
 	setAttr ".ch[0]" -type "string" "Cleaning_Scene:Mop:hairSystemShape1_hairCounts";
 	setAttr ".ch[1]" -type "string" "Cleaning_Scene:Mop:hairSystemShape1_vertexCounts";
@@ -40072,13 +40201,265 @@ createNode collection -n "Negative";
 	rename -uid "3ED65AE2-4480-1EC2-8549-698ED7EB08B2";
 createNode simpleSelector -n "collection6Selector";
 	rename -uid "EFFD890C-4C1A-540B-A2C2-C79AE21A4DB5";
-createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "6F7430CC-403E-08C7-CFB7-73856DDD0D11";
-	setAttr ".sst" -type "string" "";
+createNode animCurveTU -n "Spray_Bottle20_visibility";
+	rename -uid "58BFC194-4D05-EBFD-EBB4-C99C10A1C662";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  334 0 335 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "Spray_Bottle20_translateX";
+	rename -uid "648D58C5-4754-F07C-076C-E28B40B18756";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 4.0667111821338295;
+createNode animCurveTL -n "Spray_Bottle20_translateY";
+	rename -uid "4A230270-43A4-75EB-D483-34B9A96269D6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 -3.6665628260809102;
+createNode animCurveTL -n "Spray_Bottle20_translateZ";
+	rename -uid "B73B66E4-4AD2-4DCD-9412-15A6437AFD20";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 -4.9244434901258751;
+createNode animCurveTA -n "Spray_Bottle20_rotateX";
+	rename -uid "E9D17DFC-477C-A87C-13EA-96A79A48C3E9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 0;
+createNode animCurveTA -n "Spray_Bottle20_rotateY";
+	rename -uid "8DE2EB72-4B78-F05E-EE89-47A2E75548B0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 0;
+createNode animCurveTA -n "Spray_Bottle20_rotateZ";
+	rename -uid "B900F28A-45F2-9273-B9EB-DD8295A52292";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 0;
+createNode animCurveTU -n "Spray_Bottle20_scaleX";
+	rename -uid "B970B44B-49FC-6723-BC91-8D9D5D45E839";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 0.99999999999999978;
+createNode animCurveTU -n "Spray_Bottle20_scaleY";
+	rename -uid "5B4B28F5-4C46-2E4E-9C66-D1B84E2310E1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 0.99999999999999989;
+createNode animCurveTU -n "Spray_Bottle20_scaleZ";
+	rename -uid "A8407C2B-4732-6E50-CFD6-89B04AA38972";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 0.99999999999999978;
+createNode animCurveTU -n "Spray_Bottle19_visibility";
+	rename -uid "3B999C1E-4B59-BAEF-4221-16ABB2973BE3";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  334 0 335 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "Spray_Bottle19_translateX";
+	rename -uid "B5F71A83-414D-5135-E545-4B974C457CF8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 2.2531557823914032;
+createNode animCurveTL -n "Spray_Bottle19_translateY";
+	rename -uid "D4DBC6AE-437E-6B2C-7220-06822AD82AA0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 -3.666562826080908;
+createNode animCurveTL -n "Spray_Bottle19_translateZ";
+	rename -uid "54EA1D88-4DBC-6251-AE6D-E39D801400E8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 -5.9759160424667579;
+createNode animCurveTA -n "Spray_Bottle19_rotateX";
+	rename -uid "766EAA39-41EC-91DF-3188-DDA69C58F7C2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 0;
+createNode animCurveTA -n "Spray_Bottle19_rotateY";
+	rename -uid "4B4CAFE8-4384-B8B4-E00B-DDA8D32EE1BC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 0;
+createNode animCurveTA -n "Spray_Bottle19_rotateZ";
+	rename -uid "C9FBF247-4A6D-B31F-52A8-3182DEFF639E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 0;
+createNode animCurveTU -n "Spray_Bottle19_scaleX";
+	rename -uid "CBB534E7-404E-0A56-CE97-A4949FF860B7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 1;
+createNode animCurveTU -n "Spray_Bottle19_scaleY";
+	rename -uid "BFA2ED4E-4159-814C-3C77-42B12BEFC6C5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 0.99999999999999989;
+createNode animCurveTU -n "Spray_Bottle19_scaleZ";
+	rename -uid "AD138967-4F78-BBDD-5ECB-32AFA0E8A44F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  335 1;
+createNode animCurveTU -n "Spray_Bottle_visibility1";
+	rename -uid "245AA431-4747-6A6A-8B2C-46AD35A5972C";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  335 0 336 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "Spray_Bottle_translateX1";
+	rename -uid "4B48CCAE-4B12-30A9-EFCE-F1B3F52F337C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  336 5.4237325817224038;
+createNode animCurveTL -n "Spray_Bottle_translateY1";
+	rename -uid "259EB7A3-4980-A738-07B7-D090FC08A9A4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  336 -3.6665628260809098;
+createNode animCurveTL -n "Spray_Bottle_translateZ1";
+	rename -uid "469DD595-4E03-695A-2A43-CEAE56DE5A0C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  336 -3.3721518957926992;
+createNode animCurveTA -n "Spray_Bottle_rotateX1";
+	rename -uid "0CBCBF39-4EEA-D778-2A54-98BB751F3830";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  336 0;
+createNode animCurveTA -n "Spray_Bottle_rotateY1";
+	rename -uid "F79A0EFA-4B4C-E6AC-C77B-A7AE2052746B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  336 0;
+createNode animCurveTA -n "Spray_Bottle_rotateZ1";
+	rename -uid "11C5D976-4BDC-9191-6DD7-6C8CD87A7E4C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  336 0;
+createNode animCurveTU -n "Spray_Bottle_scaleX1";
+	rename -uid "51637363-4614-7700-2798-6E9941C771A3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  336 0.99999999999999989;
+createNode animCurveTU -n "Spray_Bottle_scaleY1";
+	rename -uid "004E4113-4823-6D5D-0F84-78878A880081";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  336 0.99999999999999989;
+createNode animCurveTU -n "Spray_Bottle_scaleZ1";
+	rename -uid "E464F608-4FCE-E6B1-BA39-719455037A98";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  336 0.99999999999999989;
+createNode animCurveTU -n "Spray_Bottle17_visibility";
+	rename -uid "3FE6998C-425C-A1E0-2B64-EDAA0E121F85";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  337 0 338 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "Spray_Bottle17_translateX";
+	rename -uid "951EF6E2-4DF8-BE0C-5C5A-A7B5635D9398";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  338 4.8600127508275728;
+createNode animCurveTL -n "Spray_Bottle17_translateY";
+	rename -uid "5F596C5F-4E58-FA29-D0AA-86A814672A55";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  338 -3.6665628260809093;
+createNode animCurveTL -n "Spray_Bottle17_translateZ";
+	rename -uid "D27D1844-4DF6-F6DB-43F2-5DB6F84B9DDC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  338 -4.1434960586597409;
+createNode animCurveTA -n "Spray_Bottle17_rotateX";
+	rename -uid "FA0BEE93-4330-9D59-9BC6-9AB31CD66F26";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  338 0;
+createNode animCurveTA -n "Spray_Bottle17_rotateY";
+	rename -uid "8860120C-4A63-6D3B-6FE2-5598B35B3CAD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  338 0;
+createNode animCurveTA -n "Spray_Bottle17_rotateZ";
+	rename -uid "9470692B-4CCF-B5DC-4AF0-EC90C1EC6311";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  338 0;
+createNode animCurveTU -n "Spray_Bottle17_scaleX";
+	rename -uid "B6AF7B5D-4C21-16E6-2E67-EF813CEBD64E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  338 1;
+createNode animCurveTU -n "Spray_Bottle17_scaleY";
+	rename -uid "8FFFC487-46EA-0523-3F0F-889A9608DA7D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  338 0.99999999999999989;
+createNode animCurveTU -n "Spray_Bottle17_scaleZ";
+	rename -uid "620683E9-44FB-D02F-312C-EC9B1CD67E5D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  338 1;
+createNode animCurveTU -n "Spray_Bottle21_visibility";
+	rename -uid "27374D99-4D4E-EA16-DA5A-A4B7703A58C8";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  341 0 342 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "Spray_Bottle21_translateX";
+	rename -uid "9D448FFA-4F5C-76BB-4314-08934F8BFAE8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  341 -5.4632493345009152 342 -5.4632493345009152;
+createNode animCurveTL -n "Spray_Bottle21_translateY";
+	rename -uid "01AC2E20-4CA5-BA84-61EF-96A66D115A24";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  341 -3.6665628260809062 342 -3.6665628260809062;
+createNode animCurveTL -n "Spray_Bottle21_translateZ";
+	rename -uid "8853BC3B-42F0-310C-BFB9-25964117E2DB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  341 -3.3077470029327589 342 -3.3077470029327589;
+createNode animCurveTA -n "Spray_Bottle21_rotateX";
+	rename -uid "8C30513C-460D-C8A7-8456-738D576EA5AB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  341 0 342 0;
+createNode animCurveTA -n "Spray_Bottle21_rotateY";
+	rename -uid "71CCD104-42E7-CA6C-089A-16B200A35F98";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  341 0 342 0;
+createNode animCurveTA -n "Spray_Bottle21_rotateZ";
+	rename -uid "402D23BA-4F83-9574-7C1C-26ABAEE686D8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  341 0 342 0;
+createNode animCurveTU -n "Spray_Bottle21_scaleX";
+	rename -uid "10FA0451-49DC-17C9-6BBC-EF9A2F1D0CE3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  341 0.99999999999999989 342 0.99999999999999989;
+createNode animCurveTU -n "Spray_Bottle21_scaleY";
+	rename -uid "10B265B8-49EC-8D1F-F01C-7A874E1E3CE6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  341 1 342 1;
+createNode animCurveTU -n "Spray_Bottle21_scaleZ";
+	rename -uid "47604CA9-4827-2589-9368-DF82A0FE2652";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  341 0.99999999999999989 342 0.99999999999999989;
 select -ne :time1;
 	setAttr ".ihi" 0;
-	setAttr ".o" 391;
-	setAttr ".unw" 391;
+	setAttr ".o" 512;
+	setAttr ".unw" 512;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -40087,28 +40468,28 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 723 ".st";
+	setAttr -s 713 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
 	setAttr -s 82 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 314 ".u";
+	setAttr -s 284 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 46 ".r";
+	setAttr -s 45 ".r";
 select -ne :lightList1;
-	setAttr -s 44 ".l";
+	setAttr -s 48 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 351 ".tx";
+	setAttr -s 301 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr -s 37 ".dsm";
+	setAttr -s 34 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 157 ".gn";
+	setAttr -s 156 ".gn";
 	setAttr -s 2 ".aovs";
 	setAttr ".aovs[0].aov_name" -type "string" "specular";
 	setAttr ".aovs[1].aov_name" -type "string" "diffuse";
@@ -40139,7 +40520,7 @@ select -ne :defaultResolution;
 	setAttr ".pa" 1;
 	setAttr ".dar" 1.7777777910232544;
 select -ne :defaultLightSet;
-	setAttr -s 40 ".dsm";
+	setAttr -s 44 ".dsm";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -40155,1455 +40536,1488 @@ select -ne :hardwareRenderGlobals;
 select -ne :defaultHideFaceDataSet;
 select -ne :ikSystem;
 	setAttr -s 7 ".sol";
-connectAttr "PlaquesLayer.di" "Cleaning_SceneRN.phl[2119]";
-connectAttr "Transform_Ctrl_MasterScale4.o" "Cleaning_SceneRN.phl[2223]";
-connectAttr "Transform_Ctrl_translateX4.o" "Cleaning_SceneRN.phl[2224]";
-connectAttr "Transform_Ctrl_translateY4.o" "Cleaning_SceneRN.phl[2225]";
-connectAttr "Transform_Ctrl_translateZ4.o" "Cleaning_SceneRN.phl[2226]";
-connectAttr "Transform_Ctrl_rotateX3.o" "Cleaning_SceneRN.phl[2227]";
-connectAttr "Transform_Ctrl_rotateY4.o" "Cleaning_SceneRN.phl[2228]";
-connectAttr "Transform_Ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[2229]";
-connectAttr "Mop_Top_Ctrl_Follow.o" "Cleaning_SceneRN.phl[2230]";
-connectAttr "Mop_Top_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2231]";
-connectAttr "Mop_Top_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2232]";
-connectAttr "Mop_Top_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2233]";
-connectAttr "Mop_Top_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2234]";
-connectAttr "Mop_Top_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2235]";
-connectAttr "Mop_Top_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2236]";
-connectAttr "Mop_Top_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2237]";
-connectAttr "Mop_Top_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2238]";
-connectAttr "Mop_Top_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2239]";
-connectAttr "Mop_Bottom_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2240]";
-connectAttr "Mop_Bottom_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2241]";
-connectAttr "Mop_Bottom_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2242]";
-connectAttr "Mop_Bottom_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2243]";
-connectAttr "Mop_Bottom_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2244]";
-connectAttr "Mop_Bottom_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2245]";
-connectAttr "Mop_Bottom_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2246]";
-connectAttr "Mop_Bottom_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2247]";
-connectAttr "Mop_Bottom_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2248]";
-connectAttr "Hand_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2249]";
-connectAttr "Hand_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2250]";
-connectAttr "Hand_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2251]";
-connectAttr "Hand_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2252]";
-connectAttr "Hand_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2253]";
-connectAttr "Hand_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2254]";
-connectAttr "Hand_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2255]";
-connectAttr "Hand_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2256]";
-connectAttr "Hand_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2257]";
-connectAttr "Hand_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2258]";
-connectAttr "Hand_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2259]";
-connectAttr "Hand_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2260]";
-connectAttr "Cleaning_SceneRN.phl[2261]" "nRigidShape1.stf";
-connectAttr "nRigidShape1.cust" "Cleaning_SceneRN.phl[2262]";
-connectAttr "nRigidShape1.stst" "Cleaning_SceneRN.phl[2263]";
-connectAttr "MopHairCache1.ocd[0]" "Cleaning_SceneRN.phl[2264]";
-connectAttr "MopHairCache1.ocd[1]" "Cleaning_SceneRN.phl[2265]";
-connectAttr "MopHairCache1.ocd[2]" "Cleaning_SceneRN.phl[2266]";
-connectAttr "MopHairCache1.ir" "Cleaning_SceneRN.phl[2267]";
-connectAttr "Spray_Bottle_visibility.o" "Cleaning_SceneRN.phl[2137]";
-connectAttr "Spray_Bottle_translateX.o" "Cleaning_SceneRN.phl[2138]";
-connectAttr "Spray_Bottle_translateY.o" "Cleaning_SceneRN.phl[2139]";
-connectAttr "Spray_Bottle_translateZ.o" "Cleaning_SceneRN.phl[2140]";
-connectAttr "Spray_Bottle_rotateX.o" "Cleaning_SceneRN.phl[2141]";
-connectAttr "Spray_Bottle_rotateY.o" "Cleaning_SceneRN.phl[2142]";
-connectAttr "Spray_Bottle_rotateZ.o" "Cleaning_SceneRN.phl[2143]";
-connectAttr "Spray_Bottle_scaleX.o" "Cleaning_SceneRN.phl[2144]";
-connectAttr "Spray_Bottle_scaleY.o" "Cleaning_SceneRN.phl[2145]";
-connectAttr "Spray_Bottle_scaleZ.o" "Cleaning_SceneRN.phl[2146]";
-connectAttr "Sign_Rotate_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2120]";
-connectAttr "Sign_Rotate_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2121]";
-connectAttr "Sign_Rotate_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2122]";
-connectAttr "Sign_Rotate_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2123]";
-connectAttr "Sign_Rotate_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2124]";
-connectAttr "Sign_Rotate_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2125]";
-connectAttr "Sign_Rotate_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2126]";
-connectAttr "Sign_Rotate_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2127]";
-connectAttr "Sign_Rotate_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2128]";
-connectAttr "Sign_Rotate_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2129]";
-connectAttr "Transform_Ctrl_rotateY2.o" "Cleaning_SceneRN.phl[2130]";
-connectAttr "Transform_Ctrl_rotateZ2.o" "Cleaning_SceneRN.phl[2131]";
-connectAttr "Transform_Ctrl_MasterScale2.o" "Cleaning_SceneRN.phl[2132]";
-connectAttr "Transform_Ctrl_translateX2.o" "Cleaning_SceneRN.phl[2133]";
-connectAttr "Transform_Ctrl_translateY2.o" "Cleaning_SceneRN.phl[2134]";
-connectAttr "Transform_Ctrl_translateZ2.o" "Cleaning_SceneRN.phl[2135]";
-connectAttr "Transform_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2136]";
-connectAttr "Transform_Ctrl_ArmIKFK.o" "Cleaning_SceneRN.phl[1203]";
-connectAttr "Transform_Ctrl_MasterScale.o" "Cleaning_SceneRN.phl[1204]";
-connectAttr "Transform_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1205]";
-connectAttr "Transform_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1206]";
-connectAttr "Transform_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1207]";
-connectAttr "Transform_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1208]";
-connectAttr "Transform_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1209]";
-connectAttr "Transform_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1210]";
-connectAttr "Cog_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1211]";
-connectAttr "Cog_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1212]";
-connectAttr "Cog_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1213]";
-connectAttr "Cog_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1214]";
-connectAttr "Cog_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1215]";
-connectAttr "Cog_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1216]";
-connectAttr "Cog_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1217]";
-connectAttr "Cog_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1218]";
-connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1219]";
-connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1220]";
-connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1221]";
-connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1222]";
-connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1223]";
-connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1224]";
-connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1225]";
-connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1226]";
-connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1227]";
-connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1228]";
-connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1229]";
-connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1230]";
-connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1231]";
-connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1232]";
-connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1233]";
-connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1234]";
-connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1235]";
-connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1236]";
-connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1237]";
-connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1238]";
-connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1239]";
-connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1240]";
-connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1241]";
-connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1242]";
-connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1243]";
-connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1244]";
-connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1245]";
-connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1246]";
-connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1247]";
-connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1248]";
-connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1249]";
-connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1250]";
-connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1251]";
-connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1252]";
-connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1253]";
-connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1254]";
-connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1255]";
-connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1256]";
-connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1257]";
-connectAttr "L_Hose_Swing_Ctrl_Swing.o" "Cleaning_SceneRN.phl[1258]";
-connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1259]";
-connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1260]";
-connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1261]";
-connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1262]";
-connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1263]";
-connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1264]";
-connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1265]";
-connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1266]";
-connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1267]";
-connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1268]";
-connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1269]";
-connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1270]";
-connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1271]";
-connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1272]";
-connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1273]";
-connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1274]";
-connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1275]";
-connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1276]";
-connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1277]";
-connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1278]";
-connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1279]";
-connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1280]";
-connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1281]";
-connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1282]";
-connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1283]";
-connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1284]";
-connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1285]";
-connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1286]";
-connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1287]";
-connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1288]";
-connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1289]";
-connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1290]";
-connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1291]";
-connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1292]";
-connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1293]";
-connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1294]";
-connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1295]";
-connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1296]";
-connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1297]";
-connectAttr "R_Hose_Swing_Ctrl_Swing.o" "Cleaning_SceneRN.phl[1298]";
-connectAttr "Arm_FK_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1299]";
-connectAttr "Arm_FK_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1300]";
-connectAttr "Arm_FK_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1301]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1302]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1303]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1304]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1305]";
-connectAttr "Arm_FK_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1306]";
-connectAttr "Arm_FK_Jnt_03_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1307]";
-connectAttr "Arm_FK_Jnt_03_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1308]";
-connectAttr "Arm_FK_Jnt_03_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1309]";
-connectAttr "Arm_FK_Jnt_04_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1310]";
-connectAttr "Arm_FK_Jnt_04_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1311]";
-connectAttr "Arm_FK_Jnt_04_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1312]";
-connectAttr "Arm_FK_Jnt_05_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1313]";
-connectAttr "Arm_FK_Jnt_05_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1314]";
-connectAttr "Arm_FK_Jnt_05_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1315]";
-connectAttr "Arm_Base_Jnt_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1316]";
-connectAttr "Arm_Base_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1317]"
-		;
-connectAttr "Arm_Base_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1318]";
-connectAttr "Arm_Base_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1319]";
-connectAttr "Head_FK_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1320]";
-connectAttr "Head_FK_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1321]"
-		;
-connectAttr "Head_FK_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1322]";
-connectAttr "Head_FK_Jnt_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1323]";
-connectAttr "Head_FK_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1324]"
-		;
-connectAttr "Head_FK_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1325]";
-connectAttr "Head_FK_Jnt_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1326]";
-connectAttr "Head_FK_Jnt_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1327]";
-connectAttr "Head_FK_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1328]";
-connectAttr "Head_FK_Jnt_03_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1329]";
-connectAttr "Head_FK_Jnt_03_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1330]"
-		;
-connectAttr "Head_FK_Jnt_03_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1331]";
-connectAttr "Mouth_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1332]";
-connectAttr "Mouth_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1333]";
-connectAttr "Mouth_Ctrl_Neutral.o" "Cleaning_SceneRN.phl[1334]";
-connectAttr "Mouth_Ctrl_Oooh.o" "Cleaning_SceneRN.phl[1335]";
-connectAttr "Mouth_Ctrl_Bored.o" "Cleaning_SceneRN.phl[1336]";
-connectAttr "Mouth_Ctrl_Smirk.o" "Cleaning_SceneRN.phl[1337]";
-connectAttr "Mouth_Ctrl_MouthScale.o" "Cleaning_SceneRN.phl[1338]";
-connectAttr "Eyes_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1339]";
-connectAttr "Eyes_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1340]";
-connectAttr "Eyes_Ctrl_ExclamationPoint.o" "Cleaning_SceneRN.phl[1341]";
-connectAttr "Eyes_Ctrl_REye.o" "Cleaning_SceneRN.phl[1342]";
-connectAttr "Eyes_Ctrl_LEye.o" "Cleaning_SceneRN.phl[1343]";
-connectAttr "Eyes_Ctrl_Mouth.o" "Cleaning_SceneRN.phl[1344]";
-connectAttr "Eyes_Ctrl_X1.o" "Cleaning_SceneRN.phl[1345]";
-connectAttr "Eyes_Ctrl_X2.o" "Cleaning_SceneRN.phl[1346]";
-connectAttr "L_Eye_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1347]";
-connectAttr "L_Eye_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1348]";
-connectAttr "L_Eye_Ctrl_Open.o" "Cleaning_SceneRN.phl[1349]";
-connectAttr "L_Eye_Ctrl_Squint.o" "Cleaning_SceneRN.phl[1350]";
-connectAttr "L_Eye_Ctrl_Close.o" "Cleaning_SceneRN.phl[1351]";
-connectAttr "L_Eye_Ctrl_Sad.o" "Cleaning_SceneRN.phl[1352]";
-connectAttr "L_Eye_Ctrl_Wink.o" "Cleaning_SceneRN.phl[1353]";
-connectAttr "L_Eye_Ctrl_Bored.o" "Cleaning_SceneRN.phl[1354]";
-connectAttr "L_Eye_Ctrl_Smirk.o" "Cleaning_SceneRN.phl[1355]";
-connectAttr "L_Eye_Ctrl_EyeScale.o" "Cleaning_SceneRN.phl[1356]";
-connectAttr "L_Eye_Ctrl_Determined.o" "Cleaning_SceneRN.phl[1357]";
-connectAttr "R_Eye_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1358]";
-connectAttr "R_Eye_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1359]";
-connectAttr "R_Eye_Ctrl_Open.o" "Cleaning_SceneRN.phl[1360]";
-connectAttr "R_Eye_Ctrl_Squint.o" "Cleaning_SceneRN.phl[1361]";
-connectAttr "R_Eye_Ctrl_Close.o" "Cleaning_SceneRN.phl[1362]";
-connectAttr "R_Eye_Ctrl_Sad.o" "Cleaning_SceneRN.phl[1363]";
-connectAttr "R_Eye_Ctrl_Wink.o" "Cleaning_SceneRN.phl[1364]";
-connectAttr "R_Eye_Ctrl_Bored.o" "Cleaning_SceneRN.phl[1365]";
-connectAttr "R_Eye_Ctrl_Smirk.o" "Cleaning_SceneRN.phl[1366]";
-connectAttr "R_Eye_Ctrl_EyeScale.o" "Cleaning_SceneRN.phl[1367]";
-connectAttr "R_Eye_Ctrl_Determined.o" "Cleaning_SceneRN.phl[1368]";
-connectAttr "Visor_Ctrl_L_Visor.o" "Cleaning_SceneRN.phl[1369]";
-connectAttr "Visor_Ctrl_RVisor.o" "Cleaning_SceneRN.phl[1370]";
-connectAttr "R_Wiper_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1371]";
-connectAttr "L_Wiper_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1372]";
-connectAttr "Hand_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1373]";
-connectAttr "Hand_Ring_Jnt_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1374]";
-connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1375]"
-		;
-connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1376]";
-connectAttr "Hand_Ring_Jnt_03_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1377]";
-connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1378]"
-		;
-connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1379]";
-connectAttr "Hand_Ring_Jnt_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1380]";
-connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1381]"
-		;
-connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1382]";
-connectAttr "Finger_02_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1383]";
-connectAttr "Finger_02_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1384]"
-		;
-connectAttr "Finger_02_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1385]";
-connectAttr "Finger_01_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1386]";
-connectAttr "Finger_01_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1387]"
-		;
-connectAttr "Finger_01_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1388]";
-connectAttr "Finger_01_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1389]";
-connectAttr "Finger_01_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1390]"
-		;
-connectAttr "Finger_01_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1391]";
-connectAttr "Finger_02_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1392]";
-connectAttr "Finger_02_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1393]"
-		;
-connectAttr "Finger_02_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1394]";
-connectAttr "Finger_03_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1395]";
-connectAttr "Finger_03_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1396]"
-		;
-connectAttr "Finger_03_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1397]";
-connectAttr "Finger_03_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1398]";
-connectAttr "Finger_03_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1399]"
-		;
-connectAttr "Finger_03_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1400]";
-connectAttr "Palm_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1401]";
-connectAttr "Palm_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1402]";
-connectAttr "Palm_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1403]";
-connectAttr "Piston_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1404]";
-connectAttr "Piston_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1405]";
-connectAttr "Piston_03_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1406]";
-connectAttr "Prop_Ctrl_Follow.o" "Cleaning_SceneRN.phl[1407]";
-connectAttr "Prop_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1408]";
-connectAttr "Prop_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1409]";
-connectAttr "Prop_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1410]";
-connectAttr "Prop_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1411]";
-connectAttr "Prop_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1412]";
-connectAttr "Prop_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1413]";
-connectAttr "Prop_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1414]";
-connectAttr "Prop_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1415]";
-connectAttr "Prop_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1416]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1417]"
-		;
-connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1418]"
-		;
-connectAttr "Treads_Base_FK_Jnt_Ctrl_TreadsRoll.o" "Cleaning_SceneRN.phl[1419]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_IndividualRoll.o" "Cleaning_SceneRN.phl[1420]"
-		;
-connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1421]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1422]";
-connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1423]";
-connectAttr "R_Treads_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1424]";
-connectAttr "R_Treads_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1425]";
-connectAttr "R_Treads_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1426]";
-connectAttr "R_Treads_Ctrl_Roll.o" "Cleaning_SceneRN.phl[1427]";
-connectAttr "R_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1428]";
-connectAttr "R_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1429]";
-connectAttr "R_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1430]";
-connectAttr "R_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1431]";
-connectAttr "R_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1432]";
-connectAttr "R_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1433]"
-		;
-connectAttr "L_Treads_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1434]";
-connectAttr "L_Treads_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1435]";
-connectAttr "L_Treads_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1436]";
-connectAttr "L_Treads_Ctrl_Roll.o" "Cleaning_SceneRN.phl[1437]";
-connectAttr "L_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1438]"
-		;
-connectAttr "L_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1439]";
-connectAttr "L_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1440]";
-connectAttr "L_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1441]";
-connectAttr "L_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1442]";
-connectAttr "L_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1443]";
-connectAttr "Light_Rig_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1444]";
-connectAttr "Light_Rig_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1445]";
-connectAttr "Light_Rig_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1446]";
-connectAttr "Light_Rig_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1447]";
-connectAttr "Light_Rig_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1448]";
-connectAttr "Light_Rig_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1449]";
-connectAttr "Light_Rig_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1450]";
-connectAttr "Light_Rig_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1451]";
-connectAttr "Light_Rig_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1452]";
-connectAttr "Light_Rig_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1453]";
-connectAttr "sprayCan_ctrl_translateX3.o" "Cleaning_SceneRN.phl[2268]";
-connectAttr "sprayCan_ctrl_translateY3.o" "Cleaning_SceneRN.phl[2269]";
-connectAttr "sprayCan_ctrl_translateZ3.o" "Cleaning_SceneRN.phl[2270]";
-connectAttr "sprayCan_ctrl_rotateX3.o" "Cleaning_SceneRN.phl[2271]";
-connectAttr "sprayCan_ctrl_rotateY3.o" "Cleaning_SceneRN.phl[2272]";
-connectAttr "sprayCan_ctrl_rotateZ3.o" "Cleaning_SceneRN.phl[2273]";
-connectAttr "sprayCan_ctrl_scaleX3.o" "Cleaning_SceneRN.phl[2274]";
-connectAttr "sprayCan_ctrl_scaleY3.o" "Cleaning_SceneRN.phl[2275]";
-connectAttr "sprayCan_ctrl_scaleZ3.o" "Cleaning_SceneRN.phl[2276]";
-connectAttr "sprayCan_ctrl_translateX4.o" "Cleaning_SceneRN.phl[2277]";
-connectAttr "sprayCan_ctrl_translateY4.o" "Cleaning_SceneRN.phl[2278]";
-connectAttr "sprayCan_ctrl_translateZ4.o" "Cleaning_SceneRN.phl[2279]";
-connectAttr "sprayCan_ctrl_rotateX4.o" "Cleaning_SceneRN.phl[2280]";
-connectAttr "sprayCan_ctrl_rotateY4.o" "Cleaning_SceneRN.phl[2281]";
-connectAttr "sprayCan_ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[2282]";
-connectAttr "sprayCan_ctrl_scaleX4.o" "Cleaning_SceneRN.phl[2283]";
-connectAttr "sprayCan_ctrl_scaleY4.o" "Cleaning_SceneRN.phl[2284]";
-connectAttr "sprayCan_ctrl_scaleZ4.o" "Cleaning_SceneRN.phl[2285]";
-connectAttr "sprayCan_ctrl_translateX2.o" "Cleaning_SceneRN.phl[2286]";
-connectAttr "sprayCan_ctrl_translateY2.o" "Cleaning_SceneRN.phl[2287]";
-connectAttr "sprayCan_ctrl_translateZ2.o" "Cleaning_SceneRN.phl[2288]";
-connectAttr "sprayCan_ctrl_rotateX2.o" "Cleaning_SceneRN.phl[2289]";
-connectAttr "sprayCan_ctrl_rotateY2.o" "Cleaning_SceneRN.phl[2290]";
-connectAttr "sprayCan_ctrl_rotateZ2.o" "Cleaning_SceneRN.phl[2291]";
-connectAttr "sprayCan_ctrl_scaleX2.o" "Cleaning_SceneRN.phl[2292]";
-connectAttr "sprayCan_ctrl_scaleY2.o" "Cleaning_SceneRN.phl[2293]";
-connectAttr "sprayCan_ctrl_scaleZ2.o" "Cleaning_SceneRN.phl[2294]";
-connectAttr "sprayCan_ctrl_translateX1.o" "Cleaning_SceneRN.phl[2295]";
-connectAttr "sprayCan_ctrl_translateY1.o" "Cleaning_SceneRN.phl[2296]";
-connectAttr "sprayCan_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[2297]";
-connectAttr "sprayCan_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[2298]";
-connectAttr "sprayCan_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[2299]";
-connectAttr "sprayCan_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[2300]";
-connectAttr "sprayCan_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[2301]";
-connectAttr "sprayCan_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[2302]";
-connectAttr "sprayCan_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[2303]";
-connectAttr "sprayCan_ctrl_translateX.o" "Cleaning_SceneRN.phl[2304]";
-connectAttr "sprayCan_ctrl_translateY.o" "Cleaning_SceneRN.phl[2305]";
-connectAttr "sprayCan_ctrl_translateZ.o" "Cleaning_SceneRN.phl[2306]";
-connectAttr "sprayCan_ctrl_rotateX.o" "Cleaning_SceneRN.phl[2307]";
-connectAttr "sprayCan_ctrl_rotateY.o" "Cleaning_SceneRN.phl[2308]";
-connectAttr "sprayCan_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2309]";
-connectAttr "sprayCan_ctrl_scaleX.o" "Cleaning_SceneRN.phl[2310]";
-connectAttr "sprayCan_ctrl_scaleY.o" "Cleaning_SceneRN.phl[2311]";
-connectAttr "sprayCan_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2312]";
-connectAttr "sprayCan_ctrl_translateX5.o" "Cleaning_SceneRN.phl[2313]";
-connectAttr "sprayCan_ctrl_translateY5.o" "Cleaning_SceneRN.phl[2314]";
-connectAttr "sprayCan_ctrl_translateZ5.o" "Cleaning_SceneRN.phl[2315]";
-connectAttr "sprayCan_ctrl_rotateX5.o" "Cleaning_SceneRN.phl[2316]";
-connectAttr "sprayCan_ctrl_rotateY5.o" "Cleaning_SceneRN.phl[2317]";
-connectAttr "sprayCan_ctrl_rotateZ5.o" "Cleaning_SceneRN.phl[2318]";
-connectAttr "sprayCan_ctrl_scaleX5.o" "Cleaning_SceneRN.phl[2319]";
-connectAttr "sprayCan_ctrl_scaleY5.o" "Cleaning_SceneRN.phl[2320]";
-connectAttr "sprayCan_ctrl_scaleZ5.o" "Cleaning_SceneRN.phl[2321]";
-connectAttr "sprayCan_ctrl_translateX6.o" "Cleaning_SceneRN.phl[2322]";
-connectAttr "sprayCan_ctrl_translateY6.o" "Cleaning_SceneRN.phl[2323]";
-connectAttr "sprayCan_ctrl_translateZ6.o" "Cleaning_SceneRN.phl[2324]";
-connectAttr "sprayCan_ctrl_rotateX6.o" "Cleaning_SceneRN.phl[2325]";
-connectAttr "sprayCan_ctrl_rotateY6.o" "Cleaning_SceneRN.phl[2326]";
-connectAttr "sprayCan_ctrl_rotateZ6.o" "Cleaning_SceneRN.phl[2327]";
-connectAttr "sprayCan_ctrl_scaleX6.o" "Cleaning_SceneRN.phl[2328]";
-connectAttr "sprayCan_ctrl_scaleY6.o" "Cleaning_SceneRN.phl[2329]";
-connectAttr "sprayCan_ctrl_scaleZ6.o" "Cleaning_SceneRN.phl[2330]";
-connectAttr "sprayCan_ctrl_translateX11.o" "Cleaning_SceneRN.phl[2331]";
-connectAttr "sprayCan_ctrl_translateY11.o" "Cleaning_SceneRN.phl[2332]";
-connectAttr "sprayCan_ctrl_translateZ11.o" "Cleaning_SceneRN.phl[2333]";
-connectAttr "sprayCan_ctrl_rotateX11.o" "Cleaning_SceneRN.phl[2334]";
-connectAttr "sprayCan_ctrl_rotateY11.o" "Cleaning_SceneRN.phl[2335]";
-connectAttr "sprayCan_ctrl_rotateZ11.o" "Cleaning_SceneRN.phl[2336]";
-connectAttr "sprayCan_ctrl_scaleX11.o" "Cleaning_SceneRN.phl[2337]";
-connectAttr "sprayCan_ctrl_scaleY11.o" "Cleaning_SceneRN.phl[2338]";
-connectAttr "sprayCan_ctrl_scaleZ11.o" "Cleaning_SceneRN.phl[2339]";
-connectAttr "sprayCan_ctrl_translateX7.o" "Cleaning_SceneRN.phl[2340]";
-connectAttr "sprayCan_ctrl_translateY7.o" "Cleaning_SceneRN.phl[2341]";
-connectAttr "sprayCan_ctrl_translateZ7.o" "Cleaning_SceneRN.phl[2342]";
-connectAttr "sprayCan_ctrl_rotateX7.o" "Cleaning_SceneRN.phl[2343]";
-connectAttr "sprayCan_ctrl_rotateY7.o" "Cleaning_SceneRN.phl[2344]";
-connectAttr "sprayCan_ctrl_rotateZ7.o" "Cleaning_SceneRN.phl[2345]";
-connectAttr "sprayCan_ctrl_scaleX7.o" "Cleaning_SceneRN.phl[2346]";
-connectAttr "sprayCan_ctrl_scaleY7.o" "Cleaning_SceneRN.phl[2347]";
-connectAttr "sprayCan_ctrl_scaleZ7.o" "Cleaning_SceneRN.phl[2348]";
-connectAttr "sprayCan_ctrl_translateX8.o" "Cleaning_SceneRN.phl[2349]";
-connectAttr "sprayCan_ctrl_translateY8.o" "Cleaning_SceneRN.phl[2350]";
-connectAttr "sprayCan_ctrl_translateZ8.o" "Cleaning_SceneRN.phl[2351]";
-connectAttr "sprayCan_ctrl_rotateX8.o" "Cleaning_SceneRN.phl[2352]";
-connectAttr "sprayCan_ctrl_rotateY8.o" "Cleaning_SceneRN.phl[2353]";
-connectAttr "sprayCan_ctrl_rotateZ8.o" "Cleaning_SceneRN.phl[2354]";
-connectAttr "sprayCan_ctrl_scaleX8.o" "Cleaning_SceneRN.phl[2355]";
-connectAttr "sprayCan_ctrl_scaleY8.o" "Cleaning_SceneRN.phl[2356]";
-connectAttr "sprayCan_ctrl_scaleZ8.o" "Cleaning_SceneRN.phl[2357]";
-connectAttr "sprayCan_ctrl_translateX12.o" "Cleaning_SceneRN.phl[2358]";
-connectAttr "sprayCan_ctrl_translateY12.o" "Cleaning_SceneRN.phl[2359]";
-connectAttr "sprayCan_ctrl_translateZ12.o" "Cleaning_SceneRN.phl[2360]";
-connectAttr "sprayCan_ctrl_rotateX12.o" "Cleaning_SceneRN.phl[2361]";
-connectAttr "sprayCan_ctrl_rotateY12.o" "Cleaning_SceneRN.phl[2362]";
-connectAttr "sprayCan_ctrl_rotateZ12.o" "Cleaning_SceneRN.phl[2363]";
-connectAttr "sprayCan_ctrl_scaleX12.o" "Cleaning_SceneRN.phl[2364]";
-connectAttr "sprayCan_ctrl_scaleY12.o" "Cleaning_SceneRN.phl[2365]";
-connectAttr "sprayCan_ctrl_scaleZ12.o" "Cleaning_SceneRN.phl[2366]";
-connectAttr "sprayCan_ctrl_translateX9.o" "Cleaning_SceneRN.phl[2367]";
-connectAttr "sprayCan_ctrl_translateY9.o" "Cleaning_SceneRN.phl[2368]";
-connectAttr "sprayCan_ctrl_translateZ9.o" "Cleaning_SceneRN.phl[2369]";
-connectAttr "sprayCan_ctrl_rotateX9.o" "Cleaning_SceneRN.phl[2370]";
-connectAttr "sprayCan_ctrl_rotateY9.o" "Cleaning_SceneRN.phl[2371]";
-connectAttr "sprayCan_ctrl_rotateZ9.o" "Cleaning_SceneRN.phl[2372]";
-connectAttr "sprayCan_ctrl_scaleX9.o" "Cleaning_SceneRN.phl[2373]";
-connectAttr "sprayCan_ctrl_scaleY9.o" "Cleaning_SceneRN.phl[2374]";
-connectAttr "sprayCan_ctrl_scaleZ9.o" "Cleaning_SceneRN.phl[2375]";
-connectAttr "sprayCan_ctrl_translateX10.o" "Cleaning_SceneRN.phl[2376]";
-connectAttr "sprayCan_ctrl_translateY10.o" "Cleaning_SceneRN.phl[2377]";
-connectAttr "sprayCan_ctrl_translateZ10.o" "Cleaning_SceneRN.phl[2378]";
-connectAttr "sprayCan_ctrl_rotateX10.o" "Cleaning_SceneRN.phl[2379]";
-connectAttr "sprayCan_ctrl_rotateY10.o" "Cleaning_SceneRN.phl[2380]";
-connectAttr "sprayCan_ctrl_rotateZ10.o" "Cleaning_SceneRN.phl[2381]";
-connectAttr "sprayCan_ctrl_scaleX10.o" "Cleaning_SceneRN.phl[2382]";
-connectAttr "sprayCan_ctrl_scaleY10.o" "Cleaning_SceneRN.phl[2383]";
-connectAttr "sprayCan_ctrl_scaleZ10.o" "Cleaning_SceneRN.phl[2384]";
-connectAttr "Room_visibility.o" "Cleaning_SceneRN.phl[2385]";
-connectAttr "Room_translateX.o" "Cleaning_SceneRN.phl[2386]";
-connectAttr "Room_translateY.o" "Cleaning_SceneRN.phl[2387]";
-connectAttr "Room_translateZ.o" "Cleaning_SceneRN.phl[2388]";
-connectAttr "Room_rotateX.o" "Cleaning_SceneRN.phl[2389]";
-connectAttr "Room_rotateY.o" "Cleaning_SceneRN.phl[2390]";
-connectAttr "Room_rotateZ.o" "Cleaning_SceneRN.phl[2391]";
-connectAttr "Room_scaleX.o" "Cleaning_SceneRN.phl[2392]";
-connectAttr "Room_scaleY.o" "Cleaning_SceneRN.phl[2393]";
-connectAttr "Room_scaleZ.o" "Cleaning_SceneRN.phl[2394]";
-connectAttr "Cleaning_SceneRN.phl[2395]" "nRigidShape1.imsh";
-connectAttr "PaintBucket4_ctrl_translateX3.o" "Cleaning_SceneRN.phl[2396]";
-connectAttr "PaintBucket4_ctrl_translateY3.o" "Cleaning_SceneRN.phl[2397]";
-connectAttr "PaintBucket4_ctrl_translateZ3.o" "Cleaning_SceneRN.phl[2398]";
-connectAttr "PaintBucket4_ctrl_rotateX3.o" "Cleaning_SceneRN.phl[2399]";
-connectAttr "PaintBucket4_ctrl_rotateY3.o" "Cleaning_SceneRN.phl[2400]";
-connectAttr "PaintBucket4_ctrl_rotateZ3.o" "Cleaning_SceneRN.phl[2401]";
-connectAttr "PaintBucket4_ctrl_scaleX3.o" "Cleaning_SceneRN.phl[2402]";
-connectAttr "PaintBucket4_ctrl_scaleY3.o" "Cleaning_SceneRN.phl[2403]";
-connectAttr "PaintBucket4_ctrl_scaleZ3.o" "Cleaning_SceneRN.phl[2404]";
-connectAttr "PaintBucket4_ctrl_translateX2.o" "Cleaning_SceneRN.phl[2405]";
-connectAttr "PaintBucket4_ctrl_translateY2.o" "Cleaning_SceneRN.phl[2406]";
-connectAttr "PaintBucket4_ctrl_translateZ2.o" "Cleaning_SceneRN.phl[2407]";
-connectAttr "PaintBucket4_ctrl_rotateX2.o" "Cleaning_SceneRN.phl[2408]";
-connectAttr "PaintBucket4_ctrl_rotateY2.o" "Cleaning_SceneRN.phl[2409]";
-connectAttr "PaintBucket4_ctrl_rotateZ2.o" "Cleaning_SceneRN.phl[2410]";
-connectAttr "PaintBucket4_ctrl_scaleX2.o" "Cleaning_SceneRN.phl[2411]";
-connectAttr "PaintBucket4_ctrl_scaleY2.o" "Cleaning_SceneRN.phl[2412]";
-connectAttr "PaintBucket4_ctrl_scaleZ2.o" "Cleaning_SceneRN.phl[2413]";
-connectAttr "PaintBucket4_ctrl_translateX1.o" "Cleaning_SceneRN.phl[2414]";
-connectAttr "PaintBucket4_ctrl_translateY1.o" "Cleaning_SceneRN.phl[2415]";
-connectAttr "PaintBucket4_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[2416]";
-connectAttr "PaintBucket4_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[2417]";
-connectAttr "PaintBucket4_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[2418]";
-connectAttr "PaintBucket4_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[2419]";
-connectAttr "PaintBucket4_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[2420]";
-connectAttr "PaintBucket4_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[2421]";
-connectAttr "PaintBucket4_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[2422]";
-connectAttr "PaintBucket4_ctrl_translateX5.o" "Cleaning_SceneRN.phl[2423]";
-connectAttr "PaintBucket4_ctrl_translateY5.o" "Cleaning_SceneRN.phl[2424]";
-connectAttr "PaintBucket4_ctrl_translateZ5.o" "Cleaning_SceneRN.phl[2425]";
-connectAttr "PaintBucket4_ctrl_rotateX5.o" "Cleaning_SceneRN.phl[2426]";
-connectAttr "PaintBucket4_ctrl_rotateY5.o" "Cleaning_SceneRN.phl[2427]";
-connectAttr "PaintBucket4_ctrl_rotateZ5.o" "Cleaning_SceneRN.phl[2428]";
-connectAttr "PaintBucket4_ctrl_scaleX5.o" "Cleaning_SceneRN.phl[2429]";
-connectAttr "PaintBucket4_ctrl_scaleY5.o" "Cleaning_SceneRN.phl[2430]";
-connectAttr "PaintBucket4_ctrl_scaleZ5.o" "Cleaning_SceneRN.phl[2431]";
-connectAttr "PaintBucket4_ctrl_translateX4.o" "Cleaning_SceneRN.phl[2432]";
-connectAttr "PaintBucket4_ctrl_translateY4.o" "Cleaning_SceneRN.phl[2433]";
-connectAttr "PaintBucket4_ctrl_translateZ4.o" "Cleaning_SceneRN.phl[2434]";
-connectAttr "PaintBucket4_ctrl_rotateX4.o" "Cleaning_SceneRN.phl[2435]";
-connectAttr "PaintBucket4_ctrl_rotateY4.o" "Cleaning_SceneRN.phl[2436]";
-connectAttr "PaintBucket4_ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[2437]";
-connectAttr "PaintBucket4_ctrl_scaleX4.o" "Cleaning_SceneRN.phl[2438]";
-connectAttr "PaintBucket4_ctrl_scaleY4.o" "Cleaning_SceneRN.phl[2439]";
-connectAttr "PaintBucket4_ctrl_scaleZ4.o" "Cleaning_SceneRN.phl[2440]";
-connectAttr "PaintBucket4_ctrl_translateX.o" "Cleaning_SceneRN.phl[2441]";
-connectAttr "PaintBucket4_ctrl_translateY.o" "Cleaning_SceneRN.phl[2442]";
-connectAttr "PaintBucket4_ctrl_translateZ.o" "Cleaning_SceneRN.phl[2443]";
-connectAttr "PaintBucket4_ctrl_rotateX.o" "Cleaning_SceneRN.phl[2444]";
-connectAttr "PaintBucket4_ctrl_rotateY.o" "Cleaning_SceneRN.phl[2445]";
-connectAttr "PaintBucket4_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2446]";
-connectAttr "PaintBucket4_ctrl_scaleX.o" "Cleaning_SceneRN.phl[2447]";
-connectAttr "PaintBucket4_ctrl_scaleY.o" "Cleaning_SceneRN.phl[2448]";
-connectAttr "PaintBucket4_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2449]";
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateX.o" "Cleaning_SceneRN.phl[2450]"
-		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateY.o" "Cleaning_SceneRN.phl[2451]"
-		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateZ.o" "Cleaning_SceneRN.phl[2452]"
-		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateX.o" "Cleaning_SceneRN.phl[2453]"
-		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateY.o" "Cleaning_SceneRN.phl[2454]"
-		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2455]"
-		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleX.o" "Cleaning_SceneRN.phl[2456]"
-		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleY.o" "Cleaning_SceneRN.phl[2457]"
-		;
-connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2458]"
-		;
-connectAttr "pCylinder11_ctrl_translateX1.o" "Cleaning_SceneRN.phl[2459]";
-connectAttr "pCylinder11_ctrl_translateY1.o" "Cleaning_SceneRN.phl[2460]";
-connectAttr "pCylinder11_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[2461]";
-connectAttr "pCylinder11_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[2462]";
-connectAttr "pCylinder11_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[2463]";
-connectAttr "pCylinder11_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[2464]";
-connectAttr "pCylinder11_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[2465]";
-connectAttr "pCylinder11_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[2466]";
-connectAttr "pCylinder11_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[2467]";
-connectAttr "pCylinder9_ctrl_translateX.o" "Cleaning_SceneRN.phl[2468]";
-connectAttr "pCylinder9_ctrl_translateY.o" "Cleaning_SceneRN.phl[2469]";
-connectAttr "pCylinder9_ctrl_translateZ.o" "Cleaning_SceneRN.phl[2470]";
-connectAttr "pCylinder9_ctrl_rotateX.o" "Cleaning_SceneRN.phl[2471]";
-connectAttr "pCylinder9_ctrl_rotateY.o" "Cleaning_SceneRN.phl[2472]";
-connectAttr "pCylinder9_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2473]";
-connectAttr "pCylinder9_ctrl_scaleX.o" "Cleaning_SceneRN.phl[2474]";
-connectAttr "pCylinder9_ctrl_scaleY.o" "Cleaning_SceneRN.phl[2475]";
-connectAttr "pCylinder9_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2476]";
-connectAttr "pCylinder10_ctrl_translateX.o" "Cleaning_SceneRN.phl[2477]";
-connectAttr "pCylinder10_ctrl_translateY.o" "Cleaning_SceneRN.phl[2478]";
-connectAttr "pCylinder10_ctrl_translateZ.o" "Cleaning_SceneRN.phl[2479]";
-connectAttr "pCylinder10_ctrl_rotateX.o" "Cleaning_SceneRN.phl[2480]";
-connectAttr "pCylinder10_ctrl_rotateY.o" "Cleaning_SceneRN.phl[2481]";
-connectAttr "pCylinder10_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2482]";
-connectAttr "pCylinder10_ctrl_scaleX.o" "Cleaning_SceneRN.phl[2483]";
-connectAttr "pCylinder10_ctrl_scaleY.o" "Cleaning_SceneRN.phl[2484]";
-connectAttr "pCylinder10_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2485]";
-connectAttr "pCylinder11_ctrl_translateX.o" "Cleaning_SceneRN.phl[2486]";
-connectAttr "pCylinder11_ctrl_translateY.o" "Cleaning_SceneRN.phl[2487]";
-connectAttr "pCylinder11_ctrl_translateZ.o" "Cleaning_SceneRN.phl[2488]";
-connectAttr "pCylinder11_ctrl_rotateX.o" "Cleaning_SceneRN.phl[2489]";
-connectAttr "pCylinder11_ctrl_rotateY.o" "Cleaning_SceneRN.phl[2490]";
-connectAttr "pCylinder11_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2491]";
-connectAttr "pCylinder11_ctrl_scaleX.o" "Cleaning_SceneRN.phl[2492]";
-connectAttr "pCylinder11_ctrl_scaleY.o" "Cleaning_SceneRN.phl[2493]";
-connectAttr "pCylinder11_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2494]";
-connectAttr "Apollo_Cam1_translateX.o" "Cleaning_SceneRN.phl[2495]";
-connectAttr "Apollo_Cam1_translateY.o" "Cleaning_SceneRN.phl[2496]";
-connectAttr "Apollo_Cam1_translateZ.o" "Cleaning_SceneRN.phl[2497]";
-connectAttr "Apollo_Cam1_rotateX.o" "Cleaning_SceneRN.phl[2498]";
-connectAttr "Apollo_Cam1_rotateY.o" "Cleaning_SceneRN.phl[2499]";
-connectAttr "Apollo_Cam1_rotateZ.o" "Cleaning_SceneRN.phl[2500]";
-connectAttr "Apollo_Cam1_scaleX.o" "Cleaning_SceneRN.phl[2501]";
-connectAttr "Apollo_Cam1_scaleY.o" "Cleaning_SceneRN.phl[2502]";
-connectAttr "Apollo_Cam1_scaleZ.o" "Cleaning_SceneRN.phl[2503]";
-connectAttr "Apollo_Cam1_visibility.o" "Cleaning_SceneRN.phl[2504]";
-connectAttr "LatticeControl_LatticeState.o" "Cleaning_SceneRN.phl[2505]";
-connectAttr "LatticeControl_translateX.o" "Cleaning_SceneRN.phl[2506]";
-connectAttr "LatticeControl_translateY.o" "Cleaning_SceneRN.phl[2507]";
-connectAttr "LatticeControl_translateZ.o" "Cleaning_SceneRN.phl[2508]";
-connectAttr "LatticeControl_rotateX.o" "Cleaning_SceneRN.phl[2509]";
-connectAttr "LatticeControl_rotateY.o" "Cleaning_SceneRN.phl[2510]";
-connectAttr "LatticeControl_rotateZ.o" "Cleaning_SceneRN.phl[2511]";
-connectAttr "LatticeControl_scaleX.o" "Cleaning_SceneRN.phl[2512]";
-connectAttr "LatticeControl_scaleY.o" "Cleaning_SceneRN.phl[2513]";
-connectAttr "LatticeControl_scaleZ.o" "Cleaning_SceneRN.phl[2514]";
-connectAttr "Vacuum_BlendShape_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2147]";
-connectAttr "Vacuum_BlendShape_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2148]";
-connectAttr "Transform_Ctrl_MasterScale1.o" "Cleaning_SceneRN.phl[2149]";
-connectAttr "Transform_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[2150]";
-connectAttr "Transform_Ctrl_translateY1.o" "Cleaning_SceneRN.phl[2151]";
-connectAttr "Transform_Ctrl_translateZ1.o" "Cleaning_SceneRN.phl[2152]";
-connectAttr "Transform_Ctrl_rotateX1.o" "Cleaning_SceneRN.phl[2153]";
-connectAttr "Transform_Ctrl_rotateY5.o" "Cleaning_SceneRN.phl[2154]";
-connectAttr "Transform_Ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[2155]";
-connectAttr "Blendshape_Panel_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2156]";
-connectAttr "Blendshape_Panel_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2157]";
-connectAttr "Blendshape_Panel_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2158]";
-connectAttr "Blendshape_Panel_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2159]";
-connectAttr "Blendshape_Panel_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2160]";
-connectAttr "Blendshape_Panel_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2161]";
-connectAttr "Blendshape_Panel_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2162]";
-connectAttr "Blendshape_Panel_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2163]";
-connectAttr "Blendshape_Panel_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2164]";
-connectAttr "Blendshape_Panel_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2165]";
-connectAttr "Sphere_Suck_Ctrl_01_translateX.o" "Cleaning_SceneRN.phl[2166]";
-connectAttr "Sphere_Suck_Ctrl_02_translateX.o" "Cleaning_SceneRN.phl[2167]";
-connectAttr "Squre_Suck_Ctrl_01_translateX.o" "Cleaning_SceneRN.phl[2168]";
-connectAttr "Squre_Suck_Ctrl_02_translateX.o" "Cleaning_SceneRN.phl[2169]";
-connectAttr "Base_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2170]";
-connectAttr "Base_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2171]";
-connectAttr "Base_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2172]";
-connectAttr "Base_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2173]";
-connectAttr "Base_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2174]";
-connectAttr "Base_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2175]";
-connectAttr "Base_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2176]";
-connectAttr "Base_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2177]";
-connectAttr "Base_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2178]";
-connectAttr "Base_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2179]";
-connectAttr "Middle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2180]";
-connectAttr "Middle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2181]";
-connectAttr "Middle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2182]";
-connectAttr "Middle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2183]";
-connectAttr "Middle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2184]";
-connectAttr "Middle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2185]";
-connectAttr "Middle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2186]";
-connectAttr "Middle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2187]";
-connectAttr "Middle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2188]";
-connectAttr "Middle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2189]";
-connectAttr "Middle_Tube_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[2190]";
-connectAttr "Middle_Tube_Ctrl_translateY1.o" "Cleaning_SceneRN.phl[2191]";
-connectAttr "Middle_Tube_Ctrl_translateZ1.o" "Cleaning_SceneRN.phl[2192]";
-connectAttr "Middle_Tube_Ctrl_rotateX1.o" "Cleaning_SceneRN.phl[2193]";
-connectAttr "Middle_Tube_Ctrl_rotateY1.o" "Cleaning_SceneRN.phl[2194]";
-connectAttr "Middle_Tube_Ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[2195]";
-connectAttr "Middle_Tube_Ctrl_scaleX1.o" "Cleaning_SceneRN.phl[2196]";
-connectAttr "Middle_Tube_Ctrl_scaleY1.o" "Cleaning_SceneRN.phl[2197]";
-connectAttr "Middle_Tube_Ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[2198]";
-connectAttr "Middle_Tube_Ctrl_Follow.o" "Cleaning_SceneRN.phl[2199]";
-connectAttr "Middle_Tube_Ctrl_visibility1.o" "Cleaning_SceneRN.phl[2200]";
-connectAttr "LowerMiddle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2201]";
-connectAttr "LowerMiddle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2202]";
-connectAttr "LowerMiddle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2203]";
-connectAttr "LowerMiddle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2204]";
-connectAttr "LowerMiddle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2205]";
-connectAttr "LowerMiddle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2206]";
-connectAttr "LowerMiddle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2207]";
-connectAttr "LowerMiddle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2208]";
-connectAttr "LowerMiddle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2209]";
-connectAttr "LowerMiddle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2210]";
-connectAttr "UpperMiddle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2211]";
-connectAttr "UpperMiddle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2212]";
-connectAttr "UpperMiddle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2213]";
-connectAttr "UpperMiddle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2214]";
-connectAttr "UpperMiddle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2215]";
-connectAttr "UpperMiddle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2216]";
-connectAttr "UpperMiddle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2217]";
-connectAttr "UpperMiddle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2218]";
-connectAttr "UpperMiddle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2219]";
-connectAttr "UpperMiddle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2220]";
-connectAttr "Button_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2221]";
-connectAttr "Button_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2222]";
-connectAttr "Booster_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1454]";
-connectAttr "Booster_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1455]";
-connectAttr "Booster_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1456]";
-connectAttr "Booster_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1457]";
-connectAttr "Booster_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1458]";
-connectAttr "Booster_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1459]";
-connectAttr "Booster_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1460]";
-connectAttr "Booster_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1461]";
-connectAttr "Booster_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1462]";
-connectAttr "Booster_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1463]";
-connectAttr "Booster_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1464]";
-connectAttr "Booster_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1465]";
-connectAttr "COG_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1466]";
-connectAttr "COG_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1467]";
-connectAttr "COG_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1468]";
-connectAttr "COG_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1469]";
-connectAttr "COG_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1470]";
-connectAttr "COG_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1471]";
-connectAttr "COG_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1472]";
-connectAttr "COG_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1473]";
-connectAttr "COG_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1474]";
-connectAttr "COG_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1475]";
-connectAttr "COG_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1476]";
-connectAttr "COG_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1477]";
-connectAttr "Furnace_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1478]";
-connectAttr "Furnace_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1479]";
-connectAttr "Furnace_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1480]";
-connectAttr "Furnace_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1481]";
-connectAttr "Furnace_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1482]";
-connectAttr "Furnace_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1483]";
-connectAttr "Furnace_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1484]";
-connectAttr "Furnace_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1485]";
-connectAttr "Furnace_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1486]";
-connectAttr "Furnace_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1487]";
-connectAttr "Furnace_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1488]";
-connectAttr "Furnace_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1489]";
-connectAttr "Hip_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1490]";
-connectAttr "Hip_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1491]";
-connectAttr "Hip_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1492]";
-connectAttr "Hip_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1493]";
-connectAttr "Hip_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1494]";
-connectAttr "Hip_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1495]";
-connectAttr "Hip_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1496]";
-connectAttr "Hip_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1497]";
-connectAttr "Hip_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1498]";
-connectAttr "Hip_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1499]";
-connectAttr "Hip_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1500]";
-connectAttr "Hip_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1501]";
-connectAttr "L_Plate_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1502]";
-connectAttr "L_Plate_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1503]";
-connectAttr "L_Plate_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1504]";
-connectAttr "L_Plate_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1505]";
-connectAttr "L_Plate_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1506]";
-connectAttr "L_Plate_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1507]";
-connectAttr "L_Plate_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1508]";
-connectAttr "L_Plate_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1509]";
-connectAttr "L_Plate_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1510]";
-connectAttr "L_Plate_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1511]";
-connectAttr "L_Plate_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1512]";
-connectAttr "L_Plate_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1513]";
-connectAttr "Transform_Ctrl_L_Arm_IKFK.o" "Cleaning_SceneRN.phl[1514]";
-connectAttr "Transform_Ctrl_R_Arm_IKFK.o" "Cleaning_SceneRN.phl[1515]";
-connectAttr "Transform_Ctrl_MasterScale3.o" "Cleaning_SceneRN.phl[1516]";
-connectAttr "Transform_Ctrl_Prop_Ctrls_Vis.o" "Cleaning_SceneRN.phl[1517]";
-connectAttr "Transform_Ctrl_translateY3.o" "Cleaning_SceneRN.phl[1518]";
-connectAttr "Transform_Ctrl_translateX3.o" "Cleaning_SceneRN.phl[1519]";
-connectAttr "Transform_Ctrl_translateZ3.o" "Cleaning_SceneRN.phl[1520]";
-connectAttr "Transform_Ctrl_rotateY3.o" "Cleaning_SceneRN.phl[1521]";
-connectAttr "Transform_Ctrl_rotateX2.o" "Cleaning_SceneRN.phl[1522]";
-connectAttr "Transform_Ctrl_rotateZ3.o" "Cleaning_SceneRN.phl[1523]";
-connectAttr "Transform_Ctrl_visibility1.o" "Cleaning_SceneRN.phl[1524]";
-connectAttr "Light_Rig_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[1525]";
-connectAttr "Light_Rig_Ctrl_translateY1.o" "Cleaning_SceneRN.phl[1526]";
-connectAttr "Light_Rig_Ctrl_translateZ1.o" "Cleaning_SceneRN.phl[1527]";
-connectAttr "Light_Rig_Ctrl_visibility1.o" "Cleaning_SceneRN.phl[1528]";
-connectAttr "Light_Rig_Ctrl_rotateX1.o" "Cleaning_SceneRN.phl[1529]";
-connectAttr "Light_Rig_Ctrl_rotateY1.o" "Cleaning_SceneRN.phl[1530]";
-connectAttr "Light_Rig_Ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[1531]";
-connectAttr "Light_Rig_Ctrl_scaleX1.o" "Cleaning_SceneRN.phl[1532]";
-connectAttr "Light_Rig_Ctrl_scaleY1.o" "Cleaning_SceneRN.phl[1533]";
-connectAttr "Light_Rig_Ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[1534]";
-connectAttr "L_Panel_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1535]";
-connectAttr "L_Panel_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1536]";
-connectAttr "L_Panel_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1537]";
-connectAttr "L_Panel_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1538]";
-connectAttr "L_Panel_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1539]";
-connectAttr "L_Panel_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1540]";
-connectAttr "L_Panel_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1541]";
-connectAttr "L_Panel_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1542]";
-connectAttr "L_Panel_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1543]";
-connectAttr "L_Panel_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1544]";
-connectAttr "L_Panel_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1545]";
-connectAttr "L_Panel_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1546]";
-connectAttr "R_Panel_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1547]";
-connectAttr "R_Panel_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1548]";
-connectAttr "R_Panel_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1549]";
-connectAttr "R_Panel_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1550]";
-connectAttr "R_Panel_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1551]";
-connectAttr "R_Panel_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1552]";
-connectAttr "R_Panel_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1553]";
-connectAttr "R_Panel_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1554]";
-connectAttr "R_Panel_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1555]";
-connectAttr "R_Panel_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1556]";
-connectAttr "R_Panel_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1557]";
-connectAttr "R_Panel_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1558]";
-connectAttr "L_Cylinder_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1559]";
-connectAttr "L_Cylinder_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1560]";
-connectAttr "R_Cylinder_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1561]";
-connectAttr "R_Cylinder_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1562]";
-connectAttr "R_Plate_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1563]";
-connectAttr "R_Plate_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1564]";
-connectAttr "R_Plate_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1565]";
-connectAttr "R_Plate_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1566]";
-connectAttr "R_Plate_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1567]";
-connectAttr "R_Plate_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1568]";
-connectAttr "R_Plate_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1569]";
-connectAttr "R_Plate_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1570]";
-connectAttr "R_Plate_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1571]";
-connectAttr "R_Plate_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1572]";
-connectAttr "R_Plate_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1573]";
-connectAttr "R_Plate_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1574]";
-connectAttr "Bottom_Booster_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1575]"
-		;
-connectAttr "Bottom_Booster_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1576]";
-connectAttr "Bottom_Booster_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1577]";
-connectAttr "Bottom_Booster_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1578]";
-connectAttr "Bottom_Booster_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1579]";
-connectAttr "Bottom_Booster_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1580]";
-connectAttr "Bottom_Booster_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1581]";
-connectAttr "Bottom_Booster_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1582]";
-connectAttr "Bottom_Booster_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1583]";
-connectAttr "Bottom_Booster_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1584]";
-connectAttr "Bottom_Booster_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1585]";
-connectAttr "Bottom_Booster_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1586]";
-connectAttr "Skirt_Driver_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1587]";
-connectAttr "Skirt_Driver_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1588]";
-connectAttr "Skirt_Driver_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1589]";
-connectAttr "Skirt_Driver_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1590]";
-connectAttr "Skirt_Driver_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1591]";
-connectAttr "Skirt_Driver_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1592]";
-connectAttr "Skirt_Driver_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1593]";
-connectAttr "Skirt_Driver_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1594]";
-connectAttr "Skirt_Driver_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1595]";
-connectAttr "Skirt_Driver_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1596]";
-connectAttr "Propellor_Shaft_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1597]"
-		;
-connectAttr "Propellor_Shaft_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1598]";
-connectAttr "Propellor_Shaft_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1599]";
-connectAttr "Propellor_Shaft_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1600]";
-connectAttr "Propellor_Shaft_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1601]";
-connectAttr "Propellor_Shaft_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1602]";
-connectAttr "Propellor_Shaft_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1603]";
-connectAttr "Propellor_Shaft_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1604]";
-connectAttr "Propellor_Shaft_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1605]";
-connectAttr "Propellor_Shaft_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1606]";
-connectAttr "Propellor_Shaft_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1607]";
-connectAttr "Propellor_Shaft_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1608]";
-connectAttr "R_Arm_Spinner_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1609]";
-connectAttr "R_Arm_Spinner_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1610]";
-connectAttr "R_Arm_Spinner_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1611]";
-connectAttr "R_Arm_Spinner_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1612]";
-connectAttr "R_Arm_Spinner_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1613]";
-connectAttr "R_Arm_Spinner_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1614]";
-connectAttr "R_Arm_Spinner_01_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1615]";
-connectAttr "R_Arm_Spinner_01_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1616]";
-connectAttr "R_Arm_Spinner_01_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1617]";
-connectAttr "R_Arm_Spinner_01_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1618]";
-connectAttr "R_Arm_Spinner_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1619]"
-		;
-connectAttr "R_Arm_Spinner_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1620]";
-connectAttr "R_Arm_Spinner_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1621]";
-connectAttr "R_Arm_Spinner_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1622]";
-connectAttr "R_Arm_Spinner_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1623]";
-connectAttr "R_Arm_Spinner_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1624]";
-connectAttr "R_Arm_Spinner_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1625]";
-connectAttr "R_Arm_Spinner_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1626]";
-connectAttr "R_Arm_Spinner_02_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1627]";
-connectAttr "R_Arm_Spinner_02_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1628]";
-connectAttr "R_Arm_Spinner_02_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1629]";
-connectAttr "R_Arm_Spinner_02_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1630]";
-connectAttr "Mouth_Ctrl_Grp_translateX.o" "Cleaning_SceneRN.phl[1631]";
-connectAttr "Mouth_Ctrl_Grp_translateZ.o" "Cleaning_SceneRN.phl[1632]";
-connectAttr "Mouth_Ctrl_Grp_MouthFrown.o" "Cleaning_SceneRN.phl[1633]";
-connectAttr "Mouth_Ctrl_Grp_MouthSuprise.o" "Cleaning_SceneRN.phl[1634]";
-connectAttr "Mouth_Ctrl_Grp_MouthBored.o" "Cleaning_SceneRN.phl[1635]";
-connectAttr "Mouth_Ctrl_Grp_MouthSmirk.o" "Cleaning_SceneRN.phl[1636]";
-connectAttr "Mouth_Ctrl_Grp_MouthScale.o" "Cleaning_SceneRN.phl[1637]";
-connectAttr "Eyes_Extras_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1638]";
-connectAttr "Eyes_Extras_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1639]";
-connectAttr "Eyes_Extras_Ctrl_QuestionMark.o" "Cleaning_SceneRN.phl[1640]";
-connectAttr "Eyes_Extras_Ctrl_Hazard_Sign.o" "Cleaning_SceneRN.phl[1641]";
-connectAttr "Eyes_Extras_Ctrl_LoadingScreen.o" "Cleaning_SceneRN.phl[1642]";
-connectAttr "Eyes_Extras_Ctrl_LeftEye.o" "Cleaning_SceneRN.phl[1643]";
-connectAttr "Eyes_Extras_Ctrl_RightEye.o" "Cleaning_SceneRN.phl[1644]";
-connectAttr "Eyes_Extras_Ctrl_Mouth.o" "Cleaning_SceneRN.phl[1645]";
-connectAttr "L_Eye_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[1646]";
-connectAttr "L_Eye_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1647]";
-connectAttr "L_Eye_Ctrl_EyeWink.o" "Cleaning_SceneRN.phl[1648]";
-connectAttr "L_Eye_Ctrl_EyeWide.o" "Cleaning_SceneRN.phl[1649]";
-connectAttr "L_Eye_Ctrl_EyeAngerSad.o" "Cleaning_SceneRN.phl[1650]";
-connectAttr "L_Eye_Ctrl_EyeSquint.o" "Cleaning_SceneRN.phl[1651]";
-connectAttr "L_Eye_Ctrl_EyeClosed.o" "Cleaning_SceneRN.phl[1652]";
-connectAttr "L_Eye_Ctrl_EyeBored.o" "Cleaning_SceneRN.phl[1653]";
-connectAttr "L_Eye_Ctrl_EyeSmirk.o" "Cleaning_SceneRN.phl[1654]";
-connectAttr "L_Eye_Ctrl_EyeScale1.o" "Cleaning_SceneRN.phl[1655]";
-connectAttr "L_Eye_Ctrl_EyeDetermined.o" "Cleaning_SceneRN.phl[1656]";
-connectAttr "R_Eye_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[1657]";
-connectAttr "R_Eye_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1658]";
-connectAttr "R_Eye_Ctrl_EyeWink.o" "Cleaning_SceneRN.phl[1659]";
-connectAttr "R_Eye_Ctrl_EyeWide.o" "Cleaning_SceneRN.phl[1660]";
-connectAttr "R_Eye_Ctrl_EyeAnger_Sad.o" "Cleaning_SceneRN.phl[1661]";
-connectAttr "R_Eye_Ctrl_EyeSquint.o" "Cleaning_SceneRN.phl[1662]";
-connectAttr "R_Eye_Ctrl_EyeClosed.o" "Cleaning_SceneRN.phl[1663]";
-connectAttr "R_Eye_Ctrl_EyeBored.o" "Cleaning_SceneRN.phl[1664]";
-connectAttr "R_Eye_Ctrl_EyeSmirk.o" "Cleaning_SceneRN.phl[1665]";
-connectAttr "R_Eye_Ctrl_EyeScale1.o" "Cleaning_SceneRN.phl[1666]";
-connectAttr "R_Eye_Ctrl_EyeDetermined.o" "Cleaning_SceneRN.phl[1667]";
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1668]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1669]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1670]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1671]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1672]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1673]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1674]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1675]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1676]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1677]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1678]"
-		;
-connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1679]"
-		;
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1680]"
-		;
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1681]"
-		;
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1682]"
-		;
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1683]"
-		;
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1684]"
-		;
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1685]";
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1686]";
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1687]";
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1688]";
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1689]";
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1690]";
-connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1691]"
-		;
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1692]"
-		;
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1693]"
-		;
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1694]"
-		;
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1695]"
-		;
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1696]"
-		;
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1697]";
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1698]";
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1699]";
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1700]";
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1701]";
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1702]";
-connectAttr "FK_L_Finger02_One_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1703]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1704]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1705]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1706]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1707]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1708]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1709]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1710]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1711]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1712]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1713]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1714]"
-		;
-connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1715]"
-		;
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1716]"
-		;
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1717]"
-		;
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1718]"
-		;
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1719]"
-		;
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1720]"
-		;
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1721]";
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1722]";
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1723]";
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1724]";
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1725]";
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1726]";
-connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1727]"
-		;
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1728]"
-		;
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1729]"
-		;
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1730]"
-		;
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1731]"
-		;
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1732]"
-		;
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1733]";
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1734]";
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1735]";
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1736]";
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1737]";
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1738]";
-connectAttr "FK_L_Finger01_One_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1739]"
-		;
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1740]"
-		;
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1741]"
-		;
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1742]";
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1743]";
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1744]";
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1745]";
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1746]";
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1747]";
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1748]";
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1749]";
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1750]";
-connectAttr "FK_L_Thumb_03_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1751]";
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1752]"
-		;
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1753]"
-		;
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1754]";
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1755]";
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1756]";
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1757]";
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1758]";
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1759]";
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1760]";
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1761]";
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1762]";
-connectAttr "FK_L_Thumb_02_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1763]";
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1764]"
-		;
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1765]"
-		;
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1766]";
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1767]";
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1768]";
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1769]";
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1770]";
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1771]";
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1772]";
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1773]";
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1774]";
-connectAttr "FK_L_Thumb_01_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1775]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1776]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1777]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1778]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1779]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1780]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1781]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1782]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1783]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1784]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1785]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1786]";
-connectAttr "FK_L_Hand_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1787]";
-connectAttr "FK_L_Palm_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1788]";
-connectAttr "FK_L_Palm_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1789]";
-connectAttr "FK_L_Palm_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1790]";
-connectAttr "FK_L_Palm_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1791]";
-connectAttr "FK_L_Palm_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1792]";
-connectAttr "FK_L_Palm_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1793]";
-connectAttr "FK_L_Palm_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1794]";
-connectAttr "FK_L_Palm_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1795]";
-connectAttr "FK_L_Palm_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1796]";
-connectAttr "FK_L_Palm_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1797]";
-connectAttr "FK_L_Palm_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1798]";
-connectAttr "FK_L_Palm_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1799]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1800]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1801]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1802]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1803]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1804]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1805]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1806]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1807]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1808]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1809]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1810]";
-connectAttr "FK_R_Hand_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1811]";
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1812]"
-		;
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1813]"
-		;
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1814]";
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1815]";
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1816]";
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1817]";
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1818]";
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1819]";
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1820]";
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1821]";
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1822]";
-connectAttr "FK_R_Thumb_03_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1823]";
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1824]"
-		;
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1825]"
-		;
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1826]";
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1827]";
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1828]";
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1829]";
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1830]";
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1831]";
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1832]";
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1833]";
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1834]";
-connectAttr "FK_R_Thumb_01_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1835]";
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1836]"
-		;
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1837]"
-		;
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1838]";
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1839]";
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1840]";
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1841]";
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1842]";
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1843]";
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1844]";
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1845]";
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1846]";
-connectAttr "FK_R_Thumb_02_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1847]";
-connectAttr "FK_R_Palm_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1848]";
-connectAttr "FK_R_Palm_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1849]";
-connectAttr "FK_R_Palm_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1850]";
-connectAttr "FK_R_Palm_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1851]";
-connectAttr "FK_R_Palm_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1852]";
-connectAttr "FK_R_Palm_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1853]";
-connectAttr "FK_R_Palm_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1854]";
-connectAttr "FK_R_Palm_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1855]";
-connectAttr "FK_R_Palm_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1856]";
-connectAttr "FK_R_Palm_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1857]";
-connectAttr "FK_R_Palm_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1858]";
-connectAttr "FK_R_Palm_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1859]";
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1860]"
-		;
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1861]"
-		;
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1862]"
-		;
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1863]"
-		;
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1864]"
-		;
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1865]";
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1866]";
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1867]";
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1868]";
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1869]";
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1870]";
-connectAttr "FK_R_Finger01_One_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1871]"
-		;
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1872]"
-		;
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1873]"
-		;
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1874]"
-		;
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1875]"
-		;
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1876]"
-		;
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1877]";
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1878]";
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1879]";
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1880]";
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1881]";
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1882]";
-connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1883]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1884]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1885]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1886]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1887]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1888]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1889]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1890]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1891]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1892]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1893]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1894]"
-		;
-connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1895]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1896]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1897]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1898]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1899]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1900]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1901]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1902]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1903]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1904]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1905]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1906]"
-		;
-connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1907]"
-		;
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1908]"
-		;
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1909]"
-		;
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1910]"
-		;
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1911]"
-		;
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1912]"
-		;
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1913]";
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1914]";
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1915]";
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1916]";
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1917]";
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1918]";
-connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1919]"
-		;
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1920]"
-		;
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1921]"
-		;
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1922]"
-		;
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1923]"
-		;
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1924]"
-		;
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1925]";
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1926]";
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1927]";
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1928]";
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1929]";
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1930]";
-connectAttr "FK_R_Finger02_One_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1931]"
-		;
-connectAttr "L_Arm_Spinner_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[1932]"
-		;
-connectAttr "L_Arm_Spinner_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[1933]";
-connectAttr "L_Arm_Spinner_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1934]";
-connectAttr "L_Arm_Spinner_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1935]";
-connectAttr "L_Arm_Spinner_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1936]";
-connectAttr "L_Arm_Spinner_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1937]";
-connectAttr "L_Arm_Spinner_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1938]";
-connectAttr "L_Arm_Spinner_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1939]";
-connectAttr "L_Arm_Spinner_02_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1940]";
-connectAttr "L_Arm_Spinner_02_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1941]";
-connectAttr "L_Arm_Spinner_02_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1942]";
-connectAttr "L_Arm_Spinner_02_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1943]";
-connectAttr "L_Arm_Spinner_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1944]";
-connectAttr "L_Arm_Spinner_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1945]";
-connectAttr "L_Arm_Spinner_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1946]";
-connectAttr "L_Arm_Spinner_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1947]";
-connectAttr "L_Arm_Spinner_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1948]";
-connectAttr "L_Arm_Spinner_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1949]";
-connectAttr "L_Arm_Spinner_01_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1950]";
-connectAttr "L_Arm_Spinner_01_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1951]";
-connectAttr "L_Arm_Spinner_01_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1952]";
-connectAttr "L_Arm_Spinner_01_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1953]";
-connectAttr "L_Arm_IK_Base_Ctrl_Follow.o" "Cleaning_SceneRN.phl[1954]";
-connectAttr "L_Arm_IK_Base_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1955]";
-connectAttr "L_Arm_IK_Base_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1956]";
-connectAttr "L_Arm_IK_Base_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1957]";
-connectAttr "L_Arm_IK_Base_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1958]";
-connectAttr "L_Arm_IK_Base_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1959]";
-connectAttr "L_Arm_IK_Base_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1960]";
-connectAttr "L_Arm_IK_Base_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1961]";
-connectAttr "L_Arm_IK_Base_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1962]";
-connectAttr "L_Arm_IK_Base_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1963]";
-connectAttr "L_Arm_IK_Base_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1964]";
-connectAttr "L_Arm_IK_Ctrl_Follow.o" "Cleaning_SceneRN.phl[1965]";
-connectAttr "L_Arm_IK_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1966]";
-connectAttr "L_Arm_IK_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1967]";
-connectAttr "L_Arm_IK_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1968]";
-connectAttr "L_Arm_IK_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1969]";
-connectAttr "L_Arm_IK_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1970]";
-connectAttr "L_Arm_IK_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1971]";
-connectAttr "L_Arm_IK_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1972]";
-connectAttr "L_Arm_IK_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1973]";
-connectAttr "L_Arm_IK_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1974]";
-connectAttr "L_Arm_IK_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1975]";
-connectAttr "L_Arm_PV_Ctrl_Follow.o" "Cleaning_SceneRN.phl[1976]";
-connectAttr "L_Arm_PV_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1977]";
-connectAttr "L_Arm_PV_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1978]";
-connectAttr "L_Arm_PV_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1979]";
-connectAttr "L_Arm_PV_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1980]";
-connectAttr "L_Arm_PV_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1981]";
-connectAttr "L_Arm_PV_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1982]";
-connectAttr "L_Arm_PV_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1983]";
-connectAttr "L_Arm_PV_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1984]";
-connectAttr "L_Arm_PV_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1985]";
-connectAttr "L_Arm_PV_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1986]";
-connectAttr "R_Arm_IK_Ctrl_Follow.o" "Cleaning_SceneRN.phl[1987]";
-connectAttr "R_Arm_IK_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[1988]";
-connectAttr "R_Arm_IK_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[1989]";
-connectAttr "R_Arm_IK_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[1990]";
-connectAttr "R_Arm_IK_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1991]";
-connectAttr "R_Arm_IK_Ctrl_translateY.o" "Cleaning_SceneRN.phl[1992]";
-connectAttr "R_Arm_IK_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[1993]";
-connectAttr "R_Arm_IK_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[1994]";
-connectAttr "R_Arm_IK_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[1995]";
-connectAttr "R_Arm_IK_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[1996]";
-connectAttr "R_Arm_IK_Ctrl_visibility.o" "Cleaning_SceneRN.phl[1997]";
-connectAttr "R_Arm_IK_Base_Ctrl_Follow.o" "Cleaning_SceneRN.phl[1998]";
-connectAttr "R_Arm_IK_Base_Ctrl_translateX.o" "Cleaning_SceneRN.phl[1999]";
-connectAttr "R_Arm_IK_Base_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2000]";
-connectAttr "R_Arm_IK_Base_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2001]";
-connectAttr "R_Arm_IK_Base_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2002]";
-connectAttr "R_Arm_IK_Base_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2003]";
-connectAttr "R_Arm_IK_Base_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2004]";
-connectAttr "R_Arm_IK_Base_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2005]";
-connectAttr "R_Arm_IK_Base_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2006]";
-connectAttr "R_Arm_IK_Base_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2007]";
-connectAttr "R_Arm_IK_Base_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2008]";
-connectAttr "R_Arm_IK_PV_Ctrl_Follow.o" "Cleaning_SceneRN.phl[2009]";
-connectAttr "R_Arm_IK_PV_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2010]";
-connectAttr "R_Arm_IK_PV_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2011]";
-connectAttr "R_Arm_IK_PV_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2012]";
-connectAttr "R_Arm_IK_PV_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2013]";
-connectAttr "R_Arm_IK_PV_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2014]";
-connectAttr "R_Arm_IK_PV_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2015]";
-connectAttr "R_Arm_IK_PV_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2016]";
-connectAttr "R_Arm_IK_PV_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2017]";
-connectAttr "R_Arm_IK_PV_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2018]";
-connectAttr "R_Arm_IK_PV_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2019]";
-connectAttr "Neck_05_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2020]";
-connectAttr "Neck_05_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2021]";
-connectAttr "Neck_05_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2022]";
-connectAttr "Neck_05_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2023]";
-connectAttr "Neck_05_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2024]";
-connectAttr "Neck_05_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2025]";
-connectAttr "Neck_05_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2026]";
-connectAttr "Neck_05_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2027]";
-connectAttr "Neck_05_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2028]";
-connectAttr "Neck_05_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2029]";
-connectAttr "Neck_05_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2030]";
-connectAttr "Neck_05_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2031]";
-connectAttr "Neck_04_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2032]";
-connectAttr "Neck_04_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2033]";
-connectAttr "Neck_04_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2034]";
-connectAttr "Neck_04_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2035]";
-connectAttr "Neck_04_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2036]";
-connectAttr "Neck_04_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2037]";
-connectAttr "Neck_04_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2038]";
-connectAttr "Neck_04_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2039]";
-connectAttr "Neck_04_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2040]";
-connectAttr "Neck_04_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2041]";
-connectAttr "Neck_04_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2042]";
-connectAttr "Neck_04_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2043]";
-connectAttr "Neck_03_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2044]";
-connectAttr "Neck_03_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2045]";
-connectAttr "Neck_03_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2046]";
-connectAttr "Neck_03_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2047]";
-connectAttr "Neck_03_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2048]";
-connectAttr "Neck_03_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2049]";
-connectAttr "Neck_03_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2050]";
-connectAttr "Neck_03_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2051]";
-connectAttr "Neck_03_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2052]";
-connectAttr "Neck_03_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2053]";
-connectAttr "Neck_03_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2054]";
-connectAttr "Neck_03_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2055]";
-connectAttr "Neck_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2056]";
-connectAttr "Neck_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2057]";
-connectAttr "Neck_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2058]";
-connectAttr "Neck_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2059]";
-connectAttr "Neck_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2060]";
-connectAttr "Neck_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2061]";
-connectAttr "Neck_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2062]";
-connectAttr "Neck_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2063]";
-connectAttr "Neck_02_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2064]";
-connectAttr "Neck_02_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2065]";
-connectAttr "Neck_02_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2066]";
-connectAttr "Neck_02_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2067]";
-connectAttr "Neck_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2068]";
-connectAttr "Neck_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2069]";
-connectAttr "Neck_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2070]";
-connectAttr "Neck_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2071]";
-connectAttr "Neck_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2072]";
-connectAttr "Neck_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2073]";
-connectAttr "Neck_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2074]";
-connectAttr "Neck_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2075]";
-connectAttr "Neck_01_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2076]";
-connectAttr "Neck_01_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2077]";
-connectAttr "Neck_01_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2078]";
-connectAttr "Neck_01_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2079]";
-connectAttr "R_Clav_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2080]";
-connectAttr "R_Clav_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2081]";
-connectAttr "R_Clav_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2082]";
-connectAttr "R_Clav_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2083]";
-connectAttr "R_Clav_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2084]";
-connectAttr "R_Clav_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2085]";
-connectAttr "R_Clav_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2086]";
-connectAttr "R_Clav_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2087]";
-connectAttr "R_Clav_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2088]";
-connectAttr "R_Clav_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2089]";
-connectAttr "R_Clav_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2090]";
-connectAttr "R_Clav_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2091]";
-connectAttr "L_Clav_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2092]";
-connectAttr "L_Clav_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2093]";
-connectAttr "L_Clav_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2094]";
-connectAttr "L_Clav_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2095]";
-connectAttr "L_Clav_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2096]";
-connectAttr "L_Clav_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2097]";
-connectAttr "L_Clav_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2098]";
-connectAttr "L_Clav_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2099]";
-connectAttr "L_Clav_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2100]";
-connectAttr "L_Clav_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2101]";
-connectAttr "L_Clav_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2102]";
-connectAttr "L_Clav_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2103]";
-connectAttr "Prop_Shaft_Length_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2104]";
-connectAttr "Prop_Shaft_Length_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2105]";
-connectAttr "Cleaning_SceneRN.phl[2106]" "Cleaning_SceneRN.phl[2107]";
-connectAttr "Cleaning_SceneRN.phl[2108]" "Cleaning_SceneRN.phl[2109]";
-connectAttr "Two_Handed_Prop_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2110]";
-connectAttr "Two_Handed_Prop_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2111]";
-connectAttr "Two_Handed_Prop_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2112]";
-connectAttr "Two_Handed_Prop_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2113]";
-connectAttr "Two_Handed_Prop_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2114]";
-connectAttr "Two_Handed_Prop_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2115]";
-connectAttr "Two_Handed_Prop_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2116]";
-connectAttr "Two_Handed_Prop_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2117]";
-connectAttr "Two_Handed_Prop_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2118]";
+connectAttr "PlaquesLayer.di" "Cleaning_SceneRN.phl[3053]";
+connectAttr "Transform_Ctrl_MasterScale4.o" "Cleaning_SceneRN.phl[3140]";
+connectAttr "Transform_Ctrl_translateX4.o" "Cleaning_SceneRN.phl[3141]";
+connectAttr "Transform_Ctrl_translateY4.o" "Cleaning_SceneRN.phl[3142]";
+connectAttr "Transform_Ctrl_translateZ4.o" "Cleaning_SceneRN.phl[3143]";
+connectAttr "Transform_Ctrl_rotateX3.o" "Cleaning_SceneRN.phl[3144]";
+connectAttr "Transform_Ctrl_rotateY4.o" "Cleaning_SceneRN.phl[3145]";
+connectAttr "Transform_Ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[3146]";
+connectAttr "Mop_Top_Ctrl_Follow.o" "Cleaning_SceneRN.phl[3147]";
+connectAttr "Mop_Top_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3148]";
+connectAttr "Mop_Top_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3149]";
+connectAttr "Mop_Top_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3150]";
+connectAttr "Mop_Top_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3151]";
+connectAttr "Mop_Top_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3152]";
+connectAttr "Mop_Top_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3153]";
+connectAttr "Mop_Top_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3154]";
+connectAttr "Mop_Top_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3155]";
+connectAttr "Mop_Top_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3156]";
+connectAttr "Mop_Bottom_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3157]";
+connectAttr "Mop_Bottom_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3158]";
+connectAttr "Mop_Bottom_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3159]";
+connectAttr "Mop_Bottom_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3160]";
+connectAttr "Mop_Bottom_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3161]";
+connectAttr "Mop_Bottom_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3162]";
+connectAttr "Mop_Bottom_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3163]";
+connectAttr "Mop_Bottom_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3164]";
+connectAttr "Mop_Bottom_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3165]";
+connectAttr "Hand_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3166]";
+connectAttr "Hand_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3167]";
+connectAttr "Hand_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3168]";
+connectAttr "Hand_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3169]";
+connectAttr "Hand_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3170]";
+connectAttr "Hand_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3171]";
+connectAttr "Hand_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3172]";
+connectAttr "Hand_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3173]";
+connectAttr "Hand_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3174]";
+connectAttr "Hand_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3175]";
+connectAttr "Hand_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3176]";
+connectAttr "Hand_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3177]";
+connectAttr "Cleaning_SceneRN.phl[3178]" "nRigidShape1.stf";
+connectAttr "nRigidShape1.cust" "Cleaning_SceneRN.phl[3179]";
+connectAttr "nRigidShape1.stst" "Cleaning_SceneRN.phl[3180]";
+connectAttr "MopHairCache1.ocd[0]" "Cleaning_SceneRN.phl[3181]";
+connectAttr "MopHairCache1.ocd[1]" "Cleaning_SceneRN.phl[3182]";
+connectAttr "MopHairCache1.ocd[2]" "Cleaning_SceneRN.phl[3183]";
+connectAttr "MopHairCache1.ir" "Cleaning_SceneRN.phl[3184]";
+connectAttr "Spray_Bottle_visibility.o" "Cleaning_SceneRN.phl[3054]";
+connectAttr "Spray_Bottle_translateX.o" "Cleaning_SceneRN.phl[3055]";
+connectAttr "Spray_Bottle_translateY.o" "Cleaning_SceneRN.phl[3056]";
+connectAttr "Spray_Bottle_translateZ.o" "Cleaning_SceneRN.phl[3057]";
+connectAttr "Spray_Bottle_rotateX.o" "Cleaning_SceneRN.phl[3058]";
+connectAttr "Spray_Bottle_rotateY.o" "Cleaning_SceneRN.phl[3059]";
+connectAttr "Spray_Bottle_rotateZ.o" "Cleaning_SceneRN.phl[3060]";
+connectAttr "Spray_Bottle_scaleX.o" "Cleaning_SceneRN.phl[3061]";
+connectAttr "Spray_Bottle_scaleY.o" "Cleaning_SceneRN.phl[3062]";
+connectAttr "Spray_Bottle_scaleZ.o" "Cleaning_SceneRN.phl[3063]";
+connectAttr "Transform_Ctrl_ArmIKFK.o" "Cleaning_SceneRN.phl[2137]";
+connectAttr "Transform_Ctrl_MasterScale.o" "Cleaning_SceneRN.phl[2138]";
+connectAttr "Transform_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2139]";
+connectAttr "Transform_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2140]";
+connectAttr "Transform_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2141]";
+connectAttr "Transform_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2142]";
+connectAttr "Transform_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2143]";
+connectAttr "Transform_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2144]";
+connectAttr "Cog_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2145]";
+connectAttr "Cog_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2146]";
+connectAttr "Cog_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2147]";
+connectAttr "Cog_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2148]";
+connectAttr "Cog_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2149]";
+connectAttr "Cog_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2150]";
+connectAttr "Cog_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2151]";
+connectAttr "Cog_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2152]";
+connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2153]";
+connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2154]";
+connectAttr "L_Hose_IK_Jnt_13_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2155]";
+connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2156]";
+connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2157]";
+connectAttr "L_Hose_IK_Jnt_12_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2158]";
+connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2159]";
+connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2160]";
+connectAttr "L_Hose_IK_Jnt_11_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2161]";
+connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2162]";
+connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2163]";
+connectAttr "L_Hose_IK_Jnt_10_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2164]";
+connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2165]";
+connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2166]";
+connectAttr "L_Hose_IK_Jnt_09_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2167]";
+connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2168]";
+connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2169]";
+connectAttr "L_Hose_IK_Jnt_08_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2170]";
+connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2171]";
+connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2172]";
+connectAttr "L_Hose_IK_Jnt_07_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2173]";
+connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2174]";
+connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2175]";
+connectAttr "L_Hose_IK_Jnt_06_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2176]";
+connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2177]";
+connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2178]";
+connectAttr "L_Hose_IK_Jnt_05_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2179]";
+connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2180]";
+connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2181]";
+connectAttr "L_Hose_IK_Jnt_04_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2182]";
+connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2183]";
+connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2184]";
+connectAttr "L_Hose_IK_Jnt_03_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2185]";
+connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2186]";
+connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2187]";
+connectAttr "L_Hose_IK_Jnt_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2188]";
+connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2189]";
+connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2190]";
+connectAttr "L_Hose_IK_Jnt_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2191]";
+connectAttr "L_Hose_Swing_Ctrl_Swing.o" "Cleaning_SceneRN.phl[2192]";
+connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2193]";
+connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2194]";
+connectAttr "R_Hose_IK_Jnt_13_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2195]";
+connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2196]";
+connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2197]";
+connectAttr "R_Hose_IK_Jnt_12_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2198]";
+connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2199]";
+connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2200]";
+connectAttr "R_Hose_IK_Jnt_11_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2201]";
+connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2202]";
+connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2203]";
+connectAttr "R_Hose_IK_Jnt_10_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2204]";
+connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2205]";
+connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2206]";
+connectAttr "R_Hose_IK_Jnt_09_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2207]";
+connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2208]";
+connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2209]";
+connectAttr "R_Hose_IK_Jnt_08_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2210]";
+connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2211]";
+connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2212]";
+connectAttr "R_Hose_IK_Jnt_07_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2213]";
+connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2214]";
+connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2215]";
+connectAttr "R_Hose_IK_Jnt_06_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2216]";
+connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2217]";
+connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2218]";
+connectAttr "R_Hose_IK_Jnt_05_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2219]";
+connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2220]";
+connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2221]";
+connectAttr "R_Hose_IK_Jnt_04_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2222]";
+connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2223]";
+connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2224]";
+connectAttr "R_Hose_IK_Jnt_03_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2225]";
+connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2226]";
+connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2227]";
+connectAttr "R_Hose_IK_Jnt_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2228]";
+connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2229]";
+connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2230]";
+connectAttr "R_Hose_IK_Jnt_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2231]";
+connectAttr "R_Hose_Swing_Ctrl_Swing.o" "Cleaning_SceneRN.phl[2232]";
+connectAttr "Arm_FK_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2233]";
+connectAttr "Arm_FK_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2234]";
+connectAttr "Arm_FK_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2235]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2236]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2237]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2238]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2239]";
+connectAttr "Arm_FK_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2240]";
+connectAttr "Arm_FK_Jnt_03_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2241]";
+connectAttr "Arm_FK_Jnt_03_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2242]";
+connectAttr "Arm_FK_Jnt_03_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2243]";
+connectAttr "Arm_FK_Jnt_04_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2244]";
+connectAttr "Arm_FK_Jnt_04_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2245]";
+connectAttr "Arm_FK_Jnt_04_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2246]";
+connectAttr "Arm_FK_Jnt_05_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2247]";
+connectAttr "Arm_FK_Jnt_05_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2248]";
+connectAttr "Arm_FK_Jnt_05_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2249]";
+connectAttr "Arm_Base_Jnt_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2250]";
+connectAttr "Arm_Base_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2251]"
+		;
+connectAttr "Arm_Base_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2252]";
+connectAttr "Arm_Base_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2253]";
+connectAttr "Head_FK_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2254]";
+connectAttr "Head_FK_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2255]"
+		;
+connectAttr "Head_FK_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2256]";
+connectAttr "Head_FK_Jnt_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2257]";
+connectAttr "Head_FK_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2258]"
+		;
+connectAttr "Head_FK_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2259]";
+connectAttr "Head_FK_Jnt_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2260]";
+connectAttr "Head_FK_Jnt_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2261]";
+connectAttr "Head_FK_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2262]";
+connectAttr "Head_FK_Jnt_03_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2263]";
+connectAttr "Head_FK_Jnt_03_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2264]"
+		;
+connectAttr "Head_FK_Jnt_03_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2265]";
+connectAttr "Mouth_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2266]";
+connectAttr "Mouth_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2267]";
+connectAttr "Mouth_Ctrl_Neutral.o" "Cleaning_SceneRN.phl[2268]";
+connectAttr "Mouth_Ctrl_Oooh.o" "Cleaning_SceneRN.phl[2269]";
+connectAttr "Mouth_Ctrl_Bored.o" "Cleaning_SceneRN.phl[2270]";
+connectAttr "Mouth_Ctrl_Smirk.o" "Cleaning_SceneRN.phl[2271]";
+connectAttr "Mouth_Ctrl_MouthScale.o" "Cleaning_SceneRN.phl[2272]";
+connectAttr "Eyes_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2273]";
+connectAttr "Eyes_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2274]";
+connectAttr "Eyes_Ctrl_ExclamationPoint.o" "Cleaning_SceneRN.phl[2275]";
+connectAttr "Eyes_Ctrl_REye.o" "Cleaning_SceneRN.phl[2276]";
+connectAttr "Eyes_Ctrl_LEye.o" "Cleaning_SceneRN.phl[2277]";
+connectAttr "Eyes_Ctrl_Mouth.o" "Cleaning_SceneRN.phl[2278]";
+connectAttr "Eyes_Ctrl_X1.o" "Cleaning_SceneRN.phl[2279]";
+connectAttr "Eyes_Ctrl_X2.o" "Cleaning_SceneRN.phl[2280]";
+connectAttr "L_Eye_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2281]";
+connectAttr "L_Eye_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2282]";
+connectAttr "L_Eye_Ctrl_Open.o" "Cleaning_SceneRN.phl[2283]";
+connectAttr "L_Eye_Ctrl_Squint.o" "Cleaning_SceneRN.phl[2284]";
+connectAttr "L_Eye_Ctrl_Close.o" "Cleaning_SceneRN.phl[2285]";
+connectAttr "L_Eye_Ctrl_Sad.o" "Cleaning_SceneRN.phl[2286]";
+connectAttr "L_Eye_Ctrl_Wink.o" "Cleaning_SceneRN.phl[2287]";
+connectAttr "L_Eye_Ctrl_Bored.o" "Cleaning_SceneRN.phl[2288]";
+connectAttr "L_Eye_Ctrl_Smirk.o" "Cleaning_SceneRN.phl[2289]";
+connectAttr "L_Eye_Ctrl_EyeScale.o" "Cleaning_SceneRN.phl[2290]";
+connectAttr "L_Eye_Ctrl_Determined.o" "Cleaning_SceneRN.phl[2291]";
+connectAttr "R_Eye_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2292]";
+connectAttr "R_Eye_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2293]";
+connectAttr "R_Eye_Ctrl_Open.o" "Cleaning_SceneRN.phl[2294]";
+connectAttr "R_Eye_Ctrl_Squint.o" "Cleaning_SceneRN.phl[2295]";
+connectAttr "R_Eye_Ctrl_Close.o" "Cleaning_SceneRN.phl[2296]";
+connectAttr "R_Eye_Ctrl_Sad.o" "Cleaning_SceneRN.phl[2297]";
+connectAttr "R_Eye_Ctrl_Wink.o" "Cleaning_SceneRN.phl[2298]";
+connectAttr "R_Eye_Ctrl_Bored.o" "Cleaning_SceneRN.phl[2299]";
+connectAttr "R_Eye_Ctrl_Smirk.o" "Cleaning_SceneRN.phl[2300]";
+connectAttr "R_Eye_Ctrl_EyeScale.o" "Cleaning_SceneRN.phl[2301]";
+connectAttr "R_Eye_Ctrl_Determined.o" "Cleaning_SceneRN.phl[2302]";
+connectAttr "Visor_Ctrl_L_Visor.o" "Cleaning_SceneRN.phl[2303]";
+connectAttr "Visor_Ctrl_RVisor.o" "Cleaning_SceneRN.phl[2304]";
+connectAttr "R_Wiper_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2305]";
+connectAttr "L_Wiper_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2306]";
+connectAttr "Hand_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2307]";
+connectAttr "Hand_Ring_Jnt_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2308]";
+connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2309]"
+		;
+connectAttr "Hand_Ring_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2310]";
+connectAttr "Hand_Ring_Jnt_03_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2311]";
+connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2312]"
+		;
+connectAttr "Hand_Ring_Jnt_03_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2313]";
+connectAttr "Hand_Ring_Jnt_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2314]";
+connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2315]"
+		;
+connectAttr "Hand_Ring_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2316]";
+connectAttr "Finger_02_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2317]";
+connectAttr "Finger_02_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2318]"
+		;
+connectAttr "Finger_02_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2319]";
+connectAttr "Finger_01_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2320]";
+connectAttr "Finger_01_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2321]"
+		;
+connectAttr "Finger_01_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2322]";
+connectAttr "Finger_01_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2323]";
+connectAttr "Finger_01_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2324]"
+		;
+connectAttr "Finger_01_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2325]";
+connectAttr "Finger_02_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2326]";
+connectAttr "Finger_02_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2327]"
+		;
+connectAttr "Finger_02_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2328]";
+connectAttr "Finger_03_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2329]";
+connectAttr "Finger_03_Jnt_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2330]"
+		;
+connectAttr "Finger_03_Jnt_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2331]";
+connectAttr "Finger_03_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2332]";
+connectAttr "Finger_03_Jnt_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2333]"
+		;
+connectAttr "Finger_03_Jnt_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2334]";
+connectAttr "Palm_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2335]";
+connectAttr "Palm_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2336]";
+connectAttr "Palm_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2337]";
+connectAttr "Piston_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2338]";
+connectAttr "Piston_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2339]";
+connectAttr "Piston_03_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2340]";
+connectAttr "Prop_Ctrl_Follow.o" "Cleaning_SceneRN.phl[2341]";
+connectAttr "Prop_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2342]";
+connectAttr "Prop_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2343]";
+connectAttr "Prop_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2344]";
+connectAttr "Prop_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2345]";
+connectAttr "Prop_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2346]";
+connectAttr "Prop_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2347]";
+connectAttr "Prop_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2348]";
+connectAttr "Prop_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2349]";
+connectAttr "Prop_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2350]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2351]"
+		;
+connectAttr "Treads_Base_FK_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2352]"
+		;
+connectAttr "Treads_Base_FK_Jnt_Ctrl_TreadsRoll.o" "Cleaning_SceneRN.phl[2353]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_IndividualRoll.o" "Cleaning_SceneRN.phl[2354]"
+		;
+connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2355]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2356]";
+connectAttr "Treads_Base_FK_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2357]";
+connectAttr "R_Treads_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2358]";
+connectAttr "R_Treads_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2359]";
+connectAttr "R_Treads_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2360]";
+connectAttr "R_Treads_Ctrl_Roll.o" "Cleaning_SceneRN.phl[2361]";
+connectAttr "R_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2362]";
+connectAttr "R_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2363]";
+connectAttr "R_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2364]";
+connectAttr "R_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2365]";
+connectAttr "R_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2366]";
+connectAttr "R_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2367]"
+		;
+connectAttr "L_Treads_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2368]";
+connectAttr "L_Treads_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2369]";
+connectAttr "L_Treads_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2370]";
+connectAttr "L_Treads_Ctrl_Roll.o" "Cleaning_SceneRN.phl[2371]";
+connectAttr "L_Front_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2372]"
+		;
+connectAttr "L_Mid_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2373]";
+connectAttr "L_Mid_Wheel_Jnt_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2374]";
+connectAttr "L_Mid_Wheel_Jnt_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2375]";
+connectAttr "L_Mid_Wheel_Jnt_03_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2376]";
+connectAttr "L_Back_Main_Wheel_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2377]";
+connectAttr "Light_Rig_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2378]";
+connectAttr "Light_Rig_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2379]";
+connectAttr "Light_Rig_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2380]";
+connectAttr "Light_Rig_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2381]";
+connectAttr "Light_Rig_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2382]";
+connectAttr "Light_Rig_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2383]";
+connectAttr "Light_Rig_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2384]";
+connectAttr "Light_Rig_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2385]";
+connectAttr "Light_Rig_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2386]";
+connectAttr "Light_Rig_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2387]";
+connectAttr "sprayCan_ctrl_translateX3.o" "Cleaning_SceneRN.phl[3185]";
+connectAttr "sprayCan_ctrl_translateY3.o" "Cleaning_SceneRN.phl[3186]";
+connectAttr "sprayCan_ctrl_translateZ3.o" "Cleaning_SceneRN.phl[3187]";
+connectAttr "sprayCan_ctrl_rotateX3.o" "Cleaning_SceneRN.phl[3188]";
+connectAttr "sprayCan_ctrl_rotateY3.o" "Cleaning_SceneRN.phl[3189]";
+connectAttr "sprayCan_ctrl_rotateZ3.o" "Cleaning_SceneRN.phl[3190]";
+connectAttr "sprayCan_ctrl_scaleX3.o" "Cleaning_SceneRN.phl[3191]";
+connectAttr "sprayCan_ctrl_scaleY3.o" "Cleaning_SceneRN.phl[3192]";
+connectAttr "sprayCan_ctrl_scaleZ3.o" "Cleaning_SceneRN.phl[3193]";
+connectAttr "sprayCan_ctrl_translateX4.o" "Cleaning_SceneRN.phl[3194]";
+connectAttr "sprayCan_ctrl_translateY4.o" "Cleaning_SceneRN.phl[3195]";
+connectAttr "sprayCan_ctrl_translateZ4.o" "Cleaning_SceneRN.phl[3196]";
+connectAttr "sprayCan_ctrl_rotateX4.o" "Cleaning_SceneRN.phl[3197]";
+connectAttr "sprayCan_ctrl_rotateY4.o" "Cleaning_SceneRN.phl[3198]";
+connectAttr "sprayCan_ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[3199]";
+connectAttr "sprayCan_ctrl_scaleX4.o" "Cleaning_SceneRN.phl[3200]";
+connectAttr "sprayCan_ctrl_scaleY4.o" "Cleaning_SceneRN.phl[3201]";
+connectAttr "sprayCan_ctrl_scaleZ4.o" "Cleaning_SceneRN.phl[3202]";
+connectAttr "Spray_Bottle19_visibility.o" "Cleaning_SceneRN.phl[3203]";
+connectAttr "Spray_Bottle19_translateX.o" "Cleaning_SceneRN.phl[3204]";
+connectAttr "Spray_Bottle19_translateY.o" "Cleaning_SceneRN.phl[3205]";
+connectAttr "Spray_Bottle19_translateZ.o" "Cleaning_SceneRN.phl[3206]";
+connectAttr "Spray_Bottle19_rotateX.o" "Cleaning_SceneRN.phl[3207]";
+connectAttr "Spray_Bottle19_rotateY.o" "Cleaning_SceneRN.phl[3208]";
+connectAttr "Spray_Bottle19_rotateZ.o" "Cleaning_SceneRN.phl[3209]";
+connectAttr "Spray_Bottle19_scaleX.o" "Cleaning_SceneRN.phl[3210]";
+connectAttr "Spray_Bottle19_scaleY.o" "Cleaning_SceneRN.phl[3211]";
+connectAttr "Spray_Bottle19_scaleZ.o" "Cleaning_SceneRN.phl[3212]";
+connectAttr "sprayCan_ctrl_translateX2.o" "Cleaning_SceneRN.phl[3213]";
+connectAttr "sprayCan_ctrl_translateY2.o" "Cleaning_SceneRN.phl[3214]";
+connectAttr "sprayCan_ctrl_translateZ2.o" "Cleaning_SceneRN.phl[3215]";
+connectAttr "sprayCan_ctrl_rotateX2.o" "Cleaning_SceneRN.phl[3216]";
+connectAttr "sprayCan_ctrl_rotateY2.o" "Cleaning_SceneRN.phl[3217]";
+connectAttr "sprayCan_ctrl_rotateZ2.o" "Cleaning_SceneRN.phl[3218]";
+connectAttr "sprayCan_ctrl_scaleX2.o" "Cleaning_SceneRN.phl[3219]";
+connectAttr "sprayCan_ctrl_scaleY2.o" "Cleaning_SceneRN.phl[3220]";
+connectAttr "sprayCan_ctrl_scaleZ2.o" "Cleaning_SceneRN.phl[3221]";
+connectAttr "Spray_Bottle17_visibility.o" "Cleaning_SceneRN.phl[3222]";
+connectAttr "Spray_Bottle17_translateX.o" "Cleaning_SceneRN.phl[3223]";
+connectAttr "Spray_Bottle17_translateY.o" "Cleaning_SceneRN.phl[3224]";
+connectAttr "Spray_Bottle17_translateZ.o" "Cleaning_SceneRN.phl[3225]";
+connectAttr "Spray_Bottle17_rotateX.o" "Cleaning_SceneRN.phl[3226]";
+connectAttr "Spray_Bottle17_rotateY.o" "Cleaning_SceneRN.phl[3227]";
+connectAttr "Spray_Bottle17_rotateZ.o" "Cleaning_SceneRN.phl[3228]";
+connectAttr "Spray_Bottle17_scaleX.o" "Cleaning_SceneRN.phl[3229]";
+connectAttr "Spray_Bottle17_scaleY.o" "Cleaning_SceneRN.phl[3230]";
+connectAttr "Spray_Bottle17_scaleZ.o" "Cleaning_SceneRN.phl[3231]";
+connectAttr "sprayCan_ctrl_translateX1.o" "Cleaning_SceneRN.phl[3232]";
+connectAttr "sprayCan_ctrl_translateY1.o" "Cleaning_SceneRN.phl[3233]";
+connectAttr "sprayCan_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[3234]";
+connectAttr "sprayCan_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[3235]";
+connectAttr "sprayCan_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[3236]";
+connectAttr "sprayCan_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[3237]";
+connectAttr "sprayCan_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[3238]";
+connectAttr "sprayCan_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[3239]";
+connectAttr "sprayCan_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[3240]";
+connectAttr "Spray_Bottle_visibility1.o" "Cleaning_SceneRN.phl[3241]";
+connectAttr "Spray_Bottle_translateX1.o" "Cleaning_SceneRN.phl[3242]";
+connectAttr "Spray_Bottle_translateY1.o" "Cleaning_SceneRN.phl[3243]";
+connectAttr "Spray_Bottle_translateZ1.o" "Cleaning_SceneRN.phl[3244]";
+connectAttr "Spray_Bottle_rotateX1.o" "Cleaning_SceneRN.phl[3245]";
+connectAttr "Spray_Bottle_rotateY1.o" "Cleaning_SceneRN.phl[3246]";
+connectAttr "Spray_Bottle_rotateZ1.o" "Cleaning_SceneRN.phl[3247]";
+connectAttr "Spray_Bottle_scaleX1.o" "Cleaning_SceneRN.phl[3248]";
+connectAttr "Spray_Bottle_scaleY1.o" "Cleaning_SceneRN.phl[3249]";
+connectAttr "Spray_Bottle_scaleZ1.o" "Cleaning_SceneRN.phl[3250]";
+connectAttr "sprayCan_ctrl_translateX.o" "Cleaning_SceneRN.phl[3251]";
+connectAttr "sprayCan_ctrl_translateY.o" "Cleaning_SceneRN.phl[3252]";
+connectAttr "sprayCan_ctrl_translateZ.o" "Cleaning_SceneRN.phl[3253]";
+connectAttr "sprayCan_ctrl_rotateX.o" "Cleaning_SceneRN.phl[3254]";
+connectAttr "sprayCan_ctrl_rotateY.o" "Cleaning_SceneRN.phl[3255]";
+connectAttr "sprayCan_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3256]";
+connectAttr "sprayCan_ctrl_scaleX.o" "Cleaning_SceneRN.phl[3257]";
+connectAttr "sprayCan_ctrl_scaleY.o" "Cleaning_SceneRN.phl[3258]";
+connectAttr "sprayCan_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3259]";
+connectAttr "sprayCan_ctrl_translateX5.o" "Cleaning_SceneRN.phl[3260]";
+connectAttr "sprayCan_ctrl_translateY5.o" "Cleaning_SceneRN.phl[3261]";
+connectAttr "sprayCan_ctrl_translateZ5.o" "Cleaning_SceneRN.phl[3262]";
+connectAttr "sprayCan_ctrl_rotateX5.o" "Cleaning_SceneRN.phl[3263]";
+connectAttr "sprayCan_ctrl_rotateY5.o" "Cleaning_SceneRN.phl[3264]";
+connectAttr "sprayCan_ctrl_rotateZ5.o" "Cleaning_SceneRN.phl[3265]";
+connectAttr "sprayCan_ctrl_scaleX5.o" "Cleaning_SceneRN.phl[3266]";
+connectAttr "sprayCan_ctrl_scaleY5.o" "Cleaning_SceneRN.phl[3267]";
+connectAttr "sprayCan_ctrl_scaleZ5.o" "Cleaning_SceneRN.phl[3268]";
+connectAttr "sprayCan_ctrl_translateX6.o" "Cleaning_SceneRN.phl[3269]";
+connectAttr "sprayCan_ctrl_translateY6.o" "Cleaning_SceneRN.phl[3270]";
+connectAttr "sprayCan_ctrl_translateZ6.o" "Cleaning_SceneRN.phl[3271]";
+connectAttr "sprayCan_ctrl_rotateX6.o" "Cleaning_SceneRN.phl[3272]";
+connectAttr "sprayCan_ctrl_rotateY6.o" "Cleaning_SceneRN.phl[3273]";
+connectAttr "sprayCan_ctrl_rotateZ6.o" "Cleaning_SceneRN.phl[3274]";
+connectAttr "sprayCan_ctrl_scaleX6.o" "Cleaning_SceneRN.phl[3275]";
+connectAttr "sprayCan_ctrl_scaleY6.o" "Cleaning_SceneRN.phl[3276]";
+connectAttr "sprayCan_ctrl_scaleZ6.o" "Cleaning_SceneRN.phl[3277]";
+connectAttr "Spray_Bottle21_visibility.o" "Cleaning_SceneRN.phl[3278]";
+connectAttr "Spray_Bottle21_translateX.o" "Cleaning_SceneRN.phl[3279]";
+connectAttr "Spray_Bottle21_translateY.o" "Cleaning_SceneRN.phl[3280]";
+connectAttr "Spray_Bottle21_translateZ.o" "Cleaning_SceneRN.phl[3281]";
+connectAttr "Spray_Bottle21_rotateX.o" "Cleaning_SceneRN.phl[3282]";
+connectAttr "Spray_Bottle21_rotateY.o" "Cleaning_SceneRN.phl[3283]";
+connectAttr "Spray_Bottle21_rotateZ.o" "Cleaning_SceneRN.phl[3284]";
+connectAttr "Spray_Bottle21_scaleX.o" "Cleaning_SceneRN.phl[3285]";
+connectAttr "Spray_Bottle21_scaleY.o" "Cleaning_SceneRN.phl[3286]";
+connectAttr "Spray_Bottle21_scaleZ.o" "Cleaning_SceneRN.phl[3287]";
+connectAttr "sprayCan_ctrl_translateX11.o" "Cleaning_SceneRN.phl[3288]";
+connectAttr "sprayCan_ctrl_translateY11.o" "Cleaning_SceneRN.phl[3289]";
+connectAttr "sprayCan_ctrl_translateZ11.o" "Cleaning_SceneRN.phl[3290]";
+connectAttr "sprayCan_ctrl_rotateX11.o" "Cleaning_SceneRN.phl[3291]";
+connectAttr "sprayCan_ctrl_rotateY11.o" "Cleaning_SceneRN.phl[3292]";
+connectAttr "sprayCan_ctrl_rotateZ11.o" "Cleaning_SceneRN.phl[3293]";
+connectAttr "sprayCan_ctrl_scaleX11.o" "Cleaning_SceneRN.phl[3294]";
+connectAttr "sprayCan_ctrl_scaleY11.o" "Cleaning_SceneRN.phl[3295]";
+connectAttr "sprayCan_ctrl_scaleZ11.o" "Cleaning_SceneRN.phl[3296]";
+connectAttr "sprayCan_ctrl_translateX7.o" "Cleaning_SceneRN.phl[3297]";
+connectAttr "sprayCan_ctrl_translateY7.o" "Cleaning_SceneRN.phl[3298]";
+connectAttr "sprayCan_ctrl_translateZ7.o" "Cleaning_SceneRN.phl[3299]";
+connectAttr "sprayCan_ctrl_rotateX7.o" "Cleaning_SceneRN.phl[3300]";
+connectAttr "sprayCan_ctrl_rotateY7.o" "Cleaning_SceneRN.phl[3301]";
+connectAttr "sprayCan_ctrl_rotateZ7.o" "Cleaning_SceneRN.phl[3302]";
+connectAttr "sprayCan_ctrl_scaleX7.o" "Cleaning_SceneRN.phl[3303]";
+connectAttr "sprayCan_ctrl_scaleY7.o" "Cleaning_SceneRN.phl[3304]";
+connectAttr "sprayCan_ctrl_scaleZ7.o" "Cleaning_SceneRN.phl[3305]";
+connectAttr "Spray_Bottle20_visibility.o" "Cleaning_SceneRN.phl[3306]";
+connectAttr "Spray_Bottle20_translateX.o" "Cleaning_SceneRN.phl[3307]";
+connectAttr "Spray_Bottle20_translateY.o" "Cleaning_SceneRN.phl[3308]";
+connectAttr "Spray_Bottle20_translateZ.o" "Cleaning_SceneRN.phl[3309]";
+connectAttr "Spray_Bottle20_rotateX.o" "Cleaning_SceneRN.phl[3310]";
+connectAttr "Spray_Bottle20_rotateY.o" "Cleaning_SceneRN.phl[3311]";
+connectAttr "Spray_Bottle20_rotateZ.o" "Cleaning_SceneRN.phl[3312]";
+connectAttr "Spray_Bottle20_scaleX.o" "Cleaning_SceneRN.phl[3313]";
+connectAttr "Spray_Bottle20_scaleY.o" "Cleaning_SceneRN.phl[3314]";
+connectAttr "Spray_Bottle20_scaleZ.o" "Cleaning_SceneRN.phl[3315]";
+connectAttr "sprayCan_ctrl_translateX8.o" "Cleaning_SceneRN.phl[3316]";
+connectAttr "sprayCan_ctrl_translateY8.o" "Cleaning_SceneRN.phl[3317]";
+connectAttr "sprayCan_ctrl_translateZ8.o" "Cleaning_SceneRN.phl[3318]";
+connectAttr "sprayCan_ctrl_rotateX8.o" "Cleaning_SceneRN.phl[3319]";
+connectAttr "sprayCan_ctrl_rotateY8.o" "Cleaning_SceneRN.phl[3320]";
+connectAttr "sprayCan_ctrl_rotateZ8.o" "Cleaning_SceneRN.phl[3321]";
+connectAttr "sprayCan_ctrl_scaleX8.o" "Cleaning_SceneRN.phl[3322]";
+connectAttr "sprayCan_ctrl_scaleY8.o" "Cleaning_SceneRN.phl[3323]";
+connectAttr "sprayCan_ctrl_scaleZ8.o" "Cleaning_SceneRN.phl[3324]";
+connectAttr "sprayCan_ctrl_translateX12.o" "Cleaning_SceneRN.phl[3325]";
+connectAttr "sprayCan_ctrl_translateY12.o" "Cleaning_SceneRN.phl[3326]";
+connectAttr "sprayCan_ctrl_translateZ12.o" "Cleaning_SceneRN.phl[3327]";
+connectAttr "sprayCan_ctrl_rotateX12.o" "Cleaning_SceneRN.phl[3328]";
+connectAttr "sprayCan_ctrl_rotateY12.o" "Cleaning_SceneRN.phl[3329]";
+connectAttr "sprayCan_ctrl_rotateZ12.o" "Cleaning_SceneRN.phl[3330]";
+connectAttr "sprayCan_ctrl_scaleX12.o" "Cleaning_SceneRN.phl[3331]";
+connectAttr "sprayCan_ctrl_scaleY12.o" "Cleaning_SceneRN.phl[3332]";
+connectAttr "sprayCan_ctrl_scaleZ12.o" "Cleaning_SceneRN.phl[3333]";
+connectAttr "sprayCan_ctrl_translateX9.o" "Cleaning_SceneRN.phl[3334]";
+connectAttr "sprayCan_ctrl_translateY9.o" "Cleaning_SceneRN.phl[3335]";
+connectAttr "sprayCan_ctrl_translateZ9.o" "Cleaning_SceneRN.phl[3336]";
+connectAttr "sprayCan_ctrl_rotateX9.o" "Cleaning_SceneRN.phl[3337]";
+connectAttr "sprayCan_ctrl_rotateY9.o" "Cleaning_SceneRN.phl[3338]";
+connectAttr "sprayCan_ctrl_rotateZ9.o" "Cleaning_SceneRN.phl[3339]";
+connectAttr "sprayCan_ctrl_scaleX9.o" "Cleaning_SceneRN.phl[3340]";
+connectAttr "sprayCan_ctrl_scaleY9.o" "Cleaning_SceneRN.phl[3341]";
+connectAttr "sprayCan_ctrl_scaleZ9.o" "Cleaning_SceneRN.phl[3342]";
+connectAttr "sprayCan_ctrl_translateX10.o" "Cleaning_SceneRN.phl[3343]";
+connectAttr "sprayCan_ctrl_translateY10.o" "Cleaning_SceneRN.phl[3344]";
+connectAttr "sprayCan_ctrl_translateZ10.o" "Cleaning_SceneRN.phl[3345]";
+connectAttr "sprayCan_ctrl_rotateX10.o" "Cleaning_SceneRN.phl[3346]";
+connectAttr "sprayCan_ctrl_rotateY10.o" "Cleaning_SceneRN.phl[3347]";
+connectAttr "sprayCan_ctrl_rotateZ10.o" "Cleaning_SceneRN.phl[3348]";
+connectAttr "sprayCan_ctrl_scaleX10.o" "Cleaning_SceneRN.phl[3349]";
+connectAttr "sprayCan_ctrl_scaleY10.o" "Cleaning_SceneRN.phl[3350]";
+connectAttr "sprayCan_ctrl_scaleZ10.o" "Cleaning_SceneRN.phl[3351]";
+connectAttr "Room_visibility.o" "Cleaning_SceneRN.phl[3352]";
+connectAttr "Room_translateX.o" "Cleaning_SceneRN.phl[3353]";
+connectAttr "Room_translateY.o" "Cleaning_SceneRN.phl[3354]";
+connectAttr "Room_translateZ.o" "Cleaning_SceneRN.phl[3355]";
+connectAttr "Room_rotateX.o" "Cleaning_SceneRN.phl[3356]";
+connectAttr "Room_rotateY.o" "Cleaning_SceneRN.phl[3357]";
+connectAttr "Room_rotateZ.o" "Cleaning_SceneRN.phl[3358]";
+connectAttr "Room_scaleX.o" "Cleaning_SceneRN.phl[3359]";
+connectAttr "Room_scaleY.o" "Cleaning_SceneRN.phl[3360]";
+connectAttr "Room_scaleZ.o" "Cleaning_SceneRN.phl[3361]";
+connectAttr "Cleaning_SceneRN.phl[3362]" "nRigidShape1.imsh";
+connectAttr "PaintBucket4_ctrl_translateX3.o" "Cleaning_SceneRN.phl[3363]";
+connectAttr "PaintBucket4_ctrl_translateY3.o" "Cleaning_SceneRN.phl[3364]";
+connectAttr "PaintBucket4_ctrl_translateZ3.o" "Cleaning_SceneRN.phl[3365]";
+connectAttr "PaintBucket4_ctrl_rotateX3.o" "Cleaning_SceneRN.phl[3366]";
+connectAttr "PaintBucket4_ctrl_rotateY3.o" "Cleaning_SceneRN.phl[3367]";
+connectAttr "PaintBucket4_ctrl_rotateZ3.o" "Cleaning_SceneRN.phl[3368]";
+connectAttr "PaintBucket4_ctrl_scaleX3.o" "Cleaning_SceneRN.phl[3369]";
+connectAttr "PaintBucket4_ctrl_scaleY3.o" "Cleaning_SceneRN.phl[3370]";
+connectAttr "PaintBucket4_ctrl_scaleZ3.o" "Cleaning_SceneRN.phl[3371]";
+connectAttr "PaintBucket4_ctrl_translateX2.o" "Cleaning_SceneRN.phl[3372]";
+connectAttr "PaintBucket4_ctrl_translateY2.o" "Cleaning_SceneRN.phl[3373]";
+connectAttr "PaintBucket4_ctrl_translateZ2.o" "Cleaning_SceneRN.phl[3374]";
+connectAttr "PaintBucket4_ctrl_rotateX2.o" "Cleaning_SceneRN.phl[3375]";
+connectAttr "PaintBucket4_ctrl_rotateY2.o" "Cleaning_SceneRN.phl[3376]";
+connectAttr "PaintBucket4_ctrl_rotateZ2.o" "Cleaning_SceneRN.phl[3377]";
+connectAttr "PaintBucket4_ctrl_scaleX2.o" "Cleaning_SceneRN.phl[3378]";
+connectAttr "PaintBucket4_ctrl_scaleY2.o" "Cleaning_SceneRN.phl[3379]";
+connectAttr "PaintBucket4_ctrl_scaleZ2.o" "Cleaning_SceneRN.phl[3380]";
+connectAttr "PaintBucket4_ctrl_translateX1.o" "Cleaning_SceneRN.phl[3381]";
+connectAttr "PaintBucket4_ctrl_translateY1.o" "Cleaning_SceneRN.phl[3382]";
+connectAttr "PaintBucket4_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[3383]";
+connectAttr "PaintBucket4_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[3384]";
+connectAttr "PaintBucket4_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[3385]";
+connectAttr "PaintBucket4_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[3386]";
+connectAttr "PaintBucket4_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[3387]";
+connectAttr "PaintBucket4_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[3388]";
+connectAttr "PaintBucket4_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[3389]";
+connectAttr "PaintBucket4_ctrl_translateX5.o" "Cleaning_SceneRN.phl[3390]";
+connectAttr "PaintBucket4_ctrl_translateY5.o" "Cleaning_SceneRN.phl[3391]";
+connectAttr "PaintBucket4_ctrl_translateZ5.o" "Cleaning_SceneRN.phl[3392]";
+connectAttr "PaintBucket4_ctrl_rotateX5.o" "Cleaning_SceneRN.phl[3393]";
+connectAttr "PaintBucket4_ctrl_rotateY5.o" "Cleaning_SceneRN.phl[3394]";
+connectAttr "PaintBucket4_ctrl_rotateZ5.o" "Cleaning_SceneRN.phl[3395]";
+connectAttr "PaintBucket4_ctrl_scaleX5.o" "Cleaning_SceneRN.phl[3396]";
+connectAttr "PaintBucket4_ctrl_scaleY5.o" "Cleaning_SceneRN.phl[3397]";
+connectAttr "PaintBucket4_ctrl_scaleZ5.o" "Cleaning_SceneRN.phl[3398]";
+connectAttr "PaintBucket4_ctrl_translateX4.o" "Cleaning_SceneRN.phl[3399]";
+connectAttr "PaintBucket4_ctrl_translateY4.o" "Cleaning_SceneRN.phl[3400]";
+connectAttr "PaintBucket4_ctrl_translateZ4.o" "Cleaning_SceneRN.phl[3401]";
+connectAttr "PaintBucket4_ctrl_rotateX4.o" "Cleaning_SceneRN.phl[3402]";
+connectAttr "PaintBucket4_ctrl_rotateY4.o" "Cleaning_SceneRN.phl[3403]";
+connectAttr "PaintBucket4_ctrl_rotateZ4.o" "Cleaning_SceneRN.phl[3404]";
+connectAttr "PaintBucket4_ctrl_scaleX4.o" "Cleaning_SceneRN.phl[3405]";
+connectAttr "PaintBucket4_ctrl_scaleY4.o" "Cleaning_SceneRN.phl[3406]";
+connectAttr "PaintBucket4_ctrl_scaleZ4.o" "Cleaning_SceneRN.phl[3407]";
+connectAttr "PaintBucket4_ctrl_translateX.o" "Cleaning_SceneRN.phl[3408]";
+connectAttr "PaintBucket4_ctrl_translateY.o" "Cleaning_SceneRN.phl[3409]";
+connectAttr "PaintBucket4_ctrl_translateZ.o" "Cleaning_SceneRN.phl[3410]";
+connectAttr "PaintBucket4_ctrl_rotateX.o" "Cleaning_SceneRN.phl[3411]";
+connectAttr "PaintBucket4_ctrl_rotateY.o" "Cleaning_SceneRN.phl[3412]";
+connectAttr "PaintBucket4_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3413]";
+connectAttr "PaintBucket4_ctrl_scaleX.o" "Cleaning_SceneRN.phl[3414]";
+connectAttr "PaintBucket4_ctrl_scaleY.o" "Cleaning_SceneRN.phl[3415]";
+connectAttr "PaintBucket4_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3416]";
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateX.o" "Cleaning_SceneRN.phl[3417]"
+		;
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateY.o" "Cleaning_SceneRN.phl[3418]"
+		;
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_translateZ.o" "Cleaning_SceneRN.phl[3419]"
+		;
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateX.o" "Cleaning_SceneRN.phl[3420]"
+		;
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateY.o" "Cleaning_SceneRN.phl[3421]"
+		;
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3422]"
+		;
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleX.o" "Cleaning_SceneRN.phl[3423]"
+		;
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleY.o" "Cleaning_SceneRN.phl[3424]"
+		;
+connectAttr "ToiletPaperRolls_pCylinder1_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3425]"
+		;
+connectAttr "pCylinder11_ctrl_translateX1.o" "Cleaning_SceneRN.phl[3426]";
+connectAttr "pCylinder11_ctrl_translateY1.o" "Cleaning_SceneRN.phl[3427]";
+connectAttr "pCylinder11_ctrl_translateZ1.o" "Cleaning_SceneRN.phl[3428]";
+connectAttr "pCylinder11_ctrl_rotateX1.o" "Cleaning_SceneRN.phl[3429]";
+connectAttr "pCylinder11_ctrl_rotateY1.o" "Cleaning_SceneRN.phl[3430]";
+connectAttr "pCylinder11_ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[3431]";
+connectAttr "pCylinder11_ctrl_scaleX1.o" "Cleaning_SceneRN.phl[3432]";
+connectAttr "pCylinder11_ctrl_scaleY1.o" "Cleaning_SceneRN.phl[3433]";
+connectAttr "pCylinder11_ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[3434]";
+connectAttr "pCylinder9_ctrl_translateX.o" "Cleaning_SceneRN.phl[3435]";
+connectAttr "pCylinder9_ctrl_translateY.o" "Cleaning_SceneRN.phl[3436]";
+connectAttr "pCylinder9_ctrl_translateZ.o" "Cleaning_SceneRN.phl[3437]";
+connectAttr "pCylinder9_ctrl_rotateX.o" "Cleaning_SceneRN.phl[3438]";
+connectAttr "pCylinder9_ctrl_rotateY.o" "Cleaning_SceneRN.phl[3439]";
+connectAttr "pCylinder9_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3440]";
+connectAttr "pCylinder9_ctrl_scaleX.o" "Cleaning_SceneRN.phl[3441]";
+connectAttr "pCylinder9_ctrl_scaleY.o" "Cleaning_SceneRN.phl[3442]";
+connectAttr "pCylinder9_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3443]";
+connectAttr "pCylinder10_ctrl_translateX.o" "Cleaning_SceneRN.phl[3444]";
+connectAttr "pCylinder10_ctrl_translateY.o" "Cleaning_SceneRN.phl[3445]";
+connectAttr "pCylinder10_ctrl_translateZ.o" "Cleaning_SceneRN.phl[3446]";
+connectAttr "pCylinder10_ctrl_rotateX.o" "Cleaning_SceneRN.phl[3447]";
+connectAttr "pCylinder10_ctrl_rotateY.o" "Cleaning_SceneRN.phl[3448]";
+connectAttr "pCylinder10_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3449]";
+connectAttr "pCylinder10_ctrl_scaleX.o" "Cleaning_SceneRN.phl[3450]";
+connectAttr "pCylinder10_ctrl_scaleY.o" "Cleaning_SceneRN.phl[3451]";
+connectAttr "pCylinder10_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3452]";
+connectAttr "pCylinder11_ctrl_translateX.o" "Cleaning_SceneRN.phl[3453]";
+connectAttr "pCylinder11_ctrl_translateY.o" "Cleaning_SceneRN.phl[3454]";
+connectAttr "pCylinder11_ctrl_translateZ.o" "Cleaning_SceneRN.phl[3455]";
+connectAttr "pCylinder11_ctrl_rotateX.o" "Cleaning_SceneRN.phl[3456]";
+connectAttr "pCylinder11_ctrl_rotateY.o" "Cleaning_SceneRN.phl[3457]";
+connectAttr "pCylinder11_ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3458]";
+connectAttr "pCylinder11_ctrl_scaleX.o" "Cleaning_SceneRN.phl[3459]";
+connectAttr "pCylinder11_ctrl_scaleY.o" "Cleaning_SceneRN.phl[3460]";
+connectAttr "pCylinder11_ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3461]";
+connectAttr "Apollo_Cam1_translateX.o" "Cleaning_SceneRN.phl[3462]";
+connectAttr "Apollo_Cam1_translateY.o" "Cleaning_SceneRN.phl[3463]";
+connectAttr "Apollo_Cam1_translateZ.o" "Cleaning_SceneRN.phl[3464]";
+connectAttr "Apollo_Cam1_rotateX.o" "Cleaning_SceneRN.phl[3465]";
+connectAttr "Apollo_Cam1_rotateY.o" "Cleaning_SceneRN.phl[3466]";
+connectAttr "Apollo_Cam1_rotateZ.o" "Cleaning_SceneRN.phl[3467]";
+connectAttr "Apollo_Cam1_scaleX.o" "Cleaning_SceneRN.phl[3468]";
+connectAttr "Apollo_Cam1_scaleY.o" "Cleaning_SceneRN.phl[3469]";
+connectAttr "Apollo_Cam1_scaleZ.o" "Cleaning_SceneRN.phl[3470]";
+connectAttr "Apollo_Cam1_visibility.o" "Cleaning_SceneRN.phl[3471]";
+connectAttr "LatticeControl_LatticeState.o" "Cleaning_SceneRN.phl[3472]";
+connectAttr "LatticeControl_translateX.o" "Cleaning_SceneRN.phl[3473]";
+connectAttr "LatticeControl_translateY.o" "Cleaning_SceneRN.phl[3474]";
+connectAttr "LatticeControl_translateZ.o" "Cleaning_SceneRN.phl[3475]";
+connectAttr "LatticeControl_rotateX.o" "Cleaning_SceneRN.phl[3476]";
+connectAttr "LatticeControl_rotateY.o" "Cleaning_SceneRN.phl[3477]";
+connectAttr "LatticeControl_rotateZ.o" "Cleaning_SceneRN.phl[3478]";
+connectAttr "LatticeControl_scaleX.o" "Cleaning_SceneRN.phl[3479]";
+connectAttr "LatticeControl_scaleY.o" "Cleaning_SceneRN.phl[3480]";
+connectAttr "LatticeControl_scaleZ.o" "Cleaning_SceneRN.phl[3481]";
+connectAttr "Vacuum_BlendShape_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3064]";
+connectAttr "Vacuum_BlendShape_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3065]";
+connectAttr "Transform_Ctrl_MasterScale1.o" "Cleaning_SceneRN.phl[3066]";
+connectAttr "Transform_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[3067]";
+connectAttr "Transform_Ctrl_translateY1.o" "Cleaning_SceneRN.phl[3068]";
+connectAttr "Transform_Ctrl_translateZ1.o" "Cleaning_SceneRN.phl[3069]";
+connectAttr "Transform_Ctrl_rotateX1.o" "Cleaning_SceneRN.phl[3070]";
+connectAttr "Transform_Ctrl_rotateY5.o" "Cleaning_SceneRN.phl[3071]";
+connectAttr "Transform_Ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[3072]";
+connectAttr "Blendshape_Panel_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3073]";
+connectAttr "Blendshape_Panel_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3074]";
+connectAttr "Blendshape_Panel_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3075]";
+connectAttr "Blendshape_Panel_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3076]";
+connectAttr "Blendshape_Panel_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3077]";
+connectAttr "Blendshape_Panel_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3078]";
+connectAttr "Blendshape_Panel_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3079]";
+connectAttr "Blendshape_Panel_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3080]";
+connectAttr "Blendshape_Panel_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3081]";
+connectAttr "Blendshape_Panel_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3082]";
+connectAttr "Sphere_Suck_Ctrl_01_translateX.o" "Cleaning_SceneRN.phl[3083]";
+connectAttr "Sphere_Suck_Ctrl_02_translateX.o" "Cleaning_SceneRN.phl[3084]";
+connectAttr "Squre_Suck_Ctrl_01_translateX.o" "Cleaning_SceneRN.phl[3085]";
+connectAttr "Squre_Suck_Ctrl_02_translateX.o" "Cleaning_SceneRN.phl[3086]";
+connectAttr "Base_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3087]";
+connectAttr "Base_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3088]";
+connectAttr "Base_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3089]";
+connectAttr "Base_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3090]";
+connectAttr "Base_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3091]";
+connectAttr "Base_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3092]";
+connectAttr "Base_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3093]";
+connectAttr "Base_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3094]";
+connectAttr "Base_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3095]";
+connectAttr "Base_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3096]";
+connectAttr "Middle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3097]";
+connectAttr "Middle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3098]";
+connectAttr "Middle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3099]";
+connectAttr "Middle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3100]";
+connectAttr "Middle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3101]";
+connectAttr "Middle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3102]";
+connectAttr "Middle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3103]";
+connectAttr "Middle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3104]";
+connectAttr "Middle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3105]";
+connectAttr "Middle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3106]";
+connectAttr "Middle_Tube_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[3107]";
+connectAttr "Middle_Tube_Ctrl_translateY1.o" "Cleaning_SceneRN.phl[3108]";
+connectAttr "Middle_Tube_Ctrl_translateZ1.o" "Cleaning_SceneRN.phl[3109]";
+connectAttr "Middle_Tube_Ctrl_rotateX1.o" "Cleaning_SceneRN.phl[3110]";
+connectAttr "Middle_Tube_Ctrl_rotateY1.o" "Cleaning_SceneRN.phl[3111]";
+connectAttr "Middle_Tube_Ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[3112]";
+connectAttr "Middle_Tube_Ctrl_scaleX1.o" "Cleaning_SceneRN.phl[3113]";
+connectAttr "Middle_Tube_Ctrl_scaleY1.o" "Cleaning_SceneRN.phl[3114]";
+connectAttr "Middle_Tube_Ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[3115]";
+connectAttr "Middle_Tube_Ctrl_Follow.o" "Cleaning_SceneRN.phl[3116]";
+connectAttr "Middle_Tube_Ctrl_visibility1.o" "Cleaning_SceneRN.phl[3117]";
+connectAttr "LowerMiddle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3118]";
+connectAttr "LowerMiddle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3119]";
+connectAttr "LowerMiddle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3120]";
+connectAttr "LowerMiddle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3121]";
+connectAttr "LowerMiddle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3122]";
+connectAttr "LowerMiddle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3123]";
+connectAttr "LowerMiddle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3124]";
+connectAttr "LowerMiddle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3125]";
+connectAttr "LowerMiddle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3126]";
+connectAttr "LowerMiddle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3127]";
+connectAttr "UpperMiddle_Tube_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3128]";
+connectAttr "UpperMiddle_Tube_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3129]";
+connectAttr "UpperMiddle_Tube_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3130]";
+connectAttr "UpperMiddle_Tube_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3131]";
+connectAttr "UpperMiddle_Tube_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3132]";
+connectAttr "UpperMiddle_Tube_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3133]";
+connectAttr "UpperMiddle_Tube_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3134]";
+connectAttr "UpperMiddle_Tube_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3135]";
+connectAttr "UpperMiddle_Tube_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3136]";
+connectAttr "UpperMiddle_Tube_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3137]";
+connectAttr "Button_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3138]";
+connectAttr "Button_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3139]";
+connectAttr "Booster_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2388]";
+connectAttr "Booster_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2389]";
+connectAttr "Booster_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2390]";
+connectAttr "Booster_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2391]";
+connectAttr "Booster_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2392]";
+connectAttr "Booster_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2393]";
+connectAttr "Booster_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2394]";
+connectAttr "Booster_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2395]";
+connectAttr "Booster_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2396]";
+connectAttr "Booster_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2397]";
+connectAttr "Booster_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2398]";
+connectAttr "Booster_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2399]";
+connectAttr "COG_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2400]";
+connectAttr "COG_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2401]";
+connectAttr "COG_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2402]";
+connectAttr "COG_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2403]";
+connectAttr "COG_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2404]";
+connectAttr "COG_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2405]";
+connectAttr "COG_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2406]";
+connectAttr "COG_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2407]";
+connectAttr "COG_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2408]";
+connectAttr "COG_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2409]";
+connectAttr "COG_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2410]";
+connectAttr "COG_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2411]";
+connectAttr "Furnace_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2412]";
+connectAttr "Furnace_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2413]";
+connectAttr "Furnace_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2414]";
+connectAttr "Furnace_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2415]";
+connectAttr "Furnace_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2416]";
+connectAttr "Furnace_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2417]";
+connectAttr "Furnace_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2418]";
+connectAttr "Furnace_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2419]";
+connectAttr "Furnace_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2420]";
+connectAttr "Furnace_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2421]";
+connectAttr "Furnace_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2422]";
+connectAttr "Furnace_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2423]";
+connectAttr "Hip_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2424]";
+connectAttr "Hip_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2425]";
+connectAttr "Hip_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2426]";
+connectAttr "Hip_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2427]";
+connectAttr "Hip_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2428]";
+connectAttr "Hip_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2429]";
+connectAttr "Hip_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2430]";
+connectAttr "Hip_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2431]";
+connectAttr "Hip_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2432]";
+connectAttr "Hip_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2433]";
+connectAttr "Hip_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2434]";
+connectAttr "Hip_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2435]";
+connectAttr "L_Plate_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2436]";
+connectAttr "L_Plate_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2437]";
+connectAttr "L_Plate_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2438]";
+connectAttr "L_Plate_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2439]";
+connectAttr "L_Plate_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2440]";
+connectAttr "L_Plate_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2441]";
+connectAttr "L_Plate_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2442]";
+connectAttr "L_Plate_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2443]";
+connectAttr "L_Plate_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2444]";
+connectAttr "L_Plate_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2445]";
+connectAttr "L_Plate_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2446]";
+connectAttr "L_Plate_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2447]";
+connectAttr "Transform_Ctrl_L_Arm_IKFK.o" "Cleaning_SceneRN.phl[2448]";
+connectAttr "Transform_Ctrl_R_Arm_IKFK.o" "Cleaning_SceneRN.phl[2449]";
+connectAttr "Transform_Ctrl_MasterScale3.o" "Cleaning_SceneRN.phl[2450]";
+connectAttr "Transform_Ctrl_Prop_Ctrls_Vis.o" "Cleaning_SceneRN.phl[2451]";
+connectAttr "Transform_Ctrl_translateY3.o" "Cleaning_SceneRN.phl[2452]";
+connectAttr "Transform_Ctrl_translateX3.o" "Cleaning_SceneRN.phl[2453]";
+connectAttr "Transform_Ctrl_translateZ3.o" "Cleaning_SceneRN.phl[2454]";
+connectAttr "Transform_Ctrl_rotateY3.o" "Cleaning_SceneRN.phl[2455]";
+connectAttr "Transform_Ctrl_rotateX2.o" "Cleaning_SceneRN.phl[2456]";
+connectAttr "Transform_Ctrl_rotateZ3.o" "Cleaning_SceneRN.phl[2457]";
+connectAttr "Transform_Ctrl_visibility1.o" "Cleaning_SceneRN.phl[2458]";
+connectAttr "Light_Rig_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[2459]";
+connectAttr "Light_Rig_Ctrl_translateY1.o" "Cleaning_SceneRN.phl[2460]";
+connectAttr "Light_Rig_Ctrl_translateZ1.o" "Cleaning_SceneRN.phl[2461]";
+connectAttr "Light_Rig_Ctrl_visibility1.o" "Cleaning_SceneRN.phl[2462]";
+connectAttr "Light_Rig_Ctrl_rotateX1.o" "Cleaning_SceneRN.phl[2463]";
+connectAttr "Light_Rig_Ctrl_rotateY1.o" "Cleaning_SceneRN.phl[2464]";
+connectAttr "Light_Rig_Ctrl_rotateZ1.o" "Cleaning_SceneRN.phl[2465]";
+connectAttr "Light_Rig_Ctrl_scaleX1.o" "Cleaning_SceneRN.phl[2466]";
+connectAttr "Light_Rig_Ctrl_scaleY1.o" "Cleaning_SceneRN.phl[2467]";
+connectAttr "Light_Rig_Ctrl_scaleZ1.o" "Cleaning_SceneRN.phl[2468]";
+connectAttr "L_Panel_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2469]";
+connectAttr "L_Panel_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2470]";
+connectAttr "L_Panel_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2471]";
+connectAttr "L_Panel_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2472]";
+connectAttr "L_Panel_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2473]";
+connectAttr "L_Panel_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2474]";
+connectAttr "L_Panel_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2475]";
+connectAttr "L_Panel_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2476]";
+connectAttr "L_Panel_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2477]";
+connectAttr "L_Panel_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2478]";
+connectAttr "L_Panel_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2479]";
+connectAttr "L_Panel_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2480]";
+connectAttr "R_Panel_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2481]";
+connectAttr "R_Panel_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2482]";
+connectAttr "R_Panel_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2483]";
+connectAttr "R_Panel_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2484]";
+connectAttr "R_Panel_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2485]";
+connectAttr "R_Panel_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2486]";
+connectAttr "R_Panel_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2487]";
+connectAttr "R_Panel_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2488]";
+connectAttr "R_Panel_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2489]";
+connectAttr "R_Panel_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2490]";
+connectAttr "R_Panel_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2491]";
+connectAttr "R_Panel_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2492]";
+connectAttr "L_Cylinder_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2493]";
+connectAttr "L_Cylinder_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2494]";
+connectAttr "R_Cylinder_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2495]";
+connectAttr "R_Cylinder_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2496]";
+connectAttr "R_Plate_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2497]";
+connectAttr "R_Plate_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2498]";
+connectAttr "R_Plate_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2499]";
+connectAttr "R_Plate_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2500]";
+connectAttr "R_Plate_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2501]";
+connectAttr "R_Plate_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2502]";
+connectAttr "R_Plate_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2503]";
+connectAttr "R_Plate_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2504]";
+connectAttr "R_Plate_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2505]";
+connectAttr "R_Plate_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2506]";
+connectAttr "R_Plate_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2507]";
+connectAttr "R_Plate_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2508]";
+connectAttr "Bottom_Booster_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2509]"
+		;
+connectAttr "Bottom_Booster_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2510]";
+connectAttr "Bottom_Booster_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2511]";
+connectAttr "Bottom_Booster_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2512]";
+connectAttr "Bottom_Booster_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2513]";
+connectAttr "Bottom_Booster_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2514]";
+connectAttr "Bottom_Booster_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2515]";
+connectAttr "Bottom_Booster_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2516]";
+connectAttr "Bottom_Booster_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2517]";
+connectAttr "Bottom_Booster_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2518]";
+connectAttr "Bottom_Booster_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2519]";
+connectAttr "Bottom_Booster_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2520]";
+connectAttr "Skirt_Driver_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2521]";
+connectAttr "Skirt_Driver_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2522]";
+connectAttr "Skirt_Driver_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2523]";
+connectAttr "Skirt_Driver_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2524]";
+connectAttr "Skirt_Driver_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2525]";
+connectAttr "Skirt_Driver_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2526]";
+connectAttr "Skirt_Driver_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2527]";
+connectAttr "Skirt_Driver_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2528]";
+connectAttr "Skirt_Driver_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2529]";
+connectAttr "Skirt_Driver_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2530]";
+connectAttr "Propellor_Shaft_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2531]"
+		;
+connectAttr "Propellor_Shaft_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2532]";
+connectAttr "Propellor_Shaft_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2533]";
+connectAttr "Propellor_Shaft_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2534]";
+connectAttr "Propellor_Shaft_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2535]";
+connectAttr "Propellor_Shaft_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2536]";
+connectAttr "Propellor_Shaft_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2537]";
+connectAttr "Propellor_Shaft_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2538]";
+connectAttr "Propellor_Shaft_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2539]";
+connectAttr "Propellor_Shaft_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2540]";
+connectAttr "Propellor_Shaft_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2541]";
+connectAttr "Propellor_Shaft_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2542]";
+connectAttr "R_Arm_Spinner_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2543]";
+connectAttr "R_Arm_Spinner_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2544]";
+connectAttr "R_Arm_Spinner_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2545]";
+connectAttr "R_Arm_Spinner_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2546]";
+connectAttr "R_Arm_Spinner_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2547]";
+connectAttr "R_Arm_Spinner_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2548]";
+connectAttr "R_Arm_Spinner_01_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2549]";
+connectAttr "R_Arm_Spinner_01_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2550]";
+connectAttr "R_Arm_Spinner_01_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2551]";
+connectAttr "R_Arm_Spinner_01_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2552]";
+connectAttr "R_Arm_Spinner_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2553]"
+		;
+connectAttr "R_Arm_Spinner_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2554]";
+connectAttr "R_Arm_Spinner_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2555]";
+connectAttr "R_Arm_Spinner_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2556]";
+connectAttr "R_Arm_Spinner_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2557]";
+connectAttr "R_Arm_Spinner_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2558]";
+connectAttr "R_Arm_Spinner_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2559]";
+connectAttr "R_Arm_Spinner_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2560]";
+connectAttr "R_Arm_Spinner_02_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2561]";
+connectAttr "R_Arm_Spinner_02_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2562]";
+connectAttr "R_Arm_Spinner_02_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2563]";
+connectAttr "R_Arm_Spinner_02_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2564]";
+connectAttr "Mouth_Ctrl_Grp_translateX.o" "Cleaning_SceneRN.phl[2565]";
+connectAttr "Mouth_Ctrl_Grp_translateZ.o" "Cleaning_SceneRN.phl[2566]";
+connectAttr "Mouth_Ctrl_Grp_MouthFrown.o" "Cleaning_SceneRN.phl[2567]";
+connectAttr "Mouth_Ctrl_Grp_MouthSuprise.o" "Cleaning_SceneRN.phl[2568]";
+connectAttr "Mouth_Ctrl_Grp_MouthBored.o" "Cleaning_SceneRN.phl[2569]";
+connectAttr "Mouth_Ctrl_Grp_MouthSmirk.o" "Cleaning_SceneRN.phl[2570]";
+connectAttr "Mouth_Ctrl_Grp_MouthScale.o" "Cleaning_SceneRN.phl[2571]";
+connectAttr "Eyes_Extras_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2572]";
+connectAttr "Eyes_Extras_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2573]";
+connectAttr "Eyes_Extras_Ctrl_QuestionMark.o" "Cleaning_SceneRN.phl[2574]";
+connectAttr "Eyes_Extras_Ctrl_Hazard_Sign.o" "Cleaning_SceneRN.phl[2575]";
+connectAttr "Eyes_Extras_Ctrl_LoadingScreen.o" "Cleaning_SceneRN.phl[2576]";
+connectAttr "Eyes_Extras_Ctrl_LeftEye.o" "Cleaning_SceneRN.phl[2577]";
+connectAttr "Eyes_Extras_Ctrl_RightEye.o" "Cleaning_SceneRN.phl[2578]";
+connectAttr "Eyes_Extras_Ctrl_Mouth.o" "Cleaning_SceneRN.phl[2579]";
+connectAttr "L_Eye_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[2580]";
+connectAttr "L_Eye_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2581]";
+connectAttr "L_Eye_Ctrl_EyeWink.o" "Cleaning_SceneRN.phl[2582]";
+connectAttr "L_Eye_Ctrl_EyeWide.o" "Cleaning_SceneRN.phl[2583]";
+connectAttr "L_Eye_Ctrl_EyeAngerSad.o" "Cleaning_SceneRN.phl[2584]";
+connectAttr "L_Eye_Ctrl_EyeSquint.o" "Cleaning_SceneRN.phl[2585]";
+connectAttr "L_Eye_Ctrl_EyeClosed.o" "Cleaning_SceneRN.phl[2586]";
+connectAttr "L_Eye_Ctrl_EyeBored.o" "Cleaning_SceneRN.phl[2587]";
+connectAttr "L_Eye_Ctrl_EyeSmirk.o" "Cleaning_SceneRN.phl[2588]";
+connectAttr "L_Eye_Ctrl_EyeScale1.o" "Cleaning_SceneRN.phl[2589]";
+connectAttr "L_Eye_Ctrl_EyeDetermined.o" "Cleaning_SceneRN.phl[2590]";
+connectAttr "R_Eye_Ctrl_translateX1.o" "Cleaning_SceneRN.phl[2591]";
+connectAttr "R_Eye_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2592]";
+connectAttr "R_Eye_Ctrl_EyeWink.o" "Cleaning_SceneRN.phl[2593]";
+connectAttr "R_Eye_Ctrl_EyeWide.o" "Cleaning_SceneRN.phl[2594]";
+connectAttr "R_Eye_Ctrl_EyeAnger_Sad.o" "Cleaning_SceneRN.phl[2595]";
+connectAttr "R_Eye_Ctrl_EyeSquint.o" "Cleaning_SceneRN.phl[2596]";
+connectAttr "R_Eye_Ctrl_EyeClosed.o" "Cleaning_SceneRN.phl[2597]";
+connectAttr "R_Eye_Ctrl_EyeBored.o" "Cleaning_SceneRN.phl[2598]";
+connectAttr "R_Eye_Ctrl_EyeSmirk.o" "Cleaning_SceneRN.phl[2599]";
+connectAttr "R_Eye_Ctrl_EyeScale1.o" "Cleaning_SceneRN.phl[2600]";
+connectAttr "R_Eye_Ctrl_EyeDetermined.o" "Cleaning_SceneRN.phl[2601]";
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2602]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2603]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2604]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2605]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2606]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2607]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2608]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2609]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2610]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2611]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2612]"
+		;
+connectAttr "FK_L_Finger02_Three_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2613]"
+		;
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2614]"
+		;
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2615]"
+		;
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2616]"
+		;
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2617]"
+		;
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2618]"
+		;
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2619]";
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2620]";
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2621]";
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2622]";
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2623]";
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2624]";
+connectAttr "FK_L_Finger02_Two_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2625]"
+		;
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2626]"
+		;
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2627]"
+		;
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2628]"
+		;
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2629]"
+		;
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2630]"
+		;
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2631]";
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2632]";
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2633]";
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2634]";
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2635]";
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2636]";
+connectAttr "FK_L_Finger02_One_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2637]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2638]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2639]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2640]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2641]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2642]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2643]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2644]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2645]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2646]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2647]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2648]"
+		;
+connectAttr "FK_L_Finger01_Three_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2649]"
+		;
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2650]"
+		;
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2651]"
+		;
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2652]"
+		;
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2653]"
+		;
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2654]"
+		;
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2655]";
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2656]";
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2657]";
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2658]";
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2659]";
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2660]";
+connectAttr "FK_L_Finger01_Two_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2661]"
+		;
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2662]"
+		;
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2663]"
+		;
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2664]"
+		;
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2665]"
+		;
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2666]"
+		;
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2667]";
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2668]";
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2669]";
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2670]";
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2671]";
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2672]";
+connectAttr "FK_L_Finger01_One_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2673]"
+		;
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2674]"
+		;
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2675]"
+		;
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2676]";
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2677]";
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2678]";
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2679]";
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2680]";
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2681]";
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2682]";
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2683]";
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2684]";
+connectAttr "FK_L_Thumb_03_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2685]";
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2686]"
+		;
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2687]"
+		;
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2688]";
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2689]";
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2690]";
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2691]";
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2692]";
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2693]";
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2694]";
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2695]";
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2696]";
+connectAttr "FK_L_Thumb_02_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2697]";
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2698]"
+		;
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2699]"
+		;
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2700]";
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2701]";
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2702]";
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2703]";
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2704]";
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2705]";
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2706]";
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2707]";
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2708]";
+connectAttr "FK_L_Thumb_01_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2709]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2710]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2711]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2712]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2713]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2714]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2715]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2716]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2717]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2718]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2719]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2720]";
+connectAttr "FK_L_Hand_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2721]";
+connectAttr "FK_L_Palm_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2722]";
+connectAttr "FK_L_Palm_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2723]";
+connectAttr "FK_L_Palm_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2724]";
+connectAttr "FK_L_Palm_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2725]";
+connectAttr "FK_L_Palm_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2726]";
+connectAttr "FK_L_Palm_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2727]";
+connectAttr "FK_L_Palm_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2728]";
+connectAttr "FK_L_Palm_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2729]";
+connectAttr "FK_L_Palm_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2730]";
+connectAttr "FK_L_Palm_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2731]";
+connectAttr "FK_L_Palm_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2732]";
+connectAttr "FK_L_Palm_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2733]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2734]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2735]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2736]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2737]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2738]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2739]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2740]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2741]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2742]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2743]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2744]";
+connectAttr "FK_R_Hand_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2745]";
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2746]"
+		;
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2747]"
+		;
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2748]";
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2749]";
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2750]";
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2751]";
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2752]";
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2753]";
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2754]";
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2755]";
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2756]";
+connectAttr "FK_R_Thumb_03_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2757]";
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2758]"
+		;
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2759]"
+		;
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2760]";
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2761]";
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2762]";
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2763]";
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2764]";
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2765]";
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2766]";
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2767]";
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2768]";
+connectAttr "FK_R_Thumb_01_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2769]";
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2770]"
+		;
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2771]"
+		;
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2772]";
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2773]";
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2774]";
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2775]";
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2776]";
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2777]";
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2778]";
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2779]";
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2780]";
+connectAttr "FK_R_Thumb_02_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2781]";
+connectAttr "FK_R_Palm_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2782]";
+connectAttr "FK_R_Palm_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2783]";
+connectAttr "FK_R_Palm_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2784]";
+connectAttr "FK_R_Palm_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2785]";
+connectAttr "FK_R_Palm_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2786]";
+connectAttr "FK_R_Palm_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2787]";
+connectAttr "FK_R_Palm_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2788]";
+connectAttr "FK_R_Palm_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2789]";
+connectAttr "FK_R_Palm_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2790]";
+connectAttr "FK_R_Palm_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2791]";
+connectAttr "FK_R_Palm_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2792]";
+connectAttr "FK_R_Palm_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2793]";
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2794]"
+		;
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2795]"
+		;
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2796]"
+		;
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2797]"
+		;
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2798]"
+		;
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2799]";
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2800]";
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2801]";
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2802]";
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2803]";
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2804]";
+connectAttr "FK_R_Finger01_One_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2805]"
+		;
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2806]"
+		;
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2807]"
+		;
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2808]"
+		;
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2809]"
+		;
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2810]"
+		;
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2811]";
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2812]";
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2813]";
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2814]";
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2815]";
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2816]";
+connectAttr "FK_R_Finger01_Two_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2817]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2818]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2819]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2820]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2821]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2822]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2823]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2824]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2825]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2826]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2827]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2828]"
+		;
+connectAttr "FK_R_Finger02_Three_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2829]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2830]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2831]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2832]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2833]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2834]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2835]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2836]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2837]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2838]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2839]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2840]"
+		;
+connectAttr "FK_R_Finger01_Three_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2841]"
+		;
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2842]"
+		;
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2843]"
+		;
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2844]"
+		;
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2845]"
+		;
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2846]"
+		;
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2847]";
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2848]";
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2849]";
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2850]";
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2851]";
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2852]";
+connectAttr "FK_R_Finger02_Two_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2853]"
+		;
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2854]"
+		;
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2855]"
+		;
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2856]"
+		;
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2857]"
+		;
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2858]"
+		;
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2859]";
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2860]";
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2861]";
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2862]";
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2863]";
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2864]";
+connectAttr "FK_R_Finger02_One_Jnt_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2865]"
+		;
+connectAttr "L_Arm_Spinner_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2866]"
+		;
+connectAttr "L_Arm_Spinner_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2867]";
+connectAttr "L_Arm_Spinner_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2868]";
+connectAttr "L_Arm_Spinner_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2869]";
+connectAttr "L_Arm_Spinner_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2870]";
+connectAttr "L_Arm_Spinner_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2871]";
+connectAttr "L_Arm_Spinner_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2872]";
+connectAttr "L_Arm_Spinner_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2873]";
+connectAttr "L_Arm_Spinner_02_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2874]";
+connectAttr "L_Arm_Spinner_02_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2875]";
+connectAttr "L_Arm_Spinner_02_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2876]";
+connectAttr "L_Arm_Spinner_02_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2877]";
+connectAttr "L_Arm_Spinner_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2878]";
+connectAttr "L_Arm_Spinner_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2879]";
+connectAttr "L_Arm_Spinner_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2880]";
+connectAttr "L_Arm_Spinner_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2881]";
+connectAttr "L_Arm_Spinner_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2882]";
+connectAttr "L_Arm_Spinner_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2883]";
+connectAttr "L_Arm_Spinner_01_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2884]";
+connectAttr "L_Arm_Spinner_01_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2885]";
+connectAttr "L_Arm_Spinner_01_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2886]";
+connectAttr "L_Arm_Spinner_01_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2887]";
+connectAttr "L_Arm_IK_Base_Ctrl_Follow.o" "Cleaning_SceneRN.phl[2888]";
+connectAttr "L_Arm_IK_Base_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2889]";
+connectAttr "L_Arm_IK_Base_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2890]";
+connectAttr "L_Arm_IK_Base_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2891]";
+connectAttr "L_Arm_IK_Base_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2892]";
+connectAttr "L_Arm_IK_Base_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2893]";
+connectAttr "L_Arm_IK_Base_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2894]";
+connectAttr "L_Arm_IK_Base_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2895]";
+connectAttr "L_Arm_IK_Base_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2896]";
+connectAttr "L_Arm_IK_Base_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2897]";
+connectAttr "L_Arm_IK_Base_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2898]";
+connectAttr "L_Arm_IK_Ctrl_Follow.o" "Cleaning_SceneRN.phl[2899]";
+connectAttr "L_Arm_IK_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2900]";
+connectAttr "L_Arm_IK_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2901]";
+connectAttr "L_Arm_IK_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2902]";
+connectAttr "L_Arm_IK_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2903]";
+connectAttr "L_Arm_IK_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2904]";
+connectAttr "L_Arm_IK_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2905]";
+connectAttr "L_Arm_IK_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2906]";
+connectAttr "L_Arm_IK_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2907]";
+connectAttr "L_Arm_IK_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2908]";
+connectAttr "L_Arm_IK_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2909]";
+connectAttr "L_Arm_PV_Ctrl_Follow.o" "Cleaning_SceneRN.phl[2910]";
+connectAttr "L_Arm_PV_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2911]";
+connectAttr "L_Arm_PV_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2912]";
+connectAttr "L_Arm_PV_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2913]";
+connectAttr "L_Arm_PV_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2914]";
+connectAttr "L_Arm_PV_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2915]";
+connectAttr "L_Arm_PV_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2916]";
+connectAttr "L_Arm_PV_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2917]";
+connectAttr "L_Arm_PV_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2918]";
+connectAttr "L_Arm_PV_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2919]";
+connectAttr "L_Arm_PV_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2920]";
+connectAttr "R_Arm_IK_Ctrl_Follow.o" "Cleaning_SceneRN.phl[2921]";
+connectAttr "R_Arm_IK_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2922]";
+connectAttr "R_Arm_IK_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2923]";
+connectAttr "R_Arm_IK_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2924]";
+connectAttr "R_Arm_IK_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2925]";
+connectAttr "R_Arm_IK_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2926]";
+connectAttr "R_Arm_IK_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2927]";
+connectAttr "R_Arm_IK_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2928]";
+connectAttr "R_Arm_IK_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2929]";
+connectAttr "R_Arm_IK_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2930]";
+connectAttr "R_Arm_IK_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2931]";
+connectAttr "R_Arm_IK_Base_Ctrl_Follow.o" "Cleaning_SceneRN.phl[2932]";
+connectAttr "R_Arm_IK_Base_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2933]";
+connectAttr "R_Arm_IK_Base_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2934]";
+connectAttr "R_Arm_IK_Base_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2935]";
+connectAttr "R_Arm_IK_Base_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2936]";
+connectAttr "R_Arm_IK_Base_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2937]";
+connectAttr "R_Arm_IK_Base_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2938]";
+connectAttr "R_Arm_IK_Base_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2939]";
+connectAttr "R_Arm_IK_Base_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2940]";
+connectAttr "R_Arm_IK_Base_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2941]";
+connectAttr "R_Arm_IK_Base_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2942]";
+connectAttr "R_Arm_IK_PV_Ctrl_Follow.o" "Cleaning_SceneRN.phl[2943]";
+connectAttr "R_Arm_IK_PV_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2944]";
+connectAttr "R_Arm_IK_PV_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2945]";
+connectAttr "R_Arm_IK_PV_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2946]";
+connectAttr "R_Arm_IK_PV_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2947]";
+connectAttr "R_Arm_IK_PV_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2948]";
+connectAttr "R_Arm_IK_PV_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2949]";
+connectAttr "R_Arm_IK_PV_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2950]";
+connectAttr "R_Arm_IK_PV_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2951]";
+connectAttr "R_Arm_IK_PV_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2952]";
+connectAttr "R_Arm_IK_PV_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2953]";
+connectAttr "Neck_05_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2954]";
+connectAttr "Neck_05_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2955]";
+connectAttr "Neck_05_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2956]";
+connectAttr "Neck_05_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2957]";
+connectAttr "Neck_05_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2958]";
+connectAttr "Neck_05_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2959]";
+connectAttr "Neck_05_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2960]";
+connectAttr "Neck_05_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2961]";
+connectAttr "Neck_05_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2962]";
+connectAttr "Neck_05_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2963]";
+connectAttr "Neck_05_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2964]";
+connectAttr "Neck_05_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2965]";
+connectAttr "Neck_04_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2966]";
+connectAttr "Neck_04_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2967]";
+connectAttr "Neck_04_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2968]";
+connectAttr "Neck_04_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2969]";
+connectAttr "Neck_04_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2970]";
+connectAttr "Neck_04_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2971]";
+connectAttr "Neck_04_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2972]";
+connectAttr "Neck_04_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2973]";
+connectAttr "Neck_04_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2974]";
+connectAttr "Neck_04_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2975]";
+connectAttr "Neck_04_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2976]";
+connectAttr "Neck_04_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2977]";
+connectAttr "Neck_03_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2978]";
+connectAttr "Neck_03_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2979]";
+connectAttr "Neck_03_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2980]";
+connectAttr "Neck_03_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2981]";
+connectAttr "Neck_03_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2982]";
+connectAttr "Neck_03_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2983]";
+connectAttr "Neck_03_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2984]";
+connectAttr "Neck_03_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2985]";
+connectAttr "Neck_03_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2986]";
+connectAttr "Neck_03_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2987]";
+connectAttr "Neck_03_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2988]";
+connectAttr "Neck_03_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2989]";
+connectAttr "Neck_02_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[2990]";
+connectAttr "Neck_02_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[2991]";
+connectAttr "Neck_02_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2992]";
+connectAttr "Neck_02_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2993]";
+connectAttr "Neck_02_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2994]";
+connectAttr "Neck_02_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2995]";
+connectAttr "Neck_02_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2996]";
+connectAttr "Neck_02_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2997]";
+connectAttr "Neck_02_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2998]";
+connectAttr "Neck_02_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2999]";
+connectAttr "Neck_02_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3000]";
+connectAttr "Neck_02_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3001]";
+connectAttr "Neck_01_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[3002]";
+connectAttr "Neck_01_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[3003]";
+connectAttr "Neck_01_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3004]";
+connectAttr "Neck_01_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3005]";
+connectAttr "Neck_01_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3006]";
+connectAttr "Neck_01_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3007]";
+connectAttr "Neck_01_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3008]";
+connectAttr "Neck_01_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3009]";
+connectAttr "Neck_01_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3010]";
+connectAttr "Neck_01_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3011]";
+connectAttr "Neck_01_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3012]";
+connectAttr "Neck_01_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3013]";
+connectAttr "R_Clav_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[3014]";
+connectAttr "R_Clav_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[3015]";
+connectAttr "R_Clav_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3016]";
+connectAttr "R_Clav_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3017]";
+connectAttr "R_Clav_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3018]";
+connectAttr "R_Clav_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3019]";
+connectAttr "R_Clav_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3020]";
+connectAttr "R_Clav_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3021]";
+connectAttr "R_Clav_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3022]";
+connectAttr "R_Clav_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3023]";
+connectAttr "R_Clav_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3024]";
+connectAttr "R_Clav_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3025]";
+connectAttr "L_Clav_Ctrl_FollowTranslate.o" "Cleaning_SceneRN.phl[3026]";
+connectAttr "L_Clav_Ctrl_FollowRotate.o" "Cleaning_SceneRN.phl[3027]";
+connectAttr "L_Clav_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3028]";
+connectAttr "L_Clav_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3029]";
+connectAttr "L_Clav_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3030]";
+connectAttr "L_Clav_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3031]";
+connectAttr "L_Clav_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3032]";
+connectAttr "L_Clav_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3033]";
+connectAttr "L_Clav_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3034]";
+connectAttr "L_Clav_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3035]";
+connectAttr "L_Clav_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3036]";
+connectAttr "L_Clav_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3037]";
+connectAttr "Prop_Shaft_Length_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3038]";
+connectAttr "Prop_Shaft_Length_Ctrl_visibility.o" "Cleaning_SceneRN.phl[3039]";
+connectAttr "Cleaning_SceneRN.phl[3040]" "Cleaning_SceneRN.phl[3041]";
+connectAttr "Cleaning_SceneRN.phl[3042]" "Cleaning_SceneRN.phl[3043]";
+connectAttr "Two_Handed_Prop_Ctrl_translateX.o" "Cleaning_SceneRN.phl[3044]";
+connectAttr "Two_Handed_Prop_Ctrl_translateY.o" "Cleaning_SceneRN.phl[3045]";
+connectAttr "Two_Handed_Prop_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[3046]";
+connectAttr "Two_Handed_Prop_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[3047]";
+connectAttr "Two_Handed_Prop_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[3048]";
+connectAttr "Two_Handed_Prop_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[3049]";
+connectAttr "Two_Handed_Prop_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[3050]";
+connectAttr "Two_Handed_Prop_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[3051]";
+connectAttr "Two_Handed_Prop_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[3052]";
 connectAttr "Transform_Ctrl_Left_Leg_IKFK.o" "PrometheusRN.phl[1]";
 connectAttr "Transform_Ctrl_Right_Leg_IKFK.o" "PrometheusRN.phl[2]";
 connectAttr "Transform_Ctrl_Back_Leg_IKFK.o" "PrometheusRN.phl[3]";
@@ -41799,6 +42213,23 @@ connectAttr "Spray_Bottle16_rotateZ.o" "Cleaning_SceneRN.phl[1199]";
 connectAttr "Spray_Bottle16_scaleX.o" "Cleaning_SceneRN.phl[1200]";
 connectAttr "Spray_Bottle16_scaleY.o" "Cleaning_SceneRN.phl[1201]";
 connectAttr "Spray_Bottle16_scaleZ.o" "Cleaning_SceneRN.phl[1202]";
+connectAttr "Sign_Rotate_Ctrl_translateX.o" "Cleaning_SceneRN.phl[2120]";
+connectAttr "Sign_Rotate_Ctrl_translateY.o" "Cleaning_SceneRN.phl[2121]";
+connectAttr "Sign_Rotate_Ctrl_translateZ.o" "Cleaning_SceneRN.phl[2122]";
+connectAttr "Sign_Rotate_Ctrl_rotateX.o" "Cleaning_SceneRN.phl[2123]";
+connectAttr "Sign_Rotate_Ctrl_rotateY.o" "Cleaning_SceneRN.phl[2124]";
+connectAttr "Sign_Rotate_Ctrl_rotateZ.o" "Cleaning_SceneRN.phl[2125]";
+connectAttr "Sign_Rotate_Ctrl_scaleX.o" "Cleaning_SceneRN.phl[2126]";
+connectAttr "Sign_Rotate_Ctrl_scaleY.o" "Cleaning_SceneRN.phl[2127]";
+connectAttr "Sign_Rotate_Ctrl_scaleZ.o" "Cleaning_SceneRN.phl[2128]";
+connectAttr "Sign_Rotate_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2129]";
+connectAttr "Transform_Ctrl_rotateY2.o" "Cleaning_SceneRN.phl[2130]";
+connectAttr "Transform_Ctrl_rotateZ2.o" "Cleaning_SceneRN.phl[2131]";
+connectAttr "Transform_Ctrl_MasterScale2.o" "Cleaning_SceneRN.phl[2132]";
+connectAttr "Transform_Ctrl_translateX2.o" "Cleaning_SceneRN.phl[2133]";
+connectAttr "Transform_Ctrl_translateY2.o" "Cleaning_SceneRN.phl[2134]";
+connectAttr "Transform_Ctrl_translateZ2.o" "Cleaning_SceneRN.phl[2135]";
+connectAttr "Transform_Ctrl_visibility.o" "Cleaning_SceneRN.phl[2136]";
 connectAttr ":defaultColorMgtGlobals.cme" "file1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "file1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "file1.cmcp";
