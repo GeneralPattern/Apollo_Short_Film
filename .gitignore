@@ -17,3 +17,7 @@ ApolloProject/scenes/Animation Scenes/Autosaves
 *.atom
 
 ApolloProject/autosave/
+
+ApolloProject/cache/nCache/Cleaning_CC_Slip_321_535FXVERSION/
+
+ApolloProject/cache/alembic/RBDGoodiesCleaning.abc
